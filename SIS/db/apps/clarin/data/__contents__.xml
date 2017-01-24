@@ -1,0 +1,15 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/data" owner="admin" group="dba" mode="755" created="2012-12-11T11:38:21+01:00" version="1">
+    <acl entries="0" version="1"/>
+    <resource type="XMLResource" name="users.xml" owner="admin" group="dba" mode="644" created="2013-07-30T14:48:45+02:00" modified="2013-07-30T14:48:45+02:00" filename="users.xml" mimetype="application/xml">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="XMLResource" name="sbs.xml" owner="admin" group="dba" mode="644" created="2013-11-13T12:02:32+01:00" modified="2013-11-13T12:02:32+01:00" filename="sbs.xml" mimetype="application/xml">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="XMLResource" name="topics.xml" owner="admin" group="dba" mode="644" created="2013-10-08T13:16:17+02:00" modified="2013-10-08T13:16:17+02:00" filename="topics.xml" mimetype="application/xml">
+        <acl entries="0" version="1"/>
+    </resource>
+    <subcollection name="review" filename="review"/>
+    <subcollection name="doc" filename="doc"/>
+    <subcollection name="specifications" filename="specifications"/>
+</collection>

@@ -1,0 +1,12 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecXSLFO" standardSettingBody="SBW3C" topic="TopicFormatting" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Extensible Stylesheet Language Formatting Objects</title><abbr>XSL-FO</abbr></titleStmt><scope>Formatting of XML-annotated instances</scope><keyword>markup language</keyword><keyword>XML document formatting</keyword><info type="description"><p>The abbreviation stands for Extensible Stylesheet Language Formatting Objects. The XSL-FO is developed by the World Wide 
+            Web Consortium (W3C) and is ranked as a W3C Recommendation.</p><p>XSL-FO is formally called XSL. The reason for this is that first XSL Working Draft contained the language syntax 
+            for transforming and formatting XML documents. Sometime later the W3C split the draft into separate Recommendations 
+            such XSLT, XSL and XPath. In the new draft of XSL the language for formatting XML documents is left and
+            then it is called XSL-FO.</p><p>XSL-FO is a XML based page description language for formatting XML data for output to screen, paper or other media. 
+            It can define and design page layout, font style, colors, image rendering and lots more design properties. 
+            XSL-FO is used not only for printed documents, but also for design of multimedia documents.</p><p>The important advantage of using XSL-FO is its platform or application independence. With XSL-FO the defined document 
+            format remains the same on any screen and any platform.</p><p>For example the combination of XSL-FO and Formatting Objects Processor (FOP) allows the generation of print-ready documents 
+            in PDF,  AFP,  Postscript, TIFF and other formats.</p></info><version id="SpecXSLFO1" status="W3C Recommendation"><titleStmt><respStmt id="FWeUtb"><resp>Editor</resp><name>Anders Berglund</name></respStmt></titleStmt><date>2006-12-05</date><address type="URL">http://www.w3.org/TR/2006/REC-xsl11-20061205/</address>
+        <!-- <relation target="SpecXSL" type="isPartOf">
+            <p/>
+        </relation>--><relation target="SpecXML" type="isBasedOn"><info type="description"><p>XSL-FO is based on XML.</p></info></relation></version></spec>

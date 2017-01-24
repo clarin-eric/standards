@@ -1,0 +1,7 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecXHTML" standardSettingBody="SBISO" topic="TopicMetaLanguage" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Extensible HyperText Markup Language</title><abbr>XHTML</abbr></titleStmt><scope>XML-based markup languages for creating the hypertext documents, which are platform independent</scope><keyword>markup languages</keyword><keyword>XML</keyword><keyword>HTML</keyword><info type="description"><p>XHTML ist a Reformulation of HTML in XML</p></info><version id="SpecXHTML-1.0" status="W3C Recommendation"><titleStmt><title>The Extensible HyperText Markup Language</title><abbr>XHTML 1.0</abbr><respStmt><resp>Editor</resp><name type="org">W3C HTML Working Group</name></respStmt></titleStmt><versionNumber type="major">1.0</versionNumber><date>2000-01-26</date><address type="URL">http://www.w3.org/TR/2002/REC-xhtml1-20020801</address><relation target="SpecHTML" type="isExtendedFrom"/><relation target="SpecXML" type="isExtendedFrom"/></version>
+    
+    <!-- 
+            <title>Extensible HyperText Markup Language (Second Edition)</title>
+            <abbr>XHTML 1.0 (2nd ed.)</abbr>
+            <date>2002-08-01</date>
+            --></spec>

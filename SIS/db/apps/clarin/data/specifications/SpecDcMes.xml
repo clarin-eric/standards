@@ -1,0 +1,25 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecDcMes" standardSettingBody="SBDublinCore" topic="TopicMetadata" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Dublin Core Metadata Element Set</title><abbr>DCMES</abbr></titleStmt><scope>Standard for the description of information resources</scope><keyword>metadata</keyword><keyword>metadata annotation</keyword><keyword>Dublin Core</keyword><keyword>DCMI</keyword><info type="description"><p>Dublin Core Metadata Element Set (DCMES), which is often called Dublin Core (DC),
+      is a standardized metadata scheme for description of any kind of resource such
+      as documents in electronic and non-electronic form, digital materials (such as
+      video, sound, images, etc) and composite media like web pages. DCMES was
+      developed by Dublin Core Metadata Initiative (DCMI) organization
+      founded within the OCLC/NCSA Metadata Workshop.</p><p>The DCMES standard has two levels: simple DC and qualified DC. The simple DC metadata scheme comprises 15 basic elements that can be used to represent the core features of various resources.
+      Each element is optional, repeatable and can be used in any order.</p><p>Beside the original 15 elements, the qualified DS has three additional elements
+      (Audience, Provenance and RightsHolder) and qualifiers, which improve the
+      semantics of the elements.</p><p>DCMES implementations are typically encoded using EXtensible Markup Language
+      (XML) and the Resource Description Framework (RDF).</p><p>DCMES is defined by ISO Standard 15836:2009, NISO Standard Z39.85-2007
+      and IETF RFC Standard RFC5013.</p></info><version id="SpecDcMes11" status="final"><titleStmt><respStmt id="bgB4ix"><resp>Editor</resp><name type="org">Dublin Core Metadata Initiative (DCMI)</name></respStmt></titleStmt><versionNumber type="major">1.1</versionNumber><date>2010-10-11</date><address type="URL">http://dublincore.org/</address><relation target="SpecXML" type="uses"/><relation target="SpecRDF" type="uses"><info type="description"><p>The DCMES uses RDF vocabularies.</p></info></relation><relation target="SpecRDFXML" type="uses"><info type="description"><p>The DCMES can be represented in many syntax formats such as RDF/XML</p></info></relation></version><version id="SpecDcMesISO" status="International Standard" standardSettingBody="SBISO-TC46-SC4"><titleStmt><title>Information and documentation — The Dublin Core metadata element set</title><respStmt id="JoVMS1"><resp>Editor</resp><name type="org" id="SBISO-TC46-SC4">ISO/TC 46/SC 4</name></respStmt></titleStmt><versionNumber type="major">ISO 15836:2009</versionNumber><date>2009-02-18</date><address type="URL">http://www.iso.org</address><relation target="SpecDcMes11" type="references"/></version><version id="SpecDcMesNISO" status="International Standard"><titleStmt><title>The Dublin Core Metadata Element Set</title><respStmt id="JpVM1s"><resp>Editor</resp><name type="org" id="SBNISO">ANSI/NISO</name></respStmt></titleStmt><versionNumber type="major">ANSI/NISO Z39.85-2012</versionNumber><date>2013-02-20</date><info type="description"><p>"Defines fifteen metadata elements for resource discovery in a cross-disciplinary information environment."
+                (<a href="http://www.niso.org/apps/group_public/project/details.php?project_id=105">Abstract, ANSI/NISO Z39.85-2012</a>)</p></info><address type="URL">http://www.niso.org</address></version> 
+    <!-- 
+    <version id="SpecDcMesCorr" status="International Standard">
+        <titleStmt>
+            <title>Information and documentation - The Dublin Core metadata element set - Technical Corrigendum 1</title>
+            <respStmt id="JoVMS2">
+                <resp>Editor</resp>
+                <name type="org" id="SBISO-TC46-SC4">ISO/TC 46/SC 4</name>
+            </respStmt>            
+        </titleStmt>
+        <versionNumber type="minor">ISO 15836:2009/Cor 1:2009</versionNumber>
+        <date>2009-07-23</date>
+        <address type="URL">http://www.iso.org</address>
+    </version> --></spec>

@@ -1,0 +1,42 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/views" owner="admin" group="dba" mode="755" created="2012-12-11T11:42:33+01:00" version="1">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="register-part.xq" owner="admin" group="dba" mode="755" created="2013-03-19T14:50:06+01:00" modified="2013-03-19T15:46:51+01:00" filename="register-part.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="list-topics.xq" owner="admin" group="dba" mode="755" created="2012-12-12T11:39:31+01:00" modified="2012-12-12T16:06:42+01:00" filename="list-topics.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="view-topic.xq" owner="admin" group="dba" mode="755" created="2012-12-12T12:44:59+01:00" modified="2012-12-13T18:21:33+01:00" filename="view-topic.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="register-confirmation.xq" owner="admin" group="dba" mode="755" created="2013-03-19T15:58:20+01:00" modified="2013-03-19T16:07:35+01:00" filename="register-confirmation.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="register-spec.xq" owner="admin" group="dba" mode="755" created="2013-03-18T17:08:04+01:00" modified="2013-03-19T15:17:33+01:00" filename="register-spec.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="add-spec-part.xq" owner="admin" group="dba" mode="755" created="2013-03-15T09:47:57+01:00" modified="2013-03-19T15:17:39+01:00" filename="add-spec-part.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="add-spec-version.xq" owner="admin" group="dba" mode="755" created="2013-03-12T12:21:24+01:00" modified="2013-11-15T18:26:11+01:00" filename="add-spec-version.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="list-specs.xq" owner="admin" group="dba" mode="755" created="2012-12-12T13:24:43+01:00" modified="2013-11-13T13:38:57+01:00" filename="list-specs.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="view-sb.xq" owner="admin" group="dba" mode="755" created="2012-12-12T17:09:07+01:00" modified="2013-11-15T18:26:13+01:00" filename="view-sb.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="view-spec.xq" owner="admin" group="dba" mode="755" created="2012-12-12T13:24:31+01:00" modified="2013-10-02T10:45:08+02:00" filename="view-spec.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="contact.xq" owner="admin" group="dba" mode="755" created="2012-12-12T15:59:28+01:00" modified="2013-02-28T17:53:43+01:00" filename="contact.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="register-version.xq" owner="admin" group="dba" mode="755" created="2013-03-19T15:34:02+01:00" modified="2013-03-20T11:57:48+01:00" filename="register-version.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="list-sbs.xq" owner="admin" group="dba" mode="755" created="2012-12-12T16:37:58+01:00" modified="2012-12-12T17:23:48+01:00" filename="list-sbs.xq" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+</collection>

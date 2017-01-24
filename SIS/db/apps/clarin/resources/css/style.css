@@ -1,0 +1,232 @@
+/* Application styles could go here */
+
+body {
+	margin:0pt;
+	background:#E0DEDF;
+	color:#333;
+	font-family:helvetica,arial,sans-serif;
+	font-size:13px;
+}
+
+div#all {
+	margin:0pt auto;
+	width:1050px;
+	padding:5pt;
+	text-align:justify;
+	color:#333;
+	border:solid 0px;
+	padding-top:0px;
+	background:white;
+	min-height:812px;
+}
+
+.logoheader {
+	background:white URL(../images/bannerNeu.png) no-repeat bottom left;
+	color:#111;
+	min-height:180px;
+	margin:0em 10px 0 10px;
+	padding:12px;
+	text-align:left;
+	font-weight:normal;
+	line-height:1.5em;	
+}
+
+div.menu{
+    float:left;
+    width:20%;
+    text-align:left;    
+}
+
+ul#menu{
+    margin-left:13px;
+    margin-top:0px;
+    margin-right:5px;
+    padding:0px;
+    list-style-type:square;    
+    list-style-position:inside;
+}
+
+.button{    
+    margin-top:5px; 
+    border: 1px #CCCCCC solid; 
+    border-radius:3px;
+    width:80px; 
+    padding:2px; 
+    text-align:center;
+    background-color:white;
+    color:grey;    
+    margin-left:2px;    
+}
+
+.content{
+    float:left;
+    margin-left:0px;
+    border-left: 2px solid #CCCCCC;   
+    padding-left:10px;    
+    width:70%;
+    min-height:615px;
+}
+
+.navigation{
+    font-size:11.5px;
+    margin-bottom:25px;
+}
+
+.title {
+	font-size:18px;
+	font-weight:bold;
+}
+
+.heading {
+	font-size:16px;
+	font-weight:bold;
+}
+
+.heading2 {
+	font-size:14px;
+	font-weight:bold;
+	text-decoration:underline;
+	color: #BBBBBB
+}
+
+.heading3 {
+	font-size:14px;
+	font-weight:bold;
+}
+
+.edit{
+    margin-left:7px;
+    padding:0px;
+    text-decoration:underline;
+    color: #6699cc;
+    background-color:white;    
+    border:0px;
+    font-size:12px;
+    font-family:helvetica,arial,sans-serif;
+}
+
+.error{
+    font-size:12px;
+    color:red;
+}
+
+.inputText{
+    height:20px; 
+    border:1px solid #c0c0c0; 
+    border-radius:3px;
+    width:300px;
+    font-size: 13px;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+.inputTextError{
+    height:20px; 
+    border:1px solid red; 
+    border-radius:3px;
+    width:300px;
+    font-size: 13px;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+.inputSelect{
+   width:405px; 
+   padding:2px 0px 2px 0px; 
+   font-size:13px; 
+   border:1px solid #c0c0c0; 
+   border-radius:3px;
+   vertical-align:bottom;
+}
+
+.inputSelectError{
+   width:405px; 
+   padding:2px 0px 2px 0px; 
+   font-size:13px; 
+   border:1px solid red; 
+   border-radius:3px;
+   vertical-align:bottom;
+}
+
+.inputFile{
+   font-size:13px;
+   position: relative;   
+   margin-bottom:3px; 
+}
+
+h2{
+    font-size:100%;
+}
+
+div,table {
+margin: 10pt;
+}
+
+div.version {
+	padding: 5pt;
+	border:solid 1pt #c0c0c0;
+	border-radius:3px;
+}
+
+div.relations {
+	border:solid 1pt #c0c0c0;
+}
+
+div.footer {    
+	border-top: solid 1pt #c0c0c0;
+	font-size: 75%;		
+	margin-top:25px;
+	bottom: 5px;
+	clear:both;
+}
+
+.Editor:before {
+	content:"Editor: "
+}
+
+.person:before {
+	content:url(../images/person_icon.png);
+}
+
+.status {
+  font-size: 75%;
+}
+
+.status:before {
+  margin-left:3px;
+  content:"["
+}
+
+.status:after {
+  content:"]"
+}
+
+a {
+  text-decoration:none;
+  color: grey; 
+}
+
+a.visited {
+  color: grey;
+}
+
+/*a:hover{    
+    color:black;
+}*/
+
+th {
+  border-bottom-style:solid;
+  border-bottom-width:1pt;
+  border-bottom-color:black;
+}
+.tdmenu{
+    padding-left:5px; border-bottom:1px solid #DDDDDD;
+}
+
+.tdmenu:hover{
+    background-color:#EEE;
+}
+
+.header{    
+    border-bottom:1px solid #BBBBBB;
+}

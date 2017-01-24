@@ -1,0 +1,14 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecImdiSd" standardSettingBody="SBOther" topic="TopicMetadata" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>ISLE Metadata Initiative</title><abbr>IMDI</abbr></titleStmt><scope>Metadata Elements for Session</scope><info type="description"><p>The main focus of the ISLE Meta Data Initiative (IMDI) is the metadata annotation of multi‐media and multi‐modal language resources 
+            and written language corpora. This metadata set is the results of the ISLE project (International Standard 
+            for Language Engineering) and is one of the most detailed and most universal proposals for a set of 
+            metadata descriptions for linguistic resources.</p><p>The IMDI has several sets of metadata, for example: Catalogue metadata and Session metadata, which describe different levels of information. 
+            The Catalogue metadata set describes more the abstract level of the 
+            corpus as such. It helps to range and to find the resources in an archive system. The Catalogue 
+            metadata set includes information such as title, authors, publisher, language etc. On the other hand, the Session 
+            metadata set describes individual recording of corpus components, for example administrative 
+            information, information about circumstances and conditions of the linguistic event, groups of resources, 
+            information about the media files, personally identifiable information who was involved in the session, etc. 
+            Both of the metadata sets are formalized by the IMDI XML Schema.</p><p> The IMDI metadatas set are particularly suitable for annotating multi‐modal corpora. 
+            It is very comprehensive and conceptual, and includes other widely known metadata sets like Dublin Core or OLAC. 
+            <a href="http://tla.mpi.nl/tools/tla-tools/arbil/">Arbil</a> is an open source tool which can be used for browsing, 
+            editing, and creating new metadata according to the IMDI metadata schema.</p></info><version id="SpecImdiSd304" status="final"><titleStmt><respStmt id="l4lZB7"><resp>Editor</resp><name type="org">IMDI Team, MPI Nijmegen</name></respStmt></titleStmt><versionNumber type="major">3.0</versionNumber><date>2010</date><address type="URL">http://tla.mpi.nl/imdi-metadata/</address></version></spec>

@@ -1,0 +1,12 @@
+CLARIN Standards Information System (also referred to as CLARIN Standards Guidance") is a deliverable of a CLARIN-D project 
+conducted at the Institut für Deutsche Sprache (IDS) in Mannheim since 2011 under the supervision of Andreas Witt. 
+The original roles in 2011-2016 were as follows:
+
+* Maik Stührenberg: initial coding and XML schemas; input on some of the features/requirements of the website.
+* Antonina Werthmann: content of the website (description of standards and specifications, topics and standard bodies), 
+  XML schema documentation.
+* Eliza Margaretha: most of the code, proof-reading of the content, contributed to building the XML schemas.
+* Andreas Witt: supervision, advice on the content and features/requirements of the website.
+
+Since the 24th of January 2017, modifications and credits are recorded in the CLARIN Standards Committee space of the CLARIN-ERIC 
+GitHub repository at https://github.com/clarin-eric/standards 

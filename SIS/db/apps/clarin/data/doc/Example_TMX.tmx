@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!-- Here is an example for a TMX -->
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+    <header creationtoolversion="1.0.0" datatype="winres" segtype="sentence"
+        adminlang="en-us" srclang="de-at" o-tmf="abc"
+        creationtool="XYTool" >
+    </header>
+    <body>
+        <tu tuid='wetter'>
+            <tuv xml:lang="de"><seg>sonnig</seg></tuv>
+            <tuv xml:lang="en"><seg>sunny</seg></tuv>
+        </tu>
+    </body>
+</tmx>

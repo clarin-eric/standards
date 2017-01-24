@@ -1,0 +1,10 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecOlac" standardSettingBody="SBOLAC" topic="TopicMetadata" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Open Language Archive Metadata</title><abbr>OLAC Metadata</abbr></titleStmt><scope>Metadata annotation</scope><info type="description"><p>The OLAC (Open Language Archives Community Metadata) was developed by Open
+      Archives Intiative (OAI) and it aims at representing the specialized metadata
+      for language resources and NLP tools for harvesting.</p><p>The OLAC framework is based on the Dublin Core (DC) Element Set and the OAI
+      Protocol for Metadata. It uses all 15 core elements from the simple Dublin Core
+      metadata set, the refinements and the encoding schemes of the DCMI Metadata Terms.
+      Additionally, it is extended with a few more elements for describing language
+      resources with specific relevant conceptual domains such as language, linguistic
+      type, subject language or linguistic role. For this reason, the OLAC metadata set
+      is more varied and specific compared to the DCMES.</p><p>The OLAC is implemented in XML and can be used for the interchange of metadata
+      descriptions among participating archives.</p></info><version id="SpecOlac2008" status="Standard"><titleStmt><respStmt id="b9z3QB"><resp>Editor</resp><name type="org" id="SBOLAC">Open Language Archives Community</name></respStmt></titleStmt><date>2008-05-31</date><address type="URL">http://www.language-archives.org/OLAC/metadata-20080531.html</address></version></spec>

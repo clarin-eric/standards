@@ -1,0 +1,48 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/modules" owner="admin" group="dba" mode="755" created="2012-12-11T11:45:49+01:00" version="1">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="list-spec.xql" owner="admin" group="dba" mode="644" created="2012-12-12T13:33:49+01:00" modified="2013-11-13T13:33:49+01:00" filename="list-spec.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="bib.xql" owner="admin" group="dba" mode="644" created="2012-12-18T18:05:29+01:00" modified="2013-10-28T12:58:33+01:00" filename="bib.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="login.xql" owner="admin" group="dba" mode="644" created="2012-12-14T12:23:31+01:00" modified="2013-07-30T14:46:51+02:00" filename="login.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="app.xql" owner="admin" group="dba" mode="644" created="2012-12-11T12:58:12+01:00" modified="2013-11-13T13:29:18+01:00" filename="app.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="graph.xql" owner="admin" group="dba" mode="644" created="2012-12-12T17:30:44+01:00" modified="2013-12-09T17:48:59+01:00" filename="graph.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="sb.xql" owner="admin" group="dba" mode="644" created="2012-12-12T16:43:14+01:00" modified="2013-12-09T17:50:02+01:00" filename="sb.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="index.xql" owner="admin" group="dba" mode="644" created="2012-12-11T13:05:50+01:00" modified="2013-03-21T11:41:41+01:00" filename="index.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="view-spec.xql" owner="admin" group="dba" mode="644" created="2012-12-17T13:18:12+01:00" modified="2013-04-12T15:34:45+02:00" filename="view-spec.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="register-spec.xql" owner="admin" group="dba" mode="644" created="2013-03-19T10:07:58+01:00" modified="2013-03-19T14:50:39+01:00" filename="register-spec.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="search-spec.xql" owner="admin" group="dba" mode="644" created="2013-01-04T14:52:48+01:00" modified="2013-03-07T14:34:16+01:00" filename="search-spec.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="topic.xql" owner="admin" group="dba" mode="644" created="2012-12-12T12:01:07+01:00" modified="2013-03-07T12:20:21+01:00" filename="topic.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="view-sb.xql" owner="admin" group="dba" mode="644" created="2013-11-15T18:27:04+01:00" modified="2013-11-15T18:27:04+01:00" filename="view-sb.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="menu.xql" owner="admin" group="dba" mode="644" created="2012-12-11T14:01:14+01:00" modified="2013-04-12T11:51:35+02:00" filename="menu.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="view-version.xql" owner="admin" group="dba" mode="644" created="2013-01-04T11:14:10+01:00" modified="2013-12-09T17:52:13+01:00" filename="view-version.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="add-spec.xql" owner="admin" group="dba" mode="644" created="2013-03-12T12:04:54+01:00" modified="2013-11-15T18:27:02+01:00" filename="add-spec.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+</collection>
