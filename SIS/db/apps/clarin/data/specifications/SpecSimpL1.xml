@@ -1,14 +1,54 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecSimpL1" standardSettingBody="SBISO" topic="TopicTerminology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Language resource management — Simplified natural language — Part 1: Basic concepts and general principles</title><abbr>SimpL-1</abbr></titleStmt><scope>Simplified natural languages for effective cross-language, cross-domain and cross-system applications</scope><keyword>simplified languages</keyword><keyword>cross-language</keyword><keyword>cross-domain</keyword><keyword>unambiguous language</keyword><info type="description"><p>Language resource management - Simplified natural language — Part 1: Basic concepts and general principles 
-            (abbreviated as SimpL-1) is developed since 2009 by the ISO and currently is at the Working Draft stage (ISO/AWI 24620-1).</p><p>It is a common knowledge that natural language is very versatile and offers a wide range of drives speech varieties, 
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecSimpL1" standardSettingBody="SBISO" topic="TopicTerminology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Language resource management — Simplified natural language — Part 1: Basic concepts and general principles</title>
+        <abbr>SimpL-1</abbr>
+    </titleStmt>
+    <scope>Simplified natural languages for effective cross-language, cross-domain and cross-system applications</scope>
+    <keyword>simplified languages</keyword>
+    <keyword>cross-language</keyword>
+    <keyword>cross-domain</keyword>
+    <keyword>unambiguous language</keyword>
+    <info type="description">
+        <p>Language resource management - Simplified natural language — Part 1: Basic concepts and general principles 
+            (abbreviated as SimpL-1) is developed since 2009 by ISO and currently is at the Working Draft stage (ISO/AWI 24620-1).</p>
+        <p>It is a common knowledge that natural language is very versatile and has a wide range of speech varieties, 
             styles, grammatical constructions etc. Sometimes it is difficult for experts to understand a text in their own scientific 
             field, and the more for just ordinary readers. The problems increase, whether the text should be understood by non-native 
-            speakers or be translated by an expert in this field.</p><p>The goal of the standard is to create a specification, which describes a set of writing rules and a dictionary of agreed 
+            speakers or be translated by an expert in this field.</p>
+        <p>The goal of the standard is to create a specification, which describes a set of writing rules and a dictionary of agreed 
             words with their definition. It provides a clear and unambiguous language (for example Simplified English for English), 
-            which is comprehensible to (all) native and non-native speakers.</p><p>The key tasks of basic concepts and general principles for simplified natural languages are:</p><ul><li>"Reducing ambiguity;</li><li> Speeding up reading;</li><li>Improving comprehension for people whose first language is not the language of the document at hand;</li><li> Improving comprehension for people with different domain or application background;</li><li>Human translation and localization to become easier, faster and more cost effective;</li><li> Computer-assisted translation and machine translation;</li><li>Re-usability of language resources in larger application scenarios, like Semantic Web or decision-support systems.” 
-            (ISO/PWI 24620-1)</li></ul><p>Furthermore, this specification builds a systematic approach that can make cross-language and cross-domain applications of 
-           simplified natural languages more effective.</p><p> Creating understandable texts is very challenging, especially in an internationally collaborated project where the project
+            comprehensible to (all) native and non-native speakers.</p>
+        <p>The key tasks of basic concepts and general principles for simplified natural languages are:</p>
+        <ul>
+            <li>"Reducing ambiguity;</li>
+            <li> Speeding up reading;</li>
+            <li>Improving comprehension for people whose first language is not the language of the document at hand;</li>
+            <li> Improving comprehension for people with different domain or application background;</li>
+            <li>Human translation and localization to become easier, faster and more cost effective;</li>
+            <li> Computer-assisted translation and machine translation;</li>
+            <li>Re-usability of language resources in larger application scenarios, like Semantic Web or decision-support systems.” 
+            (ISO/PWI 24620-1)</li>
+        </ul>
+        <p>Furthermore, this specification builds a systematic approach that can make cross-language and cross-domain applications of 
+           simplified natural languages more effective.</p>
+        <p> Creating understandable texts is very challenging, especially in an internationally collaborated project where the project
             partners are of different backgrounds and from different institutions and countries. The effective and 
-            coherent use of simplified natural language allows a better compatibility between several applications and resources.</p><p>A kind of Simplified English exists and was originally developed as a “controlled language” for aerospace 
-            industry maintenance manuals. The purpose of this standard is to develop simplified natural language in many languages and for various  
-            application fields.</p></info><version id="SpecSimpl1-AWI" status="New Work Item Proposal"><titleStmt>
-            <!-- <title>Language resource management - Simplified natural language — Part 1: Basic concepts and general principles</title>--><respStmt id="WBHCoF"><resp>Editor</resp><name type="org" id="SBISO-TC37-SC4-WG5">ISO/TC 37/SC 4/WG 5<!-- liaision with ISO/TC 37/SC 1/WG 4 (Socio-terminology)--></name></respStmt></titleStmt><versionNumber type="major">ISO/AWI 24620-1</versionNumber><date>2010-10-21</date><address type="URL">http://www.iso.org</address></version></spec>
+            coherent use of simplified natural language allows a better compatibility among several applications and resources.</p>
+        <p> The purpose of this standard is to develop simplified natural language in many languages and for various  
+            application fields. The standard is based on Simplified English originally developed as a “controlled language” for aerospace 
+            industry maintenance manuals.</p>
+    </info>
+    <version id="SpecSimpl1-AWI" status="in Development">
+        <titleStmt>
+            <title>Language resource management — Controlled natural language (CNL) — Part 1: Basic concepts and principles</title>
+            <abbr internal="yes">SimpL-1</abbr>
+            <respStmt id="WBHCoF">
+                <resp>Editor</resp>
+                <name type="org" id="SBISO-TC37-SC4-WG5">ISO/TC 37/SC 4/WG 5<!-- liaision with ISO/TC 37/SC 1/WG 4 (Socio-terminology)--></name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">ISO/PRF TS 24620-1</versionNumber>
+        <date>2015-01-13</date>
+        <address type="URL">http://www.iso.org</address>
+    </version>
+</spec>

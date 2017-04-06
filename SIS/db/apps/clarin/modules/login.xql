@@ -4,16 +4,30 @@ module namespace login = "http://clarin.ids-mannheim.de/standards/login";
 import module namespace user="http://clarin.ids-mannheim.de/standards/user" at "../model/user.xqm";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 
+(: Define methods for login and logout
+   @author margaretha
+:)
+
+(: Get display for authorization error message :)
+declare function login:get-authorization-error($submitted,$email,$password,$authorized){
+    if ($submitted and $email and $password and not($authorized))                       
+    then "table-row"
+    else "none"
+};
+
+(: Validate Email :)
 declare function login:validate-email($email as xs:string){ 
     matches($email, '[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}')
 };
 
+(: Validate account :)
 declare function login:authorize($submit, $email, $password){
     if($submit and $email and $password)
     then login:validate-account($email, $password)
     else fn:false()
 };
 
+(: Process login :)
 declare function login:validate-account($email, $password){    
     let $hashed-password := util:hash($password, "MD5")
     let $user := user:get-user($email)
@@ -23,6 +37,7 @@ declare function login:validate-account($email, $password){
         else ()        
 };
 
+(: Create session :)
 declare function login:create-session($user){
     let $session := session:create()
     let $session-name := 
@@ -32,28 +47,10 @@ declare function login:create-session($user){
     return response:redirect-to(app:secure-link("index.xq"))
 };
 
-declare function login:destroy-session(){
-    let $null := session:remove-attribute("user")
-    let $inval := session:invalidate()
-    return ""
+(: Logout process :)
+declare function login:logout(){
+    if (session:get-attribute("user"))
+    then (session:remove-attribute("user"),session:invalidate())
+    else app:secure-link("user/login.xq")
 };
 
-declare function login:register($name as xs:string, $affliation as xs:string, 
-    $email as xs:string, $password as xs:string) {
-    
-    let $hashed_password := util:hash($password, "MD5")
-       
-    let $user-data := 
-        <user>
-           <id>{concat($name,'-',current-dateTime())}</id>
-           <name>{$name}</name>
-           <affliation>{$affliation}</affliation>
-           <email>{$email}</email>	
-           <password>{$hashed_password}</password>
-           <role>user</role>
-        </user>
-        
-    let $store := user:store($user-data)
-    
-    return response:redirect-to(app:secure-link("user/register-confirmation.xq"))       
-} ; 

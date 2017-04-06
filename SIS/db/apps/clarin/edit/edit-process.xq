@@ -1,7 +1,5 @@
-xquery version "1.0";
-
+xquery version "3.0";
 import module namespace data = "http://clarin.ids-mannheim.de/standards/data" at "../model/data.xqm";
-import module namespace topic="http://clarin.ids-mannheim.de/standards/topic" at "../model/topic.xqm";
 import module namespace spec="http://clarin.ids-mannheim.de/standards/specification" at "../model/spec.xqm";
 
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
@@ -13,79 +11,47 @@ import module namespace f = "http://clarin.ids-mannheim.de/standards/module/form
 
 import module namespace request = "http://exist-db.org/xquery/request";
 declare namespace exist="http://exist.sourceforge.net/NS/exist";
-declare option exist:serialize "method=xhtml media-type=text/html indent=yes doctype-system=about:legacy-compat";
 
-declare function local:generateRandomId($ids){
-    
-    let $login := xmldb:login('/db/clarin/data', 'webadmin', 'webadmin')
-    let $alpha := functx:chars("ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz")
-    let $alpha_length := count($alpha)    
-    let $chars := functx:chars("0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz")
-    let $char_length := count($chars)
-    let $string_length := 6
-    let $id := fn:string-join(
-        for $i in (1 to $string_length)
-           let $index := 
-                if ($i=1)
-                then util:random($alpha_length)+1
-                else util:random($char_length)+1
-           let $char :=
-                if ($i=1)
-                then $alpha[$index]
-                else $chars[$index]
-           return $char
-       , "")
+(: Handling the standard editing requests 
+   @author margaretha
+:)
+
+(: Update abbreviation :)
+declare function local:update-abbr($spec-abbr,$val){
+    let $values := tokenize($val,"#")
+    let $att :=  if ($values[2] = 'internal') then "yes" else "no"
+    let $node := 
+        <abbr internal="{$att}">
+            {$values[1]}
+        </abbr>
     return 
-        if (fn:index-of($ids,$id)>0) then local:generateRandomId($ids)
-        else $id
+        if ($values[1]="") 
+        then "empty" 
+        else spec:update-spec($spec-abbr,$node)
 };
 
-(:declare function spec:update-spec($node,$val){
-    let $login := data:open-access-to-database()   
-    let $up := update replace $node with $val
-    let $login := data:close-access-to-database()
-    return $val
-};
-
-declare function local:remove-element($node){
-    let $login := data:open-access-to-database()
-    let $up := update delete $node
-    let $login := data:close-access-to-database()
-    return ''
-};:)
-
+(: Update topic :)
 declare function local:update-topic($spec,$val){
     let $u := spec:update-spec($spec/@topic,$val)    
     for $link in tm:print-topic($spec,tokenize(data($spec/@topic),' '),'')
     return $link
 };
 
+(: Update standard body :)
 declare function local:update-sb($sb,$val){
     let $u := spec:update-spec($sb,$val) 
     return sbm:print-sb-link($sb)
 };
 
-declare function local:update-key($spec,$val){
-    let $node := $spec/keyword
+(: Update keywords :)
+declare function local:update-key($spec,$val){    
     let $keywords := tokenize($val,",")
-    let $login := data:open-access-to-database()
-    let $d := for $k in $node return update delete $k 
-    let $up :=
-            for $k in $keywords       
-            let $kw := <keyword>{$k}</keyword>            
-            return 
-                if ($node/text()="") then update replace $node with $kw
-                else update insert $kw following $spec/scope
-    let $login := data:close-access-to-database()    
+    let $up := spec:store-keywords($spec,$keywords)
     return fn:string-join($keywords,", ")
 };
 
-declare function local:update-reference($spec,$id,$field,$node,$parentnode){    
-    let $param-names := request:get-parameter-names()
-    let $refs := 
-        for $param in $param-names
-        return if (fn:starts-with($param,$field)) then $param else ()
- 
+(: Update asset :)
+declare function local:update-reference($spec,$id,$field,$node,$parentnode){
     let $parent := 
         if ($node) then () 
         else ( data:open-access-to-database(),
@@ -105,226 +71,217 @@ declare function local:update-reference($spec,$id,$field,$node,$parentnode){
     let $login := data:close-access-to-database()
     let $view := concat("views/view-spec.xq?id=",$id)
     return response:redirect-to(app:link($view)) 
+     
 };
 
-declare function local:add-description($spec,$path,$val) {
-    let $l := fn:string-length($path)     
-    let $newpid := fn:substring($path,$l -5,$l)
-    let $parentid := request:get-parameter('pid', '')    
-    let $login := data:open-access-to-database()
-    let $d := update insert <p id="{$newpid}">{$val}</p> following $spec/info[@type="description"]/p[@id=$parentid]
-    let $login := data:close-access-to-database()
-    return ""
-};
-
-declare function local:update-description($spec,$path,$description){
-    (:let $pid := fn:substring($path,5,11)    
-    let $u :=
-        if ($val)
-        then spec:update-spec($spec/info[@type="description"]/p[@id=$pid],<p id="{$pid}">{$val}</p>)
-        else spec:remove-element($spec/info[@type="description"]/p[@id=$pid]):)
-    let $val :=
-        if ($description) 
-        then concat('<info type="description"><p>',fn:replace($description,"\n+\s*","</p><p>"),"</p></info>")
+(: Validate the standard documents to upload :)
+declare function local:check-reference($id,$asset-node,$parentnode){
+    let $param-names := request:get-parameter-names()
+    let $refs := 
+        for $param in $param-names
+        return if (fn:starts-with($param,"ref")) then $param else ()    
+    let $check :=
+        for $file in $refs            
+        let $filename := request:get-uploaded-file-name($file)
+        return if ($filename) then 0 else 1
+    let $stored :=
+        if (functx:is-value-in-sequence(0,$check))
+        then spec:store-asset($refs)
+        else fn:false()
+    
+    let $up := 
+        if ($stored) then
+            if ($asset-node) then spec:add-into-node($asset-node,$stored)
+            else spec:add-into-node($parentnode,<asset>{$stored}</asset>)
         else ()
     
-    let $update := 
-        if ($val) then spec:update-spec($spec/info[@type="description"],util:parse($val))
-        else spec:remove-element($spec/info[@type="description"])
-
-    return util:parse($val)
+    let $pid := request:get-parameter('pid','')
+    let $view := 
+        if ($stored)
+        then concat("views/view-spec.xq?id=",$id)
+        else concat("views/view-spec.xq?display",$pid,"=block&amp;id=",$id,"#ref",$pid,"text")        
+        
+    return response:redirect-to(app:link($view))
 };
 
-declare function local:add-version-name($spec,$val){
-    let $parentid := request:get-parameter('pid', '')
-    let $node := $spec//*[@id=$parentid]/titleStmt
-    let $login := data:open-access-to-database()    
-    let $u :=
-        if ($node/abbr)
-        then update insert <title>{$val}</title> preceding $node/abbr
-        else if ($node/respStmt)
-        then update insert <title>{$val}</title> preceding $node/respStmt    
-        else update insert <title>{$val}</title> into $node
-    let $login := data:close-access-to-database()
+(: Check description for standard or standard version :)
+declare function local:check-description($id,$spec,$path,$description){
+    let $vid := request:get-parameter("vid",'')
+    let $eid := if ( $vid !='') then $vid else $id
+    
+    return
+        if ($description) then local:update-description($id,$eid,$spec,$path,$description) 
+        else response:redirect-to(app:link(concat("views/view-spec.xq?errorDesc",$eid,"=empty",
+            "&amp;id=",$id,"#desctext",$eid)))
+};
+
+(: Parse a node :)
+declare function local:parse-node($val){
+    try { util:parse($val) }
+    catch * {concat("Error message: ",$err:description)}
+};
+
+(: Update a description
+   Validation does not work because it requires targetNamespace in the schema. 
+   However, validation may not be necessary since the input for the description 
+   are treated as text, except links.
+:)
+declare function local:update-description($id,$eid,$spec,$path,$description){ 
+(:    let $clear := validation:clear-grammar-cache()
+    let $val-test := concat('<info xmlns="http://clarin.ids-mannheim.de/standards" type="description">',$description,'</info>'):)
+    let $description := replace($description,'&amp;mdash;','&amp;#8212;')
+    let $val := concat('<info type="description">',$description,'</info>')
+    let $desc-node := local:parse-node($val)
+    let $info := 
+        if ($eid = $id) then $spec/info[@type="description"] 
+        else $spec/descendant-or-self::node()[@id=$eid]/info[@type="description"]        
+    
+    let $response := 
+        if (starts-with($desc-node,"Error message:")) then $desc-node
+        else if ($info)
+        then spec:update-spec($info,$desc-node)
+        else spec:add-version-info($spec/descendant-or-self::node()[@id=$eid]/date,$desc-node)
+    
+    (:let $response := 
+        if (starts-with($desc-node,"Error message:")) then $desc-node
+        else if (validation:validate(local:parse-node($val-test),xs:anyURI('/db/apps/clarin/schemas/spec.xsd')))
+        then 
+            if ($eid = $id) then spec:update-spec($spec/info[@type="description"],$desc-node) 
+            else spec:update-spec($spec/descendant-or-self::version[@id=$eid]/info[@type="description"],$desc-node)             
+        else "Error message: Validation failed.":)
+(:        return validation:validate-report(local:parse-node($val-test),xs:anyURI('/db/apps/clarin/schemas/spec.xsd')):)
+    
+    let $uri := 
+        if (starts-with($response,"Error message:")) 
+        then concat("views/view-spec.xq?errorDesc",$eid,"=",$response,"&amp;id=",$id,"#desctext",$eid)
+        else concat("views/view-spec.xq?id=",$id,"#desctext",$eid)        
+        
+    return response:redirect-to( app:link($uri) )
+};
+
+(: Check if the version number is not empty and store it :)
+declare function local:store-version-number($version,$version-id,$vno,$vno-node,$type){
+    if ($vno != '')
+    then 
+        if ($vno-node)
+        then spec:update-spec($vno-node,<versionNumber type="{$type}">{$vno}</versionNumber>)
+        else spec:store-version-number($version,$version-id,$type,$vno)
+    else ()
+};
+
+(: Get the version numbers :)
+declare function local:check-version-number($spec,$val,$path,$version-id){
+    let $version := $spec//*[@id=$version-id]
+    let $vno := tokenize($val,"###")
+    let $vnomajor := $version/versionNumber[@type="major"]
+    let $vnominor := $version/versionNumber[@type="minor"]
+    let $store-vnomajor := local:store-version-number($version,$version-id,$vno[1],$vnomajor,"major")
+    let $store-vnominor := local:store-version-number($version,$version-id,$vno[2],$vnominor,"minor")        
     return $val
 };
 
-declare function local:add-version-abbr($spec,$val){
-    let $parentid := request:get-parameter('pid', '')
-    let $node := $spec//*[@id=$parentid]/titleStmt
-    let $login := data:open-access-to-database()    
-    let $u :=
-        if ($node/title)
-        then update insert <abbr>{$val}</abbr> following $node/title
-        else if ($node/respStmt)
-        then update insert <abbr>{$val}</abbr> preceding $node/respStmt    
-        else update insert <abbr>{$val}</abbr> into $node
-    let $login := data:close-access-to-database()
-    return concat(" (",$val,")")
-};
-
-declare function local:add-version-number($spec,$val,$type){
-    let $parentid := request:get-parameter('pid', '')
-    let $node := 
-        if ($type="minor" and $spec//*[@id=$parentid]/versionNumber)
-        then $spec//*[@id=$parentid]/versionNumber
-        else $spec//*[@id=$parentid]/titleStmt
-    let $login := data:open-access-to-database()
-    let $up := update insert <versionNumber type="{$type}">{$val}</versionNumber> following $node
-    let $login := data:close-access-to-database()
-    return $val
-};
-
-declare function local:add-version-date($spec,$val){
-    let $parentid := request:get-parameter('pid', '')
-    let $node := $spec//*[@id=$parentid]
-    let $login := data:open-access-to-database()    
-    let $u :=
-        if ($node/versionNumber)
-        then update insert <date>{$val}</date> following $node/versionNumber[count($node/versionNumber)]        
-        else update insert <date>{$val}</date> following $node/titleStmt
-    let $login := data:close-access-to-database()
-    return $val
-};
-
+(: Update standard version features :)
 declare function local:update-version-features($spec,$val,$node){
     let $version-id := request:get-parameter('pid', '')    
     let $v := util:parse($val)
-    let $login := data:open-access-to-database()    
-    let $n := 
-        if ($node/features)
-        then update replace $node/features with <features>{$v}</features>
-        else if ($node/info[@type='description'])
-        then update insert <features>{$v}</features> following $spec//*[@id=$version-id]/info[@type='description']
-        else if ($node/date)
-        then update insert <features>{$v}</features> following $node/date
-        else if ($node/versionNumber)
-        then update insert <features>{$v}</features> following $node/versionNumber
-        else update insert <features>{$v}</features> following $node/titleStmt
-    let $login := data:close-access-to-database()
+    let $store := spec:store-version-features($spec,$version-id,$node,$v)
     let $response := 
         for $f in $v/fs/f            
-            return concat($f/@name, "++", if ($f/*/@value) then $f/*/data(@value) else functx:trim(fn:string-join($f//text(),' ')))
+            return concat($f/@name, "++", 
+                if ($f/*/@value) 
+                then $f/*/data(@value) 
+                else functx:trim(fn:string-join($f//text(),' ')))
     return 
         fn:string-join($response, "--")
 };
 
-declare function local:update-version-item($spec,$val,$path,$node){    
-    if ($node and $path="vabbr" and $val!='')
-    then concat(" (",spec:update-spec($node/text(),$val),")")    
+(: Determine to add a new node to a standard or to update an existing node :)
+declare function local:update-version-item($spec,$val,$path,$node){
+    if ($val = '') then "empty"
+    else if ($node and $path="vabbr" and $val!='')
+        then local:update-abbr($node,$val)
     else if ($node)
-    then spec:update-spec($node/text(),$val)
+        then spec:update-spec($node/text(),$val)
     else if ($path="vname")
-    then local:add-version-name($spec,$val)
+        then spec:add-version-name($spec,$val,request:get-parameter('pid', ''))
     else if ($path="vabbr")
-    then local:add-version-abbr($spec,$val)
-    else if ($path="vnomajor")
-    then local:add-version-number($spec,$val,"major")
-    else if ($path="vnominor")
-    then local:add-version-number($spec,$val,"minor")
+        then spec:add-version-abbr($spec,$val,request:get-parameter('pid', ''))    
     else if ($path="vdate")
-    then local:add-version-date($spec,$val)
+        then spec:add-version-date($spec,$val,request:get-parameter('pid', ''))
     else "aha"
 };
 
-declare function local:update-version-status($spec,$val){
-    let $parentid := request:get-parameter('pid', '')
-    let $node := $spec//*[@id=$parentid]/@status
-    let $login := data:open-access-to-database()    
-    let $up := 
-        if ($node) then update value $node with $val
-        else update replace $spec//*[@id=$parentid] 
-             with <version id="{$parentid}" status="{$val}">{$spec//*[@id=$parentid]//*}</version>
-    let $login := data:close-access-to-database()
-    return $val
+(: Update a responsible statement of a standard version :)
+declare function local:update-version-resp($spec,$val,$path){
+    let $values := tokenize($val,"###")
+    let $version-id := request:get-parameter('pid', '')
+    let $resp-id := substring-after($path, "resp")
+    let $resp-node := $spec//*[@id=$version-id]/titleStmt/respStmt[@id=$resp-id]
+    
+    let $sbs := <sbs>{sbm:list-sbs-options('')}</sbs>
+    let $sb := $sbs/option[text() = $values[3]]/@value
+    
+    let $respStmt := 
+        <respStmt id="{$resp-id}">
+            <resp>{$values[1]}</resp>
+            {if($values[2] = "person") then  
+                if (fn:contains($values[3],", ")) 
+                then 
+                    for $k in fn:tokenize($values[3],", ") 
+                    return <name type="{$values[2]}">{$k}</name>
+                    
+                else if (fn:contains($values[3],","))
+                then 
+                    for $k in fn:tokenize($values[3],",") 
+                    return <name type="{$values[2]}">{$k}</name>
+                    
+                else <name type="{$values[2]}">{$values[3]}</name>             
+                
+            else 
+                if ($sb) then <name type="org" id="{$sb}">{$values[3]}</name>
+                else <name type="org">{$values[3]}</name>
+            }
+        </respStmt>
+          
+    return
+        if ($resp-node)
+        then spec:update-spec($resp-node,$respStmt)
+        else spec:add-into-node($spec//*[@id=$version-id]/titleStmt,$respStmt)    
 };
 
-declare function local:update-version-resp($spec,$values,$path,$task){
-
-    let $response := util:parse($values)
-   (:     for $v in (1 to count($values)) return 
-            if ($v =1) then concat("resp",$values[$v])
-            else if ($v=3) then concat("name",$values[$v])
-            else if ($v=4 and $values[4]) then $values[$v]
-            else ()
-    let $response := fn:string-join($response,"#") $response/@id :)
-    
+(:    let $response := util:parse($values)   
     let $version-id := request:get-parameter('pid', '')
-    let $str-length := fn:string-length($path)
-    let $ids := $spec//*/respStmt/@id
-    
+    let $str-length := fn:string-length($path)        
     let $resp-id :=
         if ($task="update") then fn:substring($path,$str-length -5,$str-length)
         else $response/respStmt/@id
-        
-    (: local:generateRandomId($ids)
-    let $up :=
-        <respStmt id="{$resp-id}">
-            <resp>{$values[1]}</resp>
-            { if (fn:contains($values[3],", ")) (:comma with space:)
-              then
-                for $name in fn:tokenize($values[3],", ")
-                return <name type="{$values[2]}" id="{$values[4]}">{$name}</name> 
-              else if (fn:contains($values[3],",")) (:comma:)
-              then
-                for $name in fn:tokenize($values[3],",")
-                return <name type="{$values[2]}" id="{$values[4]}">{$name}</name>
-              else <name type="{$values[2]}" id="{$values[4]}">{$values[3]}</name>
-            }
-        </respStmt>
-        :)
-   
-    let $up := 
+    let $val := 
         <respStmt id="{$resp-id}">
         {$response/respStmt/*}
-        </respStmt>
-    
+        </respStmt>    
     let $node := 
         if ($task='update') then $spec//*[@id=$version-id]/titleStmt/respStmt[@id=$resp-id]
-        else $spec//*[@id=$version-id]/titleStmt
-    let $login := data:open-access-to-database()
-    let $store := 
+        else $spec//*[@id=$version-id]/titleStmt    
+   return
         if ($task='update')
-        then update replace $node with $up
-        else update insert $up into $node
-            
-    let $login := data:close-access-to-database()
-    
-    return $up
-       (: if ($task="update") then $response 
-        else concat($resp-id,"***",$response):)
+        then spec:update-spec($node,$val)
+        else spec:add-into-node($node,$val)            
+       
 };
 
-(:declare function local:check-version-resp($spec,$val,$path,$task){
-    
-    let $values := fn:tokenize($val,"#")    
-    let $error :=
-        for $item in fn:index-of($values,'') return
-            if ($item=1) then concat("error",$path)
-            else if ($item=2) then concat("error", $path,"type")
-            else concat("error", $path,"name")            
-    let $error := if (count($error) >0) then fn:string-join($error,"#") else ()
-    
-    return 
-        if ($error) then $error
-        else local:update-version-resp($spec,$path,$values,$task)        
-};:)
-
-declare function local:update-version-url($spec,$version-id,$node,$urls,$val){
-    let $login := data:open-access-to-database()
-    let $del := for $k in $node return update delete $k 
-    let $up :=
-        for $k in fn:reverse($urls)
-        let $u := <address type="URL">{$k}</address>      
-        return 
-            if ($spec//*[@id=$version-id]/features) 
-                then update insert $u following $spec//*[@id=$version-id]/features
-            else 
-                update insert $u following $spec//*[@id=$version-id]/info[@type='description']
-    let $login := data:close-access-to-database()
-    return $val
+declare function local:check-version-resp($spec,$val,$path,$task){
+    (\:let $values := tokenize($val,"###")
+    return
+        if (functx:is-value-in-sequence("undefined",$values)
+        then "empty"
+        else ()
+:\)
+    if (contains($val, ("<respStmt id=","<resp>","</resp>","<name>","</name>" )))
+    then local:update-version-resp($spec,$val,$path,$task)
+    else "invalid"
 };
-
+:)
+(: Validate urls and store them :)
 declare function local:check-version-url($spec,$val,$path){
     let $version-id := request:get-parameter('pid', '')
     let $node := $spec//*[@id=$version-id]/address
@@ -335,47 +292,37 @@ declare function local:check-version-url($spec,$val,$path){
     return 
         if (functx:is-value-in-sequence('false',$sequence)) 
             then fn:string-join( $sequence,"--" )
-        else local:update-version-url($spec,$version-id,$node,$urls,$val)
+        else spec:store-version-url($spec,$version-id,$node,$urls,$val)
 };
 
+(: Create version relations and store them :)
 declare function local:update-version-relation($spec,$path,$values){    
-        
-    let $target-node := spec:get-spec($values[2])
-    let $target-link := 
-        if ($target-node/@standardSettingBody)
-        then concat('view-spec.xq?id=',$target-node/data(@id))
-        else concat('view-spec.xq?id=',$target-node/../data(@id),'#',$values[2])
-    let $n := $target-node/ancestor-or-self::node()/titleStmt/title/text()
-    let $nn := count($n)
-    let $vn := $target-node/versionNumber
-    let $target-name :=				
-         if ($vn) 
-         then (concat($n[$nn],' ',$vn[count($vn)]/text())) 
-         else $n[$nn]
-       
     let $target := request:get-parameter('pid', '')       
     let $version-id := 
         if(fn:starts-with($path,'vrel')) then fn:substring-after(fn:substring-before($path,'--'),'vrel')
         else fn:substring-after($path,'newvrel')
-    let $node := $spec//*[@id=$version-id]/relation[@target=$target]
+    
     let $new-relation := 
         <relation target="{$values[2]}" type="{$values[1]}">
-            <info><p>{$values[3]}</p></info>
-        </relation>    
+            {if ($values[3]) then <info><p>{$values[3]}</p></info> else ()}
+        </relation>
+    let $update := spec:store-version-relation($spec,$version-id,$target,$new-relation)
     
-    let $login := data:open-access-to-database()    
-    let $up :=
-        if ($node) then update replace $node with $new-relation
-        else 
-            if ($spec//*[@id=$version-id]/asset)
-            then update insert $new-relation preceding $spec//*[@id=$version-id]/asset
-            else update insert $new-relation into $spec//*[@id=$version-id]
-    let $login := data:close-access-to-database()
-    let $val := fn:insert-before(concat($target-link,'++',$target-name),1,$values)
+    let $target-node := spec:get-spec($values[2])
+    let $target-link := 
+        if ($target-node/@standardSettingBody)
+        then concat('view-spec.xq?id=',$target-node/data(@id))
+        else concat('view-spec.xq?id=',$target-node/../data(@id),'#',$values[2])    
+    let $target-name :=				
+         if ($target-node/titleStmt/abbr/text()) then $target-node/titleStmt/abbr/text()          
+         else concat( $target-node/ancestor::spec/titleStmt/abbr/text(), "-",
+            substring($target-node/date,1,4))
+    let $val := fn:insert-before(concat($target-link,'++',$target-name),1,$values)    
        
     return fn:string-join( $val,"--" )
 };
 
+(: Validate obligatory fields for version relations :)
 declare function local:check-version-relation($spec,$val,$path){
     let $values := fn:tokenize($val,"--")
     let $errors := (
@@ -388,9 +335,10 @@ declare function local:check-version-relation($spec,$val,$path){
         else local:update-version-relation($spec,$path,$values)        
 };
 
+(: Remove a version relation :)
 declare function local:remove-version-relation($spec,$target,$path){    
     let $version-id := fn:substring-after(fn:substring-before($path,'--'),'vrel')
-    let $node := $spec//*[@id=$version-id]/relation[@target=$target]
+    let $node := $spec/descendant-or-self::*[@id=$version-id]/relation[@target=$target]
     return spec:remove-element($node)
 };
 
@@ -405,9 +353,9 @@ return
     then spec:update-spec($spec/titleStmt/title/text(),$val)
     
     else if ($path ="abbr")
-    then spec:update-spec($spec/titleStmt/abbr/text(),$val)
+    then local:update-abbr($spec/titleStmt/abbr,$val)
     
-    else if ($path ="scope")
+    else if ($val and $path ="scope")
     then spec:update-spec($spec/scope/text(),$val)
     
     else if ($val and $path ="topic")
@@ -416,14 +364,14 @@ return
     else if($val and $path="sb")
     then local:update-sb($spec/@standardSettingBody,$val)
     
-    else if ($path="key")
+    else if ($val and $path="key")
     then local:update-key($spec,$val)    
     
     else if ($task="upload")
-    then local:update-reference($spec,$id,"ref",$spec/asset,$spec)
+    then local:check-reference($id,$spec/asset,$spec)
     
     else if ($task="uploadversion")
-    then local:update-reference($spec,$id,"refv",$spec//*[@id=request:get-parameter('pid', '')]/asset,$spec//*[@id=request:get-parameter('pid', '')])    
+    then local:check-reference($id,$spec//*[@id=request:get-parameter('pid', '')]/asset,$spec//*[@id=request:get-parameter('pid', '')])
     
     else if (fn:starts-with($path,"refv") and $task='remove')    
     then spec:remove-element($spec//*[@id=fn:substring-before(fn:substring-after($path,'refv'),'text')]/asset/a[.=$val])
@@ -432,48 +380,36 @@ return
     then spec:remove-element($spec/asset/a[.=$val]) 
         
     else if (fn:starts-with($path,"desc"))
-    then local:update-description($spec,$path,$val)
+    then local:check-description($id,$spec,$path,$val)      
     
-    (:else if ($val and fn:starts-with($path,"adddesc"))
-    then local:add-description($spec,$path,$val):)
-    
-    else if ($path="vname")
+    else if (starts-with($path,"vname"))
     then local:update-version-item($spec,$val,$path,$spec//*[@id=request:get-parameter('pid', '')]/titleStmt/title)
     
-    else if ($path="vabbr")
+    else if (starts-with($path,"vabbr"))
     then local:update-version-item($spec,$val,$path,$spec//*[@id=request:get-parameter('pid', '')]/titleStmt/abbr)
     
-    else if ($path="vnomajor")
-    then local:update-version-item($spec,$val,$path,$spec//*[@id=request:get-parameter('pid', '')]/versionNumber[@type="major"])
+    else if ($path="vno" and $val != "###")
+    then  local:check-version-number($spec,$val,$path,request:get-parameter('pid', '')) 
     
-    else if ($path="vnominor")
-    then local:update-version-item($spec,$val,$path,$spec//*[@id=request:get-parameter('pid', '')]/versionNumber[@type="minor"])
-    
-    else if ($path="vstatus")
-    then local:update-version-status($spec,$val)
+    else if ($val and $path="vstatus")
+    then spec:store-version-status($spec,$val,request:get-parameter('pid', ''))
     
     else if ($path="vdate" and f:validate-date($val))
     then local:update-version-item($spec,$val,$path,$spec//*[@id=request:get-parameter('pid', '')]/date)
     
-    else if (fn:starts-with($path,"resp"))
-    then local:update-version-resp($spec,$val,$path,'update')
-    
-    else if (fn:starts-with($path,"newresp"))
-    then local:update-version-resp($spec,$val,$path,'add')
-    
-    else if (fn:starts-with($path,"features"))
+    else if ($val and fn:starts-with($path,"resp"))
+    then local:update-version-resp($spec,$val,$path)
+        
+    else if ($val and $path ="features")
     then local:update-version-features($spec,$val,$spec//*[@id=request:get-parameter('pid', '')])
     
-    else if (fn:starts-with($path,"vurl"))
+    else if ($val and fn:starts-with($path,"vurl"))
     then local:check-version-url($spec,$val,$path)
     
     else if (fn:starts-with($path,"vrel") and $task='remove')
     then local:remove-version-relation($spec,$val,$path)
     
-    else if (fn:starts-with($path,"vrel") and $task='')
-    then local:check-version-relation($spec,$val,$path)
-    
-    else if (fn:starts-with($path,"newvrel"))
-    then local:check-version-relation($spec,$val,$path)
+    else if (fn:starts-with($path,"vrel") or fn:starts-with($path,"newvrel"))
+    then local:check-version-relation($spec,$val,$path)    
     
     else 'empty'

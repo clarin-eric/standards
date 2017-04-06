@@ -1,4 +1,43 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTurtle" standardSettingBody="SBW3C" topic="TopicSerialization" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Terse RDF Triple Language</title><abbr>Turtle</abbr></titleStmt><scope>Standardisation of textual syntax for RDF</scope><keyword>syntax</keyword><keyword>RDF</keyword><info type="description"><p>Turtle is a new specification, which is in development since 2011 within the W3C. Currently, it has a W3C Working Draft status. 
-            The specification defines the syntax for RDF and allows to describe an RDF graph in a compact textual form. Turtle is a subset of 
-            Notation 3 (N3). However, it is not so powerful like N-3 and can only serialize valid RDF graphs. Turtle is easy to develop and 
-            is an alternative to other variety of syntaxes/serialization formats for RDF. </p></info><version id="SpecTurtle-WD" status="W3C Working Draft"><titleStmt><title>Terse RDF Triple Language</title><respStmt><resp>Editor</resp><name>Eric Prud'hommeaux</name><name>Gavin Carothers</name></respStmt><respStmt><resp>Author</resp><name>David Beckett</name><name>Tim Berners-Lee</name><name>Eric Prud'hommeaux</name><name>Gavin Carothers</name></respStmt></titleStmt><date>2012-07-10</date><address type="URL">http://www.w3.org/TR/2012/WD-turtle-20120710/</address><relation target="SpecRDF" type="isApplicationOf"/><relation target="SpecSPARQL" type="isSubsetOf"><info type="description"><p>Turtle Grammar is a subset of the SPARQL Query Language for RDF.</p></info></relation></version></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTurtle" standardSettingBody="SBW3C" topic="TopicSerialization" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Terse RDF Triple Language</title>
+        <abbr>Turtle</abbr>
+    </titleStmt>
+    <scope>Standardisation of textual syntax for RDF</scope>
+    <keyword>syntax</keyword>
+    <keyword>RDF</keyword>
+    <info type="description">
+        <p>Turtle is a serialization format for RDF. It has been developed since 2011 within W3C. 
+            Currently, it has W3C Working Draft status. 
+            The specification defines the syntax for RDF. By using Turtle, an RDF graph can be described 
+            in a compact textual form. Turtle is a subset of Notation 3 (N3), but not as powerful, 
+            because it can only serialize valid RDF graphs.  </p>
+    </info>
+    <relation target="SpecRDF1" type="isUsedBy"/>
+    <version id="SpecTurtle-WD" status="W3C Working Draft">
+        <titleStmt>
+            <title>Terse RDF Triple Language</title>
+            <abbr internal="yes">Turtle-2012</abbr>
+            <respStmt>
+                <resp>Editor</resp>
+                <name>Eric Prud'hommeaux</name>
+                <name>Gavin Carothers</name>
+            </respStmt>
+            <respStmt>
+                <resp>Author</resp>
+                <name>David Beckett</name>
+                <name>Tim Berners-Lee</name>
+                <name>Eric Prud'hommeaux</name>
+                <name>Gavin Carothers</name>
+            </respStmt>
+        </titleStmt>
+        <date>2012-07-10</date>
+        <address type="URL">http://www.w3.org/TR/2012/WD-turtle-20120710/</address>
+        <relation target="SpecRDF" type="isApplicationOf"/>
+        <relation target="SpecSPARQL" type="isSubsetOf">
+            <info type="description">
+                <p>Turtle grammar is a subset of the SPARQL Query Language for RDF.</p>
+            </info>
+        </relation>
+    </version>
+</spec>

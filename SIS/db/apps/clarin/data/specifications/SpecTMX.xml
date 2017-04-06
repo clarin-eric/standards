@@ -1,17 +1,63 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTMX" topic="TopicMarkupLanguage TopicFileFormats" standardSettingBody="SBLISA" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Translation Memory eXchange</title><abbr>TMX</abbr></titleStmt><scope>Standard format for importing and exporting translation memories</scope><keyword>computer-aided translation</keyword><keyword>format</keyword><keyword>translation memory</keyword><info type="description"><p>Translation Memory eXchange (TMX) is an XML based standard for importing and
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTMX" topic="TopicMarkupLanguage TopicFileFormats" standardSettingBody="SBLISA" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Translation Memory eXchange</title>
+        <abbr>TMX</abbr>
+    </titleStmt>
+    <scope>Standard format for importing and exporting translation memories</scope>
+    <ClarinRecommendation>
+        <recommendation specId="SpecTMX" type="fully recommended"/>
+    </ClarinRecommendation>
+    <keyword>computer-aided translation</keyword>
+    <keyword>format</keyword>
+    <keyword>translation memory</keyword>
+    <info type="description">
+        <p>Translation Memory eXchange (TMX) is an XML based standard for importing and
       exporting translation memories created by computer-aided translation and localization
-      tools.</p><p>Since 1998 the standard was originally developed within the Container/Content
+      tools.</p>
+        <p>Since 1998 the standard was originally developed within the Container/Content
       Allowing Reuse (OSCAR) committee at the Localization Industry Standards Association
-      (LISA).</p><p>Following the insolvency of LISA in 2011 the standard has been put under Creative
+      (LISA).</p>
+        <p>After the insolvency of LISA in 2011, the standard has been put under Creative
       Commons license and is freely available in its currently version 1.4b at the GALA
-      homepage.</p><p>The TXM is a standardised format for representation of translation memory data.
+      homepage.</p>
+        <p>The TXM is a standardised format for representation of translation memory data.
       It is widely used in the translation and localization industry to exchange translation memory
-      content between various translation data or translation-related tools.</p><p>The TMX specification is defined in two parts:</p><ul><li id="pTMX08">"A specification of the format of the container (the higher-level elements
+      content between various translation data or translation-related tools.</p>
+        <p>The TMX specification is defined in two parts:</p>
+        <ul>
+            <li>"A specification of the format of the container (the higher-level elements
         that provide information about the file as a whole and about entries). In TMX, an entry
         consisting of aligned segments of text in two or more languages is called a Translation Unit
-        (the &lt;tu&gt; element).</li><li id="pTMX09"> A specification of a low-level meta-markup format for the content of a
+        (the &lt;tu&gt; element).</li>
+            <li> A specification of a low-level meta-markup format for the content of a
         segment of translation-memory text. In TMX, an individual &lt;segment&gt; of
         translation-memory text in a particular language is denoted by a seg element." See the
         <a href="http://www.gala-global.org/oscarStandards/tmx/tmx14b.html">TMX 1.4b Specification</a>
-        for more details. </li></ul></info><version id="SpecTMX-LISA"><titleStmt><title>TMX Specification</title><respStmt id="pTMX02"><resp>Editor</resp><name type="org" id="SBLISA">LISA</name></respStmt></titleStmt><versionNumber type="major">1.4b</versionNumber><date>2005-04-26</date><address type="URL">http://www.gala-global.org/oscarStandards/tmx/</address><relation target="SpecSRX" type="uses"><info type="description"><p>SRX defines how the translation units have been segmented and was built as an
-          addition to TXM.</p></info></relation><relation target="SpecXML" type="isBasedOn"/></version><asset><a href="../doc/Example_TMX.tmx">Example_TMX.tmx</a></asset></spec>
+        for more details. </li>
+        </ul>
+    </info>
+    <relation target="SpecSRX-LISA" type="uses"/>
+    <version id="SpecTMX-LISA">
+        <titleStmt>
+            <title>TMX Specification</title>
+            <abbr internal="yes">TMX-2005</abbr>
+            <respStmt id="pTMX02">
+                <resp>Editor</resp>
+                <name type="org" id="SBLISA">LISA</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">1.4b</versionNumber>
+        <date>2005-04-26</date>
+        <address type="URL">http://www.gala-global.org/oscarStandards/tmx/</address>
+        <relation target="SpecSRX" type="uses">
+            <info type="description">
+                <p>SRX defines how the translation units have been segmented and was built as an
+          addition to TXM.</p>
+            </info>
+        </relation>
+        <relation target="SpecXML" type="isBasedOn"/>
+    </version>
+    <asset>
+        <a href="../doc/Example_TMX.tmx">Example_TMX.tmx</a>
+    </asset>
+</spec>

@@ -17,7 +17,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
             {menu:view()}
             <div class="content">
                 <div class="navigation">
-                    &gt; <a href="registration.xq">Registration</a>
+                    &gt; <a href="register.xq">Registration</a>
                     &gt; Confirmation
                 </div>
                 <div><span class="heading">Registration Confirmation</span></div>

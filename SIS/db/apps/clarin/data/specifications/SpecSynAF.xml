@@ -1,13 +1,241 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecSynAF" standardSettingBody="SBISO" topic="TopicSynAnn" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Language resource management — Syntactic annotation framework</title><abbr>SynAF</abbr></titleStmt><scope>Syntactic corpus annotation</scope><info type="description"><p>The abbreviation SynAF stands for Syntactic Annotation Framework. It was developed within
-			the eContent LIRICS project and then it has been taken over and developed further by Technical
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecSynAF" standardSettingBody="SBISO" topic="TopicSynAnn" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Language resource management — Syntactic annotation framework</title>
+        <abbr>SynAF</abbr>
+    </titleStmt>
+    <scope>Syntactic corpus annotation</scope>
+    <info type="description">
+        <p>The abbreviation SynAF stands for Syntactic Annotation Framework. It was developed within
+            the <a href="http://lirics.loria.fr/">eContent LIRICS</a> project and then it has been taken over and developed further by Technical
 			Committee ISO/TC 37 (Terminology and Other Language Resources), Subcommittee SC 4 (Language
 			Resource Management). Since 2010, SynAF has been accepted and ranked as ISO 24615:2010
-			standard.</p><p>The SynAF is complementary and closely based on ISO 24611 (MAF, morpho-syntactic annotation
-			framework). Nevertheless, in contrast to MAF, which describes such features as part of speech, morphological
-			and grammatical features, SynAf describes a word overall analysis. This specifies the
-			syntactic relations existing between single words and how words are arranged and connected to
-			build phrases and sentences.</p><p>The objectives of SynAF are to describe a meta-model for representing the syntactic
-			annotation of textual documents and to offer a set of data categories, as basis for
-			unitary syntactic annotation of language resources or language processing components.</p><p>With SynAF the two main kinds of syntactic annotation can be represented: the constituent and
+			standard.</p>
+        <p> SynAF is closely related to ISO 24611 (MAF, morpho-syntactic annotation framework). 
+            In contrast to MAF, which describes such features as part of speech, morphological and grammatical features, 
+            SynAf describes a word overall analysis. This specifies the syntactic relations existing between single 
+            words and how words are arranged and connected to build phrases and sentences. Both specifications are designed 
+            to be able to complement to each other.</p>
+        <p>The objectives of SynAF are to describe a meta-model representing the syntactic
+			annotation of textual documents and to offer a set of data categories, as a basis for
+			unitary syntactic annotation of language resources or language processing components.</p>
+        <p>By using SynAF, two main kinds of syntactic annotation can be represented: the constituent and
 			dependency structures. SynAF allows to handle syntactic ambiguities and to differentiate
-			between shallow and deep annotations.</p></info><info type="recReading"><biblStruct id="bib2SY" type="conferencePaper"><analytic><title>SynAF: Towards a Standard for Syntactic Annotation</title><author><forename>Thierry</forename><surname>Declerck</surname></author></analytic><monogr><title>Proceedings of LREC</title><imprint><pubPlace>Genoa, Italy</pubPlace><date>2006</date></imprint></monogr></biblStruct></info><version id="SpecSynAF-IS" status="International Standard"><titleStmt><respStmt id="TV90TL"><resp>Editor</resp><name type="org" id="SBISO-TC37-SC4-WG6">ISO/TC 37/SC 4/WG 6</name></respStmt></titleStmt><versionNumber type="major">ISO 24615:2010</versionNumber><date>2010-10-19</date><features><fs><f name="formalModel"><symbol value="Graph"/></f><f name="notation"><symbol value="Standoff"/></f><f name="multipleHierarchies"><fs><f name="support"><binary value="yes"/></f><f name="item"><vColl><string>standoff annotation</string></vColl></f></fs></f></fs></features><address type="URL">http://www.iso.org</address><relation target="SpecDcr" type="isApplicationOf"><info><p>The syntactic tag sets are based on data categories from the DCR (ISO 12620 Data Category Registry)</p></info></relation><relation target="SpecMaf-IS" type="isUsedBy"><info><p>The SynAF relies complementary and closely on ISO 24611 (MAF, morpho-syntactic annotation framework).</p></info></relation></version></spec>
+			between shallow and deep annotations.</p>
+    </info>
+    <info type="recReading">
+        <biblStruct id="bib2SY" type="conferencePaper">
+            <analytic>
+                <title>SynAF: Towards a Standard for Syntactic Annotation</title>
+                <author>
+                    <forename>Thierry</forename>
+                    <surname>Declerck</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <title>Proceedings of LREC</title>
+                <imprint>
+                    <pubPlace>Genoa, Italy</pubPlace>
+                    <date>2006</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+    </info>
+    <relation target="SpecDcr" type="isApplicationOf">
+        <info>
+            <p>The syntactic tag sets are based on data categories from the DCR (ISO 12620 Data Category Registry)</p>
+        </info>
+    </relation>
+    <relation target="SpecMaf-IS" type="isUsedBy">
+        <info>
+            <p>SynAF relies complementary and closely on ISO 24611 (MAF, morpho-syntactic annotation framework).</p>
+        </info>
+    </relation>
+    <relation target="SpecKAF" type="inspires"/>
+    <version id="SpecSynAF-IS" status="International Standard">
+        <titleStmt>
+            <abbr internal="yes">SynAF-2010</abbr>
+            <respStmt id="TV90TL">
+                <resp>Editor</resp>
+                <name type="org" id="SBISO-TC37-SC4-WG6">ISO/TC 37/SC 4/WG 6</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">ISO 24615:2010</versionNumber>
+        <date>2010-10-19</date>
+        <features name="Eee">
+            <fs>
+                <f name="formalModel">
+                    <symbol value="Graph"/>
+                </f>
+                <f name="notation">
+                    <symbol value="Standoff"/>
+                </f>
+                <f name="multipleHierarchies">
+                    <fs>
+                        <f name="support">
+                            <binary value="yes"/>
+                        </f>
+                        <f name="item">
+                            <vColl>
+                                <string>standoff annotation</string>
+                            </vColl>
+                        </f>
+                    </fs>
+                </f>
+            </fs>
+        </features>
+        <address type="URL">http://www.iso.org</address>
+        <relation target="SpecSynAF-Part2-2014" type="isRevisedBy"/>
+        <relation target="SpecSynAF-Part1-2014" type="isRevisedBy"/>
+    </version>
+    <part id="SpecSynAF-Part1">
+        <titleStmt>
+            <title>Language resource management — Syntactic annotation framework (SynAF) — Part 1: Syntactic model</title>
+            <abbr internal="yes">SynAF-1</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>"ISO 24615-1:2014 describes the syntactic annotation framework (SynAF), a high level model for representing the syntactic annotation 
+                of linguistic data, with the objective of supporting interoperability across language resources or language processing components. 
+                ISO 24615-1:2014 is complementary and closely related to ISO 24611 (MAF, morpho-syntactic annotation framework) and provides a metamodel 
+                for syntactic representations as well as reference data categories for representing both constituency and dependency information in 
+                sentences or other comparable utterances and segments."(<a href="http://www.iso.org">Abstract, ISO ISO 24615-1:2014</a>)</p>
+        </info>
+        <version id="SpecSynAF-Part1-2014" status="International Standard">
+            <titleStmt>
+                <abbr>SynAF-1-2014</abbr>
+                <respStmt id="syn14AF">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-TC37-SC4-WG6">ISO/TC 37/SC 4 /WG 6</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major">ISO 24615-1:2014</versionNumber>
+            <date>2014-02-05</date>
+            <address type="URL">http://www.iso.org/iso/home.html</address>
+            <relation target="SpecSynAF-IS" type="isRevisionOf">
+                <info>
+                    <p>
+                        ISO 24615-1:2014 is based on the previous version SynAF ISO 24615:2010.
+                    </p>
+                </info>
+            </relation>
+        </version>
+    </part>
+    <part id="SpecSynAF-Part2">
+        <titleStmt>
+            <title>Language resource management — Syntactic annotation framework (SynAF) — Part 2: XML serialization</title>
+            <abbr>ISOTiger</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>The second part of the SynAF standard is based on the previous version SynAF ISO 24615:2010, which was published in 2010. 
+                SynAF ISO 24615:2010 includes a comprehensive reference model for the representation of syntactic annotations. Additionally, 
+                the SynAF ISOTiger provides an XML serialization in Tiger format. The attributes in the XML serialization will have pointers to ISOCat.</p>
+        </info>
+        <version id="SpecSynAF-Part2-2014" status="Draft International Standard">
+            <titleStmt>
+                <abbr>SynAF-2-2014</abbr>
+                <respStmt id="syn14SF">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-TC37-SC4-WG6">ISO/TC 37/SC 4 /WG 6</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major">ISO/DIS 24615-2</versionNumber>
+            <date>2014-10-24</date>
+            <info type="recReading">
+                <biblStruct type="conferencePaper" id="kd97FS">
+                    <analytic>
+                        <title>ISO-TimeML: An International Standard for Semantic annotation</title>
+                        <author>
+                            <forename>Sonja</forename>
+                            <surname>Bosch</surname>
+                        </author>
+                        <author>
+                            <forename>Key-Sun</forename>
+                            <surname> Choi</surname>
+                        </author>
+                        <author>
+                            <forename>Éric</forename>
+                            <surname>de la Clergerie</surname>
+                        </author>
+                        <author>
+                            <forename>Alex Chengyu</forename>
+                            <surname>Fang</surname>
+                        </author>
+                        <author>
+                            <forename>Gertrud</forename>
+                            <surname>Faass</surname>
+                        </author>
+                        <author>
+                            <forename>Kiyong</forename>
+                            <surname>Lee</surname>
+                        </author>
+                        <author>
+                            <forename>Antonio</forename>
+                            <surname>Pareja-Lor</surname>
+                        </author>
+                        <author>
+                            <forename>Laurent</forename>
+                            <surname>Romary</surname>
+                        </author>
+                        <author>
+                            <forename>Andreas</forename>
+                            <surname>Witt</surname>
+                        </author>
+                        <author>
+                            <forename>Amir</forename>
+                            <surname>Zeldes</surname>
+                        </author>
+                        <author>
+                            <forename>Florian</forename>
+                            <surname>Zipser</surname>
+                        </author>
+                    </analytic>
+                    <monogr>
+                        <title>Proceedings of the 11th International Workshop on Treebanks and Linguistic Theories</title>
+                        <imprint>
+                            <pubPlace>Lisbon, Portugal</pubPlace>
+                            <date>2012</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <biblStruct type="journalArticle" id="je98DL">
+                    <analytic>
+                        <title>&lt;tiger2/&gt;: Serialising the ISO SynAF Syntactic Object Model</title>
+                        <author>
+                            <forename>Laurent</forename>
+                            <surname>Romary</surname>
+                        </author>
+                        <author>
+                            <forename>Amir</forename>
+                            <surname>Zeldes</surname>
+                        </author>
+                        <author>
+                            <forename>Florian</forename>
+                            <surname>Zipser</surname>
+                        </author>
+                    </analytic>
+                    <monogr>
+                        <title>Language Resources and Evaluation</title>
+                        <imprint>
+                            <biblScope type="vol">49</biblScope>
+                            <biblScope type="issue">1</biblScope>
+                            <biblScope type="pp">1–18</biblScope>
+                            <date>2014</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+            </info>
+            <address type="URL">http://www.iso.org/iso/home.html</address>
+            <relation target="SpecSynAF-IS" type="isRevisionOf">
+                <info>
+                    <p>
+                        ISO 24615-2 is based on the previous version SynAF ISO 24615:2010.
+                </p>
+                </info>
+            </relation>
+            <relation target="SpecCmdi" type="isBasedOn">
+                <info type="description">
+                    <p>Metadata in SynAF ISOTiger is based on CDMI Metadata.</p>
+                </info>
+            </relation>
+        </version>
+    </part>
+</spec>

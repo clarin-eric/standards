@@ -8,8 +8,14 @@ import module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema" a
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace asm ="http://clarin.ids-mannheim.de/standards/add-spec-module" at "../modules/add-spec.xql";
+import module namespace rsm ="http://clarin.ids-mannheim.de/standards/register-spec-module" at "../modules/register-spec.xql";
+import module namespace sbm="http://clarin.ids-mannheim.de/standards/sb-module" at "../modules/sb.xql";
 
 import module namespace f = "http://clarin.ids-mannheim.de/standards/module/form" at "../edit/edit-form.xq";
+
+(: Define the registering standard version page
+   @author margaretha
+:)
 
 let $id := request:get-parameter('id', '')
 
@@ -19,6 +25,7 @@ let $version-id := request:get-parameter("vid","")
 let $version-resp := request:get-parameter("vresp","")
 let $version-resptype := request:get-parameter("vresptype","")
 let $version-respname := request:get-parameter("vrespname","")
+let $version-resporg := request:get-parameter("vresporg","")
 let $version-date := request:get-parameter("vdate","")
 
 let $param-names := request:get-parameter-names()
@@ -31,8 +38,10 @@ let $version-relation := f:get-parameters($param-names,"vrelation",$num)
 let $version-target := f:get-parameters($param-names,"vtarget",$num)
 let $version-reldesc := f:get-parameters($param-names,"vreldesc",$num)
 
-let $validation := if ($submitted) then asm:validate($param-names,$id,$version-id,$version-date,$version-resp,$version-respname,$version-resptype,
-    $version-relation,$version-target,$version-reldesc,$num) else ()
+let $valid-vid := rsm:validate-id($version-id)
+let $validation := asm:validate-version($submitted,$param-names,$id,$version-id,$valid-vid,
+    $version-resp,$version-respname,$version-resptype,$version-resporg,
+    $version-date,$version-relation,$version-target,$version-reldesc,$num)
 
 let $version-parent := request:get-parameter("vparent","")
 let $version-name := request:get-parameter("vname","")
@@ -44,7 +53,7 @@ let $version-description := request:get-parameter("vdescription","")
 let $version-features := request:get-parameter("vfeatures","")
 
 let $spec := asm:get-spec($id)
-let $spec-name := $spec/titleStmt/title/text()
+let $spec-name := asm:get-spec-name($spec)
 
 let $submitted-version := request:get-parameter("versionid","")
 
@@ -54,7 +63,13 @@ return
     <head>
        <title>Registering Standard Parts</title>       
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
-        <script type="text/javascript" src="{app:resource("edit.js","js")}"/>
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dijit/themes/claro/claro.css" media="screen"/>        
+        <script type="text/javascript" src="{app:resource("edit.js","js")}"/>        
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js"
+        data-dojo-config="async: true, parseOnLoad: true"/>
+        <script>require(["dojo/parser", "dijit/form/ComboBox"]);</script>
+        <script type="text/javascript" src="{app:resource("tinymce/tinymce.min.js","js")}"/>
+        <script type="text/javascript" src="{app:resource("xmleditor.js","js")}"/>
     </head>   
     <body>
         <div id="all">
@@ -70,13 +85,18 @@ return
              
              <div class="title">Registering Standard</div>
              <div>
+                {if (session:get-attribute("user") = 'webadmin')
+                 then <p>You can register a standard to our collection by following the registration steps below. Your given 
+                information will be stored after submission in each step. Please keep in mind that you cannot go back 
+                to a previous step. After submission, your standard will be place in <b>/data/specifications</b> folder.</p>
+                 else 
                 <p>You can register a standard to our collection by following the registration steps below. Your given 
-                information will be stored after submission on each step. Please keep in mind that you cannot go back 
+                information will be stored after submission in each step. Please keep in mind that you cannot go back 
                 to a previous step. After submission, your standard will be reviewed by an administrator. Once it has 
                 been approved, it will be listed in the 
                 <a href="{app:link("views/list-spec.xq?sortBy=name&amp;page=1")}">Standards</a> page. Your registered 
-                standard may be further elaborated by the administrator.</p> 
-                
+                standard may be further elaborated by the administrator.</p>
+                }
                 <br />
                 {if ($submitted-version) 
                  then <p style="font-size: 14px; font-weight:bold; color:orange;">Version {$submitted-version} has been
@@ -89,7 +109,9 @@ return
                 
                 <p>Please fill in and submit the form below. A version belongs to a standard or a standard part. 
                 By default, {$spec-name} is set as the parent. You can change the default parent by selecting a standard 
-                part. The new version will be added to the selected parent following any other existing versions in it.</p>
+                part. The new version will be added to the selected parent following any other existing versions in it. 
+                You can add more than one version into the same parent.</p>
+                
                 </div>
              
              <form method="post" enctype="multipart/form-data" action="">               
@@ -103,18 +125,31 @@ return
                      </tr>
                      <tr><td style="width:100px">Id:*</td>
                          <td><input name="vid" value="{$version-id}" type="text" style="width:450px;" 
-                                class="{asm:get-id-class($submitted,$version-id)}" placeholder="Id starts with 'Spec' "/>
+                                class="{rsm:get-id-class($submitted,$version-id,$valid-vid)}"/>
                          </td>
-                     </tr>                            
+                     </tr>   
+                     <tr style="display:{rsm:get-display-error($version-id,$valid-vid)}">
+                        <td></td>
+                        <td><span style="color:red;">* Id is not available.</span></td>
+                     </tr>
                      <tr><td>Title:</td>
                           <td><input name="vname" value="{$version-name}" type="text" class="inputText" style="width:450px;"/></td>
                      </tr>
                      <tr><td>Abbreviation:</td>
-                         <td><input name="vabbr" value="{$version-abbr}" type="text" class="inputText" style="width:450px;"/></td>
+                         <td><input name="vabbr" value="{$version-abbr}" type="text" class="inputText" 
+                            style="width:{asm:get-width()};"/>
+                            <select name="internal" class="inputSelect" style="margin-left:3px; width:100px;
+                                display:{app:get-display()}">
+                                <option value="yes">internal</option>,
+                                <option selected='selected' value="no">official</option>
+                            </select>
+                        </td>
                      </tr>
                      <tr><td>Version number:</td>
-                         <td><input name="vnomajor" value="{$version-nomajor}" type="text" class="inputText" style="width:220px;" placeholder="Major"/>
-                         <input name="vnominor" value="{$version-nominor}" type="text" class="inputText" style="margin-left:3px; width:220px;" placeholder="Minor"/></td>
+                         <td><input name="vnomajor" value="{$version-nomajor}" type="text" 
+                            class="inputText" style="width:220px;" placeholder="Major"/>
+                         <input name="vnominor" value="{$version-nominor}" type="text" 
+                            class="inputText" style="margin-left:3px; width:220px;" placeholder="Minor"/></td>
                      </tr>
                      <tr><td>Status:</td>
                           <td><select name="vstatus" class="inputSelect" style="width:455px; margin-right:3px;">
@@ -129,22 +164,36 @@ return
                                  <option value=""/>
                                  {f:list-options(xsd:get-resp(),$version-resp)}                
                              </select>
-                             <select name="vresptype" class="{asm:get-select-class($version-resptype,$version-resp,$version-respname)}" 
-                                style="width:81px; margin-right:3px;">
-                                 <option value=""/>
+                             <select id="resptype" name="vresptype" class="{asm:get-select-class($version-resptype,$version-resp,$version-respname)}" 
+                                style="width:81px; margin-right:3px;" onchange="showResp('resptype','resporg','respname')">
+                                <option value=""/>
                                  {f:list-options(xsd:get-resptype(),$version-resptype)}                
                              </select>
-                             <input name="vrespname" class="{asm:get-input-class($version-respname,$version-resp,$version-resptype)}" 
-                                 value="{$version-respname}" type="text" style="width:280px;" placeholder="For multiple names, use a comma."/>
+                             <span id="resporg" style="display:{asm:get-display('org',$version-resptype,'inline')};
+                                padding:2px 2px 2px 2px;"
+                                class="{asm:get-input-class($version-respname,$version-resp,$version-resptype)}" >
+                                
+                                <select data-dojo-type="dijit/form/ComboBox"  name="vresporg" class="inputSelect" 
+                                   style="background: url(../resources/images/arrow.png) no-repeat right;
+                                   width:280px;font-size:13px;border:none;padding:2px 2px 3px 0px;" 
+                                   placeholder="Select a standard body or type a new one ">
+                                   <option value=""/>
+                                   {sbm:list-sbs-options($version-resporg)}
+                                </select>
+                             </span>
+                             <input id="respname" name="vrespname" class="{asm:get-input-class($version-respname,$version-resp,$version-resptype)}"                             
+                                 value="{$version-respname}" type="text" style="width:280px;display:{asm:get-display('person',$version-resptype,'inline')}" 
+                                 placeholder="For multiple names, use a comma."/>
                          </td>
                      </tr>
-                     <tr><td>Date:</td>
+                     <tr><td>Date:*</td>
                          <td>
-                            <input name="vdate" value="{$version-date}" placeholder="YYYY-MM-DD" type="text" class="{asm:get-date-class($version-status)}" style="width:450px;"/>
+                            <input name="vdate" value="{$version-date}" placeholder="YYYY-MM-DD" type="text" 
+                            class="{asm:get-date-class($submitted,$version-date)}" style="width:450px;"/>
                          </td>
                      </tr>
                      <tr valign="top"><td>Description:</td>
-                         <td><textarea name="vdescription" class="inputText" style="width:450px; height:150px; 
+                         <td><textarea name="vdescription" class="desctext" style="width:450px; height:150px; 
                               resize: none; font-size:11px">{$version-description}</textarea>
                           </td>
                      </tr>
@@ -153,10 +202,10 @@ return
                              <button type="button" id="addref" class="button" onclick="addElement('vref','input','file',1)">Add</button>
                          </td>
                      </tr>
-                     <tr><td valign="top">Features:</td>
+                     <!--tr><td valign="top">Features:</td>
                          <td><textarea name="vfeatures" class="inputText" style="width:450px; height:150px; resize: none; font-size:11px;"
                              placeholder="Describe features using tags as defined in the spec.xsd.">{$version-features}</textarea></td>
-                     </tr>                                      
+                     </tr-->                                      
                      {asm:get-urls($param-names)}      
                      {asm:get-relations($param-names)}
                      <tr>
@@ -171,13 +220,14 @@ return
                         onclick="location.href='{app:link(concat("views/register-confirmation.xq?id=",$id))}'"/>                            
                    <span style="display:inline-block; width:2px"/>
                    <button type="reset" name="cancelButton" class="button" style="margin-bottom:3px;" 
-                    onclick="'">Cancel</button>
+                    onclick="'">Reset</button>
                </div>
              </form>
                   <br/><br/><br/>
         </div>
             <div class="footer">{app:footer()}</div>
         </div>
+        
     </body>
 </html>                        
    

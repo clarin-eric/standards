@@ -7,10 +7,11 @@ import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace login = "http://clarin.ids-mannheim.de/standards/login" at "../modules/login.xql";
 
-let $logout := 
-    if (session:get-attribute("user"))
-    then login:destroy-session()
-    else app:secure-link("user/login.xq")
+(: Define the logout page
+   @author margaretha
+:)
+
+let $logout := login:logout()    
 
 return 
     <html>

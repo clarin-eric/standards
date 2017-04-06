@@ -1,6 +1,135 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecCmdi" standardSettingBody="SBISO" topic="TopicMetadata" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Component Metadata Infrastructure</title><abbr>CMDI</abbr></titleStmt><scope>Metadata annotation</scope><keyword>metadata</keyword><keyword>standardisation</keyword><keyword>infrastructure</keyword><info type="description"><p>The Component Metadata Infrastructure (CMDI) is a framework for description of basic metadata components. It was developed particularly in the scope of the CLARIN project. The aim of this framework is to provide a modular and reusable metadata format. CMDI can be used to give a detailed metadata description of a resource and customized by using only the metadata elements relevant to the resource. 
-            The CMDI is compatible with other existing frameworks such as IMDI, OLAC, Dublin Core or the TEI header. These features make the CMDI very flexible and adaptable.</p><p>Existing components in the CMDI <a href="http://catalog.clarin.eu/ds/ComponentRegistry/#app=cd01&amp;e2ee-selectedIndex=1">Component Registry</a>, for example from ISO-DCR (ISO 12620) can be combined into a CMDI profile (i.e. tailored metadata XML schema). Beside for searching and inspecting the existing components, the <a href="http://catalog.clarin.eu/ds/ComponentRegistry/#app=cd01&amp;e2ee-selectedIndex=1">Component Registry</a> can be also be used to create new CMDI metadata components.</p></info><info type="recReading"><biblStruct type="conferencePaper"><analytic><title>A pragmatic approach to XML interoperability – the Component Metadata Infrastructure (CMDI)</title><author><forename>Daan</forename><surname>Broeder</surname></author><author><forename>Oliver</forename><surname>Schonefeld</surname></author><author><forename>Thorsten</forename><surname>Trippel</surname></author><author><forename>Dieter </forename><surname>Van Uytvanck</surname></author><author><forename>Andreas</forename><surname>Witt</surname></author></analytic><monogr><title>Proceedings of Balisage: The Markup Conference 2011. Balisage Series on Markup Technologies, vol. 7</title><imprint><pubPlace>Montréal, Canada</pubPlace><date>2011</date></imprint></monogr></biblStruct></info><version id="SpecCmdi-Clarin" status="final"><titleStmt><title>Component MetaData Infrastructure</title><respStmt id="Ufn3e6"><resp>Author</resp><name type="person">Dieter Van Uytvanck</name><name type="person">Twan Goosen</name><name type="person">Menzo Windhouwer</name></respStmt></titleStmt><versionNumber type="major">4</versionNumber><date>2012-02-15</date><address type="URL">http://www.clarin.eu/cmdi</address></version><part id="SpecCmdi-Part1"><titleStmt><title>Language Resource Management — Component Metadata Infrastructure for Language Resources</title></titleStmt><version id="SpecCMD-1-NWI" status="New Work Item Proposal"><titleStmt><title>Language Resource Management - Component Metadata Infrastructure for Language Resources – 
-                    Part 1 The Component Metadata Model</title><abbr>CMDI-1</abbr><respStmt id="AqMH12"><resp>Editor</resp><name type="org" id="SBISO-TC37-SC4-WG1">ISO/TC 37/SC 4/WG 1</name></respStmt></titleStmt><versionNumber type="major">ISO/NP 24622-1</versionNumber><date>2012-07-11</date><info type="description"><p>ISO/NP 24622-1 is a standardization of the basic components of CDMI in order to achieve compatibility based on solid documentation. 
-                    The first part of the 3-part CMDI standard describes the abstract model and offers a complete package for the
-                    creation of metadata schemas.</p><p>In the near future, the two other parts are planned to be developed. The second part (CMDI-2) will describe the 
-                    serialization format and the third part will offer a set of recommended metadata profiles (CMDI-3).</p></info><address type="URL">http://www.iso.org</address><relation target="SpecCmdi-Clarin" type="isInspiredBy"/><relation target="SpecDcr-IS" type="references"/></version></part><part id="SpecCmdi-Part2"><version id="SpecCMDI-2" status="New Work Item Proposal"><titleStmt><title>Language resource management - Component Metadata infrastructure - Part 2: The Component Metadata Specification Language</title><abbr>CMDI-2</abbr><respStmt><resp>Editor</resp><name type="org" id="SBISO-TC37-SC4-WG1">ISO/TC 37/SC 4/WG 1</name></respStmt></titleStmt><versionNumber type="major">ISO24622-2-NWI-draft</versionNumber><date>2012-05-03</date><info type="description"><p>The second part of the standard (CMDI-2) will describe the serialization format defined by CDMI-1.</p></info></version></part></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecCmdi" standardSettingBody="SBISO" topic="TopicMetadata" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Component Metadata Infrastructure</title>
+        <abbr>CMDI</abbr>
+    </titleStmt>
+    <scope>Metadata annotation</scope>
+    <ClarinRecommendation>
+        <recommendation specId="SpecCmdi" type="fully recommended"/>
+    </ClarinRecommendation>
+    <keyword>metadata</keyword>
+    <keyword>standardisation</keyword>
+    <keyword>infrastructure</keyword>
+    <info type="description">
+        <p>The Component Metadata Infrastructure (CMDI) is a framework for description of basic metadata
+      components. It was developed particularly in the scope of the CLARIN project. The aim of this
+      framework is to provide a modular and reusable metadata format. CMDI can be used to give a
+      detailed metadata description of a resource and customized by using only the metadata elements
+      relevant to the resource. The CMDI is compatible with other existing frameworks such as IMDI,
+      OLAC, Dublin Core or the TEI header. These features make the CMDI very flexible and
+      adaptable.</p>
+        <p>Existing components in the CMDI
+      <a href="http://catalog.clarin.eu/ds/ComponentRegistry/#app=cd01&amp;e2ee-selectedIndex=1">Component Registry</a>,
+      for example from ISO-DCR (ISO 12620) can be combined into a CMDI profile (i.e. tailored
+      metadata XML schema). Beside for searching and inspecting the existing components, the
+      <a href="http://catalog.clarin.eu/ds/ComponentRegistry/#app=cd01&amp;e2ee-selectedIndex=1">Component Registry</a>
+      can be also be used to create new CMDI metadata components.</p>
+    </info>
+    <info type="recReading">
+        <biblStruct type="conferencePaper">
+            <analytic>
+                <title>A pragmatic approach to XML interoperability – the Component Metadata Infrastructure (CMDI)</title>
+                <author>
+                    <forename>Daan</forename>
+                    <surname>Broeder</surname>
+                </author>
+                <author>
+                    <forename>Oliver</forename>
+                    <surname>Schonefeld</surname>
+                </author>
+                <author>
+                    <forename>Thorsten</forename>
+                    <surname>Trippel</surname>
+                </author>
+                <author>
+                    <forename>Dieter </forename>
+                    <surname>Van Uytvanck</surname>
+                </author>
+                <author>
+                    <forename>Andreas</forename>
+                    <surname>Witt</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <title>Proceedings of Balisage: The Markup Conference 2011. Balisage Series on Markup Technologies, vol. 7</title>
+                <imprint>
+                    <pubPlace>Montréal, Canada</pubPlace>
+                    <date>2011</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+    </info>
+    <relation target="SpecSynAF-Part2-2014" type="isUsedBy"/>
+    <relation target="SpecSynAF-Part2-2014" type="isUsedBy"/>
+    <relation target="SpecDcr" type="uses">
+        <info>
+            <p>CMDI uses ISO-DCR for semantic interoperability</p>
+        </info>
+    </relation>
+    <version id="SpecCmdi-Clarin" status="final" usedInCLARINCenter="TLA UC CLARIN-PL IDS BAS">
+        <titleStmt>
+            <title>Component MetaData Infrastructure</title>
+            <abbr internal="yes">CMDI-2012</abbr>
+            <respStmt id="Ufn3e6">
+                <resp>Author</resp>
+                <name type="person">Dieter Van Uytvanck</name>
+                <name type="person">Twan Goosen</name>
+                <name type="person">Menzo Windhouwer</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">4</versionNumber>
+        <date>2012-02-15</date>
+        <address type="URL">http://www.clarin.eu/cmdi</address>
+        <relation target="SpecCMD-1-NWI" type="inspires"/>
+    </version>
+    <part id="SpecCmdi-Part1">
+        <titleStmt>
+            <title>Language Resource Management - Component Metadata Infrastructure for Language Resources – 
+                Part 1 The Component Metadata Model</title>
+            <abbr>CMDI-1</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>ISO 24622-1 is a standardization of the basic components of CDMI in order to achieve
+        compatibility based on solid documentation. The first part of the 3-part CMDI standard
+        describes the abstract model and offers a complete package for the creation of metadata
+        schemas.</p>
+            <p>In the near future, the two other parts are planned to be developed. The second part
+        (CMDI-2) will describe the serialization format and the third part will offer a set of
+        recommended metadata profiles (CMDI-3).</p>
+        </info>
+        <version id="SpecCMD-1-2014" status="in Development">
+            <titleStmt>
+                <abbr internal="yes">CMDI-1-2014</abbr>
+                <respStmt id="AqMH12">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-TC37-SC4-WG1">ISO/TC 37/SC 4/WG 1</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major">ISO 24622-1</versionNumber>
+            <date>2012-07-11</date>
+            <address type="URL">http://www.iso.org</address>
+            <relation target="SpecCmdi-Clarin" type="isInspiredBy"/>
+        </version>
+    </part>
+    <part id="SpecCmdi-Part2">
+        <titleStmt>
+            <title>Language resource management - Component Metadata infrastructure - Part 2: The Component Metadata Specification Language</title>
+            <abbr>CMDI-2</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>The second part of the standard (CMDI-2) will describe the serialization format defined by
+        CDMI-1.</p>
+        </info>
+        <version id="SpecCMDI-2" status="New Work Item Proposal">
+            <titleStmt>
+                <abbr internal="yes">CMDI-2-2012</abbr>
+                <respStmt>
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-TC37-SC4-WG1">ISO/TC 37/SC 4/WG 1</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major">ISO24622-2-NWI-draft</versionNumber>
+            <date>2012-05-03</date>
+        </version>
+    </part>
+</spec>

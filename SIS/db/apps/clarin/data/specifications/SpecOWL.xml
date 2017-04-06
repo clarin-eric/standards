@@ -1,2 +1,61 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecOWL" standardSettingBody="SBW3C" topic="TopicKnowledgeRepresentation TopicOntology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Web Ontology Language</title><abbr>OWL</abbr></titleStmt><scope>RDF-based standard for specifying ontologies which are compatible with the World Wide Web</scope><keyword>RDF</keyword><keyword>ontology</keyword><keyword>knowledge representation</keyword><keyword>Semantic Web</keyword><info type="description"><p>The Web Ontology Language (OWL) is an ontology language produced by the W3C. It is designed for the representing  
-            knowledge on the web. </p></info><version id="SpecOWL1" status="W3C Recommendation"><titleStmt><title>OWL Web Ontology Language</title><abbr internal="yes">OWL-2003</abbr><respStmt id="pOWL02"><resp>Editor</resp><name>Frank van Harmelen</name><name>Deborah L. McGuinness</name></respStmt></titleStmt><date>2004-02-10</date><relation target="SpecXML" type="uses"><info type="description"><p>OWL uses the XML syntax</p></info></relation><relation target="SpecRDF" type="uses"><info type="description"><p>OWL is built on the basic elements of RDF</p></info></relation><relation target="SpecRDFS" type="uses"><info type="description"><p>OWL is built on top of RDFS.</p></info></relation></version><version id="SpecOWL2" status="W3C Recommendation"><titleStmt><title>OWL 2 Web Ontology Language</title><abbr>OWL 2</abbr><respStmt id="paOWL1"><resp>Editor</resp><name type="org">W3C OWL Working Group</name></respStmt></titleStmt><date>2009-10-27</date><address type="URL">http://www.w3.org/TR/2009/REC-owl2-overview-20091027/</address></version></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecOWL" standardSettingBody="SBW3C" topic="TopicKnowledgeRepresentation TopicOntology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Web Ontology Language</title>
+        <abbr>OWL</abbr>
+    </titleStmt>
+    <scope>RDF-based standard for specifying ontologies which are compatible with the World Wide Web</scope>
+    <keyword>RDF</keyword>
+    <keyword>ontology</keyword>
+    <keyword>knowledge representation</keyword>
+    <keyword>Semantic Web</keyword>
+    <info type="description">
+        <p>The Web Ontology Language (OWL) is an ontology language produced by the W3C. It is designed for representing  
+            knowledge on the web. </p>
+    </info>
+    <relation target="SpecDolce" type="isUsedBy"/>
+    <relation target="SpecOLiA" type="isUsedBy"/>
+    <relation target="SpecGold-2010" type="isUsedBy"/>
+    <relation target="SpecRDF1" type="isBasedOn"/>
+    <relation target="SpecSKOS-R" type="isUsedBy"/>
+    <relation target="SpecSWRL" type="isExtendedTo"/>
+    <relation target="SpecUmbel" type="isUsedBy"/>
+    <version id="SpecOWL1" status="W3C Recommendation">
+        <titleStmt>
+            <title>OWL Web Ontology Language</title>
+            <abbr internal="yes">OWL-2003</abbr>
+            <respStmt id="pOWL02">
+                <resp>Editor</resp>
+                <name>Frank van Harmelen</name>
+                <name>Deborah L. McGuinness</name>
+            </respStmt>
+        </titleStmt>
+        <date>2004-02-10</date>
+        <relation target="SpecXML" type="uses">
+            <info type="description">
+                <p>OWL uses the XML syntax.</p>
+            </info>
+        </relation>
+        <relation target="SpecRDF" type="uses">
+            <info type="description">
+                <p>OWL is built on the basic elements of RDF.</p>
+            </info>
+        </relation>
+        <relation target="SpecRDFS" type="uses">
+            <info type="description">
+                <p>OWL is built on top of RDFS.</p>
+            </info>
+        </relation>
+    </version>
+    <version id="SpecOWL2" status="W3C Recommendation" usedInCLARINCenter="UC">
+        <titleStmt>
+            <title>OWL 2 Web Ontology Language</title>
+            <abbr>OWL 2</abbr>
+            <respStmt id="paOWL1">
+                <resp>Editor</resp>
+                <name type="org">W3C OWL Working Group</name>
+            </respStmt>
+        </titleStmt>
+        <date>2009-10-27</date>
+        <address type="URL">http://www.w3.org/TR/2009/REC-owl2-overview-20091027/</address>
+    </version>
+</spec>

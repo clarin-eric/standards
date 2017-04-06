@@ -1,9 +1,99 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecOntoIOp" standardSettingBody="SBISO" topic="TopicKnowledgeRepresentation TopicOntology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Ontology Integration and Interoperability</title><abbr>OntoIOp</abbr></titleStmt><scope>Standardization of ontologies</scope><keyword>Ontology</keyword><keyword>knowledge representation</keyword><keyword>distributed ontology language</keyword><keyword>DOL</keyword><info type="description"><p>The OntoIOp stands for Ontology Integration and Interoperability and is a new working item which is currently being standardised 
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecOntoIOp" standardSettingBody="SBISO" topic="TopicKnowledgeRepresentation TopicOntology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Ontology Integration and Interoperability</title>
+        <abbr>OntoIOp</abbr>
+    </titleStmt>
+    <scope>Standardization of ontologies</scope>
+    <keyword>Ontology</keyword>
+    <keyword>knowledge representation</keyword>
+    <keyword>distributed ontology language</keyword>
+    <keyword>DOL</keyword>
+    <info type="description">
+        <p>The OntoIOp stands for Ontology Integration and Interoperability and is a new working item which is currently being standardised 
             as ISO NP 17347 by ISO TC37/SC 3. The goal of the standard is to provide the guidelines for ontological modularity and 
             structuring mechanisms within an ontology. The standard does not include the definition of basic
             ontology or processes, but provides a framework specifying a language for distributed knowledge 
-            representation in ontologies, and outlining the guiding principles and key structural elements for representation 
+            representation in ontologies, and outlining the principles and key structural elements for representation 
             of information in ontologies and knowledge bases, mappings mechanisms between ontologies, annotation of ontologies, 
-            translation mechanisms between ontology languages, etc. Furthermore the standard offers ways to create an interoperability 
-            between different ontology Languages.</p></info><info type="recReading"><p/><biblStruct id="pOnto2" type="conferencePaper"><analytic><title>Towards a Standard for Heterogeneous Ontology Integration and Interoperability</title><author><forename>Oliver</forename><surname>Kutz</surname></author><author><forename>Till</forename><surname>Mossakowski</surname></author><author><forename>Christian</forename><surname>Galinski</surname></author><author><forename>Christoph</forename><surname>Lange</surname></author></analytic><monogr><title>International Conference on Terminology, Language and Content Resources (LaRC)</title><imprint><pubPlace>Seoul, Korea</pubPlace><date>2011</date></imprint></monogr></biblStruct><biblStruct id="pOnto3" type="conferencePaper"><analytic><title>Making Heterogeneous Ontologies Interoperable Through Standardisation – 
-                    A Meta Ontology Language to be Standardised: Ontology Integration and Interoperability (OntoIOp)</title><author><forename>Oliver</forename><surname>Kutz</surname></author><author><forename>Till</forename><surname>Mossakowski</surname></author><author><forename>Christian</forename><surname>Galinski</surname></author><author><forename>Christoph</forename><surname>Lange</surname></author></analytic><monogr><title>Accessibility Reaching Everywhere, AEGIS Workshop and 2nd International Conference</title><imprint><pubPlace>Brussels, Belgium</pubPlace><date>2011</date></imprint></monogr></biblStruct></info><version id="SpecOntoIOP-NP" status="Working Draft"><titleStmt><respStmt id="pOnto3"><resp>Editor</resp><name type="org" id="SBISO-TC37-SC3">ISO/TC 37/SC 3/WG 3</name></respStmt></titleStmt><versionNumber type="major">ISO/NP 17347</versionNumber><date>2011-06-28</date><address type="URL">http://www.iso.org</address><relation target="SpecDOL" type="uses"><info type="description"><p>DOL is a language for representing distributed knowledge in ontologies.</p></info></relation></version></spec>
+            translation mechanisms between ontology languages, etc. Furthermore the standard provides ways to accomodate an interoperability 
+            between different ontology Languages.</p>
+    </info>
+    <info type="recReading">
+        <p/>
+        <biblStruct id="pOnto2" type="conferencePaper">
+            <analytic>
+                <title>Towards a Standard for Heterogeneous Ontology Integration and Interoperability</title>
+                <author>
+                    <forename>Oliver</forename>
+                    <surname>Kutz</surname>
+                </author>
+                <author>
+                    <forename>Till</forename>
+                    <surname>Mossakowski</surname>
+                </author>
+                <author>
+                    <forename>Christian</forename>
+                    <surname>Galinski</surname>
+                </author>
+                <author>
+                    <forename>Christoph</forename>
+                    <surname>Lange</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <title>International Conference on Terminology, Language and Content Resources (LaRC)</title>
+                <imprint>
+                    <pubPlace>Seoul, Korea</pubPlace>
+                    <date>2011</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct id="pOnto3" type="conferencePaper">
+            <analytic>
+                <title>Making Heterogeneous Ontologies Interoperable Through Standardisation – 
+                    A Meta Ontology Language to be Standardised: Ontology Integration and Interoperability (OntoIOp)</title>
+                <author>
+                    <forename>Oliver</forename>
+                    <surname>Kutz</surname>
+                </author>
+                <author>
+                    <forename>Till</forename>
+                    <surname>Mossakowski</surname>
+                </author>
+                <author>
+                    <forename>Christian</forename>
+                    <surname>Galinski</surname>
+                </author>
+                <author>
+                    <forename>Christoph</forename>
+                    <surname>Lange</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <title>Accessibility Reaching Everywhere, AEGIS Workshop and 2nd International Conference</title>
+                <imprint>
+                    <pubPlace>Brussels, Belgium</pubPlace>
+                    <date>2011</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+    </info>
+    <relation target="SpecDOL-L" type="isBasedOn"/>
+    <version id="SpecOntoIOP-NP" status="Working Draft">
+        <titleStmt>
+            <abbr internal="yes">OntoIOp-2011</abbr>
+            <respStmt id="pOnto3">
+                <resp>Editor</resp>
+                <name type="org" id="SBISO-TC37-SC3">ISO/TC 37/SC 3/WG 3</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">ISO/NP 17347</versionNumber>
+        <date>2011-06-28</date>
+        <address type="URL">http://www.iso.org</address>
+        <relation target="SpecDOL" type="uses">
+            <info type="description">
+                <p>DOL is a language for representing distributed knowledge in ontologies.</p>
+            </info>
+        </relation>
+    </version>
+</spec>

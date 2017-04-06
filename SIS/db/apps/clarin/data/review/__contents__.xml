@@ -1,6 +1,6 @@
 <collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/data/review" owner="admin" group="dba" mode="755" created="2012-12-14T12:29:34+01:00" version="1">
     <acl entries="0" version="1"/>
-    <resource type="XMLResource" name="SpecAku.xml" owner="admin" group="dba" mode="644" created="2013-04-12T11:27:51+02:00" modified="2013-04-12T11:27:51+02:00" filename="SpecAku.xml" mimetype="application/xml">
+    <resource type="XMLResource" name="Spectest_Standard.xml" owner="admin" group="dba" mode="644" created="2014-04-23T12:36:50+02:00" modified="2014-04-23T12:36:50+02:00" filename="Spectest_Standard.xml" mimetype="application/xml">
         <acl entries="0" version="1"/>
     </resource>
 </collection>

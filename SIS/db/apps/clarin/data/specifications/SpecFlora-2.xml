@@ -1,0 +1,9 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecFlora-2" standardSettingBody="SBOther" topic="TopicOntology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Flora-2</title><abbr>Flora-2</abbr></titleStmt><scope>Languages for definition of ontologies</scope><info type="description"><p>FLORA-2 is an advanced object-oriented knowledge base language and application
+            development environment. The language of FLORA-2 is a dialect of F-logic (Frame logic)
+            with numerous extensions, including meta-programming in the style of HiLog and logical
+            updates in the style of Transaction Logic. FLORA-2 was designed with extensibility and
+            flexibility in mind, and it provides strong support for modular software design through
+            its unique feature of dynamic modules.</p><p>Applications of FLORA-2 include intelligent agents, Semantic Web, ontology management,
+            integration of information, and others. Future plans for FLORA-2 include standardization
+            of the syntax, which will bring greater compatibility with other F-logic based
+            languages, such as OntoBroker, WSML (Web Service Modeling Language), and SWSL-Rules.</p></info><address type="URL">http://flora.sourceforge.net/</address><version id="SpecFlora-2-1.1"><titleStmt><title>Loquat</title><abbr>Flora-2 1.1</abbr><respStmt><resp>Author</resp><name>Michael Kifer</name></respStmt></titleStmt><versionNumber type="minor">1.1</versionNumber><date>2015</date></version><version id="SpecFlora-2-1.0"><titleStmt><title>Cherimoya</title><abbr>Flora-2 1.0</abbr><respStmt><resp>Author</resp><name>Michael Kifer</name></respStmt></titleStmt><versionNumber type="major">1.0</versionNumber><date>2014</date></version></spec>

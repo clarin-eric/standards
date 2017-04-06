@@ -1,0 +1,13 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTriple" standardSettingBody="SBOther" topic="TopicQuery" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>TRIPLE</title><abbr>TRIPLE</abbr></titleStmt><scope>RDF Query language</scope><keyword>Metadata</keyword><keyword>Knowledge Representation and Reasoning</keyword><keyword>RDF</keyword><keyword>F-Logic</keyword><info type="description"><p>TRIPLE is an RDF query, inference, and transformation language for the Semantic Web.
+            TRIPLE formulates queries in an ontology to correspond to a user-specific view. The
+            approach is based on maintenance of multiple views expressed in ontologies simpler than
+            the domain ontology. This allows users to query heterogeneous data repositories.
+            Ontology developers can define view ontologies and corresponding mapping rules. The use
+            of the language TRIPLE is useful when not only representation of RDF data is necessary
+            but also a definition of views and mappings at the same time. TRIPLE provided an
+            infrastructure to evaluate queries issued against the user-specific ontology and in this
+            way to realize the view. The view techniques have central importance when creating
+            interoperability. TRIPLE has the following overview features: native support for
+            resources and namespaces, abbreviations; models (sets of RDF statements); reification;
+            rules with bodies; transformations; syntactical extension of Horn Logic; syntactically
+            similar to F-Logic; has both ASCII and RDF syntax.</p></info><info type="recReading"><biblStruct type="bookSection"><analytic><title>TRIPLE—A Query, Inference, and Transformation Language for the Semantic Web</title><author><forename>Michael</forename><surname>Sintek</surname></author><author><forename>Stefan</forename><surname>Decker</surname></author></analytic><monogr><title>The Semantic Web — ISWC 2002</title><editor><forename>Ian</forename><surname>Horrocks</surname></editor><editor><forename>James</forename><surname>Hendler</surname></editor><imprint><biblScope type="pp">364-378</biblScope><biblScope type="vol">2342</biblScope><publisher>Springer Berlin Heidelberg</publisher><date>2002</date></imprint></monogr></biblStruct></info><address type="URL">http://www.dfki.uni-kl.de/frodo/triple/</address><relation target="SpecRDF" type="isApplicationOf"/><version id="SpecTriple-2002"><titleStmt><abbr>triple-20020314</abbr><respStmt><resp>Author</resp><name>Stefan Decker</name><name>Michael Sintek</name></respStmt></titleStmt><date>2002</date></version></spec>

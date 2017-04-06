@@ -7,21 +7,17 @@ declare option exist:serialize "method=xhtml media-type=text/html indent=yes doc
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace sbm = "http://clarin.ids-mannheim.de/standards/sb-module" at "../modules/sb.xql";
-import module namespace vsb="http://clarin.ids-mannheim.de/standards/view-sb" at "../modules/view-sb.xql";
 
+(: Define the standard body page 
+   @author margaretha
+   @date Dec 2013
+:)
 
 let $id := request:get-parameter('id', '')
 let $sb := sbm:get-sb($id)
 let $sb-title := $sb/titleStmt/title/text()
-let $abbr := $sb/titleStmt/abbr/text()
-   
-let $sb-abbr :=
-    if (fn:contains($abbr,"/"))
-    then vsb:get-sb-links($id,$abbr)
-    else ($abbr)
+let $specs-by-sb := sbm:get-specs-by-sb($id)
 
-let $standards := sbm:get-specs-by-sb($id)
-let $color := sbm:get-color()
 return 
 
 <html>
@@ -36,46 +32,35 @@ return
 		<div id="all">
 			<div class="logoheader"/>
 			{menu:view()}
-            <div class="content">
-                <div class="navigation">
-                    &gt; <a href="{app:link("views/list-sbs.xq")}">Standard Bodies</a>
-                    &gt; <a href="{app:link(concat("views/view-sb.xq?id=",$sb/@id))}">{$sb-title}</a>
-                </div>
-    			<div class="title">{$sb-title}
-    			 {if (not($sb-title = $sb-abbr)) then( " (",$sb-abbr,")") else ()}
-    			</div>
-    			{for $respStmt in $sb/titleStmt/respStmt 
-    			 return 
-    			     <div>
-    			         <span class="heading">{$respStmt/resp/text()}: </span> {$respStmt/name/text()}
-    			      </div>    			 
-    			}    			
-    			<div>{sbm:print-description($sb)}
-    			</div>    			    			
-    			
-    			{if ($standards) 
-    			 then ( <div class="heading">Specifications standardized by this body:</div>,
-              			<ol>{$standards}</ol>)
-    			 else ()}    			 
-    			 <br/>
-    			 {if($sb/relation)
-    			  then (
-    		      <div id="chart" class="version">
-    		          <div class="version" style="width:140px; float:right; padding:0px">
-                            <table>
-                               <tr>
-                                   <td colspan="2"><b>Legend:</b></td>                    
-                               </tr>
-                               <tr>
-                                   <td><hr style="border:0; color:{$color}; background-color:{$color}; height:2px; width:20px" /></td>
-                                   <td>hasPart</td>
-                               </tr>
-                             </table>
-                      </div>
-                    </div>)
-    		      else()
-    			 }
-    		</div>    		
+			{if ($id and $sb) then
+                <div class="content">
+                    <div class="navigation">
+                        &gt; <a href="{app:link("views/list-sbs.xq")}">Standard Bodies</a>
+                        &gt; <a href="{app:link(concat("views/view-sb.xq?id=",$sb/@id))}">{$sb-title}</a>
+                    </div>
+        			<div class="title">
+        			     {$sb-title} {sbm:get-sb-abbr($sb,$id,$sb-title)}
+        			</div>
+        			{sbm:get-sb-respStmt($sb)}  			
+        			{sbm:print-description($sb)}
+        			{sbm:print-url($sb)}
+        			{if ($specs-by-sb) 
+        			 then (<div class="heading">Specifications standardized by this body:</div>,
+        			       $specs-by-sb)
+        			 else ()
+        			}    			
+        			 <br/>
+        			 {sbm:create-relation-graph($sb)}
+        		</div> 
+        	else
+         	   <div class="content">	
+                    <div class="navigation">
+                        &gt; <a href="{app:link("views/list-sbs.xq")}">Standard Bodies</a> 
+                    </div>
+                    <div><span class="heading">The requested standard body information is not found.</span></div>
+               </div>
+         	 
+         	}
 			<div class="footer">{app:footer()}</div>
 		</div>
 	</body>

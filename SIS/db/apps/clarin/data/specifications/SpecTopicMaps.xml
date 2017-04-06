@@ -1,17 +1,59 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTopicMaps" standardSettingBody="SBISO" topic="TopicKnowledgeRepresentation" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Information technology — Topic Maps</title><abbr>Topic Maps</abbr></titleStmt><scope>Standard for describing and management of knowledge structures</scope><info type="description"><p>Topic Maps is an ISO Standard and describes the information management and interchange. It
-      allows to build the abstract data model for knowledge collection, to connect them to relevant
-      information resources and to apply the relation between the encoded knowledges. Topic Maps is
-      suitable for knowledge representation in varied domains such as persons, locations, things,
-      events etc.</p><p>Topic Maps is suited for improving the systems like searching tools, navigation tools or
-      visualisation. It can also be applied in a question-and-answering system.</p><p>Over many years the Topic Maps technology is ranked as ISO 13250 standard. The first edition
-      of ISO Standard 13250:2000 was based on SGML-based architecture and used the hypermedia
-      linking language HyTime. Subsequently, the standard was reprocessed and defined as the Topic Maps
-      Specification based on XML and XLink interchange syntax, replacing the SGML-based version.</p><p>Today, Topic Maps is the 13250 ISO standard and is a multi-part standard. Four parts of the standard have been already
-      published. The fifth part is under development and is ranked as Draft International
-      Standard. Each part describes and solves several problems. The seventh part has Working
-      Draft status. The standard includes a data model, a reference model and a constraint
-      language.</p><p>The standard is composed of the following parts:</p><ul><li>ISO/IEC 13250-2, Topic Maps — Data Model</li><li>ISO/IEC 13250-3, Topic Maps — XML Syntax</li><li>ISO/IEC 13250-4, Topic Maps — Canonicalization</li><li>ISO/IEC 13250-5, Topic Maps — Reference Model</li><li>ISO/IEC 13250-6, Topic Maps — Compact Syntax</li><li>ISO/IEC 13250-7, Topic Maps — Graphical Notation</li></ul><p>The next ISO specifications, which belong to the Topic Maps family are as follows:</p><ul><li>ISO/IEC 19756:2011: Information technology — Topic Maps — Constraint Language (TMCL)</li><li>ISO/IEC DIS 18048: Information technology — SGML applications — Topic Map Query Language
-        (TMQL)</li></ul></info><version id="SpecSGMLTM" status="International Standard"><titleStmt><title>Information technology — SGML applications — Topic maps</title><abbr>SGML Topic Maps</abbr><respStmt id="lXQfTt"><resp>Editor</resp><name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name></respStmt></titleStmt><versionNumber type="minor">ISO/IEC 13250:2003</versionNumber><date>2003-10-23</date><address type="URL">http://www.iso.org</address><relation target="SpecSGML" type="uses"/><relation target="SpecHyTime" type="uses"/></version> 
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTopicMaps" standardSettingBody="SBISO" topic="TopicKnowledgeRepresentation" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Information Technology — Topic Maps</title>
+        <abbr>Topic Maps</abbr>
+    </titleStmt>
+    <scope>Standard for describing and management of knowledge structures</scope>
+    <info type="description">
+        <p>Topic Maps is an ISO Standard and describes the information management and interchange.
+            It allows to build the abstract data model for knowledge collection, to connect them to
+            relevant information resources and to apply the relation between the encoded knowledges.
+            Topic Maps is suitable for knowledge representation in wide range of domains such as persons,
+            locations, things, events etc.</p>
+        <p>Topic Maps is suited for improving the systems like searching tools, navigation tools or
+            visualisation. It can also be applied in a question-and-answering system.</p>
+        <p>Over many years the Topic Maps technology is ranked as ISO 13250 standard. The first
+            edition of ISO Standard 13250:2000 was based on SGML-based architecture and used the
+            hypermedia linking language HyTime. Subsequently, the standard was reprocessed and
+            defined as the Topic Maps Specification based on XML and XLink interchange syntax,
+            replacing the SGML-based version.</p>
+        <p>Today, Topic Maps is the 13250 ISO standard and is a multi-part standard. Four parts of
+            the standard have been already published. The fifth part is under development and is
+            ranked as Draft International Standard. Each part describes and solves several problems.
+            The seventh part has Working Draft status. The standard includes a data model, a
+            reference model and a constraint language.</p>
+        <p>The standard is composed of the following parts:</p>
+        <ul>
+            <li>ISO/IEC 13250-2, Topic Maps — Data Model</li>
+            <li>ISO/IEC 13250-3, Topic Maps — XML Syntax</li>
+            <li>ISO/IEC 13250-4, Topic Maps — Canonicalization</li>
+            <li>ISO/IEC 13250-5, Topic Maps — Reference Model</li>
+            <li>ISO/IEC 13250-6, Topic Maps — Compact Syntax</li>
+            <li>ISO/IEC 13250-7, Topic Maps — Graphical Notation</li>
+        </ul>
+        <p>The next ISO specifications, which belong to the Topic Maps family are as follows:</p>
+        <ul>
+            <li>ISO/IEC 19756:2011: Information technology — Topic Maps — Constraint Language
+                (TMCL)</li>
+            <li>ISO/IEC DIS 18048: Information technology — SGML applications — Topic Map Query
+                Language (TMQL)</li>
+        </ul>
+    </info>
+    <version id="SpecSGMLTM" status="International Standard">
+        <titleStmt>
+            <title>Information technology — SGML applications — Topic maps</title>
+            <abbr>SGML Topic Maps</abbr>
+            <respStmt id="lXQfTt">
+                <resp>Editor</resp>
+                <name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="minor">ISO/IEC 13250:2003</versionNumber>
+        <date>2003-10-23</date>
+        <address type="URL">http://www.iso.org</address>
+        <relation target="SpecSGML" type="uses"/>
+        <relation target="SpecHyTime" type="uses"/>
+    </version>
     <!-- <part>
         <version id="XMLTopicMaps-1" status="International Standard">
         <titleStmt>
@@ -26,17 +68,160 @@
         </respStmt>
         <address type="URL">http://www.iso.org</address>
     </version> 
-    </part>--><part id="SpecTopicMaps-Part2"><titleStmt><title>Information technology — Topic Maps — Part 2: Data model</title><abbr>TMDM</abbr></titleStmt><version id="SpecTopicMapDM" status="International Standard"><titleStmt><abbr internal="yes">TMDM-2006</abbr><respStmt id="B9pBXR"><resp>Editor</resp><name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name></respStmt></titleStmt><versionNumber type="minor">ISO/IEC 13250-2:2006</versionNumber><date>2012-01-18</date><info type="description"><p>ISO/IEC 13250-2, Topic Maps — Data Model, (TMDM for short), defines the meaning and
-                    abstract structure of Topic Maps.</p></info><address type="URL">http://www.iso.org</address><relation target="SpecSGMLTM" type="isReVersionOf"/><relation target="SpecTopicMaps" type="isPartOf"/></version></part><part id="SpecTopicMaps-Part3"><titleStmt><title>Information technology — Topic Maps — Part 3: XML syntax</title><abbr>XTM</abbr></titleStmt><version id="SpecXTopicMap" status="International Standard"><titleStmt><abbr internal="yes">XTM-2007</abbr><respStmt id="naUph2"><resp>Editor</resp><name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name></respStmt></titleStmt><versionNumber type="minor">ISO/IEC 13250-3:2007</versionNumber><date>2011-02-02</date><info type="description"><p>ISO/IEC 13250-3, Topic Maps — XML Syntax, (XTM for short), specifies an XML-based
-                    interchange syntax for representing instances of the data model defined in the second part of
-                    13250 ISO standard and uses the RELAX-NG schema.</p></info><address type="URL">http://www.iso.org</address><relation target="SpecTopicMapDM" type="isUsedBy"><info><p>ISO/IEC 13250-3:2007 defines and describes an interchangeable syntax for ISO/IEC
-                        13250-2:2006</p></info></relation><relation target="SpecTopicMaps" type="isPartOf"/></version></part><part id="SpecTopicMaps-Part4"><titleStmt><title>Information technology — Topic Maps — Part 4: Canonicalization</title><abbr>CXTM</abbr></titleStmt><version id="SpecCXTopicMap" status="International Standard"><titleStmt><abbr internal="yes">CXTM-2009</abbr><respStmt id="mZUBQr"><resp>Editor</resp><name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name></respStmt></titleStmt><versionNumber type="minor">ISO/IEC 13250-4:2009</versionNumber><date>2009-02-18</date><info type="description"><p>ISO/IEC 13250-4, Topic Maps — Canonicalization (CXTM for short) defines transformation of
-                    an instance from the Topic Maps Data Model (ISO/IEC 13250-2:2006) into an instance in the
-                    XML Infoset.</p></info><address type="URL">http://www.iso.org</address><relation target="SpecTopicMapDM" type="isUsedBy"/><relation target="SpecTopicMaps" type="isPartOf"/></version></part><part id="SpecTopicMaps-Part5"><titleStmt><title>Information technology — Topic Maps — Part 5: Reference model</title><abbr>TMRM</abbr></titleStmt><version id="SpecTopicMapRM" status="Draft International Standard"><titleStmt><abbr internal="yes">TMRM-2009</abbr><respStmt id="sZi8Tc"><resp>Editor</resp><name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name></respStmt></titleStmt><versionNumber type="minor">ISO/IEC DIS 13250-5</versionNumber><date>2009-07-01</date><info type="description"><p>ISO/IEC 13250-5, Topic Maps — Reference Model (TMRM for short) describes the abstract data
-                    model for references, which supports the definition of path languages. It defines a
-                    formalism for describing topic maps models and can be applied in Topic Data Model (ISO/IEC
-                    13250-2).</p></info><address type="URL">http://www.iso.org</address><relation target="SpecTopicMapDM" type="isUsedBy"/><relation target="SpecTopicMaps" type="isPartOf"/></version></part><part id="SpecTopicMaps-Part6"><titleStmt><title>Information technology — Topic Maps — Part 6: Compact syntax</title><abbr>CTM</abbr></titleStmt><version id="SpecCTopicMap" status="International Standard"><titleStmt><abbr internal="yes">CTM-2010</abbr><respStmt id="prqobL"><resp>Editor</resp><name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name></respStmt></titleStmt><versionNumber type="minor">ISO/IEC 13250-6:2010</versionNumber><date>2010-11-04</date><info type="description"><p>ISO/IEC 13250-6, Topic Maps — Compact Syntax (CTM for short) The Compact syntax defines and
-        describes an syntax for ISO/IEC 13250-2:2006 as well and can be seen as an alternative to
-        the XML syntax defined in ISO/IEC 13250-3:2007. The syntax is defined through an Extended
-        Backus–Naur Form (EBNF) grammar.</p></info><address type="URL">http://www.iso.org</address><relation target="SpecTopicMapDM" type="isUsedBy"/><relation target="SpecTopicMaps" type="isPartOf"/></version></part><part id="SpecTopicMaps-Part7"><titleStmt><title>Information technology — Topic Maps — Part 7: Graphical notation</title><abbr>GTM</abbr></titleStmt><version id="SpecGTopicMap" status="Working Draft"><titleStmt><abbr>GTM</abbr><respStmt id="iTUIsa"><resp>Editor</resp><name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name></respStmt></titleStmt><versionNumber type="minor">ISO/IEC WD 13250-7</versionNumber><date>2007-07-04</date><info type="description"><p>ISO/IEC 13250-7, Topic Maps — Graphical Notation (GMT for short): This part of standard
-        should specify standardised form for graphical representation of topic maps.</p></info><address type="URL">http://www.jtc1sc34.org/repository/0883.htm</address><relation target="SpecTopicMapDM" type="isUsedBy"/><relation target="SpecTopicMaps" type="isPartOf"/></version></part></spec>
+    </part>-->
+    <part id="SpecTopicMaps-Part2">
+        <titleStmt>
+            <title>Information technology — Topic Maps — Part 2: Data model</title>
+            <abbr>TMDM</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>ISO/IEC 13250-2, Topic Maps — Data Model, (TMDM for short), defines the meaning and
+                abstract structure of Topic Maps.</p>
+        </info>
+        <version id="SpecTopicMapDM" status="International Standard">
+            <titleStmt>
+                <abbr internal="yes">TMDM-2006</abbr>
+                <respStmt id="B9pBXR">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="minor">ISO/IEC 13250-2:2006</versionNumber>
+            <date>2012-01-18</date>
+            <address type="URL">http://www.iso.org</address>
+            <relation target="SpecGTopicMap" type="uses"/>
+            <relation target="SpecCTopicMap" type="uses"/>
+            <relation target="SpecTopicMapRM" type="uses"/>
+            <relation target="SpecCXTopicMap" type="uses"/>
+            <relation target="SpecXTopicMap" type="uses"/>
+            <relation target="SpecSGMLTM" type="isRevisionOf"/>
+        </version>
+    </part>
+    <part id="SpecTopicMaps-Part3">
+        <titleStmt>
+            <title>Information technology — Topic Maps — Part 3: XML syntax</title>
+            <abbr>XTM</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>ISO/IEC 13250-3, Topic Maps — XML Syntax, (XTM for short), specifies an XML-based
+                interchange syntax for representing instances of the data model defined in the
+                second part of 13250 ISO standard and uses the RELAX-NG schema.</p>
+        </info>
+        <version id="SpecXTopicMap" status="International Standard">
+            <titleStmt>
+                <abbr internal="yes">XTM-2007</abbr>
+                <respStmt id="naUph2">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="minor">ISO/IEC 13250-3:2007</versionNumber>
+            <date>2011-02-02</date>
+            <address type="URL">http://www.iso.org</address>
+            <relation target="SpecTopicMapDM" type="isUsedBy">
+                <info>
+                    <p>ISO/IEC 13250-3:2007 defines and describes an interchangeable syntax for
+                        ISO/IEC 13250-2:2006</p>
+                </info>
+            </relation>
+        </version>
+    </part>
+    <part id="SpecTopicMaps-Part4">
+        <titleStmt>
+            <title>Information technology — Topic Maps — Part 4: Canonicalization</title>
+            <abbr>CXTM</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>ISO/IEC 13250-4, Topic Maps — Canonicalization (CXTM for short) defines
+                transformation of an instance from the Topic Maps Data Model (ISO/IEC 13250-2:2006)
+                into an instance in the XML Infoset.</p>
+        </info>
+        <version id="SpecCXTopicMap" status="International Standard">
+            <titleStmt>
+                <abbr internal="yes">CXTM-2009</abbr>
+                <respStmt id="mZUBQr">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="minor">ISO/IEC 13250-4:2009</versionNumber>
+            <date>2009-02-18</date>
+            <address type="URL">http://www.iso.org</address>
+            <relation target="SpecTopicMapDM" type="isUsedBy"/>
+        </version>
+    </part>
+    <part id="SpecTopicMaps-Part5">
+        <titleStmt>
+            <title>Information technology — Topic Maps — Part 5: Reference model</title>
+            <abbr>TMRM</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>ISO/IEC 13250-5, Topic Maps — Reference Model (TMRM for short) describes the abstract
+                data model for references, which supports the definition of path languages. It
+                defines a formalism for describing topic maps models and can be applied in Topic
+                Data Model (ISO/IEC 13250-2).</p>
+        </info>
+        <version id="SpecTopicMapRM" status="Draft International Standard">
+            <titleStmt>
+                <abbr internal="yes">TMRM-2009</abbr>
+                <respStmt id="sZi8Tc">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="minor">ISO/IEC DIS 13250-5</versionNumber>
+            <date>2009-07-01</date>
+            <address type="URL">http://www.iso.org</address>
+            <relation target="SpecTopicMapDM" type="isUsedBy"/>
+        </version>
+    </part>
+    <part id="SpecTopicMaps-Part6">
+        <titleStmt>
+            <title>Information technology — Topic Maps — Part 6: Compact syntax</title>
+            <abbr>CTM</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>ISO/IEC 13250-6, Topic Maps — Compact Syntax (CTM for short) The Compact syntax
+                defines and describes a syntax for ISO/IEC 13250-2:2006. It can be seen as
+                an alternative to the XML syntax defined in ISO/IEC 13250-3:2007. The syntax is
+                defined by an Extended Backus–Naur Form (EBNF) grammar.</p>
+        </info>
+        <version id="SpecCTopicMap" status="International Standard">
+            <titleStmt>
+                <abbr internal="yes">CTM-2010</abbr>
+                <respStmt id="prqobL">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="minor">ISO/IEC 13250-6:2010</versionNumber>
+            <date>2010-11-04</date>
+            <address type="URL">http://www.iso.org</address>
+            <relation target="SpecTopicMapDM" type="isUsedBy"/>
+        </version>
+    </part>
+    <part id="SpecTopicMaps-Part7">
+        <titleStmt>
+            <title>Information technology — Topic Maps — Part 7: Graphical notation</title>
+            <abbr>GTM</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>ISO/IEC 13250-7, Topic Maps — Graphical Notation (GMT for short): This part of
+                standard should specify standardised form for graphical representation of topic
+                maps.</p>
+        </info>
+        <version id="SpecGTopicMap" status="Working Draft">
+            <titleStmt>
+                <abbr>GTM</abbr>
+                <respStmt id="iTUIsa">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-JTC1-SC34-WG3">ISO/JTC 1/SC 34/WG 3</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="minor">ISO/IEC WD 13250-7</versionNumber>
+            <date>2007-07-04</date>
+            <address type="URL">http://www.jtc1sc34.org/repository/0883.htm</address>
+            <relation target="SpecTopicMapDM" type="isUsedBy"/>
+        </version>
+    </part>
+</spec>

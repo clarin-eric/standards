@@ -1,1 +1,31 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecDita" standardSettingBody="SBOASIS" topic="TopicGenAnn" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Darwin Information Typing Architecture</title><abbr>DITA</abbr></titleStmt><scope>Authoring and organizing topic-oriented information</scope><keyword>XML-based standards</keyword><keyword>XML</keyword><keyword>DITA</keyword><keyword>reuse</keyword><info type="description"><p>The Darwin Information Typing Architecture (DITA) is an XML-based architecture for designing, writing, managing and publishing topic-oriented, information-typed content in print and on the Web. It was developed by OASIS and is ranked as standard. </p><p>The DITA is represented in form of a generic building block of a topic-oriented information architecture. The architecture consists of a set of design principles defined in a DTD. The design and processes of these principles can be extended. </p><p>DITA basic principles are modularity and reuse. Particularly important and useful is the reuse of content, design and process. Content reuse means that a content can be used several times as a part of different contexts. By using content reuse, all changes of a content made in one context can be automatically applied in all other correlated contexts. Design reuse means that the definition of an existing DITA element can be extended to be used in a special way. The existing process logic can be reused in new specialized processes, in which stylesheet processing is overridden for generating the desired output. </p><p>All these qualities of reusing allow a faster development of a new DITA architecture, which is adapted to the user needs. </p><p>The OASIS DITA Technical Committee provides the <a href="http://www.ditaopentoolkit.org/"> DITA Open Toolkit </a> (DITA-OT), which is an implementation of the DITA XML Specification. This is a set of Java-based open source tools for processing DITA maps and topics. The DITA-OT offers a mechanism for transforming DITA content into various output formats such HTML, PDF, HTML-Help, Eclipse-Help, JavaHelp, DocBook. Furthermore, the toolkit provides lots of examples using ready-used XSL Transformations. </p><p/></info><version id="SpecDita-1.2" status="OASIS Standard"><titleStmt><respStmt id="sK41OI"><resp>Publisher</resp><name type="org" id="SBOASIS">OASIS Darwin Information Typing Architecture (DITA)</name></respStmt></titleStmt><versionNumber type="major">1.2</versionNumber><date>2010-12-01</date><address type="URL">http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html</address><relation target="SpecXML" type="isBasedOn"><info><p/></info></relation></version></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecDita" standardSettingBody="SBOASIS" topic="TopicGenAnn" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Darwin Information Typing Architecture</title>
+        <abbr>DITA</abbr>
+    </titleStmt>
+    <scope>Authoring and organizing topic-oriented information</scope>
+    <keyword>XML-based standards</keyword>
+    <keyword>XML</keyword>
+    <keyword>DITA</keyword>
+    <keyword>reuse</keyword>
+    <info type="description">
+        <p>The Darwin Information Typing Architecture (DITA) is an XML-based architecture for designing, writing, managing and publishing topic-oriented, information-typed content in print and on the Web. It was developed by OASIS and is ranked as standard. </p>
+        <p>DITA is represented in form of a generic building block of a topic-oriented information architecture. The architecture consists of a set of design principles defined in a DTD. The design and processes of these principles can be extended. </p>
+        <p>DITA basic principles are modularity and reuse. Particularly important and useful is the reuse of content, design and process. Content reuse means that a content can be used several times as a part of different contexts. By using content reuse, all changes of a content made in one context can be automatically applied in all other correlated contexts. Design reuse means that the definition of an existing DITA element can be extended to be used in a special way. The existing process logic can be reused in new specialized processes, in which stylesheet processing is overridden for generating the desired output. All these qualities of reusing allow a faster development of a new DITA architecture adapted to meet the user needs. </p>
+        <p>The OASIS DITA Technical Committee provides the <a href="http://www.ditaopentoolkit.org/"> DITA Open Toolkit </a> (DITA-OT), which is an implementation of the DITA XML Specification. This is a set of Java-based open source tools for processing DITA maps and topics. DITA-OT offers a mechanism for transforming DITA contents into various output formats such HTML, PDF, HTML-Help, Eclipse-Help, JavaHelp, DocBook. Furthermore, the toolkit provides lots of examples using ready-used XSL Transformations. </p>
+        <p/>
+    </info>
+    <version id="SpecDita-1.2" status="OASIS Standard">
+        <titleStmt>
+            <abbr internal="yes">DITA-2010</abbr>
+            <respStmt id="sK41OI">
+                <resp>Publisher</resp>
+                <name type="org" id="SBOASIS">OASIS Darwin Information Typing Architecture (DITA)</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">1.2</versionNumber>
+        <date>2010-12-01</date>
+        <address type="URL">http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html</address>
+        <relation target="SpecXML" type="isBasedOn"/>
+    </version>
+</spec>

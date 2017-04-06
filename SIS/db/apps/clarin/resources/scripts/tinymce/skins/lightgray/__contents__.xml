@@ -1,0 +1,17 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/resources/scripts/tinymce/skins/lightgray" owner="admin" group="dba" mode="755" created="2013-11-27T12:03:46+01:00" version="1">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="content.min.css" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="content.min.css" mimetype="text/css">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="skin.min.css" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T14:37:07+01:00" filename="skin.min.css" mimetype="text/css">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="content.inline.min.css" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="content.inline.min.css" mimetype="text/css">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="skin.ie7.min.css" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="skin.ie7.min.css" mimetype="text/css">
+        <acl entries="0" version="1"/>
+    </resource>
+    <subcollection name="fonts" filename="fonts"/>
+    <subcollection name="img" filename="img"/>
+</collection>

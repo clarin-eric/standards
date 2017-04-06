@@ -1,9 +1,53 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecHyTime" standardSettingBody="SBISO" topic="TopicMarkupLanguage" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Information technology — Hypermedia/Time-based Structuring Language</title><abbr>HyTime</abbr></titleStmt><scope>Linking</scope><keyword>hypertext</keyword><keyword>SGML</keyword><keyword>XLink</keyword><info type="description"><p>HyTime stands for Hypermedia/Time-based Structuring Language. It is a markup language used for encoding 
-            hyperlinks and other multimedia structures in XML documents. Since 1992 the HyTime is an ISO 10744 Standard providing a hyperlink and addressing mechanism.</p><p>Currently the HyTime is not widely used, but it is very important for the processing of SGML and XML-based Hypermedia technology. 
-            In the Hytime, metadata can be associated with a link. Links can be extended to refer to a location outside the linked 
-            resources. Furthermore, it is possible to create not only the both unidirectional and bi-directional 
-            links but also the links among more than two resources.</p><p>At the first sight, it seems that HyTime is similar to XLink. The similarity in abstract linking models between the two techniques allows the translation 
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecHyTime" standardSettingBody="SBISO" topic="TopicMarkupLanguage" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Information technology — Hypermedia/Time-based Structuring Language</title>
+        <abbr>HyTime</abbr>
+    </titleStmt>
+    <scope>Linking</scope>
+    <keyword>hypertext</keyword>
+    <keyword>SGML</keyword>
+    <keyword>XLink</keyword>
+    <info type="description">
+        <p>HyTime stands for Hypermedia/Time-based Structuring Language. It is a markup language used for encoding 
+            hyperlinks and other multimedia structures in XML documents. Since 1992 HyTime is an ISO 10744 Standard providing a hyperlink and addressing mechanism.</p>
+        <p>Currently HyTime is not widely used, but it is very important for the processing of SGML and XML-based Hypermedia technology. The specification provides many mechanisms 
+            to create various link types, which can be used to describe relations to, from, within and between any kind of objects. It is possible to create not 
+            only both unidirectional and bi-directional links, but also links among more than two resources.</p>
+        <p>At the first sight, it seems that HyTime is similar to XLink. The similarity in abstract linking models between the two techniques allows the translation 
             from HyTime-based links to XLink-based links. Although both techniques have essentially the same linking 
             structures and semantics, there are significant differences between HyTime and XLink. Firstly, there are a few syntax differences. Secondly,
             unlike XLink, HyTime can provide any form of indirect addressing. XLink is most appropriate for Web-based delivery 
-            and therefore not ideal for indirect addressing.</p></info><version id="SpecHyTime-1" status="International Standard"><titleStmt><respStmt id="lgwXlk"><resp>Editor</resp><name type="org" id="SBISO-JTC1-SC34-WG3">ISO(IEC)/JTC 1/SC 34/WG 3</name></respStmt></titleStmt><versionNumber type="major">ISO/IEC 10744:1992</versionNumber><date>1992-10-01</date><address type="URL">http://www.iso.org/iso/home.html</address></version><version id="SpecHyTime-2" status="International Standard"><titleStmt><respStmt id="oiqwBt"><resp>Editor</resp><name type="org" id="SBISO-JTC1-SC34-WG3">ISO/IEC JTC 1/SC 34/WG 3</name></respStmt></titleStmt><versionNumber type="major">ISO/IEC 10744:1997</versionNumber><date>1997-08-29</date><address type="URL">http://www.iso.org/iso/home.html</address><relation target="SpecHyTime-1" type="isReVersionOf"/><relation target="SpecSGML" type="isApplicationOf"/></version></spec>
+            and therefore not ideal for indirect addressing.</p>
+    </info>
+    <relation target="SpecSGMLTM" type="isUsedBy"/>
+    <version id="SpecHyTime-1" status="International Standard">
+        <titleStmt>
+            <abbr internal="yes">HyTime-1992</abbr>
+            <respStmt id="lgwXlk">
+                <resp>Editor</resp>
+                <name type="org" id="SBISO-JTC1-SC34-WG3">ISO(IEC)/JTC 1/SC 34/WG 3</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">ISO/IEC 10744:1992</versionNumber>
+        <date>1992-10-01</date>
+        <address type="URL">http://www.iso.org/iso/home.html</address>
+    </version>
+    <version id="SpecHyTime-2" status="International Standard">
+        <titleStmt>
+            <abbr internal="yes">HyTime-1997</abbr>
+            <respStmt id="oiqwBt">
+                <resp>Editor</resp>
+                <name type="org" id="SBISO-JTC1-SC34-WG3">ISO/IEC JTC 1/SC 34/WG 3</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">ISO/IEC 10744:1997</versionNumber>
+        <date>1997-08-29</date>
+        <address type="URL">http://www.iso.org/iso/home.html</address>
+        <relation target="SpecHyTime-1" type="isRevisionOf"/>
+        <relation target="SpecSGML" type="isApplicationOf">
+            <info type="description">
+                <p>HyTime is an SGML architecture which defines the generic hypermedia structure of documents.</p>
+            </info>
+        </relation>
+    </version>
+</spec>

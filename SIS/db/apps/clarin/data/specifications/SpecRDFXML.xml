@@ -1,2 +1,36 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecRDFXML" standardSettingBody="SBW3C" topic="TopicMetaLanguage TopicSerialization" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>RDF/XML Syntax Specification</title><abbr>RDF/XML</abbr></titleStmt><scope>Standardised syntax for serializing RDF</scope><keyword>RDF</keyword><keyword>XML</keyword><keyword>ontology</keyword><keyword>Semantic Web</keyword><info type="description"><p>RDF/XML is a standard  which defines and describes the XML syntax for RDF graphs. Since 2004 it has been standardized as 
-            W3C Recommendation.</p></info><version id="SpecRDFXML-Rev" status="W3C Recommendation"><titleStmt><title>RDF/XML Syntax Specification (Revised)</title><respStmt id="RDFXML2"><resp>Editor</resp><name>Dave Beckett</name></respStmt></titleStmt><date>2004-02-10</date><address type="URL">http://www.w3.org/TR/2004/REC-rdf-syntax-grammar-20040210/</address><relation target="SpecRDF" type="uses"/><relation target="SpecXML" type="uses"/><relation target="SpecXMLNS" type="uses"/><relation target="SpecDcMes" type="isUsedBy"><info type="description"><p>The DCMES can be represented in many syntax formats, one of those is RDF/XML</p></info></relation></version></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecRDFXML" standardSettingBody="SBW3C" topic="TopicMetaLanguage TopicSerialization" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>RDF/XML Syntax Specification</title>
+        <abbr>RDF/XML</abbr>
+    </titleStmt>
+    <scope>Standardised syntax for serializing RDF</scope>
+    <keyword>RDF</keyword>
+    <keyword>XML</keyword>
+    <keyword>ontology</keyword>
+    <keyword>Semantic Web</keyword>
+    <info type="description">
+        <p>RDF/XML is a standard  which defines and describes the XML syntax for RDF graphs. Since 2004 it has been standardized as 
+            W3C Recommendation.</p>
+    </info>
+    <relation target="SpecDcMes11" type="isUsedBy"/>
+    <version id="SpecRDFXML-Rev" status="W3C Recommendation" usedInCLARINCenter="CLARIN-PL">
+        <titleStmt>
+            <title>RDF/XML Syntax Specification (Revised)</title>
+            <abbr internal="yes">RDF/XML-2004</abbr>
+            <respStmt id="RDFXML2">
+                <resp>Editor</resp>
+                <name>Dave Beckett</name>
+            </respStmt>
+        </titleStmt>
+        <date>2004-02-10</date>
+        <address type="URL">http://www.w3.org/TR/2004/REC-rdf-syntax-grammar-20040210/</address>
+        <relation target="SpecRDF" type="uses"/>
+        <relation target="SpecXML" type="uses"/>
+        <relation target="SpecXMLNS" type="uses"/>
+        <relation target="SpecDcMes" type="isUsedBy">
+            <info type="description">
+                <p>The DCMES can be represented in many syntax formats such as RDF/XML</p>
+            </info>
+        </relation>
+    </version>
+</spec>

@@ -6,32 +6,37 @@ declare option exist:serialize "method=xhtml media-type=text/html indent=yes doc
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
-import module namespace login = "http://clarin.ids-mannheim.de/standards/login" at "../modules/login.xql";
+import module namespace register = "http://clarin.ids-mannheim.de/standards/register-user" at "../modules/register.xql";
+
+(: Define the registration form
+   @author margaretha
+:)
 
 let $submitted :=  request:get-parameter('submit', '')
 let $name :=  request:get-parameter('name', '')
 let $affliation := request:get-parameter('affliation', '')
 let $email := request:get-parameter('email', '')
 let $password := request:get-parameter('password', '')
+let $recaptcha-response := request:get-parameter('g-recaptcha-response', '')
 
-let $validEmail := if ($submitted) then login:validate-email($email) else ''
-
+let $validEmail := register:validate-email($submitted,$email)
+let $validUser := register:validate-user($submitted,$recaptcha-response)
+let $register := register:validate($submitted,$validEmail,$validUser,$name,$affliation,$email,$password)
+     
 return
 
-if ($submitted and $name and $validEmail and $password) 
-then login:register($name,$affliation,$email,$password)
-else
     <html>
         <head>
     		<title>User Registration</title>
-    		<link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>    			
+    		<link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
+    		<script type="text/javascript" src="https://www.google.com/recaptcha/api.js"/>
     	</head>
-    	<body>
+    	<body>    	
     		<div id="all">
     			<div class="logoheader"/>	
     			{menu:view()}
     			<div class="content">
-    			   <div class="navigation">&gt; <a href="registration.xq">Registration</a></div>
+    			   <div class="navigation">&gt; <a href="register.xq">Registration</a></div>
              		<div><span class="heading">User Registration</span></div>
              		<div style="margin-bottom:20px;">
              		    <p> By registering to our website, you will have the privilege to download standard resources. 
@@ -42,25 +47,15 @@ else
              		</div>
     			    
     			    <form id="registration" method="post" action="">
-                        <table style="border:1px solid #AAAAAA; padding:25px;"> 
-                            {if ($submitted and not($name))
-                                then (
-                                <tr>
-                                    <td style="width:100px"><b>Name:</b>*</td>
-                                    <td><input name="name" type="text" value="{$name}" class="inputTextError" /></td>
-                                </tr>,
-                                <tr>
-                                    <td></td>
-                                    <td><span class="error">Please provide a name!</span></td>
-                                </tr>)
-                                    else(
-                                    <tr>
-                                    <td style="width:100px"><b>Name:</b>*</td>
-                                        <td><input name="name" type="text" value="{$name}" class="inputText" /></td>
-                                    </tr>
-                                )
-                             }                           
-                            
+                        <table style="border:1px solid #AAAAAA; padding:25px;">                            
+                            <tr>
+                                <td style="width:100px"><b>Name:</b>*</td>
+                                <td><input name="name" type="text" value="{$name}" class="{app:get-input-class($submitted,$name)}" /></td>
+                            </tr>
+                            <tr style="display:{register:get-error-display($submitted,$name)}">
+                                <td></td>
+                                <td><span class="error">Please provide a name!</span></td>
+                            </tr>
                             <tr>
                                 <td>
                                     <b>Affiliation:</b>
@@ -68,55 +63,31 @@ else
                                 <td>
                                     <input name="affliation" type="text" value="{$affliation}" class="inputText" />
                                 </td>
-                            </tr>                   
-                                
-                            {if ($submitted and not($email))
-                                then (
-                                <tr>
-                                    <td><b>E-Mail:</b>*</td>
-                                    <td><input name="email" type="text" value="{$email}" class="inputTextError" /></td>
-                                </tr>,
-                                <tr>
-                                    <td></td>
-                                    <td><span class="error">Please provide an email!</span></td>
-                                </tr>
-                                )
-                             else if ($submitted and not($validEmail))
-                                then (
-                                <tr>
-                                   <td><b>E-Mail:</b>*</td>
-                                   <td><input name="email" type="text" value="{$email}" class="inputTextError" /></td>
-                               </tr>,                               
-                               <tr>
-                                    <td></td>
-                                    <td><span class="error">Please enter a valid E-Mail address!</span></td>
-                                </tr>
-                               )
-                            else
+                            </tr>
                             <tr>
                                 <td><b>E-Mail:</b>*</td>
-                                <td><input name="email" type="text" value="{$email}" class="inputText" /></td>
+                                <td><input name="email" type="text" value="{$email}" class="{app:get-input-class($submitted,$validEmail)}" /></td>
                             </tr>
-                             }                          
-                            {if ($submitted and (not($password) or fn:string-length($password) < 6))
-                               then (
-                               <tr>
-                                <td><b>Password:</b>*</td>         
-                                    <td><input name="password" type="password" value="" class="inputTextError" /></td>
-                                </tr>,
-                                <tr>
-                                    <td></td>
-                                    <td><span class="error">Please enter a password with minimum 6 characters!</span></td>
-                                </tr>
-                                )                                
-                             else 
-                             <tr>
-                                <td><b>Password:</b>*</td>         
-                                <td><input name="password" type="password" value="" class="inputText" 
-                                placeholder="Minimum 6 characters."
-                                /></td>
+                            <!--tr style="display:{register:get-error-display($submitted,$email)}">
+                                <td></td>
+                                <td><span class="error">Please provide an E-Mail!</span></td>
+                            </tr-->                                                    
+                            <tr style="display:{register:get-error-display($submitted,$validEmail)}">
+                                <td></td>
+                                <td><span class="error">Please enter a valid E-Mail address!</span></td>
                             </tr>
-                            }
+                            <tr>
+                            <td><b>Password:</b>*</td>         
+                                <td><input name="password" type="password" value="" class="{app:get-input-class($submitted,$password)}" /></td>
+                            </tr>
+                            <tr style="display:{register:get-error-display($submitted,$password)}">
+                                <td></td>
+                                <td><span class="error">Please enter a password!</span></td>
+                            </tr>
+                            <tr>   
+                                <td></td>
+                                <td><span class="g-recaptcha" data-sitekey="6Le3-A4TAAAAANIlvxACo9FgbWKzXBhg_UH_8fTK"/></td>
+                            </tr>
                             <tr style="height:40px;">
                                 <td>
                                     <span style="font-size:12px;">* required</span>

@@ -1,1 +1,49 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTextMD" standardSettingBody="SBLoC" topic="TopicMetadata" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Technical Metadata for Text</title><abbr>TextMD</abbr></titleStmt><scope>XML Schema for description technical metadata for text-based digital objects</scope><keyword>XML Schema</keyword><keyword>technical metadata</keyword><keyword>metadata</keyword><info type="description"><p/></info><version id="SpecTextMD-2" status="LoC Standard"><titleStmt><respStmt id="pgF3cc"><resp>Editor</resp><name type="org" id="SBLoC">The Library of Congress</name></respStmt></titleStmt><versionNumber type="major">2.2</versionNumber><date><!-- is not found --></date><relation target="SpecMETS" type="isUsedBy"><info type="description"><p>TextMD can be used within the Metadata Encoding and Transmission Schema.</p></info></relation></version></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTextMD" standardSettingBody="SBLoC" topic="TopicMetadata" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Technical Metadata for Text</title>
+        <abbr>TextMD</abbr>
+    </titleStmt>
+    <scope>XML Schema for description of technical metadata for text-based digital objects</scope>
+    <keyword>XML Schema</keyword>
+    <keyword>technical metadata</keyword>
+    <keyword>metadata</keyword>
+    <info type="description">
+        <p>The abbreviation of TextMD stands for Technical Metadata for Text. It is an XML-based Schema, developed for encoding  
+            technical metadata of text-based digital objects (such as digitized books or manuscripts) in XML. The specification was originally created by the 
+            New York University Digital Library Team (NYU). Since 2007, it has been taken over by the LoC (the Library of Congress) 
+            for further maintenance of the specification.</p>
+        <p>The technical metadata schema describes technical attributes of digital objects and specific information about 
+                their production or creation, such as:</p>
+        <ul>
+            <li>encoding information (quality, platform, software, agent)</li>
+            <li>character information (character set and size, byte order and size, line terminators)</li>
+            <li>languages</li>
+            <li>fonts</li>
+            <li>markup information</li>
+            <li>processing and textual notes</li>
+            <li>technical requirements for printing and viewing</li>
+            <li>page ordering and sequencing.</li>
+        </ul>
+        <p>Such information is necessary to be included in a metadata, as it is often needed for the reproduction, distribution or modification of the digital 
+            resources in the future.</p>
+        <p>The TextMD schema is adventageous because it can be used as a standalone document or extension schema within the Metadata Encoding and Transmission 
+            Schema (METS) describing administrative metadata.</p>
+    </info>
+    <relation target="SpecMETS-1-9" type="isUsedBy"/>
+    <version id="SpecTextMD-2" status="final">
+        <titleStmt>
+            <abbr>TextMD-2.2</abbr>
+            <respStmt id="pgF3cc">
+                <resp>Editor</resp>
+                <name type="org" id="SBLoC">The Library of Congress</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">2.2</versionNumber>
+        <date>n/a</date>
+        <relation target="SpecMETS" type="isUsedBy">
+            <info type="description">
+                <p>TextMD can be used within the Metadata Encoding and Transmission Schema.</p>
+            </info>
+        </relation>
+    </version>
+</spec>

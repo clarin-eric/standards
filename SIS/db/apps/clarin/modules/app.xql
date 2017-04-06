@@ -2,24 +2,31 @@ xquery version "3.0";
 
 module namespace app="http://clarin.ids-mannheim.de/standards/app";
 
-(: Base URL - enable for a production system :)
-(:declare variable $app:base as xs:string := "http://clarin.ids-mannheim.de/standards/";
-declare variable $app:securebase as xs:string := "https://clarin.ids-mannheim.de/standards/";:)
+(: Define general functions
+   @author margaretha
+:)
 
+(: Base URL :)
+(:declare variable $app:base as xs:string := "http://clarin.ids-mannheim.de/standards/";
+declare variable $app:securebase as xs:string := "https://clarin.ids-mannheim.de/standards/";
+:)
 
 (: Local Base URL :)
 declare variable $app:base as xs:string := "http://localhost:8889/exist/apps/clarin/";
-declare variable $app:securebase as xs:string := "https://localhost:8444/exist/apps/clarin/";
+declare variable $app:securebase as xs:string := "http://localhost:8889/exist/apps/clarin/";
 
 
+(: Wrap a link with the current session :)
 declare function app:link($path as xs:string) {
     session:encode-url(fn:resolve-uri($path,$app:base))
 };
 
+(: Wrap a link with the current session and the secure port :)
 declare function app:secure-link($path as xs:string){    
     session:encode-url(fn:resolve-uri($path,$app:securebase))
 };
 
+(: Resolve a resource location :)
 declare function app:resource($filename as xs:string, $type as xs:string){
     let $path := "../resources/"
     return    
@@ -28,21 +35,15 @@ declare function app:resource($filename as xs:string, $type as xs:string){
         else concat($path,"images/",$filename)    
 };
 
-declare function app:name($element){
-    let $title := $element/titleStmt/title/text()
-    let $abbr := $element/titleStmt/abbr/text()
-    
-    return
-        if ($abbr and $abbr !='') then $abbr else $title
+(: Set a display value :)
+declare function app:get-display(){
+    if (session:get-attribute('user')='webadmin')
+    then 'inline' else 'none'
 };
 
-declare function app:wrap-links($links){
-    for $link in $links
-    let $url := app:link(data($link/@href))
-    return 
-        if (contains($links,".xq")) 
-        then <a href="{$url}">{$link/text()}</a>
-        else $link
+(: Define the class attribute of an input field :)
+declare function app:get-input-class($submitted, $field){
+    if($submitted and not($field)) then "inputTextError" else "inputText"
 };
 
 declare function app:footer(){

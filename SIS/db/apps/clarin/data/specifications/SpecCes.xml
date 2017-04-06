@@ -1,9 +1,179 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecCes" standardSettingBody="SBEAGLES" topic="TopicGenAnn" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Corpus Encoding Standard</title><abbr>CES</abbr></titleStmt><scope>corpus annotation</scope><keyword>corpus</keyword><keyword>CES</keyword><keyword>corpus encoding</keyword><keyword>linguistic annotation</keyword><info type="description"><p>CES is an encoding standard for corpus annotation. It was developed within the framework of the EAGLES (Expert 
-            Advisory Group on Language Engineering Standards) project. The aim of the CES is to provide a unitary coding standard for 
-            linguistic corpus annotation. The CES can be used to encode corpora as resources for natural language processing.</p><p>SGML (ISO 8879:1986 Standard Generalized Markup Language) was the foundation
-			of the CES. Beside the SGML, TEI (Text Encoding Initiative) Guidelines were taken into account for
-			the development of the CES. Like the TEI, the CES standardizes the document structure (e.g.
-			title, caption, break) or document info (metadata). In addition to that, the CES standardizes the linguistic
-			annotation of a text (e.g. morpho-syntactic tagging, parallel text alignment, prosody,
-			phonetic transcription, etc.). TEI P3 and the CES are compatible to each other, so they can be used 
-			side by side. As an XML-based version of the CES, XCES (Corpus Encoding Standard for XML) has also been developed .</p><p>The CES can be applied in monolingual, multi-lingual and parallel corpora.</p></info><version id="SpecCes4-1" status="final"><titleStmt><respStmt id="IKdc87"><resp>Author</resp><name type="person">Nancy Ide</name><name type="person">Greg Priest-Dorman</name></respStmt></titleStmt><versionNumber type="major">4.1</versionNumber><date>1996-10-14</date><features><fs><f name="metaLanguage"><symbol value="SGML"/></f><f name="constraintLanguage"><symbol value="DTD"/></f><f name="grammarClass"><symbol value="LTG"/></f><f name="formalModel"><symbol value="Tree"/></f><f name="notation"><symbol value="Standoff"/></f><f name="multipleHierarchies"><fs><f name="support"><binary value="yes"/></f><f name="item"><vColl><string>standoff annotation</string></vColl></f></fs></f></fs></features><address type="URL">http://www.cs.vassar.edu/CES/</address><relation target="SpecTeiP3" type="isApplicationOf"><info><p>CES is an application of the SGML-based TEI P3 using the TEI modification layer.</p></info></relation><relation target="SpecXces" type="isVersionOf"><info><p>CES is the SGML ancestor of the XML-based XCES.</p></info></relation></version><asset><a href="../doc/test.txt">CES_Specification.pdf</a></asset></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecCes" standardSettingBody="SBEAGLES" topic="TopicGenAnn" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Corpus Encoding Standard</title>
+        <abbr>CES/XCES</abbr>
+    </titleStmt>
+    <scope>corpus annotation</scope>
+    <keyword>corpus</keyword>
+    <keyword>CES</keyword>
+    <keyword>corpus encoding</keyword>
+    <keyword>CES</keyword>
+    <keyword>XCES</keyword>
+    <info type="description">
+        <p/>
+    </info>
+    <version id="SpecCes4-1" status="final">
+        <titleStmt>
+            <title>Corpus Encoding Standard</title>
+            <abbr>CES</abbr>
+            <respStmt id="IKdc87">
+                <resp>Author</resp>
+                <name type="person">Nancy Ide</name>
+                <name type="person">Greg Priest-Dorman</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">4.1</versionNumber>
+        <date>1996-10-14</date>
+        <info type="description">
+            <p>CES is an encoding standard for corpus annotation. It was developed within the
+                framework of the EAGLES (Expert Advisory Group on Language Engineering Standards)
+                project. The aim of the CES is to provide a unitary coding standard for linguistic
+                corpus annotation. The CES can be used to encode corpora as resources for natural
+                language processing.</p>
+            <p>SGML (ISO 8879:1986 Standard Generalized Markup Language) was the foundation of the
+                CES. Beside the SGML, TEI (Text Encoding Initiative) Guidelines were taken into
+                account for the development of the CES. Like the TEI, the CES standardizes the
+                document structure (e.g. title, caption, break) or document info (metadata). In
+                addition to that, the CES standardizes the linguistic annotation of a text (e.g.
+                morpho-syntactic tagging, parallel text alignment, prosody, phonetic transcription,
+                etc.). TEI P3 and the CES are compatible to each other, so they can be used side by
+                side. As an XML-based version of the CES, XCES (Corpus Encoding Standard for XML)
+                has also been developed .</p>
+            <p>The CES can be applied in monolingual, multi-lingual and parallel corpora.</p>
+        </info>
+        <features>
+            <fs>
+                <f name="metaLanguage">
+                    <symbol value="SGML"/>
+                </f>
+                <f name="constraintLanguage">
+                    <symbol value="DTD"/>
+                </f>
+                <f name="grammarClass">
+                    <symbol value="LTG"/>
+                </f>
+                <f name="formalModel">
+                    <symbol value="Tree"/>
+                </f>
+                <f name="notation">
+                    <symbol value="Standoff"/>
+                </f>
+                <f name="multipleHierarchies">
+                    <fs>
+                        <f name="support">
+                            <binary value="yes"/>
+                        </f>
+                        <f name="item">
+                            <vColl>
+                                <string>standoff annotation</string>
+                            </vColl>
+                        </f>
+                    </fs>
+                </f>
+            </fs>
+        </features>
+        <address type="URL">http://www.cs.vassar.edu/CES/</address>
+        <relation target="SpecSGML" type="isBasedOn">
+            <info>
+                <p> CES is based on the SGML.</p>
+            </info>
+        </relation>
+        <relation target="SpecTeiP3" type="isApplicationOf">
+            <info>
+                <p>CES is an application of the SGML-based TEI P3 using the TEI modification
+                    layer.</p>
+            </info>
+        </relation>
+        <relation target="SpecXces104" type="isVersionOf">
+            <info>
+                <p>CES is the SGML ancestor of the XML-based XCES.</p>
+            </info>
+        </relation>
+    </version>
+    <version id="SpecXces104" status="final" usedInCLARINCenter="CLARIN-PL IDS">
+        <titleStmt>
+            <title>Corpus Encoding Standard in XML</title>
+            <abbr>XCES</abbr>
+            <respStmt id="yULgPs">
+                <resp>Editor</resp>
+                <name type="person">Nancy Ide</name>
+                <name type="person">Patrice Bonhomme</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">1.0.4</versionNumber>
+        <date>2008-06-20</date>
+        <info type="description">
+            <p>XCES is the XML version of the Corpus Encoding Standard (CES). It was developed by
+                the Department of Computer Science, Vassar College, and Equipe Langue et Dialogue,
+                LORIA/CNRS, for the simple reason that XML is the standard for data representation
+                and exchange on the World Wide Web. Some of the aims of this conversion were to
+                offer a state-of-the-art representation of the corpus data and to be accessible for
+                the language engineering community as well.</p>
+            <p>XCES offers DTDs and XML schemas for encoding basic document structure and linguistic
+                annotation. The implementation of CES in XML allows not only the morpho-syntactic
+                annotation but also the syntactic annotation. With the aid of XLink und XPointer,
+                XCES gives more complex and superior method to refer to the standoff annotated
+                corpus data, in contrast to the SGML based CES.</p>
+            <p>Furthermore XCES currently includes XML Schemas for validation and some XSLT scripts
+                to transform into HTML document.</p>
+            <p>XCES is developed continually and planned be compliant with TEI P5. Currently the
+                stages of development between the TEI Guidelines and XCES are so large that the TEI
+                Guidelines P5 cannot be used in XCES.</p>
+        </info>
+        <features>
+            <fs>
+                <f name="metaLanguage">
+                    <symbol value="XML"/>
+                </f>
+                <f name="constraintLanguage">
+                    <symbol value="XSD"/>
+                </f>
+                <f name="grammarClass">
+                    <symbol value="LTG"/>
+                </f>
+                <f name="formalModel">
+                    <symbol value="Graph"/>
+                </f>
+                <f name="notation">
+                    <symbol value="Standoff"/>
+                </f>
+                <f name="multipleHierarchies">
+                    <fs>
+                        <f name="support">
+                            <binary value="yes"/>
+                        </f>
+                        <f name="item">
+                            <vColl>
+                                <string>standoff annotation</string>
+                            </vColl>
+                        </f>
+                    </fs>
+                </f>
+            </fs>
+        </features>
+        <address type="URL">http://www.xces.org/</address>
+        <relation type="isVersionOf" target="SpecCes4-1">
+            <info>
+                <p>XCES is the XML instantiation of CES.</p>
+            </info>
+        </relation>
+        <relation target="SpecLaf-IS" type="hasPart"/>
+        <!--relation target="SpecIDS-XCES" type="isBasedOn"/-->
+        <relation target="SpecXML" type="isApplicationOf">
+            <info>
+                <p>XCES is an application of the Extensible Markup Language (XML), for instance it
+                    uses the XML syntax.</p>
+            </info>
+        </relation>
+        <relation target="SpecXSD" type="isApplicationOf">
+            <info>
+                <p>XCES uses XML Schema 1.0 as a constraint language.</p>
+            </info>
+        </relation>
+        <relation target="SpecTei" type="isBasedOn">
+            <info type="description">
+                <p>The XCES specification is based on the TEI P3 Standard.</p>
+            </info>
+        </relation>
+    </version>
+</spec>

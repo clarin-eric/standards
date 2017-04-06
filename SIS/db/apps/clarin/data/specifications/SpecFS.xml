@@ -1,30 +1,87 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecFS" standardSettingBody="SBISO" topic="TopicFeatureStructure" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="show"><titleStmt><title>Language resource management — Feature structures</title><abbr>Feature structures</abbr></titleStmt><scope>Standards for feature structures representation and system declaration</scope><keyword>data processing</keyword><keyword>data management</keyword><keyword>data representation</keyword><keyword>XML</keyword><keyword>metadata</keyword><info type="description"><p/></info><part id="SpecFS-Part1"><titleStmt><title>Language resource management — Feature structures — Part 1: Feature structure representation</title><abbr>FSR</abbr></titleStmt><version id="SpecFSR" status="International Standard"><titleStmt><abbr>FSR-2006</abbr><respStmt id="par2FS"><resp>Editor</resp><name type="org" id="SBISO-TC37-SC4-WG1">ISO/TC 37/SC 4/WG 1</name></respStmt></titleStmt><versionNumber type="major"> ISO 24610-1:2006</versionNumber><date>2006-04-10</date><info type="description"><p>
-                    "ISO 24610-1:2006 provides a format for the representation, storage and exchange of feature structures in natural 
-                    language applications concerned with the annotation, production or analysis of linguistic data. It also defines a 
-                    computer format for the description of constraints that bear on a set of features, feature values, feature specifications 
-                    and operations on feature structures, thus offering a means of checking the conformance of each feature structure with 
-                    regards to a reference specification." 
-                    (<a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37324">Abstract, ISO 24610-1:2006</a>)
-                </p></info><address type="URL">http://www.iso.org</address><relation target="SpecFS" type="isPartOf"/></version></part><part id="SpecFS-Part2"><version id="SpecFSD" status="International Standard"><titleStmt><title>Language resource management — Feature structures — Part 2: Feature system declaration</title><abbr>FSD</abbr><respStmt id="par4FS"><resp>Editor</resp><name type="org" id="SBISO-TC37-SC4-WG1">ISO/TC 37/SC 4/WG 1</name></respStmt></titleStmt><versionNumber type="major">ISO 24610-2:2011</versionNumber><date>2011-09-26</date><info type="description"><p>
-                    "ISO 24610-2:2011 provides a format to represent, store or exchange feature structures in natural language applications, 
-                    for both annotation and production of linguistic data. It is ultimately designed to provide a computer format to define a 
-                    type hierarchy and to declare the constraints that bear on a set of feature specifications and operations on feature structures, 
-                    thus offering means to check the conformance of each feature structure with regards to a reference specification. 
-                    Feature structures are an essential part of many linguistic formalisms as well as an underlying mechanism for 
-                    representing the information consumed or produced by and for language engineering applications.</p><p>A feature system declaration (FSD) is an auxiliary file used in conjunction with a certain type of text that makes 
-                    use of fs (that is, feature structure) elements. The FSD serves four purposes. 1) It provides an encoding by which types and 
-                    their subtyping and inheritance relationships can be introduced and defined, thus laying the basis for constructing a feature 
-                    system. 2) It provides a mechanism by which the encoder can list all of the feature names and feature values and give a prose
-                    description as to what each represents. 3) It provides a mechanism by which type constraints can be declared, against which
-                    typed feature structures are validated relative to a given theory stated in typed feature logic. These constraints may involve 
-                    constraints on the range of a feature's value, constraints on which features are permitted within certain types of feature 
-                    structures, or constraints that prevent the co-occurrence of certain feature-value pairs. The source of these constraints 
-                    is normally the empirical domain being modelled. 4) It provides a mechanism by which the encoder can define the intended 
-                    interpretation of underspecified feature structures. This involves defining default values (whether literal or computed) 
-                    for missing features.</p><p>The scheme described in ISO 24610-2:2011 may be used to document any feature system, but is primarily intended for 
-                    use with the typed feature structure representation defined in ISO 24610-1. The feature structure representations of 
-                    ISO 24610-1 specify data structures that are subject to the typing conventions and constraints specified using 
-                    ISO 24610-2:2011. The feature structure representations of ISO 24610-1 are also used within some of the elements defined 
-                    in ISO 24610-2:2011." 
-                    (<a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=43823">Abstract, ISO 24610-1:2006</a>)
-                </p></info><relation target="SpecFS" type="isPartOf"/></version></part></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecFS" standardSettingBody="SBISO" topic="TopicFeatureStructure" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="show">
+    <titleStmt>
+        <title>Language resource management — Feature structures</title>
+        <abbr>Feature structures</abbr>
+    </titleStmt>
+    <scope>Standards for feature structures representation and system declaration</scope>
+    <keyword>data processing</keyword>
+    <keyword>data management</keyword>
+    <keyword>data representation</keyword>
+    <keyword>XML</keyword>
+    <keyword>metadata</keyword>
+    <info type="description">
+        <p/>
+    </info>
+    <part id="SpecFS-Part1">
+        <titleStmt>
+            <title>Language resource management — Feature structures — Part 1: Feature structure representation</title>
+            <abbr>FSR</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>
+                "ISO 24610-1:2006 provides a format for the representation, storage and exchange of feature structures in natural 
+                language applications concerned with the annotation, production or analysis of linguistic data. It also defines a 
+                computer format for the description of constraints that bear on a set of features, feature values, feature specifications 
+                and operations on feature structures, thus offering a means of checking the conformance of each feature structure with 
+                regards to a reference specification." 
+                (<a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37324">Abstract, ISO 24610-1:2006</a>)
+            </p>
+        </info>
+        <version id="SpecFSR" status="International Standard" usedInCLARINCenter="CLARIN-PL">
+            <titleStmt>
+                <abbr>FSR-2006</abbr>
+                <respStmt id="par2FS">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-TC37-SC4-WG1">ISO/TC 37/SC 4/WG 1</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major"> ISO 24610-1:2006</versionNumber>
+            <date>2006-04-10</date>
+            <address type="URL">http://www.iso.org</address>
+        </version>
+    </part>
+    <part id="SpecFS-Part2">
+        <titleStmt>
+            <title>Language resource management — Feature structures — Part 2: Feature system declaration</title>
+            <abbr>FSD</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>
+                "ISO 24610-2:2011 provides a format to represent, store or exchange feature structures in natural language applications, 
+                for both annotation and production of linguistic data. It is ultimately designed to provide a computer format to define a 
+                type hierarchy and to declare the constraints that bear on a set of feature specifications and operations on feature structures, 
+                thus offering means to check the conformance of each feature structure with regards to a reference specification. 
+                Feature structures are an essential part of many linguistic formalisms as well as an underlying mechanism for 
+                representing the information consumed or produced by and for language engineering applications.</p>
+            <p>A feature system declaration (FSD) is an auxiliary file used in conjunction with a certain type of text that makes 
+                use of fs (that is, feature structure) elements. The FSD serves four purposes. 1) It provides an encoding by which types and 
+                their subtyping and inheritance relationships can be introduced and defined, thus laying the basis for constructing a feature 
+                system. 2) It provides a mechanism by which the encoder can list all of the feature names and feature values and give a prose
+                description as to what each represents. 3) It provides a mechanism by which type constraints can be declared, against which
+                typed feature structures are validated relative to a given theory stated in typed feature logic. These constraints may involve 
+                constraints on the range of a feature's value, constraints on which features are permitted within certain types of feature 
+                structures, or constraints that prevent the co-occurrence of certain feature-value pairs. The source of these constraints 
+                is normally the empirical domain being modelled. 4) It provides a mechanism by which the encoder can define the intended 
+                interpretation of underspecified feature structures. This involves defining default values (whether literal or computed) 
+                for missing features.</p>
+            <p>The scheme described in ISO 24610-2:2011 may be used to document any feature system, but is primarily intended for 
+                use with the typed feature structure representation defined in ISO 24610-1. The feature structure representations of 
+                ISO 24610-1 specify data structures that are subject to the typing conventions and constraints specified using 
+                ISO 24610-2:2011. The feature structure representations of ISO 24610-1 are also used within some of the elements defined 
+                in ISO 24610-2:2011." 
+                (<a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=43823">Abstract, ISO 24610-1:2006</a>)
+            </p>
+        </info>
+        <version id="SpecFSD" status="International Standard">
+            <titleStmt>
+                <abbr internal="yes">FSD-2011</abbr>
+                <respStmt id="par4FS">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBISO-TC37-SC4-WG1">ISO/TC 37/SC 4/WG 1</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major">ISO 24610-2:2011</versionNumber>
+            <date>2011-09-26</date>
+        </version>
+    </part>
+</spec>

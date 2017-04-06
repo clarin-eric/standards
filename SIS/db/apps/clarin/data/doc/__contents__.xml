@@ -1,18 +1,9 @@
 <collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/data/doc" owner="admin" group="dba" mode="755" created="2012-12-18T18:25:45+01:00" version="1">
     <acl entries="0" version="1"/>
-    <resource type="BinaryResource" name="ExampleXQUERY.xquery" owner="admin" group="dba" mode="644" created="2013-03-21T14:03:39+01:00" modified="2013-03-21T14:03:39+01:00" filename="ExampleXQUERY.xquery" mimetype="application/xquery">
-        <acl entries="0" version="1"/>
-    </resource>
     <resource type="XMLResource" name="Example_XML.xml" owner="admin" group="dba" mode="644" created="2013-03-21T14:03:39+01:00" modified="2013-03-21T14:03:39+01:00" filename="Example_XML.xml" mimetype="application/xml">
         <acl entries="0" version="1"/>
     </resource>
-    <resource type="BinaryResource" name="test.txt" owner="admin" group="dba" mode="644" created="2013-03-07T17:30:57+01:00" modified="2013-03-11T17:29:26+01:00" filename="test.txt" mimetype="text/plain">
-        <acl entries="0" version="1"/>
-    </resource>
-    <resource type="BinaryResource" name="Example_XQUERY.xq" owner="admin" group="dba" mode="644" created="2012-12-18T18:43:34+01:00" modified="2013-03-11T15:44:02+01:00" filename="Example_XQUERY.xq" mimetype="application/octet-stream">
-        <acl entries="0" version="1"/>
-    </resource>
-    <resource type="XMLResource" name="Example_LMF.xml" owner="admin" group="dba" mode="644" created="2013-03-06T13:31:28+01:00" modified="2013-03-06T13:31:28+01:00" filename="Example_LMF.xml" mimetype="application/xml">
+    <resource type="XMLResource" name="Example_LMF.xml" owner="admin" group="dba" mode="644" created="2015-02-16T17:35:42+01:00" modified="2015-02-16T17:35:42+01:00" filename="Example_LMF.xml" mimetype="application/xml">
         <acl entries="0" version="1"/>
     </resource>
     <resource type="XMLResource" name="Example_MAF.xml" owner="admin" group="dba" mode="644" created="2013-03-06T13:31:28+01:00" modified="2013-03-06T13:31:28+01:00" filename="Example_MAF.xml" mimetype="application/xml">
@@ -24,13 +15,25 @@
     <resource type="XMLResource" name="Example_DC.xml" owner="admin" group="dba" mode="644" created="2013-03-06T13:31:28+01:00" modified="2013-03-06T13:31:28+01:00" filename="Example_DC.xml" mimetype="application/xml">
         <acl entries="0" version="1"/>
     </resource>
-    <resource type="BinaryResource" name="Example_TMX.tmx" owner="admin" group="dba" mode="644" created="2013-03-06T13:31:26+01:00" modified="2013-03-11T15:49:03+01:00" filename="Example_TMX.tmx" mimetype="application/octet-stream">
-        <acl entries="0" version="1"/>
-    </resource>
     <resource type="XMLResource" name="Example_RDFS.xml" owner="admin" group="dba" mode="644" created="2013-03-06T13:31:27+01:00" modified="2013-03-06T13:31:27+01:00" filename="Example_RDFS.xml" mimetype="application/xml">
         <acl entries="0" version="1"/>
     </resource>
     <resource type="XMLResource" name="Example_HTML.html" owner="admin" group="dba" mode="644" created="2013-03-26T15:31:50+01:00" modified="2013-03-26T15:31:50+01:00" filename="Example_HTML.html" mimetype="text/html" namedoctype="html" publicid="" systemid="">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="test.txt" owner="admin" group="dba" mode="644" created="2013-03-07T17:30:57+01:00" modified="2013-03-11T17:29:26+01:00" filename="test.txt" mimetype="text/plain">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="ExampleXQUERY.xquery" owner="admin" group="dba" mode="644" created="2013-03-21T14:03:39+01:00" modified="2013-03-21T14:03:39+01:00" filename="ExampleXQUERY.xquery" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="Example_RTF.rtf" owner="admin" group="dba" mode="644" created="2014-09-02T13:54:24+02:00" modified="2014-09-02T13:54:24+02:00" filename="Example_RTF.rtf" mimetype="application/octet-stream">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="Example_TMX.tmx" owner="admin" group="dba" mode="644" created="2013-03-06T13:31:26+01:00" modified="2013-03-11T15:49:03+01:00" filename="Example_TMX.tmx" mimetype="application/octet-stream">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="Example_XQUERY.xq" owner="admin" group="dba" mode="644" created="2012-12-18T18:43:34+01:00" modified="2013-03-11T15:44:02+01:00" filename="Example_XQUERY.xq" mimetype="application/octet-stream">
         <acl entries="0" version="1"/>
     </resource>
 </collection>

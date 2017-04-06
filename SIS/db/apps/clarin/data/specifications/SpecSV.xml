@@ -1,1 +1,56 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecSV" standardSettingBody="SBBSi" topic="TopicKnowledgeRepresentation TopicThesaurus TopicControlledVocabulary" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Structured vocabularies for information retrieval</title><abbr>Structured Vocabulary</abbr></titleStmt><scope>Standard for creating structured / controlled vocabularies</scope><keyword>Thesaurus</keyword><keyword>information retrieval</keyword><keyword>terms</keyword><keyword>relationships</keyword><keyword>vocabulary</keyword><info type="description"><p/></info><part id="SpecSV-Part1"><version id="SpecSV1-BS" status="Current, Superseded"><titleStmt><title>Structured vocabularies for information retrieval. Guide. Definitions, symbols and abbreviations</title><respStmt id="pSV002"><resp>Editor</resp><name type="org" id="SBBSi">BSi</name></respStmt></titleStmt><versionNumber type="major">BS 8723-1:2005</versionNumber><date>2005-11-01</date><relation target="SpecSV" type="isPartOf"><info type="description"><p>BS 8723-1:2005 is the first part of the BS 8723 standrdard.</p></info></relation><relation target="SpecSV1-BSISO" type="isReplacedBy"><info type="description"><p>The standard BS 8723-1:2005 was replaced by BS ISO 25964-1:2011 but remains current.</p></info></relation></version><version id="SpecSV1-BSISO" status="Current"><titleStmt><title>Information and documentation. Thesauri and interoperability with other vocabularies. Thesauri for information retrieval</title><respStmt id="pSV003"><resp>Editor</resp><name/></respStmt></titleStmt><versionNumber type="major">BS ISO 25964-1:2011</versionNumber><date>2011-09-30</date><relation target="SpecSV1-BS" type="Replaces"><info type="description"><p>BS ISO 25964-1:2011 replaces the BS 8723-1:2005</p></info></relation><relation target="SpecSV" type="isPartOf"><info type="description"><p/></info></relation><relation target="SpecThesauri-1" type="isAdaptedFrom"><info type="description"><p/></info></relation></version></part><part id="SpecSV-Part2"><version id="SpecSV3-BS"><titleStmt><title>Structured vocabularies for information retrieval. Guide. Vocabularies other than thesauri</title><respStmt id="pSV006"><resp>Editor</resp><name type="org" id="SBBSi">BSi</name></respStmt></titleStmt><versionNumber type="major">BS 8723-3:2007</versionNumber><date>2007-12-31</date><relation target="SpecSV" type="isPartOf"/></version></part></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecSV" standardSettingBody="SBBSi" topic="TopicKnowledgeRepresentation TopicThesaurus TopicControlledVocabulary" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Structured vocabularies for information retrieval</title>
+        <abbr internal="yes">Structured Vocabulary</abbr>
+    </titleStmt>
+    <scope>Standard for creating structured / controlled vocabularies</scope>
+    <keyword>Thesaurus</keyword>
+    <keyword>information retrieval</keyword>
+    <keyword>terms</keyword>
+    <keyword>relationships</keyword>
+    <keyword>vocabulary</keyword>
+    <info type="description">
+        <p/>
+    </info>
+    <part id="SpecSV-Part1">
+        <titleStmt>
+            <title>Structured vocabularies for information retrieval. Guide. Definitions, symbols and abbreviations</title>
+            <abbr internal="yes">SV-1</abbr>
+        </titleStmt>
+        <version id="SpecSV1-BS" status="Current, Superseded" usedInCLARINCenter="CLARIN-PL">
+            <titleStmt>
+                <abbr internal="yes">SV-1-2005</abbr>
+                <respStmt id="pSV002">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBBSi">BSi</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major">BS 8723-1:2005</versionNumber>
+            <date>2005-11-01</date>
+            <relation target="SpecThesauri-1" type="isReplacedBy">
+                <info type="description">
+                    <p>The standard BS 8723-1:2005 was replaced by BS ISO 25964-1:2011 but remains
+                        current.</p>
+                </info>
+            </relation>
+        </version>
+    </part>
+    <part id="SpecSV-Part3">
+        <titleStmt>
+            <title>Structured vocabularies for information retrieval. Guide. Vocabularies other than thesauri</title>
+            <abbr internal="yes">SV-3</abbr>
+        </titleStmt>
+        <version id="SpecSV3-BS">
+            <titleStmt>
+                <abbr internal="yes">SV-3-2007</abbr>
+                <respStmt id="pSV006">
+                    <resp>Editor</resp>
+                    <name type="org" id="SBBSi">BSi</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major">BS 8723-3:2007</versionNumber>
+            <date>2007-12-31</date>
+            <relation target="SpecThesauri-Part2" type="isReplacedBy"/>
+        </version>
+    </part>
+</spec>

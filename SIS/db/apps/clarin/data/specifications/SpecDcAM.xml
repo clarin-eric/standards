@@ -1,7 +1,70 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecDcAM" standardSettingBody="SBDublinCore" topic="TopicMetadata" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>DCMI Abstract Model</title><abbr>DCAM</abbr></titleStmt><scope>An abstract model for Dublin Core metadata</scope><keyword>framework</keyword><keyword>Dublin Core</keyword><keyword>meta data</keyword><keyword>DCMI Abstract Model</keyword><keyword>Abstract Model Analysis</keyword><keyword>RDF</keyword><info type="description"><p>Dublin Core Metadata Initiative’s Abstract Model (DCAM) is an abstract metamodel for the Dublin Core vocabulary. 
-            The DCAM was developed by Dublin Core Metadata Initiative (DCMI)  for description of various resources such as an electronic document, 
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecDcAM" standardSettingBody="SBDublinCore" topic="TopicMetadata" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>DCMI Abstract Model</title>
+        <abbr>DCAM</abbr>
+    </titleStmt>
+    <scope>An abstract model for Dublin Core metadata</scope>
+    <ClarinRecommendation>
+        <recommendation specId="SpecDcAM" type="fully recommended">
+            <alternatives>
+                <alternative specId="SpecCmdi"/>
+            </alternatives>
+        </recommendation>
+    </ClarinRecommendation>
+    <keyword>framework</keyword>
+    <keyword>Dublin Core</keyword>
+    <keyword>meta data</keyword>
+    <keyword>DCMI Abstract Model</keyword>
+    <keyword>Abstract Model Analysis</keyword>
+    <keyword>RDF</keyword>
+    <info type="description">
+        <p>Dublin Core Metadata Initiative’s Abstract Model (DCAM) is an abstract metamodel for the Dublin Core vocabulary. 
+            DCAM was developed by Dublin Core Metadata Initiative (DCMI)  for description of various resources such as an electronic document, 
             an image, a collection of other resources, etc. It is based on Resource Description Framework (RDF). The framework contains the components 
             for resource description and defines the relationships between the components, for example the relationship between properties, values, 
-            encoding schemes etc. The DCAM makes the metadata more precise. It also facilitates the development of better mappings and compatibility with 
-            the RDF model.</p><p>The DCAM describes the components and defines an information structure and how this information structure should be interpreted. 
-            The DCAM offers various types of metadata terms, but does not determine the use of the fixed term sets.</p><p>The DCAM includes three main parts:</p><ul><li>The DCMI Description Set Model</li><li>DCMI Recourse Model</li><li>DCMI Vocabulary Model</li></ul><p>Since March 2005 the DCAM is the DCMI Recommendation. In June 2007 the recommendation was revised.</p></info><version id="SpecDcAM-1" status="Recommendation"><titleStmt><abbr>DCAM-2005</abbr><respStmt id="bgB4yy"><resp>Editor</resp><name type="person">Andy Powell</name><name type="person">Mikael Nilsson</name><name type="person">Ambjörn Naeve</name><name type="person">Pete Johnston</name></respStmt></titleStmt><date>2005-03-07</date><address type="URL">http://dublincore.org/documents/2005/03/07/abstract-model/</address><relation target="SpecRDF" type="isBasedOn"/><relation target="SpecDcAM-2" type="isReplacedBy"/></version><version id="SpecDcAM-2" status="Recommendation"><titleStmt><abbr>DCAM-2007</abbr><respStmt id="bgB4yx"><resp>Editor</resp><name type="person">Andy Powell</name><name type="person">Mikael Nilsson</name><name type="person">Ambjörn Naeve</name><name type="person">Pete Johnston</name><name type="person">Thomas Baker</name></respStmt></titleStmt><date>2007-06-04</date><address type="URL">http://dublincore.org/documents/abstract-model/</address><relation target="SpecRDF" type="isBasedOn"/></version></spec>
+            encoding schemes etc. DCAM makes the metadata more precise. It also facilitates the development of better mappings and compatibility with 
+            the RDF model.</p>
+        <p>The DCAM describes the components and defines an information structure and how this information structure should be interpreted. 
+            The DCAM offers various types of metadata terms, but does not determine the use of the fixed term sets.</p>
+        <p>The DCAM includes three main parts:</p>
+        <ul>
+            <li>The DCMI Description Set Model</li>
+            <li>DCMI Recourse Model</li>
+            <li>DCMI Vocabulary Model</li>
+        </ul>
+        <p>Since March 2005 the DCAM is the DCMI Recommendation. In June 2007 the recommendation was revised.</p>
+    </info>
+    <version id="SpecDcAM-1" status="Recommendation">
+        <titleStmt>
+            <abbr>DCAM-2005</abbr>
+            <respStmt id="bgB4yy">
+                <resp>Editor</resp>
+                <name type="person">Andy Powell</name>
+                <name type="person">Mikael Nilsson</name>
+                <name type="person">Ambjörn Naeve</name>
+                <name type="person">Pete Johnston</name>
+            </respStmt>
+        </titleStmt>
+        <date>2005-03-07</date>
+        <address type="URL">http://dublincore.org/documents/2005/03/07/abstract-model/</address>
+        <relation target="SpecRDF" type="isBasedOn"/>
+        <relation target="SpecDcAM-2" type="isReplacedBy"/>
+    </version>
+    <version id="SpecDcAM-2" status="Recommendation">
+        <titleStmt>
+            <abbr>DCAM-2007</abbr>
+            <respStmt id="bgB4yx">
+                <resp>Editor</resp>
+                <name type="person">Andy Powell</name>
+                <name type="person">Mikael Nilsson</name>
+                <name type="person">Ambjörn Naeve</name>
+                <name type="person">Pete Johnston</name>
+                <name type="person">Thomas Baker</name>
+            </respStmt>
+        </titleStmt>
+        <date>2007-06-04</date>
+        <address type="URL">http://dublincore.org/documents/abstract-model/</address>
+        <relation target="SpecDcAM-1" type="Replaces"/>
+        <relation target="SpecRDF" type="isBasedOn"/>
+    </version>
+</spec>

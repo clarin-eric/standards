@@ -1,0 +1,10 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecRDQL" standardSettingBody="SBW3C" topic="TopicQuery" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>RDF Data Query Language</title><abbr>RDQL</abbr></titleStmt><scope>Query Language for RDF</scope><info type="description"><p>RDQL has been implemented in a number of RDF systems for extracting information from RDF
+            graphs. An RDQL consists of a graph pattern, expressed as a list of triple patterns. Each triple
+            pattern is comprised of named variables and RDF values (URIs and literals). An RDQL query can
+            additionally have a set of constraints on the values of those variables, and a list of the variables
+            required in the answer set. An RDQL query treats an RDF graph purely as data. If the
+            implementation of that graph provides inferencing to appear as "virtual triples”, then an RDQL will
+            include those triples as possible matches in triple patterns. RDQL makes no distinction between
+            inferred triples and ground triples. RDQL was first released in Jena 1.2.0. The following systems are
+            known to provide RDQL: Jena, RDFStore, Sesame, PHP XML Classes, 3Store, RAP - RDF API for
+            PHP. In addition, RDQL is one language used for remote query by the Joseki RDF Server.</p></info><relation target="SpecRDF" type="isApplicationOf"/><version id="SpecRDQL-2004" status="W3C Member Submission"><titleStmt><abbr internal="yes">RDQL2004</abbr><respStmt><resp>Author</resp><name>Andy Seaborne</name></respStmt></titleStmt><date>2004</date><address type="URL">http://www.w3.org/Submission/RDQL/</address></version></spec>

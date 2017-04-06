@@ -9,13 +9,21 @@ import module namespace tm ="http://clarin.ids-mannheim.de/standards/topic-modul
 import module namespace sbm="http://clarin.ids-mannheim.de/standards/sb-module" at "../modules/sb.xql";
 import module namespace search ="http://clarin.ids-mannheim.de/standards/search-spec" at "../modules/search-spec.xql";
 
+(: Define search standard page
+   @author margaretha
+:)
+
 let $query := request:get-parameter('query', "")
 let $topic := request:get-parameter('topic', "")
 let $sb := request:get-parameter('sb', "")
 let $status := request:get-parameter('status', "")
 let $submitted := request:get-parameter('submit', '')
-let $results := if ($submitted) then (search:get-results($query, $topic, $sb, $status)) else()
-
+let $CLARINapproved := request:get-parameter('CLARINapproved', '')
+let $usedInCLARINCenter := request:get-parameter('usedInCLARINCenter', '')
+let $results := 
+    if ($submitted) 
+    then search:get-results($query, $topic, $sb, $status, $usedInCLARINCenter, $CLARINapproved)    
+    else()
 return 
 <html>
 	<head>
@@ -31,7 +39,7 @@ return
                     &gt; <a href="{app:link("search/search-spec.xq")}">Search Standards</a>
                 </div>
                 <div><span class="heading">Search for Standards</span></div>
-     			<div>By default, given keyword(s) are matched to standard names. For an advanced search, you can specify other optional fields.
+     			<div>By default, given keyword(s) are matched to standard names. For an advanced search, you can specify the other optional fields.
      		    </div>
      			<form method="get" action="{session:encode-url(xs:anyURI("search-spec.xq"))}" style="margin-bottom:40px;">
      				<table style="border:1px solid #AAAAAA; padding:20px;"> 
@@ -65,18 +73,32 @@ return
                                </select>
      				       </td>
      				   </tr>
+     				   <tr>
+     				       <td/>
+     				       <td>{if ($usedInCLARINCenter)
+     				            then <input type="checkbox" name="usedInCLARINCenter" value="yes" checked="yes"/> 
+     				            else <input type="checkbox" name="usedInCLARINCenter" value="yes"/>
+     				           }
+     				           used in CLARIN center(s)
+     				       </td>
+     				   </tr>
+     				   <!--<tr>
+     				       <td/>
+     				       <td>{if ($CLARINapproved)
+     				            then <input type="checkbox" name="CLARINapproved" value="yes" checked="{$CLARINapproved}"/>
+     				            else <input type="checkbox" name="CLARINapproved" value="yes"/> 
+     				            }
+     				            CLARIN approved
+     				       </td>
+     				   </tr> -->
      				   <tr height="40px">
      				       <td></td>
      				       <td align="center"><input name="submit" type="submit" value="Search" class="button" /></td>
-     				   </tr>
+     				   </tr>     				        				   
      				</table>		
      			</form>
      			     			
-     			{ if ($submitted)
-     			    then (<div><span class="heading">Standards found: </span>{count($results)}</div>,
-     			        search:print-results($results))
-              		else ''
-     			}
+     			{ search:print-results($submitted, $results) }
      			
             </div>
 			<div class="footer">{app:footer()}</div>

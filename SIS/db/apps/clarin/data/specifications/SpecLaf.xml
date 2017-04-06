@@ -1,14 +1,151 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecLaf" standardSettingBody="SBISO" topic="TopicGenAnn" xsi:noNamespaceSchemaLocation="http://localhost:8080/exist/apps/clarin/xsd/spec.xsd"><titleStmt><title>Language resource management — Linguistic annotation framework</title><abbr>LAF</abbr></titleStmt><scope>Corpus annotation</scope><info type="description"><p>Since June 2012 LAF (stands for Linguistic Annotation Framework) has been accepted and ranked as ISO 24612:2012 
-            standard for providing architecture for creation, multiple-annotation and management of linguistic resources.</p><p>The framework specifies the glossary, the common mechanisms of the abstract data model and methods for 
-            descriptions of multiple linguistic data annotations. LAF defines the mechanisms for implementing 
-            constraints in an annotation scheme, but it does not have specific constraints for individual annotation 
-            schemes. </p><p>Although the data model and document form of LAF are distinct, they can be mapped to any
-            other annotation scheme. LAF specifies the pivot format, which 
-            allows mapping from an annotation scheme into another annotation scheme.
-            Therefore, the user can choose his own annotation form, given that it can be
-            transferred into the pivot format, called GrAF (Graph Annotation Format).</p><p>In the future, LAF should be able to represent mostly the reality of
-            linguistic information of language resources for different media types. The primary data 
-            and the annotation documents will be separated.</p></info><version id="SpecLaf-IS" status="International Standard"><titleStmt><respStmt id="sUNDzf"><resp>Editor</resp><name type="org" id="SBISO-TC37-SC4-WG1">ISO/TC 37/SC 4/WG 1</name></respStmt></titleStmt><versionNumber type="major">ISO 24612:2012</versionNumber><date>2012-06-15</date><features><fs><f name="metaLanguage"><symbol value="XML"/></f><f name="grammarClass"><symbol value="LTG"/></f><f name="formalModel"><symbol value="Graph"/></f><f name="notation"><symbol value="Standt off"/></f><f name="multipleHierarchies"><fs><f name="support"><binary value="yes"/></f><f name="item"><vColl><string>standoff annotation</string></vColl></f></fs></f></fs></features><address type="URL">http://www.iso.org</address><relation target="SpecXces" type="isPartOf"><info><p>Primary document header is based on the XCES.</p></info></relation><relation target="SpecXML" type="isApplicationOf"><info><p>LAF's pivot format GrAF is an application of XML.</p></info></relation>
-    <!-- <relation target="graf" type="isApplicationOf">
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecLaf" standardSettingBody="SBISO" topic="TopicGenAnn" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Language resource management — Linguistic annotation framework</title>
+        <abbr>LAF</abbr>
+    </titleStmt>
+    <scope>Corpus annotation</scope>
+    <info type="description">
+        <p>Since June 2012 LAF (stands for Linguistic Annotation Framework) has been accepted and
+            ranked as ISO 24612:2012 standard providing an architecture for creating,
+            multiple-annotating and managing linguistic resources. The framework specifies the
+            glossary, the common mechanisms of the abstract data model and methods for descriptions
+            of multiple linguistic data annotations. LAF defines the mechanisms for implementing
+            constraints in an annotation scheme, but it does not have specific constraints for
+            individual annotation schemes. </p>
+        <p>The abstract data model of LAF can be built by using various kinds of annotation formats.
+            Different user-defined annotation formats can be mapped to the LAF abstract data model
+            with the help of the XML serialization format, called the Graph Annotation Format
+            (GrAF). GraF is a pivot format for mapping from an annotation scheme into another
+            annotation scheme. In this way, users can choose their own annotation formats, transfer
+            them into the pivot format for further interchange and/or processing, and eventually to
+            transfer it back into the original format.</p>
+        <p>In the future, LAF should be able to represent most of linguistic information of language
+            resources for different media types. The primary data and the annotation documents will
+            be separated.</p>
+    </info>
+    <info type="recReading">
+        <biblStruct type="journalArticle" id="je94PL">
+            <analytic>
+                <title>International standard for a linguistic annotation framework</title>
+                <author>
+                    <forename>Laurent</forename>
+                    <surname>Romary</surname>
+                </author>
+                <author>
+                    <forename>Nancy</forename>
+                    <surname>Ide</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <title>Natural Language Engineering</title>
+                <imprint>
+                    <biblScope type="vol">10</biblScope>
+                    <biblScope type="issue">3-4</biblScope>
+                    <biblScope type="pp">211–225</biblScope>
+                    <date>2004</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="conferencePaper" id="kr85TE">
+            <analytic>
+                <title>GrAF: A graph-based format for linguistic annotations</title>
+                <author>
+                    <forename>Nancy</forename>
+                    <surname>Ide</surname>
+                </author>
+                <author>
+                    <forename>Keith</forename>
+                    <surname>Suderman</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <title>Proceedings of the linguistic annotation workshop</title>
+                <imprint>
+                    <pubPlace>Prague</pubPlace>
+                    <date>2007</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="journalArticle" id="je94PR">
+            <analytic>
+                <title>The linguistic annotation framework: A standard for annotation interchange and merging</title>
+                <author>
+                    <forename>Nancy</forename>
+                    <surname>Ide</surname>
+                </author>
+                <author>
+                    <forename>Keith</forename>
+                    <surname>Suderman</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <title>Language Resources and Evaluation</title>
+                <imprint>
+                    <biblScope type="vol">8</biblScope>
+                    <biblScope type="issue">3</biblScope>
+                    <biblScope type="pp">395–418</biblScope>
+                    <date>2014</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+    </info>
+    <relation target="SpecDcr" type="isApplicationOf">
+        <info type="description">
+            <p>The LAF architecture includes the data elements that are defined in ISO 12620 (Data
+                Category Registry)</p>
+        </info>
+    </relation>
+    <version id="SpecLaf-IS" status="International Standard" usedInCLARINCenter="CLARIN-PL">
+        <titleStmt>
+            <abbr internal="yes">LAF-2012</abbr>
+            <respStmt id="sUNDzf">
+                <resp>Editor</resp>
+                <name type="org" id="SBISO-TC37-SC4-WG1">ISO/TC 37/SC 4/WG 1</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">ISO 24612:2012</versionNumber>
+        <date>2012-06-15</date>
+        <features>
+            <fs>
+                <f name="metaLanguage">
+                    <symbol value="XML"/>
+                </f>
+                <f name="grammarClass">
+                    <symbol value="LTG"/>
+                </f>
+                <f name="formalModel">
+                    <symbol value="Graph"/>
+                </f>
+                <f name="notation">
+                    <symbol value="Standt off"/>
+                </f>
+                <f name="multipleHierarchies">
+                    <fs>
+                        <f name="support">
+                            <binary value="yes"/>
+                        </f>
+                        <f name="item">
+                            <vColl>
+                                <string>standoff annotation</string>
+                            </vColl>
+                        </f>
+                    </fs>
+                </f>
+            </fs>
+        </features>
+        <address type="URL">http://www.iso.org</address>
+        <relation target="SpecXces104" type="isPartOf">
+            <info>
+                <p>Primary document header is based on the XCES.</p>
+            </info>
+        </relation>
+        <relation target="SpecXML" type="isApplicationOf">
+            <info>
+                <p>LAF's pivot format GrAF is an application of XML.</p>
+            </info>
+        </relation>
+        <!-- <relation target="graf" type="isApplicationOf">
      <p>GrAF is an extension of the LAF, which allows to represent the stand-off annotations of the LAF data model in one Graph.</p>                
-        </relation> --></version></spec>
+        </relation> -->
+    </version>
+</spec>

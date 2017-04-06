@@ -11,24 +11,87 @@ import module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema" a
 
 import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
 
+(:  Define standard-body-related functions
+    @author margaretha
+    @date Dec 2013
+:)
 
+(: Get the list of relation types :)
 declare variable $sbm:relations := xsd:get-relations();
 
-declare function sbm:get-color(){
-    graph:get-color($sbm:relations, "hasPart")
-};
-
+(: Get the standard body of the given id :)
 declare function sbm:get-sb($id as xs:string){
     sb:get-sb($id)
 };
 
-declare function sbm:get-specs-by-sb($sb-id as xs:string){    
-    for $spec in $spec:specs
-    where data($spec/@standardSettingBody) = $sb-id or fn:contains($spec/descendant-or-self::version/titleStmt/respStmt/name/@id, $sb-id)
+(: Get the standard body URL:)
+declare function sbm:print-url($sb){    
+    let $url := $sb/address[@type="URL"]/text()
     return
-        <li><a href="{app:link(concat("views/view-spec.xq?id=",$spec/@id))}">{$spec/titleStmt/title/text()}</a></li>
+        if ($url and not(empty($url)))
+        then (
+            <div><span class="heading">URL: </span> 
+                <a href="{$url}">{$url}</a> 
+            </div>)
+        else()
 };
 
+
+(: Get a standard body abbreviation :)
+declare function sbm:get-sb-abbr($sb,$id,$sb-title){
+    let $abbr := $sb/titleStmt/abbr/text()
+    let $sb-abbr := 
+        if (fn:contains($abbr,"/"))
+        then sbm:get-sb-part-links($id,$abbr)
+        else ($abbr)    
+    return
+        if (not($sb-title = $sb-abbr)) then( " (",$sb-abbr,")") else ()
+    
+};
+
+(: Create links for each part of a standard body abbreviation :)
+declare function sbm:get-sb-part-links($id, $abbr){    
+    let $sb-links :=
+        for $index in functx:index-of-string($id,"-")
+            let $id := fn:substring($id,1,$index -1)
+            let $link := app:link(concat("views/view-sb.xq?id=",$id))
+            return $link     
+        
+    let $sub-abbr := fn:tokenize($abbr,"/")    
+        
+    for $i in (1 to fn:count($sub-abbr))
+    return 
+        if ($i = fn:count($sub-abbr))    
+        then <a href="{app:link(concat("views/view-sb.xq?id=",$id))}">{$sub-abbr[$i]}</a>
+        else (<a href="{$sb-links[$i]}">{$sub-abbr[$i]}</a>, "/")
+};
+
+(: Print the responsible statement of a standard body:)
+declare function sbm:get-sb-respStmt($sb){
+    for $respStmt in $sb/titleStmt/respStmt 
+    return 
+        <div>
+            <span class="heading">{$respStmt/resp/text()}: </span> {$respStmt/name/text()}
+        </div>
+};
+
+(: Get the links of all standards published by a standard body :)
+declare function sbm:get-specs-by-sb($sb-id as xs:string){    
+    let $standards:= 
+        for $spec in $spec:specs
+        where data($spec/@standardSettingBody) = $sb-id or fn:contains(
+            $spec/descendant-or-self::version/titleStmt/respStmt/name/@id, $sb-id)
+        return
+            <li><a href="{app:link(concat("views/view-spec.xq?id=",$spec/@id))}"
+                >{$spec/titleStmt/title/text()}</a></li>
+    
+    return
+        if ($standards) 
+        then (<ol>{$standards}</ol>)
+        else ()
+};
+
+(: Create the json object for creating a relation graph of standard bodies :)
 declare function sbm:get-sb-json($id as xs:string){    
     let $sbs := $sb:sbs
     let $sb-ids := fn:insert-before(data($sbs[@id=$id]/relation/@target), 1, $id)
@@ -54,9 +117,9 @@ declare function sbm:get-sb-json($id as xs:string){
     "}")  
     
     return $json
-
 }; 
 
+(: Create a list of standard bodies :)
 declare function sbm:list-sbs(){
     for $sb in sb:get-org()
         let $sb-id := data($sb/@id)
@@ -74,14 +137,15 @@ declare function sbm:list-sbs(){
             <span id="{$sb-id}" style="display:none">   
                 <p>{$sb-snipet,$link}</p>
                 {if ($standards)
-                then (<p>{app:name($sb)} has released the following standard(s):</p>,
-                    <ul style="padding:0px; margin-left:25px;">{$standards}</ul>)
+                then (<p>{$sb/titleStmt/abbr/text()} has released the following standard(s):</p>,
+                    $standards)
                 else ()}
             </span>
         </div>
         )                    
 };
 
+(: Generate standard body options :)
 declare function sbm:list-sbs-options($selectedSb){    
     for $sb in $sb:sbs
        let $sb-id := data($sb/@id)
@@ -93,16 +157,43 @@ declare function sbm:list-sbs-options($selectedSb){
        else <option value="{$sb-id}">{$sb-abbr}</option>       
 };
 
-declare function sbm:print-sb-link($sb){
-     if ($sb != "SBOther") 
-     then <a href="{app:link(concat("views/view-sb.xq?id=",$sb))}">
-        {sb:get-sb($sb)/titleStmt/abbr/text()}</a>
-     else if (fn:starts-with($sb,"SBISO"))        
-     then <a href="{app:link(concat("views/view-sb.xq?id=SBISO"))}">
-        {sb:get-sb("SBISO")/titleStmt/abbr/text()}</a>
-     else "Other"
+(: Print a standard body description:)
+declare function sbm:print-description($sb){
+    <div>{$sb/info[@type="description"]/*}</div>    
 };
 
-declare function sbm:print-description($sb){
-    $sb/info[@type="description"]/*    
+declare function sbm:create-relation-graph($sb){
+    let $color := graph:get-color($sbm:relations, "hasPart")
+    return 
+    
+    if($sb/relation)
+    then
+      <div id="chart" class="version">
+        <div class="version" style="width:140px; float:right; padding:0px">
+              <table>
+                 <tr>
+                     <td colspan="2"><b>Legend:</b></td>                    
+                 </tr>
+                 <tr>
+                     <td><hr style="border:0; color:{$color}; background-color:{$color}; height:2px; width:20px" /></td>
+                     <td>hasPart</td>
+                 </tr>
+               </table>
+        </div>
+      </div>
+    else()
+
 };
+
+(: Print a standard body link:)
+declare function sbm:print-sb-link($sb){
+     if ($sb = "SBOther")
+     then "Other"
+     else if (fn:starts-with($sb,"SBISO"))        
+     then <a href="{app:link("views/view-sb.xq?id=SBISO")}">
+        {sb:get-sb("SBISO")/titleStmt/abbr/text()}</a>
+     else
+        <a href="{app:link(concat("views/view-sb.xq?id=",$sb))}">
+        {sb:get-sb($sb)/titleStmt/abbr/text()}</a>
+};
+

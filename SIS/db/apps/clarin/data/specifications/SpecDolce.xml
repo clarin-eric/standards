@@ -1,0 +1,14 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecDolce" standardSettingBody="SBOther" topic="TopicOntology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Descriptive Ontology for Linguistic and Cognitive Engineering</title><abbr>DOLCE</abbr></titleStmt><scope>Upper level ontology</scope><info type="description"><p>DOLCE (a Descriptive Ontology for Linguistic and Cognitive Engineering) is the first module of the
+            WonderWeb Foundational Ontologies Library. DOLCE is an axiomatic ontology (thus, it is a heavy-
+            weight ontology, in contrast to light-weight ontologies, which mainly define taxonomic structures).
+            DOLCE is an ontology of particulars. A basic choice made in DOLCE is the so-called multiplicative
+            approach: different entities can be co-located in the same space-time. The ontology is developed with
+            respect to the OntoClean methodology (Guarino and Welty, 2002). OntoClean is a methodology for
+            validating the ontological adequacy of taxonomic relationships. DOLCE is axiomatized in a very
+            expressive modal logic, but from it several simplified sub-ontologies are isolated. Such sub-
+            ontologies are: DOLCE-LITE which includes 80 classes, 80 properties, 24 axioms represented in
+            OWL; DOLCE-Lite-Plus which contains additional extensions in direction to Plans, Information
+            Objects, Semiotics, Temporal relations, Social notions, etc. DOLCE UltraLite is a very light version
+            of DOLCE, which uses friendly names and comments for classes and properties, has simple
+            restrictions for classes. All these ontologies can be seen as lightweight versions of the fully
+            axiomitized ontology.</p></info><relation target="SpecOWL" type="uses"/><version id="SpecDolce-2.1"><titleStmt><abbr>DOLCHE-2.1-Lite-Plus</abbr><respStmt><resp>Author</resp><name>Claudio Masolo</name><name>Stefano Borgo</name><name>Aldo Gangemi</name><name>Nicola Guarino</name><name>Alessandro Oltramari</name><name>Luc Schneider</name></respStmt></titleStmt><versionNumber type="minor">2.1</versionNumber><address type="URL">http://www.loa.istc.cnr.it/old/DOLCE.html</address></version></spec>

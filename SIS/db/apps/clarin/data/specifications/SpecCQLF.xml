@@ -1,4 +1,44 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecCQLF" standardSettingBody="SBISO" topic="TopicQuery" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Language resource management - Corpus Query Lingua Franca</title><abbr>CQLF</abbr></titleStmt><scope>Lingua franca for corpus query</scope><keyword>query languages</keyword><keyword>lingua franca</keyword><keyword>corpus</keyword><keyword>corpus query</keyword><info type="description"><p>The Corpus Query Lingua Franca (short CQLF) has been developed by the ISO/TC 37/SC 4/WG 6 since 2011. 
-            It is currently still in development, at the PWI stage (ISO/PWI 24623). The purpose of CQLF is to standardize the abstract model 
-            of a corpus query language. CQLF is to provide a set of recommendations, which should be considered as the guidelines 
-            in developing a new query language (QL) or a new functionality of an existing QL.</p></info><version id="SpecCQLF-IS" status="Preliminary Work Item"><titleStmt><respStmt id="p2CQLF"><resp>Editor</resp><name id="SBISO-TC37-SC4-WG6">ISO/TC 37/SC 4/WG 6</name></respStmt></titleStmt><versionNumber type="major">ISO/PWI 24623</versionNumber><date>2011-06-20</date><relation target="SpecDcr" type="uses"/></version></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecCQLF" standardSettingBody="SBISO" topic="TopicQuery" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Corpus Query Lingua Franca</title>
+        <abbr>CQLF</abbr>
+    </titleStmt>
+    <scope>Lingua franca for corpus query</scope>
+    <keyword>query languages</keyword>
+    <keyword>lingua franca</keyword>
+    <keyword>corpus</keyword>
+    <keyword>corpus query</keyword>
+    <info type="description">
+        <p>The Corpus Query Lingua Franca (CQLF) has been developed by the ISO/TC 37/SC 4/WG 6 since 2011. 
+            The first part of the standard is currently at the WD (working draft) stage.</p>
+        <p> CQLF provides a set of recommendations, which should be considered as guidelines 
+            in developing a new query language (QL). CQLF is also helpful to create a new functionality of an existing QL. 
+            For example, by using CQLF, a search for relations between annotation layers in 
+            multiple annotated linguistic corpora, can be defined for a query language.
+        </p>
+    </info>
+    <part id="SpecCQLF-Part1">
+        <titleStmt>
+            <title>Language resource management — Corpus Query Lingua Franca (CQLF) — Part 1: Metamodel</title>
+            <abbr internal="yes">CQLF-1</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>The purpose of CQLF Part 1 (ISO: 24623-1) is to standardize the abstract model 
+                of a corpus query language. The model defines features of query languages and arranges 
+                them according to some functional criteria. 
+                </p>
+        </info>
+        <version id="SpecCQLF-1-2011" status="Working Draft" usedInCLARINCenter="IDS">
+            <titleStmt>
+                <abbr internal="yes">CQLF-2011</abbr>
+                <respStmt id="p2CQLF">
+                    <resp>Editor</resp>
+                    <name id="SBISO-TC37-SC4-WG6">ISO/TC 37/SC 4/WG 6</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major">ISO/WD 24623-1</versionNumber>
+            <date>2011-06-20</date>
+            <relation target="SpecDcr" type="uses"/>
+        </version>
+    </part>
+</spec>

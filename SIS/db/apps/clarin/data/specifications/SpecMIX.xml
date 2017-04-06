@@ -1,1 +1,46 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecMIX" standardSettingBody="SBLoC" topic="TopicMetadata TopicSchema" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>NISO Metadata for Images in XML Schema</title><abbr>NISO MIX</abbr></titleStmt><scope>Teh XML-based schema for encoding the NISO Technical Metadata for Digital Still Images standard</scope><keyword>technical metadata</keyword><keyword>images</keyword><keyword>metadata</keyword><keyword>NISO</keyword><info type="description"><p/></info><version id="SpecMIX-1-0" status="LoC Standard"><titleStmt><respStmt id="ppW7gh"><resp>Editor</resp><name type="org" id="SBLoC">The Library of Congress</name></respStmt></titleStmt><versionNumber type="major">1.0</versionNumber><date>2006-05-01</date><address type="URL">http://www.loc.gov/standards/mix///</address></version><version id="SpecMIX-2-0" status="LoC Standard"><titleStmt><respStmt id="ppW8gh"><resp>Editor</resp><name type="org" id="SBLoC">The Library of Congress</name></respStmt></titleStmt><versionNumber type="major">2.0</versionNumber><date>2008-05-12</date><address type="URL">http://www.loc.gov/standards/mix//</address></version><asset><a href="http://www.loc.gov/standards/mix/instances/mix_test.xml">Example for an MIX XML Document</a></asset></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecMIX" standardSettingBody="SBLoC" topic="TopicMetadata TopicSchema" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>NISO Metadata for Images in XML Schema</title>
+        <abbr>NISO MIX</abbr>
+    </titleStmt>
+    <scope>The XML-based schema for encoding the NISO Technical Metadata for Digital Still Images standard</scope>
+    <keyword>technical metadata</keyword>
+    <keyword>images</keyword>
+    <keyword>metadata</keyword>
+    <keyword>NISO</keyword>
+    <info type="description">
+        <p/>
+    </info>
+    <relation type="isUsedBy" target="SpecImageMD">
+        <info type="description">
+            <p>MIX is an XML-based schema for encoding the NISO Technical Metadata for Digital Still Images standard</p>
+        </info>
+    </relation>
+    <version id="SpecMIX-1-0" status="final">
+        <titleStmt>
+            <abbr internal="yes">NISO MIX-2006</abbr>
+            <respStmt id="ppW7gh">
+                <resp>Editor</resp>
+                <name type="org" id="SBLoC">The Library of Congress</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">1.0</versionNumber>
+        <date>2006-05-01</date>
+        <address type="URL">http://www.loc.gov/standards/mix///</address>
+    </version>
+    <version id="SpecMIX-2-0" status="final">
+        <titleStmt>
+            <abbr internal="yes">NISO MIX-2008</abbr>
+            <respStmt id="ppW8gh">
+                <resp>Editor</resp>
+                <name type="org" id="SBLoC">The Library of Congress</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">2.0</versionNumber>
+        <date>2008-05-12</date>
+        <address type="URL">http://www.loc.gov/standards/mix//</address>
+    </version>
+    <asset>
+        <a href="http://www.loc.gov/standards/mix/instances/mix_test.xml">MIX XML Document Example</a>
+    </asset>
+</spec>

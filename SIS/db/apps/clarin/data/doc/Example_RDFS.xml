@@ -1,1 +1,14 @@
-<!-- Here is an example for a RDF Schema --><rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xml:base="http://www.publications.fake/publications#"><rdf:Description rdf:ID="publication"><rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/></rdf:Description><rdf:Description rdf:ID="book"><rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/><rdfs:subClassOf rdf:resource="#publication"/></rdf:Description><rdf:Description rdf:ID="journal"><rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/><rdfs:subClassOf rdf:resource="#publication"/></rdf:Description></rdf:RDF>
+<!-- Here is an example for a RDF Schema -->
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xml:base="http://www.publications.fake/publications#">
+    <rdf:Description rdf:ID="publication">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="book">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:subClassOf rdf:resource="#publication"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="journal">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:subClassOf rdf:resource="#publication"/>
+    </rdf:Description>
+</rdf:RDF>

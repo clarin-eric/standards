@@ -1,0 +1,28 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecBFO" standardSettingBody="SBOther" topic="TopicOntology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Basic Formal Ontology</title>
+        <abbr>BFO</abbr>
+    </titleStmt>
+    <scope>Upper level ontology</scope>
+    <info type="description">
+        <p>Basic Formal Ontology (BFO) is the third module of the WonderWeb Ontology Library. BFO is a
+            highest-common-denominator upper ontology designed to support interoperability between 5 domain
+            ontologies supporting shared use of scientific research data across disciplinary boundaries. Basic
+            Formal Ontology consists in a series of sub-ontologies (most properly conceived as a series of
+            perspectives on reality).</p>
+    </info>
+    <address type="URL">http://ifomis.uni-saarland.de/bfo/</address>
+    <version id="SpecBFO-2.0">
+        <titleStmt>
+            <abbr>BFO 2.0</abbr>
+            <respStmt>
+                <resp>Author</resp>
+                <name>Barry Smith</name>
+                <name>Pierre Grenon</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">2.0</versionNumber>
+        <date>2015</date>
+        <address type="URL">https://github.com/bfo-ontology/BFO/wiki</address>
+    </version>
+</spec>

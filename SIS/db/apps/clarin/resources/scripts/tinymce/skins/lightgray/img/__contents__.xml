@@ -1,0 +1,18 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/resources/scripts/tinymce/skins/lightgray/img" owner="admin" group="dba" mode="755" created="2013-11-27T12:03:46+01:00" version="1">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="object.gif" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="object.gif" mimetype="image/gif">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="loader.gif" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="loader.gif" mimetype="image/gif">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="anchor.gif" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="anchor.gif" mimetype="image/gif">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="trans.gif" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="trans.gif" mimetype="image/gif">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="wline.gif" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="wline.gif" mimetype="image/gif">
+        <acl entries="0" version="1"/>
+    </resource>
+</collection>

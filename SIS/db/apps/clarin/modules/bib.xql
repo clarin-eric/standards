@@ -1,16 +1,18 @@
 xquery version "3.0";
 module namespace bib="http://clarin.ids-mannheim.de/standards/bibliography";
 
-(: IEEE style :)
+(: Define bibliograhy references based on IEEE style 
+   @author margarethea
+:)
 
 declare function bib:get-references($bibpath){
     for $bib in $bibpath
-      let $title := $bib/analytic/title/text()
-      let $num-authors := count($bib/analytic/author)
-      let $authors := $bib/analytic/author                  
+      let $title := if ($bib/analytic/title/text()) then $bib/analytic/title/text() else ($bib/monogr/title/text()) 
+      let $num-authors := if ($bib/analytic/title/text()) then count($bib/analytic/author) else count($bib/monogr/author)
+      let $authors := if ($bib/analytic/author) then $bib/analytic/author else ($bib/monogr/author)      
       let $authors :=
-        if (not(empty($authors/orgName/text()))) then
-            $authors/orgName/text()
+        if (not(empty($authors/name/text()))) then
+            $authors/name/text()
         else if ($num-authors > 2) then
             concat(fn:substring($authors[1]/forename/text(),1,1), ". " , $authors[1]/surname/text()," et al.")                            
         else if ($num-authors = 2) then 
@@ -37,9 +39,9 @@ declare function bib:get-references($bibpath){
       let $edition := ''
       let $place := $bib/monogr/imprint/pubPlace/text()
       let $pages := $bib/monogr/imprint/biblScope[@type='pp']/text()
-      let $url :=  $bib/monogr/imprint/note[@type='url']/text()
+      let $url :=  $bib/monogr/ref[@type='url']/text()
       let $conf := $bib/monogr/title/text()
-      let $vol :=''
+      let $vol := $bib/monogr/imprint/biblScope[@type='vol']/text()
       let $issue := $bib/monogr/imprint/biblScope[@type='issue']/text()                      
        
       return
@@ -63,8 +65,8 @@ declare function bib:get-references($bibpath){
                    else ()}
               </li>
         else if ($bib[@type='conferencePaper'])
-        then <li>{$authors}, "{$title}," in <i>{$conf}</i>,
-                  {if ($place) then $place else ()}
+        then <li>{$authors}, "{$title}", in <i>{$conf}</i>
+                  {if ($place) then concat(", ", $place) else ()}
                   {if ($year) then concat(", ", $year) else ()}
                   {if ($pages) then concat(", pp. ", $pages) else ()}
                   {if ($publisher) then concat(", ", $publisher) else ()}
@@ -86,7 +88,10 @@ declare function bib:get-references($bibpath){
                  {if ($edition) then concat ("(",$edition,")") else()}
                  [Online].
                  <!--{if ($publisher) then concat(", ", $publisher) else ()} --> 
-                 {if ($url) then concat("Available: ",$url) else ()}
+                 {if ($url) 
+                  then ("Available: ",
+                        <a href="{$url}" target="_blank">{$url}</a>)  
+                  else ()}
              </li>
         else ()    
 };

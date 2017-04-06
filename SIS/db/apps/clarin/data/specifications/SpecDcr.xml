@@ -1,5 +1,59 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecDcr" standardSettingBody="SBISO" topic="TopicDataCat" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Data Category Registry</title><abbr>DCR</abbr></titleStmt><scope>Data Categories for Language Resources</scope><info type="description"><p>Data Category Registry (DCR) was developed within ISO TC 37. The motivation of developing the DCR was to provide a list of linguistic 
-            concepts and data categories covering a wide range of linguistic domains such that it can be used for various applications, for instance linguistic annotation, design of dictionaries, meta-data description, text markup etc. By means of the data categories, the DCR allows interoperability between DCR-based tools and resources.</p><p>The DCR provides the possibility to use existing data categories. Besides, it specifies principles to extend the existing data categories, or to create new data categories. The specification is composed of three main parts: administrative, descriptive and linguistic part. These parts should guarantee 
-            that data categories are interoperable and are proper for developing new applications or improving existing applications.</p><p> Since 2009 the Max Planck Institute for Psycholinguistics in Nijmegen has been developing a web-based open source reference 
-            of the ISO 12620 standard, which is called ISOcat (“Data Category Registry for ISO TC 37”). The ISOcat describes the data model and procedures for DCR. It is mainly beneficial for creating specifications of DCR data category and management.</p></info><version id="SpecDcr-IS" status="final"><titleStmt><title>Terminology and other language and content resources — 
-                Specification of data categories and management of a Data Category Registry for language resources</title><respStmt id="X38Bg4"><resp>Publisher</resp><name type="org" id="SBISO-TC37-SC3-WG1">ISO/TC 37/SC 3/ WG1</name></respStmt></titleStmt><versionNumber type="major">ISO 12620:2009</versionNumber><date>2009-12-10</date><address type="URL">http://www.iso.org</address><relation target="SpecTMF-IS" type="uses"><info><p>Some of the data categories from ISO 16642:2003 are used in this standard version.</p></info></relation><relation target="SpecMaf-IS" type="isUsedBy"><info><p>The morpho-syntactic tag sets of Morpho-syntaktic Framework (ISO/DIS 24611) are based on data categories from the DCR.</p></info></relation></version></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecDcr" standardSettingBody="SBISO" topic="TopicDataCat" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Data Category Registry</title>
+        <abbr>DCR</abbr>
+    </titleStmt>
+    <scope>Data Categories for Language Resources</scope>
+    <keyword>ISOcat</keyword>
+    <keyword>linguistic categories</keyword>
+    <keyword>tag sets</keyword>
+    <keyword>linguistic annotation</keyword>
+    <keyword>linguistic terminology</keyword>
+    <info type="description">
+        <p>Data Category Registry (DCR) was developed within ISO TC 37. The motivation of developing DCR was to provide a list of linguistic 
+            concepts and data categories covering a wide range of linguistic domains, such that it can be used for various applications, for instance linguistic annotation, design of dictionaries, meta-data description, text markup etc. By means of the data categories, DCR allows interoperability between DCR-based tools and resources.</p>
+        <p>DCR provides the possibility to use existing data categories. It specifies principles to extend the existing data categories, or to create new data categories. The specification is composed of three main parts: administrative, descriptive and linguistic part. These parts should guarantee 
+            that the data categories are interoperable and proper for developing new applications or improving existing applications.</p>
+        <p> Since 2009 the Max Planck Institute for Psycholinguistics in Nijmegen has been developing a web-based open source reference 
+            of the ISO 12620 standard, which is called ISOcat (“Data Category Registry for ISO TC 37”). The ISOcat describes the data model and procedures for DCR. It is mainly beneficial for creating specifications of DCR data category and management.</p>
+    </info>
+    <relation target="SpecOLiA" type="isUsedBy"/>
+    <relation target="SpecCQLF-1-2011" type="isUsedBy"/>
+    <relation target="SpecMlif-IS" type="isUsedBy"/>
+    <relation target="SpecCmdi" type="isUsedBy"/>
+    <relation target="SpecSynAF" type="isUsedBy"/>
+    <relation target="SpecLaf" type="isUsedBy">
+        <info type="description">
+            <p>The LAF architecture includes the data elements that are defined in ISO 12620 (Data Category Registry)</p>
+        </info>
+    </relation>
+    <relation target="SpecDict-IS" type="isUsedBy"/>
+    <relation target="SpecLMF-IS" type="isUsedBy"/>
+    <relation target="SpecSemRoleML-IS" type="isAdaptedFrom"/>
+    <version id="SpecDcr-IS" status="final" usedInCLARINCenter="TLA CLARIN-PL IDS">
+        <titleStmt>
+            <title>Terminology and other language and content resources — 
+                Specification of data categories and management of a Data Category Registry for language resources</title>
+            <abbr internal="yes">DCR-2009</abbr>
+            <respStmt id="X38Bg4">
+                <resp>Publisher</resp>
+                <name type="org" id="SBISO-TC37-SC3-WG1">ISO/TC 37/SC 3/ WG1</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">ISO 12620:2009</versionNumber>
+        <date>2009-12-10</date>
+        <address type="URL">http://www.iso.org</address>
+        <relation target="SpecTBX-IS" type="isUsedBy"/>
+        <relation target="SpecWordSegBasic" type="isUsedBy"/>
+        <relation target="SpecTMF-IS" type="isUsedBy">
+            <info>
+                <p>Some of the data categories from ISO 16642:2003 are used in this standard version.</p>
+            </info>
+        </relation>
+        <relation target="SpecMaf-IS" type="isUsedBy">
+            <info>
+                <p>The morpho-syntactic tag sets of Morpho-syntaktic Framework (ISO/DIS 24611) are based on data categories from DCR.</p>
+            </info>
+        </relation>
+    </version>
+</spec>

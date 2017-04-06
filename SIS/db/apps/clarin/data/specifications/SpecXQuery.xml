@@ -1,4 +1,115 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecXQuery" standardSettingBody="SBW3C" topic="TopicMarkupLanguage TopicQuery" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>XQuery: an XML Query Language</title><abbr>XQuery</abbr></titleStmt><scope>XQuery is a query language for addressing parts of an XML document.</scope><keyword>XML</keyword><keyword>query languages</keyword><keyword>XML data</keyword><keyword>XML Namespaces</keyword><keyword>XPath</keyword><info type="description"><p>XQuery is a query language, which is used for requesting collections of XML data, developed by W3C. XQuery is designed 
-            for working with XML, but it does not use XML's syntax (although there is an XQueryX version, that makes use of XML's syntax, it is only seldomly used). 
-      XQuery is applied versatilely for example for extraction of informations from a XML database, for searching textual 
-      documents on the web, for information extraction, etc. Furthermore XQuery allows to modify the data or sort the returned results.</p><p>The queries in XQuery are able to read, return, add a sequence of XML fragments or atomic values from input documents.</p><p>XQuery relies on other specifications of W3C such as XML 1.1, Namespaces, XPath and XML Schema datatypes.</p><p>One of the reasons why XQuery is so widely accepted is that it is supported by all major databases.</p></info><info type="recReading"><biblStruct id="r1XQUE" type="book"><analytic><title>XQuery: Search Across a Variety of XML Data</title><author><forename>Priscilla</forename><surname>Walmsley</surname></author></analytic><monogr><imprint><publisher>O'Reilly Media</publisher><date>2007</date></imprint></monogr></biblStruct><biblStruct type="book"><analytic><title>XQuery: The XML Query Language</title><author><forename>Michael</forename><surname>Brundage</surname></author></analytic><monogr><imprint><publisher>Addison-Wesley Professional</publisher><date>2004</date></imprint></monogr></biblStruct></info><relation target="SpecXML" type="isApplicationOf"/><version id="SpecXQuery1.0" status="W3C Recommendation"><titleStmt><respStmt id="p04flb"><resp>Editor</resp><name>Scott Boag</name><name>Don Chamberlin </name><name>Mary F. Fernández </name><name>Daniela Florescu </name><name>Jonathan Robie </name><name>Jérôme Siméon</name></respStmt></titleStmt><versionNumber type="major">1.0</versionNumber><date>2007-01-23</date><address type="URL">http://www.w3.org/TR/2007/REC-xquery-20070123/</address><relation target="SpecXPath2.0" type="isSupersetOf"><info><p>XQuery is a superset of XPath 2.0, which is a superset of XPath 1.0</p></info></relation></version><version id="SpecXQuery1.0SE" status="W3C Recommendation"><titleStmt><respStmt id="RME4bE"><resp>Editor</resp><name>Scott Boag</name><name> Don Chamberlin</name><name>Mary F. Fernández</name><name>Daniela Florescu </name><name>Jonathan Robie </name><name>Jérôme Siméon</name></respStmt></titleStmt><versionNumber type="major">1.0</versionNumber><versionNumber type="minor">Second Edition</versionNumber><date>2009-07-21</date><address type="URL">http://www.w3.org/TR/2009/PER-xquery-20090421/</address></version><asset><a href="../doc/Example_XQUERY.xquery">Example for an XQuery</a></asset></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecXQuery" standardSettingBody="SBW3C" topic="TopicMarkupLanguage TopicQuery" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>XQuery: an XML Query Language</title>
+        <abbr>XQuery</abbr>
+    </titleStmt>
+    <scope>XQuery is a query language for addressing parts of an XML document.</scope>
+    <keyword>XML</keyword>
+    <keyword>query languages</keyword>
+    <keyword>XML data</keyword>
+    <keyword>XML Namespaces</keyword>
+    <keyword>XPath</keyword>
+    <info type="description">
+        <p>XQuery is a query language, which is used for requesting collections of XML data, developed
+      by W3C. XQuery is designed for working with XML, but it does not use XML's syntax. Although
+      there is an XQueryX version that makes use of XML's syntax, it is only seldom used. XQuery is
+      applied versatilely, for example for extraction of information from an XML database, for
+      searching textual documents on the web, for information extraction, etc. Furthermore XQuery
+      allows modifying the data or sort the returned results.</p>
+        <p>The queries in XQuery can read, return, add a sequence of XML fragments or atomic values from
+      input documents. XQuery relies on other specifications of W3C such as XML 1.1, Namespaces,
+      XPath and XML Schema datatypes. One of the reasons why XQuery is so widely accepted, is that
+      it is supported by all major databases.</p>
+    </info>
+    <info type="recReading">
+        <biblStruct id="r1XQUE" type="book">
+            <analytic>
+                <title>XQuery: Search Across a Variety of XML Data</title>
+                <author>
+                    <forename>Priscilla</forename>
+                    <surname>Walmsley</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <imprint>
+                    <publisher>O'Reilly Media</publisher>
+                    <date>2007</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="book">
+            <analytic>
+                <title>XQuery: The XML Query Language</title>
+                <author>
+                    <forename>Michael</forename>
+                    <surname>Brundage</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <imprint>
+                    <publisher>Addison-Wesley Professional</publisher>
+                    <date>2004</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+    </info>
+    <relation target="SpecXML" type="isApplicationOf"/>
+    <version id="SpecXQuery1.0" status="W3C Recommendation">
+        <titleStmt>
+            <abbr internal="yes">XQuery-2007</abbr>
+            <respStmt id="p04flb">
+                <resp>Editor</resp>
+                <name>Scott Boag</name>
+                <name>Don Chamberlin </name>
+                <name>Mary F. Fernández </name>
+                <name>Daniela Florescu </name>
+                <name>Jonathan Robie </name>
+                <name>Jérôme Siméon</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">1.0</versionNumber>
+        <date>2007-01-23</date>
+        <address type="URL">http://www.w3.org/TR/2007/REC-xquery-20070123/</address>
+        <relation target="SpecXQuery3.0" type="isSubsetOf"/>
+        <relation target="SpecXPath2.0" type="isSupersetOf">
+            <info>
+                <p>XQuery is a superset of XPath 2.0, which is a superset of XPath 1.0</p>
+            </info>
+        </relation>
+    </version>
+    <version id="SpecXQuery1.0SE" status="W3C Recommendation" usedInCLARINCenter="TLA UC IDS">
+        <titleStmt>
+            <abbr internal="yes">XQuery-2009</abbr>
+            <respStmt id="RME4bE">
+                <resp>Editor</resp>
+                <name>Scott Boag</name>
+                <name> Don Chamberlin</name>
+                <name>Mary F. Fernández</name>
+                <name>Daniela Florescu </name>
+                <name>Jonathan Robie </name>
+                <name>Jérôme Siméon</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">1.0</versionNumber>
+        <versionNumber type="minor">Second Edition</versionNumber>
+        <date>2009-07-21</date>
+        <address type="URL">http://www.w3.org/TR/2009/PER-xquery-20090421/</address>
+    </version>
+    <version id="SpecXQuery3.0" status="W3C Recommendation">
+        <titleStmt>
+            <abbr>XQuery-2014</abbr>
+            <respStmt>
+                <resp>Editor</resp>
+                <name>Jim Melton</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">3.0</versionNumber>
+        <date>2014-04-08</date>
+        <address type="URL">http://www.w3.org/TR/2014/REC-xqueryx-30-20140408/</address>
+        <relation target="SpecXQuery1.0" type="isSupersetOf"/>
+        <relation target="SpecXPath3.0" type="isSupersetOf"/>
+    </version>
+    <asset>
+        <a href="../doc/Example_XQUERY.xq">Example for an XQuery</a>
+    </asset>
+</spec>

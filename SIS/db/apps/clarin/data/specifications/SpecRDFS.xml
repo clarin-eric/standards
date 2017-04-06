@@ -1,2 +1,49 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecRDFS" standardSettingBody="SBW3C" topic="TopicConstraintLanguage TopicSchema" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>RDF Vocabulary Description Language: RDF Schema</title><abbr>RDFS</abbr></titleStmt><scope>Standard for describing rules for using RDF properties</scope><keyword>RDF</keyword><keyword>semantic web</keyword><keyword>schema</keyword><info type="description"><p>RDF Schema is an extension to RDF. It provides the framework for describing application-specific classes and properties for 
-            use in RDF models. </p></info><version id="SpecRDFS1" status="W3C Recommendation"><titleStmt><respStmt id="pRDFS2"><resp>Editor</resp><name>Dan Brickley</name><name>R.V. Guha</name></respStmt></titleStmt><versionNumber type="major">1.0</versionNumber><date>2004-02-10</date><address type="URL">http://www.w3.org/TR/rdf-schema/</address><relation target="SpecRDF1" type="isUsedBy"><info type="description"><p>RDF Schema is an extension to RDF. </p></info></relation><relation target="SpecOWL" type="isUsedBy"><info type="description"><p>OWL is built on top of RDFS.</p></info></relation><relation target="SpecXMLNS" type="uses"/><relation target="SpecRDF" type="isExtendedTo"><info type="description"><p>RDFS is an extension to RDF.</p></info></relation></version><asset><a href="../doc/Example_RDFS.xml">Example_RDFS.xml</a></asset></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecRDFS" standardSettingBody="SBW3C" topic="TopicConstraintLanguage TopicSchema" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>RDF Vocabulary Description Language: RDF Schema</title>
+        <abbr>RDFS</abbr>
+    </titleStmt>
+    <scope>Standard for describing rules for using RDF properties</scope>
+    <keyword>RDF</keyword>
+    <keyword>semantic web</keyword>
+    <keyword>schema</keyword>
+    <info type="description">
+        <p>RDF Schema is an extension to RDF. It provides the framework for describing application-specific classes and properties for 
+            use in RDF models. </p>
+    </info>
+    <relation target="SpecOWL1" type="isUsedBy"/>
+    <relation target="SpecSKOS-R" type="isUsedBy"/>
+    <relation target="SpecDAMLOil" type="isUsedBy"/>
+    <version id="SpecRDFS1" status="W3C Recommendation">
+        <titleStmt>
+            <abbr internal="yes">RDFS-2004</abbr>
+            <respStmt id="pRDFS2">
+                <resp>Editor</resp>
+                <name>Dan Brickley</name>
+                <name>R.V. Guha</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">1.0</versionNumber>
+        <date>2004-02-10</date>
+        <address type="URL">http://www.w3.org/TR/rdf-schema/</address>
+        <relation target="SpecRDF1" type="isUsedBy">
+            <info type="description">
+                <p>RDF Schema is an extension to RDF. </p>
+            </info>
+        </relation>
+        <relation target="SpecOWL" type="isUsedBy">
+            <info type="description">
+                <p>OWL is built on top of RDFS.</p>
+            </info>
+        </relation>
+        <relation target="SpecXMLNS" type="uses"/>
+        <relation target="SpecRDF" type="isExtendedTo">
+            <info type="description">
+                <p>RDFS is an extension to RDF.</p>
+            </info>
+        </relation>
+    </version>
+    <asset>
+        <a href="../doc/Example_RDFS.xml">Example_RDFS.xml</a>
+    </asset>
+</spec>

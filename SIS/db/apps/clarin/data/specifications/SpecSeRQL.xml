@@ -1,0 +1,9 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecSeRQL" standardSettingBody="SBOther" topic="TopicQuery" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Sesame RDF Query Language</title><abbr>SeRQL</abbr></titleStmt><scope>RDF Query language</scope><info type="description"><p>SeRQL is a RDF/RDFS query language that is currently being developed by Aduna as part of
+            Sesame. It combines the features of other (query) languages (RQL, RDQL, N-Triples, N3) and adds
+            some of its own. Some of SeRQL's most important features are:
+            graph transformation, RDF Schema support, XML Schema datatype support, expressive path
+            expression syntax, optional path matching. The SeRQL query language supports two querying
+            concepts. The first one can be characterized as returning a table of values, or a set of variable-value
+            bindings. The second one returns a true RDF graph, which can be a subgraph of the graph being
+            queried, or a graph containing information that is derived from it. The first type of queries are called
+            "select queries", the second type of queries are called "construct queries".</p></info><relation target="SpecRDF" type="isApplicationOf"/><version id="SpecSeRQL-3.1"><titleStmt><abbr>SeRQL-3.1</abbr><respStmt><resp>Author</resp><name type="org">Aduna</name></respStmt></titleStmt><versionNumber type="minor">3.1</versionNumber><address type="URL">http://www.csee.umbc.edu/courses/graduate/691/spring14/01/examples/sesame/openrdf-sesame-2.6.10/docs/users/ch09.html</address></version></spec>

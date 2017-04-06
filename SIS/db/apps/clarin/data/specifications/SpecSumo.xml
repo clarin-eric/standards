@@ -1,0 +1,14 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecSumo" standardSettingBody="SBOther" topic="TopicOntology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Suggested Upper Merged Ontology</title><abbr>SUMO</abbr></titleStmt><scope>Upper level ontology</scope><info type="description"><p>The Suggested Upper Merged Ontology (SUMO) is a free, formal upper ontology with many
+            associated tools, translations, explanatory documents and domain ontologies. It is owned by IEEE. 
+            SUMO and all domain
+            ontologies consist of 20,000 terms and 60,000 axioms. These consist of SUMO itself, the MId-Level
+            Ontology (MILO), and ontologies of Communications, Countries and Regions, Distributed
+            computing, Economy, Finance, Engineering components, Geography, Government, Military, North
+            American Industrial Classification System, People, Physical elements, Transnational Issues,
+            Transportation, Viruses, World Airports A-K, World Airports L-Z. All terms are formally defined.
+            Meanings are not dependent on a particular inference implementation. An inference and ontology
+            management system however is provided. An additional system that supports visual editing, and
+            does a better job of displaying the ontologies, especially in non-Western languages is the KSMSA
+            system. SUMO is the only formal ontology (according to the website) that has been mapped to the
+            entire WordNet lexicon. SUMO is written in the SUO-KIF language.
+        </p></info><info type="recReading"><biblStruct type="conferencePaper"><analytic><title>Toward a Standard Upper Ontology</title><author><forename>I.</forename><surname>Niles</surname></author><author><forename>A.</forename><surname>Pease</surname></author></analytic><monogr><title>Proceedings of the 2nd International Conference on Formal Ontology in Information Systems (FOIS-2001)</title><editor><forename>Chris</forename><surname>Welty</surname></editor><editor><forename>Barry</forename><surname>Smith</surname></editor><imprint><biblScope type="pp">2-9</biblScope><date>2001</date></imprint></monogr></biblStruct></info><version id="SpecSumo-2000"><titleStmt><abbr>SUMO 2000</abbr><respStmt><resp>Editor</resp><name>Adam Pease</name></respStmt></titleStmt><date>2000</date><address type="URL">http://www.adampease.org/OP/</address></version></spec>

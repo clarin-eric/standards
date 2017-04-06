@@ -1,12 +1,12 @@
 <collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/edit" owner="admin" group="dba" mode="755" created="2012-12-11T11:42:03+01:00" version="1">
     <acl entries="0" version="1"/>
-    <resource type="BinaryResource" name="edit-form.xq" owner="admin" group="dba" mode="755" created="2012-12-17T15:00:29+01:00" modified="2013-11-18T13:38:05+01:00" filename="edit-form.xq" mimetype="application/xquery">
+    <resource type="BinaryResource" name="test.xq" owner="admin" group="dba" mode="644" created="2013-11-14T13:41:45+01:00" modified="2017-03-27T18:49:01+02:00" filename="test.xq" mimetype="application/xquery">
         <acl entries="0" version="1"/>
     </resource>
-    <resource type="BinaryResource" name="edit-process.xq" owner="admin" group="dba" mode="755" created="2012-12-17T14:56:35+01:00" modified="2013-11-15T18:24:43+01:00" filename="edit-process.xq" mimetype="application/xquery">
+    <resource type="BinaryResource" name="edit-process.xq" owner="admin" group="dba" mode="755" created="2012-12-17T14:56:35+01:00" modified="2014-05-16T12:28:48+02:00" filename="edit-process.xq" mimetype="application/xquery">
         <acl entries="0" version="1"/>
     </resource>
-    <resource type="BinaryResource" name="test.xq" owner="admin" group="dba" mode="644" created="2013-11-14T13:41:45+01:00" modified="2013-11-18T13:37:12+01:00" filename="test.xq" mimetype="application/xquery">
+    <resource type="BinaryResource" name="edit-form.xq" owner="admin" group="dba" mode="755" created="2012-12-17T15:00:29+01:00" modified="2014-10-14T11:49:37+02:00" filename="edit-form.xq" mimetype="application/xquery">
         <acl entries="0" version="1"/>
     </resource>
 </collection>

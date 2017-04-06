@@ -1,8 +1,53 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecXSLT" standardSettingBody="SBW3C" topic="TopicTransformation" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Extensible Stylesheet Language Transformations</title><abbr>XSLT</abbr></titleStmt><scope>Transformation of XML-annotated instances</scope><keyword>Transformation</keyword><keyword>XSL</keyword><info type="description"><p>The abbreviation XSLT stands for EXtensible Stylesheet Language Transformations. It is an XML-based programming 
-    language which is developed by the World Wide Web Consortium (W3C). XSLT transforms well-formed XML documents 
-    into XHTML or to other XML documents. However, the original XML document is left unchanged.</p><p>For the transformation, the XSLT processor selects and matches the XML Data with the help of an XSLT stylesheet, 
-      transforms it and then produces an output document in another file format like  XHTML, SVG, VRML, etc.</p><p>XSLT Stylesheets include merely the templates and template rules, which are executed by XSLT processor and 
-        which describe how the elements of the XML file should be processed on screens or in print. XSLT Stylesheet 
-        is a well formed XML document.</p><p>XSLT uses XPath technology to find information in an XML document. With XPath, XSLT follows the simple tree-structured 
-          data model of XML documents and navigates through the elements and the attributes.</p><p>There are two versions of XSLT in use today: XSLT 1.0 and XSLT 2.0. In this context, XPath 1.0 should be used with
-            XSLT 1.0 and XPath 2.0 with XSLT 2.0.</p></info><version id="SpecXSLT1.0" status="W3C Recommendation"><titleStmt/><versionNumber type="major">1.0</versionNumber><date>1999-11-16</date><address type="URL">http://www.w3.org/TR/1999/REC-xslt-19991116</address><relation target="SpecXPath1.0" type="uses"/></version><version id="SpecXSLT2.0" status="W3C Recommendation"><titleStmt/><versionNumber type="major">2.0</versionNumber><date>2007-01-27</date><address type="URL">http://www.w3.org/TR/2007/REC-xslt20-20070123/</address><relation target="SpecXPath2.0" type="uses"><info><p>XSLT 2.0 is a host language for XPath 2.0.</p></info></relation></version><version id="SpecXSLT2.1" status="W3C Working Draft"><titleStmt/><versionNumber type="major">2.1</versionNumber><date>2010-05-11</date><address type="URL">http://www.w3.org/TR/2010/WD-xslt-21-20100511/</address><relation target="SpecXPath2.0" type="uses"/></version></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecXSLT" standardSettingBody="SBW3C" topic="TopicTransformation" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Extensible Stylesheet Language Transformations</title>
+        <abbr>XSLT</abbr>
+    </titleStmt>
+    <scope>Transformation of XML-annotated instances</scope>
+    <keyword>Transformation</keyword>
+    <keyword>XSL</keyword>
+    <info type="description">
+        <p>The abbreviation XSLT stands for EXtensible Stylesheet Language Transformations. It is an XML-based programming 
+    language developed by the World Wide Web Consortium (W3C). XSLT transforms well-formed XML documents 
+    into XHTML or to other XML documents. However, the original XML document is left unchanged.</p>
+        <p>For the transformation, the XSLT processor selects and matches the XML Data with the help of an XSLT stylesheet, 
+      transforms it, and then produces an output document in another file format like  XHTML, SVG, VRML, etc. XSLT Stylesheets include templates and template rules describing how the elements of the XML file should be processed on screens or in print. XSLT Stylesheets 
+        are well-formed XML documents.</p>
+        <p>XSLT uses XPath technology to find information in an XML document. With XPath, XSLT follows the simple tree-structured 
+          data model of XML documents and navigates through the elements and the attributes.</p>
+        <p>There are two versions of XSLT in use today: XSLT 1.0 and XSLT 2.0. XPath 1.0 should be used with
+            XSLT 1.0 and XPath 2.0 with XSLT 2.0.</p>
+    </info>
+    <version id="SpecXSLT1.0" status="W3C Recommendation">
+        <titleStmt>
+            <abbr internal="yes">XSLT-1999</abbr>
+        </titleStmt>
+        <versionNumber type="major">1.0</versionNumber>
+        <date>1999-11-16</date>
+        <address type="URL">http://www.w3.org/TR/1999/REC-xslt-19991116</address>
+        <relation target="SpecXPath1.0" type="uses"/>
+    </version>
+    <version id="SpecXSLT2.0" status="W3C Recommendation" usedInCLARINCenter="TLA UC CLARIN-PL">
+        <titleStmt>
+            <abbr internal="yes">XSLT-2007</abbr>
+        </titleStmt>
+        <versionNumber type="major">2.0</versionNumber>
+        <date>2007-01-27</date>
+        <address type="URL">http://www.w3.org/TR/2007/REC-xslt20-20070123/</address>
+        <relation target="SpecXPath2.0" type="uses">
+            <info>
+                <p>XSLT 2.0 is a host language for XPath 2.0.</p>
+            </info>
+        </relation>
+    </version>
+    <version id="SpecXSLT2.1" status="W3C Last Call Working Draft">
+        <titleStmt>
+            <abbr internal="yes">XSLT-2013</abbr>
+        </titleStmt>
+        <versionNumber type="major">2.1</versionNumber>
+        <date>2013-12-12</date>
+        <address type="URL">http://www.w3.org/TR/2013/WD-xslt-30-20131212/</address>
+        <relation target="SpecXPath3.0" type="uses"/>
+        <relation target="SpecXPath2.0" type="uses"/>
+    </version>
+</spec>

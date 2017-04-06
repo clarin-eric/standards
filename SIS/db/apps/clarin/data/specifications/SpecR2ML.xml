@@ -1,0 +1,11 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecR2ML" standardSettingBody="SBRewerse" topic="TopicMarkupLanguage" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>REWERSE I1 Rule Markup Language</title><abbr>R2ML</abbr></titleStmt><scope>XML-based rule format</scope><info type="description"><p>R2ML is developed by the REWERSE Working Group for the purpose of rules interchange between
+            different systems and tools, enriching of ontologies with rules, connecting of custom rule system
+            with R2ML-based tools for vizualization, verbalization, verification and validation. R2ML is
+            comprehensive in the sense that it integrates the Object Constraint Language (OCL) - a standard used
+            in information systems engineering and software engineering, the Semantic Web Rule Language
+            (SWRL)- a proposal to extend the Semantic Web ontology language OWL by adding implication
+            axioms, the Rule Markup Language (RuleML) - a proposal based on Datalog/Prolog, and it includes
+            four rule categories: derivation rules, production rules, integrity rules and ECA/reaction rules.
+            R2ML provides a rich syntax for expressing rules supporting conceptual distinctions between
+            different types of terms and different types of atoms, which are not present in standard predicate
+            logic.</p></info><address type="URL">http://oxygen.informatik.tu-cottbus.de/rewerse-i1/?q=R2ML</address><relation target="SpecSWRL" type="uses"/><relation target="SpecRuleML" type="uses"/><version id="SpecR2ML-2007"><titleStmt><abbr>R2ML 0.5</abbr><respStmt><resp>Author</resp><name>Gerd Wagner</name><name>Adrian Giurca</name></respStmt></titleStmt><date>2007</date></version></spec>

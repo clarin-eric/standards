@@ -1,0 +1,27 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" standardSettingBody="SBother" id="SpecOLiA" topic="TopicOntology TopicTerminology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Ontologies of Linguistic Annotation</title><abbr>OLiA</abbr></titleStmt><scope>Multilingual ontologies for linguistic annotation</scope><keyword>linguistic ontology</keyword><keyword>linguistic annotation</keyword><keyword>language description</keyword><keyword>grammatical categories</keyword><keyword>linguistic terminology</keyword><keyword>annotation schemes</keyword><keyword>tag sets</keyword><info type="description"><p>The Ontologies of Linguistic Annotations, shortly OLiA, are multilingual ontologies of various linguistic data categories.</p><p>OLiA was originally developed in the context of the collaborative project "Sustainability of Linguistic Resources" between three German Collaborative 
+            Research Centers (SFBs): SFB 441 (University Tübingen), SFB 538 (University Hamburg) and SFB 632 (University Potsdam/Berlin).</p><p>OLiA represents, in forms of annotation schemes, different morphological, morphosyntactic and syntactic phenomena, such as inflectional morphology, 
+            word classes, phrase and edge labels of different syntax annotations, etc. Furthermore, it provides a tag set for annotating 
+            typical discourse phenomena, such as co-reference, discourse relations, discourse structure and information structure.</p><p> OLiA provides:</p><ul><li><p>an ontology of reference terms (OLiA Reference Model) that specifies classes for linguistic categories, and grammatical features and properties 
+                defining relations between them;</p></li><li><p>ontological models of annotation schemes (Multiple OLiA Annotation Models). There are 34 annotation models for about 69 different languages or language stages;</p></li><li><p>for every Annotation Model, a Linking Model, that specifies the relationships between the concepts in ontological models of annotation schemes 
+                    (Annotation Models) and the generalized vocabulary for discourse annotation (Reference Model)</p></li></ul></info><info type="recReading"><biblStruct type="conferencePaper" id="bibS6L"><analytic><title>Ontologies of Linguistic Annotation: Survey and perspectives</title><author><forename>Christian</forename><surname>Chiarcos</surname></author></analytic><monogr><title>Proceedings of the Eighth International Conference on Language Resources and Evaluation</title><imprint><pubPlace>Istanbul, Turkey</pubPlace><date>2012</date></imprint></monogr></biblStruct>
+        <!--  
+        <biblStruct type="journalArticle" id="bibK8G">
+            <analytic>
+                <title>OLiA – Ontologies of Linguistic Annotation</title>
+                <author>
+                    <forename>Christian</forename>
+                    <surname>Chiarcos</surname>
+                </author>
+                <author>
+                    <forename>Maria</forename>
+                    <surname>Sukhareva</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <title>Semantic Web Journal</title>
+                <imprint>
+                    <date>(Accept)</date>
+                </imprint>
+            </monogr>
+        </biblStruct>--></info><relation target="SpecOWL" type="uses"><info type="description"><p>The annotation schemes of the annotation models are formalized as OWL/DL ontologies.</p></info></relation><relation target="SpecGOLD" type="uses"><info type="description"><p>The OLiA Reference Model is linked to GOLD.</p></info></relation><relation target="SpecDcr" type="uses"><info type="description"><p>The OLiA Reference Model is linked to ISOcat.</p></info></relation><version id="SpecOLiA-1" status="Standard"><titleStmt><abbr>OLiA</abbr><respStmt><resp>Editor</resp><name>Collaborative project "Sustainability of Linguistic Resources"</name></respStmt></titleStmt><date>n/a</date><info type="description"><p>OLia includes 32 annotation models and almost as many of linking models for about 70 different 
+            languages. Each model has its own date</p></info><address type="URL">http://www.acoli.informatik.uni-frankfurt.de/resources/olia/</address></version></spec>

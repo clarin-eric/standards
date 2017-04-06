@@ -1,0 +1,12 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecDAMLOil" standardSettingBody="W3C" topic="TopicOntology" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>DARPA Agent Markup Language + Ontology Integration Language</title><abbr>DAML+OIL</abbr></titleStmt><scope>Semantic markup language for Web resources</scope><keyword>Semantic markup language</keyword><info type="description"><p>On the Semantic Web, the DARPA agent markup language (DAML) aims to enable the next
+            generation of the web — a web that moves from simply displaying content to one that
+            actually understands the meaning of the content. The DAML program has generated the
+            DAML+OIL markup language. The submission of the DAML+OIL language to the World Wide Web
+            consortium captures the work done by DAML contractors and the EU/U.S. Joint Committee on
+            Markup Languages. This submission was the starting point for the language to be
+            developed by W3C's web ontology working group, WebOnt.</p><p> DAML+OIL is a syntax, layered on RDF and XML, that can be used to describe sets of facts
+            making up an ontology. DAML+OIL and its friend OIL (ontology integration language) use
+            RDF namespaces to organize and assist with integration of arbitrarily many different and
+            incompatible ontologies. Current research into DAML is leading toward the expression of
+            ontologies and rules for reasoning and action. Much of the work in DAML has now been
+            incorporated into OWL.</p></info><relation target="SpecRDF" type="isBasedOn"/><relation target="SpecRDFs" type="isBasedOn"/><version id="SpecDAMLONT2000"><titleStmt><title>DAML Ontology Language</title><abbr>DAML-ONT</abbr><respStmt><resp>Editor</resp><name>Lynn Andrea Stein</name><name>Dan Connolly</name><name>Deborah McGuinness</name></respStmt></titleStmt><date>2000</date></version><version id="SpecDAMLOIL2000"><titleStmt><abbr>DAML+OIL (December 2000)</abbr><respStmt><resp>Editor</resp><name>Ian Horrocks</name><name>Frank van Harmelen</name></respStmt></titleStmt><date>2000</date></version><version id="SpecDAMLOIL2001" status="W3C Working Group Note"><titleStmt><abbr> DAML+OIL (March 2001)</abbr><respStmt><resp>Editor</resp><name>Ian Horrocks</name><name>Frank van Harmelen</name><name>Peter Patel-Schneider</name></respStmt></titleStmt><date>2001</date><address type="URL">http://www.w3.org/TR/daml+oil-reference</address></version></spec>

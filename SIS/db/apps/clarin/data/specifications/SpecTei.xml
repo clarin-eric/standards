@@ -1,24 +1,197 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTei" standardSettingBody="SBTEIC" topic="TopicGenAnn TopicMarkupLanguage" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Guidelines for Electronic Text Encoding and Interchange</title><abbr>TEI Guidelines</abbr></titleStmt><scope>Texts of the Digital Humanities</scope><info type="description"><p>The TEI Guidelines have been developed and are maintained by the Text Encoding Initiative
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTei" standardSettingBody="SBTEIC" topic="TopicGenAnn TopicMarkupLanguage" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Guidelines for Electronic Text Encoding and Interchange</title>
+        <abbr>TEI Guidelines</abbr>
+    </titleStmt>
+    <scope>Texts of the Digital Humanities</scope>
+    <ClarinRecommendation>
+        <recommendation specId="SpecTei" type="fully recommended"/>
+    </ClarinRecommendation>
+    <info type="description">
+        <p>The TEI Guidelines have been developed and are maintained by the Text Encoding Initiative
             Consortium (TEI) and are designed for people working with any kind of textual resource
-            in digital form.</p><p>The guidelines present recommendations of suitable ways of representing the features of textual
-            resources, which need to be identified explicitly in order to facilitate processing by
-            computer programs. In particular, they specify a set of markers (or tags) which can be
-            inserted in the electronic representation of the text, to mark the text
-            structure and other features of interest. Many computer programs depend on the
-            presence of such explicit markers for their functionality. Without the markers, a
-            digitized text appears to be nothing but a sequence of undifferentiated bits. 
-            
-            The success of the World Wide Web, for example, is partly because of its use of such
-            markup to indicate features, such as headings and lists on individual pages, and to
-            indicate links between pages. The process of inserting such explicit markers for
-            implicit textual features is often called ‘markup’, or equivalently within this work
-            ‘encoding’; the term ‘tagging’ is also used informally. We use the term encoding scheme
-            or markup language to denote the complete set of rules associated with the use of markup
-            in a given context. Besides, we use the term markup vocabulary for the specific set of markers or
-            named distinctions employed by a given encoding scheme. Thus, this work describes both 
-            the TEI encoding scheme, and documents the TEI markup vocabulary.</p><p>The TEI encoding scheme is of particular usefulness in facilitating the loss-free
-            interchange of data amongst individuals and research groups using different programs,
-            computer systems, or application software. Since they contain an inventory of the
-            features most often deployed for computer-based text processing, the guidelines are also
-            useful as a starting point for those designing new systems and creating new materials,
-            even where interchange of information is not a primary objective.</p></info><version id="SpecTeiP3" status="final"><titleStmt><respStmt id="eBBHV3"><resp>Editor</resp><name type="person">C. M. Sperberg-McQueen</name><name type="person">Lou Burnard</name></respStmt></titleStmt><versionNumber type="major">P3</versionNumber><date>1994-05-16</date><features><fs><f name="metaLanguage"><symbol value="SGML"/></f><f name="constraintLanguage"><symbol value="DTD"/></f><f name="grammarClass"><symbol value="LTG"/></f><f name="formalModel"><symbol value="Tree"/></f><f name="notation"><symbol value="Inline"/></f><f name="multipleHierarchies"><vColl><string>milestones</string><string>fragments</string><string>feature structures</string></vColl></f></fs></features><address type="URL">http://www.tei-c.org/Vault/GL/P3/index.htm</address><relation target="SpecSGML" type="isApplicationOf"><info><p>TEI P3 is an application of the Standard Generalized Markup Language (SGML).</p></info></relation><relation target="SpecCes" type="isSuperclassOf"><info><p>TEI P3 is the superclass of CES. CES is a modification of a part of the TEI P3's DTD.</p></info></relation></version><version id="SpecTeiP4" status="final"><titleStmt><respStmt id="VaHeZs"><resp>Editor</resp><name type="person">C. M. Sperberg-McQueen</name><name type="person">Lou Burnard</name></respStmt></titleStmt><versionNumber type="major">P4</versionNumber><date>2002-03-01</date><features><fs><f name="metaLanguage"><symbol value="XML"/></f><f name="constraintLanguage"><symbol value="DTD"/></f><f name="grammarClass"><symbol value="LTG"/></f><f name="formalModel"><symbol value="Tree"/></f><f name="notation"><symbol value="Inline"/></f><f name="multipleHierarchies"><vColl><string>milestones</string><string>fragments</string><string>feature structures</string></vColl></f></fs></features><address type="URL">http://www.tei-c.org/release/doc/tei-p4-doc/html/</address><relation target="SpecXML" type="isApplicationOf"><info><p>TEI P4 is an application of the Extensible Markup Language (XML). It uses the XML syntax for instances and XML DTD as document grammar formalism.</p></info></relation></version><version id="SpecTeiP5" status="final"><titleStmt><respStmt id="N2lu7f"><resp>Editor</resp><name>Lou Burnard</name><name>Syd Bauman</name></respStmt></titleStmt><versionNumber type="major">P5</versionNumber><versionNumber type="minor">1.9.1</versionNumber><date>2011-03-05</date><features><fs><f name="metaLanguage"><symbol value="XML"/></f><f name="constraintLanguage"><symbol value="RELAX NG"/></f><f name="grammarClass"><symbol value="STG"/></f><f name="formalModel"><symbol value="Tree"/></f><f name="notation"><symbol value="Standoff"/></f><f name="multipleHierarchies"><vColl><string>milestones</string><string>fragments</string><string>standoff annotation</string><string>feature structures</string></vColl></f></fs></features><address type="URL">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</address><relation target="SpecXML" type="isApplicationOf"><info><p>TEI P5 is an application of the Extensible Markup Language (XML). It uses the XML syntax for instances.</p></info></relation><relation target="SpecRNG" type="isApplicationOf"><info><p>TEI P5 uses RELAX NG as document grammar formalism.</p></info></relation></version></spec>
+            in digital form.</p>
+        <p>The guidelines present recommendations of suitable ways of representing the features of
+            textual resources, which need to be identified explicitly in order to facilitate
+            processing by computer programs. In particular, they specify a set of markers (or tags)
+            which can be inserted in the electronic representation of the text, to mark the text
+            structure and other features of interest. Many computer programs depend on the presence
+            of such explicit markers for their functionality. Without the markers, a digitized text
+            appears to be nothing but a sequence of undifferentiated bits. The success of the World
+            Wide Web, for example, is partly because of its use of such markup to indicate features,
+            such as headings and lists on individual pages, and to indicate links between pages. The
+            process of inserting such explicit markers for implicit textual features is often called
+            ‘markup’, or equivalently within this work ‘encoding’; the term ‘tagging’ is also used
+            informally. We use the term encoding scheme or markup language to denote the complete
+            set of rules associated with the use of markup in a given context. Besides, we use the
+            term markup vocabulary for the specific set of markers or named distinctions employed by
+            a given encoding scheme. Thus, this work describes both the TEI encoding scheme, and
+            documents the TEI markup vocabulary.</p>
+        <p>The TEI encoding scheme is particularly useful in facilitating a loss-free interchange of
+            data amongst individuals and research groups using different programs, computer systems,
+            or application software. Since they contain an inventory of the features most often
+            deployed for computer-based text processing, the guidelines are also useful as a
+            starting point for those designing new systems and creating new materials, even where
+            interchange of information is not a primary objective.</p>
+    </info>
+    <relation target="SpecTranScript" type="isUsedBy"/>
+    <version id="SpecTeiP3" status="final">
+        <titleStmt>
+            <abbr internal="yes">TEI Guidelines-1994</abbr>
+            <respStmt id="eBBHV3">
+                <resp>Editor</resp>
+                <name type="person">C. M. Sperberg-McQueen</name>
+                <name type="person">Lou Burnard</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">P3</versionNumber>
+        <date>1994-05-16</date>
+        <features>
+            <fs>
+                <f name="metaLanguage">
+                    <symbol value="SGML"/>
+                </f>
+                <f name="constraintLanguage">
+                    <symbol value="DTD"/>
+                </f>
+                <f name="grammarClass">
+                    <symbol value="LTG"/>
+                </f>
+                <f name="formalModel">
+                    <symbol value="Tree"/>
+                </f>
+                <f name="notation">
+                    <symbol value="Inline"/>
+                </f>
+                <f name="multipleHierarchies">
+                    <vColl>
+                        <string>milestones</string>
+                        <string>fragments</string>
+                        <string>feature structures</string>
+                    </vColl>
+                </f>
+            </fs>
+        </features>
+        <address type="URL">http://www.tei-c.org/Vault/GL/P3/index.htm</address>
+        <relation target="SpecCes4-1" type="isUsedBy"/>
+        <relation target="SpecSGML" type="isApplicationOf">
+            <info>
+                <p>TEI P3 is an application of the Standard Generalized Markup Language (SGML).</p>
+            </info>
+        </relation>
+        <relation target="SpecCes" type="isSuperclassOf">
+            <info>
+                <p>TEI P3 is the superclass of CES. CES is a modification of a part of the TEI P3's
+                    DTD.</p>
+            </info>
+        </relation>
+        <relation target="SpecXces104" type="isUsedBy">
+            <info>
+                <p>The XCES specification is based on the TEI P3 Standard.</p>
+            </info>
+        </relation>
+    </version>
+    <version id="SpecTeiP4" status="final">
+        <titleStmt>
+            <abbr internal="yes">TEI Guidelines-2002</abbr>
+            <respStmt id="VaHeZs">
+                <resp>Editor</resp>
+                <name type="person">C. M. Sperberg-McQueen</name>
+                <name type="person">Lou Burnard</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">P4</versionNumber>
+        <date>2002-03-01</date>
+        <features>
+            <fs>
+                <f name="metaLanguage">
+                    <symbol value="XML"/>
+                </f>
+                <f name="constraintLanguage">
+                    <symbol value="DTD"/>
+                </f>
+                <f name="grammarClass">
+                    <symbol value="LTG"/>
+                </f>
+                <f name="formalModel">
+                    <symbol value="Tree"/>
+                </f>
+                <f name="notation">
+                    <symbol value="Inline"/>
+                </f>
+                <f name="multipleHierarchies">
+                    <vColl>
+                        <string>milestones</string>
+                        <string>fragments</string>
+                        <string>feature structures</string>
+                    </vColl>
+                </f>
+            </fs>
+        </features>
+        <address type="URL">http://www.tei-c.org/release/doc/tei-p4-doc/html/</address>
+        <relation target="SpecXML" type="isApplicationOf">
+            <info>
+                <p>TEI P4 is an application of the Extensible Markup Language (XML). It uses the XML
+                    syntax for instances and XML DTD as document grammar formalism.</p>
+            </info>
+        </relation>
+    </version>
+    <version id="SpecTeiP5" status="final" usedInCLARINCenter="TLA UC HZSK CLARIN-PL">
+        <titleStmt>
+            <abbr internal="yes">TEI Guidelines-2011</abbr>
+            <respStmt id="N2lu7f">
+                <resp>Editor</resp>
+                <name>Lou Burnard</name>
+                <name>Syd Bauman</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">P5</versionNumber>
+        <versionNumber type="minor">2.7.0</versionNumber>
+        <date>2014-09-16</date>
+        <features>
+            <fs>
+                <f name="metaLanguage">
+                    <symbol value="XML"/>
+                </f>
+                <f name="constraintLanguage">
+                    <symbol value="RELAX NG"/>
+                </f>
+                <f name="grammarClass">
+                    <symbol value="STG"/>
+                </f>
+                <f name="formalModel">
+                    <symbol value="Tree"/>
+                </f>
+                <f name="notation">
+                    <symbol value="Standoff"/>
+                </f>
+                <f name="multipleHierarchies">
+                    <vColl>
+                        <string>milestones</string>
+                        <string>fragments</string>
+                        <string>standoff annotation</string>
+                        <string>feature structures</string>
+                    </vColl>
+                </f>
+            </fs>
+        </features>
+        <address type="URL">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</address>
+        <relation target="SpecIDS-XCES" type="isUsedBy"/>
+        <relation target="SpecXML" type="isApplicationOf">
+            <info>
+                <p>TEI P5 is an application of the Extensible Markup Language (XML). It uses the XML
+                    syntax for instances.</p>
+            </info>
+        </relation>
+        <relation target="SpecRNG" type="isApplicationOf">
+            <info>
+                <p>TEI P5 uses RELAX NG as its document grammar formalism.</p>
+            </info>
+        </relation>
+        <relation target="SpecI5" type="isBasedOn">
+            <info>
+                <p>The I5 is based on the TEI P5 (Vesion 2.5.0).</p>
+            </info>
+        </relation>
+    </version>
+</spec>

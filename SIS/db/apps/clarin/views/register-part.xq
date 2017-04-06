@@ -7,10 +7,15 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace vsm ="http://clarin.ids-mannheim.de/standards/view-spec" at "../modules/view-spec.xql";
 import module namespace asm ="http://clarin.ids-mannheim.de/standards/add-spec-module" at "../modules/add-spec.xql";
+import module namespace rsm ="http://clarin.ids-mannheim.de/standards/register-spec-module" at "../modules/register-spec.xql";
+
+(: Define the registering standard part page
+   @author margaretha
+:)
 
 let $id := request:get-parameter('id', '')
-let $spec := asm:get-spec($id)
-let $spec-name := $spec/titleStmt/title/text()
+let $spec:= asm:get-spec($id)
+let $spec-name := asm:get-spec-name($spec)
 
 let $submitted := request:get-parameter("submitPart","")
 let $part-id := request:get-parameter("pid","")
@@ -20,20 +25,21 @@ let $part-scope := request:get-parameter("pscope","")
 let $part-keyword := request:get-parameter("pkeyword","")
 let $part-description := request:get-parameter("pdescription","")
 
-let $validation := 
-    if ($submitted and $part-id) 
-    then asm:store-part($spec,$part-id,$part-name,$part-abbr,$part-scope,$part-keyword,$part-description)
-    else () 
+let $validate-id := rsm:validate-id($part-id)
+let $validation := asm:validate-part($submitted,$spec,$validate-id,$part-id,
+    $part-name,$part-abbr,$part-scope,$part-keyword,$part-description)  
 
-let $submitted-part := request:get-parameter("partid","")
+let $submitted-part := request:get-parameter("part-title","")
 
-return
+return 
 
 <html>
     <head>
        <title>Registering Standard Parts</title>       
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js","js")}"/>
+        <script type="text/javascript" src="{app:resource("tinymce/tinymce.min.js","js")}"/>
+        <script type="text/javascript" src="{app:resource("xmleditor.js","js")}"/>
     </head>   
     <body>
         <div id="all">
@@ -48,12 +54,18 @@ return
              
              <div class="title">Registering Standard</div>
              <div>
+                {if (session:get-attribute("user") = 'webadmin')
+                 then <p>You can register a standard to our collection by following the registration steps below. Your given 
+                information will be stored after submission in each step. Please keep in mind that you cannot go back 
+                to a previous step. After submission, your standard will be place in <b>/data/specifications</b> folder.</p>
+                 else 
                 <p>You can register a standard to our collection by following the registration steps below. Your given 
-                information will be stored after submission on each step. Please keep in mind that you cannot go back 
+                information will be stored after submission in each step. Please keep in mind that you cannot go back 
                 to a previous step. After submission, your standard will be reviewed by an administrator. Once it has 
                 been approved, it will be listed in the 
                 <a href="{app:link("views/list-spec.xq?sortBy=name&amp;page=1")}">Standards</a> page. Your registered 
-                standard may be further elaborated by the administrator.</p> 
+                standard may be further elaborated by the administrator.</p>
+             }
                 
                 <br />
                 {if ($submitted-part) 
@@ -66,11 +78,14 @@ return
                 <span style="color:#AAA;"> > Adding Versions > Confirmation </span></p>               
                 
 
-                <p>To add a part to {$spec-name}, please fill in and <b>submit</b> the form below. A new part will be added to 
-                the {$spec-name} following any other existing parts. A part that does not have a version will not be shown 
-                in the standard description. You can add a version for a part or the standard itself in the next step.</p>                          
+                <p>If the standard does not have a part, you can skip this step and click the "Next" button. </p>
                 
-                <p> You can add multiple parts, if you like. When you are done, please click the "Next" button. </p>
+                <p>To add a part to {$spec-name}, please 
+                fill in and <b>submit</b> the form below. A new part will be added to 
+                the {$spec-name} following any other existing parts. <b>A part must have at least one version.</b> 
+                You can add a version for a part or the standard itself in the next step.</p>                          
+                
+                <p> You can add several parts. When you are done, please click the "Next" button.</p>
                    
              </div>      
              
@@ -78,10 +93,16 @@ return
                 <table style="padding:20px; margin-top:20px;">
                     <tr>
                         <td style="width:100px">Id:*</td>
-                        <td><input name="pid" type="text" value="{$part-id}" class="{asm:get-id-class($submitted,$part-id)}" style="width:450px;"/></td>
+                        <td><input name="pid" type="text" value="{$part-id}" 
+                            class="{rsm:get-id-class($submitted,$part-id,$validate-id)}" style="width:450px;"/></td>
                     </tr>
-                    <tr><td style="width:100px">Title:</td>
-                         <td><input name="pname" value="{$part-name}" type="text" class="inputText" style="width:450px;"/></td>
+                    <tr style="display:{rsm:get-display-error($part-id,$validate-id)}">
+                        <td></td>
+                        <td><span style="color:red;">* Id is not available.</span></td>
+                     </tr>
+                    <tr><td style="width:100px">Title:*</td>
+                         <td><input name="pname" value="{$part-name}" type="text" 
+                            class="{app:get-input-class($submitted,$part-name)}" style="width:450px;"/></td>
                     </tr>
                     <tr><td>Abbreviation:</td>
                         <td><input name="pabbr" value="{$part-abbr}" type="text" class="inputText" style="width:450px;"/></td>
@@ -97,7 +118,7 @@ return
                         </td>
                     </tr>
                     <tr valign="top"><td>Description:</td>
-                        <td><textarea name="pdescription" class="inputText" style="width:450px; height:150px; 
+                        <td><textarea name="pdescription" class="desctext" style="width:450px; height:150px; 
                              resize: none; font-size:11px">{$part-description}</textarea>
                          </td>
                     </tr>
@@ -117,7 +138,8 @@ return
                             <input name = "next" class="button" type="button" value="Next" 
                                 onclick="location.href='{app:link(concat("views/register-version.xq?id=", $id))}'"/>                            
                             <span style="display:inline-block; width:2px"/>                            
-                            <input class="button" name= "cancel" type="button" value="Cancel" onclick=""/>
+                            <button type="reset" name="cancelButton" class="button" style="margin-bottom:3px;" 
+                    onclick="'">Reset</button>
                         </td>
                     </tr>
                 </table>

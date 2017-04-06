@@ -7,6 +7,10 @@ import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace tm="http://clarin.ids-mannheim.de/standards/topic-module" at "../modules/topic.xql";
 
+(:  Define the list of topic page
+    @author margaretha
+:)
+
 <html>
     <head>
     	<title>Topics</title>

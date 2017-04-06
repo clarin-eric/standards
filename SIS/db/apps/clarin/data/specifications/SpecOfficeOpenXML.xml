@@ -1,0 +1,8 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecOfficeFormats" standardSettingBody="SBISO" topic="TopicFileFormats" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="hide"><titleStmt><title>Office Open XML File Formats</title><abbr/></titleStmt><scope>File format for representing word processing documents</scope><ClarinRecommendation><recommendation specId="SpecOfficeFormats" type="acceptable"><alternatives><alternative specId="SpecXHTML"/><alternative specId="SpecTei"/></alternatives></recommendation></ClarinRecommendation><keyword>Data representation</keyword><info type="description"><p/></info><part><titleStmt><title>Information technology — Document description and processing languages — Office Open XML File Formats — 
+                Part 1: Fundamentals and Markup Language Reference</title><abbr internal="yes">OfficeFormats-1</abbr></titleStmt><info type="description"><p>"ISO/IEC 29500-1:2012 defines a set of XML vocabularies for representing
+                word-processing documents, spreadsheets and presentations, based on the Microsoft
+                Office 2008 applications. It specifies requirements for Office Open XML consumers
+                and producers that comply to the strict conformance category."
+                <a href="http://www.iso.org/iso/home.htm">Abstract, ISO/IEC 29500-1:2012</a></p></info><version><titleStmt><abbr>OfficeFormats-1</abbr><respStmt><resp>Editor</resp><name type="org" id="SBISO">ISO/IEC JTC 1/SC 34</name></respStmt></titleStmt><versionNumber type="major">ISO/IEC 29500-1:2012</versionNumber><date>2012-08-22</date><address type="URL">http://www.iso.org/iso/home.htm</address></version></part>
+    
+    <!-- Part 2, 3, 4   --></spec>

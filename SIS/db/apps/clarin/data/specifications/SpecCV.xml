@@ -1,5 +1,42 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecCV" standardSettingBody="SBNISO" topic="TopicKnowledgeRepresentation TopicControlledVocabulary TopicThesaurus" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies</title><abbr>Controlled Vocabulary</abbr></titleStmt><scope>Standard for the construction, format and management of controlled vocabularies</scope><keyword>Thesaurus</keyword><keyword>information retrieval</keyword><keyword>terms</keyword><keyword>relationships</keyword><keyword>vocabulary</keyword><info type="description"><p>"This standard describes the guidelines and conventions for the contents, display, construction, testing, maintenance, and management of monolingual 
-            controlled vocabularies. It focuses on controlled vocabularies that are used for the representation of content objects in 
-            knowledge organization systems including lists, synonym rings, taxonomies, and thesauri."
-            <a href="http://www.niso.org/">Abstract, ANSI/NISO Z39.19</a></p></info><version id="SpecCV-NISO"><titleStmt><respStmt id="pSV001"><resp>Editor</resp><name type="org">ANSI/NISO Z39.19</name></respStmt></titleStmt><versionNumber type="major">ANSI/NISO Z39.19-2005</versionNumber><date>2005-07-25</date>
-        <!-- <relation target="SpecThesauri-1" type=""></relation> --><address>http://www.niso.org</address></version></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecCV" standardSettingBody="SBNISO" topic="TopicKnowledgeRepresentation TopicControlledVocabulary TopicThesaurus" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies</title>
+        <abbr>Controlled Vocabulary</abbr>
+    </titleStmt>
+    <scope>Standard for the construction, format and management of controlled vocabularies</scope>
+    <keyword>thesaurus</keyword>
+    <keyword>information retrieval</keyword>
+    <keyword>terms</keyword>
+    <keyword>relationships</keyword>
+    <keyword>vocabulary</keyword>
+    <info type="description">
+        <p>"This Standard presents guidelines and conventions for the contents,
+            display, construction, testing, maintenance, and management of monolingual
+            controlled vocabularies. This Standard focuses on controlled vocabularies that are
+            used for the representation of content objects in knowledge organization systems
+            including lists, synonym rings, taxonomies, and thesauri. This Standard should be
+            regarded as a set of recommendations based on preferred techniques and
+            procedures. Optional procedures are, however, sometimes described, e.g., for the
+            display of terms in a controlled vocabulary. The primary purpose of vocabulary
+            control is to achieve consistency in the description of content objects and to facilitate
+            retrieval. Vocabulary control is accomplished by three principal methods: defining the
+            scope, or meaning, of terms; using the equivalence relationship to link synonymous
+            and nearly synonymous terms; and distinguishing among homographs."
+            <a href="http://www.niso.org/apps/group_public/project/details.php?project_id=46">Abstract, ANSI/NISO Z39.19</a>
+        </p>
+    </info>
+    <version id="SpecCV-NISO" usedInCLARINCenter="TLA CLARIN-PL">
+        <titleStmt>
+            <abbr internal="yes">Controlled Vocabulary-2005</abbr>
+            <respStmt id="pSV001">
+                <resp>Editor</resp>
+                <name type="org">ANSI/NISO Z39.19</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">ANSI/NISO Z39.19-2005</versionNumber>
+        <date>2005-07-25</date>
+        <!-- <relation target="SpecThesauri-1" type=""></relation> -->
+        <address>http://www.niso.org</address>
+        <relation target="SpecThesaurus-IFLA-1" type="isSimilarTo"/>
+    </version>
+</spec>

@@ -1,6 +1,36 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecThesauri-IFLA" standardSettingBody="SBIFLA" topic="TopicThesaurus TopicControlledVocabulary" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Guidelines for Multilingual Thesauri</title><abbr internal="yes">Multilingual Thesaurus</abbr></titleStmt><scope>Guidelines for building, management and using of thesauri</scope><keyword>Thesaurus</keyword><keyword>Vocabulary</keyword><keyword>Information retrieval</keyword><keyword>Data representation</keyword><info type="description"><p>The Guidelines for Multilingual Thesauri was established in 2009 by the Working Group on Guidelines for Multilingual Thesauri 
-            within IFLA. The purpose of these document guidelines is to describe the structure and the principle of building multilingual thesauri.</p><p>On the one hand, the document provides the guidelines for building a new multilingual thesaurus with two different building approaches: 
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecThesauri-IFLA" standardSettingBody="SBIFLA" topic="TopicThesaurus TopicControlledVocabulary" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Guidelines for Multilingual Thesauri</title>
+        <abbr internal="yes">Multilingual Thesaurus</abbr>
+    </titleStmt>
+    <scope>Guidelines for building, management and using of thesauri</scope>
+    <keyword>Thesaurus</keyword>
+    <keyword>Vocabulary</keyword>
+    <keyword>Information retrieval</keyword>
+    <keyword>Data representation</keyword>
+    <info type="description">
+        <p>The Guidelines for Multilingual Thesauri was established in 2009 by the Working Group on Guidelines for Multilingual Thesauri 
+            within IFLA. The purpose of these document guidelines is to describe the structure and the principle of building multilingual thesauri.</p>
+        <p>On the one hand, the document provides the guidelines for building a new multilingual thesaurus with two different building approaches: 
             According to the first approach, the build of the thesaurus starts with one language. After the termination another language or 
-            other languages can be added to it. The second approach starts building a new thesaurus with several languages at the same time.</p><p>On the other hand, the document provides guidelines for building a new thesaurus by merging or linking existing thesauri.</p><p>The Guidelines complements the already existing standards for controlled vocabularies such as IFLA's Principles Underlying Subject 
+            other languages can be added to it. The second approach starts building a new thesaurus with several languages at the same time.</p>
+        <p>On the other hand, the document provides guidelines for building a new thesaurus by merging or linking existing thesauri.</p>
+        <p>The Guidelines complements the already existing standards for controlled vocabularies such as IFLA's Principles Underlying Subject 
             Heading Languages (SHLs) and the ANSI/NISO Z39.19-2005 (Guidelines for the Construction, Format, and Management of Monolingual 
-            Controlled Vocabularies).</p><p>The Guidelines are on the Web Page of IFLA free available.</p></info><version id="SpecThesaurus-IFLA-1"><titleStmt><respStmt id="paTh06"><resp>Editor</resp><name>Working Group on Guidelines for Multilingual Thesauri</name></respStmt></titleStmt><date>2009</date><address>http://www.ifla.org/publications/ifla-professional-reports-115</address><relation target="SpecCV-NISO" type="complements"/></version></spec>
+            Controlled Vocabularies).</p>
+        <p>The Guidelines are free available on the Web Page of IFLA.</p>
+    </info>
+    <relation target="SpecThesauri" type="isSimilarTo"/>
+    <version id="SpecThesaurus-IFLA-1">
+        <titleStmt>
+            <abbr internal="yes">Multilingual Thesaurus-2009</abbr>
+            <respStmt id="paTh06">
+                <resp>Editor</resp>
+                <name>Working Group on Guidelines for Multilingual Thesauri</name>
+            </respStmt>
+        </titleStmt>
+        <date>2009</date>
+        <address>http://www.ifla.org/publications/ifla-professional-reports-115</address>
+        <relation target="SpecCV-NISO" type="isSimilarTo"/>
+    </version>
+</spec>

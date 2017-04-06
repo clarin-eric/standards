@@ -1,0 +1,12 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecIPA" standardSettingBody="SBOther" topic="TopicCharacterEncoding TopicFormatting" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>International Phonetic Alphabet</title><abbr>IPA</abbr></titleStmt><scope>A standardization of phonetic and phonemic transcription of language</scope><keyword>Unicode</keyword><keyword>phonetic annotation</keyword><keyword>oral language</keyword><keyword>transcription</keyword><info type="description"><p>The International Phonetic Alphabet (IPA) has been developed since 1886 by the
+            International Phonetic Association and standardizes the set of symbols for
+            representation of sounds in written form for almost all world languages. Primarily, IPA
+            was developed based on the Roman alphabet, but then it contains some letters and
+            additional symbols from other scripts. </p><p>Each IPA symbol consists of one or more elements (letters, diacritics and prosody marks)
+            and is designed to represent only those qualities of speech that are distinctive
+            (characteristics that show the significant differences between sounds) in spoken
+            language, such as phonemes, intonations, separation of word and syllables. IPA does not
+            define symbols describing information such as clicks, pops, gnashing of teeth; spoken
+            rapidly or lisping; transcription of atypical speech, but there are extensions to IPA
+            symbols that cover the transcription of such sounds. </p><p> IPA is widely used in all areas where the analysis of the oral speech is focused on
+            lexicography, linguistics, translation, speech-language pathology.</p></info><relation target="SpecUnicode" type="isPartOf"><info type="description"><p>The Unicode defines codes for symbols used in the IPA</p></info></relation><relation target="SpecUCS" type="isPartOf"><info type="description"><p>The UCS contains an IPA section</p></info></relation><version id="SpecIPA-2005"><titleStmt><abbr internal="yes">IPA-2005</abbr><respStmt><resp>Editor</resp><name type="org">The International Phonetic Association</name></respStmt></titleStmt><date>2005</date><address>https://www.langsci.ucl.ac.uk/ipa/index.html</address></version></spec>

@@ -1,0 +1,10 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecRQL" standardSettingBody="SBICS" topic="TopicQuery" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>RDF Query Language</title><abbr>RQL</abbr></titleStmt><scope>Query Language for RDF</scope><info type="description"><p>RQL is a typed language following a functional approach and supports generalized path expressions
+            featuring variables on both labels for nodes (classes) and edges (properties). RQL relies on a formal
+            graph model (as opposed to other triple-based RDF QLs) that captures the RDF modeling primitives
+            and permits the interpretation of superimposed resource descriptions by means of one or more
+            schemas.</p><p>RQL is able to combine schema and data querying while exploiting the taxonomies of labels and
+            multiple classification of resources, using pattern-matching facilities. The RQL Interpreter consists
+            of four modules a parser, analyzing the syntax of queries; a graph constructor, capturing the
+            semantics of queries in terms of typing and interdependencies of involved expressions; a SQL
+            Translator, which rewrites RQL to efficient SQL queries; and a evaluation engine, accessing the
+            underlying database via SQL queries.</p></info><version id="SpecRQL-2.2"><titleStmt><abbr internal="yes">RQL 2.2</abbr><respStmt><resp>Author</resp><name>Greg Karvounarakis</name></respStmt></titleStmt><versionNumber type="minor">2.2</versionNumber><address type="URL">http://athena.ics.forth.gr:9090/RDF/RQL/index.html</address></version></spec>

@@ -6,6 +6,10 @@ declare option exist:serialize "method=xhtml media-type=text/html indent=yes doc
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 
+(: Define the contact page
+   @author margaretha
+:)
+
 <html>
     <head>
         <title>Contact</title>
@@ -28,22 +32,14 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                     <img src="{app:resource("werthmann.png","img")}"/> <br />
                     <b>Eliza Margaretha </b><br />
                     <img src="{app:resource("margaretha.png","img")}"/><br />
-                   
+                   <b>Dr. Maik Stührenberg </b><br />
+                    <img src="{app:resource("stuehrenberg-ids.png","img")}"/> <br />
                     
-                    Institute für Deutsche Sprache <br />
+                    Institut für Deutsche Sprache <br />
                     R5, 6-13 <br />
                     68161 Mannheim <br />
                     Germany
                 </p>
-                
-                 <p><b>Dr. Maik Stührenberg </b><br />
-                    <img src="{app:resource("stuehrenberg.png","img")}"/> <br />
-                    Universität Bielefeld <br />
-                    Fakultät für Linguistik und Literaturwissenschaft <br />
-                    Universitätsstraße 25 <br />
-                    33615 Bielefeld<br />
-                    Germany
-                 </p>
                  </div>
             </div>            
             <div class="footer">{app:footer()}</div>        

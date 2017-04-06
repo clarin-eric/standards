@@ -7,9 +7,13 @@ import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace sbm = "http://clarin.ids-mannheim.de/standards/sb-module" at "../modules/sb.xql";
 
+(: Define the list of standard body page 
+   @author margaretha
+:)
+
 <html>
 	<head>
-        <title>Standard Setting Bodies</title>
+        <title>Standard Bodies</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>        
         <script type="text/javascript" src="{app:resource("edit.js","js")}"/>        
     </head>

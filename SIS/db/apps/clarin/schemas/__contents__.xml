@@ -1,12 +1,12 @@
 <collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/schemas" owner="admin" group="dba" mode="755" created="2012-12-11T11:40:56+01:00" version="1">
     <acl entries="0" version="1"/>
-    <resource type="XMLResource" name="catalog.xsd" owner="admin" group="dba" mode="644" created="2012-12-11T11:40:56+01:00" modified="2012-12-11T11:40:56+01:00" filename="catalog.xsd" mimetype="application/xml">
+    <resource type="XMLResource" name="catalog.xsd" owner="admin" group="dba" mode="644" created="2014-05-16T15:48:10+02:00" modified="2014-05-16T15:48:10+02:00" filename="catalog.xsd" mimetype="application/xml">
         <acl entries="0" version="1"/>
     </resource>
-    <resource type="XMLResource" name="spec.xsd" owner="admin" group="dba" mode="644" created="2014-01-27T14:57:38+01:00" modified="2014-01-27T14:57:38+01:00" filename="spec.xsd" mimetype="application/xml">
+    <resource type="XMLResource" name="spec.xsd" owner="admin" group="dba" mode="644" created="2015-01-12T15:53:51+01:00" modified="2015-09-09T16:38:51+02:00" filename="spec.xsd" mimetype="application/xml">
         <acl entries="0" version="1"/>
     </resource>
-    <resource type="XMLResource" name="xml.xsd" owner="admin" group="dba" mode="644" created="2012-12-11T11:40:56+01:00" modified="2012-12-11T11:40:56+01:00" filename="xml.xsd" mimetype="application/xml">
+    <resource type="XMLResource" name="xml.xsd" owner="admin" group="dba" mode="644" created="2014-05-16T15:48:10+02:00" modified="2014-05-16T15:48:10+02:00" filename="xml.xsd" mimetype="application/xml">
         <acl entries="0" version="1"/>
     </resource>
 </collection>

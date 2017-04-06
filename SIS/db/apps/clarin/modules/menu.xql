@@ -3,6 +3,10 @@ xquery version "1.0";
 module namespace menu = "http://clarin.ids-mannheim.de/standards/menu";
 import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 
+(:  Define the menu
+    @author margaretha
+:)
+
 declare function menu:view(){
     <div class="menu" xmlns="http://www.w3.org/1999/xhtml">    
         <div style="margin-left:0px;">
@@ -26,12 +30,17 @@ declare function menu:view(){
                         </td>
                     </tr>
                  else()
-                }                            
+                }   
+                <tr>
+                    <td colspan="2" class="tdmenu">
+                        <a style="display:block"  href="{app:link("views/recommendation.xq")}">Recommendations</a>
+                    </td>
+               </tr>
                 <tr>
                     <td colspan="2" class="tdmenu">
                         <a style="display:block"  href="{app:link("views/list-sbs.xq")}">Standard bodies</a>
                     </td>
-               </tr>
+               </tr>               
                <tr>                    
                     <td colspan="2" class="tdmenu">
                         <a style="display:block"  href="{app:link("views/list-topics.xq")}">Topics</a>

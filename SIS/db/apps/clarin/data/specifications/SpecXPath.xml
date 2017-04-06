@@ -1,9 +1,81 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecXPath" standardSettingBody="SBW3C" topic="TopicMarkupLanguage TopicTransformation" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>XML Path  Language</title><abbr>XPath</abbr></titleStmt><scope>XPath is a language for addressing parts of an XML document, designed to be used by other host languages, such as XSLT.</scope><info type="description"><p>XPath is a language offering the possibility to navigate through elements and attributes and to find information in an 
-    XML document. XPath is developed by the World Wide Web Consortium (W3C) and is ranked as an important element in W3C's 
-    XSLT standard.</p><p>However, it should be noted here that XPath is not complete in itself but rather designed to be embedded in a host 
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecXPath" standardSettingBody="SBW3C" topic="TopicMarkupLanguage TopicTransformation" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>XML Path  Language</title>
+        <abbr>XPath</abbr>
+    </titleStmt>
+    <scope>XPath is a language for addressing parts of an XML document, designed to be used by other host languages, such as XSLT.</scope>
+    <info type="description">
+        <p>XPath is a language offering the possibility to navigate through elements and attributes, and find information in an 
+    XML document. XPath is developed by the World Wide Web Consortium (W3C) and is ranked as an important element in the W3C's 
+    XSLT standard.</p>
+        <p>However, it should be noted here that XPath is not complete in itself, but rather designed to be embedded in a host 
       language. For example, with XPath, XSLT follows the simple tree-structured data model of XML documents and finds 
-      the necessary elements and attributes for transformation.</p><p>XPath was designed to be used not only by XSLT, but also by others XML parsing softwares such as XPointer or XQuery.</p><p>The two main tasks of XPath is to locate and retrieve nodes or elements in a XML tree and to perform operations over data. 
+      the necessary elements and attributes for transformation.</p>
+        <p>XPath was designed to be used not only by XSLT, but also by others XML parsing softwares such as XPointer or XQuery.</p>
+        <p>The two main tasks of XPath is to locate and retrieve nodes or elements in a XML tree and to perform operations over data. 
         That can be operations over numerical data, for example count, add or round; or operations over strings, for example 
-        return the part of a (sub-)string, or return the length of a string etc.</p><p>There are two versions of XPath in use today: XPath 1.0 and XPath 2.0. The XPath 2.0 is designed to be used in 
-          XSLT 2.0 and XPath 1.0 in XSLT 1.0.</p><p>The important difference between the two versions is, that XPath 2.0 supports more expressions and types, has new data model, 
-            new operators and more functions. </p></info><version id="SpecXPath1.0" status="W3C Recommendation"><titleStmt><respStmt id="m8rvSu"><resp>Editor</resp><name>James Clark</name><name>Steve DeRose</name></respStmt></titleStmt><versionNumber type="major">1.0</versionNumber><date>1999-10-16</date><address type="URL">http://www.w3.org/TR/1999/REC-xpath-19991116/</address><relation target="SpecXPath2.0" type="isSubsetOf"/></version><version id="SpecXPath2.0" status="W3C Recommendation"><titleStmt><respStmt id="v6ln2C"><resp>Editor</resp><name>Anders Berglund</name><name>Scott Boag</name><name>Don Chamberlin</name><name>Mary F. Fernández</name><name> Michael Kay</name><name>Jonathan Robie</name><name>Jérôme Siméon </name></respStmt></titleStmt><versionNumber type="major">2.0 (Second Edition)</versionNumber><date>2010-12-14</date><address type="URL">http://www.w3.org/TR/2010/REC-xpath20-20101214/</address><relation target="SpecXSLT2.0" type="isUsedBy"/><relation target="SpecXQuery1.0" type="isSubsetOf"/><relation target="SpecXPath1.0" type="isSupersetOf"/></version></spec>
+        return the part of a (sub-)string, or return the length of a string etc.</p>
+        <p>There are two versions of XPath in use today: XPath 1.0 and XPath 2.0. The XPath 2.0 is designed to be used in 
+          XSLT 2.0 and XPath 1.0 in XSLT 1.0. The important differences between the two versions is, that XPath 2.0 supports more        expressions and types, has new data model, 
+            new operators and more functions. </p>
+    </info>
+    <relation target="SpecDSSSL-IS" type="isInspiredBy"/>
+    <relation target="SpecITS2-0" type="isUsedBy"/>
+    <version id="SpecXPath1.0" status="W3C Recommendation">
+        <titleStmt>
+            <abbr internal="yes">XPath-1999</abbr>
+            <respStmt id="m8rvSu">
+                <resp>Editor</resp>
+                <name>James Clark</name>
+                <name>Steve DeRose</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">1.0</versionNumber>
+        <date>1999-10-16</date>
+        <address type="URL">http://www.w3.org/TR/1999/REC-xpath-19991116/</address>
+        <relation target="SpecXSLT1.0" type="isUsedBy"/>
+        <relation target="SpecXPath3.0" type="isSubsetOf"/>
+        <relation target="SpecXPath2.0" type="isSubsetOf"/>
+    </version>
+    <version id="SpecXPath2.0" status="W3C Recommendation" usedInCLARINCenter="TLA CLARIN-PL UC IDS">
+        <titleStmt>
+            <abbr internal="yes">XPath-2010</abbr>
+            <respStmt id="v6ln2C">
+                <resp>Editor</resp>
+                <name>Anders Berglund</name>
+                <name>Scott Boag</name>
+                <name>Don Chamberlin</name>
+                <name>Mary F. Fernández</name>
+                <name> Michael Kay</name>
+                <name>Jonathan Robie</name>
+                <name>Jérôme Siméon </name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">2.0</versionNumber>
+        <versionNumber type="minor">Second Edition</versionNumber>
+        <date>2010-12-14</date>
+        <address type="URL">http://www.w3.org/TR/2010/REC-xpath20-20101214/</address>
+        <relation target="SpecXSLT2.1" type="isUsedBy"/>
+        <relation target="SpecXSLT2.0" type="isUsedBy"/>
+        <relation target="SpecXPath1.0" type="isSupersetOf"/>
+        <relation target="SpecXQuery1.0" type="isSubsetOf"/>
+    </version>
+    <version id="SpecXPath3.0" status="W3C Recommendation">
+        <titleStmt>
+            <abbr>XPath-2014</abbr>
+            <respStmt>
+                <resp>Editor</resp>
+                <name>Jonathan Robie</name>
+                <name>Don Chamberlin</name>
+                <name>Michael Dyck</name>
+                <name>John Snelson</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">3.0</versionNumber>
+        <date>2014-04-08</date>
+        <address type="URL">http://www.w3.org/TR/2014/REC-xpath-30-20140408/</address>
+        <relation target="SpecXQuery3.0" type="isSubsetOf"/>
+        <relation target="SpecXSLT2.1" type="isUsedBy"/>
+        <relation target="SpecXPath1.0" type="isSupersetOf"/>
+    </version>
+</spec>

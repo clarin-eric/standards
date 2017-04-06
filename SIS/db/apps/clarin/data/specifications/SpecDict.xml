@@ -1,12 +1,83 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecDict" standardSettingBody="SBISO" topic="TopicTerminology TopicControlledVocabulary" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Presentation/representation of entries in dictionaries — Requirements, recommendations and information</title><abbr internal="yes">DictionaryEntry-RePresentation</abbr></titleStmt><scope>Standard for print dictionary representation</scope><keyword>Dictionaries</keyword><keyword>vocabulary</keyword><keyword>terminology</keyword><keyword>data representation</keyword><info type="description"><p>"ISO 1951:2007 deals with monolingual and multilingual, general and specialized dictionaries. It specifies a formal generic 
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecDict" standardSettingBody="SBISO" topic="TopicTerminology TopicControlledVocabulary" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Presentation/representation of entries in dictionaries — Requirements, recommendations and information</title>
+        <abbr internal="yes">DictionaryEntry-RePresentation</abbr>
+    </titleStmt>
+    <scope>Standard for print dictionary representation</scope>
+    <keyword>Dictionaries</keyword>
+    <keyword>vocabulary</keyword>
+    <keyword>terminology</keyword>
+    <keyword>data representation</keyword>
+    <info type="description">
+        <p>"ISO 1951:2007 deals with monolingual and multilingual, general and specialized dictionaries. It specifies a formal generic 
             structure independent of the publishing media and it proposes means of presenting entries in print and electronic dictionaries. 
             The relationship between the formal structure and the presentation of entries used by publishers and read by 
-            users is explained in examples provided in the informative annexes.</p><p>The objective of ISO 1951:2007 is to facilitate the production, merging, comparison, extraction, exchange, dissemination and 
+            users is explained in examples provided in the informative annexes.</p>
+        <p>The objective of ISO 1951:2007 is to facilitate the production, merging, comparison, extraction, exchange, dissemination and 
             retrieval of lexicographical data in dictionaries. Following a lexicographical lemma-oriented approach, it does not deal with
             concept-oriented works as defined in ISO 704." 
             (<a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=36609">Abstract, ISO 1951:2007</a>)
-        </p></info><info type="recReading"><biblStruct id="rec01R" type="bookSection"><analytic><title>Representing human and machine dictionaries in Markup languages</title><author><forename>Lothar</forename><surname>Lemnitzer</surname></author><author><forename>Laurent</forename><surname>Romary</surname></author><author><forename>Andreas</forename><surname>Witt</surname></author></analytic><monogr><title>Dictionaries. An International Encyclopedia of Lexicography. 
-                    Supplementary volume: Recent developments with special focus on computational lexicography</title><editor><forename>Ulrich</forename><surname>Heid</surname></editor><editor><forename>Rufus Hjalmar</forename><surname>Gouws</surname></editor><editor><forename>Stefan J.</forename><surname>Schierholz</surname></editor><editor><forename>Wolfgang</forename><surname>Schweickard</surname></editor><editor><forename>Herbert Ernst</forename><surname>Wiegand</surname></editor><imprint><publisher>deGruyter</publisher><date>2010</date></imprint></monogr></biblStruct></info><version id="SpecDict-IS" status="International Standard"><titleStmt><abbr internal="yes">DictionaryEntry-RePresentation-2010</abbr><respStmt id="pDict3"><resp>Editor</resp><name type="org" id="SBISO-TC37-SC2">ISO/TC 37/SC 2</name></respStmt></titleStmt><versionNumber type="major">ISO 1951:2007</versionNumber><date>2010-07-20</date><relation target="SpecDcr" type="uses"/></version>
+        </p>
+    </info>
+    <info type="recReading">
+        <biblStruct id="rec01R" type="bookSection">
+            <analytic>
+                <title>Representing human and machine dictionaries in Markup languages</title>
+                <author>
+                    <forename>Lothar</forename>
+                    <surname>Lemnitzer</surname>
+                </author>
+                <author>
+                    <forename>Laurent</forename>
+                    <surname>Romary</surname>
+                </author>
+                <author>
+                    <forename>Andreas</forename>
+                    <surname>Witt</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <title>Dictionaries. An International Encyclopedia of Lexicography. 
+                    Supplementary volume: Recent developments with special focus on computational lexicography</title>
+                <editor>
+                    <forename>Ulrich</forename>
+                    <surname>Heid</surname>
+                </editor>
+                <editor>
+                    <forename>Rufus Hjalmar</forename>
+                    <surname>Gouws</surname>
+                </editor>
+                <editor>
+                    <forename>Stefan J.</forename>
+                    <surname>Schierholz</surname>
+                </editor>
+                <editor>
+                    <forename>Wolfgang</forename>
+                    <surname>Schweickard</surname>
+                </editor>
+                <editor>
+                    <forename>Herbert Ernst</forename>
+                    <surname>Wiegand</surname>
+                </editor>
+                <imprint>
+                    <publisher>deGruyter</publisher>
+                    <date>2010</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+    </info>
+    <version id="SpecDict-IS" status="International Standard">
+        <titleStmt>
+            <abbr internal="yes">DictionaryEntry-RePresentation-2010</abbr>
+            <respStmt id="pDict3">
+                <resp>Editor</resp>
+                <name type="org" id="SBISO-TC37-SC2">ISO/TC 37/SC 2</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">ISO 1951:2007</versionNumber>
+        <date>2010-07-20</date>
+        <relation target="SpecDcr" type="uses"/>
+    </version>
     <!-- A dictionary entry presented encoded using the ISO 1951 -->
     
     <!-- 
@@ -28,4 +99,5 @@
             </SeeAlso>
         </Etymology>
     </DictionaryEntry>
-     --></spec>
+     -->
+</spec>

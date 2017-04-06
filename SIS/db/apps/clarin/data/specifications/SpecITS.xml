@@ -1,10 +1,99 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecITS" standardSettingBody="SBW3C" topic="TopicDataCat" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Internationalization Tag Set</title><abbr>ITS</abbr></titleStmt><scope>Standard for Internationalization and Localization of XML-based Contents</scope><keyword>XML</keyword><keyword>internationalization</keyword><keyword>localization</keyword><keyword>generic elements and attributes</keyword><info type="description"><p>ITS stands for Internationalization Tag Set and is a specification developed within the W3C. First version of the ITS  
-            was published in 2007. The second version has been developed since 2012 and currently is a W3C Working Draft.</p><p>The goal of the specification is to specify a set of elements and attributes that can be integrated into schemas for XML documents to 
-            support the internationalization and localization aspects.</p><p>It defines data categories such as terminology, directionality or translation in a standard way. The specification is
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecITS" standardSettingBody="SBW3C" topic="TopicDataCat" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Internationalization Tag Set</title>
+        <abbr>ITS</abbr>
+    </titleStmt>
+    <scope>Standard for Internationalization and Localization of XML-based Contents</scope>
+    <keyword>XML</keyword>
+    <keyword>internationalization</keyword>
+    <keyword>localization</keyword>
+    <keyword>generic elements and attributes</keyword>
+    <info type="description">
+        <p>ITS stands for Internationalization Tag Set and is a specification developed within the W3C. First version of the ITS  
+            was published in 2007. The second version has been developed since 2012 and currently is a W3C Working Draft.</p>
+        <p>The goal of the specification is to specify a set of elements and attributes that can be integrated into schemas for XML documents to 
+            support the internationalization and localization aspects.</p>
+        <p>It defines data categories such as terminology, directionality or translation in a standard way. The specification is
             to use the content-of-schemas and XML instances, and be effective to localize them. In this manner it allows to adapt the content 
-            at low cost.</p></info><version id="SpecITS1-0" status="W3C Recommendation"><titleStmt><title>Internationalization Tag Set (ITS) Version 1.0 </title><respStmt><resp>Editor</resp><name>Christian Lieske</name><name>Felix Sasaki</name></respStmt></titleStmt><versionNumber type="major">1.0</versionNumber><date>2007-04-03</date><info type="description"><p>The ITS 1.0 is a W3C Recommendation published in April 2007. The specification provides separately a set of data categories and
+            at low cost.</p>
+    </info>
+    <version id="SpecITS1-0" status="W3C Recommendation">
+        <titleStmt>
+            <title>Internationalization Tag Set (ITS) Version 1.0 </title>
+            <abbr internal="yes">ITS-2007</abbr>
+            <respStmt>
+                <resp>Editor</resp>
+                <name>Christian Lieske</name>
+                <name>Felix Sasaki</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">1.0</versionNumber>
+        <date>2007-04-03</date>
+        <info type="description">
+            <p>The ITS 1.0 is a W3C Recommendation published in April 2007. The specification provides separately a set of data categories and
                the implementations of these data categories, which are independent from schema language and schema language specific 
-               declaration (such as XML DTDs, XML Schema, RELAX NG). </p></info><address type="URL">http://www.w3.org/TR/2007/REC-its-20070403/</address><relation target="SpecXML1" type="isUsedBy"><info type="description"><p>optional</p></info></relation><relation target="SpecXSD" type="isUsedBy"><info type="description"><p>optional</p></info></relation><relation target="SpecRNG" type="isUsedBy"><info type="description"><p>optional</p></info></relation></version><version id="SpecITS2-0" status="W3C Working Draft"><titleStmt><title>Internationalization Tag Set (ITS) Version 2.0</title><respStmt><resp>Editor</resp><name>Shaun McCane</name><name>Dave Lewis</name><name>Arle Lommel</name><name>Jirka Kosek</name><name>Felix Sasaki</name><name>Yves Savourel</name></respStmt></titleStmt><versionNumber type="major">2.0</versionNumber><date>2012-10-23</date><info type="description"><p>Similarities and Differences to ITS 1.0:</p><p>ITS 2.0 adopts from the previous version ITS 1.0:</p><ul><li>the use of data categories to define discrete units of functionality</li><li>the separation of data category definition from the mapping of the data category to a given content format</li><li>the conformance principle of ITS 1.0 that an implementation only needs to implement one data category to claim conformance to ITS 2.0</li></ul><p>What new in this version are :</p><ul><li>ITS 2.0 has new data category definitions in addition to all the data category definitions in ITS 1.0.</li><li>ITS 2.0 adds a number of new data categories, which are not in ITS 1.0.</li><li>ITS 2.0 specifies implementations of data categories not only for XML, but also for HTML5.</li><li>Unlike ITS 1.0, the ITS 2.0 data categories are intended to be format independent, and thus it has some supports for XML, HTML5, 
+               declaration (such as XML DTDs, XML Schema, RELAX NG). </p>
+        </info>
+        <address type="URL">http://www.w3.org/TR/2007/REC-its-20070403/</address>
+        <relation target="SpecITS2-0" type="isRevisedBy"/>
+        <relation target="SpecXML1" type="isUsedBy">
+            <info type="description">
+                <p>optional</p>
+            </info>
+        </relation>
+        <relation target="SpecXSD" type="isUsedBy">
+            <info type="description">
+                <p>optional</p>
+            </info>
+        </relation>
+        <relation target="SpecRNG" type="isUsedBy">
+            <info type="description">
+                <p>optional</p>
+            </info>
+        </relation>
+    </version>
+    <version id="SpecITS2-0" status="W3C Working Draft">
+        <titleStmt>
+            <title>Internationalization Tag Set (ITS) Version 2.0</title>
+            <abbr internal="yes">ITS-2012</abbr>
+            <respStmt>
+                <resp>Editor</resp>
+                <name>Shaun McCane</name>
+                <name>Dave Lewis</name>
+                <name>Arle Lommel</name>
+                <name>Jirka Kosek</name>
+                <name>Felix Sasaki</name>
+                <name>Yves Savourel</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">2.0</versionNumber>
+        <date>2012-10-23</date>
+        <info type="description">
+            <p>Similarities and Differences to ITS 1.0:</p>
+            <p>ITS 2.0 adopts from the previous version ITS 1.0:</p>
+            <ul>
+                <li>the use of data categories to define discrete units of functionality</li>
+                <li>the separation of data category definition from the mapping of the data category to a given content format</li>
+                <li>the conformance principle of ITS 1.0 that an implementation only needs to implement one data category to claim conformance to ITS 2.0</li>
+            </ul>
+            <p>What new in this version are :</p>
+            <ul>
+                <li>ITS 2.0 has new data category definitions in addition to all the data category definitions in ITS 1.0.</li>
+                <li>ITS 2.0 adds a number of new data categories, which are not in ITS 1.0.</li>
+                <li>ITS 2.0 specifies implementations of data categories not only for XML, but also for HTML5.</li>
+                <li>Unlike ITS 1.0, the ITS 2.0 data categories are intended to be format independent, and thus it has some supports for XML, HTML5, 
                     and NIF. A data category implementation only needs to support a single content format mapping in order to support a 
-                    claim of ITS 2.0 conformance.</li><li>ITS 2.0 provides algorithms to generate NIF out of HTML5 or XML with ITS 2.0 metadata.</li><li> A global implementation of ITS 2.0 requires at least the XPath version 1.0. Other versions of XPath or other query languages 
-                    (e.g. CSS selectors) can be expressed via a dedicated query language attribute.</li></ul><p>For more information, see the W3C Internationalization Tag Set (ITS) <a href="http://www.w3.org/TR/its20/">Version 2.0</a></p></info><address type="URL">http://www.w3.org/TR/2012/WD-its20-20121023/</address><relation target="SpecITS1-0" type="isReVersionOf"/><relation target="SpecXML" type="isUsedBy"/></version></spec>
+                    claim of ITS 2.0 conformance.</li>
+                <li>ITS 2.0 provides algorithms to generate NIF out of HTML5 or XML with ITS 2.0 metadata.</li>
+                <li> A global implementation of ITS 2.0 requires at least the XPath version 1.0. Other versions of XPath or other query languages 
+                    (e.g. CSS selectors) can be expressed via a dedicated query language attribute.</li>
+            </ul>
+            <p>For more information, see the W3C Internationalization Tag Set (ITS) <a href="http://www.w3.org/TR/its20/">Version 2.0</a>
+            </p>
+        </info>
+        <address type="URL">http://www.w3.org/TR/2012/WD-its20-20121023/</address>
+        <relation target="SpecITS1-0" type="isRevisionOf"/>
+        <relation target="SpecXML" type="isUsedBy"/>
+        <relation target="SpecXPath" type="uses"/>
+    </version>
+</spec>

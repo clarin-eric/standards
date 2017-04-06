@@ -1,10 +1,26 @@
 fields=1; nkeys=0; nrefs=0; nprefs=0; npvrefs=0; nvrefs=0; ntopics=0; nrels=0; ndesc=1; 
 nurls={}; nvrels={}; nrefv={}
-npids=new Array(); resp=[]; resptype=[]; relation=[]; reltarget=[]; respIds=new Array();
+npids=new Array(); relation=[]; reltarget=[]; 
 if (typeof String.prototype.startsWith != 'function') {
     String.prototype.startsWith = function (str){
       return this.slice(0, str.length) == str;
     };
+}
+
+function showResp(resptype,resporg,respname){
+	e = document.getElementById(resptype);
+	if (e.options[e.selectedIndex].value == 'person'){
+        document.getElementById(respname).style.display = 'inline';
+        document.getElementById(resporg).style.display = 'none';
+    }
+	else if (e.options[e.selectedIndex].value == 'org'){		
+		document.getElementById(respname).style.display = 'none';
+		document.getElementById(resporg).style.display = 'inline';
+	}
+	else {
+		document.getElementById(respname).style.display = 'none';
+	    document.getElementById(resporg).style.display = 'none';
+	}
 }
 
 function openEditor(frame){   
@@ -27,16 +43,26 @@ function generatePid(){
     return randomstring
 }
 
-function getPid(field){
+function getPid(path,field){
     field = field.toString()
     l = field.length
-    if (field.startsWith('newtext')){        
+    
+    if(path == "vno" ||path.startsWith('resp') || path.startsWith('newresp')){
+        pid=field;
+    }    
+    else if (path.startsWith('vurl')){        
+        pid=path.substring(4,path.length)
+    }
+    else if (path.startsWith('vrel')){
+        pid = document.getElementById(path+'pid').innerHTML                
+    } 
+    else if (field.startsWith('newtext')){
         pid=field.substring(l-6,l)
     }
     else if (field.startsWith('vname') || field.startsWith('vabbr') || field.startsWith('vdate')){        
         pid=field.substring(5,l)        
     }
-    else if (field.startsWith('vnomajor') || field.startsWith('vnominor') || field.startsWith('features')){
+    else if (field.startsWith('features')){
         pid=field.substring(8,l)
     }
     else if (field.startsWith('vstatus')){
@@ -58,6 +84,11 @@ function getValue(path,field){
         }
         val = val.substring(0, val.length - 1);
     }
+    else if (path=="abbr"){
+        e = document.getElementById(field+"internal")
+        s = e.options[e.selectedIndex].value        
+        val = document.getElementById(path).value+"#"+s
+    }
     else if (path =='key'){        
         for (i=0; i<(field+nkeys); i++){            
             e = document.getElementById(path+(i+1)).value            
@@ -70,8 +101,26 @@ function getValue(path,field){
         if (e) 
             val = e.options[e.selectedIndex].value       
     } 
-    else if (path.startsWith('resp') || path.startsWith('newresp')){        
-        val = document.getElementById(path).value
+    else if (path =='vno'){
+        vnomajor = document.getElementById(path+"major"+field).value
+        vnominor = document.getElementById(path+"minor"+field).value
+        val = vnomajor + "###" + vnominor
+    }
+    else if (path.startsWith('resp') || path.startsWith('newresp')){
+        respid = path.substring(4,path.length)        
+        resp = document.getElementById("resp"+respid).value        
+        resptype = document.getElementById("resptype"+respid).value
+        respnames = document.getElementById("respname"+respid).value
+        resporg = document.getElementById("resporg"+respid).value
+        //alert(resporg)
+        if (resp && resptype == 'person' && respnames != null && respnames!=''){
+            val = resp+"###"+resptype+"###"+ respnames
+        }
+        else if (resp && resptype == 'org' && resporg!=null && resporg !=''){            
+            val = resp+"###"+resptype+"###"+ resporg
+        }
+        else val=''
+        
     }    
     else if (path.startsWith('vurl')){       
        if (nurls.hasOwnProperty(path)== '') nurls[path] = 0       
@@ -93,14 +142,6 @@ function getValue(path,field){
     }
     else {val= document.getElementById(field).value}    
     return val
-}
-
-function setRespIds(ids){
-    respIds = ids;
-}
-
-function setresp(r,rt){
-    resp = r; resptype=rt;    
 }
 
 function setrel(r,rt){
@@ -147,6 +188,12 @@ function removeErr(field,cname,err){
         document.getElementById(err).style.display = 'none';
 }
 
+function markErr(element){
+    className = document.getElementById(element).className
+    if (className.contains("Error")) {}
+    else document.getElementById(element).className = className+"Error";
+}
+
 function update(specid,path,field,frame){
     var xmlhttp;    
     if (window.XMLHttpRequest) // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -156,35 +203,83 @@ function update(specid,path,field,frame){
 
     xmlhttp.onreadystatechange=function(){
       if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {  
-            if (path == 'name' && xmlhttp.responseText == 'empty'){
-                document.getElementById(path).className = 'inputTextError';                
-                document.getElementById('error'+path).style.display = 'block';                
+      {  // alert("response "+xmlhttp.responseText)
+            if (path == 'vno'){
+                if (xmlhttp.responseText == "empty") 
+                    document.getElementById("error"+path+field).style.display="block"
+                else {              
+                    vno = xmlhttp.responseText.split("###")                    
+                    if (vno[0]!="") { document.getElementById(path+"major"+field+"text").innerHTML=vno[0] }
+                    else { document.getElementById(path+"major"+field+"text").innerHTML="" }
+                    
+                    if (vno[1]!="") { document.getElementById(path+"minor"+field+"text").innerHTML=vno[1] }
+                    else { document.getElementById(path+"minor"+field+"text").innerHTML="" }                    
+                    document.getElementById(frame).style.display = 'none';
+                }
             }
-            else if (path == 'abbr' && xmlhttp.responseText != ''){                
-                document.getElementById(path+"text").innerHTML=" ("+xmlhttp.responseText+")";                
+            else if (path.startsWith('vurl')){
+                if (xmlhttp.responseText == "empty") markErr(path+"1")
+                else writeURLResponse(xmlhttp.responseText,pid,path,frame)
             }
-            else if (path == 'topic' && xmlhttp.responseText == 'empty'){
-                document.getElementById(path+"1").className = 'inputSelectError';
-                document.getElementById('error'+path).style.display = 'block';
+            else if (path.startsWith('vrel')){
+               response = xmlhttp.responseText
+               if (response == "empty"){
+                    markErr(path)
+                    markErr(path+"target")
+                }
+                else {
+                    if (response.indexOf("--")>-1){ result = response.split("--")}
+                    else result = [response]
+                    writeRelResponse(result,path,frame,path)        
+                }
             }
-            else if (path == 'sb' && xmlhttp.responseText == 'empty'){
-                document.getElementById(path).className = 'inputSelectError';
-                document.getElementById('error'+path).style.display = 'block';
-            }
-            else if (path.startsWith('adddesc') && xmlhttp.responseText == 'empty'){
-                document.getElementById(field).className = 'inputTextError';
-                document.getElementById(frame).style.display = 'block';
-            }
-            else if (path.startsWith('desc') && xmlhttp.responseText == ''){
-                document.getElementById(path).style.display = 'none';                
-                document.getElementById(frame).style.display = 'none';                
-                //parentid = parseInt(path.substring(4,10))                
-                //npids.splice(npids.indexOf(parentid),1)
+            else if (path.startsWith('newvrel')){                
+                response = xmlhttp.responseText
+                if (response == "empty"){
+                    markErr(path)
+                    markErr(path+"target")
+                }
+                else {
+                    if (response.indexOf("--")>-1){ result = response.split("--")}
+                    else result = [response]
+                    
+                    if (result[0]){
+                        if (response.indexOf('errortype') >-1 || response.indexOf('errortarget') >-1) {
+                            writeRelResponse(result,path,frame,path) }
+                        else {
+                            vid = path.substring(7,path.length)    
+                            if (nvrels.hasOwnProperty(path)== '') nvrels[path] = field
+                            nvrels[path] +=1
+                            newpath = "vrel"+vid+"--"+nvrels[path]                            
+                            createRelation(result,newpath,specid,path)
+                            writeRelResponse(result,newpath,frame,path)
+                        }
+                    }
+                }
             }            
-            else if (path == 'vdate' && xmlhttp.responseText == 'empty'){
-                document.getElementById(field).className = 'inputTextError';
-                document.getElementById('error'+path).style.display = 'block';
+            else if (xmlhttp.responseText == 'empty'){
+                if (path == "topic")
+                    document.getElementById(path+"1").className = 'inputSelectError';
+                else if (path == "key") 
+                    document.getElementById(path+"1").className = 'inputTextError';
+                else if (path.contains("resp")){
+                    document.getElementById(path).className = "inputTextError"; 
+                }                    
+                else markErr(field)
+            }
+            else if (path == 'abbr' || path == "vabbr"){                
+              document.getElementById(path+"text").innerHTML=xmlhttp.responseText;
+              att = document.getElementById(field+"internal")              
+              if (att.options[att.selectedIndex].value == "internal"){
+                  document.getElementById(field+"internalText").style.display = "inline"
+              }else document.getElementById(field+"internalText").style.display = "none"                
+              document.getElementById(frame).style.display = 'none';
+                  
+              if (document.getElementById(path).className.contains("Error")) 
+                  document.getElementById(path).className = "inputText"
+            }            
+            else if (xmlhttp.responseText == 'invalid'){
+                alert("The XML input is invalid.")
             }
             else if (path.startsWith('resp')){
                 writeRespStmtResponse("edit",xmlhttp.responseText,path,specid,pid,frame)                
@@ -200,94 +295,34 @@ function update(specid,path,field,frame){
                          items = ul[i].split("++") 
                          li += "<li>"+items[0]+": "+items[1]+"</li>"
                     }               
-                    document.getElementById(path+'text').innerHTML="<ul>"+li+"</ul>"               
+                    document.getElementById(field+'text').innerHTML="<ul>"+li+"</ul>"               
                     
                 }else {
-                    document.getElementById(path+'text').innerHTML=""
+                    document.getElementById(field+'text').innerHTML=""
                 }
                 document.getElementById(frame).style.display = 'none';
             }
-            else if (path.startsWith('vurl')){
-                writeURLResponse(xmlhttp.responseText,pid,path,frame)
-            }
-            else if (path.startsWith('vrel')){
-               response = xmlhttp.responseText
-               if (response == "empty"){
-                    alert ("Please fill in the form!")
-                }
-                else {
-                    if (response.indexOf("--")>-1){ result = response.split("--")}
-                    else result = [response]
-                    writeRelResponse(result,path,frame,path)        
-                }
-            }
-            else if (path.startsWith('newvrel')){                
-                response = xmlhttp.responseText
-                if (response == "empty"){
-                    alert ("Please fill in the form!")
-                }
-                else {
-                    if (response.indexOf("--")>-1){ result = response.split("--")}
-                    else result = [response]
-                    
-                    if (result[0]){
-                        if (response.indexOf('errortype') >-1 || response.indexOf('errortarget') >-1) {
-                            writeRelResponse(result,path,frame,path) }
-                        else {
-                            vid = path.substring(7,path.length)    
-                            if (nvrels.hasOwnProperty(path)== '') nvrels[path] = field
-                            nvrels[path] +=1
-                            newpath = "vrel"+vid+"--"+nvrels[path]
-                            
-                            createRelation(result,newpath,specid,path)
-                            writeRelResponse(result,newpath,frame,path)
-                        }
-                    }
-                }
+            else if (path.startsWith('desc') && !xmlhttp.responseText.startsWith("<info")){
+                alert (xmlhttp.responseText)
             }
             else {
                 document.getElementById(frame).style.display = 'none';
+                document.getElementById(path+"text").innerHTML=xmlhttp.responseText;
                 
-                /*if (path.startsWith('adddesc')) {                   
-                    document.getElementById(field).className = 'inputText'; }
-                else{*/
-                    document.getElementById(path+"text").innerHTML=xmlhttp.responseText;
-                    
-                    if (path == 'name' && document.getElementById('error'+path).style.display == 'block') {
-                        removeErr(field,"inputText",'error'+path)}
-                    else if(path=="topic" && document.getElementById('error'+path).style.display == 'block'){
-                        removeErr(path+"1","inputSelect",'error'+path)}
-                    else if(path=="sb" && document.getElementById('error'+path).style.display == 'block'){
-                        removeErr(path,"inputSelect",'error'+path)}
-                    else if(path=="vdate" && document.getElementById('error'+path).style.display == 'block'){
-                        removeErr(path,"inputSelect",'error'+path)}
-                //}
+                if(path=="topic" && document.getElementById(path+"1").className.contains("Error")){
+                    document.getElementById(path+"1").className = "inputSelect" }                
+                else if (document.getElementById(field).className.contains("Error")) {
+                    className = document.getElementById(field).className;
+                    document.getElementById(field).className = className.substring(0,className.length-5)
+                }
             }            
         }
-      }    
-                
-    if(path.startsWith('resp') || path.startsWith('newresp')){ 
-        /*if (path.value==undefined) {
-            alert("Please describe an respStmt!")
-            return false
-        }*/
-        pid=field;
     }
-    /*else if (path.startsWith("feature") && path.value==undefined) {
-        alert("Please describe some features!")
-        return false
-    }*/
-    else if (path.startsWith('vurl')){         
-        pid=path.substring(4,path.length)
-    }
-    else if (path.startsWith('vrel')){
-        pid = document.getElementById(path+'pid').innerHTML                
-    } 
-    else { pid = getPid(field)}
     
+    pid = getPid(path,field)
     val = getValue(path,field)
     
-    alert("id="+specid+"&path="+path+"&value="+val+"&pid="+pid);
+   // alert("id="+specid+"&path="+path+"&value="+val+"&pid="+pid);
     
     xmlhttp.open("POST","../edit/edit-process.xq",true);
     xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
@@ -369,7 +404,7 @@ function addRelation(parent,relation,target,description,id,relops,targetops){
 
 function addElement(parent,element,type,id){
     if (parent=="key") {index = id+nkeys; nkeys++; cname="inputText"; d="inline"}
-    else if (parent=="ref") {index = id+nrefs; nrefs++; cname="inputFile"; d="block"}
+    else if (parent.startsWith("ref")) {index = id+nrefs; nrefs++; cname="inputFile"; d="block"}
     else if (parent=="pref") {index = id+nprefs; nprefs++; cname="inputFile"; d="block"}
     else if (parent=="pvref") {index = id+npvrefs; npvrefs++; cname="inputFile"; d="block"}
     else if (parent=="vref") {index = id+nvrefs; nvrefs++; cname="inputFile"; d="block"}
@@ -506,54 +541,6 @@ function createBox(t1,b,ta,text,taid,tableid,box,newpid,specid,pids,ph){
     return t1
 }
 
-function createResp(specid,vid,newid,response){
-    
-    o = document.createElement("ol")
-    o.id = newid+"nametext"    
-    b = createButton('',"edit",'Edit','editresp',newid,'','')
-    s = document.createElement("span")
-    s.className="heading3"
-    s.id=newid+"text"    
-    
-    d = document.createElement("div")
-    d.appendChild(s); d.appendChild(b); d.appendChild(o)  
-           
-    a = document.getElementById('addvresp'+vid+'button')    
-    a.parentNode.insertBefore(d,a)
-    
-    e = createEditResp(specid,vid,newid,response)
-    a.parentNode.insertBefore(e,a)
-}
-
-function createEditResp(specid,vid,newid,response){   
-   
-    ta = document.createElement("textarea")
-    ta.id = newid
-    ta.className="inputText"
-    ta.style.width = "445px"
-    ta.style.height = "100px"
-    ta.style.resize = "none"
-    ta.style.fontSize = "11px"
-    ta.value = response
-    
-    b = createButton('',"button",'Submit','submiteditresp',newid,specid,vid)
-
-    tb = document.createElement("table")
-    tb.id = 'editv'+newid
-    tb.style.display='none'
-    tb.style.borderSpacing='0'
-    tb.style.borderCollapse='collapse'
-    
-    tr = tb.insertRow(0)
-    td1 = tr.insertCell(0)
-    td2 = tr.insertCell(1)
-    td2.vAlign = 'top'
-    td1.appendChild(ta)
-    td2.appendChild(b)
-    
-    return tb
-}
-
 function createRelation(result,newpath,specid,addpath){    
     sp1 = document.createElement("span")
     sp1.id = newpath+"pid"
@@ -633,22 +620,16 @@ function createEditRel(result,newid,specid,addpath){
 }
 
 function writeRespStmtResponse(task,response,path,specid,pid,frame){
-
     parser=new DOMParser();
     xmlDoc=parser.parseFromString(response,"text/xml");
     
     respStmt = xmlDoc.getElementsByTagName("respStmt")[0]
     path = "resp"+ respStmt.attributes[0].nodeValue
-    
-    if (task=='add') { 
-       createResp(specid,pid,path,response.substr(response.indexOf('\n')+1));     
-    }
-    alert(path+"text")
+        
     document.getElementById(path+"text").innerHTML = 
         respStmt.getElementsByTagName("resp")[0].childNodes[0].nodeValue + ":"
         
-    names = xmlDoc.getElementsByTagName("name")
-    alert(names.length)
+    names = xmlDoc.getElementsByTagName("name")    
     namelist=[]
     for (n=0; n<names.length;n++){
         // the org is not linked because it needs a session-encoded URL from exist 
@@ -656,6 +637,9 @@ function writeRespStmtResponse(task,response,path,specid,pid,frame){
     }
     document.getElementById(path+"nametext").innerHTML = namelist;    
     document.getElementById(frame).style.display = 'none';
+    
+    if (document.getElementById(path).className.contains("Error"))
+        document.getElementById(path).className = "inputText"
 }
 
 function writeRelResponse(result,path,frame,errorpath){
@@ -707,6 +691,9 @@ function writeURLResponse(response,pid,path,frame){
                     document.getElementById(path+(i+1)).className = 'inputTextError';
                     document.getElementById('error'+path).style.display = 'block';}                    
             }
-        }                   
+        }
+        
+        if (document.getElementById(path+"1").className.contains("Error"))
+            document.getElementById(path+"1").className = "inputText"
     }
 }

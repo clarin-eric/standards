@@ -1,4 +1,63 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTMF" standardSettingBody="SBISO" topic="TopicDataCat" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Computer applications in terminology — Terminological markup framework</title><abbr>TMF</abbr></titleStmt><scope>Sharing and reusing terminological data</scope><keyword/><info type="description"><p>The Terminological Markup Framework (TMF) is an ISO standard developed to share and reuse terminological data by 
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecTMF" standardSettingBody="SBISO" topic="TopicDataCat" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Computer applications in terminology — Terminological markup framework</title>
+        <abbr>TMF</abbr>
+    </titleStmt>
+    <scope>Sharing and reusing terminological data</scope>
+    <keyword/>
+    <info type="description">
+        <p>"ISO 16642:2003 specifies a framework designed to provide guidance on the basic principles for representing data recorded in 
+            terminological data collections. This framework includes a meta-model and methods for describing specific terminological markup 
+            languages (TMLs) expressed in XML. The mechanisms for implementing constraints in a TML are defined in ISO 16642:2003, but not 
+            the specific constraints for individual TMLs, except for the three TMLs defined in the annexes of ISO 16642:2003.</p>
+        <p>ISO 16642:2003 is designed to support the development and use of computer applications for terminological data and the exchange 
+            of such data between different applications. It does not standardize data categories and methods for the specification of data
+            structures which are specified in ISO 12620 and other related International Standards.</p>
+        <p>ISO 16642:2003 also defines the conditions that allow the data expressed in one TML to be mapped onto another TML and 
+            specifies a generic mapping tool (GMT) for this purpose.</p>
+        <p> In addition, ISO 16642:2003 describes a generic model for describing linguistic data." 
+            (<a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=32347">Abstract, ISO 16642:2003</a>)
+        </p>
+        <!--  
+        <p>The Terminological Markup Framework (TMF) is an ISO standard developed to share and reuse terminological data by 
             providing a framework designed to provide guidance on the basic principles for representing data recorded in 
             terminological data collections. This framework includes a meta-model and methods for describing specific TMLs 
-            expressed in XML.</p></info><version id="SpecTMF-IS" status="International Standard"><titleStmt><respStmt id="sLDK1b"><resp>Editor</resp><name type="org" id="SBISO-TC37-SC3-WG4">ISO/TC 37/SC 3/WG 4</name></respStmt></titleStmt><versionNumber type="major">ISO 16642:2003</versionNumber><date>2009-08-14</date><address>http://www.iso.org</address><relation target="SpecDcr-IS" type="isUsedBy"><info><p>Some of the data categories from ISO 16642:2003 are used in DCR (ISO 12620:2009)</p></info></relation></version><version id="SpecTMF-SE" status="Committee Draft"><titleStmt><respStmt id="baapN2"><resp>Editor</resp><name type="org" id="SBISO-TC37-SC3-WG4">ISO/TC 37/SC 3/WG 4</name></respStmt></titleStmt><versionNumber type="major">ISO/CD 16642</versionNumber><date>2012-06-27</date><relation target="SpecTMF-IS" type="isReVersionOf"/></version></spec>
+            expressed in XML.</p>-->
+    </info>
+    <relation target="SpecMlif-IS" type="isSimilarTo"/>
+    <version id="SpecTMF-IS" status="International Standard">
+        <titleStmt>
+            <abbr internal="yes">TMF-2009</abbr>
+            <respStmt id="sLDK1b">
+                <resp>Editor</resp>
+                <name type="org" id="SBISO-TC37-SC3-WG4">ISO/TC 37/SC 3/WG 4</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">ISO 16642:2003</versionNumber>
+        <date>2009-08-14</date>
+        <address>http://www.iso.org</address>
+        <relation target="SpecTBX" type="isUsedBy">
+            <info type="description">
+                <p>The TMF (ISO 16642) defines the structural metamodel for TBX.</p>
+            </info>
+        </relation>
+        <relation target="SpecWordSegBasic" type="isUsedBy"/>
+        <relation target="SpecDcr-IS" type="isUsedBy">
+            <info>
+                <p>Some of the data categories from ISO 16642:2003 are used in DCR (ISO 12620:2009)</p>
+            </info>
+        </relation>
+    </version>
+    <version id="SpecTMF-SE" status="Committee Draft">
+        <titleStmt>
+            <abbr internal="yes">TMF-2012</abbr>
+            <respStmt id="baapN2">
+                <resp>Editor</resp>
+                <name type="org" id="SBISO-TC37-SC3-WG4">ISO/TC 37/SC 3/WG 4</name>
+            </respStmt>
+        </titleStmt>
+        <versionNumber type="major">ISO/CD 16642</versionNumber>
+        <date>2012-06-27</date>
+        <relation target="SpecTMF-IS" type="isRevisionOf"/>
+    </version>
+</spec>

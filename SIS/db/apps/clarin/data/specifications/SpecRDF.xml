@@ -1,5 +1,83 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecRDF" standardSettingBody="SBW3C" topic="TopicMetadata TopicKnowledgeRepresentation" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Resource Description Framework</title><abbr>RDF</abbr></titleStmt><scope>Standard for describing Web resources</scope><keyword>XML</keyword><keyword>XML-based standards</keyword><keyword>metadata</keyword><keyword>Semantic Web</keyword><info type="description"><p>The Resource Description Framework (RDF) is a framework specified by a W3C Recommendation, which is used for 
-            describing metadata (such as the title, author, modification date, content, etc.) and other knowledge on the web.
-        </p></info><info type="recReading"><biblStruct id="pRDF04" type="book"><analytic><title>Practical RDF</title><author><forename>Shelley</forename><surname>Powers</surname></author></analytic><monogr><imprint><publisher>O'Reilly Media</publisher><date>2003</date></imprint></monogr></biblStruct></info><version id="SpecRDF1" status="W3C Recommendation"><titleStmt><respStmt id="pRDF02"><resp>Editor</resp><name>Graham Klyne</name><name>Jeremy J. Carroll</name></respStmt></titleStmt><date>2004-02-10</date><address type="URL">http://www.w3.org/TR/2004/REC-rdf-concepts-20040210/</address><relation target="SpecXML" type="uses"><info type="description"><p>
-                    RDF uses several different syntaxes and one of those is XML. 
-                </p></info></relation><relation target="SpecRDFS1" type="uses"/><relation target="SpecOWL" type="isUsedBy"><info type="description"><p>OWL is built by using the basic elements of RDF.</p></info></relation><relation target="SpecDcMes" type="isUsedBy"><info type="description"><p>The DCMES has vocabularies of RDF.</p></info></relation><relation target="SpecTurtle" type="uses"><info type="description"><p>Turtle is a serialization format for the RDF data model.</p></info></relation></version><asset><a href="../doc/Example_RDF.xml">Example_RDF.xml</a></asset></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecRDF" standardSettingBody="SBW3C" topic="TopicMetadata TopicKnowledgeRepresentation" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Resource Description Framework</title>
+        <abbr>RDF</abbr>
+    </titleStmt>
+    <scope>Standard for describing Web resources</scope>
+    <keyword>XML</keyword>
+    <keyword>XML-based standards</keyword>
+    <keyword>metadata</keyword>
+    <keyword>Semantic Web</keyword>
+    <info type="description">
+        <p>The Resource Description Framework (RDF) is a framework specified by a W3C Recommendation, which is used for 
+            describing metadata (such as the title, the author, the modification date, the content, etc.) and other knowledge on the web.
+        </p>
+    </info>
+    <info type="recReading">
+        <biblStruct id="pRDF04" type="book">
+            <analytic>
+                <title>Practical RDF</title>
+                <author>
+                    <forename>Shelley</forename>
+                    <surname>Powers</surname>
+                </author>
+            </analytic>
+            <monogr>
+                <imprint>
+                    <publisher>O'Reilly Media</publisher>
+                    <date>2003</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+    </info>
+    <relation target="SpecDcAM-2" type="isUsedBy"/>
+    <relation target="SpecDcAM-1" type="isUsedBy"/>
+    <relation target="SpecOWL1" type="isUsedBy"/>
+    <relation target="SpecTurtle-WD" type="isUsedBy"/>
+    <relation target="SpecRDQL" type="isUsedBy"/>
+    <relation target="SpecSPARQL1-1" type="isUsedBy"/>
+    <relation target="SpecSPARQL1-0" type="isUsedBy"/>
+    <relation target="SpecSKOS-R" type="isUsedBy"/>
+    <relation target="SpecRDFS1" type="isExtendedFrom"/>
+    <relation target="SpecRDFXML-Rev" type="isUsedBy"/>
+    <relation target="SpecDcMes11" type="isUsedBy"/>
+    <relation target="SpecDAMLOil" type="isUsedBy"/>
+    <relation target="SpecUmbel" type="isUsedBy"/>
+    <version id="SpecRDF1" status="W3C Recommendation" usedInCLARINCenter="UC CLARIN-PL IDS">
+        <titleStmt>
+            <abbr internal="yes">RDF-2004</abbr>
+            <respStmt id="pRDF02">
+                <resp>Editor</resp>
+                <name>Graham Klyne</name>
+                <name>Jeremy J. Carroll</name>
+            </respStmt>
+        </titleStmt>
+        <date>2004-02-10</date>
+        <address type="URL">http://www.w3.org/TR/2004/REC-rdf-concepts-20040210/</address>
+        <relation target="SpecRDFS1" type="uses"/>
+        <relation target="SpecXML" type="isBasedOn">
+            <info type="description">
+                <p>
+                    RDF uses several different syntaxes and one of those is XML.</p>
+            </info>
+        </relation>
+        <relation target="SpecOWL" type="isUsedBy">
+            <info type="description">
+                <p>OWL is built by using the basic elements of RDF.</p>
+            </info>
+        </relation>
+        <relation target="SpecDcMes" type="isUsedBy">
+            <info type="description">
+                <p>The DCMES has vocabularies of RDF.</p>
+            </info>
+        </relation>
+        <relation target="SpecTurtle" type="uses">
+            <info type="description">
+                <p>Turtle is a serialization format for the RDF data model.</p>
+            </info>
+        </relation>
+    </version>
+    <asset>
+        <a href="../doc/Example_RDF.xml">Example_RDF.xml</a>
+    </asset>
+</spec>
