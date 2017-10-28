@@ -15,7 +15,7 @@ import module namespace index="http://clarin.ids-mannheim.de/standards/index" at
 
 <html>
     <head>
-        <title>CLARIN Standard Guidance</title>        
+        <title>CLARIN Standards Information System</title>        
         <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>    
         <link rel="stylesheet" type="text/css" href="resources/css/tagclouds.css"/>
         <script type="text/javascript" src="resources/scripts/tagcanvas.min.js"/>
@@ -28,22 +28,19 @@ import module namespace index="http://clarin.ids-mannheim.de/standards/index" at
             {menu:view()}
             <div class="content">
                 <div class="navigation">&gt; <a href="{app:link("index.xq")}">Home</a></div>
-                <div class="title">CLARIN Standard Guidance</div>
+                <div class="title">CLARIN Standards Information System</div>
                 <div>
-                    <p>More and more research is conducted in a collaborative way involving people of different expertise.
-                    A standard accomodating various needs and common objectives of such a research, is highly desired. To 
-                    help choosing the best standard for your needs, this website provides information about standards of 
-                    a various topics, especially those used in the area of linguistics and computerlinguistics. Moreover, 
-                    you can compare different annotation schemas and metadata formats. 
-                    </p>
+                    <p>The CLARIN Standards Information System lists language-technology-related standards 
+                    that CLARIN centres are willing to accept and recognize and visualizes some of their 
+                    interdependencies.</p>
+                    <p>The system is in the process of development and extension. Until this notice is gone, 
+                    the system should not be expected to provide exhaustive information. Please consult the 
+                    CLARIN Standards Committee if you need up-to-date information.</p>
                     
                 </div>
-                <div>This website is developed within the collaborative CLARIN-D project. If you would like to support this work, 
-                    you can send your feedback on the <a href="schemas/spec.xsd">XML Schema</a> of 
-                    <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">standard</a> 
-                    descriptions to <a href="{app:link("views/contact.xq")}">us</a>. Besides, you can submit your own standard description to us 
-                    by <a href="{app:secure-link("user/register.xq")}">registering</a>
-                     to this website.
+                <div><p>This website is managed by the CLARIN Standards Committee. Feedback on the <a href="schemas/spec.xsd">XML Schema</a> of <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">standard</a> 
+                    descriptions may be sent to <a href="{app:link("views/contact.xq")}">the contact addresses</a>. CSC Members and CLARIN technical staff may also   
+                    {if (session:get-attribute("user")) then "register" else <a href="{app:secure-link("user/register.xq")}">register</a>} with this service.</p>
                 </div>
                 <!-- The tag cloud of standards and standard bodies -->
                 <div style="margin-left:12%; margin-bottom:20px; width:450px;">
