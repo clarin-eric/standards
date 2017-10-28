@@ -28,12 +28,10 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                 <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">standards</a>, 
                 please contact:
                 
-                <p><b> Antonina Werthmann </b><br />
-                    <img src="{app:resource("werthmann.png","img")}"/> <br />
-                    <b>Eliza Margaretha </b><br />
+                <p><b>Eliza Margaretha (main developer) </b><br />
                     <img src="{app:resource("margaretha.png","img")}"/><br />
-                   <b>Dr. Maik Stührenberg </b><br />
-                    <img src="{app:resource("stuehrenberg-ids.png","img")}"/> <br />
+                   <b>Piotr Bański (contact to CLARIN Standards Committee) </b><br />
+                    <img src="{app:resource("banski.png","img")}"/> <br />
                     
                     Institut für Deutsche Sprache <br />
                     R5, 6-13 <br />
