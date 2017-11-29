@@ -30,7 +30,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                 
                 <p><b>Eliza Margaretha (main developer) </b><br />
                     <img src="{app:resource("margaretha.png","img")}"/><br />
-                   <b>Piotr Bański (contact to CLARIN Standards Committee) </b><br />
+                   <b>Piotr Banski (contact to CLARIN Standards Committee) </b><br />
                     <img src="{app:resource("banski.png","img")}"/> <br />
                     
                     Institut für Deutsche Sprache <br />
