@@ -7,13 +7,13 @@ module namespace app="http://clarin.ids-mannheim.de/standards/app";
 :)
 
 (: Base URL :)
-(:declare variable $app:base as xs:string := "http://clarin.ids-mannheim.de/standards/";
+declare variable $app:base as xs:string := "http://clarin.ids-mannheim.de/standards/";
 declare variable $app:securebase as xs:string := "https://clarin.ids-mannheim.de/standards/";
-:)
+
 
 (: Local Base URL :)
-declare variable $app:base as xs:string := "http://localhost:8889/exist/apps/clarin/";
-declare variable $app:securebase as xs:string := "http://localhost:8889/exist/apps/clarin/";
+(:declare variable $app:base as xs:string := "http://localhost:8889/exist/apps/clarin/";
+declare variable $app:securebase as xs:string := "http://localhost:8889/exist/apps/clarin/";:)
 
 
 (: Wrap a link with the current session :)
