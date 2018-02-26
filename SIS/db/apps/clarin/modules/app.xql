@@ -7,8 +7,8 @@ module namespace app="http://clarin.ids-mannheim.de/standards/app";
 :)
 
 (: Base URL :)
-declare variable $app:base as xs:string := "http://clarin.ids-mannheim.de/standards/";
-declare variable $app:securebase as xs:string := "https://clarin.ids-mannheim.de/standards/";
+declare variable $app:base as xs:string := "http://standards.clarin.eu/sis/";
+declare variable $app:securebase as xs:string := "http://standards.clarin.eu/sis/";
 
 
 (: Local Base URL :)
