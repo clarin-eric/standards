@@ -1,6 +1,0 @@
-<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/resources/scripts/tinymce/plugins/directionality" owner="admin" group="dba" mode="755" created="2013-11-27T12:03:48+01:00" version="1">
-    <acl entries="0" version="1"/>
-    <resource type="BinaryResource" name="plugin.min.js" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:48+01:00" modified="2013-11-27T12:03:48+01:00" filename="plugin.min.js" mimetype="application/x-javascript">
-        <acl entries="0" version="1"/>
-    </resource>
-</collection>
