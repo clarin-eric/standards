@@ -22,6 +22,7 @@ declare variable $data:doc-path := "/db/apps/clarin/data/doc";
 declare variable $data:data := collection($data:path);
 
 declare variable $data:admin-pwd := doc("../data/users.xml")/users/user[role/text()="dba"]/password;
+declare variable $data:recaptcha-secret := doc("../data/secrets.xml")/secrets/secret[@id="reCAPTCHA"];
 
 (: Select all ids in the data:)
 declare function data:get-all-ids(){

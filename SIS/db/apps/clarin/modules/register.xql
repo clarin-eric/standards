@@ -5,6 +5,9 @@ module namespace register = "http://clarin.ids-mannheim.de/standards/register-us
 import module namespace user="http://clarin.ids-mannheim.de/standards/user" at "../model/user.xqm";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace login = "http://clarin.ids-mannheim.de/standards/login" at "../modules/login.xql";
+import module namespace data = "http://clarin.ids-mannheim.de/standards/data" at "../model/data.xqm";
+
+declare namespace http = "http://expath.org/ns/http-client";
 
 (: Define methods for user registration
    @author margaretha
@@ -23,13 +26,20 @@ declare function register:validate-user($submitted,$recaptcha-response){
 };
 
 declare function register:verify-recatcha($recaptcha-response){
-    let $secret := "6Le3-A4TAAAAAAP8mzY5XNDFlAWkyt4YS5wUl9Gg"
-    let $url := concat("https://www.google.com/recaptcha/api/siteverify?secret=", $secret, "&amp;response=", $recaptcha-response)
-    let $uri := xs:anyURI($url)    
-    let $doc := "test"
-    let $response := httpclient:post($uri, $doc, false(),())
-    let $success := util:base64-decode($response/*/text())
+    let $url := concat("https://www.google.com/recaptcha/api/siteverify?secret=", 
+        $data:recaptcha-secret, "&amp;response=", $recaptcha-response)
+    let $element := <http:request method = "POST" href="{$url}" ></http:request>
+    let $response := hc:send-request($element)
     
+    let $copy := $response
+    let $r := 
+        <response>{ 
+            for $item in $response
+                return
+                  <item>{$item}</item>
+        }</response>
+    
+    let $success := util:base64-decode($r/item[2])
     return 
         if (contains($success,"true") )
         then true()

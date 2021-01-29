@@ -24,8 +24,13 @@ else if (request:get-parameter('_query', '')) then
 (: Prohibit access to users.xml:)
 else if ($exist:resource eq "users.xml") then 
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-        <redirect url="../index.xq"/>           
+        <redirect url="{$app:base}/index.xq"/>           
     </dispatch>
+    
+else if ($exist:resource eq "secrets.xml") then 
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <redirect url="{$app:base}/index.xq"/>           
+    </dispatch>    
 
 (: Authorization check on editing process:)
 else if ($exist:resource eq 'edit-process.xq' or $exist:resource eq 'add-spec-part.xq' 
