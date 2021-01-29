@@ -47,7 +47,7 @@ declare function asm:store-part($spec,$part-id,$part-name,$part-abbr,$part-scope
              else ()}
             
             {if($part-description) 
-             then util:parse($part-description) 
+             then fn:parse-xml($part-description) 
              else ()}            
             {if ($asset) then <asset>{$asset}</asset> else ()}            
         </part>
@@ -98,7 +98,7 @@ declare function asm:store-version($param-names,$spec-id,$version-id,$version-da
             {if($version-nomajor) then <versionNumber type="major">{$version-nomajor}</versionNumber> else()}
             {if($version-nominor) then <versionNumber type="minor">{$version-nominor}</versionNumber> else()}
             {if($version-date) then <date>{$version-date}</date> else()}
-            {if($version-description) then util:parse($version-description) else()}
+            {if($version-description) then fn:parse-xml($version-description) else()}
             {if ($version-features) then <features>{$version-features}</features> else ()}
             {for $i in f:get-param-names($param-names,"vurl")
              let $version-url := request:get-parameter($i,"") 

@@ -117,7 +117,7 @@ declare function local:check-description($id,$spec,$path,$description){
 
 (: Parse a node :)
 declare function local:parse-node($val){
-    try { util:parse($val) }
+    try { fn:parse-xml($val) }
     catch * {concat("Error message: ",$err:description)}
 };
 
@@ -183,7 +183,7 @@ declare function local:check-version-number($spec,$val,$path,$version-id){
 (: Update standard version features :)
 declare function local:update-version-features($spec,$val,$node){
     let $version-id := request:get-parameter('pid', '')    
-    let $v := util:parse($val)
+    let $v := fn:parse-xml($val)
     let $store := spec:store-version-features($spec,$version-id,$node,$v)
     let $response := 
         for $f in $v/fs/f            
@@ -249,7 +249,7 @@ declare function local:update-version-resp($spec,$val,$path){
         else spec:add-into-node($spec//*[@id=$version-id]/titleStmt,$respStmt)    
 };
 
-(:    let $response := util:parse($values)   
+(:    let $response := fn:parse-xml($values)   
     let $version-id := request:get-parameter('pid', '')
     let $str-length := fn:string-length($path)        
     let $resp-id :=

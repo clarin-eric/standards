@@ -107,15 +107,20 @@ return
                 </span> <span style="text-decoration:underline; font-weight:bold"> Adding Versions</span> 
                 <span style="color:#AAA;"> > Confirmation </span></p>               
                 
-                <p>Please fill in and submit the form below. A version belongs to a standard or a standard part. 
-                By default, {$spec-name} is set as the parent. You can change the default parent by selecting a standard 
-                part. The new version will be added to the selected parent following any other existing versions in it. 
-                You can add more than one version into the same parent.</p>
+                <p>If {$spec-name} doesn't have any version, you may skip this step and click the "Done" button. </p>
+                
+                <p>To add a version, please fill in the form below. A version may belong to a standard or 
+                a standard part. By default, {$spec-name} is set as the parent. You can change the default parent 
+                by selecting a standard part. The new version will be added to the selected parent following any 
+                other existing versions in it. </p>
+                
+                <p> You may add more than one version into the same parent. When you are done, 
+                please click the "Done" button.</p>
                 
                 </div>
              
              <form method="post" enctype="multipart/form-data" action="">               
-                <table style="padding:20px; margin-top:20px;">
+                <table style="padding:20px; margin-top:20px; border:1px solid #DDDDDD;">
                      <tr><td>Parent:* </td>
                          <td><select name="vparent" class="inputSelect" style="width:455px; margin-right:3px;">                                
                                 <option value="{$id}">{$spec-name}</option>
@@ -211,16 +216,24 @@ return
                      <tr>
                          <td>* required</td>
                          <td></td>
+                     </tr>
+                     <tr>
+                         <td></td>
+                         <td>
+                            <button type="reset" name="cancelButton" class="button" style="margin-top:30px;margin-bottom:3px;" 
+                             onclick="'">Reset</button>
+                            <input type="submit" name="submitVersion" class="button" style="margin-bottom:3px;" value="Add Version"/>
+                            <span style="display:inline-block; width:2px"/>
+                         </td>
                       </tr>
                 </table>
                 <div align="middle">
-                   <input type="submit" name="submitVersion" class="button" style="margin-bottom:3px;" value="Submit"/>
-                   <span style="display:inline-block; width:2px"/>
-                   <input name = "next" class="button" type="button" value="Next" 
+                    
+               </div>
+               <div align="right">
+               <input name = "next" class="button" type="button" value="Done" 
                         onclick="location.href='{app:link(concat("views/register-confirmation.xq?id=",$id))}'"/>                            
                    <span style="display:inline-block; width:2px"/>
-                   <button type="reset" name="cancelButton" class="button" style="margin-bottom:3px;" 
-                    onclick="'">Reset</button>
                </div>
              </form>
                   <br/><br/><br/>

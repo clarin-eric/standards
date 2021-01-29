@@ -78,19 +78,19 @@ return
                 <span style="color:#AAA;"> > Adding Versions > Confirmation </span></p>               
                 
 
-                <p>If the standard does not have a part, you can skip this step and click the "Next" button. </p>
+                <p>If the standard {$spec-name} does not have a part, you can skip this step and click the "Done" button. </p>
                 
                 <p>To add a part to {$spec-name}, please 
-                fill in and <b>submit</b> the form below. A new part will be added to 
+                fill in the form below. A new part will be added to 
                 the {$spec-name} following any other existing parts. <b>A part must have at least one version.</b> 
                 You can add a version for a part or the standard itself in the next step.</p>                          
                 
-                <p> You can add several parts. When you are done, please click the "Next" button.</p>
+                <p> You can add several parts. When you are done, please click the "Done" button.</p>
                    
              </div>      
              
              <form method="post" action="" enctype="multipart/form-data" >
-                <table style="padding:20px; margin-top:20px;">
+                <table style="padding:20px; margin-top:20px;border:1px solid #DDDDDD;">
                     <tr>
                         <td style="width:100px">Id:*</td>
                         <td><input name="pid" type="text" value="{$part-id}" 
@@ -129,20 +129,26 @@ return
                     </tr>
                     <tr><td colspan="2" style="height:20px;"/></tr>
                     <tr>
-                        <td>
-                           <span style="font-size:12px;">* required</span>
+                        <td colspan="2">
+                            <span style="font-size:12px;">* required</span>
                         </td>
-                        <td align="center">
-                            <input class="button" name= "submitPart" type="submit" value="Submit"/>                            
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <button type="reset" name="cancelButton" class="button" style="margin-top:30px; margin-bottom:3px;" 
+                            onclick="'">Reset</button>
+                            <input class="button" name= "submitPart" type="submit" value="Add Part"/>                            
                             <span style="display:inline-block; width:2px"/>
-                            <input name = "next" class="button" type="button" value="Next" 
-                                onclick="location.href='{app:link(concat("views/register-version.xq?id=", $id))}'"/>                            
-                            <span style="display:inline-block; width:2px"/>                            
-                            <button type="reset" name="cancelButton" class="button" style="margin-bottom:3px;" 
-                    onclick="'">Reset</button>
                         </td>
                     </tr>
                 </table>
+                <div align="right">
+                    <input name = "next" class="button" type="button" value="Done" 
+                        onclick="location.href='{app:link(concat("views/register-version.xq?id=", $id))}'"/>                            
+                    <span style="display:inline-block; width:2px"/>
+               </div>
              </form>
              <br/><br/><br/>
              </div>

@@ -65,7 +65,7 @@ return
                 <p style="font-size:14px;"><span style="text-decoration:underline; font-weight:bold">Adding Standard information</span> 
                  <span style="color:#AAA;" > > Adding Parts > Adding Versions > Confirmation </span></p>
 
-                <p>As the first standard registration step, please fill in the form below and click next. The name, the topic 
+                <p>As the first standard registration step, please fill in the form below and click the submit button. The name, the topic 
                 and the description of the standard are obligatory. Please also specify the standard body which has 
                 standardized the standard. </p>                
                 
@@ -115,9 +115,13 @@ return
                    <tr valign="top">
                        <td>Description:*</td>                             
                        <td><textarea name="description" class="desctext" 
-                            style="width:400px; height:200px; resize: none; font-size:11px">{$description}</textarea>
+                            style="width:400px; height:200px; resize: none; font-size:11px; border:1px solid red;">{$description}</textarea>
                        </td>
                    </tr>
+                   <tr style="display:{rsm:get-display-error($submitted,$description)}">
+                        <td></td>
+                        <td><span style="color:red;">* Please add some description about the specification.</span></td>
+                     </tr>
                    <tr>
                         <td>Keyword(s):</td>
                         <td>
@@ -135,13 +139,16 @@ return
                    </tr>
                    <tr style="height:20px;"><td colspan="2"/></tr>
                    <tr>
-                        <td style="width:180px">
+                        <td colspan="2">
                             <span style="font-size:12px;">* required</span>
                         </td>
-                        <td align="center" style="width:400px">
-                            <input name = "submitSpec" class="button" type="submit" value="Next"/>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align:left;">
+                            <!--<input class="button" name= "cancel" type="reset" value="Cancel" />-->
+                            <input name = "submitSpec" class="button" style="margin-top:20px;" type="submit" value="Submit"/>
                             <span style="display:inline-block; width:2px"/>
-                            <input class="button" name= "cancel" type="reset" value="Cancel" />
                         </td>
                     </tr>
                 </table>

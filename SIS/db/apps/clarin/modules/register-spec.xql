@@ -38,7 +38,7 @@ declare function rsm:validate-id($param-id){
     let $ids := data:get-all-ids()
     return
     if (not($param-id) or 
-        not(text:matches-regex($param-id,"[\w\.-]"))or 
+        fn:matches($param-id,"[^a-zA-Z0-9\.-]") or
         functx:is-value-in-sequence($id,$ids))    
         then fn:false()        
         else fn:true()
@@ -87,7 +87,7 @@ declare function rsm:store-spec($id,$name,$scope,$topicRef,$description,$standar
                    else ()
         	}
         	{if($description) 
-        	 then util:parse(asm:get-description($description)) 
+        	 then fn:parse-xml(asm:get-description($description)) 
         	 else <info type="description"></info>}        	
         </spec>    
     let $store := 
