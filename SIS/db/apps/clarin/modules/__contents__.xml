@@ -1,0 +1,57 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/modules" owner="admin" group="dba" mode="755" created="2012-12-11T11:45:49+01:00" deduplicate-blobs="false" version="2">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="register.xql" owner="admin" group="dba" mode="644" created="2013-12-05T15:23:32+01:00" modified="2021-01-29T14:51:26+01:00" filename="register.xql" mimetype="application/xquery" blob-id="0aea44aeea3c2734be80556dbeab7882291043502a10b7d4f4e637e94ea0d6ba">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="register-spec.xql" owner="admin" group="dba" mode="644" created="2013-03-19T10:07:58+01:00" modified="2021-01-29T17:40:27+01:00" filename="register-spec.xql" mimetype="application/xquery" blob-id="272f13137afa172abc8698709fa1891bc8a365422ffd6f354103e6d7d46e219c">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="topic.xql" owner="admin" group="dba" mode="644" created="2012-12-12T12:01:07+01:00" modified="2014-09-26T11:47:42+02:00" filename="topic.xql" mimetype="application/xquery" blob-id="c20e0e196522cf4142761da737261212fc88b3737a93fcbf79cf43d8c8f46321">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="sb.xql" owner="admin" group="dba" mode="644" created="2012-12-12T16:43:14+01:00" modified="2014-09-29T15:38:36+02:00" filename="sb.xql" mimetype="application/xquery" blob-id="a87da181c89106c0bf926e0e10bdbc7a3fc63a0090f98eea3af291f79871ae0b">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="view-version.xql" owner="admin" group="dba" mode="644" created="2013-01-04T11:14:10+01:00" modified="2014-11-11T15:31:55+01:00" filename="view-version.xql" mimetype="application/xquery" blob-id="5c8c84d9f91704719574b3e3cf29b764efa6c817d923b49ecac67b13c3eb7f93">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="menu.xql" owner="admin" group="dba" mode="644" created="2012-12-11T14:01:14+01:00" modified="2014-12-23T14:59:35+01:00" filename="menu.xql" mimetype="application/xquery" blob-id="46f078724483b302e55d73dc309a30b1471d2536a2b52496e9cfe1201125e154">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="view-sb.xql" owner="admin" group="dba" mode="644" created="2013-11-15T18:27:04+01:00" modified="2013-11-15T18:27:04+01:00" filename="view-sb.xql" mimetype="application/xquery" blob-id="a47f347e5bb5f10cddd5f5f5fc25277ae7442f2404fdb6ae84a49b60d2ff5679">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="bib.xql" owner="admin" group="dba" mode="644" created="2012-12-18T18:05:29+01:00" modified="2015-09-09T16:42:06+02:00" filename="bib.xql" mimetype="application/xquery" blob-id="04c3afa5e9d84fb33a42a2ee9eb8d4ea3a4e9131747478d21699c187e7df20f3">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="recommendation.xql" owner="admin" group="dba" mode="644" created="2014-12-22T17:18:09+01:00" modified="2015-01-12T16:06:28+01:00" filename="recommendation.xql" mimetype="application/xquery" blob-id="4afd379d635208839e5642216325fb61b185a4e78881446cfd0df0712b025e95">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="login.xql" owner="admin" group="dba" mode="644" created="2012-12-14T12:23:31+01:00" modified="2013-12-05T16:38:31+01:00" filename="login.xql" mimetype="application/xquery" blob-id="003cb9230b9793025efd13e2dc2021a71b91cfee4f3b1f605e489a401792f731">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="list-spec.xql" owner="admin" group="dba" mode="644" created="2012-12-12T13:33:49+01:00" modified="2015-01-20T17:23:45+01:00" filename="list-spec.xql" mimetype="application/xquery" blob-id="925e899d97a6cb5255cdaaf0d6c5c0180a55990789a4013f78214bde984295bd">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="search-spec.xql" owner="admin" group="dba" mode="644" created="2013-01-04T14:52:48+01:00" modified="2014-08-26T12:53:55+02:00" filename="search-spec.xql" mimetype="application/xquery" blob-id="80a8c47ee335095a3b04944db589386167d2bdc8ea7ad857b1f1df50f2153793">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="index.xql" owner="admin" group="dba" mode="644" created="2012-12-11T13:05:50+01:00" modified="2013-12-05T17:30:40+01:00" filename="index.xql" mimetype="application/xquery" blob-id="b2cf6c41e17293e3bade069362089689be5436cd9614beba7e726f8f09946284">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="view-spec.xql" owner="admin" group="dba" mode="644" created="2012-12-17T13:18:12+01:00" modified="2015-02-23T18:27:16+01:00" filename="view-spec.xql" mimetype="application/xquery" blob-id="9834c12f7b42e9b8e01e274d6faedad729be090e09cc0bd7efe95f4ed63c50e6">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="graph.xql" owner="admin" group="dba" mode="644" created="2012-12-12T17:30:44+01:00" modified="2015-01-20T17:16:28+01:00" filename="graph.xql" mimetype="application/xquery" blob-id="1225e4f47147499e4bde91a732c23398261db7868fc23d3ba911a90f3dd241ad">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="app.xql" owner="admin" group="dba" mode="644" created="2012-12-11T12:58:12+01:00" modified="2021-01-28T16:35:44+01:00" filename="app.xql" mimetype="application/xquery" blob-id="a71872ded98f935e71c2ebaa282f4ae063659e275052123c743ff2257dcff735">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="add-spec.xql" owner="admin" group="dba" mode="644" created="2013-03-12T12:04:54+01:00" modified="2021-01-28T16:43:06+01:00" filename="add-spec.xql" mimetype="application/xquery" blob-id="e009e8ae7b6a8c154d959e01ca5467d242f54d79b82b2acb50114a79beb7ef0f">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="register-spec.xql.bak" owner="admin" group="dba" mode="644" created="2021-01-28T16:43:59+01:00" modified="2021-01-28T16:43:59+01:00" filename="register-spec.xql.bak" mimetype="application/xquery" blob-id="f9e08ace960bd974ef6dabefbddfe63a6be4c2eb8d64fc47fef818b4dce5435e">
+        <acl entries="0" version="1"/>
+    </resource>
+</collection>

@@ -1,0 +1,17 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/resources/scripts/tinymce/skins/lightgray" owner="admin" group="dba" mode="755" created="2013-11-27T12:03:46+01:00" deduplicate-blobs="false" version="2">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="content.min.css" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="content.min.css" mimetype="text/css" blob-id="2eeb31ec881263d23f9dea387c93f29a04b369a7899055091a8f1a3efe4f972f">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="skin.min.css" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T14:37:07+01:00" filename="skin.min.css" mimetype="text/css" blob-id="687c9ffedfba21198a9e037a8aa46a1d0f34ae8789b7b7dd59c918a6ef20e276">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="content.inline.min.css" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="content.inline.min.css" mimetype="text/css" blob-id="a52e808e9089457392479a70052f2f9b23aae8f9711368bc04a00cacfdebac49">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="skin.ie7.min.css" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="skin.ie7.min.css" mimetype="text/css" blob-id="5d7864277061e1c9e66f955706a15a5e72fd56c3bd038681fa3e8dde2ad0775f">
+        <acl entries="0" version="1"/>
+    </resource>
+    <subcollection name="fonts" filename="fonts"/>
+    <subcollection name="img" filename="img"/>
+</collection>

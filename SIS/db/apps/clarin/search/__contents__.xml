@@ -1,0 +1,6 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/search" owner="admin" group="dba" mode="755" created="2012-12-11T11:42:09+01:00" deduplicate-blobs="false" version="2">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="search-spec.xq" owner="admin" group="dba" mode="755" created="2013-01-04T14:37:44+01:00" modified="2014-08-26T12:56:17+02:00" filename="search-spec.xq" mimetype="application/xquery" blob-id="b9e5764af40b80bbac8baaebfca6f7c4bd423c8171300ca1f47104c82aa4c088">
+        <acl entries="0" version="1"/>
+    </resource>
+</collection>

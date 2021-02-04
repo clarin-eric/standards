@@ -1,0 +1,24 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/data" owner="admin" group="dba" mode="755" created="2012-12-11T11:38:21+01:00" deduplicate-blobs="false" version="2">
+    <acl entries="0" version="1"/>
+    <resource type="XMLResource" name="topics.xml" owner="admin" group="dba" mode="644" created="2014-10-23T12:05:06+02:00" modified="2014-10-23T12:05:06+02:00" filename="topics.xml" mimetype="application/xml">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="XMLResource" name="users.xml" owner="admin" group="dba" mode="644" created="2017-03-27T18:50:33+02:00" modified="2021-01-29T15:58:52+01:00" filename="users.xml" mimetype="application/xml">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="XMLResource" name="sbs.xml" owner="admin" group="dba" mode="644" created="2015-03-16T12:12:54+01:00" modified="2015-09-08T15:48:25+02:00" filename="sbs.xml" mimetype="application/xml">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="XMLResource" name="centers.xml" owner="admin" group="dba" mode="644" created="2014-08-26T18:32:07+02:00" modified="2021-01-18T09:57:34+01:00" filename="centers.xml" mimetype="application/xml">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="XMLResource" name="secrets.xml" owner="admin" group="dba" mode="644" created="2021-01-28T18:09:57+01:00" modified="2021-01-28T18:20:16+01:00" filename="secrets.xml" mimetype="application/xml">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="XMLResource" name="Untitled.xml" owner="admin" group="dba" mode="644" created="2021-01-28T18:11:35+01:00" modified="2021-01-28T18:11:49+01:00" filename="Untitled.xml" mimetype="application/xml">
+        <acl entries="0" version="1"/>
+    </resource>
+    <subcollection name="review" filename="review"/>
+    <subcollection name="doc" filename="doc"/>
+    <subcollection name="specifications" filename="specifications"/>
+</collection>

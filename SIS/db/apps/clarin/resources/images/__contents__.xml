@@ -1,0 +1,27 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/resources/images" owner="admin" group="dba" mode="755" created="2012-12-11T11:40:39+01:00" deduplicate-blobs="false" version="2">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="banski.png" owner="admin" group="dba" mode="644" created="2017-11-29T18:34:27+01:00" modified="2017-11-29T18:34:27+01:00" filename="banski.png" mimetype="image/png" blob-id="8cf78993a3a75d2e278cff253eddd7cf6460c3412e1f702c033b403ddc098a58">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="stuehrenberg-ids.png" owner="admin" group="dba" mode="644" created="2014-05-20T11:17:25+02:00" modified="2014-05-20T11:17:25+02:00" filename="stuehrenberg-ids.png" mimetype="image/png" blob-id="c393fc17da1ce55f500f990741e843848c8ba663c2485bcb47a429e6dd131a5d">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="margaretha.png" owner="admin" group="dba" mode="644" created="2012-12-11T11:40:39+01:00" modified="2012-12-11T11:40:39+01:00" filename="margaretha.png" mimetype="image/png" blob-id="3d89e5c92dde32df4eb8ce9e33132c367821f2aded0ee0b4b0fa19e8a79e6f8c">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="person_icon.png" owner="admin" group="dba" mode="644" created="2012-12-11T11:40:39+01:00" modified="2012-12-11T11:40:39+01:00" filename="person_icon.png" mimetype="image/png" blob-id="a5812e70c4f840aacbd1eb8c7ff3c08a6c6d67d8781d58b20fd1157bdbe9a52b">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="arrow.png" owner="admin" group="dba" mode="644" created="2013-12-02T15:28:36+01:00" modified="2013-12-02T16:03:09+01:00" filename="arrow.png" mimetype="image/png" blob-id="ef94c16c2dc9452ea4beba91d26d9ce8ef2411ff4f4893d86bdfaee292bbabdb">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="werthmann.png" owner="admin" group="dba" mode="644" created="2012-12-11T11:40:39+01:00" modified="2012-12-11T11:40:39+01:00" filename="werthmann.png" mimetype="image/png" blob-id="ca326f77b7de16ced871db4cbabf1a5aa01e7cfac70cce1ba5d56a4de540502a">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="bannerNeu.png" owner="admin" group="dba" mode="644" created="2012-12-11T11:40:39+01:00" modified="2012-12-11T11:40:39+01:00" filename="bannerNeu.png" mimetype="image/png" blob-id="de1f545850902e2da0639446057bd295388418984a5369ce833c30c5152a89bd">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="stuehrenberg.png" owner="admin" group="dba" mode="644" created="2012-12-11T11:40:39+01:00" modified="2012-12-11T11:40:39+01:00" filename="stuehrenberg.png" mimetype="image/png" blob-id="2d3f7cf0990b7fb98f5d2965a7135762f66862ba30efe312096edac03aac55ae">
+        <acl entries="0" version="1"/>
+    </resource>
+</collection>

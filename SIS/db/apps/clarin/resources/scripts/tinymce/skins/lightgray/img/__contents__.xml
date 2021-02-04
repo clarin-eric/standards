@@ -1,0 +1,18 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/resources/scripts/tinymce/skins/lightgray/img" owner="admin" group="dba" mode="755" created="2013-11-27T12:03:46+01:00" deduplicate-blobs="false" version="2">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="object.gif" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="object.gif" mimetype="image/gif" blob-id="f5e35fe06a07305eef1f7027672094794e8a136a3a23a3c2b765df1f52b48e9f">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="loader.gif" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="loader.gif" mimetype="image/gif" blob-id="4410107a404dcc0e6e63807011ba11bfcd037435237b93c1d1ef72b4556f018c">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="anchor.gif" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="anchor.gif" mimetype="image/gif" blob-id="633d416870cad0310a818cb8ed1193ed37451be0a045b017751bf1d2a051080f">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="trans.gif" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="trans.gif" mimetype="image/gif" blob-id="c26d9908239c060e38563a25f6b8e8c4426d9bb98e0f31dcd8e041ca40e15f5e">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="wline.gif" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:46+01:00" modified="2013-11-27T12:03:46+01:00" filename="wline.gif" mimetype="image/gif" blob-id="077342482cb83628c62a9bc92bfaa36c406895193d788f0fe048fbc4630d50f8">
+        <acl entries="0" version="1"/>
+    </resource>
+</collection>

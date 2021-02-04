@@ -1,0 +1,18 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/user" owner="admin" group="dba" mode="755" created="2012-12-14T11:45:40+01:00" deduplicate-blobs="false" version="2">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="register.xq" owner="admin" group="dba" mode="755" created="2012-12-14T19:03:21+01:00" modified="2021-01-29T15:57:22+01:00" filename="register.xq" mimetype="application/xquery" blob-id="400140d1fc85e31ae904b695f3d6741c28354aa954606d38489990b3f0eaf024">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="login.xq" owner="admin" group="dba" mode="755" created="2012-12-14T16:33:49+01:00" modified="2013-12-05T16:08:17+01:00" filename="login.xq" mimetype="application/xquery" blob-id="9349013b7a55717261a28a7a6677b186f6c5362f8249ea55d3a4b135980ba7c9">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="logout.xq" owner="admin" group="dba" mode="755" created="2012-12-14T18:52:08+01:00" modified="2014-12-23T15:01:41+01:00" filename="logout.xq" mimetype="application/xquery" blob-id="48bf325ae2cee0a179612d3bf7c7fffea122dbf71dc1b5dcdd189d37c3abd08d">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="register-confirmation.xq" owner="admin" group="dba" mode="755" created="2012-12-14T19:24:44+01:00" modified="2015-10-20T16:32:08+02:00" filename="register-confirmation.xq" mimetype="application/xquery" blob-id="ef1a56d5f3e32d2ba8301be1ebc717ea9b949fcc1d5a8467a4a110ea6371186c">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="login-xf.xq" owner="admin" group="dba" mode="755" created="2012-12-14T11:42:39+01:00" modified="2014-12-23T15:01:36+01:00" filename="login-xf.xq" mimetype="application/xquery" blob-id="9dd742fa65970bea31ac4293f9ad286642dc9275d4c3e83e57841936b1f34c23">
+        <acl entries="0" version="1"/>
+    </resource>
+</collection>

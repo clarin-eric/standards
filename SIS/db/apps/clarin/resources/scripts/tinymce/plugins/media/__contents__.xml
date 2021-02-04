@@ -1,0 +1,9 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/resources/scripts/tinymce/plugins/media" owner="admin" group="dba" mode="755" created="2013-11-27T12:03:47+01:00" deduplicate-blobs="false" version="2">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="moxieplayer.swf" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:47+01:00" modified="2013-11-27T12:03:47+01:00" filename="moxieplayer.swf" mimetype="application/octet-stream" blob-id="bf2edadeced3c2ae5b37e45be80cac6d1da656cb4b563c073324873fc2c42926">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="plugin.min.js" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:47+01:00" modified="2013-11-27T12:03:47+01:00" filename="plugin.min.js" mimetype="application/octet-stream" blob-id="4b4ebeda1a89fc28b66c53d86b182205385c161bdf2e7666d0462c66120a0aa7">
+        <acl entries="0" version="1"/>
+    </resource>
+</collection>

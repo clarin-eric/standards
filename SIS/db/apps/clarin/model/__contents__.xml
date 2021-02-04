@@ -1,0 +1,24 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/model" owner="admin" group="dba" mode="755" created="2012-12-11T11:43:25+01:00" deduplicate-blobs="false" version="2">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="topic.xqm" owner="admin" group="dba" mode="644" created="2012-12-12T11:40:08+01:00" modified="2014-12-23T15:02:48+01:00" filename="topic.xqm" mimetype="application/xquery" blob-id="efd3617ba0d903c309c3baec2833e5c43f80de97c93c6dc983d3734211bd96d1">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="user.xqm" owner="admin" group="dba" mode="644" created="2012-12-14T16:01:28+01:00" modified="2014-12-23T15:02:45+01:00" filename="user.xqm" mimetype="application/xquery" blob-id="f2a64e23abb9002c742315ffffe4c5a957241d92393c67c71a1ab1044f38ca47">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="sb.xqm" owner="admin" group="dba" mode="644" created="2012-12-11T15:52:07+01:00" modified="2014-12-23T15:02:19+01:00" filename="sb.xqm" mimetype="application/xquery" blob-id="4f05c531bbdb07b6faa9c138dd97b1998941df90872e231ecea594051a10b4b3">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="center.xqm" owner="admin" group="dba" mode="644" created="2014-08-26T11:19:35+02:00" modified="2014-12-23T15:02:22+01:00" filename="center.xqm" mimetype="application/xquery" blob-id="ad1a1f62f828ebcb4c3524d5bcf447c16a28a7e27ba411b0e657a8c3ff6db39d">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="schema.xqm" owner="admin" group="dba" mode="644" created="2012-12-12T17:32:37+01:00" modified="2014-12-23T15:02:00+01:00" filename="schema.xqm" mimetype="application/xquery" blob-id="3ee6854d452d5dc31d2c59d262705a2dc365e659091f332bfd9e97e0b7cace51">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="spec.xqm" owner="admin" group="dba" mode="644" created="2013-12-05T14:50:09+01:00" modified="2015-01-20T17:14:46+01:00" filename="spec.xqm" mimetype="application/xquery" blob-id="fa8772aa15d2a094d088050b3a5a42f00d530d6e5ea7e5a88e7b802b281caf30">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="data.xqm" owner="admin" group="dba" mode="644" created="2012-12-11T14:09:01+01:00" modified="2021-01-29T13:59:33+01:00" filename="data.xqm" mimetype="application/xquery" blob-id="f98770e5be22f2dc6f7dfdc2fdda9be87714cd4e9cd23f8827e271703323d372">
+        <acl entries="0" version="1"/>
+    </resource>
+</collection>
