@@ -1,6 +1,0 @@
-<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/resources/scripts/tinymce/plugins/fullscreen" owner="admin" group="dba" mode="755" created="2013-11-27T12:03:48+01:00" deduplicate-blobs="false" version="2">
-    <acl entries="0" version="1"/>
-    <resource type="BinaryResource" name="plugin.min.js" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:48+01:00" modified="2013-11-27T12:03:48+01:00" filename="plugin.min.js" mimetype="application/octet-stream" blob-id="0ccb27f16bcc9e5f8ba626e961d40b4fc98f62aa3be0329acbfd82b2fa50b8fb">
-        <acl entries="0" version="1"/>
-    </resource>
-</collection>

@@ -1,7 +1,0 @@
-<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/resources/scripts/tinymce/plugins/visualblocks" owner="admin" group="dba" mode="755" created="2013-11-27T12:03:47+01:00" deduplicate-blobs="false" version="2">
-    <acl entries="0" version="1"/>
-    <resource type="BinaryResource" name="plugin.min.js" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:48+01:00" modified="2013-11-27T12:03:48+01:00" filename="plugin.min.js" mimetype="application/octet-stream" blob-id="74ded2162e027e1d960181f2059a6cf0952cc85e5f37e9a52d63cc0a9c8c3653">
-        <acl entries="0" version="1"/>
-    </resource>
-    <subcollection name="css" filename="css"/>
-</collection>

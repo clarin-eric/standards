@@ -1,6 +1,0 @@
-<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/apps/clarin/resources/scripts/tinymce/plugins/charmap" owner="admin" group="dba" mode="755" created="2013-11-27T12:03:47+01:00" deduplicate-blobs="false" version="2">
-    <acl entries="0" version="1"/>
-    <resource type="BinaryResource" name="plugin.min.js" owner="admin" group="dba" mode="644" created="2013-11-27T12:03:47+01:00" modified="2013-11-27T12:03:47+01:00" filename="plugin.min.js" mimetype="application/octet-stream" blob-id="62a9ea585a08dcd094b34652a56233a3e83715016a319f41c19b23bc1342e36d">
-        <acl entries="0" version="1"/>
-    </resource>
-</collection>
