@@ -1,3 +1,5 @@
 /.project
 /**/__contents__.xml
 /**/*.bak
+/**/users.xml
+/**/secrets.xml
