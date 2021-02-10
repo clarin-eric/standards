@@ -27,7 +27,7 @@
     </info>
     <relation target="SpecXML" type="isBasedOn"/>
     <relation target="SpecDcMes" type="isSimilarTo"/>
-    <version id="SpecOlac2008" status="Standard" usedInCLARINCenter="TLA UC CLARIN-PL">
+    <version id="SpecOlac2008" status="Standard" usedInCLARINCenter="MPI-PL CLARIN-DK-UCPH CLARIN-PL">
         <titleStmt>
             <abbr internal="yes">OLAC Metadata-2008</abbr>
             <respStmt id="b9z3QB">

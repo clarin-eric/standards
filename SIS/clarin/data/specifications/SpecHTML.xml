@@ -93,7 +93,7 @@
         <versionNumber type="major">ISO/IEC 15445:2000</versionNumber>
         <date>2012-07-04</date>
     </version>
-    <version id="SpecHTML-4.01" status="W3C Recommendation" usedInCLARINCenter="TLA CLARIN-PL IDS">
+    <version id="SpecHTML-4.01" status="W3C Recommendation" usedInCLARINCenter="MPI-PL CLARIN-PL IDS">
         <titleStmt>
             <title>HTML Specification</title>
             <abbr>HTML 4.01</abbr>

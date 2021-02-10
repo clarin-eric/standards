@@ -19,7 +19,7 @@
             format remains the same on any screen and any platform. For example the combination of XSL-FO and Formatting Objects Processor (FOP) allows the generation of print-ready documents 
             in PDF,  AFP,  Postscript, TIFF and other formats.</p>
     </info>
-    <version id="SpecXSLFO1" status="W3C Recommendation" usedInCLARINCenter="TLA">
+    <version id="SpecXSLFO1" status="W3C Recommendation" usedInCLARINCenter="MPI-PL">
         <titleStmt>
             <abbr internal="yes">XSL-FO-2006</abbr>
             <respStmt id="FWeUtb">

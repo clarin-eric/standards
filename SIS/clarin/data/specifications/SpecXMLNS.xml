@@ -9,7 +9,7 @@
     </info>
     <relation target="SpecRDFS1" type="isUsedBy"/>
     <relation target="SpecRDFXML-Rev" type="isUsedBy"/>
-    <version id="SpecXMLNS1.0TE" status="W3C Recommendation" usedInCLARINCenter="TLA IDS">
+    <version id="SpecXMLNS1.0TE" status="W3C Recommendation" usedInCLARINCenter="MPI-PL IDS">
         <titleStmt>
             <abbr internal="yes">MLNS-2009</abbr>
             <respStmt id="KFtxCv">

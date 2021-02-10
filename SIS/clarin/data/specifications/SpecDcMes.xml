@@ -25,7 +25,7 @@
         <p>DCMES is defined by ISO Standard 15836:2009, NISO Standard Z39.85-2007
       and IETF RFC Standard RFC5013.</p>
     </info>
-    <version id="SpecDcMes11" status="final" usedInCLARINCenter="TLA">
+    <version id="SpecDcMes11" status="final" usedInCLARINCenter="MPI-PL">
         <titleStmt>
             <abbr internal="yes">DCMES-2010</abbr>
             <respStmt id="bgB4ix">

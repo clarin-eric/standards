@@ -38,7 +38,7 @@
         <date>2001-12-03</date>
         <address type="URL">https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=relax-ng</address>
     </version>
-    <version id="SpecRelaxingISO" status="International Standard" usedInCLARINCenter="UC TLA">
+    <version id="SpecRelaxingISO" status="International Standard" usedInCLARINCenter="CLARIN-DK-UCPH MPI-PL">
         <titleStmt>
             <title>Information technology — Document Schema Definition Language (DSDL) – Part 2: Regular-grammar-based validation</title>
             <abbr internal="yes">RELAX NG-ISO</abbr>

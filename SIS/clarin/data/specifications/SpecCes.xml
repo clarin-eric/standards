@@ -90,7 +90,7 @@
             </info>
         </relation>
     </version>
-    <version id="SpecXces104" status="final" usedInCLARINCenter="CLARIN-PL IDS">
+    <version id="SpecXces104" status="final" usedInCLARINCenter="CLARIN-PL1 IDS">
         <titleStmt>
             <title>Corpus Encoding Standard in XML</title>
             <abbr>XCES</abbr>

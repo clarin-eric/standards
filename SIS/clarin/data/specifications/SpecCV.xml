@@ -25,7 +25,7 @@
             <a href="http://www.niso.org/apps/group_public/project/details.php?project_id=46">Abstract, ANSI/NISO Z39.19</a>
         </p>
     </info>
-    <version id="SpecCV-NISO" usedInCLARINCenter="TLA CLARIN-PL">
+    <version id="SpecCV-NISO" usedInCLARINCenter="MPI-PL CLARIN-PL">
         <titleStmt>
             <abbr internal="yes">Controlled Vocabulary-2005</abbr>
             <respStmt id="pSV001">

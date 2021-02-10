@@ -18,7 +18,7 @@
             (<a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=37327">Abstract, ISO 24613:2008</a>)
         </p>
     </info>
-    <version id="SpecLMF-IS" status="International Standard" usedInCLARINCenter="TLA UC CLARIN-PL">
+    <version id="SpecLMF-IS" status="International Standard" usedInCLARINCenter="MPI-PL CLARIN-DK-UCPH CLARIN-PL">
         <titleStmt>
             <title>Language resource management — Lexical markup framework</title>
             <abbr internal="yes">LMF-2012</abbr>

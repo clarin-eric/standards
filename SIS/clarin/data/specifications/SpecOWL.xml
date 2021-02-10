@@ -46,7 +46,7 @@
             </info>
         </relation>
     </version>
-    <version id="SpecOWL2" status="W3C Recommendation" usedInCLARINCenter="UC">
+    <version id="SpecOWL2" status="W3C Recommendation" usedInCLARINCenter="CLARIN-DK-UCPH">
         <titleStmt>
             <title>OWL 2 Web Ontology Language</title>
             <abbr>OWL 2</abbr>
