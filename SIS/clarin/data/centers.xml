@@ -80,7 +80,7 @@
 		<name>CLARIN-LT</name>
 		<a href="https://centres.clarin.eu/centre/36" />
 	</center>
-	<center id="CLARIN-PL">
+	<center id="CLARIN-PL1">
 		<name>CLARIN-PL Language Technology Centre</name>
 		<a href="https://centres.clarin.eu/centre/25"></a>
 	</center>
@@ -88,7 +88,7 @@
 		<name>CLARIN.SI Language Technology Centre</name>
 		<a href="https://centres.clarin.eu/centre/30" />
 	</center>
-	<center id="CLARINO-Bergen">
+	<center id="CLARINO_Bergen">
 		<name>CLARINO Bergen Center</name>
 		<a href="https://centres.clarin.eu/centre/29" />
 	</center>
@@ -216,7 +216,7 @@
 		<name>PolMine Project</name>
 		<a href="https://centres.clarin.eu/centre/38" />
 	</center>
-	<center id="PORTULAN-CLARIN-K-Centre">
+	<center id="PORTULAN_CLARIN-K-Centre">
 		<name>PORTULAN CLARIN K-Centre: CLARIN Knowledge Centre for the Science and Technology of the Portuguese Language</name>
 		<a href="https://centres.clarin.eu/centre/66" />
 	</center>
@@ -228,7 +228,7 @@
 		<name>South African Centre for Digital Language Resources</name>
 		<a href="https://centres.clarin.eu/centre/58" />
 	</center>
-	<center id="Spanish-K-Centre">
+	<center id="Spanish_K-Centre">
 		<name>Spanish CLARIN K-Centre</name>
 		<a href="https://centres.clarin.eu/centre/32" />
 	</center>

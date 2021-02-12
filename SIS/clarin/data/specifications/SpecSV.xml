@@ -17,7 +17,7 @@
             <title>Structured vocabularies for information retrieval. Guide. Definitions, symbols and abbreviations</title>
             <abbr internal="yes">SV-1</abbr>
         </titleStmt>
-        <version id="SpecSV1-BS" status="Current, Superseded" usedInCLARINCenter="CLARIN-PL">
+        <version id="SpecSV1-BS" status="Current, Superseded" usedInCLARINCenter="CLARIN-PL1">
             <titleStmt>
                 <abbr internal="yes">SV-1-2005</abbr>
                 <respStmt id="pSV002">

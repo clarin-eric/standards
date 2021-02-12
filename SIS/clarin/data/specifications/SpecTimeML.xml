@@ -42,7 +42,7 @@
         <date>2004</date>
         <address type="URL">http://www.timeml.org/site/publications/timeMLdocs/timeml_1.2.html</address>
     </version>
-    <version id="SpecTimeML-1.2.1" usedInCLARINCenter="CLARIN-PL">
+    <version id="SpecTimeML-1.2.1" usedInCLARINCenter="CLARIN-PL1">
         <titleStmt>
             <title>A Formal Specification Language for Events and Temporal Expressions</title>
             <abbr internal="yes">TimeML-2005</abbr>

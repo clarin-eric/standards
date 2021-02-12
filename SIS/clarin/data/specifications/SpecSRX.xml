@@ -27,7 +27,7 @@
             about how the text has been segmented.</p>
     </info>
     <relation target="SpecTMX-LISA" type="isUsedBy"/>
-    <version id="SpecSRX-LISA" usedInCLARINCenter="CLARIN-PL">
+    <version id="SpecSRX-LISA" usedInCLARINCenter="CLARIN-PL1">
         <titleStmt>
             <title>SRX Specification</title>
             <abbr internal="yes">SRX-2008</abbr>

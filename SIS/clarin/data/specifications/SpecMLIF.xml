@@ -14,7 +14,7 @@
             It also specifies a metamodel and a set of generic data categories, which can be complemented by adding categories from 
             Data Category Registry (DCR) with respect to the application domain.</p>
     </info>
-    <version id="SpecMlif-IS" status="International Standard" usedInCLARINCenter="CLARIN-PL">
+    <version id="SpecMlif-IS" status="International Standard" usedInCLARINCenter="CLARIN-PL1">
         <titleStmt>
             <abbr internal="yes">MLIF-2012</abbr>
             <respStmt id="E1qzDs">

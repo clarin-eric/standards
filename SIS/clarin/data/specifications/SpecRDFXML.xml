@@ -13,7 +13,7 @@
             W3C Recommendation.</p>
     </info>
     <relation target="SpecDcMes11" type="isUsedBy"/>
-    <version id="SpecRDFXML-Rev" status="W3C Recommendation" usedInCLARINCenter="CLARIN-PL">
+    <version id="SpecRDFXML-Rev" status="W3C Recommendation" usedInCLARINCenter="CLARIN-PL1">
         <titleStmt>
             <title>RDF/XML Syntax Specification (Revised)</title>
             <abbr internal="yes">RDF/XML-2004</abbr>

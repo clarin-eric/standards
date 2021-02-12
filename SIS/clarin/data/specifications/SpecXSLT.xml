@@ -27,7 +27,7 @@
         <address type="URL">http://www.w3.org/TR/1999/REC-xslt-19991116</address>
         <relation target="SpecXPath1.0" type="uses"/>
     </version>
-    <version id="SpecXSLT2.0" status="W3C Recommendation" usedInCLARINCenter="MPI-PL CLARIN-DK-UCPH CLARIN-PL">
+    <version id="SpecXSLT2.0" status="W3C Recommendation" usedInCLARINCenter="MPI-PL CLARIN-DK-UCPH CLARIN-PL1">
         <titleStmt>
             <abbr internal="yes">XSLT-2007</abbr>
         </titleStmt>

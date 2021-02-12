@@ -37,7 +37,7 @@
         <relation target="SpecXPath3.0" type="isSubsetOf"/>
         <relation target="SpecXPath2.0" type="isSubsetOf"/>
     </version>
-    <version id="SpecXPath2.0" status="W3C Recommendation" usedInCLARINCenter="MPI-PL CLARIN-PL CLARIN-DK-UCPH IDS">
+    <version id="SpecXPath2.0" status="W3C Recommendation" usedInCLARINCenter="MPI-PL CLARIN-PL1 CLARIN-DK-UCPH IDS">
         <titleStmt>
             <abbr internal="yes">XPath-2010</abbr>
             <respStmt id="v6ln2C">

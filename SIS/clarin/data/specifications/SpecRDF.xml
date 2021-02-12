@@ -43,7 +43,7 @@
     <relation target="SpecDcMes11" type="isUsedBy"/>
     <relation target="SpecDAMLOil" type="isUsedBy"/>
     <relation target="SpecUmbel" type="isUsedBy"/>
-    <version id="SpecRDF1" status="W3C Recommendation" usedInCLARINCenter="CLARIN-DK-UCPH CLARIN-PL IDS">
+    <version id="SpecRDF1" status="W3C Recommendation" usedInCLARINCenter="CLARIN-DK-UCPH CLARIN-PL1 IDS">
         <titleStmt>
             <abbr internal="yes">RDF-2004</abbr>
             <respStmt id="pRDF02">
