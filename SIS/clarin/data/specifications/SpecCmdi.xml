@@ -80,7 +80,7 @@
         <versionNumber type="major">4</versionNumber>
         <date>2012-02-15</date>
         <address type="URL">http://www.clarin.eu/cmdi</address>
-        <relation target="SpecCMD-1-NWI" type="inspires"/>
+        <relation target="SpecCMD-1-2014" type="inspires"/>
     </version>
     <part id="SpecCmdi-Part1">
         <titleStmt>

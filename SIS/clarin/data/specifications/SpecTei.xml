@@ -176,7 +176,7 @@
             </fs>
         </features>
         <address type="URL">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</address>
-        <relation target="SpecIDS-XCES" type="isUsedBy"/>
+        <!-- <relation target="SpecIDS-XCES" type="isUsedBy"/>  -->
         <relation target="SpecXML" type="isApplicationOf">
             <info>
                 <p>TEI P5 is an application of the Extensible Markup Language (XML). It uses the XML
@@ -188,10 +188,10 @@
                 <p>TEI P5 uses RELAX NG as its document grammar formalism.</p>
             </info>
         </relation>
-        <relation target="SpecI5" type="isBasedOn">
+        <!-- <relation target="SpecI5" type="isBasedOn">
             <info>
                 <p>The I5 is based on the TEI P5 (Vesion 2.5.0).</p>
             </info>
-        </relation>
+        </relation> -->
     </version>
 </spec>

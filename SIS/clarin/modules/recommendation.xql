@@ -49,7 +49,7 @@ declare function rm:print-recTable($type){
                 <td style= "{$style}">{rm:get-recommendation-sb($spec/@standardSettingBody)}</td>
                 <td style= "{$style}" >{rm:get-clarin-centers($rec-node)}</td>
                 <td style= "{$style}">{rm:get-alternatives($rec)}</td>
-                <td style= "{$style}">{$rec/info[@type="description"]}</td>
+                <!--<td style= "{$style}">{$rec/info[@type="description"]}</td>-->
             </tr>
 };
 

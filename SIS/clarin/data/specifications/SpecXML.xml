@@ -21,7 +21,7 @@
     <relation target="SpecTMX-LISA" type="isUsedBy"/>
     <relation target="SpecTBX-IS" type="isUsedBy"/>
     <relation target="SpecSRX-ISO" type="isUsedBy"/>
-    <relation target="SpecIDS-XCES" type="isUsedBy"/>
+    <!-- relation target="SpecIDS-XCES" type="isUsedBy"/>  -->
     <relation target="SpecXces104" type="isUsedBy"/>
     <relation target="SpecXQuery" type="isUsedBy"/>
     <relation target="SpecDiAML-IS" type="isUsedBy"/>
