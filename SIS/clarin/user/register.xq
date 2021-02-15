@@ -86,7 +86,7 @@ return
                             </tr>
                             <tr>   
                                 <td></td>
-                                <td><span class="g-recaptcha" data-sitekey="6Le3-A4TAAAAANIlvxACo9FgbWKzXBhg_UH_8fTK"/></td>
+                                <td><span class="g-recaptcha" data-sitekey="{register:get-recaptcha-site-key()}"/></td>
                             </tr>
                             <tr style="height:40px;">
                                 <td>

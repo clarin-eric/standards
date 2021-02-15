@@ -13,6 +13,12 @@ declare namespace http = "http://expath.org/ns/http-client";
    @author margaretha
 :)
 
+declare function register:get-recaptcha-site-key(){
+    let $key := $data:recaptcha-site
+    return $key
+};
+
+
 (: Validate email :)
 declare function register:validate-email($submitted,$email){
     if ($submitted and $email) then login:validate-email($email) else ''
