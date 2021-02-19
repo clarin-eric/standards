@@ -3,10 +3,9 @@
         <xs:documentation xml:lang="en">This is a quick and dirty customization of the spec.xsd schema for the purpose of encoding formats (as opposed to standards).</xs:documentation>
     </xs:annotation>
 
-    <xs:element name="spec">
+    <xs:element name="format">
         <xs:annotation>
-            <xs:documentation xml:lang="en">Root element for describing a
-                format document.</xs:documentation>
+            <xs:documentation xml:lang="en">Root element for describing a format document.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
@@ -16,26 +15,9 @@
                 <xs:element ref="features" minOccurs="0"/>
                 <xs:element ref="address" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element ref="relation" minOccurs="0" maxOccurs="unbounded"/>
-                <xs:choice maxOccurs="unbounded">
-                    <xs:element name="part" maxOccurs="unbounded">
-                        <xs:complexType>
-                            <xs:sequence>
-                                <xs:element ref="titleStmt" maxOccurs="unbounded" minOccurs="0"/>
-                                <xs:element name="scope" type="xs:string" minOccurs="0"/>
-                                <xs:element ref="keyword" minOccurs="0" maxOccurs="unbounded"/>
-                                <xs:element ref="info" maxOccurs="unbounded" minOccurs="0"/>
-                                <xs:element ref="features" minOccurs="0"/>
-                                <xs:element ref="address" minOccurs="0" maxOccurs="unbounded"/>
-                                <xs:element ref="relation" minOccurs="0" maxOccurs="unbounded"/>
-                                <xs:element ref="version" maxOccurs="unbounded"/>
-                                <xs:element ref="asset" minOccurs="0" maxOccurs="unbounded"/>
-                            </xs:sequence>
-                            <xs:attribute name="id" type="xs:ID"/>
-                        </xs:complexType>
-                    </xs:element>
-                    <xs:element ref="version" maxOccurs="unbounded"/>
-                </xs:choice>
                 <xs:element ref="asset" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="mimeType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="fileExt" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
             <xs:attribute name="id">
                 <xs:simpleType>
@@ -321,7 +303,6 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
-            <xs:attribute ref="standardSettingBody" use="optional"/>
             <xs:attribute name="usedInCLARINCenter" type="xs:NMTOKENS" use="optional"/>
             <xs:attribute name="CLARINapproved" use="optional">
                 <xs:simpleType>
@@ -485,7 +466,6 @@
     <xs:element name="author" type="nameType"/>
     <xs:element name="li" type="textblockType"/>
     <xs:attribute name="type" type="xs:string"/>
-    <xs:attribute name="standardSettingBody" type="xs:string"/>
     <xs:attribute name="display" default="show">
         <xs:simpleType>
             <xs:restriction base="xs:token">
@@ -574,4 +554,31 @@
         </xs:choice>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
+    <xs:simpleType name="Scheme">
+        <xs:restriction base="xs:normalizedString">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="MimeType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The type that indicates the type of media used to store the content. MimeType is used to determine the software product(s) that can read the content. MIME types are described in RFC 2046.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="Scheme">
+                <xs:attribute name="mimeTypeScheme" type="xs:anyURI"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="mimeType">
+        <xs:complexType mixed="true">
+            <xs:attribute name="recommended" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="fileExt">
+        <xs:complexType mixed="true">
+            <xs:attribute name="recommended" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>
