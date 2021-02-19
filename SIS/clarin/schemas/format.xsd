@@ -1,0 +1,577 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation xml:lang="en">This is a quick and dirty customization of the spec.xsd schema for the purpose of encoding formats (as opposed to standards).</xs:documentation>
+    </xs:annotation>
+
+    <xs:element name="spec">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">Root element for describing a
+                format document.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="titleStmt"/>
+                <xs:element ref="keyword" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="info" maxOccurs="unbounded"/>
+                <xs:element ref="features" minOccurs="0"/>
+                <xs:element ref="address" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="relation" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element name="part" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="titleStmt" maxOccurs="unbounded" minOccurs="0"/>
+                                <xs:element name="scope" type="xs:string" minOccurs="0"/>
+                                <xs:element ref="keyword" minOccurs="0" maxOccurs="unbounded"/>
+                                <xs:element ref="info" maxOccurs="unbounded" minOccurs="0"/>
+                                <xs:element ref="features" minOccurs="0"/>
+                                <xs:element ref="address" minOccurs="0" maxOccurs="unbounded"/>
+                                <xs:element ref="relation" minOccurs="0" maxOccurs="unbounded"/>
+                                <xs:element ref="version" maxOccurs="unbounded"/>
+                                <xs:element ref="asset" minOccurs="0" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                            <xs:attribute name="id" type="xs:ID"/>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="version" maxOccurs="unbounded"/>
+                </xs:choice>
+                <xs:element ref="asset" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="id">
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="f[\w\.-]+"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute ref="display"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="titleStmt">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="type" default="main">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="main"/>
+                                            <xs:enumeration value="sub"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="abbr" minOccurs="0"/>
+                <xs:element name="versionNumber" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="type" use="required">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="major"/>
+                                            <xs:enumeration value="minor"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="respStmt" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="abbr">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="internal"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="keyword" type="xs:string"/>
+    <xs:element name="respStmt">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resp" maxOccurs="unbounded">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Editor"/>
+                            <xs:enumeration value="Author"/>
+                            <xs:enumeration value="Publisher"/>
+                            <xs:enumeration value="Convenor"/>
+                            <xs:enumeration value="Chair"/>
+                            <xs:enumeration value="Secretary"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="name" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="type" default="person">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="org"/>
+                                            <xs:enumeration value="person"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                                <xs:attribute name="id" type="xs:NMTOKENS" use="optional"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="features" type="fType"/>
+    <xs:element name="fs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="f"/>
+            </xs:sequence>
+            <xs:attribute ref="type"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="f" type="fType"/>
+    <xs:element name="vColl">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:group ref="simpleContent"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="relation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="info" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="target" type="xs:NMTOKENS" use="required"/>
+            <xs:attribute name="type" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Replaces"/>
+                        <xs:enumeration value="uses"/>
+                        <xs:enumeration value="isUsedBy"/>
+                        <xs:enumeration value="isBasedOn"/>
+                        <xs:enumeration value="isExtendedTo"/>
+                        <xs:enumeration value="isExtendedFrom"/>
+                        <xs:enumeration value="isAdaptedTo"/>
+                        <xs:enumeration value="isAdaptedFrom"/>
+                        <xs:enumeration value="isSimilarTo"/>
+                        <xs:enumeration value="isDefinedBy"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="date">
+        <xs:simpleType>
+            <xs:union memberTypes="xs:date xs:gYear"/>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="address">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="type" default="URL">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="postal"/>
+                                <xs:enumeration value="URL"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="sbs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sb" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:complexContent>
+                            <xs:extension base="contentType">
+                                <xs:attribute name="id" use="required">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:ID">
+                                            <xs:pattern value="SB[\w\.-]+"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                                <xs:attribute ref="display"/>
+                                <xs:attribute ref="type" use="optional"/>
+                            </xs:extension>
+                        </xs:complexContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="version">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="titleStmt"/>
+                <xs:element name="versionNumber" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="type" use="required">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="major"/>
+                                            <xs:enumeration value="minor"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="date" minOccurs="0"/>
+                <xs:element ref="info" maxOccurs="unbounded" minOccurs="0"/>
+                <xs:element ref="features" minOccurs="0"/>
+                <xs:element ref="address" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="relation" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="asset" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="id" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="Spec[\w\.-]+"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute ref="display"/>
+            <xs:attribute name="topic" type="xs:NMTOKENS"/>
+            <xs:attribute name="status" use="optional">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <!-- Some general status types -->
+                        <xs:enumeration value="draft"/>
+                        <xs:enumeration value="final"/>
+                        <!-- W3C Status types -->
+                        <xs:enumeration value="Preliminary Work Item"/>
+                        <xs:enumeration value="W3C Working Draft"/>
+                        <xs:enumeration value="W3C Last Call Working Draft"/>
+                        <xs:enumeration value="W3C Candidate Recommendation"/>
+                        <xs:enumeration value="W3C Proposed Recommendation"/>
+                        <xs:enumeration value="W3C Recommendation"/>
+                        <xs:enumeration value="W3C Working Group Note"/>
+                        <xs:enumeration value="W3C Proposed Edited Recommendation"/>
+                        <xs:enumeration value="W3C Rescinded Recommendation"/>
+                        <xs:enumeration value="W3C Member Submission"/>
+                        <!-- ISO Status types -->
+                        <xs:enumeration value="New Work Item Proposal"/>
+                        <xs:enumeration value="Working Draft"/>
+                        <xs:enumeration value="Committee Draft"/>
+                        <xs:enumeration value="Draft International Standard"/>
+                        <xs:enumeration value="Final Draft International Standard"/>
+                        <xs:enumeration value="International Standard"/>
+                        <xs:enumeration value="Technical Corrigenda"/>
+                        <xs:enumeration value="Amendment"/>
+                        <xs:enumeration value="Technical Specification"/>
+                        <xs:enumeration value="Publicly Available Specification"/>
+                        <xs:enumeration value="Technical Report"/>
+                        <!-- OASIS Status types -->
+                        <xs:enumeration value="Committee Specification Draft"/>
+                        <xs:enumeration value="Committee Specification Public Review Draft"/>
+                        <xs:enumeration value="Committee Specification"/>
+                        <xs:enumeration value="Candidate OASIS Standard"/>
+                        <xs:enumeration value="Approved Errata"/>
+                        <xs:enumeration value="OASIS Standard"/>
+                        <xs:enumeration value="Committee Note Draft"/>
+                        <xs:enumeration value="Committee Note Public Review Draft"/>
+                        <xs:enumeration value="Committee Note"/>
+                        <!-- OLAC Status types -->
+                        <xs:enumeration value="Standard"/>
+                        <xs:enumeration value="Recommendation"/>
+                        <xs:enumeration value="Informal Note"/>
+                        <xs:enumeration value="Informational Note"/>
+                        <xs:enumeration value="Draft Informational Note"/>
+                        <xs:enumeration value="Draft Informational Note"/>
+                        <xs:enumeration value="Draft Implementation Note"/>
+                        <xs:enumeration value="Proposed Informational Note"/>
+                        <!-- BSi Status types -->
+                        <xs:enumeration value="Confirmed"/>
+                        <xs:enumeration value="Current"/>
+                        <xs:enumeration value="Current, Superseded"/>
+                        <xs:enumeration value="Obsolescent"/>
+                        <xs:enumeration value="Revised"/>
+                        <xs:enumeration value="Superseded"/>
+                        <xs:enumeration value="Withdrawn"/>
+                        <!-- NISO Status types -->
+                        <xs:enumeration value="Draft for Trial Use"/>
+                        <xs:enumeration value="in Development"/>
+                        <xs:enumeration value="Proposed"/>
+                        <xs:enumeration value="Published"/>
+                        <!-- DIN Status types -->
+                        <xs:enumeration value="National Standard"/>
+                        <xs:enumeration value="Draft National Standard"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute ref="standardSettingBody" use="optional"/>
+            <xs:attribute name="usedInCLARINCenter" type="xs:NMTOKENS" use="optional"/>
+            <xs:attribute name="CLARINapproved" use="optional">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="yes"/>
+                        <xs:enumeration value="no"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="info">
+        <xs:complexType>
+            <xs:group ref="textblock" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:attribute name="type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="description"/>
+                        <xs:enumeration value="recReading"/>
+                        <xs:enumeration value="furtherInformation"/>
+                        <xs:enumeration value="demo"/>
+                        <xs:enumeration value="software"/>
+                        <xs:enumeration value="reference"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute ref="internal"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="biblStruct">
+        <xs:annotation>
+            <xs:documentation>Bibliography elements for info type: recReading</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="analytic" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string"/>
+                            <xs:element ref="author" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="monogr">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string" maxOccurs="unbounded"
+                                minOccurs="0"/>
+                            <xs:element ref="author" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="editor" minOccurs="0" maxOccurs="unbounded"
+                                type="nameType"/>
+                            <xs:element name="ref" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="type">
+                                                <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="url"/>
+                                                  </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="imprint">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="pubPlace" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                        <xs:element name="biblScope" minOccurs="0"
+                                            maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                  <xs:attribute name="type">
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="pp"/>
+                                                  <xs:enumeration value="issue"/>
+                                                  <xs:enumeration value="vol"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:attribute>
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="publisher" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                        <xs:element ref="date" minOccurs="0" maxOccurs="unbounded"/>
+                                        <xs:element name="note" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                  <xs:attribute name="type">
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="url"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:attribute>
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="idno" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="type" type="xs:string"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="type" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="conferencePaper"/>
+                        <xs:enumeration value="journalArticle"/>
+                        <xs:enumeration value="bookSection"/>
+                        <xs:enumeration value="conferencePaper"/>
+                        <xs:enumeration value="onlineSource"/>
+                        <xs:enumeration value="book"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="id"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="a">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="href" type="xs:anyURI"/>
+                    <xs:attribute name="title" type="xs:string" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="i">
+        <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="asset">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="a"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="author" type="nameType"/>
+    <xs:element name="li" type="textblockType"/>
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="standardSettingBody" type="xs:string"/>
+    <xs:attribute name="display" default="show">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:enumeration value="show"/>
+                <xs:enumeration value="hide"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="internal" default="no">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="yes"/>
+                <xs:enumeration value="no"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:complexType name="contentType">
+        <xs:sequence>
+            <xs:element ref="titleStmt"/>
+            <xs:element ref="info" maxOccurs="unbounded"/>
+            <xs:element ref="address" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="relation" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="fType">
+        <xs:choice>
+            <xs:element ref="fs"/>
+            <xs:group ref="simpleContent"/>
+            <xs:element ref="vColl"/>
+        </xs:choice>
+        <xs:attribute name="name"/>
+    </xs:complexType>
+    <xs:complexType name="nameType" mixed="true">
+        <xs:choice>
+            <xs:element name="name" type="xs:string"/>
+            <xs:sequence>
+                <xs:element name="forename" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="surname" type="xs:string"/>
+            </xs:sequence>
+        </xs:choice>
+        <xs:attribute name="type">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="person"/>
+                    <xs:enumeration value="organisation"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="valueType">
+        <xs:attribute name="value" type="xs:string"/>
+    </xs:complexType>
+    <xs:group name="textblock">
+        <xs:choice>
+            <xs:element name="p" type="textblockType"/>
+            <xs:element name="ul">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="li" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element ref="biblStruct"/>
+            <xs:element name="ol">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="li" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:choice>
+    </xs:group>
+    <xs:group name="simpleContent">
+        <xs:choice>
+            <xs:element name="binary" type="valueType"/>
+            <xs:element name="symbol" type="valueType"/>
+            <xs:element name="numeric" type="xs:decimal"/>
+            <xs:element name="string" type="xs:string"/>
+        </xs:choice>
+    </xs:group>
+    <xs:complexType name="textblockType" mixed="true">
+        <xs:choice maxOccurs="unbounded">
+            <xs:element ref="a" minOccurs="0"/>
+            <xs:element ref="i" minOccurs="0"/>
+            <xs:element name="p" type="textblockType" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:choice>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+</xs:schema>
