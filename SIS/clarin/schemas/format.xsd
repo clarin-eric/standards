@@ -17,8 +17,8 @@
                 <xs:element ref="relation" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element ref="asset" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element ref="mimeType" minOccurs="0" maxOccurs="unbounded"/>
-                <xs:element ref="fileExt" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element ref="schemaLoc" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="fileExt" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
             <xs:attribute name="id">
                 <xs:simpleType>

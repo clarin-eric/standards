@@ -27,6 +27,6 @@
   <relation target="SpecCHAT" type="isUsedBy"/>
   <mimeType recommended="yes">application/xml</mimeType>
   <mimeType>text/xml</mimeType>
-  <fileExt>.xml</fileExt>
   <schemaLoc type="XSD">https://talkbank.org/software/talkbank.xsd</schemaLoc>
+  <fileExt>.xml</fileExt>
 </format>
