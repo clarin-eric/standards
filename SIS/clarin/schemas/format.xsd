@@ -419,6 +419,11 @@
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
     <xs:element name="mimeType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">Where several possible media type indicators exist, use
+                the @recommended attribute to select those recommended, e.g. from the point of view
+                of the Switchboard</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="xs:string">
@@ -428,6 +433,11 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="fileExt">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">Where several possible file extensions exist, use
+                the @recommended attribute to select those recommended, e.g. from the point of view
+                of the Switchboard</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="xs:string">
