@@ -554,31 +554,22 @@
         </xs:choice>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
-    <xs:simpleType name="Scheme">
-        <xs:restriction base="xs:normalizedString">
-            <xs:maxLength value="255"/>
-        </xs:restriction>
-    </xs:simpleType>
-    <xs:complexType name="MimeType">
-        <xs:annotation>
-            <xs:documentation xml:lang="en">
-                The type that indicates the type of media used to store the content. MimeType is used to determine the software product(s) that can read the content. MIME types are described in RFC 2046.
-            </xs:documentation>
-        </xs:annotation>
-        <xs:simpleContent>
-            <xs:extension base="Scheme">
-                <xs:attribute name="mimeTypeScheme" type="xs:anyURI"/>
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>
     <xs:element name="mimeType">
-        <xs:complexType mixed="true">
-            <xs:attribute name="recommended" type="xs:NCName"/>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="recommended" type="xs:NCName" fixed="yes"/>
+                </xs:extension>
+            </xs:simpleContent>
         </xs:complexType>
     </xs:element>
     <xs:element name="fileExt">
-        <xs:complexType mixed="true">
-            <xs:attribute name="recommended" type="xs:NCName"/>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="recommended" type="xs:NCName" fixed="yes"/>
+                </xs:extension>
+            </xs:simpleContent>
         </xs:complexType>
     </xs:element>
 </xs:schema>
