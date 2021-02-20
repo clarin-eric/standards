@@ -1,8 +1,8 @@
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCHAT"
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCHAT-XML"
   xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>the CHAT format</title>
-    <abbr>CHAT</abbr>
+    <title>the XML format for CHAT</title>
+    <abbr>CHAT-XML</abbr>
   </titleStmt>
   <keyword>transcription of speech</keyword>
   <keyword>spoken language</keyword>
@@ -20,10 +20,13 @@
     <p>Since the CHAT format is widely recognized in children’s language research, many
       transcription tools (such as ELAN, EXMARaLDA, Praat, Phon, Transcriber) support it. These
       tools can also export and import data encoded in various formats as CHAT formatted data.</p>
+    <p>The XML version is produced by the tool <a href="https://talkbank.org/software/chatter.html">Chatter</a>, and the XML Schema for that format is documented at 
+      <a href="https://talkbank.org/software/xsddoc/talkbank_xsd.html">https://talkbank.org/software/xsddoc/talkbank_xsd.html</a>.</p>
   </info>
   <relation target="SpecCHAT" type="isDefinedBy"/>
   <relation target="SpecCHAT" type="isUsedBy"/>
-  <mimeType recommended="yes">text/x-chat</mimeType>
-  <mimeType>text/plain</mimeType>
-  <fileExt>.cha</fileExt>
+  <mimeType recommended="yes">application/xml</mimeType>
+  <mimeType>text/xml</mimeType>
+  <fileExt>.xml</fileExt>
+  <schemaLoc type="XSD">https://talkbank.org/software/talkbank.xsd</schemaLoc>
 </format>
