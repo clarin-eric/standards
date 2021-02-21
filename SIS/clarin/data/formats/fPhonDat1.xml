@@ -1,0 +1,21 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPhonDat1"
+  xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>PhonDat Data Format 1</title>
+    <abbr>PhonDat1</abbr>
+  </titleStmt>
+  <ClarinRecommendation>
+    <recommendation formatId="fPhonDat1" type="deprecated">
+      <alternatives>
+        <alternative formatId="fAIFF"/>  <!--THIS MAY BE VERY WRONG! but I needed a target, because this is an example spec -->
+      </alternatives>
+    </recommendation>
+  </ClarinRecommendation>
+  <keyword>speech data</keyword>
+  <keyword>audio file format</keyword>
+  <info type="description">
+    <p>Proprietary audio format discouraged across CLARIN. See:
+      <a href="https://www.bas.uni-muenchen.de/forschung/Bas/BasPhonDat">BAS specification</a>.</p>
+  </info>
+  <!--  No corresponding standard, no mimeType, no fileExt -->
+</format>

@@ -1,0 +1,24 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fWave"
+  xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Free Lossless Audio Codec</title>
+    <abbr>FLAC</abbr>
+  </titleStmt>
+  <keyword>speech data</keyword>
+  <keyword>audio file format</keyword>
+  <keyword>lossless</keyword>
+  <info type="description">
+    <p>FLAC (/flæk/; Free Lossless Audio Codec) is an audio coding format for lossless compression
+      of digital audio, developed by the Xiph.Org Foundation, and is also the name of the free
+      software project producing the FLAC tools, the reference software package that includes a
+      codec implementation. Digital audio compressed by FLAC's algorithm can typically be reduced to
+      between 50 and 70 percent of its original size[4] and decompress to an identical copy of the
+      original audio data. FLAC is an open format with royalty-free licensing and a reference
+      implementation which is free software. FLAC has support for metadata tagging, album cover art,
+      and fast seeking. See:
+      <a href="https://en.wikipedia.org/wiki/FLAC">Wikipedia article for FLAC</a>.</p>
+  </info>
+  <!--  <relation target="SpecFLAC" type="isDefinedBy"/>-->
+  <mimeType>audio/flac</mimeType>
+  <fileExt>.flac</fileExt>
+</format>
