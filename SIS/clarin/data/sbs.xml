@@ -1,55 +1,235 @@
-<sbs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/spec.xsd"><sb id="SBISO" type="org"><titleStmt><title>International Organization for Standardization</title><abbr>ISO</abbr></titleStmt><info type="description"><p>The International Organization for Standardization (ISO) was founded in February 1947
+<sbs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../schemas/spec.xsd">
+    <sb id="SBISO" type="org">
+        <titleStmt>
+            <title>International Organization for Standardization</title>
+            <abbr>ISO</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>The International Organization for Standardization (ISO) was founded in February 1947
                 and is a non-government federation of national standards bodies from various
                 national standards organizations. Meanwhile over 150 countries have been represented
                 in ISO. ISO works on developing and publishing worldwide proprietary, industrial and
                 commercial standards. In other words, the standards describe the requirements and
-                guidelines accepted by the industry members.</p><p> The interests of Germany in the ISO are represented by the German Institute for
-                Standardization (DIN), which has been a national member of the ISO since 1951.</p><p>Since the use of automatically generated and processed linguistic resources
+                guidelines accepted by the industry members.</p>
+            <p> The interests of Germany in the ISO are represented by the German Institute for
+                Standardization (DIN), which has been a national member of the ISO since 1951.</p>
+            <p>Since the use of automatically generated and processed linguistic resources
                 dramatically increased, standardization of linguistic resources is needed. Besides,
                 standardization of other fields of linguistic research, such as syntax, semantics
                 and pragmatics, are needed. The standardization would allow the linguistic resources
                 to be applied to any purpose, to be reusable and to be exchanged between various
-                applications.</p><p> The subcommittee ISO/TC 37/SC 4 (“Language resource management”) was founded within
+                applications.</p>
+            <p> The subcommittee ISO/TC 37/SC 4 (“Language resource management”) was founded within
                 the technical committee <a href="view-sb.xq?id=SBISO-TC37">ISO/TC 37</a>
                 (“Terminology and other language and content resources”) for the purposes of natural
-                language resource management.</p><p>The subcommittee ISO/TC 37/SC 4 works on developing international standards and
+                language resource management.</p>
+            <p>The subcommittee ISO/TC 37/SC 4 works on developing international standards and
                 guidelines for effective language resource management in mono- and multilingual
                 applications. Furthermore, it develops principles and methods for representations
                 and annotations of data, creation of categories for thesauri, ontologies,
-                morphological, syntactical, analysis and lots more.</p><p>ISO/TC 37/SC 4 is divided into the following Working Groups:</p><ul><li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG1">WG 1:</a> Basic descriptors and
-                    mechanisms for language resources (Convenor: Nancy Ide)</li><li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG2">WG 2:</a> Semantic Annotation
-                    (Convenor: Kiyong Lee)</li><li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG3">WG 3:</a> Multilingual information
-                    representation (Convenor: under searching)</li><li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG4">WG 4:</a> Lexical resources
-                    (Convenor: Calzolari Nicoletta)</li><li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG5">WG 5:</a> Workflow of language
-                    resource management (Convenor: Key-Sun Choi)</li><li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG6">WG 6:</a> Linguistic Annotation
-                    (Convenor: Witt Andreas)</li></ul><p>The other subcommittee, which has an important role for the linguistic resource is
+                morphological, syntactical, analysis and lots more.</p>
+            <p>ISO/TC 37/SC 4 is divided into the following Working Groups:</p>
+            <ul>
+                <li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG1">WG 1:</a> Basic descriptors and
+                    mechanisms for language resources (Convenor: Nancy Ide)</li>
+                <li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG2">WG 2:</a> Semantic Annotation
+                    (Convenor: Kiyong Lee)</li>
+                <li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG3">WG 3:</a> Multilingual information
+                    representation (Convenor: under searching)</li>
+                <li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG4">WG 4:</a> Lexical resources
+                    (Convenor: Calzolari Nicoletta)</li>
+                <li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG5">WG 5:</a> Workflow of language
+                    resource management (Convenor: Key-Sun Choi)</li>
+                <li><a href="view-sb.xq?id=SBISO-TC37-SC4-WG6">WG 6:</a> Linguistic Annotation
+                    (Convenor: Witt Andreas)</li>
+            </ul>
+            <p>The other subcommittee, which has an important role for the linguistic resource is
                 ISO/IEC JTC 1/SC 34 (“Document description and processing languages”) within the
                 joint technical committee ISO/IEC JTC1, which is a collaborative effort of the ISO
                 and the IEC (International Electrotechnical Commission). The subcommittee ISO/IEC
                 JTC 1/SC 34 develops standards and guidelines for description of document
                 structures, languages, data types, processing and handling of compound and
-                multimedia/hypermedia documents and much more.</p><p>ISO/IEC JTC 1/SC 34 is divided into the following Working Groups:</p><ul><li>WG 1: Markup Languages (Convener: Alex Brown)</li><li>WG 2: Information Presentation (Convener: Yushi Komachi)</li><li>WG 3: Information Association (Convener: Patrick Durusau)</li><li>WG 4: Office Open XML (Convener: Makoto Murata)</li><li>WG 5: Document Interoperability (Convener: Jaeho Lee)</li><li>WG 6: OpenDocument Format (Convener: Francis Cave)</li></ul></info><address type="URL">http://www.iso.org/</address><relation target="SBISO-TC37" type="hasPart"/><relation target="SBISO-JTC1" type="hasPart"/></sb><sb id="SBISO-TC37" type="technicalCommittee"><titleStmt><title>Terminology and other language and content resources</title><abbr>ISO/TC 37</abbr><respStmt><resp>Chair</resp><name>Kara Warburton </name></respStmt><respStmt><resp>Secretary</resp><name>Changqing Zhou </name></respStmt></titleStmt><info type="description"><p/></info><address type="URL">http://www.iso.org/iso/iso_technical_committee.html?commid=48104</address><relation target="SBISO-TC37-SC3" type="hasPart"/><relation target="SBISO-TC37-SC4" type="hasPart"/></sb><sb id="SBISO-TC37-SC3" type="subCommittee"><titleStmt><title>Systems to manage terminology, knowledge and content</title><abbr>ISO/TC 37/SC 3</abbr><respStmt><resp>Chair</resp><name>Sue Ellen Wright</name></respStmt><respStmt><resp>Secretary</resp><name>Gottfied Herzog</name></respStmt></titleStmt><info type="description"><p>The objective of ISO/TC 37/SC 3 is to establish International Standards specifiying
+                multimedia/hypermedia documents and much more.</p>
+            <p>ISO/IEC JTC 1/SC 34 is divided into the following Working Groups:</p>
+            <ul>
+                <li>WG 1: Markup Languages (Convener: Alex Brown)</li>
+                <li>WG 2: Information Presentation (Convener: Yushi Komachi)</li>
+                <li>WG 3: Information Association (Convener: Patrick Durusau)</li>
+                <li>WG 4: Office Open XML (Convener: Makoto Murata)</li>
+                <li>WG 5: Document Interoperability (Convener: Jaeho Lee)</li>
+                <li>WG 6: OpenDocument Format (Convener: Francis Cave)</li>
+            </ul>
+        </info>
+        <address type="URL">http://www.iso.org/</address>
+        <relation target="SBISO-TC37" type="hasPart"/>
+        <relation target="SBISO-JTC1" type="hasPart"/>
+    </sb>
+    <sb id="SBISO-TC37" type="technicalCommittee">
+        <titleStmt>
+            <title>Terminology and other language and content resources</title>
+            <abbr>ISO/TC 37</abbr>
+            <respStmt>
+                <resp>Chair</resp>
+                <name>Kara Warburton </name>
+            </respStmt>
+            <respStmt>
+                <resp>Secretary</resp>
+                <name>Changqing Zhou </name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+        <address type="URL">http://www.iso.org/iso/iso_technical_committee.html?commid=48104</address>
+        <relation target="SBISO-TC37-SC3" type="hasPart"/>
+        <relation target="SBISO-TC37-SC4" type="hasPart"/>
+    </sb>
+    <sb id="SBISO-TC37-SC3" type="subCommittee">
+        <titleStmt>
+            <title>Systems to manage terminology, knowledge and content</title>
+            <abbr>ISO/TC 37/SC 3</abbr>
+            <respStmt>
+                <resp>Chair</resp>
+                <name>Sue Ellen Wright</name>
+            </respStmt>
+            <respStmt>
+                <resp>Secretary</resp>
+                <name>Gottfied Herzog</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p>The objective of ISO/TC 37/SC 3 is to establish International Standards specifiying
                 and modelling principles of terminology, knowledge and content management systems.
-                SC 3 has four working groups:</p><ul><li>ISO/TC 037/SC 03/WG 01: Data elements</li><li>ISO/TC 037/SC 03/WG 02: Vocabulary</li><li>ISO/TC 037/SC 03/WG 03: Data interchange</li><li>ISO/TC 037/SC 03/WG 04: Database management</li></ul></info><relation target="SBISO-TC37-SC3-WG1" type="hasPart"/><relation target="SBISO-TC37-SC3-WG2" type="hasPart"/><relation target="SBISO-TC37-SC3-WG3" type="hasPart"/><relation target="SBISO-TC37-SC3-WG4" type="hasPart"/></sb><sb id="SBISO-TC37-SC3-WG1" type="workingGroup"><titleStmt><title>Data elements</title><abbr>ISO/TC 37/SC 3/WG 1</abbr><respStmt><resp>Convenor</resp><name>S.E.Wright</name></respStmt></titleStmt><info><p/></info></sb><sb id="SBISO-TC37-SC3-WG2" type="workingGroup"><titleStmt><title>Vocabulary</title><abbr>ISO/TC 37/SC 3/WG 2</abbr><respStmt><resp>Convenor</resp><name>G.Herzog</name></respStmt></titleStmt><info><p/></info></sb><sb id="SBISO-TC37-SC3-WG3" type="workingGroup"><titleStmt><title>Data interchange</title><abbr>ISO/TC 37/SC 3/WG 3</abbr><respStmt><resp>Convenor</resp><name>Kara Warburton</name></respStmt></titleStmt><info><p/></info></sb><sb id="SBISO-TC37-SC3-WG4" type="workingGroup"><titleStmt><title>Database management</title><abbr>ISO/TC 37/SC 3/WG 4</abbr><respStmt><resp>Convenor</resp><name>B.Nistrup-Madsen</name></respStmt></titleStmt><info><p/></info></sb><sb id="SBISO-TC37-SC4" type="subCommittee"><titleStmt><title>Language resource management</title><abbr>ISO/TC 37/SC 4</abbr><respStmt><resp>Chair</resp><name>Laurent Romary</name></respStmt><respStmt><resp>Secretary</resp><name>Laurent Romary</name></respStmt></titleStmt><info type="description"><p>ISO/TC 37/SC 4 is a subcommittee of the technical committee (TC) 37 within the
+                SC 3 has four working groups:</p>
+            <ul>
+                <li>ISO/TC 037/SC 03/WG 01: Data elements</li>
+                <li>ISO/TC 037/SC 03/WG 02: Vocabulary</li>
+                <li>ISO/TC 037/SC 03/WG 03: Data interchange</li>
+                <li>ISO/TC 037/SC 03/WG 04: Database management</li>
+            </ul>
+        </info>
+        <relation target="SBISO-TC37-SC3-WG1" type="hasPart"/>
+        <relation target="SBISO-TC37-SC3-WG2" type="hasPart"/>
+        <relation target="SBISO-TC37-SC3-WG3" type="hasPart"/>
+        <relation target="SBISO-TC37-SC3-WG4" type="hasPart"/>
+    </sb>
+    <sb id="SBISO-TC37-SC3-WG1" type="workingGroup">
+        <titleStmt>
+            <title>Data elements</title>
+            <abbr>ISO/TC 37/SC 3/WG 1</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>S.E.Wright</name>
+            </respStmt>
+        </titleStmt>
+        <info>
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBISO-TC37-SC3-WG2" type="workingGroup">
+        <titleStmt>
+            <title>Vocabulary</title>
+            <abbr>ISO/TC 37/SC 3/WG 2</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>G.Herzog</name>
+            </respStmt>
+        </titleStmt>
+        <info>
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBISO-TC37-SC3-WG3" type="workingGroup">
+        <titleStmt>
+            <title>Data interchange</title>
+            <abbr>ISO/TC 37/SC 3/WG 3</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Kara Warburton</name>
+            </respStmt>
+        </titleStmt>
+        <info>
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBISO-TC37-SC3-WG4" type="workingGroup">
+        <titleStmt>
+            <title>Database management</title>
+            <abbr>ISO/TC 37/SC 3/WG 4</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>B.Nistrup-Madsen</name>
+            </respStmt>
+        </titleStmt>
+        <info>
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBISO-TC37-SC4" type="subCommittee">
+        <titleStmt>
+            <title>Language resource management</title>
+            <abbr>ISO/TC 37/SC 4</abbr>
+            <respStmt>
+                <resp>Chair</resp>
+                <name>Laurent Romary</name>
+            </respStmt>
+            <respStmt>
+                <resp>Secretary</resp>
+                <name>Laurent Romary</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p>ISO/TC 37/SC 4 is a subcommittee of the technical committee (TC) 37 within the
                 International Organisation for Standardisation (ISO) and works on language resource
                 management. The goal of ISO/TC 37/SC 4 is to develop various international
                 standards, guidelines and methods for effectively creating, coding, processing and
                 managing mono- and multilingual language resources in various domains, such as
                 written and speech corpora, lexical databases, dictionary compiling and
-                classification schemes.</p><p>The development and widespread use of standards become more and more important,
+                classification schemes.</p>
+            <p>The development and widespread use of standards become more and more important,
                 because the need for reusable and interoperable linguistic resources has grown
                 continuously during the last years. The standardised linguistic resources can be
                 applied in a platform- independent manner to different purposes and areas of
                 linguistics, not only in academic community, but also in the industry ( for example
                 for data modelling, exchange of information between NLP modules in multi-lingual
                 information retrieval, across cultural technical communication and information
-                management). The spectrum for the application area is very wide.</p><p>The national standardization will allow that, once created, linguistic resources can
+                management). The spectrum for the application area is very wide.</p>
+            <p>The national standardization will allow that, once created, linguistic resources can
                 be used in various ways many times in different applications and research areas with
-                little and low time-consuming effort.</p><p>The working area of the subcommittee ISO/TC 37/SC 4 includes:</p><ul><li>Developing standards, guidelines and other related documents to maximize the
-                    applicability of language resources</li><li>Developing principles and methods for creating, coding, processing and managing
-                    language resources</li><li>Developing representation formats for different kinds of linguistic
-                    information</li><li>Defining abstract models and general frameworks for creation and representation
-                    of language resources</li><li>Developing the optimal solution for different fields of application</li><li>Etc.</li></ul></info><relation target="SBISO-TC37-SC4-WG1" type="hasPart"/><relation target="SBISO-TC37-SC4-WG2" type="hasPart"/><relation target="SBISO-TC37-SC4-WG3" type="hasPart"/><relation target="SBISO-TC37-SC4-WG4" type="hasPart"/><relation target="SBISO-TC37-SC4-WG5" type="hasPart"/><relation target="SBISO-TC37-SC4-WG6" type="hasPart"/></sb><sb id="SBISO-TC37-SC4-WG1" type="workingGroup"><titleStmt><title>Basic descriptors and mechanisms for language resources</title><abbr>ISO/TC 37/SC 4/WG 1</abbr><respStmt><resp>Convenor</resp><name>Nancy Ide</name></respStmt></titleStmt><info type="description"><p>The working group 1 (WG 1) within the ISO/TC 37/SC 4 deals with basic descriptors and
+                little and low time-consuming effort.</p>
+            <p>The working area of the subcommittee ISO/TC 37/SC 4 includes:</p>
+            <ul>
+                <li>Developing standards, guidelines and other related documents to maximize the
+                    applicability of language resources</li>
+                <li>Developing principles and methods for creating, coding, processing and managing
+                    language resources</li>
+                <li>Developing representation formats for different kinds of linguistic
+                    information</li>
+                <li>Defining abstract models and general frameworks for creation and representation
+                    of language resources</li>
+                <li>Developing the optimal solution for different fields of application</li>
+                <li>Etc.</li>
+            </ul>
+        </info>
+        <relation target="SBISO-TC37-SC4-WG1" type="hasPart"/>
+        <relation target="SBISO-TC37-SC4-WG2" type="hasPart"/>
+        <relation target="SBISO-TC37-SC4-WG3" type="hasPart"/>
+        <relation target="SBISO-TC37-SC4-WG4" type="hasPart"/>
+        <relation target="SBISO-TC37-SC4-WG5" type="hasPart"/>
+        <relation target="SBISO-TC37-SC4-WG6" type="hasPart"/>
+    </sb>
+    <sb id="SBISO-TC37-SC4-WG1" type="workingGroup">
+        <titleStmt>
+            <title>Basic descriptors and mechanisms for language resources</title>
+            <abbr>ISO/TC 37/SC 4/WG 1</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Nancy Ide</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p>The working group 1 (WG 1) within the ISO/TC 37/SC 4 deals with basic descriptors and
                 mechanisms for language resources. The overall working area of WG1 is shared in
                 three working items having specific goals and tasks. The first working item deals
                 with the terminology standardization used in the various sub-fields of language
@@ -59,7 +239,20 @@
                 design annotation schemes, specify data categories, define structural nodes and
                 information units, and so on. The last working item focuses on description of
                 meta-data representation scheme to document linguistic information structures and
-                processes.</p></info></sb><sb id="SBISO-TC37-SC4-WG2" type="workingGroup"><titleStmt><title>Semantic Annotation</title><abbr>ISO/TC 37/SC 4/WG 2</abbr><respStmt><resp>Convenor</resp><name>Kiyong Lee</name></respStmt></titleStmt><info type="description"><p>The working group 2 (WG 2) within the ISO/TC 37/SC 4 deals with the problems of
+                processes.</p>
+        </info>
+    </sb>
+    <sb id="SBISO-TC37-SC4-WG2" type="workingGroup">
+        <titleStmt>
+            <title>Semantic Annotation</title>
+            <abbr>ISO/TC 37/SC 4/WG 2</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Kiyong Lee</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p>The working group 2 (WG 2) within the ISO/TC 37/SC 4 deals with the problems of
                 semantic annotation representation. Until 2011 the working group dealt with other
                 kinds of linguistic annotations, such as morpho-syntactic, syntactic, semantic
                 annotation and word segmentation as well. In mid 2011, the working group was split.
@@ -68,44 +261,266 @@
                 the standards in the area of semantic annotation. Today, the main task of the WG 2
                 is to define a set of meta-models and the specification of the annotation and
                 representation of linguistic and multimodal semantic information and their
-                computational representation in a formal language.</p></info></sb><sb id="SBISO-TC37-SC4-WG3" type="workingGroup"><titleStmt><title>Multilingual information representation</title><abbr>ISO/TC 37/SC 4/WG 3</abbr></titleStmt><info type="description"><p>The working group 3 (WG 3) within the ISO/TC 37/SC 4 deals with multilingual
+                computational representation in a formal language.</p>
+        </info>
+    </sb>
+    <sb id="SBISO-TC37-SC4-WG3" type="workingGroup">
+        <titleStmt>
+            <title>Multilingual information representation</title>
+            <abbr>ISO/TC 37/SC 4/WG 3</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>The working group 3 (WG 3) within the ISO/TC 37/SC 4 deals with multilingual
                 information representation. It develops and provides formats for the representation
                 of multilingual textual data, which can be used for example in translation
                 activities or constructed from existing primary sources. Furthermore, it develops
                 and provides methods and algorithms for text segmentation and word counting, and
                 standardizes meta-markup for Globalisation, Internationalisation and Localisation
                 (GIL). The objectives of that survey are to identify the specific markup modules
-                which are needed to perform GIL activities.</p></info></sb><sb id="SBISO-TC37-SC4-WG4" type="workingGroup"><titleStmt><title>Lexical resources</title><abbr>ISO/TC 37/SC 4/WG 4</abbr><respStmt><resp>Convenor</resp><name>Calzolari Nicoletta</name></respStmt></titleStmt><info type="description"><p>The working group 4 (WG 4) within the ISO/ETC 37/SC 4 works on the standardisation of
+                which are needed to perform GIL activities.</p>
+        </info>
+    </sb>
+    <sb id="SBISO-TC37-SC4-WG4" type="workingGroup">
+        <titleStmt>
+            <title>Lexical resources</title>
+            <abbr>ISO/TC 37/SC 4/WG 4</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Calzolari Nicoletta</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p>The working group 4 (WG 4) within the ISO/ETC 37/SC 4 works on the standardisation of
                 lexical representation formats for various types of NLP applications. The main task
                 of the working group is defining of a set of meta-models and the specification of
-                data categories corresponding to those in other working groups.</p></info></sb><sb id="SBISO-TC37-SC4-WG5" type="workingGroup"><titleStmt><title>Workflow of language resource management</title><abbr>ISO/TC 37/SC 4/WG 5</abbr><respStmt><resp>Convenor</resp><name>Key-Sun Choi</name></respStmt></titleStmt><info type="description"><p>The work of the working group 5 (WG 5) within the ISO/TC 37/SC 4 focuses on the
+                data categories corresponding to those in other working groups.</p>
+        </info>
+    </sb>
+    <sb id="SBISO-TC37-SC4-WG5" type="workingGroup">
+        <titleStmt>
+            <title>Workflow of language resource management</title>
+            <abbr>ISO/TC 37/SC 4/WG 5</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Key-Sun Choi</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p>The work of the working group 5 (WG 5) within the ISO/TC 37/SC 4 focuses on the
                 workflow of language resource management. The main task of the working group is to
                 define guidelines and requirements for producing and distributing high quality
                 language resources. This includes defining and the describing the process itself,
-                determining the resources, and defining the process workflow.</p></info></sb><sb id="SBISO-TC37-SC4-WG6" type="workingGroup"><titleStmt><title>Linguistic Annotation</title><abbr>ISO/TC 37/SC 4/WG 6</abbr><respStmt><resp>Convenor</resp><name>Andreas Witt</name></respStmt></titleStmt><info type="description"><p>The working group 6 (WG 6) within the ISO/TC 37/SC 4 was founded in mid 2011 as the
+                determining the resources, and defining the process workflow.</p>
+        </info>
+    </sb>
+    <sb id="SBISO-TC37-SC4-WG6" type="workingGroup">
+        <titleStmt>
+            <title>Linguistic Annotation</title>
+            <abbr>ISO/TC 37/SC 4/WG 6</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Andreas Witt</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p>The working group 6 (WG 6) within the ISO/TC 37/SC 4 was founded in mid 2011 as the
                 result of the partition of the previous WG 2. Since the partition, the primary WG 2
                 deals with the development of the standards in the area of semantic annotation, and
                 the WG 6 focuses on the remaining areas of linguistic annotation. The tasks ranges
                 from defining annotation to developing representation schemes for linguistic
                 annotation such as morpho-syntactic and semantic annotations, and word
-                segmentation.</p></info></sb><sb id="SBISO-TC46" type="technicalCommittee"><titleStmt><title>Information and documentation</title><abbr>ISO/TC 46</abbr></titleStmt><info type="description"><p/></info><relation target="SBISO-TC46-SC4" type="hasPart"/><relation target="SBISO-TC46-SC8" type="hasPart"/><relation target="SBISO-TC46-SC9" type="hasPart"/><relation target="SBISO-TC46-SC11" type="hasPart"/></sb><sb id="SBISO-TC46-SC4" type="subCommittee"><titleStmt><title>Technical Interoperability</title><abbr>ISO/TC 46/SC 4</abbr><respStmt><resp>Chair</resp><name>Alison Elliott</name></respStmt><respStmt><resp>Secretary</resp><name>Kati Heiskanen</name></respStmt></titleStmt><info type="description"><p/></info>
+                segmentation.</p>
+        </info>
+    </sb>
+    <sb id="SBISO-TC46" type="technicalCommittee">
+        <titleStmt>
+            <title>Information and documentation</title>
+            <abbr>ISO/TC 46</abbr>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+        <relation target="SBISO-TC46-SC4" type="hasPart"/>
+        <relation target="SBISO-TC46-SC8" type="hasPart"/>
+        <relation target="SBISO-TC46-SC9" type="hasPart"/>
+        <relation target="SBISO-TC46-SC11" type="hasPart"/>
+    </sb>
+    <sb id="SBISO-TC46-SC4" type="subCommittee">
+        <titleStmt>
+            <title>Technical Interoperability</title>
+            <abbr>ISO/TC 46/SC 4</abbr>
+            <respStmt>
+                <resp>Chair</resp>
+                <name>Alison Elliott</name>
+            </respStmt>
+            <respStmt>
+                <resp>Secretary</resp>
+                <name>Kati Heiskanen</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
         <!--  
         <relation target="SBISO-TC46-SC4-WG7" type="hasPart"/>
         <relation target="SBISO-TC46-SC4-WG10" type="hasPart"/>
         <relation target="SBISO-TC46-SC4-WG11" type="hasPart"/>
         <relation target="SBISO-TC46-SC4-WG12" type="hasPart"/>
-        <relation target="SBISO-TC46-SC4-WG13" type="hasPart"/>--></sb><sb id="SBISO-TC46-SC9" type="subCommittee"><titleStmt><title>	Identification and description</title><abbr>ISO/TC 46/SC 9</abbr><respStmt><resp>Chair</resp><name>Ph. D. Sam Gyun Oh</name></respStmt><respStmt><resp>Secretary</resp><name>Todd Carpenter</name></respStmt></titleStmt><info type="description"><p/></info>
+        <relation target="SBISO-TC46-SC4-WG13" type="hasPart"/>-->
+    </sb>
+    <sb id="SBISO-TC46-SC9" type="subCommittee">
+        <titleStmt>
+            <title>	Identification and description</title>
+            <abbr>ISO/TC 46/SC 9</abbr>
+            <respStmt>
+                <resp>Chair</resp>
+                <name>Ph. D. Sam Gyun Oh</name>
+            </respStmt>
+            <respStmt>
+                <resp>Secretary</resp>
+                <name>Todd Carpenter</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
         <!--  
-        <relation target="SBISO-TC46-SC4-WG7" type="hasPart"/> --></sb><sb id="SBISO-TC46-SC9-WG8" type="workingGroup"><titleStmt><title>Structured vocabularies</title><abbr>ISO/TC 37/SC 9/WG 8</abbr><respStmt><resp>Convenor</resp><name/></respStmt></titleStmt><info type="description"><p>The Working Group 8 (WG 8) within the ISO TC 46/SC 9 focuses on the development of
+        <relation target="SBISO-TC46-SC4-WG7" type="hasPart"/> -->
+    </sb>
+    <sb id="SBISO-TC46-SC9-WG8" type="workingGroup">
+        <titleStmt>
+            <title>Structured vocabularies</title>
+            <abbr>ISO/TC 37/SC 9/WG 8</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name/>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p>The Working Group 8 (WG 8) within the ISO TC 46/SC 9 focuses on the development of
                 ISO Project 25964. It develops a multi part standard providing guidelines for
-                establishing and developing structured vocabularies.</p></info></sb><sb id="SBISO-JTC1" type="technicalCommittee"><titleStmt><title/><abbr>ISO/JTC 1</abbr></titleStmt><info type="description"><p/></info><relation target="SBISO-JTC1-SC34" type="hasPart"/></sb><sb id="SBISO-JTC1-SC34" type="subCommittee"><titleStmt><title>Document description and processing languages</title><abbr>ISO/JTC 1/SC 34</abbr></titleStmt><info type="description"><p/></info><relation target="SBISO-JTC1-SC34-WG1" type="hasPart"/><relation target="SBISO-JTC1-SC34-WG2" type="hasPart"/><relation target="SBISO-JTC1-SC34-WG3" type="hasPart"/><relation target="SBISO-JTC1-SC34-WG4" type="hasPart"/><relation target="SBISO-JTC1-SC34-WG5" type="hasPart"/><relation target="SBISO-JTC1-SC34-WG6" type="hasPart"/></sb><sb id="SBISO-JTC1-SC34-WG1" type="workingGroup"><titleStmt><title>Information description</title><abbr>ISO/JTC 1/SC 34/WG 1</abbr><respStmt><resp>Convenor</resp><name>Alex Brown</name></respStmt></titleStmt><info type="description"><p/></info></sb><sb id="SBISO-JTC1-SC34-WG2" type="workingGroup"><titleStmt><title>Information Presentation</title><abbr>ISO/JTC 1/SC 34/WG 2</abbr><respStmt><resp>Convenor</resp><name>Yushi Komachi</name></respStmt></titleStmt><info type="description"><p/></info></sb><sb id="SBISO-JTC1-SC34-WG3" type="workingGroup"><titleStmt><title>Information Association</title><abbr>ISO/JTC 1/SC 34/WG 3</abbr><respStmt><resp>Convenor</resp><name>Patrick Durusau</name></respStmt></titleStmt><info type="description"><p/></info></sb><sb id="SBISO-JTC1-SC34-WG4" type="workingGroup"><titleStmt><title>Office Open XML</title><abbr>ISO/JTC 1/SC 34/WG 4</abbr><respStmt><resp>Convenor</resp><name>Makoto Murata</name></respStmt></titleStmt><info type="description"><p/></info></sb><sb id="SBISO-JTC1-SC34-WG5" type="workingGroup"><titleStmt><title>Document Interoperability</title><abbr>ISO/JTC 1/SC 34/WG 5</abbr><respStmt><resp>Convenor</resp><name>Jaeho Lee</name></respStmt></titleStmt><info type="description"><p/></info></sb><sb id="SBISO-JTC1-SC34-WG6" type="workingGroup"><titleStmt><title>Open Document Format</title><abbr>ISO/JTC 1/SC 34/WG 6</abbr><respStmt><resp>Convenor</resp><name>Francis Cave</name></respStmt></titleStmt><info type="description"><p/></info></sb><sb id="SBW3C" type="org"><titleStmt><title>World Wide Web Consortium</title><abbr>W3C</abbr></titleStmt><info type="description"><p>W3C stands for the World Wide Web Consortium. It is an international standards
+                establishing and developing structured vocabularies.</p>
+        </info>
+    </sb>
+    <sb id="SBISO-JTC1" type="technicalCommittee">
+        <titleStmt>
+            <title/>
+            <abbr>ISO/JTC 1</abbr>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+        <relation target="SBISO-JTC1-SC34" type="hasPart"/>
+    </sb>
+    <sb id="SBISO-JTC1-SC34" type="subCommittee">
+        <titleStmt>
+            <title>Document description and processing languages</title>
+            <abbr>ISO/JTC 1/SC 34</abbr>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+        <relation target="SBISO-JTC1-SC34-WG1" type="hasPart"/>
+        <relation target="SBISO-JTC1-SC34-WG2" type="hasPart"/>
+        <relation target="SBISO-JTC1-SC34-WG3" type="hasPart"/>
+        <relation target="SBISO-JTC1-SC34-WG4" type="hasPart"/>
+        <relation target="SBISO-JTC1-SC34-WG5" type="hasPart"/>
+        <relation target="SBISO-JTC1-SC34-WG6" type="hasPart"/>
+    </sb>
+    <sb id="SBISO-JTC1-SC34-WG1" type="workingGroup">
+        <titleStmt>
+            <title>Information description</title>
+            <abbr>ISO/JTC 1/SC 34/WG 1</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Alex Brown</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBISO-JTC1-SC34-WG2" type="workingGroup">
+        <titleStmt>
+            <title>Information Presentation</title>
+            <abbr>ISO/JTC 1/SC 34/WG 2</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Yushi Komachi</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBISO-JTC1-SC34-WG3" type="workingGroup">
+        <titleStmt>
+            <title>Information Association</title>
+            <abbr>ISO/JTC 1/SC 34/WG 3</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Patrick Durusau</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBISO-JTC1-SC34-WG4" type="workingGroup">
+        <titleStmt>
+            <title>Office Open XML</title>
+            <abbr>ISO/JTC 1/SC 34/WG 4</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Makoto Murata</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBISO-JTC1-SC34-WG5" type="workingGroup">
+        <titleStmt>
+            <title>Document Interoperability</title>
+            <abbr>ISO/JTC 1/SC 34/WG 5</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Jaeho Lee</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBISO-JTC1-SC34-WG6" type="workingGroup">
+        <titleStmt>
+            <title>Open Document Format</title>
+            <abbr>ISO/JTC 1/SC 34/WG 6</abbr>
+            <respStmt>
+                <resp>Convenor</resp>
+                <name>Francis Cave</name>
+            </respStmt>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBW3C" type="org">
+        <titleStmt>
+            <title>World Wide Web Consortium</title>
+            <abbr>W3C</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>W3C stands for the World Wide Web Consortium. It is an international standards
                 organization for the World Wide Web, which was founded in October 1994 by Tim
                 Berners-Lee at the MIT Laboratory for Computer Science in Cambridge (Massachusetts).
-                W3C coordinates its work with many other standards organizations.</p><p>The work of the W3C is guided by two principles "Web for All" and "Web on
+                W3C coordinates its work with many other standards organizations.</p>
+            <p>The work of the W3C is guided by two principles "Web for All" and "Web on
                 Everything". That means that the web can be used by all users people regardless of
                 whether the culture, education, ability, resources, and physical limitations. The
                 web can also be used independently of hardware or software on all mobile
-                devices.</p><p>One of the important work area in the W3C is the development of technical web
+                devices.</p>
+            <p>One of the important work area in the W3C is the development of technical web
                 specifications and guidelines such as HTML, XHTML and XML, which describes
                 communication protocols and other building blocks of the Web. Nowadays there are
                 over 90 standards, that W3C ranked as recommendations. Each W3C recommendation is
@@ -113,89 +528,285 @@
                 consisting of members and invited experts, who are usually experts in the own field.
                 The recommendations are a kind of technology suggestion providing documentation,
                 rigorous stages of review, reformulation and implementation of a Web technology. All
-                standards are free available online on the W3C website.</p></info><address type="URL">http://www.w3.org/</address></sb><sb id="SBOASIS" type="org"><titleStmt><title>Organization for the Advancement of Structured Information Standards</title><abbr>OASIS</abbr></titleStmt><info type="description"><p> OASIS stands for the Organization for the Advancement of Structured Information
+                standards are free available online on the W3C website.</p>
+        </info>
+        <address type="URL">http://www.w3.org/</address>
+    </sb>
+    <sb id="SBOASIS" type="org">
+        <titleStmt>
+            <title>Organization for the Advancement of Structured Information Standards</title>
+            <abbr>OASIS</abbr>
+        </titleStmt>
+        <info type="description">
+            <p> OASIS stands for the Organization for the Advancement of Structured Information
                 Standards, which was founded in 1993. Meanwhile OASIS has more than 5000
                 participants representing over 600 organizations and individual members in 100
-                countries.</p><p>It is a non-profit consortium working on developing and adopting open standards for
+                countries.</p>
+            <p>It is a non-profit consortium working on developing and adopting open standards for
                 the information society. The open standards mean, that the standards are publicly
                 available and can be used freely by any company, organization, or any other
                 technical community. By using the same standard in developing products, all kinds of
                 data can be shared freely, with perfect fidelity and high degree of interoperability
                 between different computer systems. Standards developed by OASIS include the fields
                 of security, cloud computing, SOA, web services, smart grid, electronic publishing
-                and emergency management, amongst others.</p></info><address type="URL">http://www.oasis-open.org/</address></sb><sb id="SBNISO" type="org"><titleStmt><title>National Information Standards Organization</title><abbr>NISO</abbr></titleStmt><info type="description"><p>The National Information Standards Organization (NISO) is a US-American non-profit
+                and emergency management, amongst others.</p>
+        </info>
+        <address type="URL">http://www.oasis-open.org/</address>
+    </sb>
+    <sb id="SBNISO" type="org">
+        <titleStmt>
+            <title>National Information Standards Organization</title>
+            <abbr>NISO</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>The National Information Standards Organization (NISO) is a US-American non-profit
                 standards organization. It was founded in 1939. In the meantime, NISO members
                 consists of more than 70 organizations in the fields of publishing, libraries, IT
-                and media.</p><p>NISO is accredited by the American organization for standardization (American
-                National Standards Institute - ANSI); which releases standards as well.</p><p>Furthermore, the interests of NISO are represented in International Organization for
-                Standardization's Technical Committee 46.</p><p>The goal of the NISO is to develop and maintain standards for management, retrieval,
+                and media.</p>
+            <p>NISO is accredited by the American organization for standardization (American
+                National Standards Institute - ANSI); which releases standards as well.</p>
+            <p>Furthermore, the interests of NISO are represented in International Organization for
+                Standardization's Technical Committee 46.</p>
+            <p>The goal of the NISO is to develop and maintain standards for management, retrieval,
                 reuse, storage, metadata, and preservation of information including in the digital
                 environment of information services, libraries and publishing. The usage of the NISO
                 standard makes the creation, management, and effective interchange of information
-                easier and can be used in research and development of applications.</p></info><address type="URL">http://www.niso.org/home/</address></sb><sb id="SBBSi" type="org"><titleStmt><title>British Standards institute</title><abbr>BSi</abbr></titleStmt><info type="description"><p>British Standards institute (BSi) is a national organization for standardization of
+                easier and can be used in research and development of applications.</p>
+        </info>
+        <address type="URL">http://www.niso.org/home/</address>
+    </sb>
+    <sb id="SBBSi" type="org">
+        <titleStmt>
+            <title>British Standards institute</title>
+            <abbr>BSi</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>British Standards institute (BSi) is a national organization for standardization of
                 the United Kingdom. It was founded in 1901. Since then its main activities are
                 facilitating, drafting, publishing and marketing British Standards and defining
                 other guidelines. Most of the BS standards are developed in cooperation with other
                 standardisation organisations at international and European level such as ISO, IEC,
-                CEN, etc.</p><p>Furthermore, BS adopts all European standards, which are developed by European
+                CEN, etc.</p>
+            <p>Furthermore, BS adopts all European standards, which are developed by European
                 standardisation organisation and replaces or reprocesses the existing British
                 Standards that conflict with them. Then the standards are published as adopted
-                British Standards with abbreviation BS EN, BS ISO, etc.</p></info><address type="URL">http://www.bsigroup.com/</address></sb><sb id="SBHL7" type="org"><titleStmt><title>Health Level Seven International</title><abbr>HL7</abbr></titleStmt><info type="description"><p>Health Level Seven International (HL7) is a non-profit ANSI-accredited standards
+                British Standards with abbreviation BS EN, BS ISO, etc.</p>
+        </info>
+        <address type="URL">http://www.bsigroup.com/</address>
+    </sb>
+    <sb id="SBHL7" type="org">
+        <titleStmt>
+            <title>Health Level Seven International</title>
+            <abbr>HL7</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>Health Level Seven International (HL7) is a non-profit ANSI-accredited standards
                 developing organization involved in the development of international healthcare
-                informatics interoperability specifications.</p></info><address type="URL">http://www.hl7.org/</address></sb><sb id="SBOLAC" type="org"><titleStmt><title>Open Language Archive Community</title><abbr>OLAC</abbr></titleStmt><info type="description"><p>OLAC stands for Open Language Archives Community. It is an international partnership
+                informatics interoperability specifications.</p>
+        </info>
+        <address type="URL">http://www.hl7.org/</address>
+    </sb>
+    <sb id="SBOLAC" type="org">
+        <titleStmt>
+            <title>Open Language Archive Community</title>
+            <abbr>OLAC</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>OLAC stands for Open Language Archives Community. It is an international partnership
                 of institutions and individuals, aiming at creating a worldwide virtual library of
                 language resources. OLAC was founded in 2000. The reason behind the foundation of
                 the OLAC was to connect diverse communities, which are engaged in research, creation
                 and development of linguistic resources. It was also to allow access for all users
-                of those resources.</p><p>During the last years since the establishment of the community, OLAC achieves a large
+                of those resources.</p>
+            <p>During the last years since the establishment of the community, OLAC achieves a large
                 number of data and tools for linguistic research provided for general use. It
                 develops a network of interoperating repositories and services for housing and
                 accessing linguistic resources. It also allows independent and objective advice,
                 standards and recommendations for creation, archiving and using language resources.
-            </p></info><address type="URL">http://www.language-archives.org/</address></sb><sb id="SBTEIC" type="org"><titleStmt><title>Consortium of the Text Encoding Initiative</title><abbr>TEI</abbr></titleStmt><info type="description"><p>TEI stands for The Text Encoding Initiative. It is an international consortium, which
+            </p>
+        </info>
+        <address type="URL">http://www.language-archives.org/</address>
+    </sb>
+    <sb id="SBTEIC" type="org">
+        <titleStmt>
+            <title>Consortium of the Text Encoding Initiative</title>
+            <abbr>TEI</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>TEI stands for The Text Encoding Initiative. It is an international consortium, which
                 develops and maintains the TEI Guidelines as a recommended standard for
                 representating texts in digital form. TEI was founded in 1987. The reason to
                 establish TEI was the necessity to produce a set of guidelines for the creation, use
                 and interchange of electronic texts initially in the fields of humanities, social
-                sciences and linguistics.</p><p>The outcome of the intensive work was a set of TEI Guidelines specifying encoding
-                methods for machine-readable texts.</p><p>Currently, the areas of interest of the TEI consortium include not only the TEI
+                sciences and linguistics.</p>
+            <p>The outcome of the intensive work was a set of TEI Guidelines specifying encoding
+                methods for machine-readable texts.</p>
+            <p>Currently, the areas of interest of the TEI consortium include not only the TEI
                 Guidelines, but also a variety of supporting resources, such as tools for or adapted
-                to the TEI, tutorials, TEI relevant publications and lots more.</p><p>The individuals, groups or organisations, which have an interest to collaborate in
+                to the TEI, tutorials, TEI relevant publications and lots more.</p>
+            <p>The individuals, groups or organisations, which have an interest to collaborate in
                 the development of Guidelines, can become a member of TEI consortium or create the
-                TEI Special Interest Group.</p><p>Currently there are many TEI Special Interest Groups (SIGs):</p><ul><li> Correspondence</li><li>Education</li><li>Libraries</li><li>Manuscripts</li><li>Music</li><li>Ontologies</li><li>Scholarly Publishing</li><li>TEI for Linguists</li><li>Text and Graphics</li><li>Tools</li></ul><p>In our context the work of SIG “TEI for Linguists” is particularly relevant. The key
+                TEI Special Interest Group.</p>
+            <p>Currently there are many TEI Special Interest Groups (SIGs):</p>
+            <ul>
+                <li> Correspondence</li>
+                <li>Education</li>
+                <li>Libraries</li>
+                <li>Manuscripts</li>
+                <li>Music</li>
+                <li>Ontologies</li>
+                <li>Scholarly Publishing</li>
+                <li>TEI for Linguists</li>
+                <li>Text and Graphics</li>
+                <li>Tools</li>
+            </ul>
+            <p>In our context the work of SIG “TEI for Linguists” is particularly relevant. The key
                 objectives are to develop a set of recommendations for encoding of language
                 resources with TEI markup. The SIG “TEI for Linguists” collaborates with researchers
-                working within ISO/TC 37/SC 4, making the work effective and efficient.</p></info><address type="URL">http://www.tei-c.org</address></sb><sb id="SBDublinCore" type="org"><titleStmt><title>Dublin Core Metadata Initiative</title><abbr>DCMI</abbr></titleStmt><info type="description"><p>The Dublin Core Metadata Initiative (DCMI) is an open international organization
+                working within ISO/TC 37/SC 4, making the work effective and efficient.</p>
+        </info>
+        <address type="URL">http://www.tei-c.org</address>
+    </sb>
+    <sb id="SBDublinCore" type="org">
+        <titleStmt>
+            <title>Dublin Core Metadata Initiative</title>
+            <abbr>DCMI</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>The Dublin Core Metadata Initiative (DCMI) is an open international organization
                 aiming at developing an interoperable metadata standard. The prerequisite for the
                 standard was the overall acceptance and ability for the description of diverse
-                electronic resources for the web.</p><p>DCMI was founded in 1995 during the OCLC/NCSA Metadata Workshop. Since then, the
+                electronic resources for the web.</p>
+            <p>DCMI was founded in 1995 during the OCLC/NCSA Metadata Workshop. Since then, the
                 conferences and workshops take place each year. Currently, DCMI collaborates with
                 many institutions from more than 20 countries from various fields such as museums,
                 libraries, knowledge management, informatics, networks, etc. Further development and
                 expansion of the Dublin Core metadata standards are the main focus of the current
-                work.</p><p>DCMI collaborates with other standardization organizations such as the W3C, NISO,
-                CEN, and is working on the translation of Dublin Core into 25 other languages.</p><p>The DCMI activities are not only developing and maintaining standards, but also
+                work.</p>
+            <p>DCMI collaborates with other standardization organizations such as the W3C, NISO,
+                CEN, and is working on the translation of Dublin Core into 25 other languages.</p>
+            <p>The DCMI activities are not only developing and maintaining standards, but also
                 developing tools and services for using, designing and managing metadata. DCMI
                 provides a full documentation and support for DCMI standards, related resources,
-                tutorials materials and events.</p></info><address type="URL">http://dublincore.org/</address></sb><sb id="SBIFLA" type="org"><titleStmt><title>International Federation of Library Associations and Institutions</title><abbr>IFLA</abbr></titleStmt><info type="description"><p><a href="http://www.ifla.org/">The International Federation of Library Associations and Institutions (IFLA)</a>
+                tutorials materials and events.</p>
+        </info>
+        <address type="URL">http://dublincore.org/</address>
+    </sb>
+    <sb id="SBIFLA" type="org">
+        <titleStmt>
+            <title>International Federation of Library Associations and Institutions</title>
+            <abbr>IFLA</abbr>
+        </titleStmt>
+        <info type="description">
+            <p><a href="http://www.ifla.org/">The International Federation of Library Associations and Institutions (IFLA)</a>
                 is an independent, international, non-governmental, not-for-profit organization,
                 which represents the interests of library and information services and their users.
                 It was founded in 1927 in Edinburgh. In the meantime, IFLA has over 1500 members in
                 approximately 150 countries around the world in the fields of library and
-                information services.</p><p>The objectives are developing and providing standards for library and information
+                information services.</p>
+            <p>The objectives are developing and providing standards for library and information
                 services, supporting and promoting the diffusion for the value of good library and
                 information services, and finally representing the interests of IFLA members
-                throughout the world.</p><p>The IFLA has working relationships to other standardization organizations such as
-                ICSU, WIPO and ISO.</p></info><address type="URL">http://www.ifla.org/</address></sb><sb id="SBOther" display="hide"><titleStmt><title>Other Standard Bodies</title><abbr>other</abbr></titleStmt><info type="description"><p/></info></sb><sb id="SBLISA" type="org"><titleStmt><title>Localization Industry Standards Association</title><abbr>LISA</abbr></titleStmt><info type="description"><p>From 1990 to 2011 the Localization Industry Standards Association (LISA) was the
+                throughout the world.</p>
+            <p>The IFLA has working relationships to other standardization organizations such as
+                ICSU, WIPO and ISO.</p>
+        </info>
+        <address type="URL">http://www.ifla.org/</address>
+    </sb>
+    <sb id="SBOther" display="hide">
+        <titleStmt>
+            <title>Other Standard Bodies</title>
+            <abbr>other</abbr>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBLISA" type="org">
+        <titleStmt>
+            <title>Localization Industry Standards Association</title>
+            <abbr>LISA</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>From 1990 to 2011 the Localization Industry Standards Association (LISA) was the
                 premier not-for-profit association for individuals, businesses, associations, and
                 standards organizations involved in language and language technology. One of the
                 objectives of LISA was to develop and promulgate best translation and localization
-                methods for software and hardware industries.</p><p>Since 2011, LISA is no longer active. Following the insolvency of LISA, developed
+                methods for software and hardware industries.</p>
+            <p>Since 2011, LISA is no longer active. Following the insolvency of LISA, developed
                 standards have been put under Creative Commons license and the specifications moved
                 to new work items within other standardisation organisations such as ISO, GALA, etc.
                 However the standardization methods are still widely used today as a benchmark for
-                assesing translation quality.</p></info></sb><sb id="SBLoC" type="org"><titleStmt><title>The Library of Congress</title><abbr>LoC</abbr></titleStmt><info type="description"><p/></info><address type="URL">http://www.loc.gov/standards/</address></sb><sb id="SBEAGLES" type="org" display="hide"><titleStmt><title>Advisory Group on Language Engineering Standards</title><abbr>EAGLES</abbr></titleStmt><info type="description"><p/></info></sb><sb id="SBDIN" type="org"><titleStmt><title>Deutsche Institut für Normung e. V.</title><abbr>DIN</abbr></titleStmt><info type="description"><p/></info></sb><sb id="SBGOLD" type="org"><titleStmt><title>General Ontology for Linguistic Description Community</title><abbr>GOLD Community</abbr></titleStmt><info type="description"><p/></info><address type="URL">http://linguistics-ontology.org/</address></sb><sb id="SBRuleML" type="org"><titleStmt><title>RuleML Initiative</title><abbr>RuleML</abbr></titleStmt><info type="description"><p>RuleML Initiative is an open network of both people and groups from industry and
+                assesing translation quality.</p>
+        </info>
+    </sb>
+    <sb id="SBLoC" type="org">
+        <titleStmt>
+            <title>The Library of Congress</title>
+            <abbr>LoC</abbr>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+        <address type="URL">http://www.loc.gov/standards/</address>
+    </sb>
+    <sb id="SBEAGLES" type="org" display="hide">
+        <titleStmt>
+            <title>Advisory Group on Language Engineering Standards</title>
+            <abbr>EAGLES</abbr>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBDIN" type="org">
+        <titleStmt>
+            <title>Deutsche Institut für Normung e. V.</title>
+            <abbr>DIN</abbr>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBGOLD" type="org">
+        <titleStmt>
+            <title>General Ontology for Linguistic Description Community</title>
+            <abbr>GOLD Community</abbr>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+        <address type="URL">http://linguistics-ontology.org/</address>
+    </sb>
+    <sb id="SBRuleML" type="org">
+        <titleStmt>
+            <title>RuleML Initiative</title>
+            <abbr>RuleML</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>RuleML Initiative is an open network of both people and groups from industry and
                 academia working on rule markup. Its main objective is to provide a basis for
                 integrated rule-markup approach. RuleML Initiative collaborates with ISO and W3C,
                 for instance in developing ISO Common Logic (CL) and W3C Rule Interchange Format
-                (RIF).</p></info></sb><sb id="SBRewerse"><titleStmt><title>REWERSE Working Group I1</title><abbr internal="yes">REWERSE-WGI1</abbr></titleStmt><info type="description"><p/></info></sb><sb id="SBICS"><titleStmt><title>Institute of Computer Science - Foundation of Research Technology Hellas</title><abbr>ICS-FORTH</abbr></titleStmt><info type="description"><p/></info></sb></sbs>
+                (RIF).</p>
+        </info>
+    </sb>
+    <sb id="SBRewerse">
+        <titleStmt>
+            <title>REWERSE Working Group I1</title>
+            <abbr internal="yes">REWERSE-WGI1</abbr>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </sb>
+    <sb id="SBICS">
+        <titleStmt>
+            <title>Institute of Computer Science - Foundation of Research Technology Hellas</title>
+            <abbr>ICS-FORTH</abbr>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </sb>
+</sbs>
