@@ -10,6 +10,40 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="titleStmt"/>
+                <xs:element name="ClarinRecommendation" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="recommendation" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="alternatives" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence maxOccurs="unbounded">
+                                                    <xs:element name="alternative">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="formatId" type="xs:string" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element ref="info" minOccurs="0"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="formatId" type="xs:string" use="required"/>
+                                    <xs:attribute name="type" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+<!--                                                <xs:enumeration value="fully recommended"/>
+                                                <xs:enumeration value="acceptable"/>-->
+                                                <xs:enumeration value="deprecated"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
                 <xs:element ref="keyword" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element ref="info" maxOccurs="unbounded"/>
                 <xs:element ref="features" minOccurs="0"/>
