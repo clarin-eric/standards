@@ -1,0 +1,43 @@
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecALTO" topic="TopicFileFormats" standardSettingBody="SBLoC"
+  xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="show">
+  <titleStmt>
+    <title>Analyzed Layout and Text Object</title>
+    <abbr>ALTO</abbr>
+  </titleStmt>
+  <scope>digitized text</scope>
+  <keyword>XML</keyword>
+  <keyword>OCR</keyword>
+  <keyword>digitization</keyword>
+  <info type="description">
+    <p>ALTO (Analyzed Layout and Text Object) is an open XML Schema developed by the EU-funded
+      project called METAe.</p>
+    <p>The standard was initially developed for the description of text OCR and layout information
+      of pages for digitized material. The goal was to describe the layout and text in a form to be
+      able to reconstruct the original appearance based on the digitized information - similar to
+      the approach of a lossless image saving operation.</p>
+    <p>ALTO is often
+      <a href="https://github.com/altoxml/documentation/wiki/Using-ALTO-with-METS">used
+      in combination with Metadata Encoding and Transmission Standard (METS)</a> for the
+      description of the whole digitized object and creation of references across the ALTO files,
+      e.g. reading sequence description.</p>
+    <p>The standard is hosted by the Library of Congress since 2010 and maintained by the Editorial
+      Board initialized at the same time.</p>
+    <p>In the time from the final version of the ALTO standard in June 2004 (version 1.0) ALTO was
+      maintained by CCS Content Conversion Specialists GmbH, Hamburg up to version 1.4. See:
+      <a href="https://en.wikipedia.org/wiki/ALTO_(XML)">Wikipedia article for ALTO</a>.</p>
+  </info>
+  <address type="URL">https://github.com/altoxml/documentation/wiki</address>
+  <relation target="SpecXML" type="isBasedOn">
+    <info>
+      <p>ALTO is based on XML.</p>
+    </info>
+  </relation>
+  <version id="SpecALTO41">
+    <titleStmt>
+      <title>Analyzed Layout and Text Object</title>
+      <abbr>ALTO</abbr>
+      <versionNumber type="major">4</versionNumber>
+      <versionNumber type="minor">1</versionNumber>
+    </titleStmt>
+  </version>
+</spec>
