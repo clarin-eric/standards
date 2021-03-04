@@ -1,0 +1,29 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCHAT"
+  xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>the CHAT format</title>
+    <abbr>CHAT</abbr>
+  </titleStmt>
+  <keyword>transcription of speech</keyword>
+  <keyword>spoken language</keyword>
+  <keyword>speech data</keyword>
+  <keyword>annotation</keyword>
+  <info type="description">
+    <p>CHAT (Codes for the Human Analysis of Transcripts) is the most common format for
+      transcribing, encoding and analysing child language data. It was developed by Brian MacWhinney
+      within the CHILDES (Child Language Data Exchange System) Project. All of the transcripts in
+      the CHILDES database are encoded in the CHAT format.</p>
+    <p>By using the CHAT format, transcribed data can be annotated with different levels of
+      linguistic information such as phonological, morphological or syntactic information. The data
+      transcribed and annotated in CHAT, are compatible with some analysis tools, for example CLAN
+      provided also by the CHILDES Project. </p>
+    <p>Since the CHAT format is widely recognized in children’s language research, many
+      transcription tools (such as ELAN, EXMARaLDA, Praat, Phon, Transcriber) support it. These
+      tools can also export and import data encoded in various formats as CHAT formatted data.</p>
+  </info>
+  <relation target="SpecCHAT" type="isDefinedBy"/>
+  <relation target="SpecCHAT" type="isUsedBy"/>
+  <mimeType recommended="yes">text/x-chat</mimeType>
+  <mimeType>text/plain</mimeType>
+  <fileExt>.cha</fileExt>
+</format>

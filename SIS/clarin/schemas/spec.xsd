@@ -83,7 +83,7 @@
                                             <xs:restriction base="xs:string">
                                                 <xs:enumeration value="fully recommended"/>
                                                 <xs:enumeration value="acceptable"/>
-                                                <xs:enumeration value="not recommended"/>
+                                                <xs:enumeration value="deprecated"/>
                                             </xs:restriction>
                                         </xs:simpleType>
                                     </xs:attribute>
