@@ -44,13 +44,13 @@ declare function login:create-session($user){
         if ($user/role = "webadmin")
         then session:set-attribute("user","webadmin")
         else session:set-attribute("user","user")
-    return response:redirect-to(app:secure-link("index.xq"))
+    return response:redirect-to(app:link("index.xq"))
 };
 
 (: Logout process :)
 declare function login:logout(){
     if (session:get-attribute("user"))
     then (session:remove-attribute("user"),session:invalidate())
-    else app:secure-link("user/login.xq")
+    else app:link("user/login.xq")
 };
 

@@ -87,5 +87,5 @@ declare function register:register-user($name as xs:string, $affliation as xs:st
         
     let $store := user:store($user-data)
     
-    return response:redirect-to(app:secure-link("user/register-confirmation.xq"))       
+    return response:redirect-to(app:link("user/register-confirmation.xq"))       
 }; 

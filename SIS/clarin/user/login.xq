@@ -31,7 +31,7 @@ return
             {menu:view()}
             <div class="content">            
                 <div class="navigation">&gt; <a href="{app:link("user/login.xq")}">Login</a></div>
-                <form action="{app:secure-link("user/login.xq")}" method="post">
+                <form action="{app:link("user/login.xq")}" method="post">
                     <table style="font-size:14px; font-family:arial,verdana,sans-serif; border:1px solid #AAAAAA; padding:20px;">
                         <tr>
                             <td><b>E-Mail:</b></td>

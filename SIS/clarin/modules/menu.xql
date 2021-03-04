@@ -61,19 +61,19 @@ declare function menu:view(){
                  then (
                     <tr>
                         <td colspan="2" class="tdmenu">
-                            <a style="display:block" href="{app:secure-link("user/login.xq")}">Login</a>
+                            <a style="display:block" href="{app:link("user/login.xq")}">Login</a>
                         </td>
                     </tr>,
                     <tr>
                         <td colspan="2" class="tdmenu">
-                            <a style="display:block" href="{app:secure-link("user/register.xq")}">Register</a>
+                            <a style="display:block" href="{app:link("user/register.xq")}">Register</a>
                         </td>
                     </tr>                
                  )
                  else
                     <tr>
                         <td colspan="2" class="tdmenu">
-                            <a style="display:block" href="{app:secure-link("user/logout.xq")}">Logout</a>
+                            <a style="display:block" href="{app:link("user/logout.xq")}">Logout</a>
                         </td>
                    </tr>
                 }
