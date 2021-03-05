@@ -96,7 +96,7 @@ else
                      <div>{vsm:print-spec-description($spec/info[@type="description"], $id)}</div>                     
                      {vsm:print-url($spec)}
                      {vsm:print-spec-assets($id,$spec/asset/a)}
-                     {vsm:print-spec-relation($spec,$id)}
+                     {vsm:print-spec-relation($spec,$id,fn:false())}
                      {vsm:print-topic-specs($id,$spec-topic)}
                      {vsm:print-spec-bibliography($spec/info[@type="recReading"]/biblStruct)}
                      <br/>
