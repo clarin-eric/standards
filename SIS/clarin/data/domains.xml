@@ -1,0 +1,11 @@
+<domains>
+    <domain id="1">Documentation</domain>
+    <domain id="2">Metadata</domain>
+    <domain id="3">TextContent</domain>
+    <domain id="4">AnnotatedText</domain>
+    <domain id="5">Media</domain>
+    <domain id="6">Image</domain>
+    <domain id="7">Compression</domain>
+    <domain id="8">Code</domain>
+    <domain id="9">Other</domain>
+</domains>

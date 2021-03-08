@@ -230,3 +230,9 @@ th {
 .header{    
     border-bottom:1px solid #BBBBBB;
 }
+
+.recommendation-row{
+    border-bottom:1px solid #DDDDDD; 
+    text-align:left; 
+    vertical-align:top;
+}

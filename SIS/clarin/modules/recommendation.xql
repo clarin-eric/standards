@@ -10,33 +10,31 @@ import module namespace center="http://clarin.ids-mannheim.de/standards/center" 
 
 (:  Define standard-relation functions
     @author margaretha
-    @date Dec 2014
+    @lastUpdate March 2021
 :)
 
-declare function rm:print-recTypes(){
+declare function rm:print-recTypes($path){
     for $type in xsd:get-clarinRecTypes()
     let $t :=
-        if ($type = 'fully recommended') then 'fr'
-        else if ($type = 'acceptable') then 'a'
-        else 'nr'
+        if ($type = 'fully recommended') then 'recommended'
+        else $type
         
-    let $url := app:link(concat("views/recommendation.xq?type=",$t))        
+    let $url := app:link(concat("views/",$path,".xq?type=",$t))        
     return    
-        if ($t != 'nr') then (<a href="{$url}">{$type}</a>," | ")
+        if ($t != 'deprecated') then (<a href="{$url}">{$type}</a>," | ")
         else <a href="{$url}">{$type}</a>        
 };
 
 declare function rm:translate-type($type){
-    if ($type = 'fr') then 'fully recommended'
-        else if ($type = 'a') then 'acceptable'
-        else 'not recommended'    
+    if ($type = 'recommended') then 'fully recommended'
+        else $type    
 };
 
 declare function rm:print-recTable($type){
     let $recType := rm:translate-type($type)        
     let $recommendations:= $spec:specs/ClarinRecommendation/recommendation[@type=$recType]
     
-    return        
+    return
         for $rec in $recommendations
             let $spec := $rec/ancestor::node()
             let $rec-node := $spec/descendant-or-self::node()[@id = $rec/@specId]
