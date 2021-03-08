@@ -40,7 +40,7 @@ import module namespace index="http://clarin.ids-mannheim.de/standards/index" at
                 </div>
                 <div><p>This website is managed by the CLARIN Standards Committee. Feedback on the <a href="schemas/spec.xsd">XML Schema</a> of <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">standard</a> 
                     descriptions may be sent to <a href="{app:link("views/contact.xq")}">the contact addresses</a>. CSC Members and CLARIN technical staff may also   
-                    {if (session:get-attribute("user")) then "register" else <a href="{app:secure-link("user/register.xq")}">register</a>} with this service.</p>
+                    {if (session:get-attribute("user")) then "register" else <a href="{app:link("user/register.xq")}">register</a>} with this service.</p>
                 </div>
                 <!-- The tag cloud of standards and standard bodies -->
                 <div style="margin-left:12%; margin-bottom:20px; width:450px;">

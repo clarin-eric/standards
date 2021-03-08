@@ -13,17 +13,11 @@ declare variable $app:securebase as xs:string := "http://standards.clarin.eu/sis
 
 (: Local Base URL :)
 declare variable $app:base as xs:string := "http://localhost:8889/exist/apps/clarin/";
-declare variable $app:securebase as xs:string := "http://localhost:8889/exist/apps/clarin/";
 
 
 (: Wrap a link with the current session :)
 declare function app:link($path as xs:string) {
     session:encode-url(fn:resolve-uri($path,$app:base))
-};
-
-(: Wrap a link with the current session and the secure port :)
-declare function app:secure-link($path as xs:string){    
-    session:encode-url(fn:resolve-uri($path,$app:securebase))
 };
 
 (: Resolve a resource location :)

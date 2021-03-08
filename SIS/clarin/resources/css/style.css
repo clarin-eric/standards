@@ -73,7 +73,7 @@ ul#menu{
 }
 
 .title {
-	font-size:18px;
+	font-size:22px;
 	font-weight:bold;
 }
 
@@ -229,4 +229,10 @@ th {
 
 .header{    
     border-bottom:1px solid #BBBBBB;
+}
+
+.recommendation-row{
+    border-bottom:1px solid #DDDDDD; 
+    text-align:left; 
+    vertical-align:top;
 }

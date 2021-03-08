@@ -224,8 +224,8 @@ declare function vsm:print-spec-topic($spec,$spec-topic){
     )
 };
 
-declare function vsm:print-spec-relation($spec,$spec-id){
-    vvm:print-version-relation($spec-id,$spec,$spec-id)
+declare function vsm:print-spec-relation($spec,$spec-id,$isFormat as xs:boolean){
+    vvm:print-version-relation($spec-id,$spec,$spec-id,$isFormat)
 };
 
 (: Define the standard body view and its edit form :)
@@ -501,14 +501,13 @@ declare function vsm:print-spec-version($spec){
 (: Print the standard relation graph :)
 declare function vsm:print-graph($spec){
     
-    let $spec-version := $spec/descendant-or-self::version
     let $spec-relations := fn:distinct-values($spec/descendant-or-self::*/relation/@type)
     let $relations := xsd:get-relations()
     let $idx := fn:index-of($relations,"isVersionOf")
     let $ispartOf-idx := fn:index-of($relations,"isPartOf")
     
     return 
-    if ($spec-version)
+    if (count($spec-relations)>0)
     then 
         <div id="chart" class="version">
             <div><span class="heading3">Relations</span></div>
@@ -525,10 +524,14 @@ declare function vsm:print-graph($spec){
                              <td>{data($r)}</td>
                          </tr>
                  }
+                {if($spec/descendant-or-self::version)
+                then
                 <tr>
                      <td><hr style="border:0; color:{$graph:colors[$idx]}; background-color:{$graph:colors[$idx]}; height:2px; width:20px" /></td>
                      <td>isVersionOf</td>
                 </tr>
+                else ()
+                }
                 {if ($spec/descendant-or-self::part)
                 then 
                 <tr>

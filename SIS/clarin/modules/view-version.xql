@@ -46,7 +46,7 @@ declare function vvm:print-version($spec,$parent,$node){
               { vvm:print-version-features($spec-id,$version,$version-id) }                     
               { vvm:print-version-url($spec-id,$version,$version-id) }
               { vvm:print-version-recommendation($version) }
-              { vvm:print-version-relation($spec-id,$version,$version-id) }
+              { vvm:print-version-relation($spec-id,$version,$version-id,fn:false()) }
               { vvm:print-version-center($version)}
               { vvm:print-version-references($spec-id,$version,$version-id) }
           </div>
@@ -453,7 +453,7 @@ declare function vvm:print-version-recommendation($version){
 };
 
 (: Print version relations and the edit forms :)
-declare function vvm:print-version-relation($spec-id,$version,$version-id){
+declare function vvm:print-version-relation($spec-id,$version,$version-id,$isFormat as xs:boolean){
     
     let $version-relations := $version/relation
     let $numrels := count($version-relations)
@@ -480,17 +480,18 @@ declare function vvm:print-version-relation($spec-id,$version,$version-id){
                         return (
                       		   <li id="vrel{$version-id}--{$r}li">
                       		       <span id="vrel{$version-id}--{$r}pid" style="display:none">{$target}</span>
-                      		       <a id="vrel{$version-id}--{$r}link" href="{$target-link}"> 
+                      		       <a id="vrel{$version-id}--{$r}link" href="{$target-link}">
                       		            {$target-name}
                       			   </a> 
-                        		   {if (session:get-attribute("user") = 'webadmin') 
+                        		   {if (session:get-attribute("user") = 'webadmin' and not($isFormat)) 
                                     then (<button class="edit" type="button" onclick="openEditor('editvrel{$version-id}--{$r}');">Edit</button>,
                                           <button class="edit" style="margin-left:3px;" type="button"  
                                             onclick="removeElement('{$spec-id}','vrel{$version-id}--{$r}','');">Remove</button>)
                                     else()}                                        
                       		 	   <span id="vrel{$version-id}--{$r}text"> { $version-relations[$r]/info/* } </span>                      			 	   
                       		 	</li>,             
-                      		 	if (session:get-attribute("user") = 'webadmin') then
+                      		 	if (session:get-attribute("user") = 'webadmin'and not($isFormat)) 
+                      		 	then
                       		 	     <span id='editvrel{$version-id}--{$r}' style="display:none; margin-bottom:15px;">
                       		 	        <select id="vrel{$version-id}--{$r}" class="inputSelect" style="width:173px; margin-right:3px;">
                                             <option value=""/>
@@ -513,7 +514,7 @@ declare function vvm:print-version-relation($spec-id,$version,$version-id){
                </div>)
           else()
           ,
-          if (session:get-attribute("user") = 'webadmin') 
+          if (session:get-attribute("user") = 'webadmin' and not($isFormat)) 
            then (<div>
                     <button class="edit" type="button" 
                     onclick="openEditor('addvrel{$version-id}');setrel({f:get-options(xsd:get-relations())},{f:get-target-options()})">

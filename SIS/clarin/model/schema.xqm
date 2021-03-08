@@ -8,11 +8,17 @@ module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema";
 :)
 
 declare variable $xsd:doc := doc('../schemas/spec.xsd');
+declare variable $xsd:format := doc('../schemas/format.xsd');
 
 (: Select relation types :)
 declare function xsd:get-relations(){
-    $xsd:doc/xs:schema/xs:element[@name="relation"]/xs:complexType/xs:attribute[@name="type"]/
+    let $spec-relations := $xsd:doc/xs:schema/xs:element[@name="relation"]/xs:complexType/xs:attribute[@name="type"]/
     xs:simpleType/xs:restriction/xs:enumeration/data(@value)
+    
+    let $format-relations := $xsd:format/xs:schema/xs:element[@name="relation"]/xs:complexType/xs:attribute[@name="type"]/
+    xs:simpleType/xs:restriction/xs:enumeration/data(@value)
+    
+    return fn:distinct-values(($spec-relations, $format-relations))
 };
 
 (: Select status types :)

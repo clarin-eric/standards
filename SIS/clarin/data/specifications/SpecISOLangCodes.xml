@@ -1,29 +1,163 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecISOLangCodes" standardSettingBody="SBISO" topic="TopicControlledVocabulary" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Codes for the representation of names of languages</title><abbr>ISO Language Codes</abbr></titleStmt><scope>Internationally recognised codes for the representation of languages or language families</scope><ClarinRecommendation><recommendation specId="SpecISOLangCodes-Part1" type="acceptable"><alternatives><alternative specId="SpecISOLangCodes-Part3"/></alternatives></recommendation><recommendation specId="SpecISOLangCodes-Part2" type="deprecated"><alternatives><alternative specId="SpecISOLangCodes-Part3"/></alternatives></recommendation><recommendation specId="SpecISOLangCodes-Part3" type="fully recommended"/></ClarinRecommendation><keyword>Controlled vocabulary</keyword><keyword>names of languages</keyword><keyword>names of language families</keyword><info type="description"><p>The international standard for language codes (ISO 639) is developed as a multi part standard and provides the internationally recognised two 
-            and three alphabetic codes for the representation of natural languages or language families and groups.</p><p>The language codes are widely used for example in applications for terminology, lexicography, linguistics, information and documentation 
-            (e.g. for libraries, information services, and publishers). The language codes standardisation were designed for all working areas (e.g. 
-            libraries, information services, and publishers), where the indication of languages is important for data exchange between different 
-            databases or computerized systems.
-        </p></info><part id="SpecISOLangCodes-Part1"><titleStmt><title>Codes for the representation of names of languages — Part 1: Alpha-2 code</title><abbr internal="yes">Language Codes Part 1</abbr></titleStmt><info type="description"><p>"This part of ISO 639 provides a code consisting of language code elements comprising two-letter language identifiers for the representation 
-                of names of languages. The language identifiers according to this part of ISO 639 were devised originally for use in terminology, 
-                lexicography and linguistics, but may be adopted for any application requiring the expression of language in two-letter coded form, 
-                especially in computerized systems. The alpha-2 code was devised for practical use for most of the major languages of the world 
-                that are not only most frequently represented in the total body of the world's literature, but which also comprise a considerable 
-                volume of specialized languages and terminologies. Additional language identifiers are created when it becomes apparent that 
-                a significant body of documentation written in specialized languages and terminologies exists. Languages designed exclusively 
-                for machine use, such as computer-programming languages, are not included in this code." <a href="http://www.iso.org">Abstract, ISO 639-1:2002</a></p></info><version id="SpecISOLangCodes-Part1-2002" status="International Standard"><titleStmt><abbr>ISO 639-1:2002</abbr></titleStmt><versionNumber type="major">ISO 639-1:2002</versionNumber><date>2013-07-09</date><address type="URL">http://www.iso.org/iso/home.htm</address><relation target="SpecDINLangCodes" type="isUsedBy"/></version></part><part id="SpecISOLangCodes-Part2"><titleStmt><title>Codes for the representation of names of languages — Part 2: Alpha-3 code</title><abbr>Language Codes Part 2</abbr></titleStmt><info type="description"><p>Similar to the first part, the second part of the ISO 639 standard provides language codes for the representation of names of languages 
-                and language groups. The first and the second parts of the standard define the codes for a language, but in two different letter code sets: 
-                ISO 639-1 has the two letter code set and the ISO 639-2 with three letter codes set.</p></info><version id="SpecISOLangCodes-Part2-1998" status="International Standard"><titleStmt><abbr>ISO 639-2:1998</abbr></titleStmt><versionNumber type="major">ISO 639-2:1998</versionNumber><date>2010-07-20</date><address type="URL">http://www.iso.org/iso/home.htm</address></version></part><part id="SpecISOLangCodes-Part3"><titleStmt><title>Codes for the representation of names of languages — Part 3: Alpha-3 code for comprehensive coverage of languages</title><abbr internal="yes">Language Codes Part 3</abbr></titleStmt><info type="description"><p>"ISO 639-3:2007 provides a code, published by the Registration Authority of ISO 639-3, consisting of language code elements comprising 
-                three-letter language identifiers for the representation of languages. The language identifiers according to this ISO 639-3:2007 
-                were devised for use in a wide range of applications, especially in computer systems, where there is potential need to support a 
-                large number of the languages that are known to have ever existed. Whereas ISO 639-1 and ISO 639-2 are intended to focus on the
-                major languages of the world that are most frequently represented in the total body of the world's literature, ISO 639-3:2007 
-                attempts to provide as complete an enumeration of languages as possible, including living, extinct, ancient and constructed 
-                languages, whether major or minor, written or unwritten. As a result, ISO 639-3:2007 deals with a very large number of lesser-known 
-                languages. Languages designed exclusively for machine use, such as computer-programming languages and reconstructed languages, 
-                are not included in this code." <a href="http://www.iso.org">Abstract, ISO 639-3:2007</a></p></info><version id="SpecISOLangCodes-Part3-2007" status="International Standard"><titleStmt><abbr>ISO 639-3:2007</abbr></titleStmt><versionNumber type="major">ISO 639-3:2007</versionNumber><date>2010-07-20</date><address type="URL">http://www.iso.org/iso/home.htm</address></version></part><part id="SpecISOLangCodes-Part4"><titleStmt><title>Codes for the representation of names of languages — Part 4: 
-                General principles of coding of the representation of names of languages and related entities, and application guidelines</title><abbr internal="yes">Language Codes Part 4</abbr></titleStmt><info type="description"><p>"ISO 639-4:2010 gives the general principles of language coding using the codes that are specified in the other parts of ISO 639 and their 
-                combination with other codes. It also lays down guidelines for the use of any combination of the parts of ISO 639.</p><p>The terminology and general descriptions of ISO 639-4 are intended to replace corresponding text of other parts of ISO 639 as 
-                relevant in future revisions.</p><p>Relevant metadata for the description of linguistic entities are given, as a framework for databases of linguistic 
-                data to support the ISO 639 series." <a href="http://www.iso.org">Abstract, ISO 639-4:2010</a></p></info><version id="SpecISOLangCodes-Part4-2010" status="International Standard"><titleStmt><abbr>ISO 639-4:2010</abbr></titleStmt><versionNumber type="major">ISO 639-4:2010</versionNumber><date>2010-07-16</date><address type="URL">http://www.iso.org/iso/home.htm</address></version></part><part id="SpecISOLangCodes-Part5"><titleStmt><title>Codes for the representation of names of languages — Part 5: Alpha-3 code for language families and groups</title><abbr internal="yes">Language Codes Part 5</abbr></titleStmt><info type="description"><p>"ISO 639-5:2008 provides a code consisting of language code elements comprising three-letter language identifiers for the 
-                representation of names of living and extinct language families and groups. Languages designed exclusively for machine use, 
-                such as computer-programming languages, are not included in this code." <a href="http://www.iso.org">Abstract, ISO 639-5:2008</a></p></info><version id="SpecISOLangCodes-Part5-2008" status="International Standard"><titleStmt><abbr>ISO 639-5:2008</abbr></titleStmt><versionNumber type="major">ISO 639-5:2008</versionNumber><date>2011-09-23</date><address type="URL">http://www.iso.org/iso/home.htm</address></version></part></spec>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecISOLangCodes" standardSettingBody="SBISO" topic="TopicControlledVocabulary" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Codes for the representation of names of languages</title>
+        <abbr>ISO Language Codes</abbr>
+    </titleStmt>
+    <scope>Internationally recognised codes for the representation of languages or language families</scope>
+    <ClarinRecommendation>
+        <recommendation specId="SpecISOLangCodes-Part1" type="acceptable">
+            <alternatives>
+                <alternative specId="SpecISOLangCodes-Part3"/>
+            </alternatives>
+        </recommendation>
+        <recommendation specId="SpecISOLangCodes-Part2" type="deprecated">
+            <alternatives>
+                <alternative specId="SpecISOLangCodes-Part3"/>
+            </alternatives>
+        </recommendation>
+        <recommendation specId="SpecISOLangCodes-Part3" type="fully recommended"/>
+    </ClarinRecommendation>
+    <keyword>Controlled vocabulary</keyword>
+    <keyword>names of languages</keyword>
+    <keyword>names of language families</keyword>
+    <info type="description">
+        <p>The international standard for language codes (ISO 639) is developed as a multi part
+            standard and provides the internationally recognised two and three alphabetic codes for
+            the representation of natural languages or language families and groups.</p>
+        <p>The language codes are widely used for example in applications for terminology,
+            lexicography, linguistics, information and documentation (e.g. for libraries,
+            information services, and publishers). The language codes standardisation were designed
+            for all working areas (e.g. libraries, information services, and publishers), where the
+            indication of languages is important for data exchange between different databases or
+            computerized systems. </p>
+    </info>
+    <part id="SpecISOLangCodes-Part1">
+        <titleStmt>
+            <title>Codes for the representation of names of languages — Part 1: Alpha-2 code</title>
+            <abbr internal="yes">Language Codes Part 1</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>"This part of ISO 639 provides a code consisting of language code elements comprising
+                two-letter language identifiers for the representation of names of languages. The
+                language identifiers according to this part of ISO 639 were devised originally for
+                use in terminology, lexicography and linguistics, but may be adopted for any
+                application requiring the expression of language in two-letter coded form,
+                especially in computerized systems. The alpha-2 code was devised for practical use
+                for most of the major languages of the world that are not only most frequently
+                represented in the total body of the world's literature, but which also comprise a
+                considerable volume of specialized languages and terminologies. Additional language
+                identifiers are created when it becomes apparent that a significant body of
+                documentation written in specialized languages and terminologies exists. Languages
+                designed exclusively for machine use, such as computer-programming languages, are
+                not included in this code."
+                <a href="http://www.iso.org">Abstract, ISO 639-1:2002</a></p>
+        </info>
+        <version id="SpecISOLangCodes-Part1-2002" status="International Standard">
+            <titleStmt>
+                <abbr>ISO 639-1:2002</abbr>
+            </titleStmt>
+            <versionNumber type="major">ISO 639-1:2002</versionNumber>
+            <date>2013-07-09</date>
+            <address type="URL">http://www.iso.org/iso/home.htm</address>
+            <relation target="SpecDINLangCodes" type="isUsedBy"/>
+        </version>
+    </part>
+    <part id="SpecISOLangCodes-Part2">
+        <titleStmt>
+            <title>Codes for the representation of names of languages — Part 2: Alpha-3 code</title>
+            <abbr>Language Codes Part 2</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>Similar to the first part, the second part of the ISO 639 standard provides language
+                codes for the representation of names of languages and language groups. The first
+                and the second parts of the standard define the codes for a language, but in two
+                different letter code sets: ISO 639-1 has the two letter code set and the ISO 639-2
+                with three letter codes set.</p>
+        </info>
+        <version id="SpecISOLangCodes-Part2-1998" status="International Standard">
+            <titleStmt>
+                <abbr>ISO 639-2:1998</abbr>
+            </titleStmt>
+            <versionNumber type="major">ISO 639-2:1998</versionNumber>
+            <date>2010-07-20</date>
+            <address type="URL">http://www.iso.org/iso/home.htm</address>
+        </version>
+    </part>
+    <part id="SpecISOLangCodes-Part3">
+        <titleStmt>
+            <title>Codes for the representation of names of languages — Part 3: Alpha-3 code for comprehensive coverage of languages</title>
+            <abbr internal="yes">Language Codes Part 3</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>"ISO 639-3:2007 provides a code, published by the Registration Authority of ISO
+                639-3, consisting of language code elements comprising three-letter language
+                identifiers for the representation of languages. The language identifiers according
+                to this ISO 639-3:2007 were devised for use in a wide range of applications,
+                especially in computer systems, where there is potential need to support a large
+                number of the languages that are known to have ever existed. Whereas ISO 639-1 and
+                ISO 639-2 are intended to focus on the major languages of the world that are most
+                frequently represented in the total body of the world's literature, ISO 639-3:2007
+                attempts to provide as complete an enumeration of languages as possible, including
+                living, extinct, ancient and constructed languages, whether major or minor, written
+                or unwritten. As a result, ISO 639-3:2007 deals with a very large number of
+                lesser-known languages. Languages designed exclusively for machine use, such as
+                computer-programming languages and reconstructed languages, are not included in this
+                code." <a href="http://www.iso.org">Abstract, ISO 639-3:2007</a></p>
+        </info>
+        <version id="SpecISOLangCodes-Part3-2007" status="International Standard">
+            <titleStmt>
+                <abbr>ISO 639-3:2007</abbr>
+            </titleStmt>
+            <versionNumber type="major">ISO 639-3:2007</versionNumber>
+            <date>2010-07-20</date>
+            <address type="URL">http://www.iso.org/iso/home.htm</address>
+        </version>
+    </part>
+    <part id="SpecISOLangCodes-Part4">
+        <titleStmt>
+            <title>Codes for the representation of names of languages — Part 4: 
+                General principles of coding of the representation of names of languages and related entities, and application guidelines</title>
+            <abbr internal="yes">Language Codes Part 4</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>"ISO 639-4:2010 gives the general principles of language coding using the codes that
+                are specified in the other parts of ISO 639 and their combination with other codes.
+                It also lays down guidelines for the use of any combination of the parts of ISO
+                639.</p>
+            <p>The terminology and general descriptions of ISO 639-4 are intended to replace
+                corresponding text of other parts of ISO 639 as relevant in future revisions.</p>
+            <p>Relevant metadata for the description of linguistic entities are given, as a
+                framework for databases of linguistic data to support the ISO 639 series."
+                <a href="http://www.iso.org">Abstract, ISO 639-4:2010</a></p>
+        </info>
+        <version id="SpecISOLangCodes-Part4-2010" status="International Standard">
+            <titleStmt>
+                <abbr>ISO 639-4:2010</abbr>
+            </titleStmt>
+            <versionNumber type="major">ISO 639-4:2010</versionNumber>
+            <date>2010-07-16</date>
+            <address type="URL">http://www.iso.org/iso/home.htm</address>
+        </version>
+    </part>
+    <part id="SpecISOLangCodes-Part5">
+        <titleStmt>
+            <title>Codes for the representation of names of languages — Part 5: Alpha-3 code for language families and groups</title>
+            <abbr internal="yes">Language Codes Part 5</abbr>
+        </titleStmt>
+        <info type="description">
+            <p>"ISO 639-5:2008 provides a code consisting of language code elements comprising
+                three-letter language identifiers for the representation of names of living and
+                extinct language families and groups. Languages designed exclusively for machine
+                use, such as computer-programming languages, are not included in this code."
+                <a href="http://www.iso.org">Abstract, ISO 639-5:2008</a></p>
+        </info>
+        <version id="SpecISOLangCodes-Part5-2008" status="International Standard">
+            <titleStmt>
+                <abbr>ISO 639-5:2008</abbr>
+            </titleStmt>
+            <versionNumber type="major">ISO 639-5:2008</versionNumber>
+            <date>2011-09-23</date>
+            <address type="URL">http://www.iso.org/iso/home.htm</address>
+        </version>
+    </part>
+</spec>
