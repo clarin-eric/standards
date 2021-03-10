@@ -1,148 +1,148 @@
 <incomingRecommendations>
-    <centre cid='ACDH-ARCHE'>
-        <format fid="fPDFA">11.32</format>
-        <format fid="fAIFF">51</format>
+    <centre id="ACDH-ARCHE">
+        <format fid="fALTO">11.32</format>
+        <format fid="fCHAT">51</format>
         
         <!-- more format info -->
     </centre>
-    <centre id='ASV'>
-        <format fid="fPDFA">32.53</format>
-        <format fid="fAIFF">51</format>
+    <centre id="ASV">
+        <format fid="fPhonDat1">32.53</format>
+        <format fid="fALTO">51</format>
         <!--  etc., etc.      -->
     </centre>
-    <centre id='BAS'>
+    <centre id="BAS">
+        <format fid="fPhonDat1">32</format>
+        <format fid="fFLAC">13.23</format>
+    </centre>
+    <centre id="BBAW">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='BBAW'>
+    <centre id="CEDIFOR">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='CEDIFOR'>
+    <centre id="CELR-EKK">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='CELR-EKK'>
+    <centre id="CLARIN-DK-UCPH">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='CLARIN-DK-UCPH'>
+    <centre id="CLARIN-IS">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='CLARIN-IS'>
+    <centre id="CLARIN-LT">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='CLARIN-LT'>
+    <centre id="CLARIN-PL1">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='CLARIN-PL1'>
+    <centre id="CLARINO Bergen">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='CLARINO Bergen'>
+    <centre id="CLARINSI">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='CLARINSI'>
+    <centre id="CLST">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='CLST'>
+    <centre id="CMU">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='CMU'>
+    <centre id="COCOON">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='COCOON'>
+    <centre id="DANS">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='DANS'>
+    <centre id="EKUT">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='EKUT'>
+    <centre id="ERCC">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='ERCC'>
+    <centre id="FIN-CLARIN">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='FIN-CLARIN'>
+    <centre id="HZSK">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='HZSK'>
+    <centre id="IDS">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='IDS'>
+    <centre id="ILC4CLARIN">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='ILC4CLARIN'>
+    <centre id="IMS">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='IMS'>
+    <centre id="IVDNT">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='IVDNT'>
+    <centre id="LAC">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='LAC'>
+    <centre id="LINDAT">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='LINDAT'>
+    <centre id="MI">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='MI'>
+    <centre id="MPI-PL">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='MPI-PL'>
+    <centre id="NB.NO">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='NB.NO'>
+    <centre id="ORTOLANG">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='ORTOLANG'>
+    <centre id="OTA">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='OTA'>
+    <centre id="PORTULAN-CLARIN">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='PORTULAN-CLARIN'>
+    <centre id="SADiLaR">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='SADiLaR'>
+    <centre id="Sprakbanken">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='Sprakbanken'>
+    <centre id="UdS">
         <recommendations>
         </recommendations>
     </centre>
-    <centre id='UdS'>
-        <recommendations>
-        </recommendations>
-    </centre>
-    <centre id='ZIM'>
+    <centre id="ZIM">
         <recommendations>
         </recommendations>
     </centre>
