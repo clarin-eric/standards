@@ -174,10 +174,10 @@ return
                              <button type="button" id="addref" class="button" onclick="addElement('vref','input','file',1)">Add</button>
                          </td>
                      </tr>
-                     <tr><td valign="top">Features:</td>
+                     <!--<tr><td valign="top">Features:</td>
                          <td><textarea disabled="true" name="vfeatures" class="inputText" style="width:450px; height:150px; resize: none; font-size:11px;"
                              placeholder="Describe features using tags as defined in the spec.xsd.">{$version-features}</textarea></td>
-                     </tr>                                      
+                     </tr>-->                                      
                      {asm:get-urls($param-names)}      
                      {asm:get-relations($param-names)}
                      <tr>

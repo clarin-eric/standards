@@ -420,7 +420,7 @@ declare function vsm:print-spec-assets($spec-id,$ref){
             then 
              <div id="editref" style="display:{$d}">
                  <form enctype="multipart/form-data" method="post" 
-                     action="{session:encode-url(xs:anyURI(concat("../edit/edit-process.xq?id=", $spec-id,"&amp;task=upload&amp;pid=",$spec-id )))}">
+                     action="{xs:anyURI(concat("../edit/edit-process.xq?id=", $spec-id,"&amp;task=upload&amp;pid=",$spec-id ))}">
                      <input id="ref{$spec-id}1" name="ref{$spec-id}1" type="file" class="inputFile" style="display:inline"/>
                      <button type="button" id="addref" class="button" style="margin-bottom:3px;" 
                           onclick="addElement('ref{$spec-id}','input','file',1)">Add</button>                      
@@ -433,6 +433,7 @@ declare function vsm:print-spec-assets($spec-id,$ref){
         )
         else()
 };
+
 
 (: Print the standard bibliography :)
 declare function vsm:print-spec-bibliography($bib){

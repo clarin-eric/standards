@@ -41,7 +41,7 @@ return
                 <div><span class="heading">Search for Standards</span></div>
      			<div>By default, given keyword(s) are matched to standard names. For an advanced search, you can specify the other optional fields.
      		    </div>
-     			<form method="get" action="{session:encode-url(xs:anyURI("search-spec.xq"))}" style="margin-bottom:40px;">
+     			<form method="get" action="{xs:anyURI("search-spec.xq")}" style="margin-bottom:40px;">
      				<table style="border:1px solid #AAAAAA; padding:20px;"> 
      				   <tr>
      				       <td width="120px"><b> Keywords: </b></td>

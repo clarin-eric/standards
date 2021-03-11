@@ -22,9 +22,17 @@ declare function login:validate-email($email as xs:string){
 
 (: Validate account :)
 declare function login:authorize($submit, $email, $password){
-    if($submit and $email and $password)
-    then login:validate-account($email, $password)
-    else fn:false()
+    let $isLoginValid := 
+        if($submit and $email and $password)
+        then login:validate-account($email, $password)
+        else fn:false()
+        
+    let $isSessionValid := 
+        if ($isLoginValid)
+        then login:create-session(user:get-user($email))
+        else fn:false()
+    
+    return if ($isSessionValid) then response:redirect-to(app:link("index.xq")) else()
 };
 
 (: Process login :)
@@ -33,8 +41,8 @@ declare function login:validate-account($email, $password){
     let $user := user:get-user($email)
     return
         if ($user/password/text() = $hashed-password)
-        then login:create-session($user)
-        else ()        
+        then fn:true() 
+        else fn:false() 
 };
 
 (: Create session :)
@@ -44,7 +52,8 @@ declare function login:create-session($user){
         if ($user/role = "webadmin")
         then session:set-attribute("user","webadmin")
         else session:set-attribute("user","user")
-    return response:redirect-to(app:link("index.xq"))
+    let $setCookie := response:set-cookie("sessionId",session:get-id()) 
+    return session:exists()
 };
 
 (: Logout process :)

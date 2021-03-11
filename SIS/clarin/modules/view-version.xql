@@ -365,7 +365,8 @@ declare function vvm:print-version-features($spec-id,$version,$version-id){
         if ($version-features or session:get-attribute("user") = 'webadmin')
         then (<div>
                 <span class="heading3">Features: </span>
-                {vsm:print-edit-button(concat("editfeatures",$version-id))}        
+                <!--{vsm:print-edit-button(concat("editfeatures",$version-id))}-->
+                
                           
                 <span id="features{$version-id}text"> {for $fs in $version/features/fs
                 return
@@ -575,7 +576,7 @@ declare function vvm:print-version-references($spec-id,$version,$version-id){
         then 
             <div id="editref{$version-id}" style="display:{$d}">
                 <form enctype="multipart/form-data" method="post" 
-                    action="{session:encode-url(xs:anyURI(concat("../edit/edit-process.xq?id=", $spec-id,"&amp;task=uploadversion&amp;pid=", $version-id)))}">
+                    action="{xs:anyURI(concat("../edit/edit-process.xq?id=", $spec-id,"&amp;task=uploadversion&amp;pid=", $version-id))}">
                     <input id="ref{$version-id}1" name="ref{$version-id}1" type="file" class="inputFile" style="display:inline"/>
                     <button type="button" id="addref" class="button" style="margin-bottom:3px;" 
                          onclick="addElement('ref{$version-id}','input','file',1)">Add</button>                      

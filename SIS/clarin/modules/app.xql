@@ -17,7 +17,7 @@ declare variable $app:base as xs:string := "http://localhost:8889/exist/apps/cla
 
 (: Wrap a link with the current session :)
 declare function app:link($path as xs:string) {
-    session:encode-url(fn:resolve-uri($path,$app:base))
+    fn:resolve-uri($path,$app:base)
 };
 
 (: Resolve a resource location :)
