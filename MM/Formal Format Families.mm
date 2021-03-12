@@ -3,7 +3,7 @@
 <node TEXT="Formal Format Families" FOLDED="false" ID="ID_1650002823" CREATED="1615151864441" MODIFIED="1615157062689" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle" zoom="0.75">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="true"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_notes_in_map="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -160,7 +160,7 @@
 <node TEXT="" ID="ID_1312800272" CREATED="1615156500715" MODIFIED="1615156500716">
 <hook NAME="SummaryNode"/>
 <hook NAME="AlwaysUnfoldedNode"/>
-<node TEXT="big question: are these not&#xa;mixed binary/XML? (So is TEI-TXM, etc.)&#xa;Should we have a separate MIXED category?" ID="ID_911071406" CREATED="1615156500717" MODIFIED="1615157267321" COLOR="#000000" BACKGROUND_COLOR="#ffff33"/>
+<node TEXT="big question: are these not&#xa;mixed binary/XML? (So is TEI-TXM, etc.)&#xa;Should we have a separate MIXED category?&#xa;(Or maybe just disregard the fact that they are compressed, treat that &apos;binarity&apos; as transparent)" ID="ID_911071406" CREATED="1615156500717" MODIFIED="1615470576981" COLOR="#000000" BACKGROUND_COLOR="#ffff33"/>
 </node>
 <node TEXT="XLS" ID="ID_1075151654" CREATED="1615156398097" MODIFIED="1615156406918"/>
 </node>
