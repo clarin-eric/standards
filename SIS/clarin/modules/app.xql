@@ -12,8 +12,7 @@ declare variable $app:securebase as xs:string := "http://standards.clarin.eu/sis
 :)
 
 (: Local Base URL :)
-declare variable $app:base as xs:string := "http://localhost:8889/exist/SIS/clarin/";
-declare variable $app:securebase as xs:string := "http://localhost:8444/exist/SIS/clarin/";
+declare variable $app:base as xs:string := "http://localhost:8889/exist/apps/clarin/";
 
 
 (: Wrap a link with the current session :)
