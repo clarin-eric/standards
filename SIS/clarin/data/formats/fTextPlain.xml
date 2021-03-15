@@ -1,0 +1,29 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTextPlain"
+  xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Plain text</title>
+    <abbr>plainText</abbr>
+  </titleStmt>
+  <keyword>text</keyword>
+<!-- what other keywords should we add here? -->
+  <info type="description">
+    <p>Plain text is a pure sequence of character codes. (...) Plain text represents character
+      content only, not its appearance. (...) Plain text must contain enough information to permit
+      the text to be rendered legibly, and nothing more. (Unicode 6.1, section 2.2)</p>
+    <p>See: <a href="https://www.unicode.org/versions/Unicode6.1.0/UnicodeStandard-6.1.pdf">Unicode 6.1</a>, <a href="https://en.wikipedia.org/wiki/Plain_text">Wikipedia article for a broader context</a>.</p>
+    <p>Parameters important to plain text are, among others, its encoding and the platform-dependent
+      end-of-line markup. Higher-level parameters include text directionality and further, e.g., the
+      natural language that sequences of characters are meant to represent.</p>
+    <p>Whitespace characters in plain text are often used to provide rough structural markup (e.g.
+      double whitespace after sentence-final punctuation; end-of-line and multiples thereof to
+      signal division into paragraphs). When treated as a data format, plain text uses whitespace to
+      signal division into columns -- this is how it is related to formats such as TSV and
+      column-based formats in general (with CSV, where tabs are replaced by commas, being a close relative).</p>
+  </info>
+  <relation target="SpecUnicode" type="isUsedBy"/>
+  <relation target="SpecUCS" type="isUsedBy"/>
+
+  <mimeType>text/plain</mimeType>
+  <fileExt>.txt</fileExt>
+  <formatFamily>Text</formatFamily>
+</format>
