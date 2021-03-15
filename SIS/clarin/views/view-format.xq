@@ -72,14 +72,18 @@ return
                                 {$format-abbr}</span>
                         </div>
                         
-                        {vfm:print-multiple-values($format/keyword, $id, "Keywords:")}
+                        {vfm:print-multiple-values($format/titleStmt/versionNumber, $id, "Versions:")}
+                        
                         {vfm:print-multiple-values($format/mimeType, $id, "MIME types:")}
                         {vfm:print-multiple-values($format/fileExt, $id, "File extensions:")}
                         {vfm:print-multiple-values($format/formatFamily, $id, "Format family:")}
                         {vfm:print-multiple-values($format/schemaLoc, $id, "Schema locations:", fn:true())}
                         
-                        {vfm:print-recommendation($format,$id)}
                         
+                        {vfm:print-recommendation($format,$id)}
+                        {vfm:print-recommendation-table($id)}
+                        
+                        {vfm:print-multiple-values($format/keyword, $id, "Keywords:")}
                         <!--The tag cloud of the standard related keywords -->
                         <div id="myCanvasContainer" style="border: 1px solid #DDDDDD; border-radius:3px; align:center">
                             <canvas width="650" height="250" id="myCanvas"/>
@@ -88,6 +92,8 @@ return
                             <a style="font-size:22px" onclick="return false">{$format-abbr}</a>
                             {vsm:print-keyword-links($format)}
                         </div>
+                        
+                        
                         
                         <div>
                             <span class="heading">Description: </span>

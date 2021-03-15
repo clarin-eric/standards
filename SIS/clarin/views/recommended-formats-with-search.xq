@@ -23,7 +23,7 @@ return
                 {menu:view()}
                 <div class="content">
                     <div class="navigation">
-                        &gt; <a href="{app:link("views/recommended-format-with-search.xq")}">Recommended Formats</a>
+                        &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Recommended Formats</a>
                     </div>
                     <div class="title">CLARIN Format Recommendations</div>
                     <div><p>some description ?</p></div>

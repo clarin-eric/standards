@@ -127,3 +127,25 @@ declare function rf:checkRequestedType($requestedType, $recommendationNumber, $i
         ()
 
 };
+
+declare function rf:getRecommendationForFormat($recommendations){
+    for $r in $recommendations
+        let $centre := data($r/parent::node()/@id)
+        for $values in fn:tokenize($r, "\.")
+            let $size := fn:string-length($values)
+            let $recommendationNumber := fn:substring($values, $size)
+            let $domainNumber := fn:substring($values, 1, $size - 1)
+            let $domain := $format:domains[@id = $domainNumber]/text()
+            
+            let $rType :=
+                if ($recommendationNumber = "1") then "recommended"
+                else if ($recommendationNumber = "2") then "acceptable"
+                    else if ($recommendationNumber = "3") then "deprecated"
+                        else ""
+        return
+            <tr>
+                <td class="recommendation-row">{$centre}</td>
+                <td class="recommendation-row">{$domain}</td>
+                <td class="recommendation-row">{$rType}</td>
+            </tr>
+};

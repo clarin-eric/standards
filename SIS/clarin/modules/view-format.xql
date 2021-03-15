@@ -5,6 +5,8 @@ module namespace vfm = "http://clarin.ids-mannheim.de/standards/view-format";
 import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
 import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 
+import module namespace rf="http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";
+
 declare function vfm:get-format($id as xs:string) {
     format:get-format($id)
 };
@@ -72,4 +74,24 @@ declare function vfm:print-recommendation($format,$format-id){
             }
            </div>
        else ()
+};
+
+declare function vfm:print-recommendation-table($id){
+    let $recommendations := format:get-recommendations($id)
+    return
+    if ($recommendations)
+    then(
+        <div>
+            <span class="heading">Recommendation: </span>
+        </div>,
+        <table cellspacing="4px" style="width:97%">
+            <tr>
+                <th class="header" style="width:25%;">Clarin Centers</th>
+                <th class="header" style="width:25%;">Domains</th>
+                <th class="header" style="width:25%;">Level</th>
+            </tr>                
+         {rf:getRecommendationForFormat($recommendations)}
+        </table>
+        )
+    else ()
 };
