@@ -12,7 +12,7 @@ import module namespace rm="http://clarin.ids-mannheim.de/standards/recommendati
     @date Dec 2013
 :)
 
-let $type := request:get-parameter('type', 'fr')
+let $type := request:get-parameter('type', 'recommended')
 return 
 <html>
 	<head>

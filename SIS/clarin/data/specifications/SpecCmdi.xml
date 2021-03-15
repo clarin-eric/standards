@@ -60,7 +60,7 @@
         </biblStruct>
     </info>
     <relation target="SpecSynAF-Part2-2014" type="isUsedBy"/>
-    <relation target="SpecSynAF-Part2-2014" type="isUsedBy"/>
+    <!--relation target="SpecSynAF-Part2-2014" type="isUsedBy"/-->
     <relation target="SpecDcr" type="uses">
         <info>
             <p>CMDI uses ISO-DCR for semantic interoperability</p>
