@@ -1,22 +1,18 @@
 <incomingRecommendations>
     <centre id="ACDH-ARCHE">
-        <format fid="fALTO">11.32</format>
-        <format fid="fCHAT">51</format>
-        
-        <!-- more format info -->
+        <format fid="fFLAC">51</format>
+        <format fid="fWave">51</format>
+        <format fid="fTextPlain">11.32</format>
     </centre>
     <centre id="ASV">
-        <format fid="fPhonDat1">32.53</format>
-        <format fid="fALTO">51</format>
         <!--  etc., etc.      -->
     </centre>
     <centre id="BAS">
-        <format fid="fPhonDat1">32</format>
-        <format fid="fFLAC">13.23</format>
+        <format fid="fPhonDat1">53</format>
+        <format fid="fFLAC">51</format>
     </centre>
     <centre id="BBAW">
-        <recommendations>
-        </recommendations>
+        <format fid="fTextPlain">11.32</format>
     </centre>
     <centre id="CEDIFOR">
         <recommendations>
@@ -27,12 +23,11 @@
         </recommendations>
     </centre>
     <centre id="CLARIN-DK-UCPH">
-        <recommendations>
-        </recommendations>
+        <format fid="fFLAC">51</format>
+        <format fid="fTextPlain">12.31</format>
     </centre>
     <centre id="CLARIN-IS">
-        <recommendations>
-        </recommendations>
+        
     </centre>
     <centre id="CLARIN-LT">
         <recommendations>
@@ -47,48 +42,53 @@
         </recommendations>
     </centre>
     <centre id="CLARINSI">
-        <recommendations>
-        </recommendations>
+        <format fid="fFLAC">51</format>
+        <format fid="fWave">51</format>
+        <format fid="fTextPlain">31</format>
     </centre>
     <centre id="CLST">
-        <recommendations>
-        </recommendations>
+        <format fid="fWave">51</format>
     </centre>
     <centre id="CMU">
-        <recommendations>
-        </recommendations>
+        <format fid="fCHAT">41</format>
+        <format fid="fCHAT-XML">41</format>
     </centre>
     <centre id="COCOON">
-        <recommendations>
-        </recommendations>
+        <format fid="fCHAT">41</format>
+        <format fid="fFLAC">51</format>
+        <format fid="fWave">51</format>
     </centre>
     <centre id="DANS">
-        <recommendations>
-        </recommendations>
+        <format fid="fFLAC">51</format>
     </centre>
     <centre id="EKUT">
-        <recommendations>
-        </recommendations>
+        <format fid="fWave">51</format>
+        <format fid="fTextPlain">31</format>
     </centre>
     <centre id="ERCC">
         <recommendations>
         </recommendations>
     </centre>
     <centre id="FIN-CLARIN">
-        <recommendations>
-        </recommendations>
+        <format fid="fWave">51</format>
+        <format fid="fTextPlain">31</format>
     </centre>
     <centre id="HZSK">
-        <recommendations>
-        </recommendations>
+        <format fid="fCHAT">43</format>
+        <format fid="fCHAT-XML">43</format>
+        <format fid="fWave">51</format>
     </centre>
     <centre id="IDS">
-        <recommendations>
-        </recommendations>
+        <format fid="fALTO">42</format>
+        <format fid="fCHAT">43</format>
+        <format fid="fCHAT-XML">43</format>
+        <format fid="fFLAC">52</format>
+        <format fid="fWave">51</format>
+        <format fid="fTextPlain">11.31.43</format>
     </centre>
     <centre id="ILC4CLARIN">
-        <recommendations>
-        </recommendations>
+        <format fid="fWave">51</format>
+        <format fid="fTextPlain">31</format>
     </centre>
     <centre id="IMS">
         <recommendations>
@@ -99,28 +99,31 @@
         </recommendations>
     </centre>
     <centre id="LAC">
-        <recommendations>
-        </recommendations>
+        <format fid="fWave">51</format>
+        <format fid="fTextPlain">31</format>
     </centre>
     <centre id="LINDAT">
         <recommendations>
         </recommendations>
     </centre>
     <centre id="MI">
-        <recommendations>
-        </recommendations>
+        <format fid="fFLAC">51</format>
+        <format fid="fWave">51</format>
     </centre>
     <centre id="MPI-PL">
-        <recommendations>
-        </recommendations>
+        <format fid="fCHAT">41</format>
+        <format fid="fWave">51</format>
+        <format fid="fTextPlain">31</format>
     </centre>
     <centre id="NB.NO">
         <recommendations>
         </recommendations>
     </centre>
     <centre id="ORTOLANG">
-        <recommendations>
-        </recommendations>
+        <format fid="fCHAT">41</format>
+        <format fid="fFLAC">51</format>
+        <format fid="fWave">51</format>
+        <format fid="fTextPlain">31</format>
     </centre>
     <centre id="OTA">
         <recommendations>
@@ -139,12 +142,12 @@
         </recommendations>
     </centre>
     <centre id="UdS">
-        <recommendations>
-        </recommendations>
+        <format fid="fWave">51</format>
+        <format fid="fTextPlain">31</format>
     </centre>
     <centre id="ZIM">
-        <recommendations>
-        </recommendations>
+        <format fid="fWave">51</format>
+        <format fid="fTextPlain">31</format>
     </centre>
     
     <!--<recommendation formatId="fPDF/A">
