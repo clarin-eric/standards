@@ -1,0 +1,20 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTextPlain"
+  xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>PDF for archival preservation</title>
+    <abbr>PDF/A</abbr>
+  </titleStmt>
+  <keyword>text</keyword>
+<!-- what other keywords should we add here? -->
+  <info type="description">
+    <p>PDF/A differs from PDF by prohibiting features unsuitable for long-term archiving, such as
+      font linking (as opposed to font embedding) and encryption.</p>
+    <p>We do not differentiate between the subtypes of this format for the purpose of centre-based
+      recommendations (no centre so far recommends e.g. PDF/A-3 while deprecating e.g. PDF/A-1).</p>
+  </info>
+  <relation target="SpecPDFA" type="isDefinedBy"/>
+  
+  <mimeType>application/pdf</mimeType>
+  <fileExt>.pdf</fileExt>
+  <formatFamily>PDF</formatFamily>
+</format>
