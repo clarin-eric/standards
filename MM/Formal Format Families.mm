@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Formal Format Families" FOLDED="false" ID="ID_1650002823" CREATED="1615151864441" MODIFIED="1615157062689" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle">
+<hook NAME="MapStyle" zoom="0.73">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_notes_in_map="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -150,6 +150,7 @@
 <node TEXT="WebAnno" ID="ID_1423109653" CREATED="1615156289532" MODIFIED="1615156292900"/>
 <node TEXT="Negra" ID="ID_1609006315" CREATED="1615157580794" MODIFIED="1615157583457"/>
 </node>
+<node TEXT="running" ID="ID_1510688553" CREATED="1616074362520" MODIFIED="1616074402307"/>
 </node>
 <node TEXT="binary" ID="ID_1504277918" CREATED="1615154834046" MODIFIED="1615154836635">
 <node TEXT="PDF" ID="ID_1001818194" CREATED="1615156316018" MODIFIED="1615156320275">
