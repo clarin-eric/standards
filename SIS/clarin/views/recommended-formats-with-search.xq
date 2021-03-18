@@ -26,7 +26,10 @@ return
                         &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Recommended Formats</a>
                     </div>
                     <div class="title">CLARIN Format Recommendations</div>
-                    <div><p>some description ?</p></div>
+                    <div><p>This page presents formats of data depositions that various CLARIN centres are ready to accept. Each format, 
+                    for each centre, can be recommended, acceptable or deprecated in the context of several domains that represent the 
+                    functions that the deposited data can play.</p>
+                    <p>Use the dropboxes to select the particular domain and/or level of recommendation. The functionality to sort by columns is forthcoming.</p></div>
                     <div style="margin-top:30px; margin-bottom:20px;">
                         <form id="searchRecommendation" method="post" action="">
                         <table>
