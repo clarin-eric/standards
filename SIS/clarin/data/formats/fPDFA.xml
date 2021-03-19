@@ -4,8 +4,8 @@
     <title>PDF for archival preservation</title>
     <abbr>PDF/A</abbr>
   </titleStmt>
-  <keyword>text</keyword>
-<!-- what other keywords should we add here? -->
+  <keyword>document format</keyword>
+  <keyword>binarized TextualData</keyword>
   <info type="description">
     <p>PDF/A differs from PDF by prohibiting features unsuitable for long-term archiving, such as
       font linking (as opposed to font embedding) and encryption.</p>
