@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Formal Format Families" FOLDED="false" ID="ID_1650002823" CREATED="1615151864441" MODIFIED="1615157062689" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="0.73">
+<hook NAME="MapStyle">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_notes_in_map="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -152,7 +152,7 @@
 </node>
 <node TEXT="running" ID="ID_1510688553" CREATED="1616074362520" MODIFIED="1616074402307"/>
 </node>
-<node TEXT="binary" ID="ID_1504277918" CREATED="1615154834046" MODIFIED="1615154836635">
+<node TEXT="binarized" ID="ID_1504277918" CREATED="1615154834046" MODIFIED="1616101971581">
 <node TEXT="PDF" ID="ID_1001818194" CREATED="1615156316018" MODIFIED="1615156320275">
 <node TEXT="PDF/A" ID="ID_1321628084" CREATED="1615156343014" MODIFIED="1616072096116">
 <cloud COLOR="#f0f0f0" SHAPE="ARC"/>
@@ -160,6 +160,19 @@
 <node TEXT="PDF/A-2" ID="ID_135429946" CREATED="1616072048156" MODIFIED="1616072051150"/>
 <node TEXT="PDF/A-3" ID="ID_856766904" CREATED="1616072051898" MODIFIED="1616072056362"/>
 <node TEXT="PDF/A-4" ID="ID_290933417" CREATED="1616072056986" MODIFIED="1616072059840"/>
+</node>
+<node TEXT="" ID="ID_478758797" CREATED="1616116257390" MODIFIED="1616116257390">
+<hook NAME="FirstGroupNode"/>
+</node>
+<node TEXT="PDF/X" ID="ID_1441065009" CREATED="1616116159877" MODIFIED="1616116164216"/>
+<node TEXT="PDF/VT" ID="ID_1424950437" CREATED="1616116165032" MODIFIED="1616116170420"/>
+<node TEXT="PDF/E" ID="ID_1196779116" CREATED="1616116185491" MODIFIED="1616116189391"/>
+<node TEXT="PDF/UA" ID="ID_1495168133" CREATED="1616116190103" MODIFIED="1616116194570"/>
+<node TEXT="PDF/raster" ID="ID_55594129" CREATED="1616116195209" MODIFIED="1616116222579"/>
+<node TEXT="" ID="ID_944805460" CREATED="1616116257374" MODIFIED="1616116257390">
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="I am not implying that all these have to be represented in the SIS, but rather want to examine this entire use case to see out of what options we can choose" ID="ID_67689249" CREATED="1616116257391" MODIFIED="1616116352334"/>
 </node>
 </node>
 <node TEXT="DOC" ID="ID_121419609" CREATED="1615156354116" MODIFIED="1615156362224"/>
