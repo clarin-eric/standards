@@ -1,0 +1,34 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTextPlain"
+  xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Portable Document Format</title>
+    <abbr>PDF</abbr>
+  </titleStmt>
+  <keyword>document format</keyword>
+  <keyword>binarized TextualData</keyword>
+  <info type="description">
+    <p>For the purpose of CLARIN format recommendations, we treat PDF as a format category that is
+      divided along two lines: the development line from 1.0 through 1.7 and 2.0 (the latter two
+      defined by ISO standards). We attempt to treat all these and future versions as "PDF", on the
+      understanding that centres expect relatively recent versions.</p>
+    <p>Another line of division concerns the published subsets of PDF, namely: (after 
+      <a href="https://en.wikipedia.org/w/index.php?title=History_of_PDF&amp;oldid=1008410576">Wikipedia</a>)</p>
+    <ul>
+      <li>PDF/X ("PDF for Exchange"</li>
+      <li>PDF/A ("PDF for Archive")</li>
+      <li>PDF/E ("PDF for Engineering")</li>
+      <li>PDF/VT ("PDF for exchange of variable data and transactional (VT) printing")</li>
+      <li>PDF/UA ("PDF for Universal Accessibility")</li>
+      <li>PDF/raster 1.0 (for storing, transporting and exchanging multi-page raster-image
+        documents, especially scanned documents)</li>
+    </ul>
+    <p>Out of these, PDF/A (which itself is another format category) is of special interest to
+      CLARIN, because of its suitability for long-term archiving, such as font linking (as opposed
+      to font embedding) and encryption.</p>
+  </info>
+  <relation target="SpecPDF" type="isDefinedBy"/>
+  <relation target="SpecPDF" type="isRelatedTo"/> 
+  <mimeType>application/pdf</mimeType>
+  <fileExt>.pdf</fileExt>
+  <formatFamily>binarized</formatFamily>
+</format>
