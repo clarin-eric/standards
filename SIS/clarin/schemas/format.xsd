@@ -498,5 +498,5 @@
             </xs:simpleContent>
         </xs:complexType>
     </xs:element>
-    <xs:element name="formatFamily" type="xs:NMTOKEN"/>
+    <xs:element name="formatFamily" type="xs:token"/>
 </xs:schema>
