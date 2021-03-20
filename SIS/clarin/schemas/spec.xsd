@@ -277,7 +277,7 @@
     </xs:element>
     <xs:element name="date">
         <xs:simpleType>
-            <xs:union memberTypes="xs:date xs:gYear"/>
+            <xs:union memberTypes="xs:date xs:gYear xs:gYearMonth"/>
         </xs:simpleType>
     </xs:element>
     <xs:element name="address">
