@@ -31,6 +31,7 @@
             <li>Part 1: Use of PDF 1.4 (PDF/A-1)</li>
             <li>Part 2: Use of ISO 32000-1 (PDF/A-2)</li>
             <li>Part 3: Use of ISO 32000-1 with support for embedded files (PDF/A-3)</li>
+            <li>Part 4: Use of ISO 32000-2 (PDF/A-4)</li>
         </ul>
     </info>
     <info type="recReading">
@@ -46,6 +47,7 @@
         </biblStruct>
     </info>
     <relation target="SpecPDF" type="isReferencedBy"/>
+    
     <part id="SpecPDFA-1">
         <titleStmt>
             <title>Document management — Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4</title>
@@ -73,11 +75,11 @@
     <part id="SpecPDFA-2">
         <titleStmt>
             <title>Document management — Electronic document file format for long-term preservation — Part 2: Use of ISO 32000-1</title>
-            <abbr internal="yes">PDF/A-2</abbr>
+            <abbr>PDF/A-2</abbr>
         </titleStmt>
         <version id="SpecPDFA-2-2011" status="International Standard">
             <titleStmt>
-                <abbr>PDF/A-2 2011</abbr>
+                <abbr internal="yes">PDF/A-2 2011</abbr>
                 <respStmt>
                     <resp>Editor</resp>
                     <name id="SBISO" type="org">ISO/TC 171/SC 2</name>
@@ -108,7 +110,7 @@
         <titleStmt>
             <title>Document management — Electronic document file format for long-term preservation — Part 3: 
                 Use of ISO 32000-1 with support for embedded files</title>
-            <abbr internal="yes">PDF/A-3</abbr>
+            <abbr>PDF/A-3</abbr>
         </titleStmt>
         <version id="SpecPDFA-3-2012" status="International Standard">
             <titleStmt>
@@ -130,4 +132,47 @@
             <address type="URL">http://www.iso.org/iso/home.html</address>
         </version>
     </part>
+    <part id="SpecPDFA-4">
+        <titleStmt>
+            <title>Document management — Electronic document file format for long-term preservation — Part 4: Use of ISO 32000-2 (PDF/A-4)</title>
+            <abbr>PDF/A-4</abbr>
+            <respStmt>
+                <resp>Editor</resp>
+                <name id="SBISO" type="org">ISO/TC 171/SC 2</name>
+            </respStmt>
+        </titleStmt>
+        
+        <version id="SpecPDFA-4-2020" status="International Standard">
+            <titleStmt>
+                <abbr internal="yes">PDF/A-4 2020</abbr>
+                <respStmt>
+                    <resp>Editor</resp>
+                    <name id="SBISO" type="org">ISO/TC 171/SC 2</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major">ISO 19005-3:2012</versionNumber>
+            <date>2020-11</date>
+            <info type="description">
+                <p>This document specifies the use of the Portable Document Format (PDF) 2.0, as
+                    formalized in ISO 32000-2:—, for preserving the static visual representation of
+                    page based electronic documents over time in addition to allowing any type of
+                    other content to be included as an embedded file or attachment.</p>
+                
+                <p>This document does not apply to:</p>
+                
+                <ul>
+                    <li>specific processes for converting paper or electronic documents to the PDF/A
+                        format;</li>
+                    <li>specific technical design, user interface, implementation, or operational
+                        details of rendering;</li>
+                    <li>specific physical methods of storing these documents such as media and
+                        storage conditions;</li>
+                    <li>required computer hardware and/or operating systems.</li>
+                </ul>
+                <p>(<a href="https://www.iso.org/standard/71832.html">Abstract, ISO 19005-4:2020</a>)</p>
+            </info>
+            <address type="URL">http://www.iso.org/iso/home.html</address>
+        </version>
+    </part>
+    
 </spec>
