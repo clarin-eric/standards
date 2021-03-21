@@ -54,11 +54,20 @@
                 <author type="organisation"><name>PDF Association</name></author>
                 <ref type="url">https://www.pdfa.org/resource/iso-32000-2-pdf-2-0/</ref>
                 <imprint>
-                    <date>2009</date>
+                    <date>2020</date>
                 </imprint>
             </monogr>
         </biblStruct>
-        
+        <biblStruct id="rem3d4" type="onlineSource">
+            <monogr>
+                <title>The new PDF 2.0 and subset standards</title>
+                <author type="organisation"><name>PDF Association</name></author>
+                <ref type="url">https://www.pdfa.org/the-new-pdf-2-0-and-subset-standards/</ref>
+                <imprint>
+                    <date>2020</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
     </info>
     <relation target="SpecPDFA" type="isReferencedBy"/>
     <part id="SpecPDF-1">
@@ -95,7 +104,7 @@
                         storage conditions;</li>
                     <li>methods for validating the conformance of PDF files or readers;</li>
                     <li>required computer hardware and/or operating system."
-                            <p>(<a href="http://www.iso.org">Abstract, ISO 32000-1:2008</a>)</p></li>
+                        <p>(<a href="https://www.iso.org/standard/51502.html">Abstract, ISO 32000-1:2008</a>)</p></li>
                 </ul>
             </info>
             <address type="URL">http://www.iso.org/iso/home.html</address>
