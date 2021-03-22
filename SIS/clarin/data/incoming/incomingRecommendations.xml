@@ -3,6 +3,10 @@
         <format fid="fFLAC">51</format>
         <format fid="fWave">51</format>
         <format fid="fTextPlain">11.32</format>
+        <format fid="fPDFA-1">11</format>
+        <format fid="fPDFA-2">11</format>
+        <format fid="fPDFA-3">12</format>
+        <format fid="fPDF">12</format>
     </centre>
     <centre id="ASV">
         <!--  etc., etc.      -->
@@ -45,6 +49,7 @@
         <format fid="fFLAC">51</format>
         <format fid="fWave">51</format>
         <format fid="fTextPlain">31</format>
+        <format fid="fPDF">11.33.43.61</format>
     </centre>
     <centre id="CLST">
         <format fid="fWave">51</format>
@@ -60,10 +65,13 @@
     </centre>
     <centre id="DANS">
         <format fid="fFLAC">51</format>
+        <format fid="fPDFA">31.62</format>
+        <format fid="fPDF">32</format>
     </centre>
     <centre id="EKUT">
         <format fid="fWave">51</format>
         <format fid="fTextPlain">31</format>
+        <format fid="fPDFA">31.61</format>
     </centre>
     <centre id="ERCC">
         <recommendations>
@@ -72,6 +80,7 @@
     <centre id="FIN-CLARIN">
         <format fid="fWave">51</format>
         <format fid="fTextPlain">31</format>
+        <format fid="fPDFA">32</format>
     </centre>
     <centre id="HZSK">
         <format fid="fCHAT">43</format>
@@ -85,10 +94,12 @@
         <format fid="fFLAC">52</format>
         <format fid="fWave">51</format>
         <format fid="fTextPlain">11.31.43</format>
+        <format fid="fPDFA">11.61</format>
     </centre>
     <centre id="ILC4CLARIN">
         <format fid="fWave">51</format>
         <format fid="fTextPlain">31</format>
+        <format fid="fPDF">12.32</format>
     </centre>
     <centre id="IMS">
         <recommendations>
@@ -101,6 +112,7 @@
     <centre id="LAC">
         <format fid="fWave">51</format>
         <format fid="fTextPlain">31</format>
+        <format fid="fPDFA">32</format>
     </centre>
     <centre id="LINDAT">
         <recommendations>
@@ -109,11 +121,14 @@
     <centre id="MI">
         <format fid="fFLAC">51</format>
         <format fid="fWave">51</format>
+        <format fid="fPDF">32.92</format>
+        <format fid="fPDFA">31.61</format>
     </centre>
     <centre id="MPI-PL">
         <format fid="fCHAT">41</format>
         <format fid="fWave">51</format>
         <format fid="fTextPlain">31</format>
+        <format fid="fPDF">31</format>
     </centre>
     <centre id="NB.NO">
         <recommendations>
@@ -124,6 +139,9 @@
         <format fid="fFLAC">51</format>
         <format fid="fWave">51</format>
         <format fid="fTextPlain">31</format>
+        <format fid="fPDF">12.32</format>  <!--domains are a guess-->
+        <format fid="fPDFA-2">12.32</format>
+        <format fid="fPDFA-3">12.32</format>
     </centre>
     <centre id="OTA">
         <recommendations>
@@ -144,6 +162,7 @@
     <centre id="UdS">
         <format fid="fWave">51</format>
         <format fid="fTextPlain">31</format>
+        <format fid="fPDF">12.32</format>
     </centre>
     <centre id="ZIM">
         <format fid="fWave">51</format>
