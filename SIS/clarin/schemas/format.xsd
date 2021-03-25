@@ -178,15 +178,17 @@
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="Replaces"/>
-                        <xs:enumeration value="uses"/>
-                        <xs:enumeration value="isUsedBy"/>
+
+<!--                        <xs:enumeration value="uses"/>
                         <xs:enumeration value="isBasedOn"/>
                         <xs:enumeration value="isExtendedTo"/>
                         <xs:enumeration value="isExtendedFrom"/>
                         <xs:enumeration value="isAdaptedTo"/>
                         <xs:enumeration value="isAdaptedFrom"/>
-                        <xs:enumeration value="isSimilarTo"/>
+                        <xs:enumeration value="isSimilarTo"/>-->
+                        <xs:enumeration value="isUsedBy"/>
                         <xs:enumeration value="isDefinedBy"/>
+                        <xs:enumeration value="isRelatedTo"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
@@ -496,5 +498,5 @@
             </xs:simpleContent>
         </xs:complexType>
     </xs:element>
-    <xs:element name="formatFamily" type="xs:NMTOKEN"/>
+    <xs:element name="formatFamily" type="xs:token"/>
 </xs:schema>

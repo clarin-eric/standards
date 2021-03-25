@@ -10,6 +10,7 @@ import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommende
 
 let $domain := request:get-parameter('domain', '')
 let $recommendationType := request:get-parameter('type', '')
+let $sortBy := request:get-parameter('sortBy', '')
 return
     
     <html>
@@ -26,41 +27,63 @@ return
                         &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Recommended Formats</a>
                     </div>
                     <div class="title">CLARIN Format Recommendations</div>
-                    <div><p>some description ?</p></div>
+                    <div><p>This page presents formats of data depositions that various CLARIN centres are ready to accept. Each format,
+                            for each centre, can be recommended, acceptable or deprecated in the context of several domains that represent the
+                            functions that the deposited data can play.</p>
+                        <p>Use the dropboxes to select the particular domain and/or level of recommendation. The functionality to sort by columns is forthcoming.</p></div>
                     <div style="margin-top:30px; margin-bottom:20px;">
-                        <form id="searchRecommendation" method="post" action="">
-                        <table>
-                            <tr>
-                                <td>
-                                    <select name="domain" class="inputSelect" style="width:200px;">
-                                        <option value="" selected="selected">Select domain ...</option>
-                                        {rf:print-domains()}
-                                    </select>
-                                </td>
-                                <td>
-                                    <select name="type" class="inputSelect" style="width:200px;">
-                                        <option value="" selected="selected">Select recommendation ...</option>
-                                        <option value="1">recommended</option>
-                                        <option value="2">acceptable</option>
-                                        <option value="3">deprecated</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <input name="searchButton" class="button" style="margin-bottom:5px;height:25px;" type="submit" value="Search"/>
-                                </td>
-                            </tr>
-                        </table>
+                        <form id="searchRecommendation" method="post" action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <select name="domain" class="inputSelect" style="width:200px;">
+                                            <option value="" selected="selected">Select domain ...</option>
+                                            {rf:print-domains()}
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="type" class="inputSelect" style="width:200px;">
+                                            <option value="" selected="selected">Select recommendation ...</option>
+                                            <option value="1">recommended</option>
+                                            <option value="2">acceptable</option>
+                                            <option value="3">deprecated</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input name="searchButton" class="button" style="margin-bottom:5px;height:25px;" type="submit" value="Search"/>
+                                    </td>
+                                </tr>
+                            </table>
                         </form>
                     </div>
                     
-                    <table cellspacing="4px" style="width:97%">
+                    <table id="recommendationTable" cellspacing="4px" style="width:97%">
                         <tr>
-                            <th class="header" style="width:25%;">Abbreviation</th>
-                            <th class="header" style="width:25%;">Clarin Centers</th>
-                            <th class="header" style="width:25%;">Domain</th>
-                            <th class="header" style="width:25%;">Recommendation</th>
+                            <th class="header" style="width:25%;">
+                                <a href="{
+                                            app:link(concat("views/recommended-formats-with-search.xq?sortBy=abbr&amp;domain=",
+                                            $domain, "&amp;type=", $recommendationType, "#searchRecommendation"))
+                                        }">Abbreviation</a>
+                            </th>
+                            <th class="header" style="width:25%;">
+                                <a href="{
+                                            app:link(concat("views/recommended-formats-with-search.xq?sortBy=centre&amp;domain=",
+                                            $domain, "&amp;type=", $recommendationType, "#searchRecommendation"))
+                                        }">Clarin Centres</a>
+                            </th>
+                            <th class="header" style="width:25%;">
+                                <a href="{
+                                            app:link(concat("views/recommended-formats-with-search.xq?sortBy=domain&amp;domain=",
+                                            $domain, "&amp;type=", $recommendationType, "#searchRecommendation"))
+                                        }">Domain</a></th>
+                            <th class="header" style="width:25%;">
+                                <a href="{
+                                            app:link(concat("views/recommended-formats-with-search.xq?sortBy=recommendation&amp;domain=",
+                                            $domain, "&amp;type=", $recommendationType, "#searchRecommendation"))
+                                        }">
+                                    Recommendation</a></th>
                         </tr>
-                        {rf:print-recommendation($domain, $recommendationType)}
+                        {rf:print-recommendation($domain, $recommendationType, $sortBy)}
                     </table>
                 </div>
                 <div class="footer">{app:footer()}</div>

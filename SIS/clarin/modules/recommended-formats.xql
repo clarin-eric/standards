@@ -59,7 +59,7 @@ declare function rf:print-domains($path) {
             ($link)
 };
 
-declare function rf:print-recommendation($requestedDomain, $requestedType) {
+declare function rf:print-recommendation($requestedDomain, $requestedType, $sortBy) {
     let $ids := format:get-all-ids()
     
     for $id in $ids
@@ -78,6 +78,12 @@ declare function rf:print-recommendation($requestedDomain, $requestedType) {
                     else if ($recommendationNumber = "2") then "acceptable"
                         else if ($recommendationNumber = "3") then "deprecated"
                             else ""
+                order by
+                    if ($sortBy = 'centre') then $centre
+                    else if ($sortBy = 'domain') then $domain
+                    else if ($sortBy = 'recommendation') then $recommendationNumber
+                    else ($format-abbr) (:abbr:)
+                            
                 return
                     if ($requestedDomain)
                     then

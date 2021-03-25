@@ -1,19 +1,148 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecPDF" standardSettingBody="SBISO" topic="TopicFileFormats" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd"><titleStmt><title>Portable Document Format</title><abbr>PDF</abbr></titleStmt><scope>Document file format for long-term preservation</scope><ClarinRecommendation><recommendation specId="SpecPDF" type="acceptable"><alternatives><alternative specId="SpecPDFA"/></alternatives></recommendation></ClarinRecommendation><keyword>Data representation</keyword><keyword>data layout</keyword><keyword>PDF/A</keyword><keyword>file format</keyword><info type="description"><p>Portable Document Format (PDF) is a file format developed by Adobe Systems
-            for representing documents. It has evolved steadily since 1993. The aim was to create a
-            file format for electronic documents, that is system- and platform-independent and can
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecPDF" standardSettingBody="SBISO"
+    topic="TopicFileFormats" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+    <titleStmt>
+        <title>Portable Document Format</title>
+        <abbr>PDF</abbr>
+    </titleStmt>
+    <scope>Document file format for long-term preservation</scope>
+    <ClarinRecommendation>
+        <recommendation specId="SpecPDF" type="acceptable">
+            <alternatives>
+                <alternative specId="SpecPDFA"/>
+            </alternatives>
+        </recommendation>
+    </ClarinRecommendation>
+    <keyword>data representation</keyword>
+    <keyword>data layout</keyword>
+    <keyword>file format</keyword>
+    <info type="description">
+        <p>Portable Document Format (PDF) is a file format developed by Adobe Systems for
+            representing documents. It has evolved steadily since 1993. The aim was to create a file
+            format for electronic documents, that is system- and platform-independent and can
             contain information such as text, graphics, and multimedia elements like sound,
             animations, and movies. At the same time, PDF files remain compact and have the much
-            reduced file sizes as other file formats such PostScript and TIFF. </p><p>PDF is an open standard, that is widely used as a format for creating electronic
-            documents, as well as for exchanging and archiving data. It has been certified
-            by ISO as an official ISO standard.</p></info><info type="recReading"><biblStruct id="rem3d2" type="onlineSource"><monogr><title>Adobe® Supplement to ISO 32000-1. BaseVersion: 1.7. ExtensionLevel: 5</title><author type="organisation"><name>Adobe Systems Incorporated</name></author><ref type="url">http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/adobe_supplement_iso32000_1.pdf</ref><imprint><date>2009</date></imprint></monogr></biblStruct></info><relation target="SpecPDFA" type="isReferencedBy"/><part id="SpecPDF-1"><titleStmt><title>Document management — Portable document format — Part 1: PDF 1.7</title><abbr>PDF 1.7</abbr></titleStmt><version id="SpecPDF-1-2008" status="International Standard"><titleStmt><abbr internal="yes">PDF 1.7 2008</abbr><respStmt><resp>Editor</resp><name id="SBISO" type="org">ISO/TC 171/SC 2</name></respStmt></titleStmt><versionNumber type="major">ISO 32000-1:2008</versionNumber><date>2013-04-29</date><info type="description"><p>"ISO 32000-1:2008 specifies a digital form for representing electronic documents
+            reduced file sizes as other file formats such PostScript and TIFF. </p>
+        <p>PDF is an open standard, that is widely used as a format for creating electronic
+            documents, as well as for exchanging and archiving data. Since version 1.7, it has been certified by ISO as
+            an official ISO standard.</p>
+        <p>It is relevant to mention that PDF has a number of subsets:</p>
+        <ul>
+            <li>PDF/X ("PDF for Exchange"</li>
+            <li>PDF/A ("PDF for Archive")</li>
+            <li>PDF/E ("PDF for Engineering")</li>
+            <li>PDF/VT ("PDF for exchange of variable data and transactional (VT) printing")</li>
+            <li>PDF/UA ("PDF for Universal Accessibility")</li>
+            <li>PDF/raster 1.0 (for storing, transporting and exchanging multi-page raster-image
+                documents, especially scanned documents)</li>
+        </ul>
+        <p>In the context of CLARIN's language data preservation efforts, centres and users are advised to prioritize PDF/A over PDF.</p>
+    </info>
+    <info type="recReading">
+        <biblStruct id="rem3d2" type="onlineSource">
+            <monogr>
+                <title>Adobe® Supplement to ISO 32000-1. BaseVersion: 1.7. ExtensionLevel: 5</title>
+                <author type="organisation"><name>Adobe Systems Incorporated</name></author>
+                <ref type="url">http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/adobe_supplement_iso32000_1.pdf</ref>
+                <imprint>
+                    <date>2009</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct id="rem3d3" type="onlineSource">
+            <monogr>
+                <title>ISO 32000-2:2020 (PDF 2.0)</title>
+                <author type="organisation"><name>PDF Association</name></author>
+                <ref type="url">https://www.pdfa.org/resource/iso-32000-2-pdf-2-0/</ref>
+                <imprint>
+                    <date>2020</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct id="rem3d4" type="onlineSource">
+            <monogr>
+                <title>The new PDF 2.0 and subset standards</title>
+                <author type="organisation"><name>PDF Association</name></author>
+                <ref type="url">https://www.pdfa.org/the-new-pdf-2-0-and-subset-standards/</ref>
+                <imprint>
+                    <date>2020</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+    </info>
+    <relation target="SpecPDFA" type="isReferencedBy"/>
+    <part id="SpecPDF-1">
+        <titleStmt>
+            <title>Document management — Portable document format — Part 1: PDF 1.7</title>
+            <abbr>PDF 1.7</abbr>
+        </titleStmt>
+        <version id="SpecPDF-1-2008" status="International Standard">
+            <titleStmt>
+                <abbr internal="yes">PDF 1.7 2008</abbr>
+                <respStmt>
+                    <resp>Editor</resp>
+                    <name id="SBISO" type="org">ISO/TC 171/SC 2</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major">ISO 32000-1:2008</versionNumber>
+            <date>2013-04-29</date>
+            <info type="description">
+                <p>"ISO 32000-1:2008 specifies a digital form for representing electronic documents
                     to enable users to exchange and view electronic documents independent of the
                     environment in which they were created or the environment in which they are
                     viewed or printed. It is intended for the developer of software that creates PDF
                     files (conforming writers), software that reads existing PDF files and
                     interprets their contents for display and interaction (conforming readers) and
                     PDF products that read and/or write PDF files for a variety of other purposes
-                    (conforming products).</p><p> ISO 32000-1:2008 does not specify the following:</p><ul><li>specific processes for converting paper or electronic documents to the PDF
-                        format;</li><li>specific technical design, user interface or implementation or operational
-                        details of rendering;</li><li>specific physical methods of storing these documents such as media and
-                        storage conditions;</li><li>methods for validating the conformance of PDF files or readers;</li><li>required computer hardware and/or operating system."
-                            <p>(<a href="http://www.iso.org">Abstract, ISO 32000-1:2008</a>)</p></li></ul></info><address type="URL">http://www.iso.org/iso/home.html</address></version></part><part id="SpecPDF-2"><titleStmt><title>Document management — Portable document format — Part 2: PDF 2.0</title><abbr>PDF 2.0</abbr></titleStmt><version id="SpecPDF-2-DIS" status="Draft International Standard"><titleStmt><abbr internal="yes">PDF 2.0 (DIS)</abbr><respStmt><resp>Editor</resp><name id="SBISO" type="org">ISO/TC 171/SC 2</name></respStmt></titleStmt><versionNumber type="major">ISO/DIS 32000-2</versionNumber><date>2014-10-21</date><info type="description"><p/></info><address type="URL">http://www.iso.org/iso/home.html</address></version></part></spec>
+                    (conforming products).</p>
+                <p> ISO 32000-1:2008 does not specify the following:</p>
+                <ul>
+                    <li>specific processes for converting paper or electronic documents to the PDF
+                        format;</li>
+                    <li>specific technical design, user interface or implementation or operational
+                        details of rendering;</li>
+                    <li>specific physical methods of storing these documents such as media and
+                        storage conditions;</li>
+                    <li>methods for validating the conformance of PDF files or readers;</li>
+                    <li>required computer hardware and/or operating system."
+                        <p>(<a href="https://www.iso.org/standard/51502.html">Abstract, ISO 32000-1:2008</a>)</p></li>
+                </ul>
+            </info>
+            <address type="URL">http://www.iso.org/iso/home.html</address>
+        </version>
+    </part>
+    <part id="SpecPDF-2">
+        <titleStmt>
+            <title>Document management — Portable document format — Part 2: PDF 2.0</title>
+            <abbr>PDF 2.0</abbr>
+        </titleStmt>
+        <version id="SpecPDF-2-2020" status="International Standard">
+            <titleStmt>
+                <abbr internal="yes">PDF 2.0-2020</abbr>
+                <respStmt>
+                    <resp>Editor</resp>
+                    <name id="SBISO" type="org">ISO/TC 171/SC 2</name>
+                </respStmt>
+            </titleStmt>
+            <versionNumber type="major">ISO 32000-2:2020</versionNumber>
+            <date>2014-10-21</date>
+            <info type="description">
+                <p>This document specifies a digital form for representing electronic documents to enable users to exchange and view electronic documents independent of the environment in which they were created or the environment in which they are viewed or printed. It is intended for developers of software that creates PDF files (PDF writers), software that reads existing PDF files and (usually) interprets their contents for display (PDF readers), software that reads and displays PDF content and interacts with the computer users to possibly modify and save the PDF file (interactive PDF processors) and PDF products that read and/or write PDF files for a variety of other purposes (PDF processors). (PDF writers and PDF readers are more specialised classifications of interactive PDF processors and all are PDF processors).</p>
+                    
+                    <p>This document does not specify the following:</p>
+                    
+                <ul>
+                    <li>specific processes for converting paper or electronic documents to the PDF
+                        file format;</li>
+                    <li>specific technical design, user interface implementation, or operational
+                        details of rendering;</li>
+                    <li>specific physical methods of storing these documents such as media and
+                        storage conditions;</li>
+                    <li>methods for validating the conformance of PDF files or PDF processors;</li>
+                    <li>required computer hardware and/or operating system.</li>
+                </ul>
+                <p>(<a href="https://www.iso.org/standard/75839.html">Abstract, ISO 32000-2:2020</a>)</p>
+            </info>
+            <address type="URL">http://www.iso.org/iso/home.html</address>
+        </version>
+    </part>
+</spec>
