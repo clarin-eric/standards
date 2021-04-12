@@ -8,6 +8,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommendation" at "../modules/recommendation.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 
+let $center := request:get-parameter('center', '')
 let $domain := request:get-parameter('domain', '')
 let $recommendationType := request:get-parameter('type', '')
 let $sortBy := request:get-parameter('sortBy', '')
@@ -35,6 +36,12 @@ return
                         <form id="searchRecommendation" method="post" action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
                             <table>
                                 <tr>
+                                    <td>
+                                        <select name="center" class="inputSelect" style="width:200px;">
+                                            <option value="" selected="selected">Select centre ...</option>
+                                            {rf:print-centers()}
+                                        </select>
+                                    </td>
                                     <td>
                                         <select name="domain" class="inputSelect" style="width:200px;">
                                             <option value="" selected="selected">Select domain ...</option>
@@ -83,7 +90,7 @@ return
                                         }">
                                     Recommendation</a></th>
                         </tr>
-                        {rf:print-recommendation($domain, $recommendationType, $sortBy)}
+                        {rf:print-recommendation($center,$domain, $recommendationType, $sortBy)}
                     </table>
                 </div>
                 <div class="footer">{app:footer()}</div>
