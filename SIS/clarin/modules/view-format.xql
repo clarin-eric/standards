@@ -76,21 +76,35 @@ declare function vfm:print-recommendation($format,$format-id){
        else ()
 };
 
-declare function vfm:print-recommendation-table($id){
+declare function vfm:print-recommendation-table($id,$domain,$center,$recommendationType,$sortBy){
     let $recommendations := format:get-recommendations($id)
     return
     if ($recommendations)
     then(
         <div>
-            <span class="heading">Recommendation: </span>
+            <span class="heading" id="recommendationTable">Recommendation: </span>
         </div>,
         <table cellspacing="4px" style="width:97%">
             <tr>
-                <th class="header" style="width:25%;">Clarin Centers</th>
-                <th class="header" style="width:25%;">Domains</th>
-                <th class="header" style="width:25%;">Level</th>
-            </tr>                
-         {rf:getRecommendationForFormat($recommendations)}
+                <th class="header" style="width:25%;">
+                    <a href="{
+                                app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=centre&amp;domain=",
+                                $domain, "&amp;type=", $recommendationType, "#recommendationTable"))
+                            }">Clarin Centres</a>
+                </th>
+                <th class="header" style="width:25%;">
+                    <a href="{
+                                app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=domain&amp;domain=",
+                                $domain, "&amp;type=", $recommendationType, "#recommendationTable"))
+                            }">Domain</a></th>
+                <th class="header" style="width:25%;">
+                    <a href="{
+                                app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=recommendation&amp;domain=",
+                                $domain, "&amp;type=", $recommendationType, "#recommendationTable"))
+                            }">
+                        Level</a></th>
+            </tr>
+         {rf:getRecommendationForFormat($recommendations,$sortBy)}
         </table>
         )
     else ()

@@ -9,6 +9,11 @@ import module namespace vfm = "http://clarin.ids-mannheim.de/standards/view-form
 import module namespace vsm = "http://clarin.ids-mannheim.de/standards/view-spec" at "../modules/view-spec.xql";
 
 let $id := request:get-parameter('id', '')
+let $center := request:get-parameter('center', '')
+let $domain := request:get-parameter('domain', '')
+let $recommendationType := request:get-parameter('type', '')
+let $sortBy := request:get-parameter('sortBy', '')
+
 let $format := vfm:get-format($id)
 let $format-name := $format/titleStmt/title/text()
 let $format-abbr := $format/titleStmt/abbr/text()
@@ -81,7 +86,7 @@ return
                         
                         
                         {vfm:print-recommendation($format,$id)}
-                        {vfm:print-recommendation-table($id)}
+                        {vfm:print-recommendation-table($id,$domain,$center,$recommendationType,$sortBy)}
                         
                         {vfm:print-multiple-values($format/keyword, $id, "Keywords:")}
                         <!--The tag cloud of the standard related keywords -->

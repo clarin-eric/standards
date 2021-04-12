@@ -90,6 +90,7 @@ declare function rf:print-recommendation($requestedCenter, $requestedDomain, $re
     if ($recommendationNumber = "1") then
         "recommended"
     else
+        (
         if ($recommendationNumber = "2") then
             "acceptable"
         else
@@ -97,6 +98,8 @@ declare function rf:print-recommendation($requestedCenter, $requestedDomain, $re
                 "deprecated"
             else
                 ""
+        )
+        
         order by
         if ($sortBy = 'centre') then
             $centre
@@ -182,7 +185,7 @@ declare function rf:print-recommendation-row($id, $format-abbr, $centre, $domain
 };
 
 
-declare function rf:getRecommendationForFormat($recommendations) {
+declare function rf:getRecommendationForFormat($recommendations, $sortBy) {
     for $r in $recommendations
     let $centre := data($r/parent::node()/@id)
     for $values in fn:tokenize($r, "\.")
@@ -202,6 +205,16 @@ declare function rf:getRecommendationForFormat($recommendations) {
                 "deprecated"
             else
                 ""
+    order by
+        if ($sortBy = 'centre') then
+            $centre
+        else
+            if ($sortBy = 'domain') then
+                $domain
+            else
+                if ($sortBy = 'recommendation') then
+                    $recommendationNumber
+                else ()
     return
         <tr>
             <td class="recommendation-row">{$centre}</td>
