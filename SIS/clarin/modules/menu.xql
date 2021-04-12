@@ -33,7 +33,12 @@ declare function menu:view(){
                 }   
                 <tr>
                     <td colspan="2" class="tdmenu">
-                        <a style="display:block"  href="{app:link("views/recommendation.xq")}">Recommendations</a>
+                        <a style="display:block"  href="{app:link("views/recommendation.xq")}">Standard Recommendations</a>
+                    </td>
+               </tr>
+               <tr>
+                    <td colspan="2" class="tdmenu">
+                        <a style="display:block"  href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     </td>
                </tr>
                 <tr>
