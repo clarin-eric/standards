@@ -184,6 +184,24 @@ declare function rf:print-recommendation-row($id, $format-abbr, $centre, $domain
     </tr>
 };
 
+declare function rf:export-table($nodes, $filename){
+    let $rows :=  
+        for $row in $nodes
+        return 
+        <recommendation>
+            <format>{$row/td[1]/a/text()}</format>
+            <centre>{$row/td[2]/text()}</centre>
+            <domain>{$row/td[3]/text()}</domain>
+            <level>{$row/td[4]/text()}</level>
+        </recommendation>
+
+    (:let $isExportSuccessful := file:serialize($data, $filename,fn:false()):)
+    let $quote := "&#34;"
+    let $header1 := response:set-header("Content-Disposition", concat("attachment; filename=",$quote,$filename,$quote))
+    let $header2 := response:set-header("Content-Type","text/xml;charset=utf-8")
+    
+    return <recommendations>{$rows}</recommendations>
+};
 
 declare function rf:getRecommendationForFormat($recommendations, $sortBy) {
     for $r in $recommendations

@@ -12,8 +12,14 @@ let $center := request:get-parameter('center', '')
 let $domain := request:get-parameter('domain', '')
 let $recommendationType := request:get-parameter('type', '')
 let $sortBy := request:get-parameter('sortBy', '')
+let $export := request:get-parameter('exportButton', '')
+let $recommendationTable := rf:print-recommendation($center,$domain, $recommendationType, $sortBy)
+
 return
-    
+if ($export)
+then (rf:export-table($recommendationTable,"format-recommendation.xml"))
+else 
+
     <html>
         <head>
             <title>CLARIN Format Recommendations</title>
@@ -28,11 +34,12 @@ return
                         &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Recommended Formats</a>
                     </div>
                     <div class="title">CLARIN Format Recommendations</div>
+                    
                     <div><p>This page presents formats of data depositions that various CLARIN centres are ready to accept. Each format,
                             for each centre, can be recommended, acceptable or deprecated in the context of several domains that represent the
                             functions that the deposited data can play.</p>
                         <p>Use the dropboxes to select the particular domain and/or level of recommendation. The functionality to sort by columns is forthcoming.</p></div>
-                    <div style="margin-top:30px; margin-bottom:20px;">
+                    <div style="margin-top:30px;">
                         <form id="searchRecommendation" method="post" action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
                             <table>
                                 <tr>
@@ -62,6 +69,13 @@ return
                                 </tr>
                             </table>
                         </form>
+                        <form method="get" action="" style="text-align:right;">
+                            <input name="exportButton" class="button" style="margin-bottom:5px;height:25px;width:150px;" type="submit" value="Export Table to XML"/>
+                            <input name="center" type="hidden" value="{$center}"/>
+                            <input name="domain" type="hidden" value="{$domain}"/>
+                            <input name="type" type="hidden" value="{$recommendationType}"/>
+                            <input name="sortBy" type="hidden" value="{$sortBy}"/>
+                        </form>
                     </div>
                     
                     <table id="recommendationTable" cellspacing="4px" style="width:97%">
@@ -90,10 +104,11 @@ return
                                         }">
                                     Recommendation</a></th>
                         </tr>
-                        {rf:print-recommendation($center,$domain, $recommendationType, $sortBy)}
+                        {$recommendationTable}
                     </table>
                 </div>
                 <div class="footer">{app:footer()}</div>
             </div>
         </body>
     </html>
+
