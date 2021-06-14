@@ -83,7 +83,7 @@ else
                             <th class="header" style="width:25%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=abbr&amp;domain=",
-                                            $domain, "&amp;type=", $recommendationType, "#searchRecommendation"))
+                                            $domain, "&amp;type=", $recommendationType, "&amp;center=",$center, "#searchRecommendation"))
                                         }">Abbreviation</a>
                             </th>
                             <th class="header" style="width:25%;">
@@ -95,12 +95,12 @@ else
                             <th class="header" style="width:25%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=domain&amp;domain=",
-                                            $domain, "&amp;type=", $recommendationType, "#searchRecommendation"))
+                                            $domain, "&amp;type=", $recommendationType, "&amp;center=",$center,"#searchRecommendation"))
                                         }">Domain</a></th>
                             <th class="header" style="width:25%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=recommendation&amp;domain=",
-                                            $domain, "&amp;type=", $recommendationType, "#searchRecommendation"))
+                                            $domain, "&amp;type=", $recommendationType, "&amp;center=",$center,"#searchRecommendation"))
                                         }">
                                     Recommendation</a></th>
                         </tr>
