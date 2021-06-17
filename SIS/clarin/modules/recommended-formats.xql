@@ -110,7 +110,7 @@ declare function rf:print-recommendation($requestedCenter, $requestedDomain, $re
                 if ($sortBy = 'recommendation') then
                     $recommendationNumber
                 else
-                    ($format-abbr) (:abbr:)
+                    (fn:lower-case($format-abbr)) (:abbr:)
     
     return
         if ($requestedCenter)
