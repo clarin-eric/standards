@@ -31,14 +31,14 @@ declare function menu:view(){
                     </tr>
                  else()
                 }   
-                <tr>
-                    <td colspan="2" class="tdmenu">
-                        <a style="display:block"  href="{app:link("views/recommendation.xq")}">Standard Recommendations</a>
-                    </td>
-               </tr>
                <tr>
                     <td colspan="2" class="tdmenu">
-                        <a style="display:block"  href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
+                        <a style="display:block"  href="{app:link("views/recommended-formats-with-search.xq")}">Deposition Formats</a>
+                    </td>
+               </tr>
+                <tr>
+                    <td colspan="2" class="tdmenu">
+                        <a style="display:block"  href="{app:link("views/recommendation.xq")}">Standards Information</a>
                     </td>
                </tr>
                 <tr>

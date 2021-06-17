@@ -37,8 +37,9 @@ else
                     
                     <div><p>This page presents formats of data depositions that various CLARIN centres are ready to accept. Each format,
                             for each centre, can be recommended, acceptable or deprecated in the context of several domains that represent the
-                            functions that the deposited data can play.</p>
-                        <p>Use the dropboxes to select the particular domain and/or level of recommendation. The functionality to sort by columns is forthcoming.</p></div>
+                            functions that the deposited data can play.</p> <!-- TODO: a link to a separate piece of documentation on the domains, when that page exists -->
+                        <p>Use the dropboxes to select the particular domain, centre, and/or level of recommendation. Columns can be sorted, 
+                           and your results can be downloaded as XML.</p></div>
                     <div style="margin-top:30px;">
                         <form id="searchRecommendation" method="post" action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
                             <table>

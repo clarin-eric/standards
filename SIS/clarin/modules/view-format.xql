@@ -90,7 +90,7 @@ declare function vfm:print-recommendation-table($id,$domain,$center,$recommendat
                     <a href="{
                                 app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=centre&amp;domain=",
                                 $domain, "&amp;type=", $recommendationType, "#recommendationTable"))
-                            }">Clarin Centres</a>
+                            }">Clarin Centre</a>
                 </th>
                 <th class="header" style="width:25%;">
                     <a href="{
