@@ -16,6 +16,11 @@ declare function menu:view(){
                         <a style="display:block" href="{app:link("index.xq")}">Home</a>
                     </td>
                 </tr>               
+               <tr>
+                    <td colspan="2" class="tdmenu">
+                        <a style="display:block"  href="{app:link("views/recommended-formats-with-search.xq")}">Data Deposition Formats</a>
+                    </td>
+               </tr>
                 <tr>
                     <td colspan="2" class="tdmenu">
                         <a style="display:block"  href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards</a>
@@ -31,19 +36,16 @@ declare function menu:view(){
                     </tr>
                  else()
                 }   
-               <tr>
+
+(:               <tr>
                     <td colspan="2" class="tdmenu">
-                        <a style="display:block"  href="{app:link("views/recommended-formats-with-search.xq")}">Deposition Formats</a>
+                        <a style="display:block"  href="{app:link("views/recommendation.xq")}">Recommended Standards</a>
                     </td>
                </tr>
+:)
                 <tr>
                     <td colspan="2" class="tdmenu">
-                        <a style="display:block"  href="{app:link("views/recommendation.xq")}">Standards Information</a>
-                    </td>
-               </tr>
-                <tr>
-                    <td colspan="2" class="tdmenu">
-                        <a style="display:block"  href="{app:link("views/list-sbs.xq")}">Standard bodies</a>
+                        <a style="display:block"  href="{app:link("views/list-sbs.xq")}">Standardization bodies</a>
                     </td>
                </tr>               
                <tr>                    

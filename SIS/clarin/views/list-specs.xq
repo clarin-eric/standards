@@ -45,7 +45,8 @@ return
                 <p>On the other hand, a specification is “an explicit set of requirements to be satisfied by a material, product, system, or Service” (see <a href="http://www.astm.org/COMMIT/Regs.pdf">Regulations Governing ASTM Technical Committees</a>). Any private individual, company or organization may develop a specification, which is typically limited to a specific application and defines the application tasks and objectives. When a specification is often used and acknowledged by the users more than any other existing specification, it is referred to as a de facto standard.                
                 Many specifications, such as PDF, CMDI, HTML, were developed outside a standard body, but by the virtue of acceptance and broad dissemination, they were adopted by a recognized standard body, such as ISO.</p>   
                 
-                <p>To sort the table below by topic, responsibility or CLARIN center, please click on the corresponding column header. You can also filter the standards by the first letter of their abbreviation or name, by clicking on a letter below.</p>             
+                <p>To sort the table below by topic, responsibility or CLARIN center, please click on the corresponding column header. You can also filter the standards by the first letter of their abbreviation or name, by clicking on a letter below.</p>
+                <p>Please note that the information concerning centre recommendations for particular standards should be considered outdated and will change with the upcoming revisions of the Standards Information System. Please refer to the "Data Deposition Formats" page for up-to-date information.</p>
                 </div>
         		
         		<div>{lsm:letter-filter()}</div>
