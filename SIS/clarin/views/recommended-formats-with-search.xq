@@ -9,15 +9,15 @@ import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommenda
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 
 let $center := request:get-parameter('center', '')
-let $domain := request:get-parameter('domain', '')
+let $domainId := request:get-parameter('domain', '')
 let $recommendationType := request:get-parameter('type', '')
 let $sortBy := request:get-parameter('sortBy', '')
 let $export := request:get-parameter('exportButton', '')
-let $recommendationTable := rf:print-recommendation($center,$domain, $recommendationType, $sortBy)
+let $recommendationTable := rf:print-recommendation($center,$domainId, $recommendationType, $sortBy)
 
 return
 if ($export)
-then (rf:export-table($recommendationTable,"format-recommendation.xml"))
+then (rf:export-table($center, $domainId, $recommendationType, $recommendationTable,"format-recommendation.xml"))
 else 
 
     <html>
@@ -73,7 +73,7 @@ else
                         <form method="get" action="" style="text-align:right;">
                             <input name="exportButton" class="button" style="margin-bottom:5px;height:25px;width:150px;" type="submit" value="Export Table to XML"/>
                             <input name="center" type="hidden" value="{$center}"/>
-                            <input name="domain" type="hidden" value="{$domain}"/>
+                            <input name="domain" type="hidden" value="{$domainId}"/>
                             <input name="type" type="hidden" value="{$recommendationType}"/>
                             <input name="sortBy" type="hidden" value="{$sortBy}"/>
                         </form>
@@ -84,24 +84,24 @@ else
                             <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=abbr&amp;domain=",
-                                            $domain, "&amp;type=", $recommendationType, "&amp;center=",$center, "#searchRecommendation"))
+                                            $domainId, "&amp;type=", $recommendationType, "&amp;center=",$center, "#searchRecommendation"))
                                         }">Abbreviation</a>
                             </th>
                             <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=centre&amp;domain=",
-                                            $domain, "&amp;type=", $recommendationType, "#searchRecommendation"))
+                                            $domainId, "&amp;type=", $recommendationType, "#searchRecommendation"))
                                         }">Clarin Centres</a>
                             </th>
                             <th class="header" style="width:40%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=domain&amp;domain=",
-                                            $domain, "&amp;type=", $recommendationType, "&amp;center=",$center,"#searchRecommendation"))
+                                            $domainId, "&amp;type=", $recommendationType, "&amp;center=",$center,"#searchRecommendation"))
                                         }">Domain</a></th>
                             <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=recommendation&amp;domain=",
-                                            $domain, "&amp;type=", $recommendationType, "&amp;center=",$center,"#searchRecommendation"))
+                                            $domainId, "&amp;type=", $recommendationType, "&amp;center=",$center,"#searchRecommendation"))
                                         }">
                                     Recommendation</a></th>
                         </tr>
