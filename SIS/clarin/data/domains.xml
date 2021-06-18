@@ -1,11 +1,89 @@
 <domains>
-    <domain id="1">Documentation</domain>
-    <domain id="2">Metadata</domain>
-    <domain id="3">TextContent</domain>
-    <domain id="4">AnnotatedText</domain>
-    <domain id="5">Media</domain>
-    <domain id="6">Image</domain>
-    <domain id="7">Compression</domain>
-    <domain id="8">Code</domain>
-    <domain id="9">Other</domain>
+    <domain id="1">
+        <name>Audiovisual Source Language Data</name>
+        <abbr/>
+        <desc>Audio or video recordings providing spoken/multimodal or signed language data for
+            research purposes.</desc>
+    </domain>
+    <domain id="2">
+        <name>Image Source Language Data</name>
+        <abbr/>
+        <desc>Digitized images of analogue sources of written language data for research purposes
+            (e.g. facsimiles, scans of handwriting, photos of inscriptions).</desc>
+    </domain>
+    <domain id="3">
+        <name>Textual Source Language Data</name>
+        <abbr/>
+        <desc>Written unstructured/plain text or originally structured text (e.g. HTML) without linguistic or other mark-up added for research purposes.</desc>
+    </domain>
+    <domain id="4">
+        <name>Contextual Data</name>
+        <abbr/>
+        <desc>Images (photos or drawings) or documents relevant to the communicative event or text but not part of the source language data.</desc>
+    </domain>
+    <domain id="5">
+        <name>Text Annotation</name>
+        <abbr/>
+        <desc>Annotations of textual sources/written text, with the original text included or as stand-off.</desc>
+    </domain>
+    <domain id="6">
+        <name>Audiovisual Annotation</name>
+        <abbr/>
+        <desc>Annotations of audiovisual sources, usually including a basic rendering of the spoken content (transcription) and sometimes further annotation.</desc>
+    </domain>
+    <domain id="7">
+        <name>Image Annotation</name>
+        <abbr/>
+        <desc>Annotations of image sources.</desc>
+    </domain>
+    <domain id="8">
+        <name>Contextual Information</name>
+        <abbr/>
+        <desc>Structured information on the communicative event or text and its creators (i.e. participants or authors) relevant for analysis.</desc>
+    </domain>
+    <domain id="9">
+        <name>Catalogue Metadata</name>
+        <abbr/>
+        <desc>Basic structured documentation for discoverability and general description, to be openly provided for harvesting.</desc>
+    </domain>
+    <domain id="10">
+        <name>Metadata</name>
+        <abbr/>
+        <desc>Comprehensive structured documentation including descriptive metadata but also information on provenance, rights information, technical metadata etc.</desc>
+    </domain>
+    <domain id="11">
+        <name>Documentation</name>
+        <abbr/>
+        <desc>Unstructured documentation of the resource and its parts such as corpus or annotation guidelines.</desc>
+    </domain>
+    <domain id="12">
+        <name>Lexical Resource</name>
+        <abbr/>
+        <desc>Structured (item-based) resources for lexical and/or conceptual information on units of language (e.g. wordlists, lexicons, WordNets etc.)</desc>
+    </domain>
+    <domain id="13">
+        <name>Tool support</name>
+        <abbr/>
+        <desc>Tool-related formats required for specific functionality of the tool or reliable reuse of resources (e.g. tagsets, annotation schemes, vocabularies, language models, parameter files, and other specifications or settings)</desc>
+    </domain>
+    <domain id="14">
+        <name>Geodata</name>
+        <abbr/>
+        <desc>Information on geographic locations.</desc>
+    </domain>
+    <domain id="15">
+        <name>Statistical Data</name>
+        <abbr/>
+        <desc>Data from surveys and tests in numeric formats.</desc>
+    </domain>
+    <domain id="16">
+        <name>Language Description</name>
+        <abbr/>
+        <desc>Structured or unstructured descriptions of linguistic varieties or phenomena, typological databases etc.</desc>
+    </domain>
+    <domain id="17">
+        <name>Other</name>
+        <abbr/>
+        <desc>Any other functional domain that can not be included in an existing category.</desc>
+    </domain>
 </domains>

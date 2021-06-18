@@ -1,0 +1,44 @@
+xquery version "3.0";
+
+declare namespace exist="http://exist.sourceforge.net/NS/exist";
+declare option exist:serialize "method=xhtml media-type=text/html indent=yes doctype-system=about:legacy-compat";
+
+import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
+import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
+import module namespace dm="http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
+
+(:  Define the list of domains page
+    @author margaretha
+:)
+
+<html>
+    <head>
+    	<title>Functional domains</title>
+    	<link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
+    	<script type="text/javascript" src="{app:resource("edit.js","js")}"/>
+    </head>
+    <body>
+    	<div id="all">
+    		<div class="logoheader"/>
+    		{menu:view()}
+            <div class="content">
+                <div class="navigation">
+                    &gt; <a href="{app:link("views/list-domains.xq")}">Domains</a>
+                </div>
+              	<div class="title">Functional domains</div>
+              	
+              	<div>
+                   	<p>To arrive at adequate recommendations for or decide on the suitability of individual file formats and standards, the purpose for which they are intended has to be taken into account. As an example, while PDF/A has been developed for unproblematic long-term archiving and is an excellent format choice for (unstructured) documentation, i.e. documents containing a corpus manual, corpus guidelines or the annotation guidelines applied for the project, it is undoubtedly not suitable as a format for the annotated corpus data itself. This means it is not possible to recommend PDF/A or any other format to researchers and data depositors without information on the intended purpose. The standard Committee has therefore in a bottom-up fashion, by reviewing the policies and deposited data of CLARIN centres, developed a set of functional domains representing purposes specifically relevant to the field of digital language resources.
+
+The set of functional domains described below was however mainly designed to be useful in the practical work of the Standards Committee in gathering information on standards and data formats currently in use within CLARIN. It does not claim or aim to be a complete and detailed taxonomy and does not reflect all possible distinctions between different resource (sub)types. The Standard Committee acknowledges that in order to make an individual recommendation on suitable formats to be used within a specific research project, more subtle differences usually become relevant. As an example, the most suitable data format for a corpus will not only depend on whether it's based on audiovisual or textual source data, but also on the complexity of the source data and the annotation schemes and possibly interoperability with relevant existing resources within the same research area. 
+
+For pragmatic reasons, some domains are very broad, e.g. the tool support domain comprising highly different information types, which however share the purpose of enabling the use of tools or services. Conversely, a single format might serve several purposes, e.g. when CMDI is being used for all types of metadata and contextual information, or when TEI is used to model both text annotations and contextual information. The focus on formats that are likely to be a part of digital language resources created and deposited by researchers in the humanities and social sciences further implies a conscious reduction of the scope of the taxonomy.</p>
+				</div>
+                <ul style="padding:0px; margin-left:15px;">
+                    {dm:list-domains()}
+                </ul>
+              </div>
+           <div class="footer">{app:footer()}</div>      
+        </div>
+    </body>
+</html>
