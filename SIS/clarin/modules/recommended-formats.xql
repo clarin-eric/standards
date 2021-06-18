@@ -84,7 +84,7 @@ declare function rf:print-recommendation($requestedCenter, $requestedDomain, $re
     let $size := fn:string-length($values)
     let $recommendationNumber := fn:substring($values, $size)
     let $domainNumber := fn:substring($values, 1, $size - 1)
-    let $domain := $format:domains[@id = $domainNumber]/text()
+    let $domain := $format:domains[@id = $domainNumber]/name/text()
     
     let $rType :=
     if ($recommendationNumber = "1") then

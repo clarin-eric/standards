@@ -43,12 +43,12 @@ declare function menu:view(){
                  else()
                 }   
 
-(:               <tr>
+<!--               <tr>
                     <td colspan="2" class="tdmenu">
                         <a style="display:block"  href="{app:link("views/recommendation.xq")}">Recommended Standards</a>
                     </td>
                </tr>
-:)
+-->
                 <tr>
                     <td colspan="2" class="tdmenu">
                         <a style="display:block"  href="{app:link("views/list-sbs.xq")}">Standardization bodies</a>

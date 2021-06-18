@@ -81,24 +81,24 @@ else
                     
                     <table id="recommendationTable" cellspacing="4px" style="width:97%">
                         <tr>
-                            <th class="header" style="width:25%;">
+                            <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=abbr&amp;domain=",
                                             $domain, "&amp;type=", $recommendationType, "&amp;center=",$center, "#searchRecommendation"))
                                         }">Abbreviation</a>
                             </th>
-                            <th class="header" style="width:25%;">
+                            <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=centre&amp;domain=",
                                             $domain, "&amp;type=", $recommendationType, "#searchRecommendation"))
                                         }">Clarin Centres</a>
                             </th>
-                            <th class="header" style="width:25%;">
+                            <th class="header" style="width:40%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=domain&amp;domain=",
                                             $domain, "&amp;type=", $recommendationType, "&amp;center=",$center,"#searchRecommendation"))
                                         }">Domain</a></th>
-                            <th class="header" style="width:25%;">
+                            <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=recommendation&amp;domain=",
                                             $domain, "&amp;type=", $recommendationType, "&amp;center=",$center,"#searchRecommendation"))

@@ -10,13 +10,13 @@ import module namespace domain="http://clarin.ids-mannheim.de/standards/domain" 
 :)
 
 (: Retrieve a domain node by its id :)
-declare function tm:get-domain($id as xs:string){
+declare function dm:get-domain($id as xs:string){
     domain:get-domain($id)
 };
 
 
 (: Generate the list of domains :)
-declare function tm:list-domains(){
+declare function dm:list-domains(){
     for $domain in $domain:domains
         let $domain-id := $domain/@id
         let $domain-name := $domain/name/text()
