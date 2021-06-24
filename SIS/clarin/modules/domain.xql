@@ -28,7 +28,7 @@ declare function dm:list-domains(){
                 onclick="openEditor('{$domain-id}')">{$domain-name}</button>
             </li>
             {if ($domain-name !='Other') then
-               <span id="{$domain-id}" style="display:none">
+               <span id="{$domain-id}" style="display:block">
                     <p>{$domain-snippet}</p>
                 </span>
              else ()}
