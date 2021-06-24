@@ -250,11 +250,9 @@
                 <xs:element name="monogr">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="title" type="xs:string" maxOccurs="unbounded"
-                                minOccurs="0"/>
+                            <xs:element name="title" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
                             <xs:element ref="author" minOccurs="0" maxOccurs="unbounded"/>
-                            <xs:element name="editor" minOccurs="0" maxOccurs="unbounded"
-                                type="nameType"/>
+                            <xs:element name="editor" minOccurs="0" maxOccurs="unbounded" type="nameType"/>
                             <xs:element name="ref" minOccurs="0" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:simpleContent>
@@ -273,10 +271,8 @@
                             <xs:element name="imprint">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="pubPlace" minOccurs="0"
-                                            maxOccurs="unbounded"/>
-                                        <xs:element name="biblScope" minOccurs="0"
-                                            maxOccurs="unbounded">
+                                        <xs:element name="pubPlace" minOccurs="0" maxOccurs="unbounded"/>
+                                        <xs:element name="biblScope" minOccurs="0" maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:simpleContent>
                                                   <xs:extension base="xs:string">
@@ -293,8 +289,7 @@
                                                 </xs:simpleContent>
                                             </xs:complexType>
                                         </xs:element>
-                                        <xs:element name="publisher" minOccurs="0"
-                                            maxOccurs="unbounded"/>
+                                        <xs:element name="publisher" minOccurs="0" maxOccurs="unbounded"/>
                                         <xs:element ref="date" minOccurs="0" maxOccurs="unbounded"/>
                                         <xs:element name="note" minOccurs="0" maxOccurs="unbounded">
                                             <xs:complexType>

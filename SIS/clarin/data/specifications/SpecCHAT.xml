@@ -1,68 +1,62 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecCHAT"
-            standardSettingBody="SBOther" topic="TopicFileFormats TopicTranscription"
-            xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="show">
-            <titleStmt>
-                        <title>Codes for the Human Analysis of Transcripts</title>
-                        <abbr>CHAT</abbr>
-            </titleStmt>
-            <scope>Speciﬁcations for speech data transcription and coding</scope>
-            <ClarinRecommendation>
-                        <recommendation specId="SpecCHAT" type="fully recommended"/>
-            </ClarinRecommendation>
-            <keyword>transcription format</keyword>
-            <keyword>coding format</keyword>
-            <keyword>speech data</keyword>
-            <keyword>annotation</keyword>
-            <info type="description">
-                        <p>CHAT (Codes for the Human Analysis of Transcripts) is the most common
-                                    format for transcribing, encoding and analysing child language
-                                    data. It was developed by Brian MacWhinney within the CHILDES
-                                    (Child Language Data Exchange System) Project. All of the
-                                    transcripts in the CHILDES database are encoded in the CHAT
-                                    format. </p>
-                        <p>By using the CHAT format, transcribed data can be annotated with
-                                    different levels of linguistic information such as phonological,
-                                    morphological or syntactic information. The data transcribed and
-                                    annotated in CHAT, are compatible with some analysis tools, for
-                                    example CLAN provided also by the CHILDES Project. </p>
-                        <p>Since the CHAT format is widely recognized in children’s language
-                                    research, many transcription tools (such as ELAN, EXMARaLDA,
-                                    Praat, Phon, Transcriber) supports it. These tools can also
-                                    export and import data encoded in various formats as CHAT
-                                    formatted data.</p>
-            </info>
-            <version id="SpecCHAT-2000" status="final">
-                        <titleStmt>
-                                    <title>The CHAT Transcription Format</title>
-                                    <abbr internal="yes">CHAT</abbr>
-                                    <respStmt>
-                                                <resp>Author</resp>
-                                                <name type="person">Brian MacWhinney</name>
-                                    </respStmt>
-                        </titleStmt>
-                        <date>2000</date>
-                        <info type="recReading">
-                                    <biblStruct type="onlineSource" id="rec78AK">
-                                                <monogr>
-                                                  <title>The CHILDES Project: Tools for Analyzing Talk – Electronic Edition. Part 1: The CHAT Transcription Format</title>
-                                                  <author><forename>Brian</forename><surname>MacWhinney</surname></author>
-                                                            <ref type="url">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.218.15</ref>
-                                                  <imprint>
-                                                  <date>2012</date>
-                                                  </imprint>
-                                                </monogr>
-                                    </biblStruct>
-                                    <biblStruct type="onlineSource" id="rec78AK.1">
-                                                <monogr>
-                                                            <title>Tools for Analyzing Talk. Part 1: The CHAT Transcription Format</title>
-                                                            <author><forename>Brian</forename><surname>MacWhinney</surname></author>
-                                                            <ref type="url">https://doi.org/10.21415/3mhn-0z89</ref>
-                                                            <imprint>
-                                                                        <date>2021</date>
-                                                            </imprint>
-                                                </monogr>
-                                    </biblStruct>
-                        </info>
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecCHAT" standardSettingBody="SBOther" topic="TopicFileFormats TopicTranscription" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="show">
+    <titleStmt>
+        <title>Codes for the Human Analysis of Transcripts</title>
+        <abbr>CHAT</abbr>
+    </titleStmt>
+    <scope>Speciﬁcations for speech data transcription and coding</scope>
+    <ClarinRecommendation>
+        <recommendation specId="SpecCHAT" type="fully recommended"/>
+    </ClarinRecommendation>
+    <keyword>transcription format</keyword>
+    <keyword>coding format</keyword>
+    <keyword>speech data</keyword>
+    <keyword>annotation</keyword>
+    <info type="description">
+        <p>CHAT (Codes for the Human Analysis of Transcripts) is the most common format for
+            transcribing, encoding and analysing child language data. It was developed by Brian
+            MacWhinney within the CHILDES (Child Language Data Exchange System) Project. All of the
+            transcripts in the CHILDES database are encoded in the CHAT format. </p>
+        <p>By using the CHAT format, transcribed data can be annotated with different levels of
+            linguistic information such as phonological, morphological or syntactic information. The
+            data transcribed and annotated in CHAT, are compatible with some analysis tools, for
+            example CLAN provided also by the CHILDES Project. </p>
+        <p>Since the CHAT format is widely recognized in children’s language research, many
+            transcription tools (such as ELAN, EXMARaLDA, Praat, Phon, Transcriber) supports it.
+            These tools can also export and import data encoded in various formats as CHAT formatted
+            data.</p>
+    </info>
+    <version id="SpecCHAT-2000" status="final">
+        <titleStmt>
+            <title>The CHAT Transcription Format</title>
+            <abbr internal="yes">CHAT</abbr>
+            <respStmt>
+                <resp>Author</resp>
+                <name type="person">Brian MacWhinney</name>
+            </respStmt>
+        </titleStmt>
+        <date>2000</date>
+        <info type="recReading">
+            <biblStruct type="onlineSource" id="rec78AK">
+                <monogr>
+                    <title>The CHILDES Project: Tools for Analyzing Talk – Electronic Edition. Part 1: The CHAT Transcription Format</title>
+                    <author><forename>Brian</forename><surname>MacWhinney</surname></author>
+                    <ref type="url">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.218.15</ref>
+                    <imprint>
+                        <date>2012</date>
+                    </imprint>
+                </monogr>
+            </biblStruct>
+            <biblStruct type="onlineSource" id="rec78AK.1">
+                <monogr>
+                    <title>Tools for Analyzing Talk. Part 1: The CHAT Transcription Format</title>
+                    <author><forename>Brian</forename><surname>MacWhinney</surname></author>
+                    <ref type="url">https://doi.org/10.21415/3mhn-0z89</ref>
+                    <imprint>
+                        <date>2021</date>
+                    </imprint>
+                </monogr>
+            </biblStruct>
+        </info>
 
-            </version>
+    </version>
 </spec>

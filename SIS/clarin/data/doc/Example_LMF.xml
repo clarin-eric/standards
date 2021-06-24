@@ -1,5 +1,4 @@
-<!-- example of an LMF entry  -->
-<LexicalResource>
+<!-- example of an LMF entry  --><LexicalResource>
     <GlobalInformation>
         <feat att="languageCoding" val="ISO 639-3"/>
     </GlobalInformation>

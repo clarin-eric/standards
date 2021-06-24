@@ -1,5 +1,4 @@
-<sbs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="../schemas/spec.xsd">
+<sbs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/spec.xsd">
     <sb id="SBISO" type="org">
         <titleStmt>
             <title>International Organization for Standardization</title>

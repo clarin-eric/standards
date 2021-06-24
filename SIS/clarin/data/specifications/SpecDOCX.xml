@@ -1,6 +1,4 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecMSDOC"
-    standardSettingBody="SBOther" topic="TopicFileFormats"
-    xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="hide">
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecMSDOC" standardSettingBody="SBOther" topic="TopicFileFormats" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="hide">
     <titleStmt>
         <title>Office Open (XML) File Formats</title>
         <abbr>DOC(X)</abbr>

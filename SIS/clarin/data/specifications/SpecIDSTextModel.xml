@@ -1,6 +1,4 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecIDSTextModel"
-    standardSettingBody="SBOther" topic="TopicGenAnn"
-    xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="hide">
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecIDSTextModel" standardSettingBody="SBOther" topic="TopicGenAnn" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="hide">
     <titleStmt>
         <title>Text Model of the Institut für Deutsche Sprache (IDS)</title>
         <abbr>IDS Text Model</abbr>

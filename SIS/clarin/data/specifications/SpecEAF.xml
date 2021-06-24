@@ -1,6 +1,4 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecEAF"
-    standardSettingBody="SBOther" topic="TopicFileFormats"
-    xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecEAF" standardSettingBody="SBOther" topic="TopicFileFormats" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
     <titleStmt>
         <title>ELAN Annotation Format</title>
         <abbr>EAF</abbr>
@@ -41,8 +39,7 @@
         <biblStruct id="rec3dl" type="onlineSource">
             <monogr>
                 <title>ELAN Annotation Format: EAF (Schema version: 2.8)</title>
-                <author type="organisation"
-                    ><name>The Language Archive at the Max Planck Institute for Psycholinguistics Nijmegen</name></author>
+                <author type="organisation"><name>The Language Archive at the Max Planck Institute for Psycholinguistics Nijmegen</name></author>
                 <ref type="url">http://www.mpi.nl/tools/elan/EAF_Annotation_Format_2.8_and_ELAN.pdf</ref>
                 <imprint>
                     <pubPlace>The Netherlands</pubPlace>

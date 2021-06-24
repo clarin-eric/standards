@@ -1,5 +1,4 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecALTO" topic="TopicFileFormats" standardSettingBody="SBLoC"
-  xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="show">
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecALTO" topic="TopicFileFormats" standardSettingBody="SBLoC" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd" display="show">
   <titleStmt>
     <title>Analyzed Layout and Text Object</title>
     <abbr>ALTO</abbr>

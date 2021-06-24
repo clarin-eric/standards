@@ -1,526 +1,473 @@
-<topics xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="../schemas/spec.xsd">
-        <topic id="TopicGenAnn">
-                <titleStmt>
-                        <title>Generic Corpus Annotation</title>
-                </titleStmt>
-                <info type="description">
-                        <p>Annotated corpus is an important resource in linguistic research and is
-                                used in diverse ways, for example in word sense disambiguation,
-                                dictionary creation, lexicographic research, information extraction,
-                                and so on. Corpus annotation is understood as “the practice of
-                                adding interpretative (especially linguistic) information to an
-                                existing corpus of spoken and/or written language” (Leech (1997):
-                                Corpus Annotation Schemes). This information can include data of
-                                different levels of linguistics: pragmatics, syntax, semantics,
-                                grammatics etc. In this case, a distinction is made between primary
-                                data and its annotation data.</p>
-                        <p>They are two techniques for data annotation: in-line and stand-off
-                                annotations. In the inline annotation, the primary and annotation
-                                data are a unit and are saved in one data file. The disadvantages of
-                                this technique are:</p>
-                        <ul>
-                                <li> The original data is manipulated and complicated by further
-                                        processings</li>
-                        </ul>
-                        <ul>
-                                <li>The annotation structures can be overlapped</li>
-                        </ul>
-                        <ul>
-                                <li>The multiple annotations are arranged hardly</li>
-                        </ul>
-                        <p>Recently, the stand-off annotation has been widely used. The concept of
-                                the annotation is that one or more annotations can be saved
-                                separately from the primary data and linked to it. The annotation
-                                data can be stored in the same file with the primary data or
-                                separately in another file. The advantages are:</p>
-                        <ul>
-                                <li>The separation of primary data and its annotations makes it
-                                        possible that the primary data is unchanged and can be used
-                                        for further processing. With indexing on sign-level and
-                                        word-level, the annotations reference the primary data
-                                        directly. For this reason, it is necessary that the primary
-                                        data stay unchanged, otherwise the indexing could be messed
-                                        up. Therefore, it is reasonable to define a read-only
-                                        permission for the primary data file.</li>
-                        </ul>
-                        <ul>
-                                <li>Multiple annotation</li>
-                        </ul>
-                        <ul>
-                                <li>It is relatively easy to amend the primary data with further
-                                        annotations. For this purpose new files will be
-                                        created.</li>
-                        </ul>
-                        <ul>
-                                <li>Each annotation can be modified separately.</li>
-                        </ul>
-                        <p>EXtensible Markup Language (XML) is used for stand-off annotation in the
-                                majority of cases. The XPointer and XLink expressions are used to
-                                link and reference annotation data to the original text.</p>
-                        <p>Other types of corpus annotation are:</p>
-                        <ul>
-                                <li>Lemmatization</li>
-                        </ul>
-                        <ul>
-                                <li>Part-of-speech annotation</li>
-                        </ul>
-                        <ul>
-                                <li>Syntactical annotation</li>
-                        </ul>
-                        <ul>
-                                <li>Semantic annotation</li>
-                        </ul>
-                        <ul>
-                                <li>Discourse annotation</li>
-                        </ul>
-                        <ul>
-                                <li>Pragmatic annotation</li>
-                        </ul>
-                        <ul>
-                                <li>Phonetic annotation</li>
-                        </ul>
-                        <ul>
-                                <li>Lexical annotation</li>
-                        </ul>
-                </info>
-        </topic>
-        <topic id="TopicSynAnn">
-                <titleStmt>
-                        <title>Syntactic Annotation</title>
-                </titleStmt>
-                <info type="description">
-                        <p>Syntactic annotation includes across-word analysis and its goal is to
-                                describe structure of sentences. It shows how the words build
-                                phrases and sentences, and their relationship with each other in a
-                                sentence.</p>
-                        <p>Sometimes a syntactically annotated corpus is called a treebank, because
-                                it is represented in a tree structure.</p>
-                        <p> A distinction is made between two basic models: constituency- and
-                                dependency-based structure annotation. Both structures give the
-                                hierarchical structure of the sentence. They differ from each other
-                                in the way that the elements hierarchically relate to each other in
-                                one sentence. In the constituent structure, the words build a
-                                syntactic unit such as noun phrase and verb phrase. The phrases are
-                                hierarchically arranged and may be deeply nested.</p>
-                        <p>However, the dependence structure is based on the dependency between the
-                                words in one sentence and it describes how words relate to other
-                                words. In a dependence structure, one word is a head and others are
-                                its dependents. Usually the tensed verb is head of structure and the
-                                other words are subordinated to it.</p>
-                        <p>The further distinction is made between partial and full syntactic
-                                analysis. The full parsing describes a complete parse tree of a
-                                sentence. This kind of parsing is difficult and time consuming,
-                                because it has large grammatical coverage. Additionally it is
-                                obtained with a very large technical and time effort. The reason is
-                                that all possible parse trees must be calculated for a given
-                                sentence.</p>
-                        <p>Another alternative analysis is the partial parsing or sometimes called
-                                chunking. It describes a partial structure of a sentence without
-                                building a complete parse tree. In contrast to full syntactic
-                                analysis, the partial parsing can identify the phrases (for example
-                                noun-phrase or verb-phrase) or segments in the sentence. It can not
-                                analyse the phrases itself or assign what kind of relation the
-                                phrases have with each other within a sentence. However, it achieves
-                                higher accuracy than full parsing, and it can be carried out quickly
-                                and efficiently. Partial parsing might be applied as first step in
-                                full parsing as well.</p>
-                </info>
-        </topic>
-        <topic id="TopicMetaLanguage">
-                <titleStmt>
-                        <title>Meta Language</title>
-                </titleStmt>
-                <info type="description">
-                        <p>A meta language is the foundation of a markup language. It provides at
-                                least the syntax and the formal model. Sometimes, a meta language
-                                also provides one or more document grammar formalism(s) defining a
-                                specific markup language.</p>
-                </info>
-        </topic>
-        <topic id="TopicTransformation">
-                <titleStmt>
-                        <title>Transformation</title>
-                </titleStmt>
-                <info type="description">
-                        <p>The goal of transformation is to convert the source data of a certain
-                                structure and content, to another specific structure or another
-                                format, while the source data remains unchanged. There are different
-                                tasks like changing, reformatting of the data structure, merging of
-                                data or modification of data representation.</p>
-                </info>
-        </topic>
-        <topic id="TopicFormatting">
-                <titleStmt>
-                        <title>Formatting</title>
-                </titleStmt>
-                <info type="description">
-                        <p>Formatting describes the representation of source data for output to
-                                on-line reading, printing, speech programs, etc. In contrast to
-                                transformation, which transforms one data structure and content into
-                                another specific structure or another format, formatting focuses on
-                                how the source data should appear, be visualised or represented.
-                        </p>
-                </info>
-        </topic>
-        <topic id="TopicDataCat">
-                <titleStmt>
-                        <title>Data Categorization</title>
-                </titleStmt>
-                <info type="description">
-                        <p>Data Categorization is a mechanism to create a central global (or local)
-                                registry for both data categories (i.e. the element and attribute
-                                names, or more generic: concepts) and values used in an annotation
-                                process.</p>
-                </info>
-        </topic>
-        <topic id="TopicQuery">
-                <titleStmt>
-                        <title>Query</title>
-                </titleStmt>
-                <info type="description">
-                        <p>Query language is a kind of computer language, which is used for
-                                requesting information from database or other information
-                                systems.</p>
-                        <p>The request is made via queries, a kind of expression or instruction
-                                based on the same principle, so that the user achieves a specified
-                                set of objects without the need for specific programming skills. The
-                                queries are build as strings with specific keywords and syntax,
-                                which vary across the query language.</p>
-                        <p>In general, a distinction is made between database query languages and
-                                information retrieval query languages. The best known database query
-                                languages are Structured Query Language (SQL), Multidimensional
-                                Expression (MDX) and so on. The information retrieval query
-                                languages, for instance XQuery, are used for requesting collections
-                                of XML data.</p>
-                </info>
-        </topic>
-        <topic id="TopicConstraintLanguage">
-                <titleStmt>
-                        <title>Constraint Language</title>
-                </titleStmt>
-                <info type="description">
-                        <p>A constraint language provides a formal model and a syntax for defining
-                                specific constraints for validating instances of a given markup
-                                language. Constraint languages (CL) can be subdivided into
-                                grammar-based CL and rule-based CL.</p>
-                </info>
-        </topic>
-        <topic id="TopicML">
-                <titleStmt>
-                        <title>Annotation of Multilingual Data</title>
-                </titleStmt>
-                <info type="description">
-                        <p>Multilingual data are identical or similar data in two or more different
-                                languages. Multilingual data with different levels of annotation
-                                have been used in all kinds of language-specific or cross-linguistic
-                                research and in various natural language processing tasks. They can
-                                be applied for a huge range of applications such as machine
-                                translation, speech recognition, information retrieval etc. Some
-                                examples of multilingual data are multilingual corpora (e.g.
-                                Europarl), international vocabularies (e.g. Agrovoc) or multilingual
-                                datasets (e.g. DBpedia, YAGO), multilingual encyclopaedia and
-                                ontology (e.g. BabelNet), and multilingual dictionary (e.g.
-                                OmegaWiki).</p>
-                        <p>The complexity factors for building multilingual annotated data are the
-                                size of the data, the number of languages, and the types of
-                                annotation. Some problems in multilingual annotation are encoding
-                                characters, recognizing letters, numerals and symbols in the data,
-                                linking between different resources refering to the same entity in
-                                different languages, and filling in any lexical gap. Lexical
-                                mismatches or overlaps in a target language is also a common
-                                problem. </p>
-                </info>
-        </topic>
-        <topic id="TopicMafAnn">
-                <titleStmt>
-                        <title>Morpho-syntactic Annotation</title>
-                </titleStmt>
-                <info type="description">
-                        <p>During morpho-syntactic annotation each lexical tokens in the text corpus
-                                becomes a tag of morpho-syntactic labels such as part of speech and
-                                other morphological characteristics.</p>
-                        <p>Identification of part of speech is the basic step not only for
-                                morpho-syntactic analysis, but also for many other linguistic
-                                annotations such as syntactic, semantic etc. Thereby, the tokens are
-                                tagged (e.g as nouns, verbs, adjectives, adverbs) and the syntactic
-                                function of the word is identified. It determines, which thematic
-                                role (e.g subject, object, predicate) has a word in the
-                                sentence.</p>
-                        <p>This will be followed by analysis of morphological characteristics and
-                                inflectional morphology. During this analysis each token is reduced
-                                to its basic morphological form and its morphological structure
-                                (internal structure of words) and grammatical forms (such as number,
-                                gender, case, person, tense, aspect, mood etc.) are allocated.</p>
-                </info>
-        </topic>
-        <topic id="TopicMetadata">
-                <titleStmt>
-                        <title>Metadata</title>
-                </titleStmt>
-                <info type="description">
-                        <p>Metadata contained the information about other data. This information
-                                should allow or/and facilitate to discover, retrieve, use and manage
-                                relevant resources. To sum up, metadata help to organize those
-                                resources.</p>
-                        <p>Metadata describe main information such as title, author, location or
-                                when and where the resource was created, and a lot of other
-                                data.</p>
-                        <p>The metadata can be created for physical and digital versions of
-                                resources as well. Metadata for digital objects can be embedded in a
-                                digital object or it can be stored separately. In this case,
-                                metadata should be linked to the objects that are stored and managed
-                                in a database. That allows to add, search, modify and read metadata
-                                information much more quickly.</p>
-                        <p>There are three main types of metadata:</p>
-                        <ul>
-                                <li>Descriptive metadata contain generic information about a
-                                        resource, which should help to search, identify and retrieve
-                                        resource successfully. Typically it includes elements such
-                                        as title, author, abstract, publisher and keywords,
-                                        subjects. etc.</li>
-                        </ul>
-                        <ul>
-                                <li>Structural metadata describe information about logical and
-                                        physical organization of a resource. For example the
-                                        information on pages, chapter and subchapter in a text
-                                        document. </li>
-                        </ul>
-                        <ul>
-                                <li>Administrative metadata include the technical information about
-                                        the resource, its creation, quality control, rights,
-                                        selection criteria for digitization and preservation. The
-                                        administrative metadata can fall into two following
-                                        categories: rights management metadata and preservation
-                                        metadata.</li>
-                        </ul>
-                        <p>Structural metadata describes information about logical and physical
-                                organization of a resource, for example, the information on pages,
-                                chapter and subchapter in a text document.</p>
-                        <p>Administrative metadata includes the technical information about the
-                                resource, its creation, quality control, rights, selection criteria
-                                for digitization and preservation. The administrative metadata can
-                                fall into two following categories: rights management metadata and
-                                preservation metadata.</p>
-                        <p>The most common storing format for Metadata is XML, SGML and HTML. There
-                                are many different metadata schemes. Some of the most popular
-                                metadata schemes are: Dublin Core, OLAC, IMDI, TEI(-Header),
-                                etc.</p>
-                        <p>They differ in their variety of usage, design, extensibility, complexity,
-                                interoperability with other schemes. Choosing one of the metadata
-                                schemes or another depends on resources, which should be described,
-                                and objectives of use.</p>
-                </info>
-        </topic>
-        <topic id="TopicSemAnn">
-                <titleStmt>
-                        <title>Semantic Annotation</title>
-                </titleStmt>
-                <info type="description">
-                        <p>In contrast to human a computer cannot understand the meaning of the
-                                words or the sentences in a text. However in some working areas,
-                                such as informational retrieval, named entity recognition, event
-                                extraction or sentiment analysis, it is necessary to find, extract,
-                                manipulate or manage some specific knowledge contained in
-                                heterogenous information documents in short time. To achieve this,
-                                there are many statistics, or machine learning methods to extract
-                                and identify automatically the information, which are based on the
-                                semantic annotated corpora. </p>
-                        <p> What the entities mean in the text, how they are related to each other
-                                or how these relations can be evaluated automatically, can be
-                                decoded during the tag of semantic labels.</p>
-                        <p> Semantic annotation provides description of various kind of the
-                                knowledge contained in a document and it’s semantics in the domain.
-                                The purpose of semantic annotation is to assign the entities in the
-                                text and to link to their semantic descriptions. The semantic
-                                annotation can provide information about the type of named entity,
-                                temporal and event information, information about the discourse and
-                                semantic relation between entities, etc.</p>
-                </info>
-        </topic>
-        <topic id="TopicTerminology">
-                <titleStmt>
-                        <title>Terminology</title>
-                </titleStmt>
-                <info type="description">
-                        <p/>
-                </info>
-        </topic>
-        <topic id="TopicKnowledgeRepresentation">
-                <titleStmt>
-                        <title>Knowledge Representation</title>
-                </titleStmt>
-                <info type="description">
-                        <p/>
-                </info>
-        </topic>
-        <topic id="TopicLexicalKnowledge">
-                <titleStmt>
-                        <title>Lexical Knowledge</title>
-                </titleStmt>
-                <info type="description">
-                        <p>Lexical knowledge describes knowledge about words. The goal of the
-                                lexical knowledge is to describe all information about words and
-                                their relationships. The lexical knowledge includes several
-                                information aspects of linguistic theory such as morpho-syntactical,
-                                semantical, pragmatical and lexical aspect.</p>
-                        <p>The morpho-syntactical aspect describes the words, their constitutive
-                                parts and specifies how words combine structurally. The semantic
-                                aspect describes the meaning of a word in terms of the concepts of
-                                some knowledge base. It specifies how words can be combined to
-                                express the several meaning. The pragmatic aspect describes
-                                information such as connotation, implicature, style, etc. The
-                                lexical aspect describes intern lexical constraints and relations
-                                between different linguistic units and compounds such as homonymy,
-                                synonymy, antonymy, hypernymy, hyponymy, etc.</p>
-                </info>
-        </topic>
-        <topic id="TopicOntology">
-                <titleStmt>
-                        <title>Ontology</title>
-                </titleStmt>
-                <info type="description">
-                        <p>Ontology is a formal structured presentation of any number of concepts
-                                and their respective relationships to each other. The ontology
-                                describes the knowledge with help of standardized terminology,
-                                meaning of individual concepts and semantic relations between the
-                                terms. All information in ontology forms a kind of network for
-                                representing knowledge. This knowledge can be used in different
-                                ways, for example in informational retrieval, artificial
-                                intelligence, the Semantic Web, software engineering, biomedical
-                                informatics, library science, and so on.</p>
-                </info>
-        </topic>
-        <topic id="TopicFeatureStructure">
-                <titleStmt>
-                        <title>Feature Structure</title>
-                </titleStmt>
-                <info type="description">
-                        <p/>
-                </info>
-        </topic>
-        <topic id="TopicSerialization">
-                <titleStmt>
-                        <title>Serialization</title>
-                </titleStmt>
-                <info type="description">
-                        <p/>
-                </info>
-        </topic>
-        <topic id="TopicThesaurus">
-                <titleStmt>
-                        <title>Thesaurus</title>
-                </titleStmt>
-                <info type="description">
-                        <p>The Thesaurus is the alphabetically or topically structured vocabulary.
-                                The terms in a thesaurus are grouped together according to
-                                similarity of meaning or domain of knowledge, and are interconnected
-                                by semantic relations such as synonym, antonym, hypernym
-                                (generalization), hyponym (specification), etc.</p>
-                        <p>There are thesauri with word definitions, or/and translations,
-                                monolingual and multilingual. Thesauri are used in many applications
-                                including information retrieval and natural language processing, for
-                                example for identifying the synonyms and other semantically similar
-                                related terms for indexing online material or for text analysis
-                                applications.</p>
-                </info>
-        </topic>
-        <topic id="TopicControlledVocabulary">
-                <titleStmt>
-                        <title>Controlled Vocabulary</title>
-                </titleStmt>
-                <info type="description">
-                        <p>A controlled vocabulary is a "list of terms that have been enumerated
-                                explicitly. This list is controlled by and is available from a
-                                controlled vocabulary registration authority. All terms in a
-                                controlled vocabulary must have an unambiguous, non-redundant
-                                definition."
-                                <a href="http://www.niso.org/kst/reports/standards?step=2&amp;gid=None&amp;project_key%3Austring%3Aiso-8859-1=7cc9b583cb5a62e8c15d3099e0bb46bbae9cf38a">
+<topics xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/spec.xsd">
+    <topic id="TopicGenAnn">
+        <titleStmt>
+            <title>Generic Corpus Annotation</title>
+        </titleStmt>
+        <info type="description">
+            <p>Annotated corpus is an important resource in linguistic research and is used in
+                diverse ways, for example in word sense disambiguation, dictionary creation,
+                lexicographic research, information extraction, and so on. Corpus annotation is
+                understood as “the practice of adding interpretative (especially linguistic)
+                information to an existing corpus of spoken and/or written language” (Leech (1997):
+                Corpus Annotation Schemes). This information can include data of different levels of
+                linguistics: pragmatics, syntax, semantics, grammatics etc. In this case, a
+                distinction is made between primary data and its annotation data.</p>
+            <p>They are two techniques for data annotation: in-line and stand-off annotations. In
+                the inline annotation, the primary and annotation data are a unit and are saved in
+                one data file. The disadvantages of this technique are:</p>
+            <ul>
+                <li> The original data is manipulated and complicated by further processings</li>
+            </ul>
+            <ul>
+                <li>The annotation structures can be overlapped</li>
+            </ul>
+            <ul>
+                <li>The multiple annotations are arranged hardly</li>
+            </ul>
+            <p>Recently, the stand-off annotation has been widely used. The concept of the
+                annotation is that one or more annotations can be saved separately from the primary
+                data and linked to it. The annotation data can be stored in the same file with the
+                primary data or separately in another file. The advantages are:</p>
+            <ul>
+                <li>The separation of primary data and its annotations makes it possible that the
+                    primary data is unchanged and can be used for further processing. With indexing
+                    on sign-level and word-level, the annotations reference the primary data
+                    directly. For this reason, it is necessary that the primary data stay unchanged,
+                    otherwise the indexing could be messed up. Therefore, it is reasonable to define
+                    a read-only permission for the primary data file.</li>
+            </ul>
+            <ul>
+                <li>Multiple annotation</li>
+            </ul>
+            <ul>
+                <li>It is relatively easy to amend the primary data with further annotations. For
+                    this purpose new files will be created.</li>
+            </ul>
+            <ul>
+                <li>Each annotation can be modified separately.</li>
+            </ul>
+            <p>EXtensible Markup Language (XML) is used for stand-off annotation in the majority of
+                cases. The XPointer and XLink expressions are used to link and reference annotation
+                data to the original text.</p>
+            <p>Other types of corpus annotation are:</p>
+            <ul>
+                <li>Lemmatization</li>
+            </ul>
+            <ul>
+                <li>Part-of-speech annotation</li>
+            </ul>
+            <ul>
+                <li>Syntactical annotation</li>
+            </ul>
+            <ul>
+                <li>Semantic annotation</li>
+            </ul>
+            <ul>
+                <li>Discourse annotation</li>
+            </ul>
+            <ul>
+                <li>Pragmatic annotation</li>
+            </ul>
+            <ul>
+                <li>Phonetic annotation</li>
+            </ul>
+            <ul>
+                <li>Lexical annotation</li>
+            </ul>
+        </info>
+    </topic>
+    <topic id="TopicSynAnn">
+        <titleStmt>
+            <title>Syntactic Annotation</title>
+        </titleStmt>
+        <info type="description">
+            <p>Syntactic annotation includes across-word analysis and its goal is to describe
+                structure of sentences. It shows how the words build phrases and sentences, and
+                their relationship with each other in a sentence.</p>
+            <p>Sometimes a syntactically annotated corpus is called a treebank, because it is
+                represented in a tree structure.</p>
+            <p> A distinction is made between two basic models: constituency- and dependency-based
+                structure annotation. Both structures give the hierarchical structure of the
+                sentence. They differ from each other in the way that the elements hierarchically
+                relate to each other in one sentence. In the constituent structure, the words build
+                a syntactic unit such as noun phrase and verb phrase. The phrases are hierarchically
+                arranged and may be deeply nested.</p>
+            <p>However, the dependence structure is based on the dependency between the words in one
+                sentence and it describes how words relate to other words. In a dependence
+                structure, one word is a head and others are its dependents. Usually the tensed verb
+                is head of structure and the other words are subordinated to it.</p>
+            <p>The further distinction is made between partial and full syntactic analysis. The full
+                parsing describes a complete parse tree of a sentence. This kind of parsing is
+                difficult and time consuming, because it has large grammatical coverage.
+                Additionally it is obtained with a very large technical and time effort. The reason
+                is that all possible parse trees must be calculated for a given sentence.</p>
+            <p>Another alternative analysis is the partial parsing or sometimes called chunking. It
+                describes a partial structure of a sentence without building a complete parse tree.
+                In contrast to full syntactic analysis, the partial parsing can identify the phrases
+                (for example noun-phrase or verb-phrase) or segments in the sentence. It can not
+                analyse the phrases itself or assign what kind of relation the phrases have with
+                each other within a sentence. However, it achieves higher accuracy than full
+                parsing, and it can be carried out quickly and efficiently. Partial parsing might be
+                applied as first step in full parsing as well.</p>
+        </info>
+    </topic>
+    <topic id="TopicMetaLanguage">
+        <titleStmt>
+            <title>Meta Language</title>
+        </titleStmt>
+        <info type="description">
+            <p>A meta language is the foundation of a markup language. It provides at least the
+                syntax and the formal model. Sometimes, a meta language also provides one or more
+                document grammar formalism(s) defining a specific markup language.</p>
+        </info>
+    </topic>
+    <topic id="TopicTransformation">
+        <titleStmt>
+            <title>Transformation</title>
+        </titleStmt>
+        <info type="description">
+            <p>The goal of transformation is to convert the source data of a certain structure and
+                content, to another specific structure or another format, while the source data
+                remains unchanged. There are different tasks like changing, reformatting of the data
+                structure, merging of data or modification of data representation.</p>
+        </info>
+    </topic>
+    <topic id="TopicFormatting">
+        <titleStmt>
+            <title>Formatting</title>
+        </titleStmt>
+        <info type="description">
+            <p>Formatting describes the representation of source data for output to on-line reading,
+                printing, speech programs, etc. In contrast to transformation, which transforms one
+                data structure and content into another specific structure or another format,
+                formatting focuses on how the source data should appear, be visualised or
+                represented. </p>
+        </info>
+    </topic>
+    <topic id="TopicDataCat">
+        <titleStmt>
+            <title>Data Categorization</title>
+        </titleStmt>
+        <info type="description">
+            <p>Data Categorization is a mechanism to create a central global (or local) registry for
+                both data categories (i.e. the element and attribute names, or more generic:
+                concepts) and values used in an annotation process.</p>
+        </info>
+    </topic>
+    <topic id="TopicQuery">
+        <titleStmt>
+            <title>Query</title>
+        </titleStmt>
+        <info type="description">
+            <p>Query language is a kind of computer language, which is used for requesting
+                information from database or other information systems.</p>
+            <p>The request is made via queries, a kind of expression or instruction based on the
+                same principle, so that the user achieves a specified set of objects without the
+                need for specific programming skills. The queries are build as strings with specific
+                keywords and syntax, which vary across the query language.</p>
+            <p>In general, a distinction is made between database query languages and information
+                retrieval query languages. The best known database query languages are Structured
+                Query Language (SQL), Multidimensional Expression (MDX) and so on. The information
+                retrieval query languages, for instance XQuery, are used for requesting collections
+                of XML data.</p>
+        </info>
+    </topic>
+    <topic id="TopicConstraintLanguage">
+        <titleStmt>
+            <title>Constraint Language</title>
+        </titleStmt>
+        <info type="description">
+            <p>A constraint language provides a formal model and a syntax for defining specific
+                constraints for validating instances of a given markup language. Constraint
+                languages (CL) can be subdivided into grammar-based CL and rule-based CL.</p>
+        </info>
+    </topic>
+    <topic id="TopicML">
+        <titleStmt>
+            <title>Annotation of Multilingual Data</title>
+        </titleStmt>
+        <info type="description">
+            <p>Multilingual data are identical or similar data in two or more different languages.
+                Multilingual data with different levels of annotation have been used in all kinds of
+                language-specific or cross-linguistic research and in various natural language
+                processing tasks. They can be applied for a huge range of applications such as
+                machine translation, speech recognition, information retrieval etc. Some examples of
+                multilingual data are multilingual corpora (e.g. Europarl), international
+                vocabularies (e.g. Agrovoc) or multilingual datasets (e.g. DBpedia, YAGO),
+                multilingual encyclopaedia and ontology (e.g. BabelNet), and multilingual dictionary
+                (e.g. OmegaWiki).</p>
+            <p>The complexity factors for building multilingual annotated data are the size of the
+                data, the number of languages, and the types of annotation. Some problems in
+                multilingual annotation are encoding characters, recognizing letters, numerals and
+                symbols in the data, linking between different resources refering to the same entity
+                in different languages, and filling in any lexical gap. Lexical mismatches or
+                overlaps in a target language is also a common problem. </p>
+        </info>
+    </topic>
+    <topic id="TopicMafAnn">
+        <titleStmt>
+            <title>Morpho-syntactic Annotation</title>
+        </titleStmt>
+        <info type="description">
+            <p>During morpho-syntactic annotation each lexical tokens in the text corpus becomes a
+                tag of morpho-syntactic labels such as part of speech and other morphological
+                characteristics.</p>
+            <p>Identification of part of speech is the basic step not only for morpho-syntactic
+                analysis, but also for many other linguistic annotations such as syntactic, semantic
+                etc. Thereby, the tokens are tagged (e.g as nouns, verbs, adjectives, adverbs) and
+                the syntactic function of the word is identified. It determines, which thematic role
+                (e.g subject, object, predicate) has a word in the sentence.</p>
+            <p>This will be followed by analysis of morphological characteristics and inflectional
+                morphology. During this analysis each token is reduced to its basic morphological
+                form and its morphological structure (internal structure of words) and grammatical
+                forms (such as number, gender, case, person, tense, aspect, mood etc.) are
+                allocated.</p>
+        </info>
+    </topic>
+    <topic id="TopicMetadata">
+        <titleStmt>
+            <title>Metadata</title>
+        </titleStmt>
+        <info type="description">
+            <p>Metadata contained the information about other data. This information should allow
+                or/and facilitate to discover, retrieve, use and manage relevant resources. To sum
+                up, metadata help to organize those resources.</p>
+            <p>Metadata describe main information such as title, author, location or when and where
+                the resource was created, and a lot of other data.</p>
+            <p>The metadata can be created for physical and digital versions of resources as well.
+                Metadata for digital objects can be embedded in a digital object or it can be stored
+                separately. In this case, metadata should be linked to the objects that are stored
+                and managed in a database. That allows to add, search, modify and read metadata
+                information much more quickly.</p>
+            <p>There are three main types of metadata:</p>
+            <ul>
+                <li>Descriptive metadata contain generic information about a resource, which should
+                    help to search, identify and retrieve resource successfully. Typically it
+                    includes elements such as title, author, abstract, publisher and keywords,
+                    subjects. etc.</li>
+            </ul>
+            <ul>
+                <li>Structural metadata describe information about logical and physical organization
+                    of a resource. For example the information on pages, chapter and subchapter in a
+                    text document. </li>
+            </ul>
+            <ul>
+                <li>Administrative metadata include the technical information about the resource,
+                    its creation, quality control, rights, selection criteria for digitization and
+                    preservation. The administrative metadata can fall into two following
+                    categories: rights management metadata and preservation metadata.</li>
+            </ul>
+            <p>Structural metadata describes information about logical and physical organization of
+                a resource, for example, the information on pages, chapter and subchapter in a text
+                document.</p>
+            <p>Administrative metadata includes the technical information about the resource, its
+                creation, quality control, rights, selection criteria for digitization and
+                preservation. The administrative metadata can fall into two following categories:
+                rights management metadata and preservation metadata.</p>
+            <p>The most common storing format for Metadata is XML, SGML and HTML. There are many
+                different metadata schemes. Some of the most popular metadata schemes are: Dublin
+                Core, OLAC, IMDI, TEI(-Header), etc.</p>
+            <p>They differ in their variety of usage, design, extensibility, complexity,
+                interoperability with other schemes. Choosing one of the metadata schemes or another
+                depends on resources, which should be described, and objectives of use.</p>
+        </info>
+    </topic>
+    <topic id="TopicSemAnn">
+        <titleStmt>
+            <title>Semantic Annotation</title>
+        </titleStmt>
+        <info type="description">
+            <p>In contrast to human a computer cannot understand the meaning of the words or the
+                sentences in a text. However in some working areas, such as informational retrieval,
+                named entity recognition, event extraction or sentiment analysis, it is necessary to
+                find, extract, manipulate or manage some specific knowledge contained in
+                heterogenous information documents in short time. To achieve this, there are many
+                statistics, or machine learning methods to extract and identify automatically the
+                information, which are based on the semantic annotated corpora. </p>
+            <p> What the entities mean in the text, how they are related to each other or how these
+                relations can be evaluated automatically, can be decoded during the tag of semantic
+                labels.</p>
+            <p> Semantic annotation provides description of various kind of the knowledge contained
+                in a document and it’s semantics in the domain. The purpose of semantic annotation
+                is to assign the entities in the text and to link to their semantic descriptions.
+                The semantic annotation can provide information about the type of named entity,
+                temporal and event information, information about the discourse and semantic
+                relation between entities, etc.</p>
+        </info>
+    </topic>
+    <topic id="TopicTerminology">
+        <titleStmt>
+            <title>Terminology</title>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </topic>
+    <topic id="TopicKnowledgeRepresentation">
+        <titleStmt>
+            <title>Knowledge Representation</title>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </topic>
+    <topic id="TopicLexicalKnowledge">
+        <titleStmt>
+            <title>Lexical Knowledge</title>
+        </titleStmt>
+        <info type="description">
+            <p>Lexical knowledge describes knowledge about words. The goal of the lexical knowledge
+                is to describe all information about words and their relationships. The lexical
+                knowledge includes several information aspects of linguistic theory such as
+                morpho-syntactical, semantical, pragmatical and lexical aspect.</p>
+            <p>The morpho-syntactical aspect describes the words, their constitutive parts and
+                specifies how words combine structurally. The semantic aspect describes the meaning
+                of a word in terms of the concepts of some knowledge base. It specifies how words
+                can be combined to express the several meaning. The pragmatic aspect describes
+                information such as connotation, implicature, style, etc. The lexical aspect
+                describes intern lexical constraints and relations between different linguistic
+                units and compounds such as homonymy, synonymy, antonymy, hypernymy, hyponymy,
+                etc.</p>
+        </info>
+    </topic>
+    <topic id="TopicOntology">
+        <titleStmt>
+            <title>Ontology</title>
+        </titleStmt>
+        <info type="description">
+            <p>Ontology is a formal structured presentation of any number of concepts and their
+                respective relationships to each other. The ontology describes the knowledge with
+                help of standardized terminology, meaning of individual concepts and semantic
+                relations between the terms. All information in ontology forms a kind of network for
+                representing knowledge. This knowledge can be used in different ways, for example in
+                informational retrieval, artificial intelligence, the Semantic Web, software
+                engineering, biomedical informatics, library science, and so on.</p>
+        </info>
+    </topic>
+    <topic id="TopicFeatureStructure">
+        <titleStmt>
+            <title>Feature Structure</title>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </topic>
+    <topic id="TopicSerialization">
+        <titleStmt>
+            <title>Serialization</title>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </topic>
+    <topic id="TopicThesaurus">
+        <titleStmt>
+            <title>Thesaurus</title>
+        </titleStmt>
+        <info type="description">
+            <p>The Thesaurus is the alphabetically or topically structured vocabulary. The terms in
+                a thesaurus are grouped together according to similarity of meaning or domain of
+                knowledge, and are interconnected by semantic relations such as synonym, antonym,
+                hypernym (generalization), hyponym (specification), etc.</p>
+            <p>There are thesauri with word definitions, or/and translations, monolingual and
+                multilingual. Thesauri are used in many applications including information retrieval
+                and natural language processing, for example for identifying the synonyms and other
+                semantically similar related terms for indexing online material or for text analysis
+                applications.</p>
+        </info>
+    </topic>
+    <topic id="TopicControlledVocabulary">
+        <titleStmt>
+            <title>Controlled Vocabulary</title>
+        </titleStmt>
+        <info type="description">
+            <p>A controlled vocabulary is a "list of terms that have been enumerated explicitly.
+                This list is controlled by and is available from a controlled vocabulary
+                registration authority. All terms in a controlled vocabulary must have an
+                unambiguous, non-redundant definition."
+                <a href="http://www.niso.org/kst/reports/standards?step=2&amp;gid=None&amp;project_key%3Austring%3Aiso-8859-1=7cc9b583cb5a62e8c15d3099e0bb46bbae9cf38a">
                     ANSI/NISO Z39.19-2005</a></p>
-                        <p>The primary purposes of controlled vocabularies are to organize
-                                information, to provide terminology to catalog and to improve the
-                                effectiveness of information storage and retrieval systems.</p>
-                </info>
-        </topic>
-        <topic id="TopicSegmentation">
-                <titleStmt>
-                        <title>Segmentation</title>
-                </titleStmt>
-                <info type="description">
-                        <p>According to Jurafsky and Martin (1999: 178), the segmentation is the
-                                process of taking undifferentiated sequence of symbols and
-                                segmenting it into meaningful linguistic units. As units can be
-                                defined the sentences as well as the word or the topic. It
-                                distinguishes for example between the sentence and word
-                                segmentation. The task of the sentence segmentation is to find the
-                                sentence boundaries in the text. Similarly the task of word
-                                segmentation is to split the text into word boundaries.</p>
-                        <p>Depending on the language, the task of the segmentation can be more or
-                                less complicated.</p>
-                </info>
-        </topic>
-        <topic id="TopicSchema">
-                <titleStmt>
-                        <title>Schema</title>
-                </titleStmt>
-                <info type="description">
-                        <p/>
-                </info>
-        </topic>
-        <topic id="TopicFileFormats">
-                <titleStmt>
-                        <title>File Formats</title>
-                </titleStmt>
-                <info type="description">
-                        <p/>
-                </info>
-        </topic>
-        <topic id="TopicMarkupLanguage">
-                <titleStmt>
-                        <title>Markup Language</title>
-                </titleStmt>
-                <info type="description">
-                        <p>Markup languages are languages that provide an extra information about
-                                the text in order to facilitate automated processing of it,
-                                including editing and formatting for displaying or printing.</p>
-                        <p>A markup language specifies groups of characters for formatting the
-                                layout, style, structural presentation of the text such as headings,
-                                paragraphs, lists etc. These special groups of characters are called
-                                tags.</p>
-                        <p>An example of the most widespread and used markup language is HTML, which
-                                is used to allow documents to be displayed in web browsers.</p>
-                        <p>The other most popular is XML, which is a metalanguage, but it allows the
-                                definition of a document markup language and its structure. The
-                                advantage of using XML is the facility to develop or modify the
-                                markup language with a set of rules and tags, which suit to
-                                individual requirements and needs, for example name, title, address,
-                                etc.</p>
-                        <p>XML is used rather for storing structured data, than for formatting
-                                information on a page.</p>
-                </info>
-        </topic>
-        <topic id="TopicTranscription" display="show">
-                <titleStmt>
-                        <title>Transcription</title>
-                </titleStmt>
-                <info type="description">
-                        <p/>
-                </info>
-        </topic>
-        <topic id="TopicCharacterEncoding" display="show">
-                <titleStmt>
-                        <title>Character encoding</title>
-                </titleStmt>
-                <info type="description">
-                        <p/>
-                </info>
-        </topic>
-        <topic id="TopicOthers" display="hide">
-                <titleStmt>
-                        <title>Others</title>
-                </titleStmt>
-                <info type="description">
-                        <p/>
-                </info>
-        </topic>
+            <p>The primary purposes of controlled vocabularies are to organize information, to
+                provide terminology to catalog and to improve the effectiveness of information
+                storage and retrieval systems.</p>
+        </info>
+    </topic>
+    <topic id="TopicSegmentation">
+        <titleStmt>
+            <title>Segmentation</title>
+        </titleStmt>
+        <info type="description">
+            <p>According to Jurafsky and Martin (1999: 178), the segmentation is the process of
+                taking undifferentiated sequence of symbols and segmenting it into meaningful
+                linguistic units. As units can be defined the sentences as well as the word or the
+                topic. It distinguishes for example between the sentence and word segmentation. The
+                task of the sentence segmentation is to find the sentence boundaries in the text.
+                Similarly the task of word segmentation is to split the text into word
+                boundaries.</p>
+            <p>Depending on the language, the task of the segmentation can be more or less
+                complicated.</p>
+        </info>
+    </topic>
+    <topic id="TopicSchema">
+        <titleStmt>
+            <title>Schema</title>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </topic>
+    <topic id="TopicFileFormats">
+        <titleStmt>
+            <title>File Formats</title>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </topic>
+    <topic id="TopicMarkupLanguage">
+        <titleStmt>
+            <title>Markup Language</title>
+        </titleStmt>
+        <info type="description">
+            <p>Markup languages are languages that provide an extra information about the text in
+                order to facilitate automated processing of it, including editing and formatting for
+                displaying or printing.</p>
+            <p>A markup language specifies groups of characters for formatting the layout, style,
+                structural presentation of the text such as headings, paragraphs, lists etc. These
+                special groups of characters are called tags.</p>
+            <p>An example of the most widespread and used markup language is HTML, which is used to
+                allow documents to be displayed in web browsers.</p>
+            <p>The other most popular is XML, which is a metalanguage, but it allows the definition
+                of a document markup language and its structure. The advantage of using XML is the
+                facility to develop or modify the markup language with a set of rules and tags,
+                which suit to individual requirements and needs, for example name, title, address,
+                etc.</p>
+            <p>XML is used rather for storing structured data, than for formatting information on a
+                page.</p>
+        </info>
+    </topic>
+    <topic id="TopicTranscription" display="show">
+        <titleStmt>
+            <title>Transcription</title>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </topic>
+    <topic id="TopicCharacterEncoding" display="show">
+        <titleStmt>
+            <title>Character encoding</title>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </topic>
+    <topic id="TopicOthers" display="hide">
+        <titleStmt>
+            <title>Others</title>
+        </titleStmt>
+        <info type="description">
+            <p/>
+        </info>
+    </topic>
 </topics>

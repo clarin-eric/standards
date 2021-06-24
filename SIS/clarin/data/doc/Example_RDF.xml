@@ -1,5 +1,4 @@
-<!-- Here is an example for a RDF -->
-<rdf:RDF xmlns:book="http://www.library.fake/book#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!-- Here is an example for a RDF --><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:book="http://www.library.fake/book#">
     <rdf:Description rdf:about="http://www.library.fake/book/XSLT 2.0 and XPath 2.0">
         <book:author>Michael Kay</book:author>
         <book:language>english</book:language>

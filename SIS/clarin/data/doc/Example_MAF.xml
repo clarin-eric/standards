@@ -1,5 +1,4 @@
-<!-- An example for a MAF annotation -->
-<maf>
+<!-- An example for a MAF annotation --><maf>
     <token id="t1">I</token>
     <token id="t2">go</token>
     <token id="t3">home</token>

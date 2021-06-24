@@ -1,6 +1,4 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecIPA"
-    standardSettingBody="SBOther" topic="TopicCharacterEncoding TopicFormatting"
-    xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecIPA" standardSettingBody="SBOther" topic="TopicCharacterEncoding TopicFormatting" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
     <titleStmt>
         <title>International Phonetic Alphabet</title>
         <abbr>IPA</abbr>

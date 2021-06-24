@@ -1,5 +1,4 @@
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPDFA-4"
-  xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPDFA-4" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
     <title>PDF for archival preservation, 2020</title>
     <abbr>PDF/A-4</abbr>

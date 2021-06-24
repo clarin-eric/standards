@@ -1,5 +1,4 @@
-<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecPDF" standardSettingBody="SBISO"
-    topic="TopicFileFormats" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
+<spec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SpecPDF" standardSettingBody="SBISO" topic="TopicFileFormats" xsi:noNamespaceSchemaLocation="../../schemas/spec.xsd">
     <titleStmt>
         <title>Portable Document Format</title>
         <abbr>PDF</abbr>
@@ -23,8 +22,8 @@
             animations, and movies. At the same time, PDF files remain compact and have the much
             reduced file sizes as other file formats such PostScript and TIFF. </p>
         <p>PDF is an open standard, that is widely used as a format for creating electronic
-            documents, as well as for exchanging and archiving data. Since version 1.7, it has been certified by ISO as
-            an official ISO standard.</p>
+            documents, as well as for exchanging and archiving data. Since version 1.7, it has been
+            certified by ISO as an official ISO standard.</p>
         <p>It is relevant to mention that PDF has a number of subsets:</p>
         <ul>
             <li>PDF/X ("PDF for Exchange"</li>
@@ -35,7 +34,8 @@
             <li>PDF/raster 1.0 (for storing, transporting and exchanging multi-page raster-image
                 documents, especially scanned documents)</li>
         </ul>
-        <p>In the context of CLARIN's language data preservation efforts, centres and users are advised to prioritize PDF/A over PDF.</p>
+        <p>In the context of CLARIN's language data preservation efforts, centres and users are
+            advised to prioritize PDF/A over PDF.</p>
     </info>
     <info type="recReading">
         <biblStruct id="rem3d2" type="onlineSource">
@@ -104,7 +104,7 @@
                         storage conditions;</li>
                     <li>methods for validating the conformance of PDF files or readers;</li>
                     <li>required computer hardware and/or operating system."
-                        <p>(<a href="https://www.iso.org/standard/51502.html">Abstract, ISO 32000-1:2008</a>)</p></li>
+                            <p>(<a href="https://www.iso.org/standard/51502.html">Abstract, ISO 32000-1:2008</a>)</p></li>
                 </ul>
             </info>
             <address type="URL">http://www.iso.org/iso/home.html</address>
@@ -126,10 +126,20 @@
             <versionNumber type="major">ISO 32000-2:2020</versionNumber>
             <date>2014-10-21</date>
             <info type="description">
-                <p>This document specifies a digital form for representing electronic documents to enable users to exchange and view electronic documents independent of the environment in which they were created or the environment in which they are viewed or printed. It is intended for developers of software that creates PDF files (PDF writers), software that reads existing PDF files and (usually) interprets their contents for display (PDF readers), software that reads and displays PDF content and interacts with the computer users to possibly modify and save the PDF file (interactive PDF processors) and PDF products that read and/or write PDF files for a variety of other purposes (PDF processors). (PDF writers and PDF readers are more specialised classifications of interactive PDF processors and all are PDF processors).</p>
-                    
-                    <p>This document does not specify the following:</p>
-                    
+                <p>This document specifies a digital form for representing electronic documents to
+                    enable users to exchange and view electronic documents independent of the
+                    environment in which they were created or the environment in which they are
+                    viewed or printed. It is intended for developers of software that creates PDF
+                    files (PDF writers), software that reads existing PDF files and (usually)
+                    interprets their contents for display (PDF readers), software that reads and
+                    displays PDF content and interacts with the computer users to possibly modify
+                    and save the PDF file (interactive PDF processors) and PDF products that read
+                    and/or write PDF files for a variety of other purposes (PDF processors). (PDF
+                    writers and PDF readers are more specialised classifications of interactive PDF
+                    processors and all are PDF processors).</p>
+
+                <p>This document does not specify the following:</p>
+
                 <ul>
                     <li>specific processes for converting paper or electronic documents to the PDF
                         file format;</li>
