@@ -44,12 +44,12 @@
     <domain id="9">
         <name>Catalogue Metadata</name>
         <abbr/>
-        <desc>Basic structured documentation for discoverability and general description, to be openly provided for harvesting.</desc>
+        <desc>Basic structured information for discoverability and general description, to be openly provided for harvesting.</desc>
     </domain>
     <domain id="10">
         <name>Metadata</name>
         <abbr/>
-        <desc>Comprehensive structured documentation including descriptive metadata but also information on provenance, rights information, technical metadata etc.</desc>
+        <desc>Comprehensive structured information including descriptive, structural and administrative metadata.</desc>
     </domain>
     <domain id="11">
         <name>Documentation</name>
