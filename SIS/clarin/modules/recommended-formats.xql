@@ -45,18 +45,28 @@ declare function rf:print-recommendation($type) {
             ()
 };
 
-declare function rf:print-centers() {
+declare function rf:print-centers($center) {
     for $c in data($center:centers/@id)
     return
-        <option value="{$c}">{$c}</option>
+        if ($c eq $center)
+        then
+        (<option value="{$c}" selected="selected">{$c}</option>)
+        else
+        (<option value="{$c}">{$c}</option>)
 };
 
-declare function rf:print-domains() {
+declare function rf:print-domains($domainId) {
     for $d in $format:domains
+    let $id := $d/@id
     return
-        <option value="{$d/@id}">{$d/name/text()}</option>
+        if ($id eq $domainId)
+        then
+        <option value="{$id}" selected="selected">{$d/name/text()}</option>
+        else 
+        <option value="{$id}">{$d/name/text()}</option>
 };
 
+(: deprecated
 declare function rf:print-domains($path) {
     let $size := count($format:domains)
     let $lastDomain := $format:domains[$size]
@@ -70,6 +80,14 @@ declare function rf:print-domains($path) {
             ($link, " | ")
         else
             ($link)
+};:)
+
+declare function rf:print-option($selected, $value,$label) {
+    if ($selected eq $value)
+    then 
+    <option value="{$value}" selected="selected">{$label}</option>
+    else 
+    <option value="{$value}">{$label}</option>
 };
 
 declare function rf:print-recommendation-level($recommendationNumber) {
@@ -222,11 +240,16 @@ declare function rf:export-table($center, $domainId, $recommendationType, $nodes
     
     return
         <result>
-            <filter>
-                <center>{$center}</center>
-                <domain>{$domainName}</domain>
-                <level>{rf:print-recommendation-level($recommendationType)}</level>
-            </filter>
+            <header>
+                <title>CLARIN Standards Information System (SIS) export</title>
+                <url>{app:link("views/recommended-formats-with-search.xq")}</url>
+                <date>{fn:current-dateTime()}</date>
+                <filter>
+                    <center>{$center}</center>
+                    <domain>{$domainName}</domain>
+                    <level>{rf:print-recommendation-level($recommendationType)}</level>
+                </filter>
+            </header>
             <formats>{$rows}</formats>
         </result>
 

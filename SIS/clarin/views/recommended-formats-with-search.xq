@@ -46,22 +46,22 @@ else
                                 <tr>
                                     <td>
                                         <select name="center" class="inputSelect" style="width:200px;">
-                                            <option value="" selected="selected">Select centre ...</option>
-                                            {rf:print-centers()}
+                                            {rf:print-option($center, "", "Select centre ...")}
+                                            {rf:print-centers($center)}
                                         </select>
                                     </td>
                                     <td>
                                         <select name="domain" class="inputSelect" style="width:200px;">
-                                            <option value="" selected="selected">Select domain ...</option>
-                                            {rf:print-domains()}
+                                            {rf:print-option($domainId, "", "Select domain ...")}
+                                            {rf:print-domains($domainId)}
                                         </select>
                                     </td>
                                     <td>
                                         <select name="type" class="inputSelect" style="width:200px;">
-                                            <option value="" selected="selected">Select recommendation ...</option>
-                                            <option value="1">recommended</option>
-                                            <option value="2">acceptable</option>
-                                            <option value="3">deprecated</option>
+                                            {rf:print-option($recommendationType, "", "Select recommendation ...")}
+                                            {rf:print-option($recommendationType, "1", "recommended")}
+                                            {rf:print-option($recommendationType, "2", "acceptable")}
+                                            {rf:print-option($recommendationType, "3", "deprecated")}
                                         </select>
                                     </td>
                                     <td>
