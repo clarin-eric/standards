@@ -8,10 +8,11 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommendation" at "../modules/recommendation.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 
-let $center := request:get-parameter('center', '')
-let $domainId := request:get-parameter('domain', '')
-let $recommendationType := request:get-parameter('type', '')
-let $sortBy := request:get-parameter('sortBy', '')
+let $reset := request:get-parameter('resetButton', '')
+let $center := if ($reset) then () else request:get-parameter('center', '')
+let $domainId := if ($reset) then () else request:get-parameter('domain', '')
+let $recommendationType := if ($reset) then () else request:get-parameter('type', '')
+let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
 let $export := request:get-parameter('exportButton', '')
 let $recommendationTable := rf:print-recommendation($center,$domainId, $recommendationType, $sortBy)
 
@@ -33,7 +34,7 @@ else
                     <div class="navigation">
                         &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Recommended Formats</a>
                     </div>
-                    <div class="title">CLARIN Format Recommendations</div>
+                    <div class="title" id="pagetitle">CLARIN Format Recommendations</div>
                     
                     <div><p>This page presents formats of data depositions that various CLARIN centres are ready to accept. Each format,
                             for each centre, can be recommended, acceptable or deprecated in the context of several domains that represent the
@@ -41,23 +42,23 @@ else
                         <p>Use the dropboxes to select the particular domain, centre, and/or level of recommendation. Columns can be sorted, 
                            and your results can be downloaded as XML.</p></div>
                     <div style="margin-top:30px;">
-                        <form id="searchRecommendation" method="post" action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
-                            <table>
+                        <form id="searchRecommendation" style="float:left;" method="post" action="{app:link("views/recommended-formats-with-search.xq?#pagetitle")}">
+                            <table style="margin:0;">
                                 <tr>
                                     <td>
-                                        <select name="center" class="inputSelect" style="width:200px;">
+                                        <select name="center" class="inputSelect" style="width:175px;">
                                             {rf:print-option($center, "", "Select centre ...")}
                                             {rf:print-centers($center)}
                                         </select>
                                     </td>
                                     <td>
-                                        <select name="domain" class="inputSelect" style="width:200px;">
+                                        <select name="domain" class="inputSelect" style="width:175px;">
                                             {rf:print-option($domainId, "", "Select domain ...")}
                                             {rf:print-domains($domainId)}
                                         </select>
                                     </td>
                                     <td>
-                                        <select name="type" class="inputSelect" style="width:200px;">
+                                        <select name="type" class="inputSelect" style="width:175px;">
                                             {rf:print-option($recommendationType, "", "Select recommendation ...")}
                                             {rf:print-option($recommendationType, "1", "recommended")}
                                             {rf:print-option($recommendationType, "2", "acceptable")}
@@ -65,13 +66,21 @@ else
                                         </select>
                                     </td>
                                     <td>
-                                        <input name="searchButton" class="button" style="margin-bottom:5px;height:25px;" type="submit" value="Search"/>
+                                        <input name="searchButton" class="button"
+                                        style="margin:0;height:25px;" type="submit" value="Search"/>
+                                    </td>
+                                    <td>
+                                        <input name="resetButton" class="button"
+                                        style="margin-bottom:5px;height:25px;" type="submit" value="Reset"/>
                                     </td>
                                 </tr>
                             </table>
                         </form>
+                    </div>
+                    <div>
                         <form method="get" action="" style="text-align:right;">
-                            <input name="exportButton" class="button" style="margin-bottom:5px;height:25px;width:150px;" type="submit" value="Export Table to XML"/>
+                            <input name="exportButton" class="button"
+                            style="margin-bottom:5px; margin-right:2px; margin-top:20px; height:25px;width:150px;" type="submit" value="Export Table to XML"/>
                             <input name="center" type="hidden" value="{$center}"/>
                             <input name="domain" type="hidden" value="{$domainId}"/>
                             <input name="type" type="hidden" value="{$recommendationType}"/>
