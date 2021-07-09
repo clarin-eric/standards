@@ -9,6 +9,7 @@ import module namespace center = "http://clarin.ids-mannheim.de/standards/center
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommendation" at "../modules/recommendation.xql";
 
+(:deprecated
 declare function rf:print-recommendation($type) {
     let $ids := format:get-all-ids()
     for $id in $ids
@@ -44,7 +45,7 @@ declare function rf:print-recommendation($type) {
         else
             ()
 };
-
+:)
 declare function rf:print-centers($center) {
     for $c in data($center:centers/@id)
     order by fn:lower-case($c)
@@ -63,9 +64,9 @@ declare function rf:print-domains($domainId) {
     return
         if ($id eq $domainId)
         then
-        <option value="{$id}" selected="selected">{$d/name/text()}</option>
+        <option value="{$id}" selected="selected" title="{$d/desc/text()}">{$d/name/text()}</option>
         else 
-        <option value="{$id}">{$d/name/text()}</option>
+        <option value="{$id}" title="{$d/desc/text()}">{$d/name/text()}</option>
 };
 
 (: deprecated
@@ -209,7 +210,7 @@ $centre, $domainName, $domainDesc, $rType) {
 
 };
 
-declare function rf:print-recommendation-row($id, $format-abbr, $centre, $domainName, $domainDesc, 
+declare function rf:print-recommendation-row($id, $format-abbr, $centre, $domainName, $domainDesc,  
 $rType) {
     <tr>
         <td class="recommendation-row"><a href="{app:link(concat("views/view-format.xq?id=", $id))}

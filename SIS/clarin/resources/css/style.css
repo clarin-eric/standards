@@ -240,11 +240,12 @@ th {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 250px;
-  background-color: grey;
+  width: 400px;
+  background-color: black;
   color: #fff;
-  padding: 5px;
+  padding: 7px;
   border-radius: 4px;
+  opacity:0.8;
  
   /* Position the tooltip text*/
   position: absolute;
@@ -257,10 +258,10 @@ th {
   position: absolute;
   top: 12%;
   right: 100%;
-  margin-top: -5px;
+  margin-top: -4px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent grey transparent transparent;
+  border-color: transparent black transparent transparent;
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
