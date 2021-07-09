@@ -47,6 +47,7 @@ declare function rf:print-recommendation($type) {
 
 declare function rf:print-centers($center) {
     for $c in data($center:centers/@id)
+    order by fn:lower-case($c)
     return
         if ($c eq $center)
         then
@@ -58,6 +59,7 @@ declare function rf:print-centers($center) {
 declare function rf:print-domains($domainId) {
     for $d in $format:domains
     let $id := $d/@id
+    order by fn:lower-case($d/name/text())
     return
         if ($id eq $domainId)
         then
