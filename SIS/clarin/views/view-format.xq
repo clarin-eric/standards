@@ -32,7 +32,7 @@ return
                     {menu:view()}
                     <div class="content">
                         <div class="navigation"> &gt;
-                            <a href="{app:link("views/list-formats.xq?sortBy=name&amp;page=1")}">Recommended Formats</a>
+                            <a href="{app:link("views/recommended-formats-with-search.xq")}">Data Deposition Formats</a>
                         </div>
                         <div><span class="heading">The requested format information is not found.</span></div>
                     </div>
@@ -63,7 +63,7 @@ return
                     {menu:view()}
                     <div class="content">
                         <div class="navigation"> &gt;
-                            <a href="{app:link("views/list-formats.xq?sortBy=name&amp;page=1")}">Formats</a> &gt;
+                            <a href="{app:link("views/recommended-formats-with-search.xq")}">Data Deposition Formats</a> &gt;
                             <a href="{app:link(concat("views/view-format.xq?id=", $id))}">{$format-name}</a>
                         </div>
                         
@@ -85,7 +85,7 @@ return
                         {vfm:print-multiple-values($format/schemaLoc, $id, "Schema locations:", fn:true())}
                         
                         
-                        {vfm:print-recommendation($format,$id)}
+                        {vfm:print-recommendation-in-clarin($format,$id)}
                         {vfm:print-recommendation-table($id,$domain,$center,$recommendationType,$sortBy)}
                         
                         {vfm:print-multiple-values($format/keyword, $id, "Keywords:")}

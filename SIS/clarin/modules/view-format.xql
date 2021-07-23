@@ -55,7 +55,7 @@ declare function vfm:print-multiple-values($list, $id, $label, $isLink as xs:boo
             ()
 };
 
-declare function vfm:print-recommendation($format,$format-id){
+declare function vfm:print-recommendation-in-clarin($format,$format-id){
     let $recommendations := $format/ClarinRecommendation/recommendation
     let $n := count($recommendations)
     return 
@@ -88,24 +88,52 @@ declare function vfm:print-recommendation-table($id,$domain,$center,$recommendat
             <tr>
                 <th class="header" style="width:25%;">
                     <a href="{
-                                app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=centre&amp;domain=",
-                                $domain, "&amp;type=", $recommendationType, "#recommendationTable"))
+                                app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=centre#recommendationTable"))
                             }">Clarin Centre</a>
                 </th>
                 <th class="header" style="width:25%;">
                     <a href="{
-                                app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=domain&amp;domain=",
-                                $domain, "&amp;type=", $recommendationType, "#recommendationTable"))
+                                app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=domain#recommendationTable"))
                             }">Domain</a></th>
                 <th class="header" style="width:25%;">
                     <a href="{
-                                app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=recommendation&amp;domain=",
-                                $domain, "&amp;type=", $recommendationType, "#recommendationTable"))
+                                app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=recommendation#recommendationTable"))
                             }">
                         Level</a></th>
             </tr>
-         {rf:getRecommendationForFormat($recommendations,$sortBy)}
+         {vfm:getRecommendationForFormat($recommendations,$sortBy)}
         </table>
         )
     else ()
 };
+
+declare function vfm:getRecommendationForFormat($recommendations, $sortBy) {
+    for $r in $recommendations
+    let $centre := data($r/parent::node()/@id)
+    for $values in fn:tokenize($r, "\.")
+    let $size := fn:string-length($values)
+    let $recommendationLevel := fn:substring($values, $size)
+    let $rType := rf:print-recommendation-level($recommendationLevel)
+    let $domainId := fn:substring($values, 1, $size - 1)
+    let $domainName := $format:domains[@id = $domainId]/name/text()
+    
+    
+    order by
+    if ($sortBy = 'centre') then
+        $centre
+    else
+        if ($sortBy = 'domain') then
+            $domainName
+        else
+            if ($sortBy = 'recommendation') then
+                $recommendationLevel
+            else
+                ()
+    return
+        <tr>
+            <td class="recommendation-row">{$centre}</td>
+            <td class="recommendation-row">{$domainName}</td>
+            <td class="recommendation-row">{$rType}</td>
+        </tr>
+};
+

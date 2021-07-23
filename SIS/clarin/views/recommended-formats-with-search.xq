@@ -32,7 +32,7 @@ else
                 {menu:view()}
                 <div class="content">
                     <div class="navigation">
-                        &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Recommended Formats</a>
+                        &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Data Deposition Formats</a>
                     </div>
                     <div class="title" id="pagetitle">CLARIN Format Recommendations</div>
                     
@@ -60,9 +60,9 @@ else
                                     <td>
                                         <select name="type" class="inputSelect" style="width:175px;">
                                             {rf:print-option($recommendationType, "", "Select recommendation ...")}
-                                            {rf:print-option($recommendationType, "1", "recommended")}
-                                            {rf:print-option($recommendationType, "2", "acceptable")}
-                                            {rf:print-option($recommendationType, "3", "deprecated")}
+                                            {rf:print-option($recommendationType, "r", "recommended")}
+                                            {rf:print-option($recommendationType, "a", "acceptable")}
+                                            {rf:print-option($recommendationType, "d", "deprecated")}
                                         </select>
                                     </td>
                                     <td>
@@ -80,7 +80,7 @@ else
                     <div>
                         <form method="get" action="" style="text-align:right;">
                             <input name="exportButton" class="button"
-                            style="margin-bottom:5px; margin-right:2px; margin-top:20px; height:25px;width:150px;" type="submit" value="Export Table to XML"/>
+                            style="margin-bottom:5px; margin-right:2px; margin-top:20px; height:25px;width:165px;" type="submit" value="Export Table to XML"/>
                             <input name="center" type="hidden" value="{$center}"/>
                             <input name="domain" type="hidden" value="{$domainId}"/>
                             <input name="type" type="hidden" value="{$recommendationType}"/>
