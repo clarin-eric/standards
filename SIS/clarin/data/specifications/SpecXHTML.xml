@@ -14,7 +14,7 @@
         <p>XHTML ist a reformulation of HTML in XML.</p>
     </info>
     <relation target="SpecHTML-4.01" type="isExtendedFrom"/>
-    <version id="SpecXHTML-1.0" status="W3C Recommendation" usedInCLARINCenter="CLARIN-PL1 IDS">
+    <version id="SpecXHTML-1.0" status="W3C Recommendation" usedInCLARINCentre="CLARIN-PL1 IDS">
         <titleStmt>
             <title>The Extensible HyperText Markup Language</title>
             <abbr>XHTML 1.0</abbr>

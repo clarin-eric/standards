@@ -66,7 +66,7 @@
             <p>CMDI uses ISO-DCR for semantic interoperability</p>
         </info>
     </relation>
-    <version id="SpecCmdi-Clarin" status="final" usedInCLARINCenter="MPI-PL CLARIN-DK-UCPH CLARIN-PL1 IDS BAS">
+    <version id="SpecCmdi-Clarin" status="final" usedInCLARINCentre="MPI-PL CLARIN-DK-UCPH CLARIN-PL1 IDS BAS">
         <titleStmt>
             <title>Component MetaData Infrastructure</title>
             <abbr internal="yes">CMDI-2012</abbr>

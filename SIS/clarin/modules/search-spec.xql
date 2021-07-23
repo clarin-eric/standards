@@ -17,7 +17,7 @@ import module namespace functx = "http://www.functx.com" at "../resources/lib/fu
 :)
 
 (: Search standards :)
-declare function search:get-results($query, $topic, $sb, $status, $usedInCLARINCenter, $CLARINapproved){
+declare function search:get-results($query, $topic, $sb, $status, $usedInCLARINCentre, $CLARINapproved){
     let $tokens := fn:tokenize($query, " ")          
     let $spec-group := 
         if (count($tokens)>0)
@@ -30,7 +30,7 @@ declare function search:get-results($query, $topic, $sb, $status, $usedInCLARINC
         then search:by-status($spec:specs,$status)
         else $spec:specs
         
-    return search:filter-clarin($spec-group,$usedInCLARINCenter,$CLARINapproved)
+    return search:filter-clarin($spec-group,$usedInCLARINCentre,$CLARINapproved)
 };
 
 declare function search:spec-by-query-and-filter($query-tokens, $topic, $sb, $status){
@@ -98,14 +98,14 @@ declare function search:by-status($spec-group,$status){
     $spec-group[descendant::node()[contains(@status,$status)]]
 };
 
-declare function search:filter-clarin($spec-group,$usedInCLARINCenter,$clarinApproval){         
-    if ($usedInCLARINCenter)
+declare function search:filter-clarin($spec-group,$usedInCLARINCentre,$clarinApproval){         
+    if ($usedInCLARINCentre)
     then 
         if ($clarinApproval)
-        (: $usedInCLARINCenter and CLARINapproved :)
-        then $spec-group[descendant-or-self::version[@usedInCLARINCenter and @CLARINapproved]]
-        (: $usedInCLARINCenter :)
-        else $spec-group[descendant-or-self::version/@usedInCLARINCenter]
+        (: $usedInCLARINCentre and CLARINapproved :)
+        then $spec-group[descendant-or-self::version[@usedInCLARINCentre and @CLARINapproved]]
+        (: $usedInCLARINCentre :)
+        else $spec-group[descendant-or-self::version/@usedInCLARINCentre]
     (: CLARINapproved :)
     else if ($clarinApproval)
     then $spec-group[version/@CLARINapproved]

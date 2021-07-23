@@ -6,7 +6,7 @@ import module namespace spec="http://clarin.ids-mannheim.de/standards/specificat
 import module namespace sb="http://clarin.ids-mannheim.de/standards/standardbody" at "../model/sb.xqm";
 import module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema" at "../model/schema.xqm";
 import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "app.xql";
-import module namespace center="http://clarin.ids-mannheim.de/standards/center" at "../model/center.xqm";
+import module namespace centre="http://clarin.ids-mannheim.de/standards/centre" at "../model/centre.xqm";
 
 (:  Define standard-relation functions
     @author margaretha
@@ -45,23 +45,23 @@ declare function rm:print-recTable($type){
             <tr>
                 <td style= "{$style}">{rm:get-recommendation-link($rec-abbr, $spec/@id, $rec/@specId)}</td>
                 <td style= "{$style}">{rm:get-recommendation-sb($spec/@standardSettingBody)}</td>
-                <td style= "{$style}" >{rm:get-clarin-centers($rec-node)}</td>
+                <td style= "{$style}" >{rm:get-clarin-centres($rec-node)}</td>
                 <td style= "{$style}">{rm:get-alternatives($rec)}</td>
                 <!--<td style= "{$style}">{$rec/info[@type="description"]}</td>-->
             </tr>
 };
 
-declare function rm:get-clarin-centers($rec-node){
-    let $clarin-centers := spec:get-clarin-centers($rec-node)
-    let $num-of-centers := count($clarin-centers)
+declare function rm:get-clarin-centres($rec-node){
+    let $clarin-centres := spec:get-clarin-centres($rec-node)
+    let $num-of-centres := count($clarin-centres)
     
-    for $i in 1 to $num-of-centers
-        let $id := $clarin-centers[$i]
-         let $c := <a href="{center:get-center($id)/a/@href}">{$id}</a>
+    for $i in 1 to $num-of-centres
+        let $id := $clarin-centres[$i]
+         let $c := <a href="{centre:get-centre($id)/a/@href}">{$id}</a>
     return 
-        if ($i < $num-of-centers)
+        if ($i < $num-of-centres)
         then ($c, ', ')
-        else <a href="{center:get-center($id)/a/@href}">{$id}</a>
+        else <a href="{centre:get-centre($id)/a/@href}">{$id}</a>
 };
 
 declare function rm:get-alternatives($rec){

@@ -27,7 +27,7 @@
                 (<a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37324">Abstract, ISO 24610-1:2006</a>)
             </p>
         </info>
-        <version id="SpecFSR" status="International Standard" usedInCLARINCenter="CLARIN-PL1">
+        <version id="SpecFSR" status="International Standard" usedInCLARINCentre="CLARIN-PL1">
             <titleStmt>
                 <abbr>FSR-2006</abbr>
                 <respStmt id="par2FS">

@@ -9,7 +9,7 @@ import module namespace spec="http://clarin.ids-mannheim.de/standards/specificat
 import module namespace topic="http://clarin.ids-mannheim.de/standards/topic" at "../model/topic.xqm";
 import module namespace sb="http://clarin.ids-mannheim.de/standards/standardbody" at "../model/sb.xqm";
 import module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema" at "../model/schema.xqm";
-import module namespace center="http://clarin.ids-mannheim.de/standards/center" at "../model/center.xqm";
+import module namespace centre="http://clarin.ids-mannheim.de/standards/centre" at "../model/centre.xqm";
 
 import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
 
@@ -57,13 +57,13 @@ declare function lsm:header($header as xs:string, $sortBy as xs:string, $page as
         if ($header = 'name') then "25%"
         else if ($header = 'topic') then "35%"
         else if ($header = 'org') then "20%"
-        else if ($header = 'clarin-centers') then "20%"
+        else if ($header = 'clarin-centres') then "20%"
         else ()
     let $value := 
         if ($header = 'name') then "Abbreviation/Name"
         else if ($header = 'topic') then "Topic(s)"
         else if ($header = 'org') then "Responsibility"
-        else if ($header = 'clarin-centers') then "CLARIN Center(s)"
+        else if ($header = 'clarin-centres') then "CLARIN Centre(s)"
         else () 
         (:"CLARIN Approved":)
         
@@ -83,7 +83,7 @@ declare function lsm:group-specs($page as xs:int, $sortBy as xs:string, $letter 
         if ($sortBy = 'name') then spec:sort-specs-by-abbr($specs,$letter)
         else if ($sortBy = 'topic') then spec:sort-specs-by-topic($specs,$letter)
         else if ($sortBy = 'org') then spec:sort-specs-by-sb($specs,$letter)
-        else if ($sortBy = 'clarin-centers') then spec:sort-specs-by-clarin-centers($specs,$letter)
+        else if ($sortBy = 'clarin-centres') then spec:sort-specs-by-clarin-centres($specs,$letter)
         else ()
             
     let $max := fn:min(($lsm:spec-sum,$page*20)) 
@@ -101,8 +101,8 @@ declare function lsm:list-specs($spec-group as item()*, $sortBy as xs:string, $l
         let $spec-topics := spec:get-topics($spec)
         let $number-of-spec-topics := count($spec-topics)
         
-        let $clarin-centers := spec:get-clarin-centers($spec)
-        let $num-of-centers := count($clarin-centers)
+        let $clarin-centres := spec:get-clarin-centres($spec)
+        let $num-of-centres := count($clarin-centres)
         (:let $clarin-approved := spec:get-clarin-approval($spec):)
         
         let $spec-abbr :=$spec/titleStmt/abbr/text()
@@ -110,7 +110,7 @@ declare function lsm:list-specs($spec-group as item()*, $sortBy as xs:string, $l
             if ($sortBy = 'name') then lower-case($spec-abbr)
             else if ($sortBy = 'topic') then $spec/functx:sort(tokenize(data($spec/@topic),' '))[1]
             else if ($sortBy = 'org') then $spec-org
-            else if ($sortBy = 'clarin-centers') then $clarin-centers[1]
+            else if ($sortBy = 'clarin-centres') then $clarin-centres[1]
             else () (:$clarin-approved[1]:)
     return
         <tr>
@@ -136,16 +136,16 @@ declare function lsm:list-specs($spec-group as item()*, $sortBy as xs:string, $l
           }
           </td>
           <td style="border-bottom:1px solid #DDDDDD; width:50px;  text-align:left; vertical-align:top;">
-          { for $i in 1 to $num-of-centers
-              let $id := $clarin-centers[$i]
-              let $c := <a href="{center:get-center($id)/a/@href}">{$id}</a>
+          { for $i in 1 to $num-of-centres
+              let $id := $clarin-centres[$i]
+              let $c := <a href="{centre:get-centre($id)/a/@href}">{$id}</a>
             return 
-                if ($i < $num-of-centers)
+                if ($i < $num-of-centres)
                 then ($c, ', ')
-                else <a href="{center:get-center($id)/a/@href}">{$id}</a>
+                else <a href="{centre:get-centre($id)/a/@href}">{$id}</a>
           }
           </td>
-         <!-- <td style="border-bottom:1px solid #DDDDDD; text-align:center; vertical-align:top;">
+         <!-- <td style="border-bottom:1px solid #DDDDDD; text-align:centre; vertical-align:top;">
           { if ($clarin-approved)
             then 'yes'
             else ($clarin-approved)

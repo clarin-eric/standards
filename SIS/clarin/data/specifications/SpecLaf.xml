@@ -95,7 +95,7 @@
                 Category Registry)</p>
         </info>
     </relation>
-    <version id="SpecLaf-IS" status="International Standard" usedInCLARINCenter="CLARIN-PL1">
+    <version id="SpecLaf-IS" status="International Standard" usedInCLARINCentre="CLARIN-PL1">
         <titleStmt>
             <abbr internal="yes">LAF-2012</abbr>
             <respStmt id="sUNDzf">

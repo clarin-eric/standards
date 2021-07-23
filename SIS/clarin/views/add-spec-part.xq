@@ -102,7 +102,7 @@ return
                         <td>
                            <span style="font-size:12px;">* required</span>
                         </td>
-                        <td align="center">
+                        <td align="centre">
                             <input class="button" name= "submitPart" type="submit" value="Submit"/>                            
                             <span style="display:inline-block; width:2px"/>
                             <input class="button" name= "cancel" type="button" value="Cancel" 

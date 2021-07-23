@@ -171,9 +171,9 @@
     
     <!--<recommendation formatId="fPDF/A">
         <domains>
-            <domain type="recommended" inCLARINCenters="IDS BAS">Documentation</domain>
-            <domain type="discouraged" inCLARINCenters="TLA">Metadata</domain>
-            <domain type="discouraged" inCLARINCenters="UC">Annotated-data</domain>
+            <domain type="recommended" inCLARINCentres="IDS BAS">Documentation</domain>
+            <domain type="discouraged" inCLARINCentres="TLA">Metadata</domain>
+            <domain type="discouraged" inCLARINCentres="UC">Annotated-data</domain>
         </domains>
     </recommendation>-->
     

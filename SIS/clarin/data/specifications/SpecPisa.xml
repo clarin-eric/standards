@@ -21,7 +21,7 @@
         <p>The PISA standard does not describe PID itself, but it describes the requirements for PIDs (i.e what should be respected) and offers 
             a basic approach to effectively using PIDs for referencing and citing language resources various formats.</p>
     </info>
-    <version id="SpecPISA-IS" status="International Standard" usedInCLARINCenter="MPI-PL IDS">
+    <version id="SpecPISA-IS" status="International Standard" usedInCLARINCentre="MPI-PL IDS">
         <titleStmt>
             <abbr internal="yes">PISA-2011</abbr>
             <respStmt id="LlE7EH">

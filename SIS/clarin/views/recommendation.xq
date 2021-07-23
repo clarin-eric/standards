@@ -35,7 +35,7 @@ return
                     <tr>
                         <th class="header" style="width:25%;">Abbreviation</th>
                         <th class="header" style="width:10%;">Resp.</th>
-                        <th class="header" style="width:20%;">Clarin Center(s)</th>
+                        <th class="header" style="width:20%;">Clarin Centre(s)</th>
                         <th class="header" style="width:25%;">Alternative(s)</th>
                         <!--<th class="header" style="width:17%;">Note</th>-->
                     </tr>                

@@ -30,7 +30,7 @@
     <relation target="SpecDict-IS" type="isUsedBy"/>
     <relation target="SpecLMF-IS" type="isUsedBy"/>
     <relation target="SpecSemRoleML-IS" type="isAdaptedFrom"/>
-    <version id="SpecDcr-IS" status="final" usedInCLARINCenter="MPI-PL CLARIN-PL1 IDS">
+    <version id="SpecDcr-IS" status="final" usedInCLARINCentre="MPI-PL CLARIN-PL1 IDS">
         <titleStmt>
             <title>Terminology and other language and content resources — 
                 Specification of data categories and management of a Data Category Registry for language resources</title>

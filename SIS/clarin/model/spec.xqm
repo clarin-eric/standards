@@ -43,11 +43,11 @@ declare function spec:sort-specs-by-sb($specs,$letter){
         return $spec
 };
 
-declare function spec:sort-specs-by-clarin-centers($specs,$letter){
+declare function spec:sort-specs-by-clarin-centres($specs,$letter){
     let $specs := if($letter) then $specs else $spec:specs
     return
         for $spec in $specs    
-        order by $spec/functx:sort(tokenize(data(descendant-or-self::node()/@usedInCLARINCenter),' '))[1]
+        order by $spec/functx:sort(tokenize(data(descendant-or-self::node()/@usedInCLARINCentre),' '))[1]
         return $spec
 };
 
@@ -94,8 +94,8 @@ declare function spec:get-topics($spec){
     return $t
 };
 
-declare function spec:get-clarin-centers($spec){    
-    for $c in tokenize(data($spec/descendant-or-self::*/@usedInCLARINCenter),' ') 
+declare function spec:get-clarin-centres($spec){    
+    for $c in tokenize(data($spec/descendant-or-self::*/@usedInCLARINCentre),' ') 
     order by $c
     return $c   
 };
