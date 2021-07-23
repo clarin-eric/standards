@@ -77,7 +77,7 @@
             </info>
         </relation>
     </version>
-    <version id="SpecXQuery1.0SE" status="W3C Recommendation" usedInCLARINCenter="MPI-PL CLARIN-DK-UCPH IDS">
+    <version id="SpecXQuery1.0SE" status="W3C Recommendation" usedInCLARINCentre="MPI-PL CLARIN-DK-UCPH IDS">
         <titleStmt>
             <abbr internal="yes">XQuery-2009</abbr>
             <respStmt id="RME4bE">

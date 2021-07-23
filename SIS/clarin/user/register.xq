@@ -92,7 +92,7 @@ return
                                 <td>
                                     <span style="font-size:12px;">* required</span>
                                 </td>
-                                <td align="center">
+                                <td align="centre">
                                     <input class="button" name= "submit" type="submit" value="Submit"/>                                    
                                 </td>
                             </tr>

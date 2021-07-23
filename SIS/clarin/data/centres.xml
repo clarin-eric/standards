@@ -1,266 +1,266 @@
-<centers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/spec.xsd">
-	<center id="ASV">
+<centres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/spec.xsd">
+	<centre id="ASV">
 		<name>ASV Leipzig</name>
 		<a href="https://centres.clarin.eu/centre/4"/>
-	</center>
-	<center id="ACDH-ARCHE">
+	</centre>
+	<centre id="ACDH-ARCHE">
 		<name>Austrian Centre for Digital Humanities and Cultural Heritage - A Resource Centre for the Humanities</name>
 		<a href="https://centres.clarin.eu/centre/45"/>
-	</center>
-	<center id="BAS">
+	</centre>
+	<centre id="BAS">
 		<name>Bayerisches Archiv für Sprachsignale</name>
 		<a href="https://centres.clarin.eu/centre/5"/>
-	</center>
-	<center id="BBAW">
+	</centre>
+	<centre id="BBAW">
 		<name>Berlin-Brandenburg Academy of Sciences and Humanities</name>
 		<a href="https://centres.clarin.eu/centre/6"/>
-	</center>
-	<center id="CELR-EKK">
+	</centre>
+	<centre id="CELR-EKK">
 		<name>Center of Estonian Language Resources</name>
 		<a href="https://centres.clarin.eu/centre/15"/>
-	</center>
-	<center id="CEDIFOR">
+	</centre>
+	<centre id="CEDIFOR">
 		<name>Centre for the Digital Foundation of Research in the Humanities, Social, and Educational Sciences</name>
 		<a href="https://centres.clarin.eu/centre/35"/>
-	</center>
-	<center id="CLARIN-LV">
+	</centre>
+	<centre id="CLARIN-LV">
 		<name>CLARIN Centre of Latvian language resources and tools</name>
 		<a href="https://centres.clarin.eu/centre/68"/>
-	</center>
-	<center id="TRTC">
+	</centre>
+	<centre id="TRTC">
 		<name>CLARIN Knowledge Center for Terminology Resources and Translation Corpora</name>
 		<a href="https://centres.clarin.eu/centre/55"/>
-	</center>
-	<center id="ACE">
+	</centre>
+	<centre id="ACE">
 		<name>CLARIN Knowledge Centre for Atypical Communication Expertise</name>
 		<a href="https://centres.clarin.eu/centre/61"/>
-	</center>
-	<center id="K-BLP">
+	</centre>
+	<centre id="K-BLP">
 		<name>CLARIN Knowledge Centre for Belarusian text and speech processing</name>
 		<a href="https://centres.clarin.eu/centre/67"/>
-	</center>
-	<center id="NSD">
+	</centre>
+	<centre id="NSD">
 		<name>CLARIN Knowledge Centre for Data Management at NSD</name>
 		<a href="https://centres.clarin.eu/centre/63"/>
-	</center>
-	<center id="CKLD">
+	</centre>
+	<centre id="CKLD">
 		<name>CLARIN Knowledge Centre for linguistic diversity and language documentation</name>
 		<a href="https://centres.clarin.eu/centre/46"/>
-	</center>
-	<center id="CLASSLA">
+	</centre>
+	<centre id="CLASSLA">
 		<name>CLARIN Knowledge Centre for South Slavic Languages</name>
 		<a href="https://centres.clarin.eu/centre/59"/>
-	</center>
-	<center id="CLARIN-SPEECH">
+	</centre>
+	<centre id="CLARIN-SPEECH">
 		<name>CLARIN Knowledge Centre for Speech Analysis</name>
 		<a href="https://centres.clarin.eu/centre/57"/>
-	</center>
-	<center id="CLARIN-SMS">
+	</centre>
+	<centre id="CLARIN-SMS">
 		<name>CLARIN Knowledge Centre for Swedish in a Multilingual Setting (SMS)</name>
 		<a href="https://centres.clarin.eu/centre/53"/>
-	</center>
-	<center id="SAFMORIL">
+	</centre>
+	<centre id="SAFMORIL">
 		<name>CLARIN Knowledge Centre for Systems and Frameworks for Morphologically Rich Languages</name>
 		<a href="https://centres.clarin.eu/centre/69"/>
-	</center>
-	<center id="SWELANG">
+	</centre>
+	<centre id="SWELANG">
 		<name>CLARIN Knowledge Centre for The Languages of Sweden</name>
 		<a href="https://centres.clarin.eu/centre/56"/>
-	</center>
-	<center id="DiaRes">
+	</centre>
+	<centre id="DiaRes">
 		<name>Clarin Knowledge Centre on Diachronic Language Resources</name>
 		<a href="https://centres.clarin.eu/centre/54"/>
-	</center>
-	<center id="CLARIN-IS">
+	</centre>
+	<centre id="CLARIN-IS">
 		<name>CLARIN-IS</name>
 		<a href="https://centres.clarin.eu/centre/64"/>
-	</center>
-	<center id="CLARIN-LT">
+	</centre>
+	<centre id="CLARIN-LT">
 		<name>CLARIN-LT</name>
 		<a href="https://centres.clarin.eu/centre/36"/>
-	</center>
-	<center id="CLARIN-PL1">
+	</centre>
+	<centre id="CLARIN-PL1">
 		<name>CLARIN-PL Language Technology Centre</name>
 		<a href="https://centres.clarin.eu/centre/25"/>
-	</center>
-	<center id="CLARINSI">
+	</centre>
+	<centre id="CLARINSI">
 		<name>CLARIN.SI Language Technology Centre</name>
 		<a href="https://centres.clarin.eu/centre/30"/>
-	</center>
-	<center id="CLARINO_Bergen">
+	</centre>
+	<centre id="CLARINO_Bergen">
 		<name>CLARINO Bergen Center</name>
 		<a href="https://centres.clarin.eu/centre/29"/>
-	</center>
-	<center id="TextLab">
+	</centre>
+	<centre id="TextLab">
 		<name>CLARINO Text Laboratory Centre</name>
 		<a href="https://centres.clarin.eu/centre/43"/>
-	</center>
-	<center id="CMU">
+	</centre>
+	<centre id="CMU">
 		<name>CMU-TalkBank</name>
 		<a href="https://centres.clarin.eu/centre/18"/>
-	</center>
-	<center id="COCOON">
+	</centre>
+	<centre id="COCOON">
 		<name>Collections de corpus oraux numeriques </name>
 		<a href="https://centres.clarin.eu/centre/33"/>
-	</center>
-	<center id="CORLI-K">
+	</centre>
+	<centre id="CORLI-K">
 		<name>CORLI French CLARIN Knowledge Centre for Corpora, Languages and Interaction</name>
 		<a href="https://centres.clarin.eu/centre/72"/>
-	</center>
-	<center id="CNC">
+	</centre>
+	<centre id="CNC">
 		<name>Czech National Corpus</name>
 		<a href="https://centres.clarin.eu/centre/51"/>
-	</center>
-	<center id="DH-REP">
+	</centre>
+	<centre id="DH-REP">
 		<name>DARIAH-DE Repository</name>
 		<a href="https://centres.clarin.eu/centre/62"/>
-	</center>
-	<center id="DANS">
+	</centre>
+	<centre id="DANS">
 		<name>Data Archiving and Networked Services</name>
 		<a href="https://centres.clarin.eu/centre/20"/>
-	</center>
-	<center id="EKUT">
+	</centre>
+	<centre id="EKUT">
 		<name>Eberhard Karls Universität Tübingen</name>
 		<a href="https://centres.clarin.eu/centre/1"/>
-	</center>
-	<center id="ERCC">
+	</centre>
+	<centre id="ERCC">
 		<name>Eurac Research CLARIN Centre</name>
 		<a href="https://centres.clarin.eu/centre/49"/>
-	</center>
-	<center id="FZJ">
+	</centre>
+	<centre id="FZJ">
 		<name>Forschungzentrum Jülich</name>
 		<a href="https://centres.clarin.eu/centre/7"/>
-	</center>
-	<center id="GEI">
+	</centre>
+	<centre id="GEI">
 		<name>Georg Eckert Institute for International Textbook Research</name>
 		<a href="https://centres.clarin.eu/centre/60"/>
-	</center>
-	<center id="GWDG">
+	</centre>
+	<centre id="GWDG">
 		<name>Gesellschaft für wissenschaftliche Datenverarbeitung Göttingen</name>
 		<a href="https://centres.clarin.eu/centre/8"/>
-	</center>
-	<center id="HZSK">
+	</centre>
+	<centre id="HZSK">
 		<name>Hamburger Zentrum für Sprachkorpora</name>
 		<a href="https://centres.clarin.eu/centre/9"/>
-	</center>
-	<center id="Huygens">
+	</centre>
+	<centre id="Huygens">
 		<name>Huygens ING</name>
 		<a href="https://centres.clarin.eu/centre/21"/>
-	</center>
-	<center id="IMPACT-CKC">
+	</centre>
+	<centre id="IMPACT-CKC">
 		<name>IMPACT Centre of Competence</name>
 		<a href="https://centres.clarin.eu/centre/52"/>
-	</center>
-	<center id="IMS">
+	</centre>
+	<centre id="IMS">
 		<name>Institut für Maschinelle Sprachverarbeitung</name>
 		<a href="https://centres.clarin.eu/centre/10"/>
-	</center>
-	<center id="IVDNT">
+	</centre>
+	<centre id="IVDNT">
 		<name>Instituut voor de Nederlandse Taal</name>
 		<a href="https://centres.clarin.eu/centre/22"/>
-	</center>
-	<center id="LAC">
+	</centre>
+	<centre id="LAC">
 		<name>Language Archive Cologne</name>
 		<a href="https://centres.clarin.eu/centre/47"/>
-	</center>
-	<center id="IDS">
+	</centre>
+	<centre id="IDS">
 		<name>Leibniz-Institut für Deutsche Sprache</name>
 		<a href="https://centres.clarin.eu/centre/11"/>
-	</center>
-	<center id="LINDAT">
+	</centre>
+	<centre id="LINDAT">
 		<name>LINDAT/CLARIN</name>
 		<a href="https://centres.clarin.eu/centre/3"/>
-	</center>
-	<center id="lundlab">
+	</centre>
+	<centre id="lundlab">
 		<name>Lund University Humanities Lab</name>
 		<a href="https://centres.clarin.eu/centre/42"/>
-	</center>
-	<center id="MPCDF">
+	</centre>
+	<centre id="MPCDF">
 		<name>Max Planck Computing and Data Facility</name>
 		<a href="https://centres.clarin.eu/centre/12"/>
-	</center>
-	<center id="MMSHs-Phonothèque">
+	</centre>
+	<centre id="MMSHs-Phonothèque">
 		<name>Mediterranean Research Centre for the Humanities' Phonothèque</name>
 		<a href="https://centres.clarin.eu/centre/44"/>
-	</center>
-	<center id="MI">
+	</centre>
+	<centre id="MI">
 		<name>Meertens Instituut/HuC</name>
 		<a href="https://centres.clarin.eu/centre/23"/>
-	</center>
-	<center id="MPI-PL">
+	</centre>
+	<centre id="MPI-PL">
 		<name>MPI for Psycholinguistics</name>
 		<a href="https://centres.clarin.eu/centre/24"/>
-	</center>
-	<center id="NB.NO">
+	</centre>
+	<centre id="NB.NO">
 		<name>National Library of Norway</name>
 		<a href="https://centres.clarin.eu/centre/31"/>
-	</center>
-	<center id="NLPEL">
+	</centre>
+	<centre id="NLPEL">
 		<name>NLP:EL - CLARIN Knowledge Centre for Natural Language Processing in Greece</name>
 		<a href="https://centres.clarin.eu/centre/70"/>
-	</center>
-	<center id="ORTOLANG">
+	</centre>
+	<centre id="ORTOLANG">
 		<name>Open Resources and TOols for LANGuage</name>
 		<a href="https://centres.clarin.eu/centre/73"/>
-	</center>
-	<center id="OTA">
+	</centre>
+	<centre id="OTA">
 		<name>Oxford Text Archive</name>
 		<a href="https://centres.clarin.eu/centre/26"/>
-	</center>
-	<center id="Phonogrammarchiv">
+	</centre>
+	<centre id="Phonogrammarchiv">
 		<name>Phonogrammarchiv Institute for audiovisual Research and Documentation</name>
 		<a href="https://centres.clarin.eu/centre/41"/>
-	</center>
-	<center id="PolMine">
+	</centre>
+	<centre id="PolMine">
 		<name>PolMine Project</name>
 		<a href="https://centres.clarin.eu/centre/38"/>
-	</center>
-	<center id="PORTULAN_CLARIN-K-Centre">
+	</centre>
+	<centre id="PORTULAN_CLARIN-K-Centre">
 		<name>PORTULAN CLARIN K-Centre: CLARIN Knowledge Centre for the Science and Technology of the Portuguese Language</name>
 		<a href="https://centres.clarin.eu/centre/66"/>
-	</center>
-	<center id="PORTULAN-CLARIN">
+	</centre>
+	<centre id="PORTULAN-CLARIN">
 		<name>PORTULAN CLARIN Research Infrastructure for the Science and Technology of Language</name>
 		<a href="https://centres.clarin.eu/centre/50"/>
-	</center>
-	<center id="SADiLaR">
+	</centre>
+	<centre id="SADiLaR">
 		<name>South African Centre for Digital Language Resources</name>
 		<a href="https://centres.clarin.eu/centre/58"/>
-	</center>
-	<center id="Spanish_K-Centre">
+	</centre>
+	<centre id="Spanish_K-Centre">
 		<name>Spanish CLARIN K-Centre</name>
 		<a href="https://centres.clarin.eu/centre/32"/>
-	</center>
-	<center id="Sprakbanken">
+	</centre>
+	<centre id="Sprakbanken">
 		<name>Språkbanken</name>
 		<a href="https://centres.clarin.eu/centre/37"/>
-	</center>
-	<center id="TGrep">
+	</centre>
+	<centre id="TGrep">
 		<name>TextGrid Repository</name>
 		<a href="https://centres.clarin.eu/centre/71"/>
-	</center>
-	<center id="CLARIN-DK-UCPH">
+	</centre>
+	<centre id="CLARIN-DK-UCPH">
 		<name>The CLARIN Centre at the University of Copenhagen</name>
 		<a href="https://centres.clarin.eu/centre/14"/>
-	</center>
-	<center id="ILC4CLARIN">
+	</centre>
+	<centre id="ILC4CLARIN">
 		<name>The ILC4CLARIN Centre at the Institute for Computational Linguistics</name>
 		<a href="https://centres.clarin.eu/centre/34"/>
-	</center>
-	<center id="FIN-CLARIN">
+	</centre>
+	<centre id="FIN-CLARIN">
 		<name>The Language Bank of Finland</name>
 		<a href="https://centres.clarin.eu/centre/17"/>
-	</center>
-	<center id="TROLLing">
+	</centre>
+	<centre id="TROLLing">
 		<name>The Tromsø Repository of Language and Linguistics</name>
 		<a href="https://centres.clarin.eu/centre/48"/>
-	</center>
-	<center id="UdS">
+	</centre>
+	<centre id="UdS">
 		<name>Universität des Saarlandes</name>
 		<a href="Universität des Saarlandes"/>
-	</center>
-	<center id="ZIM">
+	</centre>
+	<centre id="ZIM">
 		<name>ZIM Centre for Information Modelling</name>
 		<a href="https://centres.clarin.eu/centre/65"/>
-	</center>
-</centers>
+	</centre>
+</centres>

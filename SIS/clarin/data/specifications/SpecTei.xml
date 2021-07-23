@@ -136,7 +136,7 @@
             </info>
         </relation>
     </version>
-    <version id="SpecTeiP5" status="final" usedInCLARINCenter="MPI-PL CLARIN-DK-UCPH HZSK CLARIN-PL1">
+    <version id="SpecTeiP5" status="final" usedInCLARINCentre="MPI-PL CLARIN-DK-UCPH HZSK CLARIN-PL1">
         <titleStmt>
             <abbr internal="yes">TEI Guidelines-2011</abbr>
             <respStmt id="N2lu7f">

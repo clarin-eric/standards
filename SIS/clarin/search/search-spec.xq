@@ -19,10 +19,10 @@ let $sb := request:get-parameter('sb', "")
 let $status := request:get-parameter('status', "")
 let $submitted := request:get-parameter('submit', '')
 let $CLARINapproved := request:get-parameter('CLARINapproved', '')
-let $usedInCLARINCenter := request:get-parameter('usedInCLARINCenter', '')
+let $usedInCLARINCentre := request:get-parameter('usedInCLARINCentre', '')
 let $results := 
     if ($submitted) 
-    then search:get-results($query, $topic, $sb, $status, $usedInCLARINCenter, $CLARINapproved)    
+    then search:get-results($query, $topic, $sb, $status, $usedInCLARINCentre, $CLARINapproved)    
     else()
 return 
 <html>
@@ -75,11 +75,11 @@ return
      				   </tr>
      				   <tr>
      				       <td/>
-     				       <td>{if ($usedInCLARINCenter)
-     				            then <input type="checkbox" name="usedInCLARINCenter" value="yes" checked="yes"/> 
-     				            else <input type="checkbox" name="usedInCLARINCenter" value="yes"/>
+     				       <td>{if ($usedInCLARINCentre)
+     				            then <input type="checkbox" name="usedInCLARINCentre" value="yes" checked="yes"/> 
+     				            else <input type="checkbox" name="usedInCLARINCentre" value="yes"/>
      				           }
-     				           used in CLARIN center(s)
+     				           used in CLARIN centre(s)
      				       </td>
      				   </tr>
      				   <!--<tr>
@@ -93,7 +93,7 @@ return
      				   </tr> -->
      				   <tr height="40px">
      				       <td></td>
-     				       <td align="center"><input name="submit" type="submit" value="Search" class="button" /></td>
+     				       <td align="centre"><input name="submit" type="submit" value="Search" class="button" /></td>
      				   </tr>     				        				   
      				</table>		
      			</form>

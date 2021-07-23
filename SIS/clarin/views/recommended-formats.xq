@@ -31,7 +31,7 @@ return
         		<table cellspacing="4px" style="width:97%">
                     <tr>
                         <th class="header" style="width:25%;">Abbreviation</th>
-                        <th class="header" style="width:25%;">Clarin Centers</th>
+                        <th class="header" style="width:25%;">Clarin Centres</th>
                         <th class="header" style="width:25%;">Domains</th>
                     </tr>                
                  {rf:print-recommendation($type)}

@@ -30,14 +30,14 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="centers">
+    <xs:element name="centres">
         <xs:annotation>
             <xs:documentation xml:lang="en">Root element for a list of CLARIN
-                centers.</xs:documentation>
+                centres.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="center" maxOccurs="unbounded">
+                <xs:element name="centre" maxOccurs="unbounded">
                     <xs:complexType mixed="true">
                         <xs:sequence>
                             <xs:element name="name" type="xs:string"/>
@@ -423,7 +423,7 @@
                 </xs:simpleType>
             </xs:attribute>
             <xs:attribute ref="standardSettingBody" use="optional"/>
-            <xs:attribute name="usedInCLARINCenter" type="xs:NMTOKENS" use="optional"/>
+            <xs:attribute name="usedInCLARINCentre" type="xs:NMTOKENS" use="optional"/>
             <xs:attribute name="CLARINapproved" use="optional">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">

@@ -9,16 +9,16 @@ import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommenda
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 
 let $reset := request:get-parameter('resetButton', '')
-let $center := if ($reset) then () else request:get-parameter('center', '')
+let $centre := if ($reset) then () else request:get-parameter('centre', '')
 let $domainId := if ($reset) then () else request:get-parameter('domain', '')
 let $recommendationType := if ($reset) then () else request:get-parameter('type', '')
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
 let $export := request:get-parameter('exportButton', '')
-let $recommendationTable := rf:print-recommendation($center,$domainId, $recommendationType, $sortBy)
+let $recommendationTable := rf:print-recommendation($centre,$domainId, $recommendationType, $sortBy)
 
 return
 if ($export)
-then (rf:export-table($center, $domainId, $recommendationType, $recommendationTable,"format-recommendation.xml"))
+then (rf:export-table($centre, $domainId, $recommendationType, $recommendationTable,"format-recommendation.xml"))
 else 
 
     <html>
@@ -46,9 +46,9 @@ else
                             <table style="margin:0;">
                                 <tr>
                                     <td>
-                                        <select name="center" class="inputSelect" style="width:175px;">
-                                            {rf:print-option($center, "", "Select centre ...")}
-                                            {rf:print-centers($center)}
+                                        <select name="centre" class="inputSelect" style="width:175px;">
+                                            {rf:print-option($centre, "", "Select centre ...")}
+                                            {rf:print-centres($centre)}
                                         </select>
                                     </td>
                                     <td>
@@ -81,7 +81,7 @@ else
                         <form method="get" action="" style="text-align:right;">
                             <input name="exportButton" class="button"
                             style="margin-bottom:5px; margin-right:2px; margin-top:20px; height:25px;width:165px;" type="submit" value="Export Table to XML"/>
-                            <input name="center" type="hidden" value="{$center}"/>
+                            <input name="centre" type="hidden" value="{$centre}"/>
                             <input name="domain" type="hidden" value="{$domainId}"/>
                             <input name="type" type="hidden" value="{$recommendationType}"/>
                             <input name="sortBy" type="hidden" value="{$sortBy}"/>
@@ -93,7 +93,7 @@ else
                             <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=abbr&amp;domain=",
-                                            $domainId, "&amp;type=", $recommendationType, "&amp;center=",$center, "#searchRecommendation"))
+                                            $domainId, "&amp;type=", $recommendationType, "&amp;centre=",$centre, "#searchRecommendation"))
                                         }">Abbreviation</a>
                             </th>
                             <th class="header" style="width:20%;">
@@ -105,12 +105,12 @@ else
                             <th class="header" style="width:40%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=domain&amp;domain=",
-                                            $domainId, "&amp;type=", $recommendationType, "&amp;center=",$center,"#searchRecommendation"))
+                                            $domainId, "&amp;type=", $recommendationType, "&amp;centre=",$centre,"#searchRecommendation"))
                                         }">Domain</a></th>
                             <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=recommendation&amp;domain=",
-                                            $domainId, "&amp;type=", $recommendationType, "&amp;center=",$center,"#searchRecommendation"))
+                                            $domainId, "&amp;type=", $recommendationType, "&amp;centre=",$centre,"#searchRecommendation"))
                                         }">
                                     Recommendation</a></th>
                         </tr>

@@ -139,7 +139,7 @@
             </info>
         </relation>
     </version>
-    <version id="SpecXML1-FiE" status="W3C Recommendation" usedInCLARINCenter="MPI-PL CLARIN-PL1 CLARIN-DK-UCPH">
+    <version id="SpecXML1-FiE" status="W3C Recommendation" usedInCLARINCentre="MPI-PL CLARIN-PL1 CLARIN-DK-UCPH">
         <titleStmt>
             <abbr internal="yes">XML-2008</abbr>
             <respStmt id="lTbXwU">

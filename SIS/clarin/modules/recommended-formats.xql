@@ -4,7 +4,7 @@ module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-forma
 
 import module namespace spec = "http://clarin.ids-mannheim.de/standards/specification" at "../model/spec.xqm";
 import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
-import module namespace center = "http://clarin.ids-mannheim.de/standards/center" at "../model/center.xqm";
+import module namespace centre = "http://clarin.ids-mannheim.de/standards/centre" at "../model/centre.xqm";
 
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommendation" at "../modules/recommendation.xql";
@@ -46,11 +46,11 @@ declare function rf:print-recommendation($type) {
             ()
 };
 :)
-declare function rf:print-centers($center) {
-    for $c in data($center:centers/@id)
+declare function rf:print-centres($centre) {
+    for $c in data($centre:centres/@id)
     order by fn:lower-case($c)
     return
-        if ($c eq $center)
+        if ($c eq $centre)
         then
         (<option value="{$c}" selected="selected">{$c}</option>)
         else
@@ -108,7 +108,7 @@ declare function rf:print-recommendation-level($recommendationLevel) {
         )
 };
 
-declare function rf:print-recommendation($requestedCenter, $requestedDomain, $requestedType, $sortBy) {
+declare function rf:print-recommendation($requestedCentre, $requestedDomain, $requestedType, $sortBy) {
     let $ids := format:get-all-ids()
     
     for $id in $ids
@@ -137,10 +137,10 @@ declare function rf:print-recommendation($requestedCenter, $requestedDomain, $re
                     (fn:lower-case($format-abbr)) (:abbr:)
     
     return
-        if ($requestedCenter)
+        if ($requestedCentre)
         then
             (
-            if ($requestedCenter eq $centre)
+            if ($requestedCentre eq $centre)
             then
                 (
                 if ($requestedDomain)
@@ -222,7 +222,7 @@ $rType) {
     </tr>
 };
 
-declare function rf:export-table($center, $domainId, $recommendationType, $nodes, $filename) {
+declare function rf:export-table($centre, $domainId, $recommendationType, $nodes, $filename) {
     let $domainName := $format:domains[@id = $domainId]/name/text()
 
     let $rows :=
@@ -248,7 +248,7 @@ declare function rf:export-table($center, $domainId, $recommendationType, $nodes
                 <url>{app:link("views/recommended-formats-with-search.xq")}</url>
                 <date>{fn:current-dateTime()}</date>
                 <filter>
-                    <center>{$center}</center>
+                    <centre>{$centre}</centre>
                     <domain>{$domainName}</domain>
                     <level>{rf:print-recommendation-level($recommendationType)}</level>
                 </filter>

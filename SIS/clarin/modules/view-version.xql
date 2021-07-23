@@ -12,7 +12,7 @@ import module namespace sbm="http://clarin.ids-mannheim.de/standards/sb-module" 
 
 import module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema" at "../model/schema.xqm";
 import module namespace spec="http://clarin.ids-mannheim.de/standards/specification" at "../model/spec.xqm";
-import module namespace center="http://clarin.ids-mannheim.de/standards/center" at "../model/center.xqm";
+import module namespace centre="http://clarin.ids-mannheim.de/standards/centre" at "../model/centre.xqm";
 
 (: Define methods for viewing of standard versions
    @author margaretha
@@ -47,25 +47,25 @@ declare function vvm:print-version($spec,$parent,$node){
               { vvm:print-version-url($spec-id,$version,$version-id) }
               { vvm:print-version-recommendation($version) }
               { vvm:print-version-relation($spec-id,$version,$version-id,fn:false()) }
-              { vvm:print-version-center($version)}
+              { vvm:print-version-centre($version)}
               { vvm:print-version-references($spec-id,$version,$version-id) }
           </div>
 };
 
-declare function vvm:print-version-center($version){
-    let $version-centers := 
-        for $center-id in tokenize(data($version/@usedInCLARINCenter),' ')
-            let $c := center:get-center($center-id)
+declare function vvm:print-version-centre($version){
+    let $version-centres := 
+        for $centre-id in tokenize(data($version/@usedInCLARINCentre),' ')
+            let $c := centre:get-centre($centre-id)
             order by $c/name/text()
             return $c
    return
-        if (count($version-centers) > 0)
+        if (count($version-centres) > 0)
         then (
             <div>
-                <span class="heading3" >Used in CLARIN center(s): </span>
+                <span class="heading3" >Used in CLARIN centre(s): </span>
                 <ul>
                 {
-                for $c in $version-centers                
+                for $c in $version-centres                
                     let $cl := <a href="{$c/a/@href}">{$c/name/text()}</a>
                 return                
                     <li>{$cl}</li>
