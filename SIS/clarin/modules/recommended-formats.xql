@@ -122,7 +122,7 @@ declare function rf:print-recommendation($requestedCentre, $requestedDomain, $re
                     (rf:checkRequestedLevel($requestedLevel, $recommendationLevel, $id,
                     $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level))
                 else
-                    (rf:print-recommendation-row($id, $format-abbr, $centre, $domainId,$domainName,
+                    (rf:print-recommendation-row($id, $format-abbr, $centre, $domainId, $domainName,
                     $domainDesc, $level))
                 )
             )
@@ -172,15 +172,27 @@ $level) {
 
 declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $filename) {
     let $domainName := $format:domains[@id = $domainId]/name/text()
-
+    let $requestedLevel := rf:print-recommendation-level($requestedLevel)
     let $rows :=
     for $row in $nodes
     return
         <format>
-            <name id="{$row/td[1]/@id}">{$row/td[1]/a/text()}</name>
-            <centre>{$row/td[2]/text()}</centre>
-            <domain id="{$row/td[3]/@id}">{$row/td[3]/text()}</domain>
-            <level>{$row/td[4]/text()}</level>
+            <name
+                id="{$row/td[1]/@id}">{$row/td[1]/a/text()}</name>
+            {
+                if ($centre eq "") then
+                    <centre>{$row/td[2]/text()}</centre>
+                else
+                    (),
+                if ($domainId eq "") then
+                    <domain id="{$row/td[3]/@id}">{$row/td[3]/text()}</domain>
+                else
+                    (),
+                if ($requestedLevel eq "") then 
+                    (<level>{$row/td[4]/text()}</level>)
+                else ()     
+            }
+            
         </format>
         
         (:let $isExportSuccessful := file:serialize($data, $filename,fn:false()):)
@@ -198,11 +210,10 @@ declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $f
                 <filter>
                     <centre>{$centre}</centre>
                     <domain>{$domainName}</domain>
-                    <level>{rf:print-recommendation-level($requestedLevel)}</level>
+                    <level>{$requestedLevel}</level>
                 </filter>
             </header>
             <formats>{$rows}</formats>
         </result>
 
 };
-
