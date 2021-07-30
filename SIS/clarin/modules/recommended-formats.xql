@@ -100,9 +100,9 @@ declare function rf:print-recommendation($requestedCentre, $requestedDomain, $re
                     if ($requestedLevel)
                     then
                         (rf:checkRequestedLevel($requestedLevel, $recommendationLevel, $id,
-                        $format-abbr, $centre, $domainName, $domainDesc, $level))
+                        $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level))
                     else
-                        (rf:print-recommendation-row($id, $format-abbr, $centre, $domainName,
+                        (rf:print-recommendation-row($id, $format-abbr, $centre, $domainId, $domainName,
                         $domainDesc, $level))
                     )
                 )
@@ -120,9 +120,9 @@ declare function rf:print-recommendation($requestedCentre, $requestedDomain, $re
                 if ($requestedLevel)
                 then
                     (rf:checkRequestedLevel($requestedLevel, $recommendationLevel, $id,
-                    $format-abbr, $centre, $domainName, $domainDesc, $level))
+                    $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level))
                 else
-                    (rf:print-recommendation-row($id, $format-abbr, $centre, $domainName,
+                    (rf:print-recommendation-row($id, $format-abbr, $centre, $domainId,$domainName,
                     $domainDesc, $level))
                 )
             )
@@ -138,9 +138,9 @@ $id, $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level) {
         if ($requestedLevel)
         then
             (rf:checkRequestedLevel($requestedLevel, $recommendationLevel, $id, $format-abbr,
-            $centre, $domainName, $domainDesc, $level))
+            $centre, $domainId, $domainName, $domainDesc, $level))
         else
-            (rf:print-recommendation-row($id, $format-abbr, $centre, $domainName, $domainDesc,
+            (rf:print-recommendation-row($id, $format-abbr, $centre, $domainId, $domainName, $domainDesc,
             $level))
         )
     else
@@ -148,23 +148,23 @@ $id, $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level) {
 };
 
 declare function rf:checkRequestedLevel($requestedLevel, $recommendationLevel, $id, $format-abbr, 
-$centre, $domainName, $domainDesc, $level) {
+$centre, $domainId, $domainName, $domainDesc, $level) {
     
     if ($requestedLevel eq $recommendationLevel)
     then
-        (rf:print-recommendation-row($id, $format-abbr, $centre, $domainName, $domainDesc, $level))
+        (rf:print-recommendation-row($id, $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level))
     else
         ()
 
 };
 
-declare function rf:print-recommendation-row($id, $format-abbr, $centre, $domainName, $domainDesc,  
+declare function rf:print-recommendation-row($id, $format-abbr, $centre, $domainId, $domainName, $domainDesc,  
 $level) {
     <tr>
-        <td class="recommendation-row"><a href="{app:link(concat("views/view-format.xq?id=", $id))}
+        <td class="recommendation-row" id="{$id}"><a href="{app:link(concat("views/view-format.xq?id=", $id))}
             ">{$format-abbr}</a></td>
         <td class="recommendation-row">{$centre}</td>
-        <td class="recommendation-row tooltip">{$domainName}<span class="tooltiptext">{$domainDesc}
+        <td class="recommendation-row tooltip" id="{$domainId}">{$domainName}<span class="tooltiptext">{$domainDesc}
             </span></td>
         <td class="recommendation-row">{$level}</td>
     </tr>
@@ -177,9 +177,9 @@ declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $f
     for $row in $nodes
     return
         <format>
-            <name>{$row/td[1]/a/text()}</name>
+            <name id="{$row/td[1]/@id}">{$row/td[1]/a/text()}</name>
             <centre>{$row/td[2]/text()}</centre>
-            <domain>{$row/td[3]/text()}</domain>
+            <domain id="{$row/td[3]/@id}">{$row/td[3]/text()}</domain>
             <level>{$row/td[4]/text()}</level>
         </format>
         
