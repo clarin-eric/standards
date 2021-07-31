@@ -11,14 +11,14 @@ import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommende
 let $reset := request:get-parameter('resetButton', '')
 let $centre := if ($reset) then () else request:get-parameter('centre', '')
 let $domainId := if ($reset) then () else request:get-parameter('domain', '')
-let $recommendationType := if ($reset) then () else request:get-parameter('type', '')
+let $recommendationLevel := if ($reset) then () else request:get-parameter('level', '')
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
 let $export := request:get-parameter('exportButton', '')
-let $recommendationTable := rf:print-recommendation($centre,$domainId, $recommendationType, $sortBy)
+let $recommendationTable := rf:print-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
 
 return
 if ($export)
-then (rf:export-table($centre, $domainId, $recommendationType, $recommendationTable,"format-recommendation.xml"))
+then (rf:export-table($centre, $domainId, $recommendationLevel, $recommendationTable,"format-recommendation.xml"))
 else 
 
     <html>
@@ -58,11 +58,11 @@ else
                                         </select>
                                     </td>
                                     <td>
-                                        <select name="type" class="inputSelect" style="width:175px;">
-                                            {rf:print-option($recommendationType, "", "Select recommendation ...")}
-                                            {rf:print-option($recommendationType, "r", "recommended")}
-                                            {rf:print-option($recommendationType, "a", "acceptable")}
-                                            {rf:print-option($recommendationType, "d", "deprecated")}
+                                        <select name="level" class="inputSelect" style="width:175px;">
+                                            {rf:print-option($recommendationLevel, "", "Select recommendation ...")}
+                                            {rf:print-option($recommendationLevel, "r", "recommended")}
+                                            {rf:print-option($recommendationLevel, "a", "acceptable")}
+                                            {rf:print-option($recommendationLevel, "d", "deprecated")}
                                         </select>
                                     </td>
                                     <td>
@@ -83,7 +83,7 @@ else
                             style="margin-bottom:5px; margin-right:2px; margin-top:20px; height:25px;width:165px;" type="submit" value="Export Table to XML"/>
                             <input name="centre" type="hidden" value="{$centre}"/>
                             <input name="domain" type="hidden" value="{$domainId}"/>
-                            <input name="type" type="hidden" value="{$recommendationType}"/>
+                            <input name="level" type="hidden" value="{$recommendationLevel}"/>
                             <input name="sortBy" type="hidden" value="{$sortBy}"/>
                         </form>
                     </div>
@@ -93,24 +93,24 @@ else
                             <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=abbr&amp;domain=",
-                                            $domainId, "&amp;type=", $recommendationType, "&amp;centre=",$centre, "#searchRecommendation"))
+                                            $domainId, "&amp;level=", $recommendationLevel, "&amp;centre=",$centre, "#searchRecommendation"))
                                         }">Abbreviation</a>
                             </th>
                             <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=centre&amp;domain=",
-                                            $domainId, "&amp;type=", $recommendationType, "#searchRecommendation"))
+                                            $domainId, "&amp;level=", $recommendationLevel, "#searchRecommendation"))
                                         }">Clarin Centres</a>
                             </th>
                             <th class="header" style="width:40%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=domain&amp;domain=",
-                                            $domainId, "&amp;type=", $recommendationType, "&amp;centre=",$centre,"#searchRecommendation"))
+                                            $domainId, "&amp;level=", $recommendationLevel, "&amp;centre=",$centre,"#searchRecommendation"))
                                         }">Domain</a></th>
                             <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=recommendation&amp;domain=",
-                                            $domainId, "&amp;type=", $recommendationType, "&amp;centre=",$centre,"#searchRecommendation"))
+                                            $domainId, "&amp;level=", $recommendationLevel, "&amp;centre=",$centre,"#searchRecommendation"))
                                         }">
                                     Recommendation</a></th>
                         </tr>

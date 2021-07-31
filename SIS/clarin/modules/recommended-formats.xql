@@ -9,43 +9,7 @@ import module namespace centre = "http://clarin.ids-mannheim.de/standards/centre
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommendation" at "../modules/recommendation.xql";
 
-(:deprecated
-declare function rf:print-recommendation($type) {
-    let $ids := format:get-all-ids()
-    for $id in $ids
-    let $format-abbr := $format:formats[@id = $id]/titleStmt/abbr/text()
-    let $recommendations := format:get-recommendations($id)
-    let $typeNumber :=
-    if ($type = "recommended") then
-        "1"
-    else
-        if ($type = "acceptable") then
-            "2"
-        else
-            if ($type = "deprecated") then
-                "3"
-            else
-                "0"
-    
-    for $r in $recommendations
-    let $centre := data($r/parent::node()/@id)
-    for $values in fn:tokenize($r, "\.")
-    let $size := fn:string-length($values)
-    let $recommendationLevel := fn:substring($values, $size)
-    let $domainId := fn:substring($values, 1, $size - 1)
-    let $domain := $format:domains[@id = $domainId]/text()
-    return
-        if ($recommendationLevel = $typeNumber)
-        then
-            <tr>
-                <td class="recommendation-row"><a href="{app:link(concat("views/view-format.xq?id=", $id))}">{$format-abbr}</a></td>
-                <td class="recommendation-row">{$centre}</td>
-                <td class="recommendation-row">{$domain}</td>
-            </tr>
-        else
-            ()
-};
-:)
+
 declare function rf:print-centres($centre) {
     for $c in data($centre:centres/@id)
     order by fn:lower-case($c)
@@ -68,22 +32,6 @@ declare function rf:print-domains($domainId) {
         else 
         <option value="{$id}" title="{$d/desc/text()}">{$d/name/text()}</option>
 };
-
-(: deprecated
-declare function rf:print-domains($path) {
-    let $size := count($format:domains)
-    let $lastDomain := $format:domains[$size]
-    
-    for $domain in $format:domains
-    let $url := app:link(concat("views/", $path, ".xq?domain=", $domain))
-    let $link := <a href="{$url}">{$domain}</a>
-    return
-        if ($domain ne $lastDomain)
-        then
-            ($link, " | ")
-        else
-            ($link)
-};:)
 
 declare function rf:print-option($selected, $value,$label) {
     if ($selected eq $value)
@@ -108,7 +56,7 @@ declare function rf:print-recommendation-level($recommendationLevel) {
         )
 };
 
-declare function rf:print-recommendation($requestedCentre, $requestedDomain, $requestedType, $sortBy) {
+declare function rf:print-recommendation($requestedCentre, $requestedDomain, $requestedLevel, $sortBy) {
     let $ids := format:get-all-ids()
     
     for $id in $ids
@@ -122,7 +70,7 @@ declare function rf:print-recommendation($requestedCentre, $requestedDomain, $re
     let $domainId := fn:substring($values, 1, $size - 1)
     let $domainName := $format:domains[@id = $domainId]/name/text()
     let $domainDesc := $format:domains[@id = $domainId]/desc/text()
-    let $rType := rf:print-recommendation-level($recommendationLevel)
+    let $level := rf:print-recommendation-level($recommendationLevel)
         
         order by
         if ($sortBy = 'centre') then
@@ -145,17 +93,17 @@ declare function rf:print-recommendation($requestedCentre, $requestedDomain, $re
                 (
                 if ($requestedDomain)
                 then
-                    (rf:checkRequestedDomain($requestedDomain, $requestedType, $recommendationLevel,
-                    $id, $format-abbr, $centre, $domainId, $domainName, $domainDesc, $rType))
+                    (rf:checkRequestedDomain($requestedDomain, $requestedLevel, $recommendationLevel,
+                    $id, $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level))
                 else
                     (
-                    if ($requestedType)
+                    if ($requestedLevel)
                     then
-                        (rf:checkRequestedType($requestedType, $recommendationLevel, $id,
-                        $format-abbr, $centre, $domainName, $domainDesc, $rType))
+                        (rf:checkRequestedLevel($requestedLevel, $recommendationLevel, $id,
+                        $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level))
                     else
-                        (rf:print-recommendation-row($id, $format-abbr, $centre, $domainName,
-                        $domainDesc, $rType))
+                        (rf:print-recommendation-row($id, $format-abbr, $centre, $domainId, $domainName,
+                        $domainDesc, $level))
                     )
                 )
             else
@@ -165,74 +113,86 @@ declare function rf:print-recommendation($requestedCentre, $requestedDomain, $re
             (
             if ($requestedDomain)
             then
-                (rf:checkRequestedDomain($requestedDomain, $requestedType, $recommendationLevel,
-                $id, $format-abbr, $centre, $domainId, $domainName, $domainDesc, $rType))
+                (rf:checkRequestedDomain($requestedDomain, $requestedLevel, $recommendationLevel,
+                $id, $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level))
             else
                 (
-                if ($requestedType)
+                if ($requestedLevel)
                 then
-                    (rf:checkRequestedType($requestedType, $recommendationLevel, $id,
-                    $format-abbr, $centre, $domainName, $domainDesc, $rType))
+                    (rf:checkRequestedLevel($requestedLevel, $recommendationLevel, $id,
+                    $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level))
                 else
-                    (rf:print-recommendation-row($id, $format-abbr, $centre, $domainName,
-                    $domainDesc, $rType))
+                    (rf:print-recommendation-row($id, $format-abbr, $centre, $domainId, $domainName,
+                    $domainDesc, $level))
                 )
             )
 
 };
 
-declare function rf:checkRequestedDomain($requestedDomain, $requestedType, $recommendationLevel,
-$id, $format-abbr, $centre, $domainId, $domainName, $domainDesc, $rType) {
+declare function rf:checkRequestedDomain($requestedDomain, $requestedLevel, $recommendationLevel,
+$id, $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level) {
     
     if ($requestedDomain eq $domainId)
     then
         (
-        if ($requestedType)
+        if ($requestedLevel)
         then
-            (rf:checkRequestedType($requestedType, $recommendationLevel, $id, $format-abbr,
-            $centre, $domainName, $domainDesc, $rType))
+            (rf:checkRequestedLevel($requestedLevel, $recommendationLevel, $id, $format-abbr,
+            $centre, $domainId, $domainName, $domainDesc, $level))
         else
-            (rf:print-recommendation-row($id, $format-abbr, $centre, $domainName, $domainDesc,
-            $rType))
+            (rf:print-recommendation-row($id, $format-abbr, $centre, $domainId, $domainName, $domainDesc,
+            $level))
         )
     else
         ()
 };
 
-declare function rf:checkRequestedType($requestedType, $recommendationLevel, $id, $format-abbr, 
-$centre, $domainName, $domainDesc, $rType) {
+declare function rf:checkRequestedLevel($requestedLevel, $recommendationLevel, $id, $format-abbr, 
+$centre, $domainId, $domainName, $domainDesc, $level) {
     
-    if ($requestedType eq $recommendationLevel)
+    if ($requestedLevel eq $recommendationLevel)
     then
-        (rf:print-recommendation-row($id, $format-abbr, $centre, $domainName, $domainDesc, $rType))
+        (rf:print-recommendation-row($id, $format-abbr, $centre, $domainId, $domainName, $domainDesc, $level))
     else
         ()
 
 };
 
-declare function rf:print-recommendation-row($id, $format-abbr, $centre, $domainName, $domainDesc,  
-$rType) {
+declare function rf:print-recommendation-row($id, $format-abbr, $centre, $domainId, $domainName, $domainDesc,  
+$level) {
     <tr>
-        <td class="recommendation-row"><a href="{app:link(concat("views/view-format.xq?id=", $id))}
+        <td class="recommendation-row" id="{$id}"><a href="{app:link(concat("views/view-format.xq?id=", $id))}
             ">{$format-abbr}</a></td>
         <td class="recommendation-row">{$centre}</td>
-        <td class="recommendation-row tooltip">{$domainName}<span class="tooltiptext">{$domainDesc}
+        <td class="recommendation-row tooltip" id="{$domainId}">{$domainName}<span class="tooltiptext">{$domainDesc}
             </span></td>
-        <td class="recommendation-row">{$rType}</td>
+        <td class="recommendation-row">{$level}</td>
     </tr>
 };
 
-declare function rf:export-table($centre, $domainId, $recommendationType, $nodes, $filename) {
+declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $filename) {
     let $domainName := $format:domains[@id = $domainId]/name/text()
-
+    let $requestedLevel := rf:print-recommendation-level($requestedLevel)
     let $rows :=
     for $row in $nodes
     return
         <format>
-            <name>{$row/td[1]/a/text()}</name>
-            <centre>{$row/td[2]/text()}</centre>
-            <domain>{$row/td[3]/text()}</domain>
-            <level>{$row/td[4]/text()}</level>
+            <name
+                id="{$row/td[1]/@id}">{$row/td[1]/a/text()}</name>
+            {
+                if ($centre eq "") then
+                    <centre>{$row/td[2]/text()}</centre>
+                else
+                    (),
+                if ($domainId eq "") then
+                    <domain id="{$row/td[3]/@id}">{$row/td[3]/text()}</domain>
+                else
+                    (),
+                if ($requestedLevel eq "") then 
+                    (<level>{$row/td[4]/text()}</level>)
+                else ()     
+            }
+            
         </format>
         
         (:let $isExportSuccessful := file:serialize($data, $filename,fn:false()):)
@@ -250,41 +210,10 @@ declare function rf:export-table($centre, $domainId, $recommendationType, $nodes
                 <filter>
                     <centre>{$centre}</centre>
                     <domain>{$domainName}</domain>
-                    <level>{rf:print-recommendation-level($recommendationType)}</level>
+                    <level>{$requestedLevel}</level>
                 </filter>
             </header>
             <formats>{$rows}</formats>
         </result>
 
 };
-
-(:declare function rf:getRecommendationForFormat($recommendations, $sortBy) {
-    for $r in $recommendations
-    let $centre := data($r/parent::node()/@id)
-    for $values in fn:tokenize($r, "\.")
-    let $size := fn:string-length($values)
-    let $recommendationLevel := fn:substring($values, $size)
-    let $rType := rf:print-recommendation-level($recommendationLevel)
-    let $domainId := fn:substring($values, 1, $size - 1)
-    let $domainName := $format:domains[@id = $domainId]/name/text()
-    
-    
-    order by
-    if ($sortBy = 'centre') then
-        $centre
-    else
-        if ($sortBy = 'domain') then
-            $domainName
-        else
-            if ($sortBy = 'recommendation') then
-                $recommendationLevel
-            else
-                ()
-    return
-        <tr>
-            <td class="recommendation-row">{$centre}</td>
-            <td class="recommendation-row">{$domainName}</td>
-            <td class="recommendation-row">{$rType}</td>
-        </tr>
-};
-:)
