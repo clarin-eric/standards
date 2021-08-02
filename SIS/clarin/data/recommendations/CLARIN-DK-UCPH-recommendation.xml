@@ -1,0 +1,24 @@
+<result>
+    <header>
+        <filter>
+            <centre>CLARIN-DK-UCPH</centre>
+        </filter>
+    </header>
+    <formats>
+        <format>
+            <name id="fFLAC">FLAC</name>
+            <domain id="1">Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTextPlain">plainText</name>
+            <domain id="11">Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format>
+            <name id="fTextPlain">plainText</name>
+            <domain id="3">Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+    </formats>
+</result>
