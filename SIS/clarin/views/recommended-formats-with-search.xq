@@ -14,7 +14,8 @@ let $domainId := if ($reset) then () else request:get-parameter('domain', '')
 let $recommendationLevel := if ($reset) then () else request:get-parameter('level', '')
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
 let $export := request:get-parameter('exportButton', '')
-let $recommendationTable := rf:print-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
+let $recommendationTable := rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
+
 
 return
 if ($export)
@@ -60,9 +61,9 @@ else
                                     <td>
                                         <select name="level" class="inputSelect" style="width:175px;">
                                             {rf:print-option($recommendationLevel, "", "Select recommendation ...")}
-                                            {rf:print-option($recommendationLevel, "r", "recommended")}
-                                            {rf:print-option($recommendationLevel, "a", "acceptable")}
-                                            {rf:print-option($recommendationLevel, "d", "deprecated")}
+                                            {rf:print-option($recommendationLevel, "recommended", "recommended")}
+                                            {rf:print-option($recommendationLevel, "acceptable", "acceptable")}
+                                            {rf:print-option($recommendationLevel, "deprecated", "deprecated")}
                                         </select>
                                     </td>
                                     <td>
