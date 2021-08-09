@@ -1,0 +1,49 @@
+<result>
+    <header>
+        <filter>
+            <centre>ACDH-ARCHE</centre>
+        </filter>
+    </header>
+    <formats>
+        <format>
+            <name id="fFLAC">FLAC</name>
+            <domain id="1">Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fPDF">PDF</name>
+            <domain id="11">Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format>
+            <name id="fPDFA-1">PDF/A-1</name>
+            <domain id="11">Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fPDFA-2">PDF/A-2</name>
+            <domain id="11">Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fPDFA-3">PDF/A-3</name>
+            <domain id="11">Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format>
+            <name id="fTextPlain">plainText</name>
+            <domain id="11">Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTextPlain">plainText</name>
+            <domain id="3">Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format>
+            <name id="fWave">Wave</name>
+            <domain id="1">Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+    </formats>
+</result>

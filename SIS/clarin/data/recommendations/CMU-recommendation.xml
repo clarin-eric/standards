@@ -1,0 +1,19 @@
+<result>
+    <header>
+        <filter>
+            <centre>CMU</centre>
+        </filter>
+    </header>
+    <formats>
+        <format>
+            <name id="fCHAT">CHAT</name>
+            <domain id="5">Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fCHAT-XML">CHAT-XML</name>
+            <domain id="5">Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+    </formats>
+</result>
