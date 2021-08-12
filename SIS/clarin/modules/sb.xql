@@ -130,9 +130,8 @@ declare function sbm:list-sbs(){
         order by $sb-name
     return (
         <div>
-            <li class="heading2">
-                <button style="text-decoration:underline; color: grey; background-color:white; border:0px; padding:0px;" 
-                onclick="openEditor('{$sb-id}')">{$sb-name}</button>
+            <li>
+                <span class="list-text pointer" onclick="openEditor('{$sb-id}')">{$sb-name}</span>
             </li>
             <span id="{$sb-id}" style="display:none">   
                 <p>{$sb-snipet,$link}</p>

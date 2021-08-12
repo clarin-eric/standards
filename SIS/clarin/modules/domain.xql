@@ -23,9 +23,12 @@ declare function dm:list-domains(){
         let $domain-snippet := $domain/desc/text()     
     return
         <div>
-            <li class="heading2">
-               <button style="text-decoration:underline; color: grey; background-color:white; border:0px; padding:0px;" 
-                onclick="openEditor('{$domain-id}')">{$domain-name}</button>
+            <li>
+               <span class="list-text pointer" 
+                onclick="openEditor('{$domain-id}')">{$domain-name}</span>
+                <img class="copy-icon pointer" src="{app:resource("copy.png","img")}" width="14"  
+                onclick="copyTextToClipboard({$domain-id},'{$domain-name}')"/>
+                <span class="hint" id="hint-{$domain-id}">copied</span>
             </li>
             {if ($domain-name !='Other') then
                <span id="{$domain-id}" style="display:block">
