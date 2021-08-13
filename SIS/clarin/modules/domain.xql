@@ -27,7 +27,7 @@ declare function dm:list-domains(){
                <span class="list-text pointer" 
                 onclick="openEditor('{$domain-id}')">{$domain-name}</span>
                 <img class="copy-icon pointer" src="{app:resource("copy.png","img")}" width="14"  
-                onclick="copyTextToClipboard({$domain-id},'{$domain-name}')"/>
+                onclick="copyTextToClipboard('{$domain-id}','{$domain-name}')"/>
                 <span class="hint" id="hint-{$domain-id}">copied</span>
             </li>
             {if ($domain-name !='Other') then

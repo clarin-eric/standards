@@ -7,8 +7,8 @@ import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
 
-(:  Define the list of domains page
-    @author margaretha
+(:  
+    @author banski, margaretha
 :)
 
 <html>
