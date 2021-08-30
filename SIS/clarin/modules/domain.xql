@@ -21,6 +21,7 @@ declare function dm:list-domains(){
         let $domain-id := $domain/@id
         let $domain-name := $domain/name/text()
         let $domain-snippet := $domain/desc/text()     
+        order by $domain-name
     return
         <div>
             <li>
