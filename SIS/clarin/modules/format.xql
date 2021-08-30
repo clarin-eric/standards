@@ -23,7 +23,7 @@ declare function fm:list-formats(){
         let $format-abbr := $format/titleStmt/abbr/text()
         let $format-snippet := $format/info[@type="description"]/p[1]/text()  
         let $link := <a href="{app:link(concat("views/view-format.xq?id=", $format-id))}"> More...</a>
-    order by $format-abbr    
+    order by fn:lower-case($format-abbr)    
     return
         <div>
             <li>
