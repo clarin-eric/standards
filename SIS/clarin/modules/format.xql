@@ -20,17 +20,18 @@ declare function fm:list-formats(){
     for $format in $format:formats
         let $format-id := data($format/@id)
         let $format-name := $format/titleStmt/title/text()
+        let $format-abbr := $format/titleStmt/abbr/text()
         let $format-snippet := $format/info[@type="description"]/p[1]/text()  
         let $link := <a href="{app:link(concat("views/view-format.xq?id=", $format-id))}"> More...</a>
-        
+    order by fn:lower-case($format-abbr)    
     return
         <div>
             <li>
                <span class="list-text pointer" 
-                onclick="openEditor('{$format-id}')">{$format-name}</span>
+                onclick="openEditor('{$format-id}')">{$format-abbr} ({$format-name})</span>
                 <img class="copy-icon pointer" src="{app:resource("copy.png","img")}" width="14"  
-                onclick="copyTextToClipboard('{$format-id}','{$format-name}')"/>
-                <span class="hint" id="hint-{$format-id}">copied</span>
+                onclick="copyTextToClipboard('{$format-id}','{$format-id}')"/>
+                <span class="hint" id="hint-{$format-id}">Format ID copied</span>
             </li>
             {if ($format-name !='Other') then
                <span id="{$format-id}" style="display:block">

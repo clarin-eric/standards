@@ -18,16 +18,18 @@ declare function menu:view(){
                 </tr>               
                <tr>
                     <td colspan="2" class="tdmenu">
-                        <a style="display:block"  href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
-                    </td>
-               </tr>
-               <tr>
-                    <td colspan="2" class="tdmenu">
                         <a style="display:block"  href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     </td>
                </tr>
-               <tr>                    
-                    <td colspan="2" class="tdmenu">
+               <tr>
+                    <td width="10px"></td>
+                    <td class="tdmenu">
+                        <a style="display:block"  href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
+                    </td>
+               </tr>
+               <tr>   
+                    <td width="10px"></td>
+                    <td class="tdmenu">
                         <a style="display:block"  href="{app:link("views/list-domains.xq")}">Functional Domains</a>
                     </td>
                 </tr>
@@ -40,7 +42,7 @@ declare function menu:view(){
                 {if (session:get-attribute("user") = 'webadmin' or session:get-attribute("user") = 'user')
                  then                   
                     <tr>
-                        <td width="15px"></td>
+                        <td width="10px"></td>
                         <td class="tdmenu">
                         <a style="display:block"  href="{app:link("views/register-spec.xq")}">Register</a>
                         </td>
