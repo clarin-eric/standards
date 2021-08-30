@@ -49,9 +49,8 @@ declare function tm:list-topics(){
         let $link := <a href="{app:link(concat("views/view-topic.xq?id=",$topic-id))}"> More...</a>
     return
         <div>
-            <li class="heading2">
-               <button style="text-decoration:underline; color: grey; background-color:white; border:0px; padding:0px;" 
-                onclick="openEditor('{$topic-id}')">{$topic-name}</button>
+            <li>
+               <span class="list-text pointer" onclick="openEditor('{$topic-id}')">{$topic-name}</span>
             </li>
             {if ($topic-name !='Others') then
                <span id="{$topic-id}" style="display:none">

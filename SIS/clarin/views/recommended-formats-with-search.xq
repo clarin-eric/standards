@@ -24,7 +24,7 @@ else
 
     <html>
         <head>
-            <title>CLARIN Format Recommendations</title>
+            <title>Format Recommendations</title>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         </head>
         <body>
@@ -33,9 +33,9 @@ else
                 {menu:view()}
                 <div class="content">
                     <div class="navigation">
-                        &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Data Deposition Formats</a>
+                        &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     </div>
-                    <div class="title" id="pagetitle">CLARIN Format Recommendations</div>
+                    <div class="title" id="pagetitle">Format Recommendations</div>
                     
                     <div><p>This page presents formats of data depositions that various CLARIN centres are ready to accept. Each format,
                             for each centre, can be recommended, acceptable or deprecated in the context of several domains that represent the

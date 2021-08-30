@@ -18,7 +18,12 @@ declare function menu:view(){
                 </tr>               
                <tr>
                     <td colspan="2" class="tdmenu">
-                        <a style="display:block"  href="{app:link("views/recommended-formats-with-search.xq")}">Data Deposition Formats</a>
+                        <a style="display:block"  href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
+                    </td>
+               </tr>
+               <tr>
+                    <td colspan="2" class="tdmenu">
+                        <a style="display:block"  href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     </td>
                </tr>
                <tr>                    

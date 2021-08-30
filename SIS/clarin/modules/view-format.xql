@@ -113,23 +113,25 @@ declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendat
 declare function vfm:print-recommendation-rows($recommendations,$format-id,$sortBy){
     for $r in $recommendations
         let $centre := $r/header/filter/centre/text()
-        let $format := $r/formats/format[name/@id=$format-id]
-        let $format-abbr := $format/name/text()
-        let $level := $format/level/text()
-        let $domainId := $format/domain/@id
-        let $domainName := $format/domain/text()
-        let $domainDesc := $domain:domains[@id = $domainId]/desc/text()
-        order by
-        if ($sortBy = 'centre') then
-            $centre
-        else
-            if ($sortBy = 'domain') then
-                $domainName
+        let $formats := $r/formats/format[name/@id=$format-id]
+        
+        for $format in $formats
+            let $format-abbr := $format/name/text()
+            let $level := $format/level/text()
+            let $domainId := $format/domain/@id
+            let $domainName := $format/domain/text()
+            let $domainDesc := $domain:domains[@id = $domainId]/desc/text()
+            order by
+            if ($sortBy = 'centre') then
+                $centre
             else
-                if ($sortBy = 'recommendation') then
-                    $level
+                if ($sortBy = 'domain') then
+                    $domainName
                 else
-                    ()
-        return rf:print-recommendation-row($format-id, $format-abbr,$centre,$domainId,
-        $domainName,$domainDesc,$level, fn:false())
+                    if ($sortBy = 'recommendation') then
+                        $level
+                    else
+                        ()
+            return rf:print-recommendation-row($format-id, $format-abbr,$centre,$domainId,
+            $domainName,$domainDesc,$level, fn:false())
 };

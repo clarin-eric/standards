@@ -28,7 +28,7 @@ declare function rf:print-centres($centre) {
 };
 
 declare function rf:print-domains($domainId) {
-    for $d in $format:domains
+    for $d in $domain:domains
     let $id := $d/@id
         order by fn:lower-case($d/name/text())
     return
@@ -53,22 +53,6 @@ declare function rf:print-option($selected, $value, $label) {
     else
         <option
             value="{$value}">{$label}</option>
-};
-
-(:@deprecated:)
-declare function rf:print-recommendation-level($recommendationLevel) {
-    if ($recommendationLevel = "r") then
-        "recommended"
-    else
-        (
-        if ($recommendationLevel = "a") then
-            "acceptable"
-        else
-            if ($recommendationLevel = "d") then
-                "deprecated"
-            else
-                ""
-        )
 };
 
 declare function rf:print-centre-recommendation($requestedCentre, $requestedDomain, $requestedLevel, $sortBy) {
@@ -201,7 +185,7 @@ $level, $includeFormat) {
 };
 
 declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $filename) {
-    let $domainName := $format:domains[@id = $domainId]/name/text()
+    let $domainName := $domain:domains[@id = $domainId]/name/text()
     let $rows :=
     for $row in $nodes
     return

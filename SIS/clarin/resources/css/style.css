@@ -94,6 +94,14 @@ ul#menu{
 	font-weight:bold;
 }
 
+.list-text{
+    font-size:larger;
+    font-weight:bold;
+    background-color:white; 
+    border:0px; 
+    padding:0px;
+}
+
 .edit{
     margin-left:7px;
     padding:0px;
@@ -266,3 +274,22 @@ th {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+.copy-icon{
+    margin-left: 5px;
+}
+.pointer:hover{
+    cursor: pointer;
+}
+
+.hint{
+    color:green; 
+    margin-left: 5px; 
+    display:none;
+}
+
+.hint.clicked{
+    display:inline;
+    transition-duration:10s;
+}
+
