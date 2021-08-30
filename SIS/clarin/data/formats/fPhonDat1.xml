@@ -1,6 +1,6 @@
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPhonDat1" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>PhonDat Data Format 1</title>
+    <title>PhonDat Data Format #1</title>
     <abbr>PhonDat1</abbr>
   </titleStmt>
   <ClarinRecommendation>

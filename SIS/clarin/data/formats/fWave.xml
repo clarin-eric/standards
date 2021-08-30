@@ -1,13 +1,13 @@
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fWave" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
     <title>Waveform Audio File Format</title>
-    <abbr>Wave</abbr>
+    <abbr>WAVE</abbr>
   </titleStmt>
   <keyword>speech data</keyword>
   <keyword>audio file format</keyword>
   <keyword>container format</keyword>
   <info type="description">
-    <p>Waveform Audio File Format (WAVE,or WAV due to its filename extension; pronounced "wave") is
+    <p>Waveform Audio File Format (WAVE, or WAV due to its filename extension; pronounced "wave") is
       an audio file format standard, developed by IBM and Microsoft, for storing an audio bitstream
       on PCs. It is an application of the Resource Interchange File Format (RIFF) bitstream format
       method for storing data in "chunks", and thus is also close to the 8SVX and the AIFF format

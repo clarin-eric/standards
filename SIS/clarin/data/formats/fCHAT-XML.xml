@@ -1,6 +1,6 @@
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCHAT-XML" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>the XML format for CHAT</title>
+    <title>XML serialization of CHAT</title>
     <abbr>CHAT-XML</abbr>
   </titleStmt>
   <keyword>transcription of speech</keyword>
