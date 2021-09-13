@@ -31,11 +31,13 @@ import module namespace index="http://clarin.ids-mannheim.de/standards/index" at
                 <div class="title">CLARIN Standards Information System</div>
                 <div>
                     <p>The CLARIN Standards Information System lists language-technology-related standards 
-                    that CLARIN centres are willing to accept and recognize and visualizes some of their 
+                    that CLARIN centres are willing to accept and recognize, and visualizes some of their 
                     interdependencies.</p>
                     <p>The system is in the process of development and extension. Until this notice is gone, 
-                    the system should not be expected to provide exhaustive information. Please consult the 
-                    CLARIN Standards Committee if you need up-to-date information.</p>
+                    the system should not be expected to provide exhaustive up-to-date information on CLARIN standards. It may however be expected to reflect 
+                    the CLARIN centre recommendations for deposition formats.</p> 
+                    <p>Please consult the <a href="https://www.clarin.eu/content/standards">"visiting card" of the CLARIN Standards Committee</a> for more information.</p>
+                    <p></p>
                     
                 </div>
                 <div><p>This website is managed by the CLARIN Standards Committee. Feedback on the <a href="schemas/spec.xsd">XML Schema</a> of <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">standard</a> 
