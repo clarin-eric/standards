@@ -99,7 +99,7 @@ else
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=abbr&amp;domain=",
                                             $domainId, "&amp;level=", $recommendationLevel, "&amp;centre=",$centre, "#searchRecommendation"))
-                                        }">Abbreviation</a>
+                                        }">Format</a>
                             </th>
                             <th class="header" style="width:20%;">
                                 <a href="{
