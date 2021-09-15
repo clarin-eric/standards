@@ -7,12 +7,12 @@
     <formats>
         <format>
             <name id="fCHAT">CHAT</name>
-            <domain id="5">Text Annotation</domain>
+            <domain id="6">Audiovisual Annotation</domain>
             <level>deprecated</level>
         </format>
         <format>
             <name id="fCHAT-XML">CHAT-XML</name>
-            <domain id="5">Text Annotation</domain>
+            <domain id="6">Audiovisual Annotation</domain>
             <level>deprecated</level>
         </format>
         <format>
