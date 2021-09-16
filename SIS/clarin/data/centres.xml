@@ -1,17 +1,17 @@
 <centres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/spec.xsd">
-	<centre id="ASV">
+	<centre id="ASV" deposition="1">
 		<name>ASV Leipzig</name>
 		<a href="https://centres.clarin.eu/centre/4"/>
 	</centre>
-	<centre id="ACDH-ARCHE">
+	<centre id="ACDH-ARCHE" deposition="1">
 		<name>Austrian Centre for Digital Humanities and Cultural Heritage - A Resource Centre for the Humanities</name>
 		<a href="https://centres.clarin.eu/centre/45"/>
 	</centre>
-	<centre id="BAS">
+	<centre id="BAS" deposition="1">
 		<name>Bayerisches Archiv für Sprachsignale</name>
 		<a href="https://centres.clarin.eu/centre/5"/>
 	</centre>
-	<centre id="BBAW">
+	<centre id="BBAW" deposition="1">
 		<name>Berlin-Brandenburg Academy of Sciences and Humanities</name>
 		<a href="https://centres.clarin.eu/centre/6"/>
 	</centre>
@@ -79,11 +79,11 @@
 		<name>CLARIN-LT</name>
 		<a href="https://centres.clarin.eu/centre/36"/>
 	</centre>
-	<centre id="CLARIN-PL1">
+	<centre id="CLARIN-PL1" deposition="1">
 		<name>CLARIN-PL Language Technology Centre</name>
 		<a href="https://centres.clarin.eu/centre/25"/>
 	</centre>
-	<centre id="CLARINSI">
+	<centre id="CLARINSI" deposition="1">
 		<name>CLARIN.SI Language Technology Centre</name>
 		<a href="https://centres.clarin.eu/centre/30"/>
 	</centre>
@@ -151,7 +151,7 @@
 		<name>IMPACT Centre of Competence</name>
 		<a href="https://centres.clarin.eu/centre/52"/>
 	</centre>
-	<centre id="IMS">
+	<centre id="IMS" deposition="1">
 		<name>Institut für Maschinelle Sprachverarbeitung</name>
 		<a href="https://centres.clarin.eu/centre/10"/>
 	</centre>
@@ -163,11 +163,11 @@
 		<name>Language Archive Cologne</name>
 		<a href="https://centres.clarin.eu/centre/47"/>
 	</centre>
-	<centre id="IDS">
+	<centre id="IDS" deposition="1">
 		<name>Leibniz-Institut für Deutsche Sprache</name>
 		<a href="https://centres.clarin.eu/centre/11"/>
 	</centre>
-	<centre id="LINDAT">
+	<centre id="LINDAT" deposition="1">
 		<name>LINDAT/CLARIN</name>
 		<a href="https://centres.clarin.eu/centre/3"/>
 	</centre>
