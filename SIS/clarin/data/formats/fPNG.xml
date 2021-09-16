@@ -1,0 +1,16 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPNG" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Portable Network Graphics</title>
+    <abbr>PNG</abbr>
+  </titleStmt>
+  <keyword>image format</keyword>
+  <keyword>raster</keyword>
+  <info type="description">
+    <p>Please feel welcome to supply the description of this format file via GitHub</p>
+  </info>
+  <!--<relation target="SpecPNG" type="isDefinedBy"/>
+   -->
+  <mimeType>image/png</mimeType>
+  <fileExt>.png</fileExt>
+  <!--<formatFamily></formatFamily>-->
+</format>
