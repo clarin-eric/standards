@@ -14,7 +14,8 @@ import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommenda
 
 
 declare function rf:print-centres($centre) {
-    for $c in data($centre:centres/@id)
+   let $depositing-centres := $centre:centres[@deposition = "1" or @deposition = "true"] 
+    for $c in data($depositing-centres/@id)
         order by fn:lower-case($c)
     return
         if ($c eq $centre)
