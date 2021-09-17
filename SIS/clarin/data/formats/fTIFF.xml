@@ -1,0 +1,19 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTIFF" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Tag Image File Format</title>
+    <abbr>TIFF</abbr>
+  </titleStmt>
+  <keyword>image format</keyword>
+  <keyword>raster</keyword>
+  <info type="description">
+    <p>Please feel welcome to supply the description of this format file via GitHub</p>
+<!--  mention that uncompressed is the default, others are possible  -->
+  </info>
+  <!--<relation target="SpecTIFF" type="isDefinedBy"/>
+    ISO 12639
+   -->
+  <mimeType>image/tiff</mimeType>
+  <fileExt recommended="yes">.tiff</fileExt>
+  <fileExt>.tif</fileExt>
+  <formatFamily>uncompressed</formatFamily>
+</format>
