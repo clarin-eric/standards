@@ -1,0 +1,17 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fBMP" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Device-independent bitmap</title>
+    <abbr>BMP</abbr>
+  </titleStmt>
+  <keyword>image format</keyword>
+  <keyword>raster graphics</keyword>
+  <info type="description">
+    <p>Please feel welcome to supply the description of this format file via GitHub</p>
+  </info>
+  <!--<relation target="SpecBMP" type="isDefinedBy"/>
+   -->
+  <mimeType>image/bmp</mimeType>
+  <fileExt recommended="yes">.bmp</fileExt>
+  <fileExt>.dib</fileExt>
+  <formatFamily>uncompressed</formatFamily> <!--not entirely true, tho prolly tru enuf-->
+</format>

@@ -1,0 +1,18 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSVG" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Scalable Vector Graphics</title>
+    <abbr>SVG</abbr>
+  </titleStmt>
+  <keyword>image format</keyword>
+  <keyword>vector graphics</keyword>
+  <info type="description">
+    <p>Please feel welcome to supply the description of this format file via GitHub</p>
+  </info>
+  <!--<relation target="SpecSVG" type="isDefinedBy"/>
+    http://www.w3.org/TR/SVG11/
+   -->
+  <mimeType>image/svg+xml</mimeType>
+  <fileExt recommended="yes">.svg</fileExt>
+  <fileExt>.svgz</fileExt>
+  <formatFamily>vector</formatFamily>
+</format>

@@ -1,0 +1,21 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fDICOM" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Digital Imaging and Communications in Medicine</title>
+    <abbr>DICOM</abbr>
+  </titleStmt>
+  <keyword>image format</keyword>
+  <keyword>medicine</keyword>
+<!--  this is also video, and can be lossy... messy  -->
+  <info type="description">
+    <p>Please feel welcome to supply the description of this format file via GitHub</p>
+    <!--  Many image compression formats possible, https://en.wikipedia.org/wiki/DICOM -->
+  </info>
+  <!--<relation target="SpecDICOM" type="isDefinedBy"/>
+    ISO 12052, also own committe, and the primary standards body seems to be the NEMA: National Electrical Manufacturers Association
+   -->
+  <mimeType>application/dicom</mimeType>
+  <fileExt recommended="yes">.dcm</fileExt>
+  <fileExt>.dic</fileExt>
+  <fileExt>.dicom</fileExt>
+  <!--<formatFamily>lossy</formatFamily>-->
+</format>
