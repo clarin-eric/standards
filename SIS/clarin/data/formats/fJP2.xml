@@ -8,7 +8,10 @@
   <keyword>image compression</keyword>
 <!--  this is also video, and can be lossy... messy  -->
   <info type="description">
-    <p>Please feel welcome to supply the description of this format file via GitHub</p>
+    <p>Please feel welcome to supply the description of this format file via GitHub: either as an
+      <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
+      request after forking or browsing the
+      <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
 <!--  Mention JPEG200, optimally make it findable   -->
   </info>
   <!--<relation target="SpecJPEG2000" type="isDefinedBy"/>

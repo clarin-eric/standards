@@ -8,7 +8,10 @@
   <keyword>image compression</keyword>
   <keyword>lossless compression</keyword>
   <info type="description">
-    <p>Please feel welcome to supply the description of this format file via GitHub</p>
+    <p>Please feel welcome to supply the description of this format file via GitHub: either as an
+      <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
+      request after forking or browsing the
+      <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
   </info>
   <!--<relation target="SpecGIF" type="isDefinedBy"/>
    -->
