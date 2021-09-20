@@ -14,6 +14,10 @@ declare function dm:get-domain($id as xs:string){
     domain:get-domain($id)
 };
 
+declare function dm:get-domain-by-name($name as xs:string){
+    domain:get-domain-by-name($name)
+};
+
 
 (: Generate the list of domains :)
 declare function dm:list-domains(){

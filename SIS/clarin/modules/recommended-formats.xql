@@ -11,6 +11,7 @@ at "../model/recommendation-by-centre.xqm";
 
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommendation" at "../modules/recommendation.xql";
+import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
 
 
 declare function rf:print-centres($centre) {
@@ -62,9 +63,10 @@ declare function rf:print-centre-recommendation($requestedCentre, $requestedDoma
         let $centre := $r/header/filter/centre/text()
         
         for $format in $r/formats/format
-            let $domainId :=$format/domain/@id
             let $domainName := $format/domain/text()
-            let $domainDesc := $domain:domains[@id = $domainId]/desc/text()
+            let $domain :=dm:get-domain-by-name($domainName)
+            let $domainId := data($domain/@id)
+            let $domainDesc := $domain/desc/text()
             let $level := $format/level/text()
             let $format-abbr:=$format/name/text()
             let $format-id := data($format/name/@id)
@@ -186,30 +188,43 @@ $level, $includeFormat) {
 };
 
 declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $filename) {
-    let $domainName := $domain:domains[@id = $domainId]/name/text()
+    let $domain := dm:get-domain($domainId)
+    let $domainName := $domain/name/text()
+    let $filter :=
+        (if ($centre) then 
+            <centre>{$centre}</centre>
+            else (),
+        if ($domainName) then
+            <domain>{$domainName}</domain>
+            else (),
+        if ($requestedLevel) then
+            <level>{$requestedLevel}</level>
+            else())    
+    
     let $rows :=
-    for $row in $nodes
-    return
-        <format>
-            <name
-                id="{$row/td[1]/@id}">{$row/td[1]/a/text()}</name>
-            {
-                if ($centre eq "") then
-                    <centre>{$row/td[2]/text()}</centre>
-                else
-                    (),
-                if ($domainId eq "") then
-                    <domain
-                        id="{$row/td[3]/@id}">{$row/td[3]/text()}</domain>
-                else
-                    (),
-                if ($requestedLevel eq "") then
-                    (<level>{$row/td[4]/text()}</level>)
-                else
-                    ()
-            }
-        
-        </format>
+        for $row in $nodes
+        return
+            <format>
+                <name
+                    id="{$row/td[1]/@id}">{$row/td[1]/a/text()}</name>
+                {
+                    if ($centre eq "") then
+                        <centre>{$row/td[2]/text()}</centre>
+                    else
+                        (),
+                    if ($domainId eq "") then
+                        (:<domain
+                            id="{$row/td[3]/@id}">{$row/td[3]/text()}</domain>:)
+                            <domain>{$row/td[3]/text()}</domain>
+                    else
+                        (),
+                    if ($requestedLevel eq "") then
+                        (<level>{$row/td[4]/text()}</level>)
+                    else
+                        ()
+                }
+            
+            </format>
         
         (:let $isExportSuccessful := file:serialize($data, $filename,fn:false()):)
     let $quote := "&#34;"
@@ -223,11 +238,7 @@ declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $f
                 <title>CLARIN Standards Information System (SIS) export</title>
                 <url>{app:link("views/recommended-formats-with-search.xq")}</url>
                 <date>{fn:current-dateTime()}</date>
-                <filter>
-                    <centre>{$centre}</centre>
-                    <domain>{$domainName}</domain>
-                    <level>{$requestedLevel}</level>
-                </filter>
+                <filter>{$filter}</filter>
             </header>
             <formats>{$rows}</formats>
         </result>

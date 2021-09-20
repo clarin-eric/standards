@@ -7,17 +7,17 @@
     <formats>
         <format>
             <name id="fCHAT">CHAT</name>
-            <domain id="6">Audiovisual Annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>deprecated</level>
         </format>
         <format>
             <name id="fCHAT-XML">CHAT-XML</name>
-            <domain id="6">Audiovisual Annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>deprecated</level>
         </format>
         <format>
             <name id="fWave">Wave</name>
-            <domain id="1">Audiovisual Source Language Data</domain>
+            <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
     </formats>

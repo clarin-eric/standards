@@ -7,12 +7,12 @@
     <formats>
         <format>
             <name id="fTextPlain">plainText</name>
-            <domain id="11">Documentation</domain>
+            <domain>Documentation</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fTextPlain">plainText</name>
-            <domain id="3">Textual Source Language Data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>acceptable</level>
         </format>
     </formats>
