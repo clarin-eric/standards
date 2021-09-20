@@ -4,9 +4,12 @@
     <abbr>TIFF</abbr>
   </titleStmt>
   <keyword>image format</keyword>
-  <keyword>raster</keyword>
+  <keyword>raster graphics</keyword>
   <info type="description">
-    <p>Please feel welcome to supply the description of this format file via GitHub</p>
+    <p>Please feel welcome to supply the description of this format file via GitHub: either as an
+      <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
+      request after forking or browsing the
+      <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
 <!--  mention that uncompressed is the default, others are possible  -->
   </info>
   <!--<relation target="SpecTIFF" type="isDefinedBy"/>

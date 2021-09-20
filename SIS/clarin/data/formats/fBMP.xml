@@ -1,21 +1,20 @@
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPNG" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fBMP" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>Portable Network Graphics</title>
-    <abbr>PNG</abbr>
+    <title>Device-independent bitmap</title>
+    <abbr>BMP</abbr>
   </titleStmt>
   <keyword>image format</keyword>
   <keyword>raster graphics</keyword>
-  <keyword>image compression</keyword>
-  <keyword>lossless compression</keyword>
   <info type="description">
     <p>Please feel welcome to supply the description of this format file via GitHub: either as an
       <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
       request after forking or browsing the
       <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
   </info>
-  <!--<relation target="SpecPNG" type="isDefinedBy"/>
+  <!--<relation target="SpecBMP" type="isDefinedBy"/>
    -->
-  <mimeType>image/png</mimeType>
-  <fileExt>.png</fileExt>
-  <formatFamily>lossless</formatFamily>
+  <mimeType>image/bmp</mimeType>
+  <fileExt recommended="yes">.bmp</fileExt>
+  <fileExt>.dib</fileExt>
+  <formatFamily>uncompressed</formatFamily> <!--not entirely true, tho prolly tru enuf-->
 </format>
