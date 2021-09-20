@@ -35,7 +35,7 @@ declare function vfm:print-multiple-values($list, $id, $label, $isLink as xs:boo
                                 (<a href="{$list[$k]}">{$list[$k]}</a>)
                             else
                                 $list[$k]/text(),
-                            if ($list[$k]/@type)
+                            (:if ($list[$k]/@type):)
                             then
                                 (<span id="abbrinternalText" style="margin-left:5px;">({data($list[$k]/@type)})</span>)
                             else
