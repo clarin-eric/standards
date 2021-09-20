@@ -35,11 +35,11 @@ declare function vfm:print-multiple-values($list, $id, $label, $isLink as xs:boo
                                 (<a href="{$list[$k]}">{$list[$k]}</a>)
                             else
                                 $list[$k]/text(),
-                            (:if ($list[$k]/@type):)
+                            (:if ($list[$k]/@type)
                             then
                                 (<span id="abbrinternalText" style="margin-left:5px;">({data($list[$k]/@type)})</span>)
                             else
-                                (),
+                                (),:)
                             if ($list[$k][@recommended = "yes"])
                             then
                                 (<span id="abbrinternalText" style="font-size:10px;margin-left:5px;">[recommended]</span>)
