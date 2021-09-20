@@ -7,12 +7,12 @@
     <formats>
         <format>
             <name id="fTextPlain">plainText</name>
-            <domain id="3">Textual Source Language Data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fWave">Wave</name>
-            <domain id="1">Audiovisual Source Language Data</domain>
+            <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
     </formats>

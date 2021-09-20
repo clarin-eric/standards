@@ -16,3 +16,8 @@ declare variable $domain:domains := doc('/db/apps/clarin/data/domains.xml')/doma
 declare function domain:get-domain($id as xs:string){
     $domain:domains[@id=$id]
 };
+
+(: Select a domain by name :)
+declare function domain:get-domain-by-name($name as xs:string){
+    $domain:domains[name=$name]
+};

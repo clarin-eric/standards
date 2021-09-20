@@ -7,22 +7,22 @@
     <formats>
         <format>
             <name id="fPDF">PDF</name>
-            <domain id="11">Documentation</domain>
+            <domain>Documentation</domain>
             <level>acceptable</level>
         </format>
         <format>
             <name id="fPDF">PDF</name>
-            <domain id="3">Textual Source Language Data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>acceptable</level>
         </format>
         <format>
             <name id="fTextPlain">plainText</name>
-            <domain id="3">Textual Source Language Data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fWave">Wave</name>
-            <domain id="1">Audiovisual Source Language Data</domain>
+            <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
     </formats>
