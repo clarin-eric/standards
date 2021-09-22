@@ -9,6 +9,7 @@
             <name id="fALTO">ALTO</name>
             <domain>Text Annotation</domain>
             <level>acceptable</level>
+            <comment>This is just a test comment</comment>
         </format>
         <format>
             <name id="fCHAT">CHAT</name>
