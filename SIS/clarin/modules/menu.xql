@@ -33,7 +33,11 @@ declare function menu:view(){
                         <a style="display:block"  href="{app:link("views/list-domains.xq")}">Functional Domains</a>
                     </td>
                 </tr>
-
+                <tr>
+                    <td colspan="2" class="tdmenu">
+                        <a style="display:block"  href="{app:link("views/list-mimetypes.xq")}">MIME Types</a>
+                    </td>
+               </tr>
                 <tr>
                     <td colspan="2" class="tdmenu">
                         <a style="display:block"  href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards</a>

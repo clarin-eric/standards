@@ -44,9 +44,9 @@ declare function fm:list-formats() {
                     id="hint-{$format-id}">Format ID copied</span>
                 {
                     if ($format-name != 'Other' and ($mime-type or $file-ext)) then
-                        <p>{fm:print-multiple-values($format/mimeType, $format-id, "MIME types:")}
+                        <p>{fm:print-multiple-values($format/mimeType, "MIME types:")}
                             <br/>
-                            {fm:print-multiple-values($format/fileExt, $format-id, "File extensions:")}</p>
+                            {fm:print-multiple-values($format/fileExt, "File extensions:")}</p>
                     else
                         ()
                 }
@@ -54,7 +54,7 @@ declare function fm:list-formats() {
         </div>
 };
 
-declare function fm:print-multiple-values($list, $id, $label) {
+declare function fm:print-multiple-values($list, $label) {
     let $numOfItems := count($list)
     let $max := fn:max(($numOfItems, 1))
     return
@@ -93,4 +93,27 @@ declare function fm:print-multiple-values($list, $id, $label) {
             )
         else
             ()
+};
+
+
+declare function fm:list-mime-types() {
+    let $mime-types := fn:distinct-values($format:formats/mimeType/text())
+    for $type in $mime-types
+    let $list := $format:formats[mimeType = $type]/titleStmt/abbr
+        order by $type
+    return
+        <li><span
+                class="list-text">{$type}</span>
+            <p>{fm:print-multiple-values($list, "Formats:")}</p>
+        </li>
+};
+
+declare function fm:get-formats-without-mime-types() {
+    
+    let $list := $format:formats[not(mimeType) or mimeType = ""]/titleStmt/abbr
+    return
+        <li><span
+                class="list-text">No MIME Types</span>
+            <p>{fm:print-multiple-values($list, "Formats:")}</p>
+        </li>
 };
