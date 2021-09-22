@@ -25,4 +25,5 @@
   <mimeType recommended="yes">text/plain;format-variant=clan-cha</mimeType>
   <mimeType>text/x-chat</mimeType>
   <fileExt>.cha</fileExt>
+  <formatFamily>markup-partial</formatFamily>
 </format>
