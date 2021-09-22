@@ -45,7 +45,11 @@ else
                            <p>The exported XML files for a specified centre can be used to extend or modify the recommendations for that centre, 
                            by an authorised person. In order to aid in the process, please consult the separate lists of all 
                            <a href="{app:link("views/list-formats.xq")}">available file formats</a> and of the 
-                           functional groupings of formats (<a href="{app:link("views/list-domains.xq")}">functional domains</a>).</p></div>
+                           functional groupings of formats (<a href="{app:link("views/list-domains.xq")}">functional domains</a>).</p>
+                           <p>In the current shape, the list should be expected to be incorrect, partially because the information 
+                           provided by the centres couldn't be mapped into the feature matrix offered by the SIS (created on the basis 
+                           of the SIS functional domains and levels of recommendation). Please 
+                           <a href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">kindly help us get it right</a>.</p></div>
                     <div style="margin-top:30px;">
                         <form id="searchRecommendation" style="float:left;" method="post" action="{app:link("views/recommended-formats-with-search.xq?#pagetitle")}">
                             <table style="margin:0;">
