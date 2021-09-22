@@ -1,0 +1,37 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fXML" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>eXtensible Markup Language</title>
+    <abbr>XML</abbr>
+  </titleStmt>
+  <keyword>data format</keyword>
+  <keyword>annotation format</keyword>
+  <keyword>format family</keyword>
+  <info type="description">
+    <p>In the context of format recommendations, "XML" is too general a pointer to provide a
+      meaningful recommendation. In fringe cases, it might happen that a centre receives deposition
+      of a prose text, encoded with a series of &lt;paragraph&gt; elements within a &lt;text&gt;
+      element, but in regular cases, and especially if the text has internal structure and is
+      accompanied by annotations and a header containing metadata, it is best to adhere to one of
+      the established formats that are more or less standardly recognized by tools at the disposal
+      of CLARIN centres.</p>
+    <p>The following is an emphatically non-exhaustive list of XML-based formats recognized by CLARIN:</p>
+    <ul>
+      <li>TEI-based formats</li>
+      <li>XHTML</li>
+      <li>PAULA</li>
+      <li>XCES</li>
+      <li>TigerXML</li>
+      <li>TCF</li>
+      <li>EXMARaLDA</li>
+      <li>FOLKER/OrthoNormal</li>
+      <li>ALTO</li>
+      <li>FoLiA</li>
+      <li>...</li>
+      <li>many others: the SIS is going to feature a format-family browsing facility in the "near future"</li>
+    </ul>
+  </info>
+  <relation target="SpecXML" type="isDefinedBy"/>
+  <mimeType>application/xml</mimeType>
+  <fileExt>.xml</fileExt>
+  <formatFamily>markup-full</formatFamily>
+</format>
