@@ -9,6 +9,7 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
 
 import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rf="http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";
+import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
 
 declare function vfm:get-format($id as xs:string) {
     format:get-format($id)
@@ -116,11 +117,9 @@ declare function vfm:print-recommendation-rows($recommendations,$format-id,$sort
         let $formats := $r/formats/format[name/@id=$format-id]
         
         for $format in $formats
-            let $format-abbr := $format/name/text()
             let $level := $format/level/text()
-            let $domainId := $format/domain/@id
             let $domainName := $format/domain/text()
-            let $domainDesc := $domain:domains[@id = $domainId]/desc/text()
+            let $domain := dm:get-domain-by-name($domainName)
             order by
             if ($sortBy = 'centre') then
                 $centre
@@ -132,6 +131,5 @@ declare function vfm:print-recommendation-rows($recommendations,$format-id,$sort
                         $level
                     else
                         ()
-            return rf:print-recommendation-row($format-id, $format-abbr,$centre,$domainId,
-            $domainName,$domainDesc,$level, fn:false())
+            return rf:print-recommendation-row($format, $centre,$domain, fn:false())
 };
