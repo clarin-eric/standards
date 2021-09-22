@@ -22,7 +22,7 @@
   </info>
   <relation target="SpecCHAT" type="isDefinedBy"/>
   <relation target="SpecCHAT" type="isUsedBy"/>
-  <mimeType recommended="yes">text/x-chat</mimeType>
-  <mimeType>text/plain</mimeType>
+  <mimeType recommended="yes">text/plain;format-variant=clan-cha</mimeType>
+  <mimeType>text/x-chat</mimeType>
   <fileExt>.cha</fileExt>
 </format>

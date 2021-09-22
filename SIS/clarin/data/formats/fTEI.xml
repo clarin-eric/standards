@@ -35,8 +35,7 @@
       meant as bases for further customization, as well as three fully-defined and maintained
       customizations: TEI Lite, TEI simplePrint, TEI Tite.</p>
   </info>
-  <!--<relation target="SpecTEI" type="isDefinedBy"/>
-   -->
+  <relation target="SpecTei" type="isDefinedBy"/>
   <mimeType>application/tei+xml</mimeType>
   <fileExt>.tei</fileExt>
   <fileExt>.xml</fileExt>

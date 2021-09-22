@@ -1,0 +1,24 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fI5" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>DeReKo archiving format</title>
+    <abbr>I5</abbr>
+  </titleStmt>
+  
+  <keyword>annotation format</keyword>
+  <keyword>corpus encoding</keyword>
+  
+  <info type="description">
+    <p>Please feel welcome to supply the description of this format file via GitHub: either as an
+      <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
+      request after forking or browsing the
+      <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
+    <p>I5 is a serialization of the TEI P5 Document Grammar for the IDS Text Model. See <a href="http://jtei.revues.org/508">Harald Lüngen, and C. M. Sperberg-McQueen (2012): A TEI P5
+      Document Grammar for the IDS Text Model. In: Journal of the Text Encoding Initiative (2012), H. 3.</a></p>
+  </info>
+  <!--<relation target="Spec..." type="isDefinedBy"/>
+   -->
+  <mimeType>application/tei+xml</mimeType>
+  <fileExt>.xml</fileExt>
+  <fileExt>.i5</fileExt>
+  <formatFamily>TEI</formatFamily>
+</format>

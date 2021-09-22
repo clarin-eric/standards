@@ -1,0 +1,27 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTEISpoken" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>ISO/TEI Transcriptions of Spoken Language</title>
+    <abbr>TEISpOken</abbr>
+  </titleStmt>
+  
+  <keyword>annotation format</keyword>
+  <keyword>corpus encoding</keyword>
+  
+  <info type="description">
+    <p>I5 is a serialization of the ISO/TEI Transcriptions of Spoken Language (ISO). See 
+      <a href="https://journals.openedition.org/jtei/142">Thomas Schmidt, “A TEI-based Approach to Standardising Spoken Language Transcription”, Journal of the Text Encoding Initiative [Online], Issue 1 | June 2011, Online since 08 June 2011, connection on 21 September 2021. URL: http://journals.openedition.org/jtei/142; DOI: https://doi.org/10.4000/jtei.142</a></p>
+    <p>ISO/TEI transcriptions of spoken language will be identified by the MIME type
+      <i>application/tei+xml;format-variant=tei-iso-spoken</i>. A parameter <i>tokenized=0/1</i> can
+      be added to indicate whether (=1) or not (=0) the respective TEI file is tokenized (i.e. has
+      &lt;w&gt; markup).</p>
+    <p>Please feel welcome to supply the description of this format file via GitHub: either as an
+      <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
+      request after forking or browsing the
+      <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
+  </info>
+  <relation target="SpecTranScript" type="isDefinedBy"/>
+  <mimeType>application/tei+xml;format-variant=tei-iso-spoken</mimeType>
+  <mimeType>application/tei+xml;format-variant=tei-iso-spoken;tokenized=[0,1]</mimeType>
+  <fileExt>.tei</fileExt>
+  <formatFamily>TEI</formatFamily>
+</format>
