@@ -13,7 +13,7 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
 
 <html>
     <head>
-        <title>MIME Types</title>
+        <title>Media Types</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
@@ -24,9 +24,9 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
             {menu:view()}
             <div class="content">
                 <div class="navigation">
-                    &gt; <a href="{app:link("views/list-mimetypes.xq")}">MIME Types</a>
+                    &gt; <a href="{app:link("views/list-mimetypes.xq")}">Media Types</a>
                 </div>
-                <div class="title">MIME Types</div>
+                <div class="title">Media Types</div>
                 
                 <div>
                 <ul style="padding:0px; margin-left:15px;">

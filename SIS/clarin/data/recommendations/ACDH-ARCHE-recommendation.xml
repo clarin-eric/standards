@@ -6,6 +6,70 @@
     </header>
     <formats>
         <format>
+            <name id="fCSV">CSV</name>
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTIFF">TIFF</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fSVG">SVG</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fODT">ODT</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fDOCX">DOCX</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format>
+            <name id="fTEI">TEI</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTEI">TEI</name>
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format>
+            <name id="fHTML">HTML</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format>
+            <name id="fXSD">XSD</name>
+            <domain>Tool support</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format>
+            <name id="fMKV">Matroska</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
             <name id="fFLAC">FLAC</name>
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>

@@ -1,4 +1,4 @@
-xquery version "3.0";
+xquery version "3.1";
 
 module namespace fm = "http://clarin.ids-mannheim.de/standards/format-module";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
@@ -57,6 +57,7 @@ declare function fm:list-formats() {
 declare function fm:print-multiple-values($list, $label) {
     let $numOfItems := count($list)
     let $max := fn:max(($numOfItems, 1))
+    let $list := fn:sort($list)
     return
         if ($list)
         then
@@ -113,7 +114,7 @@ declare function fm:get-formats-without-mime-types() {
     let $list := $format:formats[not(mimeType) or mimeType = ""]/titleStmt/abbr
     return
         <li><span
-                class="list-text">No MIME Types</span>
+                class="list-text">No media types</span>
             <p>{fm:print-multiple-values($list, "Formats:")}</p>
         </li>
 };
