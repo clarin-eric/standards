@@ -10,7 +10,7 @@ import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "ap
 declare function menu:view(){
     <div class="menu" xmlns="http://www.w3.org/1999/xhtml">    
         <div style="margin-left:0px;">
-           <table style="font-size:13.5px; width:200px">
+           <table style="font-size:13.5px; width:210px">
                 <tr>
                     <td colspan="2" class="tdmenu">
                         <a style="display:block" href="{app:link("index.xq")}">Home</a>

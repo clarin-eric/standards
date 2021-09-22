@@ -51,19 +51,19 @@ else
                             <table style="margin:0;">
                                 <tr>
                                     <td>
-                                        <select name="centre" class="inputSelect" style="width:175px;">
+                                        <select name="centre" class="inputSelect" style="width:185px;">
                                             {rf:print-option($centre, "", "Select centre ...")}
                                             {rf:print-centres($centre)}
                                         </select>
                                     </td>
                                     <td>
-                                        <select name="domain" class="inputSelect" style="width:175px;">
+                                        <select name="domain" class="inputSelect" style="width:185px;">
                                             {rf:print-option($domainId, "", "Select domain ...")}
                                             {rf:print-domains($domainId)}
                                         </select>
                                     </td>
                                     <td>
-                                        <select name="level" class="inputSelect" style="width:175px;">
+                                        <select name="level" class="inputSelect" style="width:190px;">
                                             {rf:print-option($recommendationLevel, "", "Select recommendation ...")}
                                             {rf:print-option($recommendationLevel, "recommended", "recommended")}
                                             {rf:print-option($recommendationLevel, "acceptable", "acceptable")}
@@ -118,6 +118,7 @@ else
                                             $domainId, "&amp;level=", $recommendationLevel, "&amp;centre=",$centre,"#searchRecommendation"))
                                         }">
                                     Recommendation</a></th>
+                            <th style="border-bottom-style:none;"></th>
                         </tr>
                         {$recommendationTable}
                     </table>

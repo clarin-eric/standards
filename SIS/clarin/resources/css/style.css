@@ -10,7 +10,7 @@ body {
 
 div#all {
 	margin:0pt auto;
-	width:1050px;
+	width:1070px;
 	padding:5pt;
 	text-align:justify;
 	color:#333;
@@ -21,7 +21,7 @@ div#all {
 }
 
 .logoheader {
-	background:white URL(../images/bannerNeu.png) no-repeat bottom left;
+	background:white URL(../images/bannerNeu.png) no-repeat bottom center;
 	color:#111;
 	min-height:180px;
 	margin:0em 10px 0 10px;
@@ -33,7 +33,7 @@ div#all {
 
 div.menu{
     float:left;
-    width:20%;
+    width:21%;
     text-align:left;    
 }
 
@@ -60,10 +60,10 @@ ul#menu{
 
 .content{
     float:left;
-    margin-left:0px;
+    margin-left:5px;
     border-left: 2px solid #CCCCCC;   
     padding-left:10px;    
-    width:70%;
+    width:72%;
     min-height:615px;
 }
 
@@ -242,7 +242,8 @@ th {
 .recommendation-row{
     border-bottom:1px solid #DDDDDD; 
     text-align:left; 
-    vertical-align:top;
+    vertical-align:middle;
+    height:20px;
 }
 
 
@@ -261,7 +262,7 @@ th {
   left: 58%;
 }
 
-.tooltip .tooltiptext::after {
+/*.tooltip .tooltiptext::after {
   content: "";
   position: absolute;
   top: 12%;
@@ -270,7 +271,7 @@ th {
   border-width: 5px;
   border-style: solid;
   border-color: transparent black transparent transparent;
-}
+}*/
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
