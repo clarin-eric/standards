@@ -6,6 +6,64 @@
     </header>
     <formats>
         <format>
+            <name id="fJPEG">JPEG</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTIFF">TIFF</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fCSV">CSV</name>
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format>
+            <name id="fTEI">TEI</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTEI">TEI</name>
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format>
+            <name id="fVRT">CQP corpus format</name>
+            <domain>Language Description</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fMP4">MPEG 4 video</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fM2J">Motion JPEG 2000</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fOGG">OGG Video</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format>
             <name id="fFLAC">FLAC</name>
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
