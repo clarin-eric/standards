@@ -270,7 +270,7 @@
         </format>
 
         <format>
-            <name id="fTSV">Tab Separated Data File</name>
+            <name id="fTSV">TSV</name>
             <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
