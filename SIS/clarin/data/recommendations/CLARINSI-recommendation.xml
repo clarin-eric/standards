@@ -42,7 +42,7 @@
             <level>recommended</level>
         </format>
         <format>
-            <name id="fTAR">fTAR</name>
+            <name id="fTAR">TAR</name>
             <domain>Tool support</domain>
             <level>recommended</level>
         </format>
@@ -84,18 +84,18 @@
         </format>
         
         <format>
-            <name id="fLisp">Lisp Program Code</name>
+            <name id="fLisp">Lisp</name>
             <domain>Language Description</domain>
             <level>recommended</level>
         </format>
         <format>
-            <name id="fPerl">fPerl</name>
+            <name id="fPerl">Perl</name>
             <domain>Language Description</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fR">R</name>
-            <domain>Language Description</domain>
+            <domain>Statistical Data</domain>
             <level>recommended</level>
         </format>
         
@@ -156,18 +156,18 @@
         
         <format>
             <name id="fTEISpoken">ISO/TEI transcriptions of spoken language</name>
-            <domain>Text Annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fEXMA">EXMARaLDA basic transcription</name>
-            <domain>Text Annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         
         <format>
             <name id="fTRS">Transcriber</name>
-            <domain>Text Annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format>
@@ -177,13 +177,13 @@
         </format>
         <format>
             <name id="fFLN">Folker</name>
-            <domain>Text Annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
 
         <format>
             <name id="fLMF">LMF</name>
-            <domain>Textual Source Language Data</domain>
+            <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
         
@@ -210,7 +210,7 @@
         </format>
         
         <format>
-            <name id="fVRT">IMS Open Corpus WorkBench</name>
+            <name id="fVRT">CQP corpus format</name>
             <domain>Language Description</domain>
             <level>recommended</level>
         </format>
@@ -232,7 +232,7 @@
             <level>recommended</level>
         </format>
         <format>
-            <name id="fXSD">fXSD</name>
+            <name id="fXSD">XSD</name>
             <domain>Tool support</domain>
             <level>recommended</level>
         </format>

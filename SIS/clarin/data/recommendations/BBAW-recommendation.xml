@@ -40,7 +40,7 @@
         
         <format>
             <name id="fLMF">LMF</name>
-            <domain>Textual Source Language Data</domain>
+            <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
         
