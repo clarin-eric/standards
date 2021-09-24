@@ -118,7 +118,7 @@ else
                             <th class="header" style="width:20%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=centre&amp;domain=",
-                                            $domainId, "&amp;level=", $recommendationLevel, "#searchRecommendation"))
+                                            $domainId, "&amp;level=", $recommendationLevel, "&amp;centre=",$centre, "#searchRecommendation"))
                                         }">Clarin Centres</a>
                             </th>
                             <th class="header" style="width:40%;">
