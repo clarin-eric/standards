@@ -38,8 +38,18 @@ else
                     <div class="title" id="pagetitle">Format Recommendations</div>
                     
                     <div><p>This page presents formats of data depositions that various CLARIN centres are ready to accept. Each format,
-                            for each centre, can be recommended, acceptable or deprecated in the context of several domains that represent the
-                            functions that the deposited data can play.</p> 
+                            for each centre, can be "recommended", "acceptable" or "deprecated" in the context of several domains that represent the
+                            functions that the deposited data can play. The level of recommendation should always be viewed as relative to the profile 
+                            of the given centre.
+                            <ul>
+                            <li><b>"recommended"</b> should be interpreted as meaning that the centre in question will in most cases be able 
+                            to process the data without much manipulation and that it is likely that the data will be preserved long-term 
+                            in that format (the specifics are up to that centre);</li>
+                            <li><b>"acceptable"</b> should be interpreted as meaning that the centre may need to spend some time and resources 
+                            on the up-conversion of the data, and that the data may be preserved in one of the recommended formats instead;</li>
+                            <li><b>"deprecated"</b> should be understood as indicating that the centre may find it problematic to up-convert the data.</li>
+                            </ul>
+                            </p> 
                         <p>Use the dropboxes to select the particular domain, centre, and/or level of recommendation. Columns can be sorted, 
                            and your results can be downloaded as XML.</p>
                            <p>The exported XML files for a specified centre can be used to extend or modify the recommendations for that centre, 
@@ -47,7 +57,7 @@ else
                            <a href="{app:link("views/list-formats.xq")}">available file formats</a> and of the 
                            functional groupings of formats (<a href="{app:link("views/list-domains.xq")}">functional domains</a>).</p>
                            <p>In the current shape, the list should be expected to be incorrect, partially because the information 
-                           provided by the centres couldn't be mapped into the feature matrix offered by the SIS (created on the basis 
+                           provided by the centres could not be straightforwardly mapped into the feature matrix offered by the SIS (created on the basis 
                            of the SIS functional domains and levels of recommendation). Please 
                            <a href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">kindly help us get it right</a>.</p></div>
                     <div style="margin-top:30px;">
