@@ -32,7 +32,7 @@
             <level>recommended</level>
         </format>
         <format>
-            <name id="SQLite">SQLite</name>
+            <name id="fSQLite">SQLite</name>
             <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>

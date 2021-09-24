@@ -56,7 +56,8 @@
             <name id="fJPEG">JPEG</name>
             <domain>Image Source Language Data</domain>
             <level>recommended</level>
-        </format><format>
+        </format>
+        <format>
             <name id="fTIFF">TIFF</name>
             <domain>Image Source Language Data</domain>
             <level>recommended</level>
@@ -99,11 +100,6 @@
             <level>recommended</level>
         </format>
         
-        <format>
-            <name id="fRDFXML">RDF/XML</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
         <format>
             <name id="fRDFXML">RDF/XML</name>
             <domain>Text Annotation</domain>
@@ -160,7 +156,7 @@
             <level>recommended</level>
         </format>
         <format>
-            <name id="fEXMA">EXMARaLDA basic transcription</name>
+            <name id="fEXMA">EXMARaLDA</name>
             <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
@@ -210,7 +206,7 @@
         </format>
         
         <format>
-            <name id="fVRT">CQP corpus format</name>
+            <name id="fVRT">CQP corpus</name>
             <domain>Language Description</domain>
             <level>recommended</level>
         </format>
@@ -257,7 +253,11 @@
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
-
+        <format>
+            <name id="fMPEG2">MPEG 2 video</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
         <format>
             <name id="fAVI">AVI</name>
             <domain>Audiovisual Source Language Data</domain>

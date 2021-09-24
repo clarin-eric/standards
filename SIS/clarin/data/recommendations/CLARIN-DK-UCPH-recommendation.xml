@@ -43,7 +43,7 @@
         </format>
         
         <format>
-            <name id="fVRT">CQP corpus format</name>
+            <name id="fVRT">CQP corpus</name>
             <domain>Language Description</domain>
             <level>recommended</level>
         </format>
