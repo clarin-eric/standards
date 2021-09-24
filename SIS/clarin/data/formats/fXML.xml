@@ -26,8 +26,10 @@
       <li>FOLKER/OrthoNormal</li>
       <li>ALTO</li>
       <li>FoLiA</li>
+      <li>SVG (for graphics)</li>
+      <li>XSD, RNG, Schematron (for document grammars)</li>
       <li>...</li>
-      <li>many others: the SIS is going to feature a format-family browsing facility in the "near future"</li>
+      <li>many others: the SIS is going to feature a format-family browsing facility in the "near future".</li>
     </ul>
   </info>
   <relation target="SpecXML" type="isDefinedBy"/>
