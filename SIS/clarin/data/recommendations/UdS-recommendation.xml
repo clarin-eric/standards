@@ -6,6 +6,51 @@
     </header>
     <formats>
         <format>
+            <name id="fMP3">MP3</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fOGG">OGG</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fGZIP">GZIP</name>
+            <domain>Tool support</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fZIP">ZIP</name>
+            <domain>Tool support</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fJPEG">JPEG</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTIFF">TIFF</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fPNG">PNG</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fGIF">GIF</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fSVG">SVG</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
             <name id="fPDF">PDF</name>
             <domain>Documentation</domain>
             <level>acceptable</level>
@@ -14,6 +59,31 @@
             <name id="fPDF">PDF</name>
             <domain>Textual Source Language Data</domain>
             <level>acceptable</level>
+        </format>
+        <format>
+            <name id="fHTML">HTML</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fLaTeX">LaTeX</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTeX">TeX</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fVRT">CQP corpus</name>
+            <domain>Language Description</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTiger">Tiger XML</name>
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
         </format>
         <format>
             <name id="fTextPlain">plainText</name>

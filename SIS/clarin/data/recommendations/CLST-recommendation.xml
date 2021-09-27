@@ -1,0 +1,29 @@
+<result>
+    <header>
+        <filter>
+            <centre>CSLT</centre>
+        </filter>
+    </header>
+    <formats>
+        <format>
+            <name id="fWave">Wave</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fCMDI">CMDI</name>
+            <domain>Catalogue Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fFoLiA">FoLiA XML</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTextPlain">plainText</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+    </formats>
+</result>

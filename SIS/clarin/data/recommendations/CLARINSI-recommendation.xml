@@ -195,11 +195,6 @@
             <level>recommended</level>
         </format>
         <format>
-            <name id="fELAN">ELAN</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
             <name id="fFoLiA">FoLiA XML</name>
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
