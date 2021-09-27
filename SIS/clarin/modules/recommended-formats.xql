@@ -66,7 +66,8 @@ declare function rf:print-centre-recommendation($requestedCentre, $requestedDoma
     let $domainName := $format/domain/text()
     let $domain := if ($domainName) then
         dm:get-domain-by-name($domainName)
-    else ()
+    else
+        ()
     
     let $level := $format/level/text()
     let $format-id := data($format/name/@id)
@@ -161,10 +162,18 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
     
     let $format-id := data($format/name/@id)
     let $format-abbr := $format/name/text()
-    let $format-abbr := if ($format-abbr) then
-        $format-abbr
+    
+    
+    let $format-link :=
+    if (format:get-format-by-abbr($format-abbr)) then
+        <a
+            href="{app:link(concat("views/view-format.xq?id=", $format-id))}
+                     ">{$format-abbr}</a>
     else
-        ($format-id)
+        if ($format-abbr) then
+            ($format-abbr)
+        else
+            ($format-id)
     
     let $level := $format/level/text()
     let $format-comment := $format/comment/text()
@@ -179,9 +188,9 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                 if ($includeFormat) then
                     <td
                         class="recommendation-row"
-                        id="{$format-id}"><a
-                            href="{app:link(concat("views/view-format.xq?id=", $format-id))}
-                ">{$format-abbr}</a></td>
+                        id="{$format-id}">
+                        {$format-link}
+                    </td>
                 else
                     ()
             }
