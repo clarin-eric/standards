@@ -6,6 +6,58 @@
     </header>
     <formats>
         <format>
+            <name id="fFLEx">FLEx</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fELAN">ELAN</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fPraat">Praat</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTEISpoken">ISO/TEI transcriptions of spoken language</name>
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fEXMA">EXMARaLDA</name>
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTRS">Transcriber</name>
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fFLN">Folker</name>
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fAnvil">Anvil</name>
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format>
+            <name id="fMP4">MPEG 4 video</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fMPEG">MPEG 1 video</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format>
             <name id="fCHAT">CHAT</name>
             <domain>Audiovisual Annotation</domain>
             <level>deprecated</level>

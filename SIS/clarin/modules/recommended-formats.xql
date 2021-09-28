@@ -64,13 +64,14 @@ declare function rf:print-centre-recommendation($requestedCentre, $requestedDoma
     
     for $format in $r/formats/format
     let $domainName := $format/domain/text()
-    let $domain := dm:get-domain-by-name($domainName)
-    let $domainId := data($domain/@id)
-    let $domainDesc := $domain/desc/text()
+    let $domain := if ($domainName) then
+        dm:get-domain-by-name($domainName)
+    else
+        ()
     
     let $level := $format/level/text()
-    let $format-abbr := $format/name/text()
     let $format-id := data($format/name/@id)
+    let $format-abbr := $format/name/text()
     let $format-info := $format/info/text()
         
         order by
@@ -159,8 +160,21 @@ declare function rf:print-recommendation-row($format, $centre, $domain) {
 
 declare function rf:print-recommendation-row($format, $centre, $domain, $includeFormat) {
     
-    let $format-abbr := $format/name/text()
     let $format-id := data($format/name/@id)
+    let $format-abbr := $format/name/text()
+    
+    
+    let $format-link :=
+    if (format:get-format-by-abbr($format-abbr)) then
+        <a
+            href="{app:link(concat("views/view-format.xq?id=", $format-id))}
+                     ">{$format-abbr}</a>
+    else
+        if ($format-abbr) then
+            ($format-abbr)
+        else
+            ($format-id)
+    
     let $level := $format/level/text()
     let $format-comment := $format/comment/text()
     
@@ -174,9 +188,9 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                 if ($includeFormat) then
                     <td
                         class="recommendation-row"
-                        id="{$format-id}"><a
-                            href="{app:link(concat("views/view-format.xq?id=", $format-id))}
-                ">{$format-abbr}</a></td>
+                        id="{$format-id}">
+                        {$format-link}
+                    </td>
                 else
                     ()
             }

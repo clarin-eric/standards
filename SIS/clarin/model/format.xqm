@@ -9,6 +9,10 @@ declare function format:get-format($id as xs:string){
     $format:formats/descendant-or-self::node()[@id=$id]
 };
 
+(: Select a format by abbr :)
+declare function format:get-format-by-abbr($abbr as xs:string){
+    $format:formats/descendant-or-self::node()/titleStmt[abbr=$abbr]
+};
 
 declare function format:get-all-ids(){
     data($format:formats/descendant-or-self::node()/@id)

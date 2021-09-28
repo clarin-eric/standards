@@ -6,6 +6,74 @@
     </header>
     <formats>
         <format>
+            <name id="fWave">Wave</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fAIFF">AIFF</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fRAW">RAW</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fNIST">NIST SPHERE</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fSAM">SAM</name>
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fELAN">ELAN</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fPraat">Praat</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="Partitur">Partitur</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fEmu">Emu Database</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fMP4">MPEG 4 video</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fMOV">QuickTime</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format>
+            <name id="fAVI">AVI</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fAGS">AGS</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        
+        <!-- The following formats are not annotated for BAS in the spreadsheet-->
+        <format>
             <name id="fFLAC">FLAC</name>
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>

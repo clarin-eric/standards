@@ -119,7 +119,10 @@ declare function vfm:print-recommendation-rows($recommendations,$format-id,$sort
         for $format in $formats
             let $level := $format/level/text()
             let $domainName := $format/domain/text()
-            let $domain := dm:get-domain-by-name($domainName)
+            let $domain := 
+                if ($domainName) then 
+                    dm:get-domain-by-name($domainName) 
+                else ()
             order by
             if ($sortBy = 'centre') then
                 $centre
