@@ -14,8 +14,9 @@ let $domainId := if ($reset) then () else request:get-parameter('domain', '')
 let $recommendationLevel := if ($reset) then () else request:get-parameter('level', '')
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
 let $export := request:get-parameter('exportButton', '')
-let $recommendationTable := rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
-
+let $page := request:get-parameter('page', 1) 
+let $rows := rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
+let $recommendationTable := rf:paging($rows,$page)
 
 return
 if ($export)
@@ -136,6 +137,7 @@ else
                         </tr>
                         {$recommendationTable}
                     </table>
+                    <div style="text-align:right; margin-right:40px;">{rf:print-page-links(count($rows),$sortBy,$domainId,$recommendationLevel,$centre,$page)}</div>
                 </div>
                 <div class="footer">{app:footer()}</div>
             </div>
