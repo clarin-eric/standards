@@ -165,7 +165,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
     
     
     let $format-link :=
-    if (format:get-format-by-abbr($format-abbr)) then
+    if (format:get-format-by-abbr($format-abbr) or format:get-format($format-id)) then
         <a
             href="{app:link(concat("views/view-format.xq?id=", $format-id))}
                      ">{$format-abbr}</a>

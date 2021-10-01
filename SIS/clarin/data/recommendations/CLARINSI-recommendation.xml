@@ -151,7 +151,7 @@
         </format>
         
         <format>
-            <name id="fTEISpoken">ISO/TEI transcriptions of spoken language</name>
+            <name id="fTEISpoken">TEISpoken</name>
             <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>

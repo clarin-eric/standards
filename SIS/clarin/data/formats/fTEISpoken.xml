@@ -1,7 +1,7 @@
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTEISpoken" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
     <title>ISO/TEI Transcriptions of Spoken Language</title>
-    <abbr>TEISpOken</abbr>
+    <abbr>TEISpoken</abbr>
   </titleStmt>
   
   <keyword>annotation format</keyword>
