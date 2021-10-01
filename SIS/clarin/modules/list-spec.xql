@@ -20,6 +20,7 @@ import module namespace functx = "http://www.functx.com" at "../resources/lib/fu
 declare variable $lsm:relations := xsd:get-relations();
 declare variable $lsm:specs := spec:sort-specs-by-abbr();
 declare variable $lsm:spec-sum := spec:sum();
+declare variable $lsm:pageSize := 20;
 
 (:declare function lsm:page-by-letter($letter as xs:string, $page as xs:int){
     let $numberOfPages := xs:integer( fn:ceiling( count(spec:get-specs-by-letter($letter)) div 20 ))
@@ -29,7 +30,7 @@ declare variable $lsm:spec-sum := spec:sum();
 
 (: Create links to move between the list of standard pages :)
 declare function lsm:page($sortBy as xs:string, $page as xs:int){
-    let $numberOfPages := xs:integer( fn:ceiling($lsm:spec-sum div 20) )
+    let $numberOfPages := xs:integer( fn:ceiling($lsm:spec-sum div $lsm:pageSize) )
     
     for $i in (1 to $numberOfPages)
     return
@@ -86,8 +87,8 @@ declare function lsm:group-specs($page as xs:int, $sortBy as xs:string, $letter 
         else if ($sortBy = 'clarin-centres') then spec:sort-specs-by-clarin-centres($specs,$letter)
         else ()
             
-    let $max := fn:min(($lsm:spec-sum,$page*20)) 
-    let $min := if ($page > 1) then (($page -1) * 20) else 1   
+    let $max := fn:min(($lsm:spec-sum,$page*$lsm:pageSize)) +1
+    let $min := if ($page > 1) then (($page -1) * $lsm:pageSize) else 1   
     
     return $specs[position() >= $min and position() < $max]
 };

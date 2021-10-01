@@ -13,6 +13,42 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommendation" at "../modules/recommendation.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
 
+declare variable $rf:pageSize := 50;
+
+declare function rf:print-page-links($numOfRows, $sortBy, $domainId, $recommendationLevel, $centre, $page as xs:int) {
+    let $numberOfPages := xs:integer(fn:ceiling($numOfRows div $rf:pageSize))
+    
+    for $i in (1 to $numberOfPages)
+    let $pageLink := <a
+        href="{
+                app:link(concat("views/recommended-formats-with-search.xq?sortBy=",
+                $sortBy, "&amp;domain=", $domainId, "&amp;level=", $recommendationLevel,
+                "&amp;centre=", $centre, "&amp;page=", $i, "#searchRecommendation"))
+            }">{$i}</a>
+    return
+        if ($i = $page) then
+            $page
+        else
+            if ($i < $page)
+            then
+                ($pageLink, " < ")
+            else
+                (" > ", $pageLink)
+
+};
+
+declare function rf:paging($rows, $page as xs:int) {
+    let $numOfRows := count($rows)
+    
+    let $max := fn:min(($numOfRows, $page * $rf:pageSize)) + 1
+    let $min := if ($page > 1) then
+        (($page - 1) * $rf:pageSize)
+    else
+        1
+    
+    return
+        $rows[position() >= $min and position() < $max]
+};
 
 declare function rf:print-centres($centre) {
     let $depositing-centres := $centre:centres[@deposition = "1" or @deposition = "true"]
@@ -57,7 +93,8 @@ declare function rf:print-option($selected, $value, $label) {
             value="{$value}">{$label}</option>
 };
 
-declare function rf:print-centre-recommendation($requestedCentre, $requestedDomain, $requestedLevel, $sortBy) {
+declare function rf:print-centre-recommendation($requestedCentre, $requestedDomain,
+$requestedLevel, $sortBy) {
     
     for $r in $recommendation:centres
     let $centre := $r/header/filter/centre/text()
