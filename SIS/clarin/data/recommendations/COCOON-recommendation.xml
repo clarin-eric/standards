@@ -6,18 +6,59 @@
     </header>
     <formats>
         <format>
+            <name id="fTEI">TEI</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTEI">TEI</name>
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fELAN">ELAN</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fPraat">Praat</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fTRS">Transcriber</name>
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fPANG">PANGLOSS</name>
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fMP4">MPEG 4 video</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fMKV">Matroska</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format>
             <name id="fCHAT">CHAT</name>
-            <domain id="5">Text Annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fFLAC">FLAC</name>
-            <domain id="1">Audiovisual Source Language Data</domain>
+            <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fWave">Wave</name>
-            <domain id="1">Audiovisual Source Language Data</domain>
+            <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
     </formats>

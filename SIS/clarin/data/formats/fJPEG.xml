@@ -1,0 +1,23 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fJPEG" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Joint Photographic Experts Group</title>
+    <abbr>JPEG</abbr>
+  </titleStmt>
+  <keyword>image format</keyword>
+  <keyword>raster</keyword>
+  <keyword>image compression</keyword>
+  <keyword>lossy compression</keyword>
+  <info type="description">
+    <p>Please feel welcome to supply the description of this format file via GitHub: either as an
+      <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
+      request after forking or browsing the
+      <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
+  </info>
+  <!--<relation target="SpecJPEG" type="isDefinedBy"/>
+    ISO/IEC 10918-1
+   -->
+  <mimeType>image/jpeg</mimeType>
+  <fileExt recommended="yes">.jpg</fileExt>
+  <fileExt>.jpeg</fileExt>
+  <formatFamily>lossy</formatFamily>
+</format>

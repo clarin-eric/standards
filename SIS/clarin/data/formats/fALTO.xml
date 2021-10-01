@@ -2,8 +2,7 @@
   <titleStmt>
     <title>Analyzed Layout and Text Object</title>
     <abbr>ALTO</abbr>
-    <versionNumber type="major">4</versionNumber>
-    <versionNumber type="minor">1</versionNumber>
+    <versionNumber type="major">4.1</versionNumber>
   </titleStmt>
   <keyword>XML</keyword>
   <keyword>OCR</keyword>

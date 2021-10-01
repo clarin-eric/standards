@@ -1,0 +1,27 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fDTABf" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Deutsches Textarchiv Basisformat</title>
+    <abbr>DTABf</abbr>
+  </titleStmt>
+  
+  <keyword>annotation format</keyword>
+  <keyword>manuscript encoding</keyword>
+  
+  <info type="description">
+    <p>See <a href="https://www.deutschestextarchiv.de/doku/basisformat/introduction_en.html">documentation</a></p>
+    <p>DTA/TEI files will be identified by the MIME type
+      <i>application/tei+xml;format-variant=tei-dta</i>. A parameter <i>tokenized=0/1</i> can be
+      added to indicate whether (=1) or not (=0) the respective TEI file is tokenized (i.e. has
+      &lt;w&gt; markup).</p>
+    <p>Please feel welcome to supply the description of this format file via GitHub: either as an
+      <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
+      request after forking or browsing the
+      <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
+  </info>
+  <!--<relation target="SpecDTABf" type="isDefinedBy"/>
+   -->
+  <mimeType>application/tei+xml;format-variant=dta</mimeType>
+  <mimeType>application/tei+xml;format-variant=dta;tokenized=[0,1]</mimeType>
+  <fileExt>.xml</fileExt>
+  <formatFamily>TEI</formatFamily>
+</format>

@@ -1,7 +1,7 @@
 <result>
     <header>
         <filter>
-            <centre>CMU</centre>
+            <centre>CSLT</centre>
         </filter>
     </header>
     <formats>
@@ -11,24 +11,18 @@
             <level>recommended</level>
         </format>
         <format>
-            <name id="fHTML">HTML</name>
-            <domain>Documentation</domain>
+            <name id="fCMDI">CMDI</name>
+            <domain>Catalogue Metadata</domain>
             <level>recommended</level>
         </format>
         <format>
-            <name id="fMP4">MPEG 4 video</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fCHAT">CHAT</name>
-            <domain>Audiovisual Annotation</domain>
+            <name id="fFoLiA">FoLiA XML</name>
+            <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
         <format>
-            <name id="fCHAT-XML">CHAT-XML</name>
-            <domain>Audiovisual Annotation</domain>
+            <name id="fTextPlain">plainText</name>
+            <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
     </formats>

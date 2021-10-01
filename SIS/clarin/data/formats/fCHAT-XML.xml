@@ -1,6 +1,6 @@
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCHAT-XML" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>the XML format for CHAT</title>
+    <title>XML serialization of CHAT</title>
     <abbr>CHAT-XML</abbr>
   </titleStmt>
   <keyword>transcription of speech</keyword>
@@ -24,7 +24,7 @@
   </info>
   <relation target="SpecCHAT" type="isDefinedBy"/>
   <relation target="SpecCHAT" type="isUsedBy"/>
-  <mimeType recommended="yes">application/xml</mimeType>
+  <mimeType recommended="yes">application/xml;format-variant=x-chat</mimeType>
   <mimeType>text/xml</mimeType>
   <schemaLoc type="XSD">https://talkbank.org/software/talkbank.xsd</schemaLoc>
   <fileExt>.xml</fileExt>

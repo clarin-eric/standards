@@ -14,6 +14,10 @@ declare function dm:get-domain($id as xs:string){
     domain:get-domain($id)
 };
 
+declare function dm:get-domain-by-name($name as xs:string){
+    domain:get-domain-by-name($name)
+};
+
 
 (: Generate the list of domains :)
 declare function dm:list-domains(){
@@ -21,11 +25,14 @@ declare function dm:list-domains(){
         let $domain-id := $domain/@id
         let $domain-name := $domain/name/text()
         let $domain-snippet := $domain/desc/text()     
+        order by $domain-name
     return
         <div>
-            <li class="heading2">
-               <button style="text-decoration:underline; color: grey; background-color:white; border:0px; padding:0px;" 
-                onclick="openEditor('{$domain-id}')">{$domain-name}</button>
+            <li>
+               <span class="list-text">{$domain-name}</span>
+                <img class="copy-icon pointer" src="{app:resource("copy.png","img")}" width="14"  
+                onclick="copyTextToClipboard('{$domain-id}','{$domain-name}')"/>
+                <span class="hint" id="hint-{$domain-id}">copied</span>
             </li>
             {if ($domain-name !='Other') then
                <span id="{$domain-id}" style="display:block">

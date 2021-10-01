@@ -1,6 +1,6 @@
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCHAT" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>the CHAT format</title>
+    <title>Codes for the Human Analysis of Transcripts</title>
     <abbr>CHAT</abbr>
   </titleStmt>
   <keyword>transcription of speech</keyword>
@@ -22,7 +22,8 @@
   </info>
   <relation target="SpecCHAT" type="isDefinedBy"/>
   <relation target="SpecCHAT" type="isUsedBy"/>
-  <mimeType recommended="yes">text/x-chat</mimeType>
-  <mimeType>text/plain</mimeType>
+  <mimeType recommended="yes">text/plain;format-variant=clan-cha</mimeType>
+  <mimeType>text/x-chat</mimeType>
   <fileExt>.cha</fileExt>
+  <formatFamily>markup-partial</formatFamily>
 </format>

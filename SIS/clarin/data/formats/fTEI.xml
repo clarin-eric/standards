@@ -1,0 +1,43 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTEI" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Text Encoding Initiative</title>
+    <abbr>TEI</abbr>
+  </titleStmt>
+  <keyword>data format</keyword>
+  <keyword>annotation format</keyword>
+  <keyword>format family</keyword>
+  
+  <info type="description">
+    <p>In the context of format recommendations, the TEI has the same status as XML: too general to
+      be a meaningful recommendation. The 
+      <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a>, together with the surrounding
+      <a href="https://tei-c.org/tools/">infrastructure</a> (Stylesheets and dedicated utilities) is a toolkit for creating formats (also formats that serialize a standard).</p>
+    <p>By rule of thumb, centres should expect that each TEI document submitted to them is either
+      accompanied by the ODD file, or conforms to one of the publicly available ODD specifications
+      (either a named TEI out-of-the-box customization or a publicly documented extension),
+      preferably bearing the stamp of a standards body, or encoding established best practices.</p>
+    <p>An ODD file defines the semantics of a TEI format, by means of prose, datatype restrictions
+      and Schematron constraints. It is the basis for creating document grammars (schemas) that the
+      conforming TEI document can be validated against. Schemas can be derived e.g. with the help of
+      TEI Stylesheets or Roma, XML editor add-ons, etc.</p>
+    <p>In the context of CLARIN and LRT applications, the following TEI-based formats are recognizable:</p>
+    <ul>
+      <li>ISO/TEI Transcriptions of Spoken Language -- an ISO standard</li>
+      <li>DTABf -- Deutsches Textarchiv Basisformat, used at BBAW</li>
+      <li>ISO LMF -- TEI serialization of the Lexical Markup Framework ()</li>
+      <li>TEI Lex0 -- an OASIS standard for the encoding of (a.o.) retrodigitised dictionaries, maintained by DARIAH</li>
+      <li>I5 -- tool format of DeReKo (Deutsches Referenzkorpus), used at IDS Mannheim</li>
+    </ul>
+    <p>The above list is not meant to be exhaustive. While the above items would generally qualify
+      as TEI extensions, the
+      <a href="https://tei-c.org/Guidelines/Customization/">environment of the TEI Guidelines</a>
+      defines a series of restrictions on the overall TEI schema, referred to as 'templates' and
+      meant as bases for further customization, as well as three fully-defined and maintained
+      customizations: TEI Lite, TEI simplePrint, TEI Tite.</p>
+  </info>
+  <relation target="SpecTei" type="isDefinedBy"/>
+  <mimeType>application/tei+xml</mimeType>
+  <fileExt>.tei</fileExt>
+  <fileExt>.xml</fileExt>
+  <formatFamily>XML</formatFamily>
+</format>

@@ -3,9 +3,13 @@ xquery version "3.0";
 module namespace vfm = "http://clarin.ids-mannheim.de/standards/view-format";
 
 import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
-import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "app.xql";
+import module namespace recommendation = "http://clarin.ids-mannheim.de/standards/recommendation-model" 
+at "../model/recommendation-by-centre.xqm";
+import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
 
+import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rf="http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";
+import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
 
 declare function vfm:get-format($id as xs:string) {
     format:get-format($id)
@@ -32,11 +36,11 @@ declare function vfm:print-multiple-values($list, $id, $label, $isLink as xs:boo
                                 (<a href="{$list[$k]}">{$list[$k]}</a>)
                             else
                                 $list[$k]/text(),
-                            if ($list[$k]/@type)
+                            (:if ($list[$k]/@type)
                             then
                                 (<span id="abbrinternalText" style="margin-left:5px;">({data($list[$k]/@type)})</span>)
                             else
-                                (),
+                                (),:)
                             if ($list[$k][@recommended = "yes"])
                             then
                                 (<span id="abbrinternalText" style="font-size:10px;margin-left:5px;">[recommended]</span>)
@@ -77,7 +81,7 @@ declare function vfm:print-recommendation-in-clarin($format,$format-id){
 };
 
 declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendationType,$sortBy){
-    let $recommendations := format:get-recommendations($id)
+    let $recommendations := recommendation:get-recommendations-for-format($id)
     return
     if ($recommendations)
     then(
@@ -101,39 +105,34 @@ declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendat
                             }">
                         Level</a></th>
             </tr>
-         {vfm:getRecommendationForFormat($recommendations,$sortBy)}
+         {vfm:print-recommendation-rows($recommendations,$id,$sortBy)}
         </table>
         )
     else ()
 };
 
-declare function vfm:getRecommendationForFormat($recommendations, $sortBy) {
+declare function vfm:print-recommendation-rows($recommendations,$format-id,$sortBy){
     for $r in $recommendations
-    let $centre := data($r/parent::node()/@id)
-    for $values in fn:tokenize($r, "\.")
-    let $size := fn:string-length($values)
-    let $recommendationLevel := fn:substring($values, $size)
-    let $rType := rf:print-recommendation-level($recommendationLevel)
-    let $domainId := fn:substring($values, 1, $size - 1)
-    let $domainName := $format:domains[@id = $domainId]/name/text()
-    
-    
-    order by
-    if ($sortBy = 'centre') then
-        $centre
-    else
-        if ($sortBy = 'domain') then
-            $domainName
-        else
-            if ($sortBy = 'recommendation') then
-                $recommendationLevel
+        let $centre := $r/header/filter/centre/text()
+        let $formats := $r/formats/format[name/@id=$format-id]
+        
+        for $format in $formats
+            let $level := $format/level/text()
+            let $domainName := $format/domain/text()
+            let $domain := 
+                if ($domainName) then 
+                    dm:get-domain-by-name($domainName) 
+                else ()
+            order by
+            if ($sortBy = 'centre') then
+                $centre
             else
-                ()
-    return
-        <tr>
-            <td class="recommendation-row">{$centre}</td>
-            <td class="recommendation-row">{$domainName}</td>
-            <td class="recommendation-row">{$rType}</td>
-        </tr>
+                if ($sortBy = 'domain') then
+                    $domainName
+                else
+                    if ($sortBy = 'recommendation') then
+                        $level
+                    else
+                        ()
+            return rf:print-recommendation-row($format, $centre,$domain, fn:false())
 };
-

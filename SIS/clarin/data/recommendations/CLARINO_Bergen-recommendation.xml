@@ -4,5 +4,11 @@
             <centre>CLARINO_Bergen</centre>
         </filter>
     </header>
-    <formats/>
+    <formats>
+        <format>
+            <name id="fTiger">Tiger XML</name>
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+    </formats>
 </result>
