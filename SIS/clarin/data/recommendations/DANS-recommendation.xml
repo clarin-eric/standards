@@ -5,11 +5,7 @@
         </filter>
     </header>
     <formats>
-        <format>
-            <name id="fFLAC">FLAC</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
+        
         <format>
             <name id="fPDF">PDF</name>
             <domain>Textual Source Language Data</domain>
@@ -20,10 +16,157 @@
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
+        
+        
+        
         <format>
-            <name id="fPDFA">PDF/A</name>
+            <name id="fFLAC">FLAC</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio</comment>
+        </format>
+        <format>
+            <name id="fBWF">BWF</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio</comment>
+        </format>
+        <format>
+            <name id="fMXF">MXF</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio and https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video</comment>
+        </format>
+        <format>
+            <name id="fMatroska">Matroska</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio and https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video</comment>
+        </format>
+        <format>
+            <name id="fOPUS">OPUS</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio</comment>
+        </format>
+        <format>
+            <name id="fWAVE">WAVE</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio</comment>
+        </format>
+        <format>
+            <name id="fMP3">MP3</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio</comment>
+        </format>
+        <format>
+            <name id="fAAC">AAC</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio</comment>
+        </format>
+        <format>
+            <name id="fAIFF">AIFF</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio</comment>
+        </format>
+        <format>
+            <name id="fOGG">OGG</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio</comment>
+        </format>
+        
+        <format>
+            <name id="fMPEG4">MPEG-4</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video</comment>
+        </format>
+        <format>
+            <name id="fMPEG2">MPEG-2</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video</comment>
+        </format>
+        <format>
+            <name id="fAVI">AVI</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video</comment>
+        </format>
+        <format>
+            <name id="fQT">QuickTime</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video</comment>
+        </format>
+        <format>
+            <name id="fJPEG">JPEG</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster</comment>
+        </format>
+        <format>
+            <name id="fTIFF">TIFF</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster</comment>
+        </format>
+        <format>
+            <name id="fPNG">PNG</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster</comment>
+        </format>
+        <format>
+            <name id="fJP2">JPEG 2000</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster</comment>
+        </format>
+        <format>
+            <name id="fDICOM">DICOM</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster</comment>
+        </format>
+        <format>
+            <name id="fSVG">SVG</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector</comment>
+        </format>
+
+        <format>
+            <name id="fAI">Adobe Illustrator</name>
             <domain>Image Source Language Data</domain>
             <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector</comment>
         </format>
+        <format>
+            <name id="fEPS">EPS</name>
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector</comment>
+        </format>
+        <format>
+            <name id="fWMF">WMF</name>
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector</comment>
+        </format>
+        <format>
+            <name id="fCDR">CDR</name>
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector</comment>
+        </format>
+        
+
+
     </formats>
 </result>
