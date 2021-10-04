@@ -104,6 +104,9 @@ declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendat
                                 app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=recommendation#recommendationTable"))
                             }">
                         Level</a></th>
+                <th class="header" style="width:25%;">
+                Comments
+                </th>
             </tr>
          {vfm:print-recommendation-rows($recommendations,$id,$sortBy)}
         </table>

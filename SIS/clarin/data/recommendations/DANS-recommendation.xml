@@ -17,10 +17,11 @@
             <level>recommended</level>
         </format>
         <format>
-            <name id="fplainText">plainText</name>
+            <name id="fTextPlain">plainText</name>
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
-            <comment>Encoded as UTF-8/16/32, see https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/plain-text/plain-text</comment>
+            <comment>Encoded as UTF-8/16/32, see 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/plain-text/plain-text">link</a></comment>
         </format>
         <format>
             <name id="fPDF">PDF</name>

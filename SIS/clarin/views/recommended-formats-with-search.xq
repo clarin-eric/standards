@@ -5,7 +5,6 @@ declare option exist:serialize "method=xhtml media-type=text/html indent=yes doc
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
-import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommendation" at "../modules/recommendation.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 
 let $reset := request:get-parameter('resetButton', '')
@@ -62,7 +61,7 @@ else
                            of the SIS functional domains and levels of recommendation). Please 
                            <a href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">kindly help us get it right</a>.</p></div>
                     <div style="margin-top:30px;">
-                        <form id="searchRecommendation" style="float:left;" method="post" action="{app:link("views/recommended-formats-with-search.xq?#pagetitle")}">
+                        <form id="searchRecommendation" style="float:left;" method="post" action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
                             <table style="margin:0;">
                                 <tr>
                                     <td>

@@ -10,7 +10,6 @@ import module namespace recommendation = "http://clarin.ids-mannheim.de/standard
 at "../model/recommendation-by-centre.xqm";
 
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
-import module namespace rm = "http://clarin.ids-mannheim.de/standards/recommendation" at "../modules/recommendation.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
 
 declare variable $rf:pageSize := 50;
@@ -213,7 +212,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
             ($format-id)
     
     let $level := $format/level/text()
-    let $format-comment := $format/comment/text()
+    let $format-comment := $format/comment
     
     let $domainId := data($domain/@id)
     let $domainName := $domain/name/text()
@@ -240,21 +239,30 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                 </span></td>
             <td
                 class="recommendation-row">{$level}</td>
-            <td
-                class="tooltip">{
-                    if ($format-comment) then
-                        (
-                        <img
-                            src="{app:resource("info.png", "img")}"
-                            height="20"/>,
-                        <span
-                            class="tooltiptext"
-                            style="left: 78%; width:300px;">{$format-comment}
-                        </span>)
-                    else
-                        ()
-                }
-            </td>
+            {
+                if ($includeFormat) then
+                    <td
+                        class="tooltip">{
+                            if ($format-comment) then
+                                (
+                                <img
+                                    src="{app:resource("info.png", "img")}"
+                                    height="20"/>,
+                                <span
+                                    class="tooltiptext"
+                                    style="left: 78%; width:300px;">{$format-comment}
+                                </span>)
+                            else
+                                ()
+                        }
+                    </td>
+                else
+                    <td
+                        class="recommendation-row">
+                        {$format-comment}
+                    </td>
+            }
+        
         </tr>
 };
 
