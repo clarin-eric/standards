@@ -1,89 +1,72 @@
 <domains>
-    <domain id="1">
+    <domain orderBy="Source Data">
         <name>Audiovisual Source Language Data</name>
-        <abbr/>
         <desc>Audio or video recordings providing spoken/multimodal or signed language data for
             research purposes.</desc>
     </domain>
-    <domain id="2">
+    <domain orderBy="Source Data">
         <name>Image Source Language Data</name>
-        <abbr/>
         <desc>Digitized images of analogue sources of written language data for research purposes
             (e.g. facsimiles, scans of handwriting, photos of inscriptions).</desc>
     </domain>
-    <domain id="3">
+    <domain orderBy="Source Data">
         <name>Textual Source Language Data</name>
-        <abbr/>
         <desc>Written unstructured/plain text or originally structured text (e.g. HTML) without linguistic or other mark-up added for research purposes.</desc>
     </domain>
-    <domain id="4">
+    <domain orderBy="Source Data">
         <name>Contextual Data</name>
-        <abbr/>
         <desc>Images (photos or drawings) or documents relevant to the communicative event or text but not part of the source language data.</desc>
     </domain>
-    <domain id="5">
+    <domain orderBy="Annotation">
         <name>Text Annotation</name>
-        <abbr/>
         <desc>Annotations of textual sources/written text, with the original text included or as stand-off.</desc>
     </domain>
-    <domain id="6">
+    <domain orderBy="Annotation">
         <name>Audiovisual Annotation</name>
-        <abbr/>
         <desc>Annotations of audiovisual sources, usually including a basic rendering of the spoken content (transcription) and sometimes further annotation.</desc>
     </domain>
-    <domain id="7">
+    <domain orderBy="Annotation">
         <name>Image Annotation</name>
-        <abbr/>
         <desc>Annotations of image sources.</desc>
     </domain>
-    <domain id="8">
+    <domain orderBy="Data/Resource Description">
         <name>Contextual Information</name>
-        <abbr/>
         <desc>Structured information on the communicative event or text and its creators (i.e. participants or authors) relevant for analysis.</desc>
     </domain>
-    <domain id="9">
+    <domain orderBy="Data/Resource Description">
         <name>Catalogue Metadata</name>
-        <abbr/>
         <desc>Basic structured information for discoverability and general description, to be openly provided for harvesting.</desc>
     </domain>
-    <domain id="10">
+    <domain orderBy="Data/Resource Description">
         <name>Metadata</name>
-        <abbr/>
-        <desc>Comprehensive structured information including descriptive, structural and administrative metadata.</desc>
+        <desc>Comprehensive structured information including descriptive, structural and administrative metadata. See the <a href="https://groups.niso.org/apps/group_public/download.php/17446/Understanding%20Metadata.pdf">National Information Standards Organization primer on metadata</a> for further hints.</desc>
     </domain>
-    <domain id="11">
+    <domain orderBy="Data/Resource Description">
         <name>Documentation</name>
-        <abbr/>
         <desc>Unstructured documentation of the resource and its parts such as corpus or annotation guidelines.</desc>
     </domain>
-    <domain id="12">
+    <domain orderBy="Databases">
         <name>Lexical Resource</name>
-        <abbr/>
         <desc>Structured (item-based) resources for lexical and/or conceptual information on units of language (e.g. wordlists, lexicons, WordNets etc.)</desc>
     </domain>
-    <domain id="13">
-        <name>Tool support</name>
-        <abbr/>
+    <domain>
+        <name>Tool Support</name>
         <desc>Tool-related formats required for specific functionality of the tool or reliable reuse of resources (e.g. tagsets, annotation schemes, vocabularies, language models, parameter files, and other specifications or settings)</desc>
     </domain>
-    <domain id="14">
+    <domain orderBy="Databases">
         <name>Geodata</name>
-        <abbr/>
         <desc>Information on geographic locations.</desc>
     </domain>
-    <domain id="15">
+    <domain orderBy="Databases">
         <name>Statistical Data</name>
-        <abbr/>
         <desc>Data from surveys and tests in numeric formats.</desc>
     </domain>
-    <domain id="16">
+    <domain orderBy="Databases">
         <name>Language Description</name>
-        <abbr/>
         <desc>Structured or unstructured descriptions of linguistic varieties or phenomena, typological databases etc.</desc>
     </domain>
-    <domain id="17">
+    <domain>
         <name>Other</name>
-        <abbr/>
-        <desc>Any other functional domain that can not be included in an existing category.</desc>
+        <desc>Any other function that cannot be included in an existing domain. The content of this domain will be periodically examined for potential patterns that may give rise to new domains.</desc>
     </domain>
 </domains>

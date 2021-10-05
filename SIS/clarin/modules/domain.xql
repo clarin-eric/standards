@@ -34,11 +34,9 @@ declare function dm:list-domains(){
                 onclick="copyTextToClipboard('{$domain-id}','{$domain-name}')"/>
                 <span class="hint" id="hint-{$domain-id}">copied</span>
             </li>
-            {if ($domain-name !='Other') then
                <span id="{$domain-id}" style="display:block">
                     <p>{$domain-snippet}</p>
                 </span>
-             else ()}
         </div>
 };
 
