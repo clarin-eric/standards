@@ -49,7 +49,7 @@
         <name>Lexical Resource</name>
         <desc>Structured (item-based) resources for lexical and/or conceptual information on units of language (e.g. wordlists, lexicons, WordNets etc.)</desc>
     </domain>
-    <domain>
+    <domain orderBy="Uncategorized">
         <name>Tool Support</name>
         <desc>Tool-related formats required for specific functionality of the tool or reliable reuse of resources (e.g. tagsets, annotation schemes, vocabularies, language models, parameter files, and other specifications or settings)</desc>
     </domain>
@@ -65,7 +65,7 @@
         <name>Language Description</name>
         <desc>Structured or unstructured descriptions of linguistic varieties or phenomena, typological databases etc.</desc>
     </domain>
-    <domain>
+    <domain orderBy="Uncategorized">
         <name>Other</name>
         <desc>Any other function that cannot be included in an existing domain. The content of this domain will be periodically examined for potential patterns that may give rise to new domains.</desc>
     </domain>
