@@ -36,7 +36,7 @@ import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-mod
                     <p>Please note that, depending on the feedback that the Committee receives from users and centre representatives, it is possible to also supply more documentation, with examples, etc., or to adjust the entire system: this is partially a bottom-up initiative, after all.</p>
                 </div>
                 <ul style="padding:0px; margin-left:15px;">
-                    {dm:list-domains()}
+                    {dm:list-domains-grouped()}
                 </ul>
             </div>
             <div class="footer">{app:footer()}</div>

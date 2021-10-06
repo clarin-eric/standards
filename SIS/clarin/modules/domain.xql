@@ -19,12 +19,12 @@ declare function dm:get-domain-by-name($name as xs:string){
 };
 
 
-(: Generate the list of domains :)
-declare function dm:list-domains(){
-    for $domain in $domain:domains
-        let $domain-id := $domain/@id
+(: Generate the list of domains for the particular group :)
+declare function dm:list-domains($group as xs:string){
+    for $domain in $domain:domains[@orderBy eq $group]
+        let $domain-id := $domain/@id (: this is now always empty :)
         let $domain-name := $domain/name/text()
-        let $domain-snippet := $domain/desc 
+        let $domain-snippet := $domain/desc
         order by $domain-name
     return
         <div>
@@ -40,3 +40,15 @@ declare function dm:list-domains(){
         </div>
 };
 
+(: iterate across the groups of domains :)
+declare function dm:list-domains-grouped(){
+  for $group in distinct-values($domain:domains/@orderBy)
+  order by $group
+  return 
+<div>
+<li>
+     <h3>{$group}</h3>
+     <ul>{dm:list-domains($group)}</ul>
+  </li>
+</div>
+};
