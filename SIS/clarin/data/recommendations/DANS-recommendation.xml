@@ -10,11 +10,15 @@
             <name id="fPDFA">PDF/A</name>
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
+            <comment>See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
         </format>
         <format>
             <name id="fODT">ODT</name>
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
+            <comment>See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
         </format>
         <format>
             <name id="fTextPlain">plainText</name>
@@ -27,13 +31,80 @@
             <name id="fPDF">PDF</name>
             <domain>Textual Source Language Data</domain>
             <level>acceptable</level>
+            <comment>See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
         </format>
         <format>
             <name id="fDOCX">DOCX</name>
             <domain>Textual Source Language Data</domain>
             <level>acceptable</level>
+            <comment>See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
+        </format>
+        <format>
+            <name id="fDOC">DOC</name>
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>applicable specifically to Word .doc. See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
+        </format>
+        <format>
+            <name id="fRTF">RTF</name>
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
         </format>
         
+        <format>
+            <name id="fPDFA">PDF/A</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+            <comment>See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
+        </format>
+        <format>
+            <name id="fODT">ODT</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+            <comment>See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
+        </format>
+        <format>
+            <name id="fTextPlain">plainText</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+            <comment>Encoded as UTF-8/16/32, see 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/plain-text/plain-text">more info</a></comment>
+        </format>
+        <format>
+            <name id="fPDF">PDF</name>
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
+        </format>
+        <format>
+            <name id="fDOCX">DOCX</name>
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
+        </format>
+        <format>
+            <name id="fDOC">DOC</name>
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>applicable specifically to Word .doc. See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
+        </format>
+        <format>
+            <name id="fRTF">RTF</name>
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>See 
+                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info</a></comment>
+        </format>
         
         
         
