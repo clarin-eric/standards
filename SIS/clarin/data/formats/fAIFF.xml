@@ -1,0 +1,18 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fAIFF" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Audio Interchange File Format</title>
+    <abbr>AIFF</abbr>
+  </titleStmt>
+  <keyword>speech data</keyword>
+  <keyword>audio file format</keyword>
+  <keyword>container format</keyword>
+  <info type="description">
+    <p>See:
+      <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000005.shtml">description at the Digital Formats web site by the Library of Congress</a>.</p>
+  </info>
+  <!--  <relation target="SpecFLAC" type="isDefinedBy"/>-->
+  <mimeType>audio/x-aiff</mimeType>
+  <mimeType>audio/aiff</mimeType>
+  <fileExt recommended="yes">.aif</fileExt>
+  <fileExt>.aiff</fileExt>
+</format>
