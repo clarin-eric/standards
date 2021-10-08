@@ -27,7 +27,14 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                     &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
                 </div>
                 <div class="title">Data Deposition Formats</div>
-                
+                  <div>
+                    <p>This page lists formats used in the recommendations for data deposition formats. The list is still incomplete.</p>
+                    <p>The name of the format links to its description, sometimes rather stubby (you are welcome to help us extend the list 
+                    and/or the descriptions, either by submitting an issue at GitHub containing suggested text or corrections, or by editing 
+                    or adding the relevant format file and submitting a pull request).</p>
+                    <p>By clicking on the icon next to the format name, it is possible to copy the format ID, 
+                    useful for editing or adding centre recommendations.</p>
+                  </div>
                 <ul style="padding:0px; margin-left:15px;">
                     {fm:list-formats()}
                 </ul>
