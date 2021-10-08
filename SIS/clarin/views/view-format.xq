@@ -79,14 +79,19 @@ return
                         
                         {vfm:print-multiple-values($format/titleStmt/versionNumber, $id, "Versions:")}
                         
-                        {vfm:print-multiple-values($format/mimeType, $id, "MIME types:")}
-                        {vfm:print-multiple-values($format/fileExt, $id, "File extensions:")}
+                        {vfm:print-multiple-values($format/mimeType, $id, "Media type(s):")}
+                        {vfm:print-multiple-values($format/fileExt, $id, "File extension(s):")}
                         {vfm:print-multiple-values($format/formatFamily, $id, "Format family:")}
-                        {vfm:print-multiple-values($format/schemaLoc, $id, "Schema locations:", fn:true())}
+                        {vfm:print-multiple-values($format/schemaLoc, $id, "Schema location:", fn:true())}
                         
                         
                         {vfm:print-recommendation-in-clarin($format,$id)}
                         {vfm:print-recommendation-table($id,$domain,$centre,$recommendationType,$sortBy)}
+                        <div>
+                            <span class="heading">Description: </span>
+                            <span id="desctext{$id}" class="desctext">{$format/info[@type = "description"]}</span>
+                        </div>
+
                         
                         {vfm:print-multiple-values($format/keyword, $id, "Keywords:")}
                         <!--The tag cloud of the standard related keywords -->
@@ -100,10 +105,6 @@ return
                         
                         
                         
-                        <div>
-                            <span class="heading">Description: </span>
-                            <span id="desctext{$id}" class="desctext">{$format/info[@type = "description"]}</span>
-                        </div>
                         
                         {vsm:print-spec-relation($format,$id, fn:true())}
                         {vsm:print-graph($format)}
