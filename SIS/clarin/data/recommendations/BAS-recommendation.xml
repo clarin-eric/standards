@@ -18,7 +18,7 @@
         <format>
             <name id="fRAW">RAW</name>
             <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
+            <level>accepted</level>
         </format>
         <format>
             <name id="fNIST">NIST SPHERE</name>
@@ -27,27 +27,27 @@
         </format>
         <format>
             <name id="fSAM">SAM</name>
-            <domain>Text Annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format>
-            <name id="fELAN">ELAN</name>
-            <domain>Textual Source Language Data</domain>
+            <name id="fELAN">ELAN EAF</name>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format>
-            <name id="fPraat">Praat</name>
-            <domain>Textual Source Language Data</domain>
+            <name id="fPraat">Praat TextGrid</name>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format>
-            <name id="Partitur">Partitur</name>
-            <domain>Textual Source Language Data</domain>
+            <name id="fPartitur">BAS Partitur Format</name>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fEmu">Emu Database</name>
-            <domain>Textual Source Language Data</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format>
@@ -60,7 +60,6 @@
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
-        
         <format>
             <name id="fAVI">AVI</name>
             <domain>Audiovisual Source Language Data</domain>
@@ -68,20 +67,39 @@
         </format>
         <format>
             <name id="fAGS">AGS</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        
-        <!-- The following formats are not annotated for BAS in the spreadsheet-->
-        <format>
-            <name id="fFLAC">FLAC</name>
-            <domain>Audiovisual Source Language Data</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fPhonDat1">PhonDat1</name>
             <domain>Audiovisual Source Language Data</domain>
             <level>deprecated</level>
+        </format>
+        <format>
+            <name id="fPhonDat2">PhonDat2</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>deprecated</level>
+        </format>
+        <format>
+            <name id="fCMDI">CMDI</name>
+            <domain>Metadata</domain>
+            <level>accepted</level>
+        </format>
+        <format id="fCMDI">
+            <domain>Metadata</domain>
+            <domain>Catalogue Metadata</domain>
+            <level>recommended</level>
+            <comment>Profile <a href="http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1336550377513/xsd">media-corpus</a></comment>
+        </format>
+        <format id="fCMDI">
+            <domain>Contextual Information</domain>
+            <domain>Metadata</domain>
+            <level>recommended</level>
+            <comment>Profile <a href="http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1324638957739/xsd">media-session</a></comment>
+        </format>
+        <format id="fDC-XML">
+            <domain>Metadata</domain>
+            <level>accepted</level>
         </format>
     </formats>
 </result>
