@@ -1,0 +1,13 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fRAW" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Raw Audio Format</title>
+    <abbr>RAW</abbr>
+  </titleStmt>
+  <keyword>speech data</keyword>
+  <keyword>audio file format</keyword>
+  <info type="description">
+    <p>Raw Audio Format.</p>
+  </info>
+  <mimeType>audio/raw</mimeType>
+  <fileExt>.raw</fileExt>
+</format>

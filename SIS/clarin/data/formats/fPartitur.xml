@@ -1,0 +1,13 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPartitur" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>BAS Partitur Format</title>
+    <abbr>BPF</abbr>
+  </titleStmt>  
+  <keyword>annotation format</keyword>
+  <keyword>transcription of spoken language</keyword>
+  <info type="description">
+    <p>The <a href="https://www.phonetik.uni-muenchen.de/Bas/BasFormatseng.html#Partitur">BAS Partitur format</a>.</p>
+  </info>
+  <mimeType>text/plain-bas</mimeType>
+  <fileExt>.par</fileExt>
+</format>

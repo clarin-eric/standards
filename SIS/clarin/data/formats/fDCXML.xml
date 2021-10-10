@@ -1,0 +1,12 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fDCXML" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Dublin Core XML Metadata</title>
+    <abbr>DC XML</abbr>
+  </titleStmt>
+  <keyword>metadata</keyword>  
+  <info type="description">
+    <p>The <a href="https://dublincore.org/">Dublin Core Metadata Standard</a> implemented in XML according to <a href="https://dublincore.org/schemas/xmls/">DC XML Schemas</a>.</p>
+  </info>
+  <mimeType>application/xml</mimeType>
+  <fileExt>.xml</fileExt>
+</format>

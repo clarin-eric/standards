@@ -1,0 +1,13 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fEmu" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Emu Speech Database</title>
+    <abbr>EMU</abbr>
+  </titleStmt>  
+  <keyword>annotation format</keyword>
+  <keyword>transcription of spoken language</keyword>
+  <info type="description">
+    <p>The <a href="https://github.com/IPS-LMU/emuR">Emu Speech Datanbase</a>.</p>
+  </info>
+  <mimeType>tbc/tbc</mimeType>
+  <fileExt>tbc</fileExt>
+</format>

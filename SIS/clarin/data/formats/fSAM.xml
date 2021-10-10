@@ -1,0 +1,13 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSAM" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>SAM Format</title>
+    <abbr>SAM</abbr>
+  </titleStmt>  
+  <keyword>annotation format</keyword>
+  <keyword>transcription of spoken language</keyword>
+  <info type="description">
+    <p>The <a href="https://www.phon.ucl.ac.uk/resource/eurom1/eurospeech95eurom.pdf">SAM Format</a> from the project 'Speech Input and Output Assessment Methodologies and Standardization' (cf. <a href="https://www.phonetik.uni-muenchen.de/Bas/BasFormatseng.html#SAM">BAS recommendations</a>).</p>
+  </info>
+  <mimeType>text/plain</mimeType>
+  <fileExt>.txt</fileExt>
+</format>
