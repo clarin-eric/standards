@@ -1,0 +1,14 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fAVI" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Audio Video Interleaved</title>
+    <abbr>AVI</abbr>
+  </titleStmt>
+  <keyword>video file format</keyword>
+  <keyword>container format</keyword>
+  <info type="description">
+    <p>See:
+      <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000059.shtml">LoC article for AVI</a>.</p>
+  </info>
+  <mimeType>video/avi</mimeType>
+  <fileExt>.avi</fileExt>
+</format>

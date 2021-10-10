@@ -1,0 +1,13 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMP4" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>MPEG 4 video</title>
+    <abbr>MP4</abbr>
+  </titleStmt>
+  <keyword>video file format</keyword>
+  <keyword>container format</keyword>
+  <info type="description">
+    <p>Unspecified MP4 container format.</p>
+  </info>
+  <mimeType>video/mp4</mimeType>
+  <fileExt>.mp4</fileExt>
+</format>

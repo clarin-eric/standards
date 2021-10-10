@@ -1,0 +1,13 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fNIST" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>NIST SPHERE</title>
+    <abbr>NIST SPHERE</abbr>
+  </titleStmt>
+  <keyword>speech data</keyword>
+  <keyword>audio file format</keyword>
+  <info type="description">
+    <p>The NIST - SPHERE speech header format was defined by the 'National Institute of Standards and Technology, USA'. It is used in many speech corpora originated in the United States (cf. <a href="https://www.phonetik.uni-muenchen.de/Bas/BasFormatseng.html#NIST">BAS formats information for NIST SPHERE</a>.</p>
+  </info>
+  <mimeType>audio/x-nist</mimeType>
+  <fileExt>.nist</fileExt>
+</format>

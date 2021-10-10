@@ -1,0 +1,11 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fFLEx" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>SIL FieldWorks Language Explorer (FLEx)</title>
+    <abbr>FLEx</abbr>
+  </titleStmt>  
+  <info type="description">
+    <p>The file format used by the <a href="https://software.sil.org/fieldworks/">SIL FieldWorks Language Explorer (FLEx)</a>.</p>
+  </info>
+  <mimeType>text/xml</mimeType>
+  <fileExt>.xml</fileExt>
+</format>
