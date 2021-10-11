@@ -122,7 +122,7 @@
         </format>
         <format>
             <name id="fXML">XML</name>
-            <domain>Textual Annotation</domain>
+            <domain>Text Annotation</domain>
             <level>recommended</level>
             <comment>See 
                 <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
