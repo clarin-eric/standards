@@ -549,6 +549,26 @@
                     href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/dwg"
                     >more info on AutoCAD DWG</a>.</comment>
         </format>
-        
+        <format>
+            <name id="fSVG">SVG</name>
+            <domain>Other</domain>
+            <level>preferred</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info on CAD</a> and <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/svg"
+                    >more info on SVG</a>.</comment>
+        </format>
+        <format>
+            <name id="fDGN">DGN</name>
+            <domain>Other</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info on CAD</a> and <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/dgn"
+                    >more info on DGN</a>.</comment>
+            
+        </format>
     </formats>
 </result>
