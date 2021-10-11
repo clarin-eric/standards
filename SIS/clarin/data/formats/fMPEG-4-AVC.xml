@@ -11,4 +11,5 @@
   </info>
   <mimeType>video/mp4</mimeType>
   <fileExt>.mp4</fileExt>
+  <formatFamily>MP4</formatFamily>
 </format>
