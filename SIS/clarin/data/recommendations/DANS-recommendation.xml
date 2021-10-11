@@ -513,12 +513,12 @@
             <domain>Statistical Data</domain>
             <level>recommended</level>
             <comment>For general info, see <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data"
-                >the DANS page for statistical data</a>. STATA is recommended as <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data"
+                    >the DANS page for statistical data</a>. STATA is recommended as <a
                     href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/data-and-setup"
                     >"data and setup" (.dat/.DO)</a> rather than the <a
-                        href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/stata"
-                        >native</a> format.</comment>
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/stata"
+                    >native</a> format.</comment>
         </format>
         <format>
             <name id="fSAS">SAS</name>
@@ -526,5 +526,29 @@
             <level>acceptable</level>
             <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/sas">more info from DANS</a></comment>
         </format>
+        
+
+        <format>
+            <name id="fDXF">AutoCAD DXF</name>
+            <domain>Other</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info on CAD</a> and <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/autocad-dxf-version-r12-ascii"
+                    >more info on AutoCAD DXF R12</a>; note that versions other than R12 are not recommended.</comment>
+        </format>
+        
+        <format>
+            <name id="fDWD">AutoCAD DWG</name>
+            <domain>Other</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info on CAD</a> and <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/dwg"
+                    >more info on AutoCAD DWG</a>.</comment>
+        </format>
+        
     </formats>
 </result>
