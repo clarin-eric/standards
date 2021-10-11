@@ -58,7 +58,7 @@
         
         <format>
             <name id="fXSLT">XSLT</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
         

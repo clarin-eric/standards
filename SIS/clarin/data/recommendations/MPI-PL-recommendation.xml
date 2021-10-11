@@ -85,7 +85,7 @@
         
         <format>
             <name id="fXSD">XSD</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
         <format>

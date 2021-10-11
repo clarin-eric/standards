@@ -7,22 +7,22 @@
     <formats>
         <format>
             <name id="fGZIP">GZIP</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fZIP">ZIP</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fRAR">RAR</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fTAR">TAR</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
 
@@ -146,17 +146,17 @@
         </format>
         <format>
             <name id="fCSS">CSS</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fXSLT">XSLT</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fXSD">XSD</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
         

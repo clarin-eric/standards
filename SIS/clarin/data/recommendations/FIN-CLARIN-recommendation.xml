@@ -7,17 +7,17 @@
     <formats>
         <format>
             <name id="fGZIP">GZIP</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fZIP">ZIP</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
         <format>
             <name id="fTAR">TAR</name>
-            <domain>Tool support</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
         </format>
         <format>
