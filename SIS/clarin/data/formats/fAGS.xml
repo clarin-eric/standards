@@ -1,0 +1,13 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fAGS" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Annotation Graphs XML Format</title>
+    <abbr>AG XML</abbr>
+  </titleStmt>  
+  <keyword>annotation format</keyword>
+  <keyword>transcription of spoken language</keyword>
+  <info type="description">
+    <p>The Annotation Graph as a common conceptual core for several annotation formats was described by <a href="https://arxiv.org/abs/cs/0010033">Bird and Libermann (2001)</a> and can be represented in an XML format.</p>
+  </info>
+  <mimeType>text/xml</mimeType>
+  <fileExt>.xml</fileExt>
+</format>

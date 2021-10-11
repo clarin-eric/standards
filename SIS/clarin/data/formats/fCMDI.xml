@@ -1,0 +1,13 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCMDI" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Component Metadata</title>
+    <abbr>CMDI</abbr>
+  </titleStmt>
+  <keyword>metadata</keyword>  
+  <info type="description">
+    <p>CLARIN's Component Metadata Infrastructure is based on component metadata as defined by <a href="https://www.clarin.eu/cmdi1.2-specification">the CMDI 1.2 specification</a>.</p>
+  </info>
+  <mimeType>application/x-cmdi+xml</mimeType>
+  <fileExt>.cmdi</fileExt>
+  <fileExt>.xml</fileExt>
+</format>

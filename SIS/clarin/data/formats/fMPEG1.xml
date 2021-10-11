@@ -1,0 +1,13 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMPEG1" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>MPEG 1 video</title>
+    <abbr>MPEG-1</abbr>
+  </titleStmt>
+  <keyword>video file format</keyword>
+  <keyword>container format</keyword>
+  <info type="description">
+    <p>Unspecified MPEG-1 container format.</p>
+  </info>
+  <mimeType>video/mpeg</mimeType>
+  <fileExt>.mpg</fileExt>
+</format>
