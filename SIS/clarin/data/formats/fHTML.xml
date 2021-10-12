@@ -1,0 +1,14 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fHTML" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Hypertext Markup Language</title>
+    <abbr>HTML</abbr>
+  </titleStmt>
+  <keyword>annotation format</keyword>  
+  <info type="description">
+    <p>The HTML is described in the
+      <a href="https://html.spec.whatwg.org/multipage/">Living Standard</a>.</p>
+  </info>
+  <mimeType>text/html</mimeType>
+  <fileExt>.html</fileExt>
+  <fileExt>.htm</fileExt>
+</format>

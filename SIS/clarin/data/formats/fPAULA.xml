@@ -1,0 +1,14 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPAULA" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Potsdamer AUstauschformat Linguistischer Annotationen</title>
+    <abbr>PAULA</abbr>
+  </titleStmt>
+  <keyword>annotation format</keyword>  
+  <info type="description">
+    <p>The 
+      <a href="http://www.sfb632.uni-potsdam.de/paula.html">PAULA Format</a> is an exchange format for linguistic annotations, cf. <a href="http://www.sfb632.uni-potsdam.de/downloads/paula/PAULA_P1.1.2013.1.21a.pdf">documentation</a>.</p>
+  </info>
+  <mimeType>application/xml</mimeType>
+  <fileExt>.xml</fileExt>
+  <formatFamily>XML</formatFamily>
+</format>

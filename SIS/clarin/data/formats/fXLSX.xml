@@ -1,0 +1,12 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fXLSX" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Microsoft Excel/Office Open XML</title>
+    <abbr>XLSX</abbr>
+  </titleStmt>
+  <keyword>spreadsheet</keyword>
+  <info type="description">
+    <p>See <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000401.shtml">LoC entry</a>. </p> 
+  </info> 
+  <mimeType>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</mimeType>
+  <fileExt>.xlsx</fileExt>
+</format>
