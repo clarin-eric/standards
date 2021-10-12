@@ -1,0 +1,13 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMP3" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>MPEG Audio Layer III</title>
+    <abbr>MP3</abbr>
+  </titleStmt>
+  <keyword>audio file format</keyword>
+  <info type="description">
+    <p>See:
+      <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000105.shtml">description at the Digital Formats web site by the Library of Congress</a>.</p>
+  </info>
+  <mimeType>audio/mpeg</mimeType>
+  <fileExt>.mp3</fileExt>
+</format>

@@ -1,13 +1,15 @@
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMPEG1" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>MPEG 1 video</title>
+    <title>MPEG-1 Video Coding (H.261)</title>
     <abbr>MPEG-1</abbr>
   </titleStmt>
   <keyword>video file format</keyword>
   <keyword>container format</keyword>
   <info type="description">
-    <p>Unspecified MPEG-1 container format.</p>
+    <p>See:
+      <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000035.shtml">description at the Digital Formats web site by the Library of Congress</a>.</p>
   </info>
   <mimeType>video/mpeg</mimeType>
   <fileExt>.mpg</fileExt>
+  <fileExt>.mpeg</fileExt>
 </format>

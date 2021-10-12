@@ -1,0 +1,14 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fF4" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>f4transkript file format</title>
+    <abbr>F4</abbr>
+  </titleStmt>
+  <keyword>transcription of speech</keyword>
+  <keyword>spoken language</keyword>
+  <keyword>speech data</keyword>
+  <info type="description">
+    <p>See <a href="https://www.audiotranskription.de/en/f4transkript/">website</a>.</p>
+  </info>
+  <mimeType>text/plain</mimeType>
+  <fileExt>.txt</fileExt>
+</format>

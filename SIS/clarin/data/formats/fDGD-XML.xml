@@ -1,0 +1,11 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fDGD-XML" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>DGD XML Metadata</title>
+    <abbr>DGD-XML</abbr>
+  </titleStmt>  
+  <info type="description">
+    <p>The DGD metdata standard is described in <a href="https://nbn-resolving.org/urn:nbn:de:bsz:mh39-62525">Metadaten im Programmbereich „Mündliche Korpora“ des IDS</a>. </p>
+  </info>
+  <mimeType>text/xml</mimeType>
+  <fileExt>.xml</fileExt>
+</format>

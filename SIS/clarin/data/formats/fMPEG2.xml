@@ -1,0 +1,15 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMPEG2" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>MPEG-2 Video Encoding (H.262)</title>
+    <abbr>MPEG-2</abbr>
+  </titleStmt>
+  <keyword>video file format</keyword>
+  <keyword>container format</keyword>
+  <info type="description">
+    <p>See:
+      <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000028.shtml">description at the Digital Formats web site by the Library of Congress</a>.</p>
+  </info>
+  <mimeType>video/mpeg</mimeType>
+  <fileExt>.mpg</fileExt>  
+  <fileExt>.mpeg</fileExt>
+</format>

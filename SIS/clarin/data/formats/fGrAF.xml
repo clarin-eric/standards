@@ -1,0 +1,14 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fGrAF" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Graph  Annotation  Format</title>
+    <abbr>GrAF</abbr>
+  </titleStmt>
+  <keyword>annotation format</keyword>  
+  <info type="description">
+    <p>The 
+      <a href="https://www.cs.vassar.edu/~ide/papers/LAW.pdf">GrAF</a> is  an  extension  of  the  Linguistic  Annotation  Format (LAF) developed within ISO TC37 SC4.</p>
+  </info>
+  <mimeType>application/xml</mimeType>
+  <fileExt>.xml</fileExt>
+  <formatFamily>XML</formatFamily>
+</format>

@@ -1,0 +1,11 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCSV" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Comma-separated values</title>
+    <abbr>CSV</abbr>
+  </titleStmt>
+  <info type="description">
+    <p>See <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000323.shtml">LoC entry</a>.</p>
+  </info>
+  <mimeType>text/csv</mimeType>
+  <fileExt>.csv</fileExt>
+</format>
