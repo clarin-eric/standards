@@ -38,7 +38,8 @@ import module namespace index="http://clarin.ids-mannheim.de/standards/index" at
                     
                     <p>The current effort of the CLARIN Standards Committee focuses on maintaining and extending the list of 
                     <a href="{app:link("views/recommended-formats-with-search.xq")}">recommendations for 
-                    data deposition formats</a>, specified by CLARIN centres that offer deposition services (mostly the so-called <a href="https://www.clarin.eu/content/clarin-centres">B-centres</a>).</p> 
+                    data deposition formats</a>, specified by CLARIN centres that offer <a href="https://www.clarin.eu/content/depositing-services">deposition services</a>
+                    (mostly the so-called <a href="https://www.clarin.eu/content/clarin-centres">B-centres</a>).</p> 
                     <p>Please consult the <a href="https://www.clarin.eu/content/standards">"visiting card" of the CLARIN Standards Committee</a> for more information.</p>
                     <p></p>
                     
