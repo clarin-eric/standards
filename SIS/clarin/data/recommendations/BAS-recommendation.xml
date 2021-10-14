@@ -18,7 +18,7 @@
         <format>
             <name id="fRAW">RAW</name>
             <domain>Audiovisual Source Language Data</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format>
             <name id="fNIST">NIST SPHERE</name>
@@ -83,7 +83,7 @@
         <format>
             <name id="fCMDI">CMDI</name>
             <domain>Metadata</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format id="fCMDI">
             <domain>Metadata</domain>
@@ -99,7 +99,7 @@
         </format>
         <format id="fDC-XML">
             <domain>Metadata</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
     </formats>
 </result>
