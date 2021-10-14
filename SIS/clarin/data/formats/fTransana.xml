@@ -1,0 +1,12 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTransana" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Transana XML format</title>
+    <abbr>Transana</abbr>
+  </titleStmt>
+  <keyword>spoken language</keyword>
+  <info type="description">
+    <p>See <a href="https://www.transana.com/">website</a>.</p>
+  </info>
+  <mimeType>text/xml</mimeType>
+  <fileExt>.xml</fileExt>
+</format>
