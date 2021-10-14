@@ -6,8 +6,9 @@
   <keyword>annotation format</keyword>  
   <info type="description">
     <p>The 
-      <a href="https://www.cs.vassar.edu/~ide/papers/LAW.pdf">GrAF</a> is  an  extension  of  the  Linguistic  Annotation  Format (LAF) developed within ISO TC37 SC4.</p>
+      <a href="https://www.cs.vassar.edu/~ide/papers/LAW.pdf">GrAF</a> is  an  XML serialization  of  the  <a href="../views/view-spec.xq?id=SpecLaf">Linguistic  Annotation  Format (LAF)</a> developed within ISO TC37 SC4.</p>
   </info>
+  <relation target="SpecLaf" type="isDefinedBy"/>
   <mimeType>application/xml</mimeType>
   <fileExt>.xml</fileExt>
   <formatFamily>XML</formatFamily>
