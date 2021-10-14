@@ -8,7 +8,7 @@
         <format>
             <name id="fAIFF">AIFF</name>
             <domain>Audiovisual Source Language Data</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
        <!--   <format>
             <name id="fXML">XML</name>
@@ -34,12 +34,12 @@
         <format>
             <name id="fELAN">ELAN EAF</name>
             <domain>Audiovisual Annotation</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format>
             <name id="fPraat">Praat</name>
             <domain>Audiovisual Annotation</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         
         <format>
@@ -60,7 +60,7 @@
         <format>
             <name id="fTRS">Transcriber</name>
             <domain>Audiovisual Annotation</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format>
             <name id="fFLN">FOLKER</name>
@@ -70,7 +70,7 @@
         <format>
             <name id="fAnvil">Anvil</name>
             <domain>Audiovisual Annotation</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format>
             <name id="fDTABf">TEI DTABf</name>
@@ -101,22 +101,22 @@
         <format>
             <name id="fMP4">MPEG 4 video</name>
             <domain>Audiovisual Source Language Data</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format>
             <name id="fMPEG">MPEG 1 video</name>
             <domain>Audiovisual Source Language Data</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format>
             <name id="fMPEG2">MPEG 2 video</name>
             <domain>Audiovisual Source Language Data</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format>
             <name id="fM2J">Motion JPEG 2000</name>
             <domain>Audiovisual Source Language Data</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format>
             <name id="fHDF5">HDF5</name>
@@ -211,7 +211,7 @@
         <format>
             <name id="fWave">Wave</name>
             <domain>Audiovisual Source Language Data</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
             <comment>PCM-WAV with non-recommended parameters (not 48 kHz, 16 bit)</comment>
         </format>
         <format>
@@ -232,17 +232,17 @@
         <format>
             <name id="fXML">XML</name>
             <domain>Metadata</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format>
             <name id="fCSV">Comma-separated values</name>
             <domain>Metadata</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format>
             <name id="fCSV">XLSX</name>
             <domain>Metadata</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format>
             <name id="fDOCX">DOCX</name>
