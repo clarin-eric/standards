@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <result>
     <header>
         <filter>
@@ -5,489 +6,555 @@
         </filter>
     </header>
     <formats>
-        
-        <format>
-            <name id="fPDFA">PDF/A</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fODT">ODT</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fTextPlain">plainText</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>Encoded as UTF-8/16/32, see 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/plain-text/plain-text">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fPDF">PDF</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fDOCX">DOCX</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fDOC">DOC</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>applicable specifically to Word .doc. See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fRTF">RTF</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        
-        <format>
-            <name id="fPDFA">PDF/A</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fODT">ODT</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fTextPlain">plainText</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-            <comment>Encoded as UTF-8/16/32, see 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/plain-text/plain-text">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fPDF">PDF</name>
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-            <comment>See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fDOCX">DOCX</name>
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-            <comment>See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fDOC">DOC</name>
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-            <comment>applicable specifically to Word .doc. See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fRTF">RTF</name>
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-            <comment>See 
-                <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents">more info from DANS</a></comment>
-        </format>
-        
         <format>
             <name id="fXML">XML</name>
             <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Image Annotation</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Contextual Information</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Metadata</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Catalogue Metadata</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Geodata</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Language Description</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Tool Support</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml">more info from DANS</a></comment>
-        </format>
-        
-        <format>
-            <name id="fHTML">HTML</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/html">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fHTML">HTML</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/html">more info from DANS</a></comment>
-        </format>
-
-        <format>
-            <name id="fSGML">SGML</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/sgml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fSGML">SGML</name>
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/sgml">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fMDOWN">MDOWN</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/markdown">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fMDOWN">MDOWN</name>
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-            <comment>See 
-                <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/markdown">more info from DANS</a></comment>
-        </format>
-        
-        <format>
-            <name id="fFLAC">FLAC</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fBWF">BWF</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fMXF">MXF</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio">more info on audio</a> and <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video">more info on video from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fMatroska">Matroska</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio">more info on audio</a> and <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video">more info on video from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fOPUS">OPUS</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fWAVE">WAVE</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fMP3">MP3</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio">more info from DANS</a></comment>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
             <name id="fAAC">AAC</name>
             <domain>Audiovisual Source Language Data</domain>
             <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
             <name id="fAIFF">AIFF</name>
             <domain>Audiovisual Source Language Data</domain>
             <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fOGG">OGG</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio">more info from DANS</a></comment>
-        </format>
-        
-        <format>
-            <name id="fMPEG4">MPEG-4</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fMPEG2">MPEG-2</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
             <name id="fAVI">AVI</name>
             <domain>Audiovisual Source Language Data</domain>
             <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fBWF">BWF</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fFLAC">FLAC</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fMatroska">Matroska</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio"
+                    >more info on audio</a> and <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video"
+                    >more info on video from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fMP3">MP3</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fMPEG2">MPEG-2</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fMPEG4">MPEG-4</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fMXF">MXF</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio"
+                    >more info on audio</a> and <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video"
+                    >more info on video from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fOGG">OGG</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fOPUS">OPUS</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
             <name id="fQT">QuickTime</name>
             <domain>Audiovisual Source Language Data</domain>
             <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/video"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fJPEG">JPEG</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster">more info from DANS</a></comment>
+            <name id="fWAVE">WAVE</name>
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/audio"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fTIFF">TIFF</name>
-            <domain>Image Source Language Data</domain>
+            <name id="fXML">XML</name>
+            <domain>Catalogue Metadata</domain>
             <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster">more info from DANS</a></comment>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fPNG">PNG</name>
-            <domain>Image Source Language Data</domain>
+            <name id="fXML">XML</name>
+            <domain>Contextual Information</domain>
             <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster">more info from DANS</a></comment>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fJP2">JPEG 2000</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster">more info from DANS</a></comment>
+            <name id="fDOC">DOC</name>
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>applicable specifically to Word .doc. See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fDICOM">DICOM</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster">more info from DANS</a></comment>
+            <name id="fDOCX">DOCX</name>
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fSVG">SVG</name>
-            <domain>Image Source Language Data</domain>
+            <name id="fHTML">HTML</name>
+            <domain>Documentation</domain>
             <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector">more info from DANS</a></comment>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/html"
+                    >more info from DANS</a>
+            </comment>
         </format>
-
+        <format>
+            <name id="fMDOWN">MDOWN</name>
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/markdown"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fODT">ODT</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fPDF">PDF</name>
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fPDFA">PDF/A</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fRTF">RTF</name>
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fSGML">SGML</name>
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/sgml"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fTextPlain">plainText</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+            <comment>Encoded as UTF-8/16/32, see <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/plain-text/plain-text"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Documentation</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Geodata</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Image Annotation</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
+        </format>
         <format>
             <name id="fAI">Adobe Illustrator</name>
             <domain>Image Source Language Data</domain>
             <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fEPS">EPS</name>
-            <domain>Image Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fWMF">WMF</name>
-            <domain>Image Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
             <name id="fCDR">CDR</name>
             <domain>Image Source Language Data</domain>
             <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector">more info from DANS</a></comment>
-        </format>
-        
-        <format>
-            <name id="fCSS">CSS</name>
-            <domain>Tool Support</domain>
-            <level>recommended</level>
-            <comment>See <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/css">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fXSLT">XSLT</name>
-            <domain>Tool Support</domain>
+            <name id="fDICOM">DICOM</name>
+            <domain>Image Source Language Data</domain>
             <level>recommended</level>
-            <comment>See <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xslt">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fECMA">ECMAscript</name>
-            <domain>Tool Support</domain>
-            <level>recommended</level>
-            <comment>See <a href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/script">more info from DANS</a></comment>
+            <name id="fEPS">EPS</name>
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fMATLAB">MATLAB</name>
-            <domain>Tool Support</domain>
+            <name id="fJP2">JPEG 2000</name>
+            <domain>Image Source Language Data</domain>
             <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/programming-languages">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fNetCDF">NetCDF</name>
-            <domain>Tool Support</domain>
+            <name id="fJPEG">JPEG</name>
+            <domain>Image Source Language Data</domain>
             <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/programming-languages">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fTextFabric">TextFabric</name>
-            <domain>Tool Support</domain>
+            <name id="fPNG">PNG</name>
+            <domain>Image Source Language Data</domain>
             <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/programming-languages">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster"
+                    >more info from DANS</a>
+            </comment>
         </format>
-        
         <format>
-            <name id="fODS">ODS</name>
-            <domain>Other</domain>
+            <name id="fSVG">SVG</name>
+            <domain>Image Source Language Data</domain>
             <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spreadsheets">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fTIFF">TIFF</name>
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-raster"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fWMF">WMF</name>
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-vector"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Language Description</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Metadata</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
             <name id="fCSV">CSV</name>
             <domain>Other</domain>
             <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spreadsheets">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXLS">XLS</name>
-            <domain>Other</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spreadsheets">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fXLSX">XLSX</name>
-            <domain>Other</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spreadsheets">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fPDFA">PDF/A</name>
-            <domain>Other</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spreadsheets">more info from DANS</a></comment>
-        </format>
-        
-        <format>
-            <name id="fSQL">SQL</name>
-            <domain>Other</domain>
-            <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases">more info from DANS</a></comment>
-        </format>
-        <format>
-            <name id="fSIARD">SIARD</name>
-            <domain>Other</domain>
-            <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spreadsheets"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
             <name id="fCSV">CSV</name>
             <domain>Other</domain>
             <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases">more info from DANS</a></comment>
-        </format>
-        
-        <format>
-            <name id="fMSAccess">MS Access</name>
-            <domain>Other</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
             <name id="fDBASE">dBase</name>
             <domain>Other</domain>
             <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fDGN">DGN</name>
+            <domain>Other</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info on CAD</a> and <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/dgn"
+                    >more info on DGN</a>.</comment>
+        </format>
+        <format>
+            <name id="fDWD">AutoCAD DWG</name>
+            <domain>Other</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info on CAD</a> and <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/dwg"
+                    >more info on AutoCAD DWG</a>.</comment>
+        </format>
+        <format>
+            <name id="fDXF">AutoCAD DXF</name>
+            <domain>Other</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info on CAD</a> and <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/autocad-dxf-version-r12-ascii"
+                    >more info on AutoCAD DXF R12</a>; note that versions other than R12 are not
+                recommended.</comment>
         </format>
         <format>
             <name id="fHDF5">HDF5</name>
             <domain>Other</domain>
             <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases">more info from DANS</a></comment>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases"
+                    >more info from DANS</a>
+            </comment>
         </format>
-        
+        <format>
+            <name id="fMSAccess">MS Access</name>
+            <domain>Other</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fODS">ODS</name>
+            <domain>Other</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spreadsheets"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fPDFA">PDF/A</name>
+            <domain>Other</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spreadsheets"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fSIARD">SIARD</name>
+            <domain>Other</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fSQL">SQL</name>
+            <domain>Other</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/databases"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fSVG">SVG</name>
+            <domain>Other</domain>
+            <level>preferred</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info on CAD</a> and <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/svg"
+                    >more info on SVG</a>.</comment>
+        </format>
+        <format>
+            <name id="fXLS">XLS</name>
+            <domain>Other</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spreadsheets"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fXLSX">XLSX</name>
+            <domain>Other</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spreadsheets"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fR">R</name>
+            <domain>Statistical Data</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fSAS">SAS</name>
+            <domain>Statistical Data</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/sas"
+                    >more info from DANS</a>
+            </comment>
+        </format>
         <format>
             <name id="fSPSS">SPSS</name>
             <domain>Statistical Data</domain>
@@ -503,12 +570,6 @@
                     >native</a> formats.</comment>
         </format>
         <format>
-            <name id="fR">R</name>
-            <domain>Statistical Data</domain>
-            <level>recommended</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data">more info from DANS</a></comment>
-        </format>
-        <format>
             <name id="fSTATA">STATA</name>
             <domain>Statistical Data</domain>
             <level>recommended</level>
@@ -521,54 +582,175 @@
                     >native</a> format.</comment>
         </format>
         <format>
-            <name id="fSAS">SAS</name>
-            <domain>Statistical Data</domain>
-            <level>acceptable</level>
-            <comment>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/sas">more info from DANS</a></comment>
-        </format>
-        
-
-        <format>
-            <name id="fDXF">AutoCAD DXF</name>
-            <domain>Other</domain>
+            <name id="fXML">XML</name>
+            <domain>Text Annotation</domain>
             <level>recommended</level>
             <comment>See <a
-                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
-                    >more info on CAD</a> and <a
-                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/autocad-dxf-version-r12-ascii"
-                    >more info on AutoCAD DXF R12</a>; note that versions other than R12 are not recommended.</comment>
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
         </format>
-        
         <format>
-            <name id="fDWD">AutoCAD DWG</name>
-            <domain>Other</domain>
+            <name id="fDOC">DOC</name>
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>applicable specifically to Word .doc. See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fDOCX">DOCX</name>
+            <domain>Textual Source Language Data</domain>
             <level>acceptable</level>
             <comment>See <a
-                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
-                    >more info on CAD</a> and <a
-                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/dwg"
-                    >more info on AutoCAD DWG</a>.</comment>
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fSVG">SVG</name>
-            <domain>Other</domain>
-            <level>preferred</level>
+            <name id="fHTML">HTML</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
             <comment>See <a
-                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
-                    >more info on CAD</a> and <a
-                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/svg"
-                    >more info on SVG</a>.</comment>
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/html"
+                    >more info from DANS</a>
+            </comment>
         </format>
         <format>
-            <name id="fDGN">DGN</name>
-            <domain>Other</domain>
+            <name id="fMDOWN">MDOWN</name>
+            <domain>Textual Source Language Data</domain>
             <level>acceptable</level>
             <comment>See <a
-                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
-                    >more info on CAD</a> and <a
-                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/dgn"
-                    >more info on DGN</a>.</comment>
-            
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/markdown"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fODT">ODT</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fPDF">PDF</name>
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fPDFA">PDF/A</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fRTF">RTF</name>
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/text-documents"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fSGML">SGML</name>
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/sgml"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fTextPlain">plainText</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>Encoded as UTF-8/16/32, see <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/plain-text/plain-text"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fCSS">CSS</name>
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/css"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fECMA">ECMAscript</name>
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/script"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fMATLAB">MATLAB</name>
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/programming-languages"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fNetCDF">NetCDF</name>
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/programming-languages"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fTextFabric">TextFabric</name>
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/programming-languages"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fXSLT">XSLT</name>
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xslt"
+                    >more info from DANS</a>
+            </comment>
         </format>
     </formats>
 </result>
