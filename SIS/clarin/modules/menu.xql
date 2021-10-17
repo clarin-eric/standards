@@ -40,6 +40,12 @@ declare function menu:view(){
                     </td>
                </tr>
                 <tr>
+                    <td width="10px"></td>
+                    <td class="tdmenu">
+                        <a style="display:block"  href="{app:link("views/list-statistics.xq")}">Statistics</a>
+                    </td>
+               </tr>
+                <tr>
                     <td colspan="2" class="tdmenu">
                         <a style="display:block"  href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards</a>
                     </td>
