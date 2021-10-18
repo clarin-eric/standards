@@ -1,9 +1,8 @@
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSTATA.data-and-setup" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSTATA.dta" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>STATA (data and setup)</title>
-    <abbr>STATA.data+setup</abbr>
+    <title>STATA (standard save format)</title>
+    <abbr>STATA.dta</abbr>
   </titleStmt>  
-  <keyword>plain text format</keyword>
   <keyword>statistical data</keyword>
   <keyword>STATA</keyword>
   <info type="description">
@@ -12,6 +11,5 @@
         >DANS description</a>.</p>
     <p>See the <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000471.shtml">Library of Congress description</a> (containing references to PRONOM).</p>
   </info>
-  <mimeType>text/plain</mimeType>
   <fileExt>.dta</fileExt>
 </format>
