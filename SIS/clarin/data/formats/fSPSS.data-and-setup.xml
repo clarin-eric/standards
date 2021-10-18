@@ -1,0 +1,16 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSPSS.data-and-setup" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Statistical Product and Service Solutions (data and setup)</title>
+    <abbr>SPSS.data+setup</abbr>
+  </titleStmt>  
+  <keyword>plain text format</keyword>
+  <keyword>statistical data</keyword>
+  <info type="description">
+    <p>See the <a
+        href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/data-and-setup"
+        >DANS description</a>.</p>
+  </info>
+  <mimeType>text/plain</mimeType>
+  <fileExt>.sps</fileExt>
+  <fileExt>.dat</fileExt>
+</format>

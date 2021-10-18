@@ -1,0 +1,23 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSPSS" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Statistical Product and Service Solutions - uncategorized formats</title>
+    <abbr>SPSS</abbr>
+  </titleStmt>  
+  <keyword>statistical data</keyword>
+  <keyword>SPSS</keyword>
+  <info type="description">
+    <p>See the <a href="https://en.wikipedia.org/wiki/SPSS">corresponding Wikipedia article</a> for comprehensive description.</p>
+    <p>In CLARIN, various export formats of SPSS are recognized, with various degrees of recommendations, according to their openness and sustainability:</p>
+    <ul>
+      <li><a href="../views/view-format.xq?id=fSPSS.data-and-setup">SPSS .dat and sps</a></li>
+      <li><a href="../views/view-format.xq?id=fSPSS.por">SPSS Portable</a></li>
+      <li><a href="../views/view-format.xq?id=fSPSS.sav">SPSS standard save format</a></li>
+    </ul>  
+  </info>
+  <!--<mimeType>no idea</mimeType>-->
+  <fileExt>.spv</fileExt>
+  <fileExt>.sps</fileExt>
+  <fileExt>.dat</fileExt>
+  <fileExt>.sav</fileExt>
+  <fileExt>.por</fileExt>
+</format>

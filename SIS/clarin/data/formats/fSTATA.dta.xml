@@ -1,0 +1,16 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSTATA.data-and-setup" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>STATA (data and setup)</title>
+    <abbr>STATA.data+setup</abbr>
+  </titleStmt>  
+  <keyword>plain text format</keyword>
+  <keyword>statistical data</keyword>
+  <keyword>STATA</keyword>
+  <info type="description">
+    <p>See the <a
+      href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/stata"
+        >DANS description</a>.</p>
+  </info>
+  <mimeType>text/plain</mimeType>
+  <fileExt>.dta</fileExt>
+</format>

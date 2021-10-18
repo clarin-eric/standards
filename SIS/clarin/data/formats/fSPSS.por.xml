@@ -1,0 +1,15 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSPSS.por" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Statistical Product and Service Solutions (portable format)</title>
+    <abbr>SPSS.por</abbr>
+  </titleStmt>  
+  <keyword>statistical data</keyword>
+  <keyword>SPSS</keyword>
+  <info type="description">
+    <p>See the <a
+      href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spss-portable"
+        >DANS description</a>.</p>
+  </info>
+  <!--<mimeType>no idea</mimeType>-->
+  <fileExt>.por</fileExt>
+</format>
