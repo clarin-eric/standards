@@ -90,7 +90,7 @@
             </comment>
         </format>
         <format>
-            <name id="fMPEG4">MPEG-4</name>
+            <name id="fMP4">MPEG-4</name>
             <domain>Audiovisual Source Language Data</domain>
             <level>acceptable</level>
             <comment>See <a
