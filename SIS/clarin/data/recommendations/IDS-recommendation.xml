@@ -235,7 +235,7 @@
             <level>acceptable</level>
         </format>
         <format>
-            <name id="fCSV">Comma-separated values</name>
+            <name id="fCSV">CSV</name>
             <domain>Metadata</domain>
             <level>acceptable</level>
         </format>
