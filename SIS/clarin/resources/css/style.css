@@ -65,6 +65,7 @@ ul#menu{
     padding-left:10px;    
     width:72%;
     min-height:615px;
+    text-align:left;
 }
 
 .navigation{
@@ -92,6 +93,10 @@ ul#menu{
 .heading3 {
 	font-size:14px;
 	font-weight:bold;
+}
+
+.desctext{
+    text-align:justify;
 }
 
 .list-text{
@@ -242,7 +247,7 @@ th {
 .recommendation-row{
     border-bottom:1px solid #DDDDDD; 
     text-align:left; 
-    vertical-align:middle;
+    vertical-align:top;
     height:20px;
 }
 
