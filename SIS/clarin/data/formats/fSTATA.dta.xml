@@ -10,6 +10,7 @@
     <p>See the <a
       href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/stata"
         >DANS description</a>.</p>
+    <p>See the <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000471.shtml">Library of Congress description</a> (containing references to PRONOM).</p>
   </info>
   <mimeType>text/plain</mimeType>
   <fileExt>.dta</fileExt>
