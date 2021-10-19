@@ -1,0 +1,19 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSTATA.dta" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>STATA (standard save format)</title>
+    <abbr>STATA.dta</abbr>
+  </titleStmt>  
+  <keyword>statistical data</keyword>
+  <keyword>STATA</keyword>
+  <keyword>proprietary format</keyword>
+  <keyword>binary format</keyword>
+  <info type="description">
+    <p>See the <a
+      href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/stata"
+        >DANS description</a>.</p>
+    <p>See the <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000471.shtml">Library of Congress description of version 118</a> (containing references to PRONOM descriptions).</p>
+    <p>Wikidata ID: <a href="https://www.wikidata.org/wiki/Q1204300">Q1204300</a></p>
+  </info>
+  <!--<mimeType>no idea</mimeType>-->
+  <fileExt>.dta</fileExt>
+</format>
