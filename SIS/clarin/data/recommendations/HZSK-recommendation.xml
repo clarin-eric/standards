@@ -70,7 +70,7 @@
         </format>
         <format>
             <name id="fMPEG">MPEG 1 video</name>
-            <domain>Tool Suport</domain>
+            <domain>Tool Support</domain>
             <level>recommended</level>
             <comment>MPEG-PS, resolution 352x288, 25 fps, 1000Kbps, constant bit rate, progressive scan type</comment>
         </format>

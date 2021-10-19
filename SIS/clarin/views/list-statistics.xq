@@ -5,10 +5,12 @@ declare option exist:serialize "method=xhtml media-type=text/html indent=yes doc
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
-import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-module" at "../modules/format.xql";
+import module namespace stm = "http://clarin.ids-mannheim.de/standards/statistics-module" at "../modules/statistics.xql";
+import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
+import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
 
 (: 
-    @author margaretha, banski
+    @author margaretha
 :)
 
 <html>
@@ -28,15 +30,58 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                 </div>
                 <div class="title">Format Statistics</div>
                   <div>
-                    <p>This section of the SIS is going to present various statistics concerning data deposition 
-                    formats. Feel welcome to add your suggestions to the 
+                    <p>This section presents various statistics concerning data deposition 
+                    formats and is still work in progress. Feel welcome to add your suggestions to the 
                     <a href="https://github.com/clarin-eric/standards/issues/67">discussion at GitHub</a>.</p>
                   </div>
-                <div>
-                <ul style="padding:0px; margin-left:15px;">
-                
-                </ul>
-                </div>
+                    <div>
+                    
+                    <table style="width:500px">
+                        <tr>
+                            <th>Item</th>
+                            <th style="width:150px">Total number</th>
+                        </tr>
+                        <tr>
+                            <td>Formats</td>
+                            <td style="text-align:right;">{count(format:get-all-ids())}</td>
+                        </tr>
+                        <tr>
+                            <td>Domains</td>
+                            <td style="text-align:right;">{count($domain:domains)}</td>
+                        </tr>
+                        <tr>
+                            <td>Media types</td>
+                            <td style="text-align:right;">{count(stm:getMimeTypes())}</td>
+                        </tr>
+                    </table>
+                    
+                    
+                    <table style="width:500px">
+                        <tr>
+                            <th>Recommendation Level</th>
+                            <th style="width:150px">Number of Formats</th>
+                        </tr>
+                        {stm:list-formats-by-recommendation-level()}
+                    </table>
+                    
+                    <table style="width:500px">
+                        <tr>
+                            <th>Domain</th>
+                            <th style="width:150px">Number of Formats</th>
+                        </tr>
+                        {stm:list-format-by-domain()}
+                    </table>
+                    
+                    <table style="width:500px">
+                        <tr>
+                            <th>Media-types</th>
+                            <th style="width:150px">Number of Formats</th>
+                        </tr>
+                        {stm:list-format-by-media-types()}
+                    </table>
+                    
+                    
+                    </div>
             </div>
             <div class="footer">{app:footer()}</div>
         </div>

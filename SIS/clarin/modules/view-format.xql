@@ -90,21 +90,21 @@ declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendat
         </div>,
         <table cellspacing="4px" style="width:97%">
             <tr>
-                <th class="header" style="width:25%;">
+                <th class="header" style="width:15%;">
                     <a href="{
                                 app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=centre#recommendationTable"))
                             }">Clarin Centre</a>
                 </th>
-                <th class="header" style="width:25%;">
+                <th class="header" style="width:30%;">
                     <a href="{
                                 app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=domain#recommendationTable"))
                             }">Domain</a></th>
-                <th class="header" style="width:25%;">
+                <th class="header" style="width:15%;">
                     <a href="{
                                 app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=recommendation#recommendationTable"))
                             }">
                         Level</a></th>
-                <th class="header" style="width:25%;">
+                <th class="header" style="width:40%;">
                 Comments
                 </th>
             </tr>
