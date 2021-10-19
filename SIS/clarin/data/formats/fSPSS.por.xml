@@ -7,9 +7,13 @@
   <keyword>SPSS</keyword>
   <info type="description">
     <p>See the <a
-      href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spss-portable"
-      >DANS description</a>. PRONOM UID: <a href="https://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&amp;id=1802">fmt/997</a></p>
+        href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spss-portable"
+        >DANS description</a>. PRONOM UID: <a
+        href="https://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&amp;id=1802"
+        >fmt/997</a>. See also <a
+        href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000468.shtml">Loc
+      info</a>.</p>
   </info>
-  <!--<mimeType>no idea</mimeType>-->
+  <mimeType>application/x-spss-por</mimeType>
   <fileExt>.por</fileExt>
 </format>
