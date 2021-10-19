@@ -1,0 +1,18 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fHDF5" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Hierarchical Data Format, Version 5</title>
+    <abbr>HDF5</abbr>
+  </titleStmt>
+  <keyword>storage format</keyword>
+  <keyword>hierarchical format</keyword>
+  <keyword>dataset format</keyword>
+  <info type="description">
+    <p>See the following:</p>
+    <ul>
+      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000229.shtml">LoC info</a></li>
+      <li><a href="https://www.hdfgroup.org/2018/06/citations-for-hdf-data-and-software/">Citations for HDF Data and Software</a></li>
+    </ul>
+  </info>
+  <mimeType>application/x-hdf5</mimeType>
+  <fileExt>.h5</fileExt>
+</format>
