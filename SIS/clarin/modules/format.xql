@@ -100,21 +100,47 @@ declare function fm:print-multiple-values($list, $label) {
 declare function fm:list-mime-types() {
     let $mime-types := fn:distinct-values($format:formats/mimeType/text())
     for $type in $mime-types
-    let $list := $format:formats[mimeType = $type]/titleStmt/abbr
+       let $list := $format:formats[mimeType = $type]
+       let $numOfItems := count($list)
+       let $links : = 
+           for $k in (1 to $numOfItems)
+               let $format := $list[$k]
+               let $abbr := $format/titleStmt/abbr
+               let $id := data($format/@id)
+               let $link := <a href="{app:link(concat("views/view-format.xq?id=",$id))}">{$abbr}</a>
+               return 
+                   if ($k = $numOfItems) then
+                       ($link)
+                   else
+                       ($link, ", ")
+       
         order by $type
     return
         <li><span
                 class="list-text">{$type}</span>
-            <p>{fm:print-multiple-values($list, "Formats:")}</p>
+             <p>Formats: {$links}</p>
         </li>
 };
 
 declare function fm:get-formats-without-mime-types() {
     
-    let $list := $format:formats[not(mimeType) or mimeType = ""]/titleStmt/abbr
+    let $list := $format:formats[not(mimeType) or mimeType = ""]
+    let $numOfItems := count($list)
+    let $links : = 
+        for $k in (1 to $numOfItems)
+            let $format := $list[$k]
+            let $abbr := $format/titleStmt/abbr
+            let $id := data($format/@id)
+            let $link := <a href="{app:link(concat("views/view-format.xq?id=",$id))}">{$abbr}</a>
+            return 
+                if ($k = $numOfItems) then
+                    ($link)
+                else
+                    ($link, ", ")
+    
     return
         <li><span
                 class="list-text">No media types</span>
-            <p>{fm:print-multiple-values($list, "Formats:")}</p>
+            <p>Formats: {$links}</p>
         </li>
 };

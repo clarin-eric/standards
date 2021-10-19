@@ -247,7 +247,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                                 (
                                 <img
                                     src="{app:resource("info.png", "img")}"
-                                    height="20"/>,
+                                    height="18"/>,
                                 <span
                                     class="tooltiptext"
                                     style="left: 78%; width:300px;">{$format-comment}
