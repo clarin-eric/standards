@@ -5,15 +5,12 @@ declare option exist:serialize "method=xhtml media-type=text/html indent=yes doc
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
-
 import module namespace stm = "http://clarin.ids-mannheim.de/standards/statistics-module" at "../modules/statistics.xql";
-
 import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
 
-
 (: 
-    @author margaretha, banski
+    @author margaretha
 :)
 
 <html>
@@ -33,11 +30,9 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
                 </div>
                 <div class="title">Format Statistics</div>
                   <div>
-                  <!--
-                    <p>This section of the SIS is going to present various statistics concerning data deposition 
-                    formats. Feel welcome to add your suggestions to the 
+                    <p>This section presents various statistics concerning data deposition 
+                    formats and is still work in progress. Feel welcome to add your suggestions to the 
                     <a href="https://github.com/clarin-eric/standards/issues/67">discussion at GitHub</a>.</p>
-                    -->
                   </div>
                     <div>
                     
