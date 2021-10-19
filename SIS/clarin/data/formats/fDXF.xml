@@ -1,0 +1,21 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fDXF" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>AutoCAD Drawing Interchange Format</title>
+    <abbr>DXF</abbr>
+  </titleStmt>
+  <keyword>CAD format</keyword>
+  <keyword>AutoCAD</keyword>
+  <info type="description">
+    <p>Family of formats, of which <a href="../views/view-format.xq?id=fDXF.R12">version R12</a> is advocated by several CLARIN centres.</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad">DANS info on CAD formats</a></li>
+      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000446.shtml">LoC info on the DXF format family</a>, with references to PRONOM</li>
+      <li><a href="https://en.wikipedia.org/wiki/AutoCAD_DXF">Wikipedia entry</a></li>
+      <li><a href="https://www.fileformat.info/format/dxf/egff.htm">Encyclopedia of Graphics File Formats</a> entry</li>
+    </ul>
+  </info>
+  <mimeType>image/vnd.dxf</mimeType>
+  <fileExt>.dxf</fileExt>
+
+</format>

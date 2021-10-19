@@ -12,7 +12,7 @@
       href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/stata"
         >DANS description</a>.</p>
     <p>See the <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000471.shtml">Library of Congress description of version 118</a> (containing references to PRONOM descriptions).</p>
-    <p>Wikidata ID: <a href="https://www.wikidata.org/wiki/Q1204300">Q1204300</a></p>
+    <p>Wikidata ID: <a href="https://www.wikidata.org/wiki/Q1204300">Q1204300</a> (for all STATA formats).</p>
   </info>
   <!--<mimeType>no idea</mimeType>-->
   <fileExt>.dta</fileExt>
