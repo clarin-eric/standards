@@ -59,7 +59,7 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
                     <table style="width:500px">
                         <tr>
                             <th>Recommendation Level</th>
-                            <th style="width:150px">Number of Formats</th>
+                            <th style="width:150px">Number of Recommendations</th>
                         </tr>
                         {stm:list-formats-by-recommendation-level()}
                     </table>
@@ -67,7 +67,7 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
                     <table style="width:500px">
                         <tr>
                             <th>Domain</th>
-                            <th style="width:150px">Number of Formats</th>
+                            <th style="width:150px">Number of Recommendations</th>
                         </tr>
                         {stm:list-format-by-domain()}
                     </table>
