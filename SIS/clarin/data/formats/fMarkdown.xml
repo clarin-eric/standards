@@ -1,7 +1,7 @@
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMDOWN" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMarkdown" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
     <title>Markdown</title>
-    <abbr>MDOWN</abbr>
+    <abbr>Markdown</abbr>
   </titleStmt>
   <keyword>documentation format</keyword>
   <keyword>format family</keyword>
@@ -9,7 +9,7 @@
     <p>See the [Wikipedia description](https://en.wikipedia.org/wiki/Markdown) of the Markdown (and
       Commonmark) family of languages. Please feel welcome to extend this stub.</p>
   </info>
-  <relation target="SpecXML" type="isDefinedBy"/>
+  
   <mimeType>text/markdown</mimeType>
   <fileExt recommended="yes">.md</fileExt>
   <fileExt>.markdown</fileExt>
