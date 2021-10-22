@@ -432,7 +432,7 @@
             </comment>
         </format>
         <format>
-            <name id="fMapInfo.mif">XML</name>
+            <name id="fMapInfo.mif">MapInfo.wor</name>
             <domain>Geodata</domain>
             <level>recommended</level>
             <comment>See <a
@@ -441,11 +441,20 @@
             </comment>
         </format>
         <format>
-            <name id="fMapInfo.tab">XML</name>
+            <name id="fMapInfo.tab">MapInfo.tab</name>
             <domain>Geodata</domain>
             <level>acceptable</level>
             <comment>See <a
                 href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/mapinfo"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fMapInfo.wor">MapInfo.wor</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces"
                 >more info from DANS</a>
             </comment>
         </format>
