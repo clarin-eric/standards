@@ -1,0 +1,22 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMapInfo.mif" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>MapInfo interchange format</title>
+    <abbr>MapInfo.mif</abbr>
+  </titleStmt>
+  <keyword>GIS</keyword>
+  <keyword>MapInfo</keyword>
+  <keyword>interchange format</keyword>
+  <info type="description">
+    <p>The export format of MapInfo products, designed for GIS interoperability. The main .mif file
+      (containing graphics data) is often accompanied by a .mid file (containing the optional
+      textual data corresponding to each graphic object).</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/mif-mid">DANS info</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/MapInfo_Interchange_Format">Wikipedia entry</a></li>
+      <li><a href="https://web.archive.org/web/20060909054240/http://resource.mapinfo.com/static/files/document/1074660800077/interchange_file.pdf">Technical spec via web.archive.org</a></li>
+    </ul>
+  </info>
+  <fileExt>.mif</fileExt>
+  <fileExt>.mid</fileExt>
+</format>
