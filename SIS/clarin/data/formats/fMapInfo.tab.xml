@@ -1,0 +1,20 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMapInfo.tab" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>MapInfo native format</title>
+    <abbr>MapInfo.tab</abbr>
+  </titleStmt>
+  <keyword>GIS</keyword>
+  <keyword>MapInfo</keyword>
+  <keyword>proprietary format</keyword>
+  <info type="description">
+    <p>The native format of MapInfo products. It consists of several files, of which the main one is ASCII-encoded and has the .tab extension.</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/mapinfo">DANS info</a></li>
+      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000300.shtml">LoC entry</a>, ID: fdd000300</li>
+      <li><a href="https://en.wikipedia.org/wiki/MapInfo_TAB_format">Wikipedia entry</a></li>
+    </ul>
+  </info>
+  <fileExt>.tab</fileExt>
+
+</format>
