@@ -432,6 +432,24 @@
             </comment>
         </format>
         <format>
+            <name id="fMapInfo.mif">XML</name>
+            <domain>Geodata</domain>
+            <level>recommended</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/mif-mid"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fMapInfo.tab">XML</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/mapinfo"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
             <name id="fXML">XML</name>
             <domain>Image Annotation</domain>
             <level>recommended</level>
