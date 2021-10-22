@@ -22,8 +22,8 @@
             <level>recommended</level>
         </format>
         <format>
-            <name id="fDXF.R12">AutoCAD DXF v. R12</name>
-            <domain>Other</domain>
+            <name id="fDXF.R12">AutoCAD DXF-R12</name>
+            <domain>Geodata</domain>
             <level>recommended</level>
         </format>
         
