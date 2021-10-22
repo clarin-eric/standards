@@ -1,7 +1,7 @@
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fDXF.R12" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
     <title>AutoCAD Drawing Interchange Format, v. R12 (ASCII)</title>
-    <abbr>DXF.R12</abbr>
+    <abbr>AutoCAD DXF-R12</abbr>
   </titleStmt>
   <keyword>CAD format</keyword>
   <keyword>AutoCAD</keyword>
