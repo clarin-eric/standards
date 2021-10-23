@@ -432,7 +432,7 @@
             </comment>
         </format>
         <format>
-            <name id="fMapInfo.mif">MapInfo.wor</name>
+            <name id="fMapInfo.mif">MapInfo.mif</name>
             <domain>Geodata</domain>
             <level>recommended</level>
             <comment>See <a
@@ -458,6 +458,48 @@
                 >more info from DANS</a>
             </comment>
         </format>
+        <format>
+            <name id="fGML">GML</name>
+            <domain>Geodata</domain>
+            <level>recommended</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/gml"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fGeoJSON">GeoJSON</name>
+            <domain>Geodata</domain>
+            <level>recommended</level>
+        </format>
+        <format>
+            <name id="fKML">KML</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/kml"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fArcGIS.mxd">ArcGIS.mxd</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fQGIS.qgs">QGIS.qgs</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        
         <format>
             <name id="fXML">XML</name>
             <domain>Image Annotation</domain>
