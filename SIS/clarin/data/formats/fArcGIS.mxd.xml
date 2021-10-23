@@ -1,0 +1,21 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fArcGIS.mxd" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>ArcGIS project file format</title>
+    <abbr>ArcGIS.mxd</abbr>
+  </titleStmt>
+  <keyword>GIS</keyword>
+  <keyword>ArcGIS</keyword>
+  <keyword>GIS workspace format</keyword>
+  <info type="description">
+    <p>"In the ArcGIS platform by ESRI, a map document is a file that contains one or more maps,
+      the page layout, and the associated layers, tables, charts, and reports." (PRONOM)</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces">DANS info</a></li>
+      <li><a href="https://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&amp;id=1721">PRONOM info</a>, PUID: fmt/916</li>
+      <li><a href="https://www.wikidata.org/wiki/Q50223857">Wikidata entry</a>, ID: Q50223857</li>
+    </ul>
+  </info>
+  <mimeType>application/octet-stream</mimeType>
+  <fileExt>.mxd</fileExt>
+</format>
