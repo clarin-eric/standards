@@ -5,13 +5,13 @@
   </titleStmt>
   <keyword>GIS</keyword>
   <info type="description">
-    <p>"GeoJSON[1] is an open standard format designed for representing simple geographical
+    <p>"GeoJSON is an open standard format designed for representing simple geographical
       features, along with their non-spatial attributes. It is based on the JSON format. The
       features include points (therefore addresses and locations), line strings (therefore streets,
       highways and boundaries), polygons (countries, provinces, tracts of land), and multi-part
       collections of these types. GeoJSON features need not represent entities of the physical world
       only; mobile routing and navigation apps, for example, might describe their service coverage
-      using GeoJSON." (Wikipedia))</p>
+      using GeoJSON." (Wikipedia)</p>
     <p>See the following for more information:</p>
     <ul>
       <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/geographical-information-gis">DANS info</a></li>
