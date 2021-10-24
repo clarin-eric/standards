@@ -425,46 +425,66 @@
         <format>
             <name id="fXML">XML</name>
             <domain>Geodata</domain>
-            <level>recommended</level>
+            <level>acceptable</level>
             <comment>See <a
-                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/esri-geodatabase"
                     >more info from DANS</a>
             </comment>
         </format>
         <format>
-            <name id="fMapInfo.mif">MapInfo.mif</name>
-            <domain>Geodata</domain>
-            <level>recommended</level>
-            <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/mif-mid"
-                >more info from DANS</a>
-            </comment>
-        </format>
-        <format>
-            <name id="fMapInfo.tab">MapInfo.tab</name>
+            <name id="fArcGIS.mxd">ArcGIS.mxd</name>
             <domain>Geodata</domain>
             <level>acceptable</level>
             <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/mapinfo"
-                >more info from DANS</a>
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces"
+                    >more info from DANS</a>
             </comment>
         </format>
         <format>
-            <name id="fMapInfo.wor">MapInfo.wor</name>
+            <name id="fDGN">DGN</name>
             <domain>Geodata</domain>
             <level>acceptable</level>
             <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces"
-                >more info from DANS</a>
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info on CAD</a> and <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/dgn"
+                    >more info on DGN</a>.</comment>
+        </format>
+        <format>
+            <name id="fDWG">AutoCAD DWG</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info on CAD</a> and <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/dwg"
+                    >more info on AutoCAD DWG</a>.</comment>
+        </format>
+        <format>
+            <name id="fDXF">AutoCAD DXF</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info from DANS</a>
             </comment>
         </format>
         <format>
-            <name id="fGML">GML</name>
+            <name id="fDXF.R12">AutoCAD DXF-R12</name>
             <domain>Geodata</domain>
             <level>recommended</level>
             <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/gml"
-                >more info from DANS</a>
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/computer-aided-design-cad"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fERDAS.img">Erdas.img</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
+                    >more info from DANS</a>
             </comment>
         </format>
         <format>
@@ -473,21 +493,57 @@
             <level>recommended</level>
         </format>
         <format>
+            <name id="fGeoTIFF">GeoTIFF</name>
+            <domain>Geodata</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fGML">GML</name>
+            <domain>Geodata</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/gml"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
             <name id="fKML">KML</name>
             <domain>Geodata</domain>
             <level>acceptable</level>
             <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/kml"
-                >more info from DANS</a>
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/kml"
+                    >more info from DANS</a>
             </comment>
         </format>
         <format>
-            <name id="fArcGIS.mxd">ArcGIS.mxd</name>
+            <name id="fMapInfo.mif">MapInfo.mif</name>
+            <domain>Geodata</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/mif-mid"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fMapInfo.tab">MapInfo.tab</name>
             <domain>Geodata</domain>
             <level>acceptable</level>
             <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces"
-                >more info from DANS</a>
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/mapinfo"
+                    >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fMapInfo.wor">MapInfo.wor</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces"
+                    >more info from DANS</a>
             </comment>
         </format>
         <format>
@@ -495,17 +551,8 @@
             <domain>Geodata</domain>
             <level>acceptable</level>
             <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces"
-                >more info from DANS</a>
-            </comment>
-        </format>
-        <format>
-            <name id="fArcGIS.gdb">ArcGIS.gdb</name>
-            <domain>Geodata</domain>
-            <level>acceptable</level>
-            <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/esri-geodatabase"
-                >more info from DANS</a>
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces"
+                    >more info from DANS</a>
             </comment>
         </format>
         <format>
@@ -513,26 +560,8 @@
             <domain>Geodata</domain>
             <level>acceptable</level>
             <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/esri-shapefile"
-                >more info from DANS</a>
-            </comment>
-        </format>
-        <format>
-            <name id="fGeoTIFF">GeoTIFF</name>
-            <domain>Geodata</domain>
-            <level>recommended</level>
-            <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
-                >more info from DANS</a>
-            </comment>
-        </format>
-        <format>
-            <name id="fERDAS.img">Erdas.img</name>
-            <domain>Geodata</domain>
-            <level>acceptable</level>
-            <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
-                >more info from DANS</a>
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/esri-shapefile"
+                    >more info from DANS</a>
             </comment>
         </format>
         <format>
@@ -540,8 +569,8 @@
             <domain>Geodata</domain>
             <level>acceptable</level>
             <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
-                >more info from DANS</a>
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
+                    >more info from DANS</a>
             </comment>
         </format>
         <format>
@@ -549,11 +578,19 @@
             <domain>Geodata</domain>
             <level>acceptable</level>
             <comment>See <a
-                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
-                >more info from DANS</a>
+                    href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
+                    >more info from DANS</a>
             </comment>
         </format>
-        
+        <format>
+            <name id="fXML">XML</name>
+            <domain>Geodata</domain>
+            <level>recommended</level>
+            <comment>See <a
+                    href="http://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/xml"
+                    >more info from DANS</a>
+            </comment>
+        </format>
         <format>
             <name id="fXML">XML</name>
             <domain>Image Annotation</domain>
