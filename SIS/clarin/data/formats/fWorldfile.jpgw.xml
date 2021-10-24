@@ -1,0 +1,18 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fWorldfile.jpgw" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>JPEG World File</title>
+    <abbr>Worldfile.jpgw</abbr>
+  </titleStmt>
+  <keyword>GIS</keyword>
+  <keyword>world file</keyword>
+  <keyword>sidecar file</keyword>
+  <keyword>georeference</keyword>
+  <info type="description">
+    <p>See <a href="../views/view-format.xq?id=fWorldfile.jpgw">Esri world file description</a>.</p>
+    <p>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/jpeg-world-file">DANS info</a>.</p>
+  </info>
+  <mimeType>text/plain</mimeType>
+  <fileExt>.jpgw</fileExt>
+  <fileExt>.jgw</fileExt>
+  <formatFamily>Worldfile</formatFamily>
+  </format>

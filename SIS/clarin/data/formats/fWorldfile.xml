@@ -1,0 +1,28 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fWorldfile" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Esri World File</title>
+    <abbr>Worldfile</abbr>
+  </titleStmt>
+  <keyword>GIS</keyword>
+  <keyword>world file</keyword>
+  <keyword>sidecar file</keyword>
+  <keyword>georeference</keyword>
+  <info type="description">
+    <p>"A world file is a six line plain text sidecar file used by geographic information systems
+      (GIS) to georeference raster map images. The file specification was introduced by Esri,
+      and consists of six coefficients of an affine transformation that describes the location,
+      scale and rotation of a raster on a map." (Wikipedia)</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/World_file">Wikipedia entry</a></li>
+      <li><a href="https://freegeographytools.com/2007/worldfile-basics">"Worldfile basics"</a> by Leszek Pawłowicz</li>
+      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000287.shtml">LoC info</a>, ID: fdd000287</li>
+      <li><a href="https://www.nationalarchives.gov.uk/pronom/fmt/367">PRONOM info</a>, PUID: fmt/367</li>
+      <li><a href="https://www.wikidata.org/wiki/Q1134089">Wikidata entry</a>, ID: Q1134089</li>
+      <li><a href="../views/view-format.xq?id=fWorldfile.tifw">TIFF world file</a></li>
+      <li><a href="../views/view-format.xq?id=fWorldfile.jpgw">JPEG world file</a></li>
+    </ul>
+  </info>
+  <mimeType>text/plain</mimeType>
+  <fileExt>.wld</fileExt>
+  </format>
