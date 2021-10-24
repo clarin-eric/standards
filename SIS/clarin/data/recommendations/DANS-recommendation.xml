@@ -358,6 +358,43 @@
             </comment>
         </format>
         <format>
+            <name id="fGeoTIFF">GeoTIFF</name>
+            <domain>Geodata</domain>
+            <level>recommended</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fERDAS.img">Erdas.img</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fWorldfile.jpgw">Worldfile.jpgw</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fWorldfile.tifw">Worldfile.tifw</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/images-georeference"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        
+        <format>
             <name id="fXML">XML</name>
             <domain>Image Annotation</domain>
             <level>recommended</level>

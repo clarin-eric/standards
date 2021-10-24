@@ -1,0 +1,35 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fGeoTIFF" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Geographic Tagged Image File Format</title>
+    <abbr>GeoTIFF</abbr>
+  </titleStmt>
+  <keyword>image format</keyword>
+  <keyword>raster graphics</keyword>
+  <keyword>GIS</keyword>
+  <keyword>georeference</keyword>
+  <info type="description">
+    <p>"GeoTIFF is a public domain metadata standard which allows georeferencing information to be
+      embedded within a TIFF file. The potential additional information includes map projection,
+      coordinate systems, ellipsoids, datums, and everything else necessary to establish the exact
+      spatial reference for the file. The GeoTIFF format is fully compliant with TIFF 6.0, so
+      software incapable of reading and interpreting the specialized metadata will still be able to
+      open a GeoTIFF format file." (Wikipedia)</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/geotiff">DANS info</a></li>
+      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000279.shtml">LoC info</a>, ID: fdd000279</li>
+      <li><a href="http://www.nationalarchives.gov.uk/pronom/fmt/155">PRONOM info</a>, PUID: fmt/155</li>
+      <li><a href="https://en.wikipedia.org/wiki/GeoTIFF">Wikipedia entry</a></li>
+      <li><a href="https://www.wikidata.org/wiki/Q1502796">Wikidata entry</a>, ID: Q1502796</li>
+    </ul>
+    
+  </info>
+  <!--<relation target="SpecTIFF" type="isDefinedBy"/>
+    ISO 12639
+   -->
+  <mimeType>image/tiff</mimeType>
+  <fileExt>.tiff</fileExt>
+  <fileExt>.tif</fileExt>
+  <fileExt>.gtif</fileExt>
+  <formatFamily>TIFF</formatFamily>
+</format>
