@@ -339,7 +339,24 @@
                 >more info from DANS</a>
             </comment>
         </format>
-        
+        <format>
+            <name id="fArcGIS.gdb">ArcGIS.gdb</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/esri-geodatabase"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
+            <name id="fShapefile">Shapefile</name>
+            <domain>Geodata</domain>
+            <level>acceptable</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/esri-shapefile"
+                >more info from DANS</a>
+            </comment>
+        </format>
         <format>
             <name id="fXML">XML</name>
             <domain>Image Annotation</domain>
