@@ -1,0 +1,37 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fShapefile" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>ESRI Arc/View ShapeFile</title>
+    <abbr>Shapefile</abbr>
+  </titleStmt>
+  <keyword>GIS</keyword>
+  <keyword>ArcGIS</keyword>
+  <info type="description">
+    <p>"The shapefile format is a geospatial vector data format for geographic information system
+      (GIS) software. It is developed and regulated by Esri as a mostly open specification for data
+      interoperability among Esri and other GIS software products. The shapefile format can
+      spatially describe vector features: points, lines, and polygons, representing, for example,
+      water wells, rivers, and lakes." (Wikipedia)</p>
+    <p>Mandatory files: (after Wikipedia, see the LoC and other links below for an exhaustive listing)</p>
+    <ul>
+      <li>.shp — shape format; the feature geometry itself {content-type: x-gis/x-shapefile}</li>
+      <li>.shx — shape index format; a positional index of the feature geometry to allow seeking forwards and backwards quickly {content-type: x-gis/x-shapefile}</li>
+      <li>.dbf — attribute format; columnar attributes for each shape, in dBase IV format {content-type: application/octet-stream OR text/plain}</li>
+    </ul>
+    <p>Note also that newer media types have been requested, respectively application/vnd.shp, /vnd.shx, and /vnd.dbf (see below).</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/esri-shapefile">DANS info</a></li>
+      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000280.shtml">LoC info</a>, ID: fdd000280</li>
+      <li><a href="http://www.nationalarchives.gov.uk/PRONOM/x-fmt/235">PRONOM info</a>, PUID: x-fmt/235</li>
+      <li><a href="http://en.wikipedia.org/wiki/Shapefile">Wikipedia entry</a></li>
+      <li><a href="https://babelnet.org/synset?id=bn:02131405n&amp;lang=EN">BabelNet network</a>, ID: bn:02131405n</li>
+      <li><a href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/shapefiles/what-is-a-shapefile.htm">"What is a shapefile?"</a> from ESRI</li>
+      <li><a href="https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf">technical description</a> by ESRI</li>
+      <li><a href="https://www.wikidata.org/wiki/Q278934">Wikidata entry</a>, ID: Q278934</li>
+      <li><a href="https://www.iana.org/assignments/media-types/application/vnd.shp">IANA vnd.shp and others registration</a></li>
+    </ul>
+  </info>
+  <mimeType>x-gis/x-shapefile</mimeType>
+  <mimeType recommended="yes">application/vnd.shp</mimeType>
+  <fileExt>.shp</fileExt>
+  </format>
