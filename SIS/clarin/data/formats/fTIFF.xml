@@ -1,6 +1,6 @@
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTIFF" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>Tag Image File Format</title>
+    <title>Tagged Image File Format</title>
     <abbr>TIFF</abbr>
   </titleStmt>
   <keyword>image format</keyword>
@@ -18,5 +18,5 @@
   <mimeType>image/tiff</mimeType>
   <fileExt recommended="yes">.tiff</fileExt>
   <fileExt>.tif</fileExt>
-  <formatFamily>uncompressed</formatFamily>
+  <formatFamily>uncompressed</formatFamily>  <!--this is probably impractical -->
 </format>
