@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# A bash script to sort formats of multiple recommendation files. 
+# A bash script to sort formats of multiple recommendation files.
 #
-# For each file, the format names will be sorted by domain names 
-# alphabetically. Moreover, for each domain, the formats are then 
+# For each file, the format names will be sorted by domain names
+# alphabetically. Moreover, for each domain, the formats are then
 # sorted by their id alphabetically.
 #
-# The sorted recommendation files will be created in the given output 
+# The sorted recommendation files will be created in the given output
 # directory.
 #
 # Requirements
@@ -46,7 +46,7 @@ inputDir=$1
 saxonJar=$2
 outputDir=$3
 
-if [ -z $1 ]||[ -z $2 ]||[ -z $3 ;
+if [ -z $1 ]||[ -z $2 ]||[ -z $3 ] ;
 then
     printHelp
     exit
