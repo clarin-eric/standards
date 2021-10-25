@@ -79,7 +79,8 @@ return
                         
                         {vfm:print-multiple-values($format/titleStmt/versionNumber, $id, "Versions:")}
                         
-                        {vfm:print-multiple-values($format/mimeType, $id, "Media type(s):")}
+                        <div><span class="heading">Media type(s):</span></div>
+                        {vfm:print-bullets($format/mimeType, $id)}
                         {vfm:print-multiple-values($format/fileExt, $id, "File extension(s):")}
                         {vfm:print-multiple-values($format/formatFamily, $id, "Format family:")}
                         {vfm:print-multiple-values($format/schemaLoc, $id, "Schema location:", fn:true())}
@@ -102,9 +103,6 @@ return
                             <a style="font-size:22px" onclick="return false">{$format-abbr}</a>
                             {vsm:print-keyword-links($format)}
                         </div>
-                        
-                        
-                        
                         
                         {vsm:print-spec-relation($format,$id, fn:true())}
                         {vsm:print-graph($format)}

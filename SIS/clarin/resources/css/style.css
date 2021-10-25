@@ -299,3 +299,6 @@ th {
     transition-duration:10s;
 }
 
+.code{
+    font-family:courier, fixed, monospace;
+}
