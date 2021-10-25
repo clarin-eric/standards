@@ -1,14 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <result>
-    <header>
-        <filter>
-            <centre>CLARINO_Bergen</centre>
-        </filter>
-    </header>
-    <formats>
-        <format>
-            <name id="fTiger">Tiger XML</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-    </formats>
+   <header>
+      <filter>
+         <centre>CLARINO_Bergen</centre>
+      </filter>
+   </header>
+   <formats>
+      <format>
+         <name id="fTiger">Tiger XML</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+   </formats>
 </result>

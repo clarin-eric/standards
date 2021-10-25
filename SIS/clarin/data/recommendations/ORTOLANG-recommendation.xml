@@ -1,59 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <result>
-    <header>
-        <filter>
-            <centre>ORTOLANG</centre>
-        </filter>
-    </header>
-    <formats>
-        <format>
-            <name id="fCHAT">CHAT</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fFLAC">FLAC</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fPDF">PDF</name>
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fPDF">PDF</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fPDFA-2">PDF/A-2</name>
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fPDFA-2">PDF/A-2</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fPDFA-3">PDF/A-3</name>
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fPDFA-3">PDF/A-3</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fTextPlain">plainText</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fWave">Wave</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-    </formats>
+   <header>
+      <filter>
+         <centre>ORTOLANG</centre>
+      </filter>
+   </header>
+   <formats>
+      <format>
+         <name id="fCHAT">CHAT</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fFLAC">FLAC</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fWave">Wave</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPDF">PDF</name>
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fPDFA-2">PDF/A-2</name>
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fPDFA-3">PDF/A-3</name>
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fPDF">PDF</name>
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fPDFA-2">PDF/A-2</name>
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fPDFA-3">PDF/A-3</name>
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fTextPlain">plainText</name>
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+   </formats>
 </result>

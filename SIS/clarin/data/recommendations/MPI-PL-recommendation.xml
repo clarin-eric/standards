@@ -1,123 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <result>
-    <header>
-        <filter>
-            <centre>MPI-PL</centre>
-        </filter>
-    </header>
-    <formats>
-        <format>
-            <name id="fKML">KML</name>
-            <domain>Geodata</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fJPEG">JPEG</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fTIFF">TIFF</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fPNG">PNG</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fSVG">SVG</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fTBox">Toolbox Lexicon</name>
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fTBT">Toolbox Lexicon Text</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fODT">ODT</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fHTML">HTML</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fELAN">ELAN</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fPraat">Praat</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fCut">CHAT lexicon</name>
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fCHAT">CHAT</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fXSD">XSD</name>
-            <domain>Tool Support</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fMP4">MPEG 4 video</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fMPEG">MPEG 1 video</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fMPEG2">MPEG 2 video</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fPDF">PDF</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fTextPlain">plainText</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fWave">Wave</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-    </formats>
+   <header>
+      <filter>
+         <centre>MPI-PL</centre>
+      </filter>
+   </header>
+   <formats>
+      <format>
+         <name id="fCHAT">CHAT</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fMP4">MPEG 4 video</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fMPEG">MPEG 1 video</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fMPEG2">MPEG 2 video</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fWave">Wave</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fHTML">HTML</name>
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fXML">XML</name>
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fKML">KML</name>
+         <domain>Geodata</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fJPEG">JPEG</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPNG">PNG</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fSVG">SVG</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTIFF">TIFF</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fCut">CHAT lexicon</name>
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTBox">Toolbox Lexicon</name>
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTBT">Toolbox Lexicon Text</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fXML">XML</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fELAN">ELAN</name>
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fODT">ODT</name>
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPDF">PDF</name>
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPraat">Praat</name>
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTextPlain">plainText</name>
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fXSD">XSD</name>
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
+   </formats>
 </result>
