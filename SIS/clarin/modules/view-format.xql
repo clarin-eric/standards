@@ -15,6 +15,13 @@ declare function vfm:get-format($id as xs:string) {
     format:get-format($id)
 };
 
+declare function vfm:print-bullets($list,$id){
+    let $items := for $item in $list 
+    return <li>{$item}</li>
+    
+    return <ul>{$items}</ul>
+};
+
 declare function vfm:print-multiple-values($list, $id, $label) {
     vfm:print-multiple-values($list, $id, $label, fn:false())
 };

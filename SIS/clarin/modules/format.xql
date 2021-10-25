@@ -27,6 +27,7 @@ declare function fm:list-formats() {
     let $file-ext := $format/fileExt/text()
     let $link := app:link(concat("views/view-format.xq?id=", $format-id))
         order by fn:lower-case($format-abbr)
+    let $mime-types := fm:print-multiple-values($format/mimeType, "MIME types:")    
     return
         <div>
             <li>
@@ -44,8 +45,7 @@ declare function fm:list-formats() {
                     id="hint-{$format-id}">Format ID copied</span>
                 {
                     if ($format-name != 'Other' and ($mime-type or $file-ext)) then
-                        <p>{fm:print-multiple-values($format/mimeType, "MIME types:")}
-                            <br/>
+                        <p>{if ($mime-types) then ($mime-types,<br/>) else ()}
                             {fm:print-multiple-values($format/fileExt, "File extensions:")}</p>
                     else
                         ()
