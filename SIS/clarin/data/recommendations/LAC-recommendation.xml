@@ -1,24 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <result>
-    <header>
-        <filter>
-            <centre>LAC</centre>
-        </filter>
-    </header>
-    <formats>
-        <format>
-            <name id="fPDFA">PDF/A</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fTextPlain">plainText</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fWave">Wave</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-    </formats>
+   <header>
+      <filter>
+         <centre>LAC</centre>
+      </filter>
+   </header>
+   <formats>
+      <format>
+         <name id="fWave">Wave</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPDFA">PDF/A</name>
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fTextPlain">plainText</name>
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+   </formats>
 </result>

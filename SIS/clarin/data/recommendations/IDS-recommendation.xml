@@ -1,258 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <result>
-    <header>
-        <filter>
-            <centre>IDS</centre>
-        </filter>
-    </header>
-    <formats>
-        <format>
-            <name id="fAIFF">AIFF</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-       <!--   <format>
-            <name id="fXML">XML</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>-->
-        <format>
-            <name id="fTEI">TEI</name>
-            <domain>Metadata</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fTEI">TEI</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-            <comment>with ODD or other schema</comment>
-        </format>
-        <format>
-            <name id="fELAN">ELAN EAF</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fPraat">Praat</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        
-        <format>
-            <name id="fTEISpoken">TEISpoken</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fEXB">EXMARaLDA Basic Transcription</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fEXS">EXMARaLDA Segmented Transcription</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>        
-        <format>
-            <name id="fTRS">Transcriber</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fFLN">FOLKER</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fAnvil">Anvil</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fDTABf">TEI DTABf</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fI5">TEI I5</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fPAULA">PAULA</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fPAULA">GrAF</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fMP4">MPEG-4, Advanced Video Coding (Part 10) (H.264)</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>25 fps, 1980×1080, constant bit rate </comment>
-        </format>
-        <format>
-            <name id="fMP4">MPEG 4 video</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fMPEG">MPEG 1 video</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fMPEG2">MPEG 2 video</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fM2J">Motion JPEG 2000</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fHDF5">HDF5</name>
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-
-        <format>
-            <name id="fALTO">ALTO</name>
-            <domain>Text Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fCHAT">CHAT</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format>
-            <name id="fCHAT-XML">CHAT-XML</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format>
-            <name id="fFLAC">FLAC</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fMP3">MP3</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>deprecated</level>
-            <comment>lossy formats should be avoided if possible</comment>
-        </format>
-        <format>
-            <name id="fPDFA">PDF/A</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fPDFA">PDF/A</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fTextPlain">plainText</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fTextPlain">plainText</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>without markup</comment>
-        </format>
-        <format>
-            <name id="fHTML">HTML</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>without js etc.</comment>
-        </format>
-        <format>
-            <name id="fTextPlain">plainText</name>
-            <domain>Text Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format>
-            <name id="fTextPlain">plainText</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format>
-            <name id="fF4">F4</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format>
-            <name id="fDOCX">DOCX</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format>
-            <name id="fTransana">Transana</name>
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format>
-            <name id="fWave">Wave</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>PCM-WAV, 48 kHz, 16 bit</comment>
-        </format>
-        <format>
-            <name id="fWave">Wave</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>PCM-WAV with non-recommended parameters (not 48 kHz, 16 bit)</comment>
-        </format>
-        <format>
-            <name id="fCMDI">CMDI</name>
-            <domain>Metadata</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fComa">EXMARaLDA Coma</name>
-            <domain>Metadata</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fDGD-XML">DGD XML metadata</name>
-            <domain>Metadata</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Metadata</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fCSV">CSV</name>
-            <domain>Metadata</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fCSV">XLSX</name>
-            <domain>Metadata</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fDOCX">DOCX</name>
-            <domain>Metadata</domain>
-            <level>deprecated</level>
-        </format>
-        <format>
-            <name id="fDCXML">Dublin Core XML Metadata</name>
-            <domain>Metadata</domain>
-            <level>recommended</level>
-        </format>
-    </formats>
+   <header>
+      <filter>
+         <centre>IDS</centre>
+      </filter>
+   </header>
+   <formats>
+      <format>
+         <name id="fAnvil">Anvil</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fCHAT">CHAT</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format>
+         <name id="fCHAT-XML">CHAT-XML</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format>
+         <name id="fDOCX">DOCX</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format>
+         <name id="fELAN">ELAN EAF</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fEXB">EXMARaLDA Basic Transcription</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fEXS">EXMARaLDA Segmented Transcription</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fF4">F4</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format>
+         <name id="fFLN">FOLKER</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPraat">Praat</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fTEISpoken">TEISpoken</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTextPlain">plainText</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format>
+         <name id="fTransana">Transana</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format>
+         <name id="fTRS">Transcriber</name>
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fAIFF">AIFF</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fFLAC">FLAC</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fM2J">Motion JPEG 2000</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fMP3">MP3</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>deprecated</level>
+         <comment>lossy formats should be avoided if possible</comment>
+      </format>
+      <format>
+         <name id="fMP4">MPEG-4, Advanced Video Coding (Part 10) (H.264)</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>25 fps, 1980×1080, constant bit rate </comment>
+      </format>
+      <format>
+         <name id="fMP4">MPEG 4 video</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fMPEG">MPEG 1 video</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fMPEG2">MPEG 2 video</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fWave">Wave</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>PCM-WAV, 48 kHz, 16 bit</comment>
+      </format>
+      <format>
+         <name id="fWave">Wave</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>PCM-WAV with non-recommended parameters (not 48 kHz, 16 bit)</comment>
+      </format>
+      <format>
+         <name id="fPDFA">PDF/A</name>
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTextPlain">plainText</name>
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPDFA">PDF/A</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fHDF5">HDF5</name>
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fCMDI">CMDI</name>
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fComa">EXMARaLDA Coma</name>
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fCSV">CSV</name>
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fCSV">XLSX</name>
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fDCXML">Dublin Core XML Metadata</name>
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fDGD-XML">DGD XML metadata</name>
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fDOCX">DOCX</name>
+         <domain>Metadata</domain>
+         <level>deprecated</level>
+      </format>
+      <format>
+         <name id="fTEI">TEI</name>
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fXML">XML</name>
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fALTO">ALTO</name>
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fDTABf">TEI DTABf</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fI5">TEI I5</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPAULA">PAULA</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPAULA">GrAF</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTEI">TEI</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>with ODD or other schema</comment>
+      </format>
+      <format>
+         <name id="fTextPlain">plainText</name>
+         <domain>Text Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format>
+         <name id="fHTML">HTML</name>
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>without js etc.</comment>
+      </format>
+      <format>
+         <name id="fTextPlain">plainText</name>
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>without markup</comment>
+      </format>
+   </formats>
 </result>

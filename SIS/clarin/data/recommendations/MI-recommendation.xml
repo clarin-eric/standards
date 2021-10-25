@@ -1,259 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <result>
-    <header>
-        <filter>
-            <centre>MI</centre>
-        </filter>
-    </header>
-    <formats>
-        <format>
-            <name id="fWFObj">WaveFront Object</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fX3D">X3D</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fBWF">BWF</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fDXF.R12">AutoCAD DXF-R12</name>
-            <domain>Geodata</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fCSV">CSV</name>
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fSIARD">SIARD</name>
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fSQL">SQL</name>
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fSQLite">SQLite</name>
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fGML">GML</name>
-            <domain>Geodata</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fMIF">MIF/MID</name>
-            <domain>Geodata</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="GTIF">GeoTIFF</name>
-            <domain>Geodata</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fASC">ASCII GRID</name>
-            <domain>Geodata</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fJPEG">JPEG</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fTIFF">TIFF</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fPNG">PNG</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fJP2">JPEG 2000</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fSVG">SVG</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fRDFXML">RDF/XML</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fJSONLD">JSON-LD</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fNTriples">NTriples</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fTurtle">Turtle</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fTrig">Trig</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fCSV">CSV</name>
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fODS">ODS</name>
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fSPS">Data and Setup</name>
-            <domain>Statistical Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fDDI">DDI</name>
-            <domain>Statistical Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fSTATA">STATA</name>
-            <domain>Statistical Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fSPSSPOR">SPSS Portable</name>
-            <domain>Statistical Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fSPSSSAS">SPSS Transport</name>
-            <domain>Statistical Data</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fXML">XML</name>
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fHTML">HTML</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fCSS">CSS</name>
-            <domain>Tool Support</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fXSLT">XSLT</name>
-            <domain>Tool Support</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fJS">Javascript</name>
-            <domain>Tool Support</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fECMA">ECMAScript</name>
-            <domain>Tool Support</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fTextPlain">plainText</name>
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fTextPlain">plainText</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        
-        <format>
-            <name id="fMP4">MPEG 4 video</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fMPEG2">MPEG 2 video</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fMOV">QuickTime</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fAVI">AVI</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        
-        <format>
-            <name id="fFLAC">FLAC</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fPDF">PDF</name>
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fPDF">PDF</name>
-            <domain>Other</domain>
-            <level>acceptable</level>
-        </format>
-        <format>
-            <name id="fPDFA">PDF/A</name>
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fPDFA">PDF/A</name>
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format>
-            <name id="fWave">Wave</name>
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-    </formats>
+   <header>
+      <filter>
+         <centre>MI</centre>
+      </filter>
+   </header>
+   <formats>
+      <format>
+         <name id="fAVI">AVI</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fBWF">BWF</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fFLAC">FLAC</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fMOV">QuickTime</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fMP4">MPEG 4 video</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fMPEG2">MPEG 2 video</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fWave">Wave</name>
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fHTML">HTML</name>
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTextPlain">plainText</name>
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fXML">XML</name>
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fASC">ASCII GRID</name>
+         <domain>Geodata</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fDXF.R12">AutoCAD DXF-R12</name>
+         <domain>Geodata</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fGML">GML</name>
+         <domain>Geodata</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fMIF">MIF/MID</name>
+         <domain>Geodata</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="GTIF">GeoTIFF</name>
+         <domain>Geodata</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fJP2">JPEG 2000</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fJPEG">JPEG</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPDFA">PDF/A</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPNG">PNG</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fSVG">SVG</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTIFF">TIFF</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fWFObj">WaveFront Object</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fX3D">X3D</name>
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fCSV">CSV</name>
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fCSV">CSV</name>
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fODS">ODS</name>
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fSIARD">SIARD</name>
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fSQL">SQL</name>
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fSQLite">SQLite</name>
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPDF">PDF</name>
+         <domain>Other</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fDDI">DDI</name>
+         <domain>Statistical Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fSPS">Data and Setup</name>
+         <domain>Statistical Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fSPSSPOR">SPSS Portable</name>
+         <domain>Statistical Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fSPSSSAS">SPSS Transport</name>
+         <domain>Statistical Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fSTATA">STATA</name>
+         <domain>Statistical Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fJSONLD">JSON-LD</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fNTriples">NTriples</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fRDFXML">RDF/XML</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTrig">Trig</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTurtle">Turtle</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fXML">XML</name>
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fPDF">PDF</name>
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fPDFA">PDF/A</name>
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fTextPlain">plainText</name>
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format>
+         <name id="fCSS">CSS</name>
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fECMA">ECMAScript</name>
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fJS">Javascript</name>
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
+      <format>
+         <name id="fXSLT">XSLT</name>
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
+   </formats>
 </result>

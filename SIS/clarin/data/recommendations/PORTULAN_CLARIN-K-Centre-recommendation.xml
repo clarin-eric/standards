@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <result>
-    <header>
-        <filter>
-            <centre>PORTULAN_CLARIN-K-Centre</centre>
-        </filter>
-    </header>
-    <formats/>
+   <header>
+      <filter>
+         <centre>PORTULAN_CLARIN-K-Centre</centre>
+      </filter>
+   </header>
+   <formats/>
 </result>
