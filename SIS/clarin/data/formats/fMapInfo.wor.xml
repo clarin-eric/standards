@@ -1,7 +1,7 @@
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMapInfo.mif" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMapInfo.wor" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>MapInfo interchange format</title>
-    <abbr>MapInfo.mif</abbr>
+    <title>MapInfo workspace file</title>
+    <abbr>MapInfo.wor</abbr>
   </titleStmt>
   <keyword>GIS</keyword>
   <keyword>MapInfo</keyword>
