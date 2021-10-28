@@ -162,19 +162,24 @@
          <level>recommended</level>
       </format>
       <format>
-         <name id="fSPS">Data and Setup</name>
+         <name id="fSPSS.data-and-setup">Data and Setup</name>
          <domain>Statistical Data</domain>
          <level>recommended</level>
       </format>
       <format>
-         <name id="fSPSSPOR">SPSS Portable</name>
+         <name id="fSPSS.por">SPSS Portable</name>
          <domain>Statistical Data</domain>
          <level>recommended</level>
       </format>
       <format>
-         <name id="fSPSSSAS">SPSS Transport</name>
+         <name id="fSAS.sas">SAS Transport</name>
          <domain>Statistical Data</domain>
          <level>recommended</level>
+      </format>
+      <format>
+         <name id="fSAS.7bdat">SAS Transport</name>
+         <domain>Statistical Data</domain>
+         <level>acceptable</level>
       </format>
       <format>
          <name id="fSTATA">STATA</name>

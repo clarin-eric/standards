@@ -62,7 +62,7 @@
          <level>recommended</level>
       </format>
       <format>
-         <name id="fMPEG">MPEG 1 video</name>
+         <name id="fMPEG1">MPEG 1 video</name>
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
       </format>
@@ -237,7 +237,7 @@
          <level>recommended</level>
       </format>
       <format>
-         <name id="Partitur">Partitur</name>
+         <name id="fPartitur">Partitur</name>
          <domain>Textual Source Language Data</domain>
          <level>recommended</level>
       </format>

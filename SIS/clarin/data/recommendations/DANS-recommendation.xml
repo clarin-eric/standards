@@ -137,7 +137,7 @@
             </comment>
         </format>
         <format>
-            <name id="fWAVE">WAVE</name>
+            <name id="fWave">WAVE</name>
             <domain>Audiovisual Source Language Data</domain>
             <level>acceptable</level>
             <comment>See <a
@@ -836,7 +836,7 @@
             </comment>
         </format>
         <format>
-            <name id="fSAS">SAS</name>
+            <name id="fSAS.7bdat">SAS</name>
             <domain>Statistical Data</domain>
             <level>acceptable</level>
             <comment>See <a

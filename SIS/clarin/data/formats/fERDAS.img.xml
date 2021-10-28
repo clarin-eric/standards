@@ -1,4 +1,4 @@
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fErdas.img" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fERDAS.img" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
     <title>ERDAS IMAGINE File Format</title>
     <abbr>Erdas.img</abbr>

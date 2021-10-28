@@ -112,12 +112,12 @@
          <level>recommended</level>
       </format>
       <format>
-         <name id="fSPSSSAV">SPSS-SAV</name>
+         <name id="fSPSS.sav">SPSS-SAV</name>
          <domain>Statistical Data</domain>
          <level>recommended</level>
       </format>
       <format>
-         <name id="fSPSSSPV">SPSS-SPV</name>
+         <name id="fSPSS.spv">SPSS-SPV</name>
          <domain>Statistical Data</domain>
          <level>recommended</level>
       </format>
