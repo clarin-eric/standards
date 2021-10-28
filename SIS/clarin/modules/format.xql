@@ -5,6 +5,9 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 
 import module namespace spec = "http://clarin.ids-mannheim.de/standards/specification" at "../model/spec.xqm";
 import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
+import module namespace recommendation = "http://clarin.ids-mannheim.de/standards/recommendation-model"
+at "../model/recommendation-by-centre.xqm";
+
 
 (:  Define format-related functions
     @author margaretha
@@ -54,6 +57,24 @@ declare function fm:list-formats() {
         </div>
 };
 
+declare function fm:list-missing-format-ids(){
+    let $format-ids := fn:distinct-values($recommendation:centres/formats/format/name/@id)
+    for $id in $format-ids
+    order by lower-case($id)
+    return
+        if (format:get-format($id)) then ()
+            else <li>{$id}</li> 
+};
+
+declare function fm:list-missing-format-abbrs(){
+    let $format-abbrs := fn:distinct-values($recommendation:centres/formats/format/name)
+    for $abbr in $format-abbrs
+    order by lower-case($abbr)
+    return
+        if (format:get-format-by-abbr($abbr)) then ()
+            else <li>{$abbr}</li> 
+};
+
 declare function fm:print-multiple-values($list, $label) {
     let $numOfItems := count($list)
     let $max := fn:max(($numOfItems, 1))
@@ -95,7 +116,6 @@ declare function fm:print-multiple-values($list, $label) {
         else
             ()
 };
-
 
 declare function fm:list-mime-types() {
     let $mime-types := fn:distinct-values($format:formats/mimeType/text())

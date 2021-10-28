@@ -13,7 +13,7 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
 
 <html>
     <head>
-        <title>Data Deposition Formats</title>
+        <title>Missing Format Descriptions</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
@@ -25,23 +25,23 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
             <div class="content">
                 <div class="navigation">
                     &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
+                    &gt; <a href="{app:link("views/list-missing-formats.xq")}">Missing Format Descriptions</a>
                 </div>
-                <div class="title">Data Deposition Formats</div>
+                <div class="title">Missing Format Descriptions</div>
                   <div>
-                    <p>This page lists formats used in the recommendations for data deposition formats. The list is still incomplete.</p>
-                    <p>The name of the format links to its description, sometimes rather stubby (you are welcome to help us extend the list 
-                    and/or the descriptions, either by submitting an issue at GitHub containing suggested text or corrections, or by editing 
-                    or adding the relevant format file and submitting a pull request).</p>
-                    
-                    <p>Formats mentioned in the recommendation table but have not got any description yet, are listed 
-                    <a href="{app:link("views/list-missing-formats.xq")}">here</a>.</p>
-                    
-                    <p>By clicking on the icon next to the format name, it is possible to copy the format ID, 
-                    useful for editing or adding centre recommendations.</p>
+                    <p>This page lists formats that have not got any description yet.</p>
                   </div>
-                <ul style="padding:0px; margin-left:15px;">
-                    {fm:list-formats()}
+                <div>
+               <p class="heading">List of missing formats by id: </p>
+                <ul class="column" style="padding:0px; margin-left:15px;">
+                    {fm:list-missing-format-ids()}
                 </ul>
+
+                <p class="heading">List of missing formats by abbreviations: </p>
+                <ul class="column" style="padding:0px; margin-left:15px;">
+                    {fm:list-missing-format-abbrs()}
+                </ul>
+                </div>
             </div>
             <div class="footer">{app:footer()}</div>
         </div>
