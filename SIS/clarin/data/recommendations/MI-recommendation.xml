@@ -57,7 +57,7 @@
          <level>recommended</level>
       </format>
       <format>
-         <name id="fASC">ASCII GRID</name>
+         <name id="fArcGIS.asc">ASCII GRID</name>
          <domain>Geodata</domain>
          <level>recommended</level>
       </format>
@@ -119,11 +119,6 @@
       <format>
          <name id="fX3D">X3D</name>
          <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fCSV">CSV</name>
-         <domain>Lexical Resource</domain>
          <level>recommended</level>
       </format>
       <format>
