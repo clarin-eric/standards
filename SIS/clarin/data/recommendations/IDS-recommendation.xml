@@ -161,11 +161,6 @@
          <level>recommended</level>
       </format>
       <format>
-         <name id="fCSV">CSV</name>
-         <domain>Metadata</domain>
-         <level>acceptable</level>
-      </format>
-      <format>
          <name id="fCSV">XLSX</name>
          <domain>Metadata</domain>
          <level>acceptable</level>
@@ -216,7 +211,7 @@
          <level>recommended</level>
       </format>
       <format>
-         <name id="fPAULA">GrAF</name>
+         <name id="fGrAF">GrAF</name>
          <domain>Text Annotation</domain>
          <level>recommended</level>
       </format>
