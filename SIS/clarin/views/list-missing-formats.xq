@@ -29,7 +29,7 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                 </div>
                 <div class="title">Missing Format Descriptions</div>
                   <div>
-                    <p>This page lists formats that have not got any description yet.</p>
+                    <p>This page lists formats that have not got any description yet, as well as formats where the name used in recommendations does not match the format description (or the format description is not present).</p>
                   </div>
                 <div>
                <p class="heading">List of missing formats by id: </p>
@@ -37,7 +37,7 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                     {fm:list-missing-format-ids()}
                 </ul>
 
-                <p class="heading">List of missing formats by abbreviations: </p>
+                <p class="heading">List of format names used in recommendations that are not present in format descriptions: </p>
                 <ul class="column" style="padding:0px; margin-left:15px;">
                     {fm:list-missing-format-abbrs()}
                 </ul>

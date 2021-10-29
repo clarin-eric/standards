@@ -1,0 +1,19 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSAS.sas" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Statistical Analysis System (SAS) standard save file</title>
+    <abbr>SAS.sas</abbr>
+  </titleStmt>  
+  <keyword>statistical data</keyword>
+  <keyword>SAS</keyword>
+  <keyword>proprietary format</keyword>
+  <keyword>binary format</keyword>
+  <info type="description">
+    <p>The .sas extension appears to signal versions 9.x of the SAS software. See <a
+        href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/hostunx/p10cebw3m3saimn1mxwhjt1q8um5.htm"
+        >SAS 9.4 list of file formats</a>. No comprehensive description of this format has been found
+      as of mid-2021. Please feel welcome to amend this information.</p>
+    <p>See <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000464.shtml">LoC description of an earlier SAS save format</a>, .xpt</p>
+  </info>
+  <mimeType>application/x-sas</mimeType>
+  <fileExt>.sas</fileExt>
+</format>

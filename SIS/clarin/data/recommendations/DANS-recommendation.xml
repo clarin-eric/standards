@@ -836,7 +836,7 @@
             </comment>
         </format>
         <format>
-            <name id="fSAS.7bdat">SAS</name>
+            <name id="fSAS.sd2">SAS Dataset</name>
             <domain>Statistical Data</domain>
             <level>acceptable</level>
             <comment>See <a
