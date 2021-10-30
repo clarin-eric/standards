@@ -57,6 +57,11 @@ declare function fm:list-formats() {
         </div>
 };
 
+declare function fm:count-missing-format-ids(){
+    let $format-ids := fn:distinct-values($recommendation:centres/formats/format/name/@id)
+    return count($format-ids)
+};
+
 declare function fm:list-missing-format-ids(){
     let $format-ids := fn:distinct-values($recommendation:centres/formats/format/name/@id)
     for $id in $format-ids
