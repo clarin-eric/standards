@@ -28,13 +28,13 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                 </div>
                 <div class="title">Data Deposition Formats</div>
                   <div>
-                    <p>This page lists formats used in the recommendations for data deposition formats. The list is still incomplete.</p>
+                    <p>This page lists formats used in the recommendations for data deposition formats. The list is still incomplete -- check the 
+                    <a href="{app:link("views/list-missing-formats.xq")}">list of missing formats</a>.</p>
                     <p>The name of the format links to its description, sometimes rather stubby (you are welcome to help us extend the list 
-                    and/or the descriptions, either by submitting an issue at GitHub containing suggested text or corrections, or by editing 
-                    or adding the relevant format file and submitting a pull request).</p>
-                    
-                    <p>Formats mentioned in the recommendation table but have not got any description yet, are listed 
-                    <a href="{app:link("views/list-missing-formats.xq")}">here</a>.</p>
+                    and/or the descriptions, either by 
+                    <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=">submitting an issue at GitHub</a> 
+                    containing suggested text or corrections, or by editing or adding the relevant 
+                    <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">format file</a> and submitting a pull request).</p>
                     
                     <p>By clicking on the icon next to the format name, it is possible to copy the format ID, 
                     useful for editing or adding centre recommendations.</p>
