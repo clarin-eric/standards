@@ -53,7 +53,7 @@
          <comment>bit rate up to 5000Kbps, scan type progressive, audio AAC, 48 kHz, 384Kbps, stereo</comment>
       </format>
       <format>
-         <name id="fWave">Wave</name>
+         <name id="fWave">WAVE</name>
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
          <comment>(L)PCM-WAV, 48kHz, 16bit</comment>
