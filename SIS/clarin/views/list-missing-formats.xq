@@ -39,12 +39,27 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                     and submitting a pull request)</p>
                   </div>
                 <div>
-               <p class="heading">List of missing formats by id ({fm:count-missing-format-ids()}): </p>
+               <p class="heading">List of missing formats by ID ({fm:count-missing-format-ids()}): </p>
                 <ul class="column" style="padding:0px; margin-left:15px;">
                     {fm:list-missing-format-ids()}
                 </ul>
 
-                <p class="heading">List of format names used in recommendations that are not present in format descriptions: </p>
+               <p class="heading">Existing format descriptions not referenced by any recommendation ({fm:count-orphan-format-ids()}): </p>
+                <ul class="column" style="padding:0px; margin-left:15px;">
+                    {fm:list-orphan-format-ids()}
+                </ul>
+                <div>
+                <p>Note that membership in this list does not automatically indicate an error. Recommendations may change, and 
+                we may sometimes want to describe "unspecified" versions of formats, while their particular variants are 
+                used in recommendations (because finer granularity is usually better).</p>
+                </div>
+              
+
+                   <p class="heading">List of format names used in recommendations that are not present in format descriptions: </p>
+                <div>
+                <p>This list is of very limited value and will disappear once we switch to only using format IDs in recommendations.</p>
+                </div>
+
                 <ul class="column" style="padding:0px; margin-left:15px;">
                     {fm:list-missing-format-abbrs()}
                 </ul>

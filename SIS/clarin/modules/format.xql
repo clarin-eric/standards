@@ -57,6 +57,21 @@ declare function fm:list-formats() {
         </div>
 };
 
+
+declare function fm:count-orphan-format-ids(){
+    let $orphan-ids := fm:list-orphan-format-ids()
+return count($orphan-ids) 
+};
+
+declare function fm:list-orphan-format-ids(){
+    let $recommended-ids := $recommendation:centres/formats/format/descendant-or-self::node()/@id
+    let $orphan-ids := $format:formats/descendant-or-self::node()/@id[not (. = $recommended-ids )]
+        for $id in $orphan-ids
+    order by lower-case($id)
+    return
+        <li><a href="{app:link(concat("views/view-format.xq?id=",$id))}">{data($id)}</a></li> 
+};
+
 declare function fm:count-missing-format-ids(){
     let $format-ids := fn:distinct-values($recommendation:centres/formats/format/name/@id)
     return count($format-ids)
