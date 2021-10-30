@@ -77,7 +77,7 @@
          <level>recommended</level>
       </format>
       <format>
-         <name id="GTIF">GeoTIFF</name>
+         <name id="fGeoTIFF">GeoTIFF</name>
          <domain>Geodata</domain>
          <level>recommended</level>
       </format>
