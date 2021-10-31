@@ -7,7 +7,7 @@
    </header>
    <formats>
       <format>
-         <name id="fMP4">MPEG 4 video</name>
+         <name id="fMP4">MPEG-4 video</name>
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
       </format>
