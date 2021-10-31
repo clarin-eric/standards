@@ -263,7 +263,7 @@
             </comment>
         </format>
         <format>
-            <name id="fArcGIS.asc">ArcGIS.asc</name>
+            <name id="fArcGIS.asc">ASCII grid</name>
             <domain>Geodata</domain>
             <level>recommended</level>
             <comment>See <a

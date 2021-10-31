@@ -57,7 +57,7 @@
          <level>recommended</level>
       </format>
       <format>
-         <name id="fArcGIS.asc">ASCII GRID</name>
+         <name id="fArcGIS.asc">ASCII grid</name>
          <domain>Geodata</domain>
          <level>recommended</level>
       </format>
