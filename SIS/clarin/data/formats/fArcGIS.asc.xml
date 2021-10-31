@@ -1,0 +1,29 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fArcGIS.asc" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>ArcGIS ASCII grid format</title>
+    <abbr>ASCII Grid</abbr>
+  </titleStmt>
+  <keyword>GIS</keyword>
+  <keyword>ArcGIS</keyword>
+  <keyword>raster format</keyword>
+  <keyword>exchange format</keyword>
+  <info type="description">
+    <p>Not to be confused with the 
+      <a href="https://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&amp;id=309">binary grid format by Esri</a>, 
+      this one is a non-proprietary
+      ASCII-based exchange format for raster images. "The file contents represents a single measure
+      for each cell in a rectangular grid. Any coordinate system can be used to define the grid,
+      including the widely used angular measurements with arc-seconds as units. Cells must be
+      "square" in the chosen unit since cell size is defined by a single parameter." (LoC)</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://dans.knaw.nl/en/file-formats/raster-gis/ascii-grid/">DANS info</a></li>
+      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000421.shtml">LoC entry</a>, ID: fdd000421</li>
+      <li><a href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/esri-ascii-raster-format.htm">ESRI documentation for ArcMap 10.8</a></li>
+      <li><a href="https://www.wikidata.org/wiki/Q27349828">Wikidata entry</a>, ID: Q27349828</li>
+    </ul>
+  </info>
+  <mimeType>text/plain</mimeType>
+  <fileExt recommended="yes">.asc</fileExt>
+  <fileExt>.txt</fileExt>
+</format>

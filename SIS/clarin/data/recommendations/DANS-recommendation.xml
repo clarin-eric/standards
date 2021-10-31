@@ -263,6 +263,15 @@
             </comment>
         </format>
         <format>
+            <name id="fArcGIS.asc">ArcGIS.asc</name>
+            <domain>Geodata</domain>
+            <level>recommended</level>
+            <comment>See <a
+                href="https://dans.knaw.nl/en/file-formats/raster-gis/ascii-grid/"
+                >more info from DANS</a>
+            </comment>
+        </format>
+        <format>
             <name id="fArcGIS.gdb">ArcGIS.gdb</name>
             <domain>Geodata</domain>
             <level>acceptable</level>
