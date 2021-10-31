@@ -98,7 +98,7 @@
          <comment>lossy formats should be avoided if possible</comment>
       </format>
       <format>
-         <name id="fMPEG-4-AVC">MPEG-4, Advanced Video Coding (Part 10) (H.264)</name>
+         <name id="fMPEG-4-AVC">MPEG-4-AVC</name>
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
          <comment>25 fps, 1980×1080, constant bit rate </comment>
