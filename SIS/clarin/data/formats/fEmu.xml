@@ -5,8 +5,9 @@
   </titleStmt>  
   <keyword>annotation format</keyword>
   <keyword>transcription of spoken language</keyword>
+  <keyword>directory-based format</keyword>
   <info type="description">
-    <p>The <a href="https://github.com/IPS-LMU/emuR">Emu Speech Datanbase</a>.</p>
+    <p>The <a href="https://github.com/IPS-LMU/emuR">Emu Speech Database</a>. See also <a href="https://ips-lmu.github.io/The-EMU-SDMS-Manual/index.html">the manual</a>.</p>
   </info>
 <!--  <mimeType>tbc/tbc</mimeType>
   <fileExt>tbc</fileExt>-->
