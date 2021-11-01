@@ -40,6 +40,7 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                   </div>
                 <div>
                <p class="heading">List of missing formats by ID ({fm:count-missing-format-ids()}): </p>
+               <div><p>Clicking on an ID below will open a pre-configured GitHub issue where you can suggest the content of the format description.</p></div>
                 <ul class="column" style="padding:0px; margin-left:15px;">
                     {fm:list-missing-format-ids()}
                 </ul>

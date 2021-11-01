@@ -83,7 +83,7 @@ declare function fm:list-missing-format-ids(){
     order by lower-case($id)
     return
         if (format:get-format($id)) then ()
-            else <li>{$id}</li> 
+            else <li><a href="{concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=','Suggestion of a format description for ID="',$id,'"')}">{$id}</a></li> 
 };
 
 declare function fm:list-missing-format-abbrs(){
