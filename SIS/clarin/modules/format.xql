@@ -18,6 +18,11 @@ declare function fm:get-format($id as xs:string) {
     format:get-format($id)
 };
 
+(: Provide the number of formats defined in the SIS :)
+declare function fm:count-defined-formats() {
+    let $formats := format:get-all-ids()
+    return count($formats)
+};
 
 (: Generate the list of formats :)
 declare function fm:list-formats() {
