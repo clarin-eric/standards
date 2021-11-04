@@ -56,7 +56,6 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                     <div id="defined">
                     <p class="heading">Formats described in the SIS ({fm:count-defined-formats()}): </p>
                     <p>The name of the format links to its description, sometimes rather stubby (you are welcome to help us extend the list 
-<<<<<<< HEAD
                     and/or the descriptions, either by 
                     <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=">submitting an issue at GitHub</a> 
                     containing suggested text or corrections, or by editing or adding the relevant 
@@ -64,17 +63,6 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                     
                     <p>By clicking on the icon next to the format name, you can copy the format ID, useful for editing or adding centre recommendations.</p>
 
-=======
-                    and/or the descriptions, either by submitting an issue at GitHub containing suggested text or corrections, or by editing 
-                    or adding the relevant format file and submitting a pull request).</p>
-                    
-                    <p>Formats mentioned in the recommendation table but have not got any description yet, are listed 
-                    <a href="{app:link("views/list-missing-formats.xq")}">here</a>.</p>
-                    
-                    <p>By clicking on the icon next to the format name, it is possible to copy the format ID, 
-                    useful for editing or adding centre recommendations.</p>
-                  </div>
->>>>>>> branch 'dev' of git@github.com:clarin-eric/standards.git
                 <ul style="padding:0px; margin-left:15px;">
                     {fm:list-formats()}
                 </ul>

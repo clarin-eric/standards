@@ -29,7 +29,6 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                 </div>
                 <div class="title">Missing Format Descriptions</div>
                   <div>
-<<<<<<< HEAD
                     <p>This page lists formats that have not got any description yet, as well as formats where 
                        the name used in recommendations does not match the format description (or the format 
                        description is not present). Do feel welcome to help us extend the list and/or the descriptions, 
@@ -62,17 +61,6 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                 <p>This list is of very limited value and will disappear once we switch to only using format IDs in recommendations.</p>
                 </div>
 
-=======
-                    <p>This page lists formats that have not got any description yet.</p>
-                  </div>
-                <div>
-               <p class="heading">List of missing formats by id: </p>
-                <ul class="column" style="padding:0px; margin-left:15px;">
-                    {fm:list-missing-format-ids()}
-                </ul>
-
-                <p class="heading">List of missing formats by abbreviations: </p>
->>>>>>> branch 'dev' of git@github.com:clarin-eric/standards.git
                 <ul class="column" style="padding:0px; margin-left:15px;">
                     {fm:list-missing-format-abbrs()}
                 </ul>
