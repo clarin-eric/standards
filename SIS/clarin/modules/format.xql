@@ -62,6 +62,7 @@ declare function fm:list-formats() {
         </div>
 };
 
+<<<<<<< HEAD
 
 declare function fm:count-orphan-format-ids(){
     let $orphan-ids := fm:list-orphan-format-ids()
@@ -89,6 +90,15 @@ declare function fm:list-missing-format-ids(){
     return
         if (format:get-format($id)) then ()
             else <li><a href="{concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=','Suggestion of a format description for ID="',$id,'"')}">{$id}</a></li> 
+=======
+declare function fm:list-missing-format-ids(){
+    let $format-ids := fn:distinct-values($recommendation:centres/formats/format/name/@id)
+    for $id in $format-ids
+    order by lower-case($id)
+    return
+        if (format:get-format($id)) then ()
+            else <li>{$id}</li> 
+>>>>>>> branch 'dev' of git@github.com:clarin-eric/standards.git
 };
 
 declare function fm:list-missing-format-abbrs(){
