@@ -78,7 +78,7 @@ ul.column {
 }
 
 .navigation{
-    font-size:11.5px;
+    font-size:11px;
     margin-bottom:25px;
 }
 
@@ -109,7 +109,7 @@ ul.column {
 }
 
 .list-text{
-    font-size:larger;
+    font-size:14px;
     font-weight:bold;
     background-color:white; 
     border:0px; 
@@ -177,7 +177,14 @@ ul.column {
 }
 
 h2{
-    font-size:100%;
+    font-size:16px;
+    font-weight:bold;
+    margin-top:25px;
+}
+
+h3{
+    font-size:14px;
+    font-weight:bold;
 }
 
 div,table {
