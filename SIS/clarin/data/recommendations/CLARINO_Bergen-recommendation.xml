@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <result>
-   <header>
-      <filter>
+    <header>
+        <date>2021-11-11T12:13:34.974+01:00</date>
+        <filter>
          <centre>CLARINO_Bergen</centre>
       </filter>
-   </header>
-   <formats>
-      <format>
-         <name id="fTiger">Tiger XML</name>
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-   </formats>
+    </header>
+    <formats>
+        <format id="fTiger">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+    </formats>
 </result>

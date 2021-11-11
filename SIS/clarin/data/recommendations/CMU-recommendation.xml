@@ -1,35 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <result>
-   <header>
-      <filter>
+    <header>
+        <date>2021-11-11T12:13:34.974+01:00</date>
+        <filter>
          <centre>CMU</centre>
       </filter>
-   </header>
-   <formats>
-      <format>
-         <name id="fCHAT">CHAT</name>
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fCHAT-XML">CHAT-XML</name>
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fMP4">MPEG-4 video</name>
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fWave">WAVE</name>
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fHTML">HTML</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-   </formats>
+    </header>
+    <formats>
+        <format id="fCHAT">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCHAT-XML">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fMP4">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fWave">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fHTML">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+    </formats>
 </result>
