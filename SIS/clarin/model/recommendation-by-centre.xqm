@@ -10,7 +10,7 @@ declare variable $recommendation:centres := collection('/db/apps/clarin/data/rec
 
 
 declare function recommendation:get-recommendations-for-format($format-id){
-    $recommendation:centres[formats/format/name/@id=$format-id]
+    $recommendation:centres[formats/format/@id=$format-id]
 };
 
 declare function recommendation:get-formats-by-domain($domain){

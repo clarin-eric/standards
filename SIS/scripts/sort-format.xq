@@ -53,7 +53,7 @@ declare function sf:sort-formats-by-domain($formats){
 
 declare function sf:sort-formats-by-id($formats){
    for $format in $formats
-        let $format-id := data($format/name/@id)
+        let $format-id := data($format/@id)
         order by fn:lower-case($format-id)
         return $format
 };

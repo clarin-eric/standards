@@ -6,14 +6,14 @@ declare variable $format:formats := collection("/db/apps/clarin/data/formats")/f
 declare variable $format:domains := doc("../data/domains.xml")/domains/domain;
 
 declare function format:get-format($id as xs:string){
-    $format:formats/descendant-or-self::node()[@id=$id]
+    $format:formats[@id=$id]
 };
 
 (: Select a format by abbr :)
 declare function format:get-format-by-abbr($abbr as xs:string){
-    $format:formats/descendant-or-self::node()/titleStmt[abbr=$abbr]
+    $format:formats/titleStmt[abbr=$abbr]
 };
 
 declare function format:get-all-ids(){
-    data($format:formats/descendant-or-self::node()/@id)
+    data($format:formats/@id)
 };
