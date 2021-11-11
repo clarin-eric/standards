@@ -280,7 +280,7 @@ th {
   /* Position the tooltip text*/
   position: absolute;
   z-index: 1;
-  left: 58%;
+  left: 55%;
 }
 
 /*.tooltip .tooltiptext::after {
