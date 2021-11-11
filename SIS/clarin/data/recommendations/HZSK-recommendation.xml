@@ -1,6 +1,6 @@
 <result>
     <header>
-        <date>2021-11-11T12:13:34.974+01:00</date>
+        <date>2021-11-11T15:53:07.95+01:00</date>
         <filter>
          <centre>HZSK</centre>
       </filter>
@@ -41,10 +41,12 @@
         <format id="fMPEG-4-AVC">
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
+            <comment>bit rate up to 5000Kbps, scan type progressive, audio AAC, 48 kHz, 384Kbps, stereo</comment>
         </format>
         <format id="fWave">
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
+            <comment>(L)PCM-WAV, 48kHz, 16bit</comment>
         </format>
         <format id="fComa">
             <domain>Contextual Information</domain>
@@ -61,6 +63,7 @@
         <format id="fMPEG1">
             <domain>Tool Support</domain>
             <level>recommended</level>
+            <comment>MPEG-PS, resolution 352x288, 25 fps, 1000Kbps, constant bit rate, progressive scan type</comment>
         </format>
     </formats>
 </result>

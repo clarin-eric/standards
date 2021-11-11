@@ -1,6 +1,6 @@
 <result>
     <header>
-        <date>2021-11-11T12:13:34.974+01:00</date>
+        <date>2021-11-11T15:53:07.95+01:00</date>
         <filter>
          <centre>BAS</centre>
       </filter>
@@ -69,10 +69,14 @@
         <format id="fCMDI">
             <domain>Catalogue Metadata</domain>
             <level>recommended</level>
+            <comment>Profile <a href="http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1336550377513/xsd">media-corpus</a>
+         </comment>
         </format>
         <format id="fCMDI">
             <domain>Contextual Information</domain>
             <level>recommended</level>
+            <comment>Profile <a href="http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1324638957739/xsd">media-session</a>
+         </comment>
         </format>
         <format id="fCMDI">
             <domain>Metadata</domain>
