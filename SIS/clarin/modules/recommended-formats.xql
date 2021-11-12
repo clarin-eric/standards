@@ -205,7 +205,10 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
             {if ($format-abbr) then $format-abbr else $format-id}
             </a>
         )
-        else (fn:substring($format-id,2))
+        else (fn:substring($format-id,2), 
+        <a style="margin-left:5px;" href="{concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=','Suggestion of a format description for ID="',
+                        $format-id,'"')}">
+                             <img src="{app:resource("plus.png", "img")}" height="15"/> </a>)
         
     let $level := $format/level/text()
     let $format-comment := $format/comment
@@ -243,7 +246,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                                 (
                                 <img
                                     src="{app:resource("info.png", "img")}"
-                                    height="15"/>,
+                                    height="17"/>,
                                 <span
                                     class="tooltiptext"
                                     style="left: 78%; width:300px;">{$format-comment}
@@ -251,7 +254,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                             else
                                 ()
                         }
-                    </td>,
+                    </td>(:,
                     <td>
                     {
                     if ($format-obj) 
@@ -261,7 +264,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                         $format-id,'"')}">
                              <img src="{app:resource("plus.png", "img")}" height="15"/> </a>
                     }
-                    </td>
+                    </td>:)
                 )
                 else
                     <td

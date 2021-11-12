@@ -133,7 +133,6 @@ else
                                         }">
                                     Recommendation</a></th>
                             <th style="border-bottom-style:none;"></th>
-                            <th style="border-bottom-style:none;"></th>
                         </tr>
                         {$recommendationTable}
                     </table>
