@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <result>
-   <header>
-      <filter>
+    <header>
+        <date>2021-11-11T12:13:34.974+01:00</date>
+        <filter>
          <centre>CNC</centre>
       </filter>
-   </header>
-   <formats/>
+    </header>
+    <formats/>
 </result>

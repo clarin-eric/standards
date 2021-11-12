@@ -1,110 +1,90 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <result>
-   <header>
-      <filter>
+    <header>
+        <date>2021-11-11T12:13:34.974+01:00</date>
+        <filter>
          <centre>ACDH-ARCHE</centre>
       </filter>
-   </header>
-   <formats>
-      <format>
-         <name id="fFLAC">FLAC</name>
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fMKV">Matroska</name>
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fWave">WAVE</name>
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fDOCX">DOCX</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fHTML">HTML</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fODT">ODT</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fPDF">PDF</name>
-         <domain>Documentation</domain>
-         <level>acceptable</level>
-      </format>
-      <format>
-         <name id="fPDFA-1">PDF/A-1</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fPDFA-2">PDF/A-2</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fPDFA-3">PDF/A-3</name>
-         <domain>Documentation</domain>
-         <level>acceptable</level>
-      </format>
-      <format>
-         <name id="fTEI">TEI</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTextPlain">plainText</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fXML">XML</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fSVG">SVG</name>
-         <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTIFF">TIFF</name>
-         <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fCSV">CSV</name>
-         <domain>Lexical Resource</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTEI">TEI</name>
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fXML">XML</name>
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTextPlain">plainText</name>
-         <domain>Textual Source Language Data</domain>
-         <level>acceptable</level>
-      </format>
-      <format>
-         <name id="fXSD">XSD</name>
-         <domain>Tool Support</domain>
-         <level>recommended</level>
-      </format>
-   </formats>
+    </header>
+    <formats>
+        <format id="fFLAC">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fMKV">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fWave">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fDOCX">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fHTML">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fODT">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPDF">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fPDFA-1">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPDFA-2">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPDFA-3">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTEI">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fSVG">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTIFF">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCSV">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTEI">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fXSD">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
+    </formats>
 </result>

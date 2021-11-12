@@ -62,7 +62,6 @@ declare function fm:list-formats() {
         </div>
 };
 
-
 declare function fm:count-orphan-format-ids(){
     let $orphan-ids := fm:list-orphan-format-ids()
 return count($orphan-ids) 
@@ -70,7 +69,7 @@ return count($orphan-ids)
 
 declare function fm:list-orphan-format-ids(){
     let $recommended-ids := $recommendation:centres/formats/format/descendant-or-self::node()/@id
-    let $orphan-ids := $format:formats/descendant-or-self::node()/@id[not (. = $recommended-ids )]
+    let $orphan-ids := $format:formats/@id[not (. = $recommended-ids )]
         for $id in $orphan-ids
     order by lower-case($id)
     return
@@ -78,12 +77,12 @@ declare function fm:list-orphan-format-ids(){
 };
 
 declare function fm:count-missing-format-ids(){
-    let $format-ids := fn:distinct-values($recommendation:centres/formats/format/name/@id)
+    let $format-ids := fn:distinct-values($recommendation:centres/formats/format/@id)
     return count($format-ids)
 };
 
 declare function fm:list-missing-format-ids(){
-    let $format-ids := fn:distinct-values($recommendation:centres/formats/format/name/@id)
+    let $format-ids := fn:distinct-values($recommendation:centres/formats/format/@id)
     for $id in $format-ids
     order by lower-case($id)
     return
@@ -91,6 +90,7 @@ declare function fm:list-missing-format-ids(){
             else <li><a href="{concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=','Suggestion of a format description for ID="',$id,'"')}">{$id}</a></li> 
 };
 
+(:@Deprecated:)
 declare function fm:list-missing-format-abbrs(){
     let $format-abbrs := fn:distinct-values($recommendation:centres/formats/format/name)
     for $abbr in $format-abbrs

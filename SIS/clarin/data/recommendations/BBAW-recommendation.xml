@@ -1,70 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <result>
-   <header>
-      <filter>
+    <header>
+        <date>2021-11-11T12:13:34.974+01:00</date>
+        <filter>
          <centre>BBAW</centre>
       </filter>
-   </header>
-   <formats>
-      <format>
-         <name id="fCMDI">CMDI</name>
-         <domain>Catalogue Metadata</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fHTML">HTML</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTEI">TEI</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTextPlain">plainText</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fXML">XML</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fLMF">LMF</name>
-         <domain>Lexical Resource</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fDTABf">TEI DTABf</name>
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTEI">TEI</name>
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fXML">XML</name>
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTCF">TCF</name>
-         <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTextPlain">plainText</name>
-         <domain>Textual Source Language Data</domain>
-         <level>acceptable</level>
-      </format>
-      <format>
-         <name id="fXSLT">XSLT</name>
-         <domain>Tool Support</domain>
-         <level>recommended</level>
-      </format>
-   </formats>
+    </header>
+    <formats>
+        <format id="fCMDI">
+            <domain>Catalogue Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fHTML">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTEI">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fLMF">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fDTABf">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTEI">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTCF">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fXSLT">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
+    </formats>
 </result>

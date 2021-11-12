@@ -1,85 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <result>
-   <header>
-      <filter>
+    <header>
+        <date>2021-11-11T15:53:07.95+01:00</date>
+        <filter>
          <centre>HZSK</centre>
       </filter>
-   </header>
-   <formats>
-      <format>
-         <name id="fAnvil">Anvil</name>
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fELAN">ELAN</name>
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fEXB">EXMARaLDA Basic Transcription</name>
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fEXS">EXMARaLDA Segmented Transcription</name>
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fFLN">Folker</name>
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fPraat">Praat</name>
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTEISpoken">TEISpoken</name>
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTRS">Transcriber</name>
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fMPEG-4-AVC">MPEG-4-AVC</name>
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
-         <comment>bit rate up to 5000Kbps, scan type progressive, audio AAC, 48 kHz, 384Kbps, stereo</comment>
-      </format>
-      <format>
-         <name id="fWave">WAVE</name>
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
-         <comment>(L)PCM-WAV, 48kHz, 16bit</comment>
-      </format>
-      <format>
-         <name id="fComa">EXMARaLDA Coma</name>
-         <!--<domain>Metadata</domain>-->
-         <domain>Contextual Information</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fFLEx">FLEx</name>
-         <!--<domain>Text Annotation</domain>-->
-         <domain>Lexical Resource</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fCMDI">CMDI</name>
-         <domain>Metadata</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fMPEG1">MPEG-1 video</name>
-         <domain>Tool Support</domain>
-         <level>recommended</level>
-         <comment>MPEG-PS, resolution 352x288, 25 fps, 1000Kbps, constant bit rate, progressive scan type</comment>
-      </format>
-   </formats>
+    </header>
+    <formats>
+        <format id="fAnvil">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fELAN">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fEXB">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fEXS">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fFLN">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPraat">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTEISpoken">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTRS">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fMPEG-4-AVC">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>bit rate up to 5000Kbps, scan type progressive, audio AAC, 48 kHz, 384Kbps, stereo</comment>
+        </format>
+        <format id="fWave">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>(L)PCM-WAV, 48kHz, 16bit</comment>
+        </format>
+        <format id="fComa">
+            <domain>Contextual Information</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fFLEx">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCMDI">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fMPEG1">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+            <comment>MPEG-PS, resolution 352x288, 25 fps, 1000Kbps, constant bit rate, progressive scan type</comment>
+        </format>
+    </formats>
 </result>

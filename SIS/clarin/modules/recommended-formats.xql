@@ -106,8 +106,8 @@ $requestedLevel, $sortBy) {
         ()
     
     let $level := $format/level/text()
-    let $format-id := data($format/name/@id)
-    let $format-abbr := $format/name/text()
+    let $format-id := data($format/@id)
+    let $format-abbr := $format:formats[@id=$format-id]/titleStmt/abbr/text()
     let $format-info := $format/info/text()
         
         order by
@@ -120,7 +120,7 @@ $requestedLevel, $sortBy) {
                 if ($sortBy = 'recommendation') then
                     $level
                 else
-                    (fn:lower-case($format-abbr)) (:abbr:)
+                    (if ($format-abbr) then fn:lower-case($format-abbr) else $format-id) (:abbr:)
     
     return
         if ($requestedCentre)
@@ -196,20 +196,17 @@ declare function rf:print-recommendation-row($format, $centre, $domain) {
 
 declare function rf:print-recommendation-row($format, $centre, $domain, $includeFormat) {
     
-    let $format-id := data($format/name/@id)
-    let $format-abbr := $format/name/text()
-    
-    
+    let $format-id := data($format/@id)
+    let $format-obj := format:get-format($format-id)
+    let $format-abbr := $format-obj/titleStmt/abbr/text()
     let $format-link :=
-    if (format:get-format-by-abbr($format-abbr) or format:get-format($format-id)) then
-        <a
-            href="{app:link(concat("views/view-format.xq?id=", $format-id))}
-                     ">{$format-abbr}</a>
-    else
-        if ($format-abbr) then
-            ($format-abbr)
+        if ($format-obj) then (
+            <a href="{app:link(concat("views/view-format.xq?id=", $format-id))}">
+            {if ($format-abbr) then $format-abbr else $format-id}
+            </a>
+            )
         else
-            ($format-id)
+                ($format-id)
     
     let $level := $format/level/text()
     let $format-comment := $format/comment

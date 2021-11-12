@@ -50,9 +50,9 @@ declare function dm:list-domains($group as xs:string) {
 declare function dm:list-domains-grouped() {
     for $group in distinct-values($domain:domains/@orderBy)
         order by $group
-    return
-        <li>
-            <h2 style="font-size:18px;padding-top:10px;">{$group}</h2>
+    return 
+    <li>
+            <h2>{$group}</h2>
             <ul style="padding-left:15px">{dm:list-domains($group)}</ul>
-        </li>
+    </li>
 };

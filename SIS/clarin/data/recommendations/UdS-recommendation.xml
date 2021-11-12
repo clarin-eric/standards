@@ -1,100 +1,82 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <result>
-   <header>
-      <filter>
+    <header>
+        <date>2021-11-11T12:13:34.974+01:00</date>
+        <filter>
          <centre>UdS</centre>
       </filter>
-   </header>
-   <formats>
-      <format>
-         <name id="fMP3">MP3</name>
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fOGG">OGG</name>
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fWave">WAVE</name>
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fHTML">HTML</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fLaTeX">LaTeX</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fPDF">PDF</name>
-         <domain>Documentation</domain>
-         <level>acceptable</level>
-      </format>
-      <format>
-         <name id="fTeX">TeX</name>
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fGIF">GIF</name>
-         <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fJPEG">JPEG</name>
-         <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fPNG">PNG</name>
-         <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fSVG">SVG</name>
-         <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTIFF">TIFF</name>
-         <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fVRT">CQP corpus</name>
-         <domain>Language Description</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fTiger">Tiger XML</name>
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fPDF">PDF</name>
-         <domain>Textual Source Language Data</domain>
-         <level>acceptable</level>
-      </format>
-      <format>
-         <name id="fTextPlain">plainText</name>
-         <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fGZIP">GZIP</name>
-         <domain>Tool Support</domain>
-         <level>recommended</level>
-      </format>
-      <format>
-         <name id="fZIP">ZIP</name>
-         <domain>Tool Support</domain>
-         <level>recommended</level>
-      </format>
-   </formats>
+    </header>
+    <formats>
+        <format id="fMP3">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fOGG">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fWave">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fHTML">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fLaTeX">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPDF">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTeX">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fGIF">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fJPEG">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPNG">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fSVG">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTIFF">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fVRT">
+            <domain>Language Description</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTiger">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPDF">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fGZIP">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fZIP">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
+    </formats>
 </result>
