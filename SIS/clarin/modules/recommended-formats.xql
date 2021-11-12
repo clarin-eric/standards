@@ -205,10 +205,18 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
             {if ($format-abbr) then $format-abbr else $format-id}
             </a>
         )
-        else (fn:substring($format-id,2), 
-        <a style="margin-left:5px;" href="{concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=','Suggestion of a format description for ID="',
-                        $format-id,'"')}">
-                             <img src="{app:resource("plus.png", "img")}" height="15"/> </a>)
+        else (
+            fn:substring($format-id,2), 
+            <span class="tooltip">
+                <a style="margin-left:5px;" href="{concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=','Suggestion of a format description for ID="',
+                            $format-id,'"')}">
+                                 <img src="{app:resource("plus.png", "img")}" height="15"/> </a>
+                <span
+                    class="tooltiptext"
+                    style="left: 40%; width:300px;">Click to add or suggest format information
+                </span>
+            </span>
+                             )
         
     let $level := $format/level/text()
     let $format-comment := $format/comment
