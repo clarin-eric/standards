@@ -213,7 +213,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                                  <img src="{app:resource("plus.png", "img")}" height="15"/> </a>
                 <span
                     class="tooltiptext"
-                    style="left: 40%; width:300px;">Click to add or suggest format information
+                    style="left: 40%; width:300px;">Click to add or suggest missing format information
                 </span>
             </span>
                              )
