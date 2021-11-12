@@ -107,15 +107,15 @@ else
                         </form>
                     </div>
                     
-                    <table id="recommendationTable" cellspacing="4px" style="width:97%">
+                    <table id="recommendationTable" style="width:97%">
                         <tr>
-                            <th class="header" style="width:20%;">
+                            <th class="header" style="width:19%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=abbr&amp;domain=",
                                             $domainId, "&amp;level=", $recommendationLevel, "&amp;centre=",$centre, "#searchRecommendation"))
                                         }">Format</a>
                             </th>
-                            <th class="header" style="width:20%;">
+                            <th class="header" style="width:19%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=centre&amp;domain=",
                                             $domainId, "&amp;level=", $recommendationLevel, "&amp;centre=",$centre, "#searchRecommendation"))
@@ -126,12 +126,13 @@ else
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=domain&amp;domain=",
                                             $domainId, "&amp;level=", $recommendationLevel, "&amp;centre=",$centre,"#searchRecommendation"))
                                         }">Domain</a></th>
-                            <th class="header" style="width:20%;">
+                            <th class="header" style="width:19%;">
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=recommendation&amp;domain=",
                                             $domainId, "&amp;level=", $recommendationLevel, "&amp;centre=",$centre,"#searchRecommendation"))
                                         }">
                                     Recommendation</a></th>
+                            <th style="border-bottom-style:none;"></th>
                             <th style="border-bottom-style:none;"></th>
                         </tr>
                         {$recommendationTable}

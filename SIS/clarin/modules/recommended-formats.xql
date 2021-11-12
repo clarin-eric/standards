@@ -120,7 +120,7 @@ $requestedLevel, $sortBy) {
                 if ($sortBy = 'recommendation') then
                     $level
                 else
-                    (if ($format-abbr) then fn:lower-case($format-abbr) else $format-id) (:abbr:)
+                    (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2))) (:abbr:)
     
     return
         if ($requestedCentre)
@@ -204,10 +204,9 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
             <a href="{app:link(concat("views/view-format.xq?id=", $format-id))}">
             {if ($format-abbr) then $format-abbr else $format-id}
             </a>
-            )
-        else
-                ($format-id)
-    
+        )
+        else (fn:substring($format-id,2))
+        
     let $level := $format/level/text()
     let $format-comment := $format/comment
     
@@ -237,14 +236,14 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
             <td
                 class="recommendation-row">{$level}</td>
             {
-                if ($includeFormat) then
-                    <td
-                        class="tooltip">{
+                if ($includeFormat) 
+                then (
+                    <td class="tooltip">{
                             if ($format-comment) then
                                 (
                                 <img
                                     src="{app:resource("info.png", "img")}"
-                                    height="18"/>,
+                                    height="15"/>,
                                 <span
                                     class="tooltiptext"
                                     style="left: 78%; width:300px;">{$format-comment}
@@ -252,14 +251,24 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                             else
                                 ()
                         }
+                    </td>,
+                    <td>
+                    {
+                    if ($format-obj) 
+                        then () 
+                        else
+                        <a href="{concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=','Suggestion of a format description for ID="',
+                        $format-id,'"')}">
+                             <img src="{app:resource("plus.png", "img")}" height="15"/> </a>
+                    }
                     </td>
+                )
                 else
                     <td
                         class="recommendation-row">
                         {$format-comment}
                     </td>
             }
-        
         </tr>
 };
 
