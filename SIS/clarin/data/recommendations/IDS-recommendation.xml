@@ -134,7 +134,7 @@
             <domain>Metadata</domain>
             <level>acceptable</level>
         </format>
-        <format id="fDCXML">
+        <format id="fDC-XML">
             <domain>Metadata</domain>
             <level>recommended</level>
         </format>
