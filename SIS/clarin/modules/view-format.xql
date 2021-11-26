@@ -6,6 +6,8 @@ import module namespace format = "http://clarin.ids-mannheim.de/standards/format
 import module namespace recommendation = "http://clarin.ids-mannheim.de/standards/recommendation-model" 
 at "../model/recommendation-by-centre.xqm";
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
+import module namespace lp = "http://clarin.ids-mannheim.de/standards/landing-page" at "../model/landing-page.xqm";
+
 
 import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rf="http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";
@@ -13,6 +15,23 @@ import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-mod
 
 declare function vfm:get-format($id as xs:string) {
     format:get-format($id)
+};
+
+declare function vfm:print-identifiers($extIdList){
+    for $extId in $extIdList
+    let $id := $extId/text()
+    let $type := data($extId/@type)
+    let $landing-page := $lp:locations[type=$type]
+    let $url-suffix := $landing-page/suffix/text()
+    let $url := 
+        if ($url-suffix) 
+        then concat ($landing-page/prefix/text(), $id,$url-suffix)
+        else concat ($landing-page/prefix/text(), $id)
+    return
+        <tr>
+            <td class="recommendation-row">{$type}</td>
+            <td class="recommendation-row"><a href="{$url}">{$id}</a></td>
+        </tr>
 };
 
 declare function vfm:print-bullets($list,$id){
