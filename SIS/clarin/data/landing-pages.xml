@@ -1,0 +1,20 @@
+<landingPages>
+    <landingPage>
+        <type>pronom</type>
+        <prefix>https://www.nationalarchives.gov.uk/PRONOM/</prefix>
+    </landingPage>
+    <landingPage>
+        <type>loc</type>
+        <prefix>https://www.loc.gov/preservation/digital/formats/fdd/</prefix>
+        <suffix>.shtml</suffix>
+    </landingPage>
+    <landingPage>
+        <type>wikidata</type>
+        <prefix>https://www.wikidata.org/wiki/</prefix>
+    </landingPage>
+    <landingPage>
+        <type>babelnet</type>
+        <prefix>https://babelnet.org/synset?id=</prefix>
+        <suffix>&amp;lang=EN</suffix>
+    </landingPage>
+</landingPages>

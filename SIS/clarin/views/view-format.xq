@@ -77,6 +77,21 @@ return
                                 {$format-abbr}</span>
                         </div>
                         
+                        <div>
+                            <span class="heading">Identifiers: </span>
+                        </div>
+                        <table width= "36%">
+                            <tr>
+                                <th>Type</th>
+                                <th>Id</th>
+                            </tr>
+                            <tr>
+                                <td class="recommendation-row">SIS ID</td>
+                                <td class="recommendation-row">{data($format/@id)}</td>
+                            </tr>    
+                            {vfm:print-identifiers($format/extId)}
+                        </table>
+                        
                         {vfm:print-multiple-values($format/titleStmt/versionNumber, $id, "Versions:")}
                         
                         <div><span class="heading">Media type(s):</span></div>
