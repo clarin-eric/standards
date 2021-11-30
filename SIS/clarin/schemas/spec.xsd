@@ -572,6 +572,11 @@
             <xs:restriction base="xs:string"/>
         </xs:simpleType>
     </xs:element>
+    <xs:element name="code">
+        <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+    </xs:element>
     <xs:element name="asset">
         <xs:complexType>
             <xs:sequence>
@@ -667,6 +672,7 @@
         <xs:choice maxOccurs="unbounded">
             <xs:element ref="a" minOccurs="0"/>
             <xs:element ref="i" minOccurs="0"/>
+            <xs:element ref="code" minOccurs="0"/>
             <xs:element name="p" type="textblockType" maxOccurs="unbounded" minOccurs="0"/>
         </xs:choice>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
