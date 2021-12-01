@@ -10,7 +10,7 @@
   <info type="description">
     <p>See <a href="https://www.deutschestextarchiv.de/doku/basisformat/introduction_en.html">documentation</a></p>
     <p>DTA/TEI files will be identified by the MIME type
-      <i>application/tei+xml;format-variant=tei-dta</i>. A parameter <i>tokenized=0/1</i> can be
+      <code>application/tei+xml;format-variant=tei-dta</code>. A parameter <code>tokenized=0/1</code> can be
       added to indicate whether (=1) or not (=0) the respective TEI file is tokenized (i.e. has
       &lt;w&gt; markup).</p>
     <p>Please feel welcome to supply the description of this format file via GitHub: either as an
