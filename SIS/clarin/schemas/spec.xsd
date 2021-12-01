@@ -42,6 +42,12 @@
                         <xs:sequence>
                             <xs:element name="name" type="xs:string"/>
                             <xs:element ref="a"/>
+                            <xs:element ref="nodeInfo"/>
+                            <xs:element name="info" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:group ref="textblock" minOccurs="1" maxOccurs="unbounded"/>
+                                </xs:complexType>
+                            </xs:element>
                         </xs:sequence>
                         <xs:attribute name="id" type="xs:ID" use="required"/>
                         <xs:attribute name="deposition" type="xs:boolean" use="optional" default="false"/>
@@ -584,8 +590,18 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    <xs:element name="ri">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:token">
+                    <xs:attribute name="status" use="required" type="xs:token"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="author" type="nameType"/>
     <xs:element name="li" type="textblockType"/>
+    <xs:element name="nodeInfo" type="nodeInfoType"/>
     <xs:attribute name="type" type="xs:string"/>
     <xs:attribute name="standardSettingBody" type="xs:string"/>
     <xs:attribute name="display" default="show">
@@ -604,6 +620,11 @@
             </xs:restriction>
         </xs:simpleType>
     </xs:attribute>
+    <xs:complexType name="nodeInfoType">
+        <xs:sequence>
+            <xs:element ref="ri"/>
+        </xs:sequence>
+    </xs:complexType>
     <xs:complexType name="contentType">
         <xs:sequence>
             <xs:element ref="titleStmt"/>
