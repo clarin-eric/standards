@@ -10,7 +10,7 @@
   <info type="description">
     <p>This format is a serialization of the <a href="../views/view-spec.xq?id=SpecTranScript">ISO/TEI Transcriptions of Spoken Language</a>.</p>
     <p>ISO/TEI transcriptions of spoken language will be identified by the MIME type
-      <i>application/tei+xml;format-variant=tei-iso-spoken</i>. A parameter <i>tokenized=0/1</i> can
+      <code>application/tei+xml;format-variant=tei-iso-spoken</code>. A parameter <code>tokenized=0/1</code> can
       be added to indicate whether (=1) or not (=0) the respective TEI file is tokenized (i.e. has
       &lt;w&gt; markup).</p>
     <p>For more information, see 
