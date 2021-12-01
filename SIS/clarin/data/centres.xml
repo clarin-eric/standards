@@ -38,7 +38,7 @@
 		<name>Centre for the Digital Foundation of Research in the Humanities, Social, and Educational Sciences</name>
 		<a href="https://centres.clarin.eu/centre/35"/>
 		<nodeInfo>
-			<ri status="aiming-for-B">CLARIN</ri>
+			<ri status="C-centre aiming-for-B">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="CLARIN-LV">
@@ -129,21 +129,21 @@
 		<name>CLARIN-IS</name>
 		<a href="https://centres.clarin.eu/centre/64"/>
 		<nodeInfo>
-			<ri status="aiming-for-B">CLARIN</ri>
+			<ri status="C-centre aiming-for-B">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="CLARIN-LT" deposition="1">
 		<name>CLARIN-LT</name>
 		<a href="https://centres.clarin.eu/centre/36"/>
 		<nodeInfo>
-			<ri status="aiming-for-B">CLARIN</ri>
+			<ri status="C-centre aiming-for-B">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="CLARIN-PL1" deposition="1">
 		<name>CLARIN-PL Language Technology Centre</name>
 		<a href="https://centres.clarin.eu/centre/25"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="B-centre K-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="CLARINSI" deposition="1">
@@ -171,7 +171,7 @@
 		<name>CMU-TalkBank</name>
 		<a href="https://centres.clarin.eu/centre/18"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="B-centre K-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="CLST" deposition="1">
@@ -338,7 +338,7 @@
 		<name>Lund University Humanities Lab</name>
 		<a href="https://centres.clarin.eu/centre/42"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="C-centre K-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="MPCDF">
@@ -352,14 +352,14 @@
 		<name>Mediterranean Research Centre for the Humanities' Phonothèque</name>
 		<a href="https://centres.clarin.eu/centre/44"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="C-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="MI" deposition="1">
 		<name>Meertens Instituut/HuC</name>
 		<a href="https://centres.clarin.eu/centre/23"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="C-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="MPI-PL" deposition="1">
@@ -373,42 +373,42 @@
 		<name>National Library of Norway</name>
 		<a href="https://centres.clarin.eu/centre/31"/>
 		<nodeInfo>
-			<ri status="aiming-for-B">CLARIN</ri>
+			<ri status="C-centre aiming-for-B">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="NLPEL">
 		<name>NLP:EL - CLARIN Knowledge Centre for Natural Language Processing in Greece</name>
 		<a href="https://centres.clarin.eu/centre/70"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="K-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="ORTOLANG" deposition="1">
 		<name>Open Resources and TOols for LANGuage</name>
 		<a href="https://centres.clarin.eu/centre/73"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="C-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="OTA" deposition="1">
 		<name>Oxford Text Archive</name>
 		<a href="https://centres.clarin.eu/centre/26"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="C-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="Phonogrammarchiv">
 		<name>Phonogrammarchiv Institute for audiovisual Research and Documentation</name>
 		<a href="https://centres.clarin.eu/centre/41"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="K-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="PolMine">
 		<name>PolMine Project</name>
 		<a href="https://centres.clarin.eu/centre/38"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="C-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="PORTULAN_CLARIN-K-Centre">
@@ -450,14 +450,14 @@
 		<name>TextGrid Repository</name>
 		<a href="https://centres.clarin.eu/centre/71"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="C-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="CLARIN-DK-UCPH" deposition="1">
 		<name>The CLARIN Centre at the University of Copenhagen</name>
 		<a href="https://centres.clarin.eu/centre/14"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="B-centre K-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="ILC4CLARIN" deposition="1">
@@ -478,7 +478,7 @@
 		<name>The Tromsø Repository of Language and Linguistics</name>
 		<a href="https://centres.clarin.eu/centre/48"/>
 		<nodeInfo>
-			<ri status="B-centre">CLARIN</ri>
+			<ri status="C-centre">CLARIN</ri>
 		</nodeInfo>
 	</centre>
 	<centre id="UdS" deposition="1">
