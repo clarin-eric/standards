@@ -16,20 +16,30 @@
     <xs:element name="header">
         <xs:complexType>
             <xs:sequence>
+                <xs:element ref="title" minOccurs="0"/>
+                <xs:element ref="url" minOccurs="0"/>
                 <xs:element ref="date"/>
+                <xs:element ref="lastUpdate" minOccurs="0"/>
                 <xs:element ref="filter"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="url" type="xs:anyURI"/>
     <xs:element name="date" type="xs:dateTime"/>
+    <xs:element name="lastUpdate" type="xs:dateTime"/>
     <xs:element name="filter">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="centre"/>
+                <xs:element ref="centre" minOccurs="0"/>
+                <xs:element ref="domain" minOccurs="0"/>
+                <xs:element ref="level" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="centre" type="xs:NCName"/>
+    <xs:element name="centre" type="xs:string"/>
+    <xs:element name="domain" type="xs:string"/>
+    <xs:element name="level" type="xs:NCName"/>
     <xs:element name="formats">
         <xs:complexType>
             <xs:sequence>
@@ -47,8 +57,6 @@
             <xs:attribute name="id" use="required" type="xs:NCName"/>
         </xs:complexType>
     </xs:element>
-    <xs:element name="domain" type="xs:string"/>
-    <xs:element name="level" type="xs:NCName"/>
     <xs:element name="comment">
         <xs:complexType mixed="true">
             <xs:sequence>
