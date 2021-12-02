@@ -47,7 +47,10 @@ import module namespace index="http://clarin.ids-mannheim.de/standards/index" at
                 <div>
                     <p>This website is managed by the <a href="https://www.clarin.eu/governance/standards-committee">CLARIN Standards Committee</a>. 
                     Feedback on the <a href="schemas/spec.xsd">XML Schema</a> of <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">standard</a> 
-                    descriptions may be sent to <a href="{app:link("views/contact.xq")}">the contact addresses</a> or, better yet, posted as "issue reports" at <a href="https://github.com/clarin-eric/standards/issues">our GitHub repository</a>. CSC Members and CLARIN technical staff may also   
+                    descriptions may be sent to <a href="{app:link("views/contact.xq")}">the contact addresses</a> or, better yet, posted as "issue reports" at <a href="https://github.com/clarin-eric/standards/issues">our GitHub repository</a>.</p>
+                    <p>Please see the wiki pages <a href="https://github.com/clarin-eric/standards/wiki/How-to-contribute-to-the-SIS">"How to contribute to the SIS"</a> and 
+                    <a href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">"Updating format recommendations"</a> for hints on how you can influence the SIS.</p>
+                    <p>CSC Members and CLARIN technical staff may 
                     {if (session:get-attribute("user")) then "register" else <a href="{app:link("user/register.xq")}">register</a>} with this service.</p>
                 </div>
                 <!-- The tag cloud of standards and standard bodies -->
