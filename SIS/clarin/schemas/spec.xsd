@@ -593,7 +593,7 @@
     <xs:element name="ri">
         <xs:complexType>
             <xs:simpleContent>
-                <xs:extension base="xs:token">
+                <xs:extension base="ResearchInfrastructures">
                     <xs:attribute name="status" use="required" type="xs:token"/>
                 </xs:extension>
             </xs:simpleContent>
@@ -622,7 +622,7 @@
     </xs:attribute>
     <xs:complexType name="nodeInfoType">
         <xs:sequence>
-            <xs:element ref="ri"/>
+            <xs:element ref="ri" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="contentType">
@@ -661,6 +661,12 @@
     <xs:complexType name="valueType">
         <xs:attribute name="value" type="xs:string"/>
     </xs:complexType>
+    <xs:simpleType name="ResearchInfrastructures">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CLARIN"/>
+            <xs:enumeration value="DARIAH"/>
+        </xs:restriction>
+    </xs:simpleType>
     <xs:group name="textblock">
         <xs:choice>
             <xs:element name="p" type="textblockType"/>
