@@ -59,7 +59,7 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                     <h2>Formats described in the SIS ({fm:count-defined-formats()}): </h2>
                     <p>The name of the format links to its description, sometimes rather stubby (you are welcome to help us extend the list
                         and/or the descriptions, either by
-                        <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=">submitting an issue at GitHub</a>
+                        <a href="{app:getGithubIssueLink()}">submitting an issue at GitHub</a>
                         containing suggested text or corrections, or by editing or adding the relevant
                         <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">format file</a> and submitting a pull request).</p>
                     

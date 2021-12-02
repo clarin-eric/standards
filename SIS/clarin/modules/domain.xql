@@ -30,11 +30,18 @@ declare function dm:list-domains($group as xs:string) {
         <li>
             <span
                 class="list-text">{$domain-name}</span>
-            <img
-                class="copy-icon pointer"
-                src="{app:resource("copy.png", "img")}"
-                width="14"
-                onclick="copyTextToClipboard('{$domain-id}','{$domain-name}')"/>
+            <span
+                class="tooltip">
+                <img
+                    class="copy-icon pointer"
+                    src="{app:resource("copy.png", "img")}"
+                    width="14"
+                    onclick="copyTextToClipboard('{$domain-id}','{$domain-name}')"/>
+                <span
+                    class="tooltiptext"
+                    style="left:41%; width:300px;">Copy name to clipboard
+                </span>
+            </span>
             <span
                 class="hint"
                 id="hint-{$domain-id}">copied</span>
@@ -50,9 +57,10 @@ declare function dm:list-domains($group as xs:string) {
 declare function dm:list-domains-grouped() {
     for $group in distinct-values($domain:domains/@orderBy)
         order by $group
-    return 
-    <li>
+    return
+        <li>
             <h2>{$group}</h2>
-            <ul style="padding-left:15px">{dm:list-domains($group)}</ul>
-    </li>
+            <ul
+                style="padding-left:15px">{dm:list-domains($group)}</ul>
+        </li>
 };

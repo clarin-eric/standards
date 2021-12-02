@@ -2,8 +2,6 @@ xquery version "3.0";
 
 module namespace sb="http://clarin.ids-mannheim.de/standards/standardbody";
 
-import module namespace data="http://clarin.ids-mannheim.de/standards/data" at "data.xqm";
-
 (:  Define methods to access the standard body data
     @author margaretha
     @date Dec 2013

@@ -281,6 +281,7 @@ th {
   position: absolute;
   z-index: 1;
   left: 55%;
+  margin-top:18px; 
 }
 
 /*.tooltip .tooltiptext::after {

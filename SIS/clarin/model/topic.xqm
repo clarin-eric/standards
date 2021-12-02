@@ -2,8 +2,6 @@ xquery version "3.0";
 
 module namespace topic="http://clarin.ids-mannheim.de/standards/topic";
 
-import module namespace data="http://clarin.ids-mannheim.de/standards/data" at "data.xqm";
-
 (: Define the methods for accessing topic data
    @author margaretha
 :)

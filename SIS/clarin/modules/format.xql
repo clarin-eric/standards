@@ -40,14 +40,15 @@ declare function fm:list-formats() {
         <div>
             <li>
                 <span
-                    class="list-text"><a
-                        style="color:black;"
-                        href="{$link}">{$format-abbr} ({$format-name})</a></span>
-                <img
-                    class="copy-icon pointer"
-                    src="{app:resource("copy.png", "img")}"
-                    width="14"
-                    onclick="copyTextToClipboard('{$format-id}','{$format-id}')"/>
+                    class="list-text"><a style="color:black;" href="{$link}">{$format-abbr} ({$format-name})</a></span>
+                <span class="tooltip"> 
+                    <img class="copy-icon pointer" src="{app:resource("copy.png", "img")}"
+                    width="14" onclick="copyTextToClipboard('{$format-id}','{$format-id}')"/>
+                    <span class="tooltiptext"
+                        style="left:45%; width:300px;">Copy ID to clipboard
+                    </span>
+                </span>
+                
                 <span
                     class="hint"
                     id="hint-{$format-id}">Format ID copied</span>
@@ -87,7 +88,7 @@ declare function fm:list-missing-format-ids(){
     order by lower-case($id)
     return
         if (format:get-format($id)) then ()
-            else <li><a href="{concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=','Suggestion of a format description for ID="',$id,'"')}">{$id}</a></li> 
+            else <li><a href="{app:getGithubIssueLink($id)}">{$id}</a></li> 
 };
 
 (:@Deprecated:)
