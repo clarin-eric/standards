@@ -5,6 +5,10 @@
   </titleStmt>
   <keyword>GIS</keyword>
   <keyword>ArcGIS</keyword>
+  <extId type="loc">fdd000280</extId>
+  <extId type="pronom">x-fmt/235</extId>
+  <extId type="babelnet">bn:02131405n</extId>
+  <extId type="wikidata">Q278934</extId>
   <info type="description">
     <p>"The shapefile format is a geospatial vector data format for geographic information system
       (GIS) software. It is developed and regulated by Esri as a mostly open specification for data
@@ -21,13 +25,9 @@
     <p>See the following for more information:</p>
     <ul>
       <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/esri-shapefile">DANS info</a></li>
-      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000280.shtml">LoC info</a>, ID: fdd000280</li>
-      <li><a href="http://www.nationalarchives.gov.uk/PRONOM/x-fmt/235">PRONOM info</a>, PUID: x-fmt/235</li>
       <li><a href="http://en.wikipedia.org/wiki/Shapefile">Wikipedia entry</a></li>
-      <li><a href="https://babelnet.org/synset?id=bn:02131405n&amp;lang=EN">BabelNet network</a>, ID: bn:02131405n</li>
       <li><a href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/shapefiles/what-is-a-shapefile.htm">"What is a shapefile?"</a> from ESRI</li>
       <li><a href="https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf">technical description</a> by ESRI</li>
-      <li><a href="https://www.wikidata.org/wiki/Q278934">Wikidata entry</a>, ID: Q278934</li>
       <li><a href="https://www.iana.org/assignments/media-types/application/vnd.shp">IANA vnd.shp and others registration</a></li>
     </ul>
   </info>

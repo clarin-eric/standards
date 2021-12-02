@@ -4,6 +4,9 @@
     <abbr>GeoJSON</abbr>
   </titleStmt>
   <keyword>GIS</keyword>
+  <extId type="loc">fdd000382</extId>
+  <extId type="pronom">fmt/1367</extId>
+  <extId type="wikidata">Q5533904</extId>
   <info type="description">
     <p>"GeoJSON is an open standard format designed for representing simple geographical
       features, along with their non-spatial attributes. It is based on the JSON format. The
@@ -15,10 +18,7 @@
     <p>See the following for more information:</p>
     <ul>
       <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/geographical-information-gis">DANS info</a></li>
-      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000382.shtml">LoC info</a>, ID: fdd000382</li>
-      <li><a href="https://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&amp;id=2185">PRONOM info</a>, PUID: fmt/1367</li>
       <li><a href="https://en.wikipedia.org/wiki/GeoJSON">Wikipedia entry</a></li>
-      <li><a href="https://www.wikidata.org/wiki/Q5533904">Wikidata entry</a>, ID: Q5533904</li>
     </ul>
   </info>
   <!--<relation target="" type="isDefinedBy"></relation>  https://datatracker.ietf.org/doc/html/rfc7946 -->

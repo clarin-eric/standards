@@ -7,6 +7,7 @@
   <keyword>raster graphics</keyword>
   <keyword>image compression</keyword>
   <keyword>lossless compression</keyword>
+  <extId type="pronom">fmt/4</extId>
   <info type="description">
     <p>Please feel welcome to supply the description of this format file via GitHub: either as an
       <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
