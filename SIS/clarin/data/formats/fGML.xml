@@ -4,6 +4,9 @@
     <abbr>GML</abbr>
   </titleStmt>
   <keyword>GIS</keyword>
+  <extId type="loc">fdd000296</extId>
+  <extId type="wikidata">Q926165</extId>
+  <extId type="pronom">x-fmt/227</extId>
   <info type="description">
     <p>"GML is the XML grammar defined by the Open Geospatial Consortium (OGC) to express
       geographical features. GML serves as a modeling language for geographic systems as well as an
@@ -13,10 +16,7 @@
     <p>See the following for more information:</p>
     <ul>
       <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/gml">DANS info</a></li>
-      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000296.shtml">LoC info</a>, ID: fdd000296</li>
       <li><a href="https://en.wikipedia.org/wiki/Geography_Markup_Language">Wikipedia entry</a></li> 
-      <li><a href="https://www.wikidata.org/wiki/Q926165">Wikidata entry</a>, ID: Q926165</li>
-      <li><a href="https://www.nationalarchives.gov.uk/pronom/x-fmt/227">PRONOM entry</a>, PUID: x-fmt/227</li>
       <li><a href="https://inspire.ec.europa.eu/media-types/application/x-gmz">x-gmz</a> media-type application, possibly falling out of use</li>
     </ul>
   </info>

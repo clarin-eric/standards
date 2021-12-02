@@ -8,6 +8,8 @@
   <keyword>GIS</keyword>
   <keyword>georeference</keyword>
   <keyword>proprietary format</keyword>
+  <extId type="wikidata">Q28206049</extId>
+  <extId type="loc">fdd000420</extId>
   <info type="description">
     <p>"ERDAS Imagine is a software package designed for working with GIS raster data. It has its
       own binary "img" format for images. The content of this file can vary: it can be a
@@ -15,8 +17,6 @@
     <p>See the following for more information:</p>
     <ul>
       <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/erdas-imagine-file-format">DANS info</a></li>
-      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000420.shtml">LoC info</a>, ID: fdd000420</li>
-      <li><a href="https://www.wikidata.org/wiki/Q28206049">Wikidata entry</a>, ID: Q28206049</li>
       <li><a href="http://fileformats.archiveteam.org/wiki/ERDAS_Imagine_IMG">File Format Wiki info</a></li>
     </ul>
   </info>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation xml:lang="en">This schema defines the structure of the recommendation
+            files that reside under data/recommendations/. Mostly auto-derived thru the magic of
+            oXygen.</xs:documentation>
+    </xs:annotation>
+    <xs:element name="result">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="header"/>
+                <xs:element ref="formats"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="header">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="date"/>
+                <xs:element ref="filter"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="date" type="xs:dateTime"/>
+    <xs:element name="filter">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="centre"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="centre" type="xs:NCName"/>
+    <xs:element name="formats">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="format"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="format">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="domain"/>
+                <xs:element ref="level"/>
+                <xs:element minOccurs="0" ref="comment"/>
+            </xs:sequence>
+            <xs:attribute name="id" use="required" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="domain" type="xs:string"/>
+    <xs:element name="level" type="xs:NCName"/>
+    <xs:element name="comment">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="a"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="i"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="code"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="a">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:NCName">
+                    <xs:attribute name="href" use="required" type="xs:anyURI"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="i">
+        <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="code">
+        <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+    </xs:element>
+    
+</xs:schema>
