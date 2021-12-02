@@ -208,8 +208,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
         else (
             fn:substring($format-id,2), 
             <span class="tooltip">
-                <a style="margin-left:5px;" href="{concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=','Suggestion of a format description for ID="',
-                            $format-id,'"')}">
+                <a style="margin-left:5px;" href="{app:getGithubIssueLink($format-id)}">
                                  <img src="{app:resource("plus.png", "img")}" height="15"/> </a>
                 <span
                     class="tooltiptext"

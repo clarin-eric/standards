@@ -108,7 +108,7 @@ return
                             <span id="desctext{$id}" class="desctext">{$format/info[@type = "description"]}</span>
                         </div>
 
-                        <div align="right"><p><a href="{concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=','Suggestion regarding the description of format ID="',$id,'"')}">[suggest a fix or extension]</a></p></div>
+                        <div align="right"><p><a href="{app:getGithubIssueLink($id)}">[suggest a fix or extension]</a></p></div>
                         {vfm:print-multiple-values($format/keyword, $id, "Keywords:")}
                         <!--The tag cloud of the standard related keywords -->
                         <div id="myCanvasContainer" style="border: 1px solid #DDDDDD; border-radius:3px; align:centre">
