@@ -56,6 +56,7 @@ return
                 <script type="text/javascript" src="{app:resource("tagclouds.js", "js")}"/>
                 <script type="text/javascript" src="{app:resource("tinymce/tinymce.min.js", "js")}"/>
                 <script type="text/javascript" src="{app:resource("xmleditor.js", "js")}"/>
+                <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
             </head>
             <body onload="createTags();drawGraph('{vsm:get-spec-json($format)}','500','300','-200')">
                 <div id="all">
@@ -80,14 +81,27 @@ return
                         <div>
                             <span class="heading">Identifiers: </span>
                         </div>
-                        <table width= "36%">
+                        <table width= "400px">
                             <tr>
-                                <th>Type</th>
-                                <th>Id</th>
+                                <th width="100px">Type</th>
+                                <th width="100px">Id</th>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td class="recommendation-row">SIS ID</td>
-                                <td class="recommendation-row">{data($format/@id)}</td>
+                                <td class="recommendation-row">{$id}
+                                </td>
+                                <td>
+                                    <span class="tooltip"> 
+                                        <img class="copy-icon pointer" src="{app:resource("copy.png", "img")}"
+                                        width="14" onclick="copyTextToClipboard('{$id}','{$id}')"/>
+                                        <span class="tooltiptext"
+                                            style="left:45%; width:300px;">Copy ID to clipboard
+                                        </span>
+                                    </span>
+                                    <span
+                                       class="hint"
+                                       id="hint-{$id}">SIS ID copied</span></td>
                             </tr>    
                             {vfm:print-identifiers($format/extId)}
                         </table>
