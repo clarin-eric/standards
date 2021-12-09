@@ -5,6 +5,7 @@ declare option exist:serialize "method=xhtml media-type=text/html indent=yes doc
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
+
 import module namespace vfm = "http://clarin.ids-mannheim.de/standards/view-format" at "../modules/view-format.xql";
 import module namespace vsm = "http://clarin.ids-mannheim.de/standards/view-spec" at "../modules/view-spec.xql";
 
@@ -92,16 +93,8 @@ return
                                 <td class="recommendation-row">{$id}
                                 </td>
                                 <td>
-                                    <span class="tooltip"> 
-                                        <img class="copy-icon pointer" src="{app:resource("copy.png", "img")}"
-                                        width="14" onclick="copyTextToClipboard('{$id}','{$id}')"/>
-                                        <span class="tooltiptext"
-                                            style="left:45%; width:300px;">Copy ID to clipboard
-                                        </span>
-                                    </span>
-                                    <span
-                                       class="hint"
-                                       id="hint-{$id}">SIS ID copied</span></td>
+                                    {app:create-copy-button($id,$id,"Copy ID to clipboard", "SIS ID copied")}
+                                </td>
                             </tr>    
                             {vfm:print-identifiers($format/extId)}
                         </table>

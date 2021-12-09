@@ -28,23 +28,8 @@ declare function dm:list-domains($group as xs:string) {
         order by $domain-name
     return
         <li>
-            <span
-                class="list-text">{$domain-name}</span>
-            <span
-                class="tooltip">
-                <img
-                    class="copy-icon pointer"
-                    src="{app:resource("copy.png", "img")}"
-                    width="14"
-                    onclick="copyTextToClipboard('{$domain-id}','{$domain-name}')"/>
-                <span
-                    class="tooltiptext"
-                    style="left:41%; width:300px;">Copy name to clipboard
-                </span>
-            </span>
-            <span
-                class="hint"
-                id="hint-{$domain-id}">copied</span>
+            <span class="list-text">{$domain-name}</span>
+            {app:create-copy-button($domain-id,$domain-name,"Copy name to clipboard", "copied")}
             <span
                 id="{$domain-id}"
                 style="display:block">

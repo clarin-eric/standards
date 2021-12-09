@@ -35,24 +35,14 @@ declare function fm:list-formats() {
     let $file-ext := $format/fileExt/text()
     let $link := app:link(concat("views/view-format.xq?id=", $format-id))
         order by fn:lower-case($format-abbr)
+    let $link-title := concat($format-abbr, " (",$format-name,")")
     let $mime-types := fm:print-multiple-values($format/mimeType, "MIME types:")    
     return
         <div>
             <li>
-                <span
-                    class="list-text"><a style="color:black;" href="{$link}">{$format-abbr} ({$format-name})</a></span>
-                <span class="tooltip"> 
-                    <img class="copy-icon pointer" src="{app:resource("copy.png", "img")}"
-                    width="14" onclick="copyTextToClipboard('{$format-id}','{$format-id}')"/>
-                    <span class="tooltiptext"
-                        style="left:45%; width:300px;">Copy ID to clipboard
-                    </span>
-                </span>
-                
-                <span
-                    class="hint"
-                    id="hint-{$format-id}">Format ID copied</span>
+                <span class="list-text"><a style="color:black;" href="{$link}">{$link-title}</a></span>
                 {
+                    app:create-copy-button($format-id,$format-id,"Copy ID to clipboard","Format ID copied"),
                     if ($format-name != 'Other' and ($mime-type or $file-ext)) then
                         <p>{if ($mime-types) then ($mime-types,<br/>) else ()}
                             {fm:print-multiple-values($format/fileExt, "File extensions:")}</p>

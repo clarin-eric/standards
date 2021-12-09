@@ -8,11 +8,6 @@ import module namespace web="https://clarin.ids-mannheim.de/standards/web" at ".
    @author margaretha
 :)
 
-(: Base URL :)
-(:declare variable $app:base as xs:string := "https://standards.clarin.eu/sis/";
-declare variable $app:securebase as xs:string := "https://standards.clarin.eu/sis/";
-:)
-
 (: Local Base URL :)
 declare variable $app:base as xs:string := "http://localhost:8889/exist/apps/clarin/";
 
@@ -42,15 +37,29 @@ declare function app:get-input-class($submitted, $field){
     if($submitted and not($field)) then "inputTextError" else "inputText"
 };
 
+declare function app:create-copy-button($id, $copy-text, $tooltiptext, $hint){
+     (
+            <span class="tooltip"> 
+                <img class="copy-icon pointer" src="{app:resource("copy.png", "img")}"
+                width="14" onclick="copyTextToClipboard('{$id}','{$copy-text}')"/>
+                <span class="tooltiptext" style="width:160px;">{$tooltiptext}
+                </span>
+            </span>,
+            <span
+                class="hint"
+                id="hint-{$id}">{$hint}</span>
+            )
+};
+
 declare function app:getGithubIssueLink() {
     let $ghLink := 'https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=' 
-    let $ghLink := concat($ghLink, 'commitId=',$web:commitId)
+    let $ghLink := concat($ghLink, 'commitId=',web:get-short-commitId())
     return $ghLink
 };
 
 declare function app:getGithubIssueLink($format-id) {
     let $ghLink := 'https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=Suggestion regarding the description of format ID="' 
-    let $ghLink := concat($ghLink, $format-id, '", commitId=',$web:commitId)
+    let $ghLink := concat($ghLink, $format-id, '", commitId=',web:get-short-commitId())
     return $ghLink
 };
 
@@ -59,7 +68,7 @@ declare function app:footer(){
     return
        
     <div style="text-align: right">
-        <span><b>Web-version</b>: <a href="{$githubLink}">{$web:commitId}</a></span>
+        <span><b>Version ID</b>: <a href="{$githubLink}">{web:get-short-commitId()}</a></span>
     </div>
     
 };

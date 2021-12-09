@@ -212,7 +212,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                     <img src="{app:resource("plus.png", "img")}" height="15"/> </a>
                 <span
                     class="tooltiptext"
-                    style="left: 38%; width:300px;">Click to add or suggest missing format information
+                    style="width:300px;">Click to add or suggest missing format information
                 </span>
             </span>
                              )
@@ -239,10 +239,14 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
             <td
                 class="recommendation-row">{$centre}</td>
             <td
-                class="recommendation-row tooltip"
-                id="{$domainId}">{$domainName}<span
-                    class="tooltiptext">{$domainDesc}
-                </span></td>
+                class="recommendation-row"
+                id="{$domainId}">
+                <span class="tooltip">{$domainName}
+                    <span
+                        class="tooltiptext" style="left:20%">{$domainDesc}
+                    </span>
+                </span>
+                </td>
             <td
                 class="recommendation-row">{$level}</td>
             {
@@ -256,7 +260,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                                     height="17"/>,
                                 <span
                                     class="tooltiptext"
-                                    style="left: 78%; width:300px;">{$format-comment}
+                                    style="width:200px;">{$format-comment}
                                 </span>)
                             else
                                 ()

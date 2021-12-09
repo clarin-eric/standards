@@ -267,9 +267,12 @@ th {
     height:20px;
 }
 
+.tooltip {
+  position: relative;
+}
 
-.tooltip .tooltiptext {
-  visibility: hidden;
+.tooltiptext {
+   visibility: hidden;
   width: 400px;
   background-color: black;
   color: #fff;
@@ -279,21 +282,10 @@ th {
  
   /* Position the tooltip text*/
   position: absolute;
-  z-index: 1;
-  left: 55%;
-  margin-top:18px; 
+  top:100%;
+  z-index: 10;
 }
 
-/*.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 12%;
-  right: 100%;
-  margin-top: -4px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent black transparent transparent;
-}*/
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
