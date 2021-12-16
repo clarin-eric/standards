@@ -40,7 +40,7 @@ declare function search:spec-by-query-and-filter($query-tokens, $topic, $sb, $st
             let $specs-by-title := $spec:specs[contains(lower-case(titleStmt/title/text()),lower-case($token))]/@id
             let $specs-by-abbr := $spec:specs[contains(lower-case(titleStmt/abbr/text()),lower-case($token))]/@id
             let $specs-by-versionnummer := $spec:specs/descendant-or-self::version[contains(versionNumber,$token)]/@id
-            let $specs-by-scope := $spec:specs[contains(lower-case(/scope),lower-case($token))]/@id
+            let $specs-by-scope := $spec:specs[contains(lower-case(scope),lower-case($token))]/@id
             let $specs-by-keyword := $spec:specs[contains(lower-case(fn:string-join(keyword/text()," ")),lower-case($token))]/@id 
             let $specs-by-topic := $spec:specs[contains(lower-case(@topic),lower-case($token))]/@id
             let $specs-by-sb := $spec:specs[contains(lower-case(@standardSettingBody),lower-case($token))]/@id     
