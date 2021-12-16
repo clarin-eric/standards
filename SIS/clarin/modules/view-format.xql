@@ -163,5 +163,5 @@ declare function vfm:print-recommendation-rows($recommendations,$format-id,$sort
                         $level
                     else
                         ()
-            return rf:print-recommendation-row($format, $centre,$domain, fn:false())
+            return rf:print-recommendation-row($format, $centre,$domain, fn:false(),fn:true())
 };

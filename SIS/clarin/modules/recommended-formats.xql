@@ -190,11 +190,11 @@ declare function rf:checkRequestedLevel($requestedLevel, $format, $centre, $doma
 };
 
 declare function rf:print-recommendation-row($format, $centre, $domain) {
-    rf:print-recommendation-row($format, $centre, $domain, fn:true())
+    rf:print-recommendation-row($format, $centre, $domain, fn:true(), fn:true())
 
 };
 
-declare function rf:print-recommendation-row($format, $centre, $domain, $includeFormat) {
+declare function rf:print-recommendation-row($format, $centre, $domain, $includeFormat,$includeCentre) {
     
     let $format-id := data($format/@id)
     let $format-obj := format:get-format($format-id)
@@ -236,8 +236,13 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                 else
                     ()
             }
-            <td
-                class="recommendation-row">{$centre}</td>
+            {
+                if ($includeCentre)
+                then
+                <td
+                    class="recommendation-row">{$centre}</td>
+                else ()
+            }
             <td
                 class="recommendation-row"
                 id="{$domainId}">
@@ -250,7 +255,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
             <td
                 class="recommendation-row">{$level}</td>
             {
-                if ($includeFormat) 
+                if ($includeFormat and $includeCentre) 
                 then (
                     <td class="tooltip">{
                             if ($format-comment) then

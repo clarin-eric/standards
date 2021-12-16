@@ -335,7 +335,7 @@
     <name>Lund University Humanities Lab</name>
     <a href="https://centres.clarin.eu/centre/42"/>
     <nodeInfo>
-      <ri status="C-centre,K-centre">CLARIN</ri>
+      <ri status="C-centre, K-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="MPCDF">
