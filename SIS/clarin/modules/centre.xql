@@ -31,9 +31,10 @@ declare function cm:list-centre() {
     else
         $status-text
     
+    order by fn:lower-case($id)
     return
         <tr>
-            <td class="recommendation-row"><a href="{app:link(concat("views/view-centre.xq?id=", $id))}">{data($c/@id)}</a></td>
+            <td class="recommendation-row"><a href="{app:link(concat("views/view-centre.xq?id=", $id))}">{$id}</a></td>
             <td class="recommendation-row">{$c/name/text()}</td>
             <td class="recommendation-row">{$c/nodeInfo/ri/text()}</td>
             <td class="recommendation-row">{$statuses}</td>
@@ -99,8 +100,8 @@ declare function cm:print-recommendation-rows($recommendation, $centre-id, $sort
             else
                 if ($sortBy = 'recommendation') then
                     $level
-                else
-                    ()
+                else (:by format:)
+                    (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2)))
     return 
         rf:print-recommendation-row($format, $centre-id, $domain, fn:true(), fn:false())
 };
