@@ -146,7 +146,7 @@
       <ri status="B-centre,K-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
-  <centre id="CLARINSI" deposition="1">
+  <centre id="CLARIN.SI" deposition="1">
     <name>CLARIN.SI Language Technology Centre</name>
     <a href="https://centres.clarin.eu/centre/30"/>
     <nodeInfo>
