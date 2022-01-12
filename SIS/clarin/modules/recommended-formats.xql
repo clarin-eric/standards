@@ -340,7 +340,7 @@ declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $f
     let $header2 := response:set-header("Content-Type", "text/xml;charset=utf-8")
     
     return
-        <result>
+        <recommendation>
             <header>
                 <title>CLARIN Standards Information System (SIS) export</title>
                 <url>{app:link("views/recommended-formats-with-search.xq")}</url>
@@ -348,6 +348,6 @@ declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $f
                 <filter>{$filter}</filter>
             </header>
             <formats>{$rows}</formats>
-        </result>
+        </recommendation>
 
 };
