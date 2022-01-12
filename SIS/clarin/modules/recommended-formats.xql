@@ -322,7 +322,7 @@ declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $f
                 if ($domainId eq "") then
                     (:<domain
                             id="{$row/td[3]/@id}">{$row/td[3]/text()}</domain>:)
-                    <domain>{$row/td[3]/text()}</domain>
+                    <domain>{$row/td[3]/span/text()}</domain>
                 else
                     (),
                 if ($requestedLevel eq "") then
