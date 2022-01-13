@@ -5,7 +5,7 @@
             files that reside under data/recommendations/. Mostly auto-derived thru the magic of
             oXygen.</xs:documentation>
     </xs:annotation>
-    <xs:element name="result">
+    <xs:element name="recommendation">
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="header"/>
