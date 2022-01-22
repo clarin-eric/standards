@@ -38,7 +38,7 @@ declare function rsm:validate-id($param-id){
     let $ids := data:get-all-ids()
     return
     if (not($param-id) or 
-        fn:matches($param-id,"[^a-zA-Z0-9\.-]") or
+        fn:matches($param-id,"[^a-zA-Z0-9\.\-]") or
         functx:is-value-in-sequence($id,$ids))    
         then fn:false()        
         else fn:true()

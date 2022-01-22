@@ -17,7 +17,7 @@ declare function login:get-authorization-error($submitted,$email,$password,$auth
 
 (: Validate Email :)
 declare function login:validate-email($email as xs:string){ 
-    matches($email, '[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}')
+    matches($email, '[a-zA-Z0-9._%\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}')
 };
 
 (: Validate account :)
