@@ -311,9 +311,7 @@ declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $f
     let $rows :=
     for $row in $nodes
     return
-        <format>
-            <name
-                id="{$row/td[1]/@id}">{$row/td[1]/a/text()}</name>
+        <format id="{$row/td[1]/@id}">
             {
                 if ($centre eq "") then
                     <centre>{$row/td[2]/text()}</centre>
