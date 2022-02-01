@@ -158,6 +158,54 @@ declare function fm:list-mime-types() {
         </li>
 };
 
+declare function fm:list-extensions() {
+    let $extensions := fn:distinct-values($format:formats/fileExt/text())
+    for $e in $extensions
+       let $list := $format:formats[fileExt = $e]
+       let $numOfItems := count($list)
+       let $links : = 
+           for $k in (1 to $numOfItems)
+               let $format := $list[$k]
+               let $abbr := $format/titleStmt/abbr
+               let $id := data($format/@id)
+               let $link := <a href="{app:link(concat("views/view-format.xq?id=",$id))}">{$abbr}</a>
+               return 
+                   if ($k = $numOfItems) then
+                       ($link)
+                   else
+                       ($link, ", ")
+       
+        order by $e
+    return
+        <li><span
+                class="list-text">{$e}</span>
+             <p>Formats: {$links}</p>
+        </li>
+};
+
+declare function fm:get-formats-without-extensions() {
+    
+    let $list := $format:formats[not(fileExt) or fileExt = ""]
+    let $numOfItems := count($list)
+    let $links : = 
+        for $k in (1 to $numOfItems)
+            let $format := $list[$k]
+            let $abbr := $format/titleStmt/abbr
+            let $id := data($format/@id)
+            let $link := <a href="{app:link(concat("views/view-format.xq?id=",$id))}">{$abbr}</a>
+            return 
+                if ($k = $numOfItems) then
+                    ($link)
+                else
+                    ($link, ", ")
+    
+    return
+        <li><span
+                class="list-text">No file extensions</span>
+            <p>Formats: {$links}</p>
+        </li>
+};
+
 declare function fm:get-formats-without-mime-types() {
     
     let $list := $format:formats[not(mimeType) or mimeType = ""]

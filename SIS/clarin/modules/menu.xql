@@ -41,6 +41,12 @@ declare function menu:view() {
                 <tr>
                     <td width="10px"></td>
                     <td class="tdmenu">
+                        <a style="display:block" href="{app:link("views/list-extensions.xq")}">File Extensions</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="10px"></td>
+                    <td class="tdmenu">
                         <a style="display:block" href="{app:link("views/list-mimetypes.xq")}">Media Types</a>
                     </td>
                 </tr>
