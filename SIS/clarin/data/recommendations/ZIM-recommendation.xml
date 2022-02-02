@@ -102,10 +102,6 @@
             <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
-        <format id="fCSV">
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
         <format id="fHDF5">
             <domain>Lexical Resource</domain>
             <level>recommended</level>
