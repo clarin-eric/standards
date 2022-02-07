@@ -21,7 +21,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
             {menu:view()}
             <div class="content">                
                 <div class="navigation">&gt; <a href="{app:link("views/contact.xq")}">Contact</a></div>                
-                <div><span class="heading">Contact</span></div>
+                <div><span class="title">Contact</span></div>
                 
                 <div>If you have any question or feedback about the content of this website
                 or the <a href="{app:link("schemas/spec.xsd")}"> XML Schema</a> of the 

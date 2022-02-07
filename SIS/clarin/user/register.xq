@@ -37,7 +37,7 @@ return
     			{menu:view()}
     			<div class="content">
     			   <div class="navigation">&gt; <a href="register.xq">Registration</a></div>
-             		<div><span class="heading">User Registration</span></div>
+             		<div><span class="title">User Registration</span></div>
              		<div style="margin-bottom:20px;">
              		    <p> By registering to our website, you will have the privilege to download standard resources. 
               		        You can also participate in extending our <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">list of standards</a> 

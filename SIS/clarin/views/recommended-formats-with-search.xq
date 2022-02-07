@@ -12,7 +12,7 @@ let $centre := if ($reset) then () else request:get-parameter('centre', '')
 let $domainId := if ($reset) then () else request:get-parameter('domain', '')
 let $recommendationLevel := if ($reset) then () else request:get-parameter('level', '')
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
-let $export := request:get-parameter('exportButton', '')
+let $export := request:get-parameter('export', '')
 let $page := request:get-parameter('page', 1) 
 let $rows := rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
 let $recommendationTable := rf:paging($rows,$page)
@@ -61,7 +61,7 @@ else
                            of the SIS functional domains and levels of recommendation). Please 
                            <a href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">kindly help us get it right</a>.</p></div>
                     <div style="margin-top:30px;">
-                        <form id="searchRecommendation" style="float:left;" method="post" action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
+                        <form id="searchRecommendation" style="float:left;" method="get" action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
                             <table style="margin:0;">
                                 <tr>
                                     <td>
@@ -98,7 +98,7 @@ else
                     </div>
                     <div>
                         <form method="get" action="" style="text-align:right;">
-                            <input name="exportButton" class="button"
+                            <input name="export" class="button"
                             style="margin-bottom:5px; margin-right:2px; margin-top:20px; height:25px;width:165px;" type="submit" value="Export Table to XML"/>
                             <input name="centre" type="hidden" value="{$centre}"/>
                             <input name="domain" type="hidden" value="{$domainId}"/>

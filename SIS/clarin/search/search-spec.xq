@@ -38,7 +38,7 @@ return
                 <div class="navigation">
                     &gt; <a href="{app:link("search/search-spec.xq")}">Search Standards</a>
                 </div>
-                <div><span class="heading">Search for Standards</span></div>
+                <div><span class="title">Search for Standards</span></div>
      			<div>By default, given keyword(s) are matched to standard names. For an advanced search, you can specify the other optional fields.
      		    </div>
      			<form method="get" action="{xs:anyURI("search-spec.xq")}" style="margin-bottom:40px;">

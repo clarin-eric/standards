@@ -103,6 +103,11 @@ declare function menu:view() {
                 </tr>
                 <tr>
                     <td colspan="2" class="tdmenu">
+                        <a style="display:block" href="{app:link("views/api.xq")}">API</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="tdmenu">
                         <a style="display:block" href="{app:link("views/contact.xq")}">Contact</a>
                     </td>
                 </tr>

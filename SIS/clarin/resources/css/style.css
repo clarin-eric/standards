@@ -82,8 +82,18 @@ ul.column {
     margin-bottom:25px;
 }
 
+hr{
+    border: none;
+    border-top: 1px solid black;
+}
+
 .title {
 	font-size:22px;
+	font-weight:bold;
+}
+
+.subtitle {
+	font-size:18px;
 	font-weight:bold;
 }
 
