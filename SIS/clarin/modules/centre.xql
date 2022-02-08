@@ -15,30 +15,65 @@ declare function cm:get-centre($id) {
     centre:get-centre($id)
 };
 
-declare function cm:list-centre() {
+declare function cm:print-statuses($status){
+   let $statutes := centre:get-statutes()
+   for $s in $statutes
+   order by fn:lower-case($s)
+   return
+           if ($s eq $status)
+           then
+               (<option
+                   value="{$s}"
+                   selected="selected">{$s}</option>)
+           else
+               (<option
+                   value="{$s}">{$s}</option>)
+};
+
+declare function cm:list-centre($sortBy,$statusFilter) {
     for $c in $centre:centres
-    let $id := data($c/@id)
-    let $status-text := data($c/nodeInfo/ri/@status)
-    let $statuses :=
-    if (fn:contains($status-text, ","))
-    then
-        <span>{
-                for $status in fn:tokenize(data($c/nodeInfo/ri/@status), ",")
-                return
-                    ($status, <br/>)
-            }
-        </span>
-    else
-        $status-text
-    
-    order by fn:lower-case($id)
-    return
-        <tr>
-            <td class="recommendation-row"><a href="{app:link(concat("views/view-centre.xq?id=", $id))}">{$id}</a></td>
-            <td class="recommendation-row">{$c/name/text()}</td>
-            <td class="recommendation-row">{$c/nodeInfo/ri/text()}</td>
-            <td class="recommendation-row">{$statuses}</td>
-        </tr>
+        let $name := $c/name/text()
+        let $ri := $c/nodeInfo/ri/text()
+        let $id := data($c/@id)
+        let $status-text := data($c/nodeInfo/ri/@status)
+        let $statuses :=
+        if (fn:contains($status-text, ","))
+        then
+            <span>{
+                    for $status in fn:tokenize(data($c/nodeInfo/ri/@status), ",")
+                    return
+                        ($status, <br/>)
+                }
+            </span>
+        else
+            $status-text
+        
+        order by
+        
+        if ($sortBy eq 'name')
+        then fn:lower-case($name)
+        else if ($sortBy eq 'ri')
+        then fn:lower-case($ri)
+        else if ($sortBy eq 'id')
+        then (fn:lower-case($id))
+        else (fn:lower-case($id))
+        
+        return
+            if ($statusFilter)
+            then 
+                if ($statuses[.=$statusFilter])
+                then cm:print-centre-row($id, $name, $ri, $statuses)
+                else ()
+            else (cm:print-centre-row($id, $name, $ri, $statuses))
+};
+
+declare function cm:print-centre-row($id, $name, $ri, $statuses){
+    <tr>
+        <td class="recommendation-row"><a href="{app:link(concat("views/view-centre.xq?id=", $id))}">{$id}</a></td>
+        <td class="recommendation-row">{$name}</td>
+        <td class="recommendation-row">{$ri}</td>
+        <td class="recommendation-row">{$statuses}</td>
+    </tr>
 };
 
 declare function cm:print-recommendation-table($id, $sortBy) {
