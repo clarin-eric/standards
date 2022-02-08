@@ -258,6 +258,13 @@ th {
   border-bottom-width:1pt;
   border-bottom-color:black;
 }
+
+.row{
+    border-bottom:1px solid #DDDDDD; 
+    text-align:left; 
+    height:20px;
+}
+
 .tdmenu{
     padding-left:5px; border-bottom:1px solid #DDDDDD;
 }

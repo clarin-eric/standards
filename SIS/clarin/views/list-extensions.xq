@@ -27,15 +27,23 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                     &gt; <a href="{app:link("views/list-extensions.xq")}">File Extensions</a>
                 </div>
                 <div class="title">File Extensions</div>
-                  <div>
-                    <p>This is a provisional list of the file extensions registered with the particular formats. 
-                       The final section lists formats, for which file extensions have not been specified.</p>
-                  </div>
                 <div>
-                <ul style="padding:0px; margin-left:15px;">
-                    {fm:list-extensions()}
-                    {fm:get-formats-without-extensions()}
-                </ul>
+                    <p>This is a provisional list of the file extensions registered with the particular formats.
+                        The final section lists formats, for which file extensions have not been specified.</p>
+                    <table>
+                        <tr>
+                            <th>Extension</th>
+                            <th>Formats</th>
+                        </tr>
+                        {fm:list-extensions()}
+                    </table>
+                </div>
+                
+                <div>
+                    <span class="heading">Formats without file extensions</span>
+                    <ul style="padding:0px; margin-left:15px;">
+                        {fm:get-formats-without-extensions()}
+                    </ul>
                 </div>
             </div>
             <div class="footer">{app:footer()}</div>

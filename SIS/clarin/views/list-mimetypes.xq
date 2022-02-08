@@ -27,16 +27,23 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                     &gt; <a href="{app:link("views/list-mimetypes.xq")}">Media Types</a>
                 </div>
                 <div class="title">Media Types</div>
-                  <div>
-                    <p>This is a provisional list of the media types registered with the particular formats. 
-                       The final section lists formats, for which media types have not been specified.</p>
-                  </div>
                 <div>
-                <ul style="padding:0px; margin-left:15px;">
-                    {fm:list-mime-types()}
-                    {fm:get-formats-without-mime-types()}
-                </ul>
+                    <p>This is a provisional list of the media types registered with the particular formats.
+                        The final section lists formats, for which media types have not been specified.</p>
+                    <table>
+                        <tr>
+                            <th>Mime-type</th>
+                            <th>Formats</th>
+                        </tr>
+                        {fm:list-mime-types()}
+                    </table>
                 </div>
+                <div>
+                        <span class="heading">Formats without mime types</span>
+                        <ul style="padding:0px; margin-left:15px;">
+                            {fm:get-formats-without-mime-types()}
+                        </ul>
+                    </div>
             </div>
             <div class="footer">{app:footer()}</div>
         </div>
