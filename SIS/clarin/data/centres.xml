@@ -251,7 +251,7 @@
     <name>Eurac Research CLARIN Centre</name>
     <a href="https://centres.clarin.eu/centre/49"/>
     <nodeInfo>
-      <ri status="aiming-for-B">CLARIN</ri>
+      <ri status="C-centre aiming-for-B">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="FZJ">
