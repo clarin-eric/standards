@@ -1,0 +1,11 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fToolbox" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>SIL Toolbox</title>
+    <abbr>Toolbox</abbr>
+  </titleStmt>  
+  <info type="description">
+    <p>The file format used by <a href="https://software.sil.org/toolbox/">SIL Toolbox</a>.</p>
+  </info>
+  <mimeType>text/plain</mimeType>
+  <fileExt>.tbt</fileExt>
+</format>
