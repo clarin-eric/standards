@@ -1,0 +1,11 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fXHTML" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>EXtensible HyperText Markup Language</title>
+    <abbr>XHTML</abbr>
+  </titleStmt>  
+  <info type="description">
+    <p>XHTML (EXtensible HyperText Markup Language), developed by World Wide Consortium (W3C) in 2000, is the more extended version of the popular HTML.</p>
+  </info>
+  <mimeType>application/xhtml+xml</mimeType>
+  <fileExt>.html</fileExt>
+</format>
