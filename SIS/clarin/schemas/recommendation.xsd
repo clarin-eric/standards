@@ -69,7 +69,7 @@
     <xs:element name="a">
         <xs:complexType>
             <xs:simpleContent>
-                <xs:extension base="xs:NCName">
+                <xs:extension base="xs:string">
                     <xs:attribute name="href" use="required" type="xs:anyURI"/>
                 </xs:extension>
             </xs:simpleContent>
