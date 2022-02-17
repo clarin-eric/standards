@@ -13,15 +13,15 @@
         </format>
         <format id="fXML">
             <domain>Metadata</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format id="fCMDI">
             <domain>Metadata</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format id="fCSV">
             <domain>Metadata</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
             <comment>preferably with <a href="https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/">W3C Metadata for Tabular Data</a> annotations</comment>
         </format>
         <format id="fELAN">
@@ -30,24 +30,24 @@
         </format>
         <format id="fEXB">
             <domain>Audiovisual Annotation</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format id="fEXS">
             <domain>Audiovisual Annotation</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format id="fPraat">
             <domain>Audiovisual Annotation</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format id="fFlex">
             <domain>Audiovisual Annotation</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format id="fToolbox">
             <domain>Audiovisual Annotation</domain>
-            <level>accepted</level>
-            <comment>Toolbox files are still accepted, but the format itself has proven to be problematic and should be avoided if possible. </comment>
+            <level>acceptable</level>
+            <comment>Toolbox files are still acceptable, but the format itself has proven to be problematic and should be avoided if possible. </comment>
         </format>
         <format id="fTEISpoken">
             <domain>Audiovisual Annotation</domain>
@@ -95,11 +95,11 @@
         </format>
         <format id="fPNG">
             <domain>Contextual Data</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
         <format id="fJPEG">
             <domain>Contextual Data</domain>
-            <level>accepted</level>
+            <level>acceptable</level>
         </format>
     </formats>
 </recommendation> 
