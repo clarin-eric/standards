@@ -37,7 +37,15 @@
     </xs:element>
     <xs:element name="centre" type="xs:string"/>
     <xs:element name="domain" type="xs:string"/>
-    <xs:element name="level" type="xs:NCName"/>
+    <xs:element name="level">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="recommended"/>
+                <xs:enumeration value="acceptable"/>
+                <xs:enumeration value="deprecated"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
     <xs:element name="formats">
         <xs:complexType>
             <xs:sequence>
