@@ -18,16 +18,14 @@
             <xs:sequence>
                 <xs:element ref="title" minOccurs="0"/>
                 <xs:element ref="url" minOccurs="0"/>
-                <xs:element ref="date"/>
-                <xs:element ref="lastUpdate" minOccurs="0"/>
+                <xs:element ref="lastUpdateCommitID"/>
                 <xs:element ref="filter"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="title" type="xs:string"/>
     <xs:element name="url" type="xs:anyURI"/>
-    <xs:element name="date" type="xs:dateTime"/>
-    <xs:element name="lastUpdate" type="xs:dateTime"/>
+    <xs:element name="lastUpdateCommitID" type="xs:string"/>
     <xs:element name="filter">
         <xs:complexType>
             <xs:sequence>

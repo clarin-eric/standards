@@ -1,6 +1,6 @@
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <date>2021-11-11T12:13:34.974+01:00</date>
+        <lastUpdateCommitID>d1f360f088d8156eb9ad851f4349c0556cb0139f</lastUpdateCommitID>
         <filter>
          <centre>LAC</centre>
       </filter>
