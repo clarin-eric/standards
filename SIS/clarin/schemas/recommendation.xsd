@@ -36,7 +36,129 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="centre" type="xs:string"/>
-    <xs:element name="domain" type="xs:string"/>
+    <xs:element name="domain">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <!--Annotation-->
+                <xs:enumeration value="Audiovisual Annotation">
+                    <xs:annotation>
+                        <xs:documentation>Annotations of audiovisual sources, usually including a
+                            basic rendering of the spoken content (transcription) and sometimes
+                            further annotation.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Image Annotation">
+                    <xs:annotation>
+                        <xs:documentation>Annotations of image sources.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Text Annotation">
+                    <xs:annotation>
+                        <xs:documentation>Annotations of textual sources/written text, with the
+                            original text included or as stand-off.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <!--Data/Resource Description-->
+                <xs:enumeration value="Catalogue Metadata">
+                    <xs:annotation>
+                        <xs:documentation>Basic structured information for discoverability and
+                            general description, to be openly provided for
+                            harvesting.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Contextual Information">
+                    <xs:annotation>
+                        <xs:documentation>Structured information on the communicative event or text
+                            and its creators (i.e. participants or authors) relevant for
+                            analysis.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Documentation">
+                    <xs:annotation>
+                        <xs:documentation>Unstructured documentation of the resource and its parts
+                            such as corpus or annotation guidelines.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Metadata">
+                    <xs:annotation>
+                        <xs:documentation>Comprehensive structured information including
+                            descriptive, structural and administrative metadata. See the National
+                            Information Standards Organization primer on metadata for further
+                            hints.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <!--Databases-->
+                <xs:enumeration value="Geodata">
+                    <xs:annotation>
+                        <xs:documentation>Information on geographic locations.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Language Description">
+                    <xs:annotation>
+                        <xs:documentation>Structured or unstructured descriptions of linguistic
+                            varieties or phenomena, typological databases, etc.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Lexical Resource">
+                    <xs:annotation>
+                        <xs:documentation>Structured (item-based) resources for lexical and/or
+                            conceptual information on units of language (e.g. wordlists, lexicons,
+                            WordNets etc.)</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Statistical Data">
+                    <xs:annotation>
+                        <xs:documentation>Data from surveys and tests in numeric
+                            formats.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <!--Source Data-->
+                <xs:enumeration value="Audiovisual Source Language Data">
+                    <xs:annotation>
+                        <xs:documentation>Audio or video recordings providing spoken/multimodal or
+                            signed language data for research purposes.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Contextual Data">
+                    <xs:annotation>
+                        <xs:documentation>Images (photos or drawings) or documents relevant to the
+                            communicative event or text but not part of the source language
+                            data.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Image Source Language Data">
+                    <xs:annotation>
+                        <xs:documentation>Digitized images of analogue sources of written language
+                            data for research purposes (e.g. facsimiles, scans of handwriting,
+                            photos of inscriptions).</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Textual Source Language Data">
+                    <xs:annotation>
+                        <xs:documentation>Written unstructured/plain text or originally structured
+                            text (e.g. HTML) without linguistic or other mark-up added for research
+                            purposes.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <!--Uncategorized-->
+                <xs:enumeration value="Other">
+                    <xs:annotation>
+                        <xs:documentation>Any other function that cannot be included in an existing
+                            domain. The content of this domain will be periodically examined for
+                            potential patterns that may give rise to new domains.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Tool Support">
+                    <xs:annotation>
+                        <xs:documentation>Tool-related formats required for specific functionality
+                            of the tool or reliable reuse of resources (e.g. tagsets, annotation
+                            schemes, vocabularies, language models, parameter files, and other
+                            specifications or settings)</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
     <xs:element name="level">
         <xs:simpleType>
             <xs:restriction base="xs:string">
