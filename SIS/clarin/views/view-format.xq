@@ -73,6 +73,11 @@ return
                             <span id="nametext">{$format-name}</span>
                         </div>
                         
+                        <div style="float:right; text-align:right">
+                                <a href="{app:getGithubIssueLink($id)}" class="button" 
+                                    style="padding: 5px 5px 2px 5px;">suggest a fix or extension</a>
+                        </div>
+                        
                         <div>
                             <span class="heading">Abbreviation: </span>
                             <span id="abbrtext" class="heading">
@@ -114,8 +119,9 @@ return
                             <span class="heading">Description: </span>
                             <span id="desctext{$id}" class="desctext">{$format/info[@type = "description"]}</span>
                         </div>
-
+<!--
                         <div align="right"><p><a href="{app:getGithubIssueLink($id)}">[suggest a fix or extension]</a></p></div>
+      -->                  
                         {vfm:print-multiple-values($format/keyword, $id, "Keywords:")}
                         <!--The tag cloud of the standard related keywords -->
                         <div id="myCanvasContainer" style="border: 1px solid #DDDDDD; border-radius:3px; align:centre">
