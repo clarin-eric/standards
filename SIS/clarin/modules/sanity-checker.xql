@@ -100,18 +100,22 @@ declare function sc:get-similar-recommendations() {
                         
                         return 
                         if ($isDomainRepeated)
-                        then sc:list-similar-recommendations($centre,$same-domains)
+                        then 
+                        <div style="border: 1px solid black">{sc:list-similar-recommendations($centre,$same-domains)}</div>
                         else ()
                 else ()
 };
 
 declare function sc:list-similar-recommendations($centre, $formats){
     for $f in $formats
-    return 
+        let $comment := $f/comment/text()
+        return 
        <ul>
             <li>Centre : {$centre} <br/>
                    Format ID: {$f/data(@id)} <br/>
                    Domain: {$f/domain/text()} <br/>
-                   Recommendations: {$f/level/text()}</li>
+                   Recommendations: {$f/level/text()} <br/>
+                   Comment: {if($comment) then $comment else '[none]'}</li>
+
         </ul>
 };
