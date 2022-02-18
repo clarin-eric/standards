@@ -67,7 +67,7 @@ declare function fm:list-orphan-format-ids(){
 };
 
 declare function fm:count-missing-format-ids(){
-    let $format-ids := fn:distinct-values($recommendation:centres/formats/format/@id)
+    let $format-ids := data(fm:list-missing-format-ids())
     return count($format-ids)
 };
 
