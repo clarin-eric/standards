@@ -28,22 +28,34 @@ import module namespace sc = "http://clarin.ids-mannheim.de/standards/sanity-che
                 </div>
                 
                 <div class="title">Sanity checker for recommendation files</div>
-                
                 <div>
-                    <h2>Recommendations missing or having unknown domains</h2>
+                    <p>The role of this page is to signal potential and real problems that may have arisen 
+                    in the process of compiling recommendations or describing formats, etc..</p>
+                </div>
+                
+                {if (sc:get-recommendations-with-missing-or-unknown-domains()) then
+                <div>
+                    <h2>Recommendations with missing or invalid domains</h2>
                     {sc:get-recommendations-with-missing-or-unknown-domains()}
                 </div>
+                else ''}
                 
+                {if (sc:get-recommendations-with-missing-or-unknown-levels()) then
                 <div>
-                    <h2>Recommendations missing or having unknown levels</h2>
+                    <h2>Recommendations with missing or invalid levels</h2>
                     {sc:get-recommendations-with-missing-or-unknown-levels()}
                 </div>
+                else ''}
                 
+                {if (sc:get-similar-recommendations()) then
                 <div>
-                    <h2>Similar Recommendations</h2>
-                    {sc:get-similar-recommendations()}
+                    <h2>Recommendations that are similar</h2>
+                    <div>
+                    <p>Note that especially in this case, the similarity may be intended. Sets of 'similar' recommendations are marked with a frame.</p>
+                    </div>
+                {sc:get-similar-recommendations()}
                 </div>
-                
+                else ''}
                 </div>
             <div
                 class="footer">{app:footer()}</div>
