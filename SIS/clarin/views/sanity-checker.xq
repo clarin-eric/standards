@@ -13,7 +13,7 @@ import module namespace sc = "http://clarin.ids-mannheim.de/standards/sanity-che
 
 <html>
     <head>
-        <title>Recommendation sanity checker</title>
+        <title>Sanity checker</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
@@ -24,13 +24,13 @@ import module namespace sc = "http://clarin.ids-mannheim.de/standards/sanity-che
             {menu:view()}
             <div class="content">
                 <div class="navigation">
-                    &gt; <a href="{app:link("views/sanity-checker.xq")}">Recommendation Sanity Checker</a>
+                    &gt; <a href="{app:link("views/sanity-checker.xq")}">Sanity Checker</a>
                 </div>
                 
-                <div class="title">Sanity checker for recommendation files</div>
+                <div class="title">SIS sanity checker</div>
                 <div>
                     <p>The role of this page is to signal potential and real problems that may have arisen 
-                    in the process of compiling recommendations or describing formats, etc..</p>
+                    in the process of compiling recommendations or describing formats, etc.</p>
                 </div>
                 
                 {if (sc:get-recommendations-with-missing-or-unknown-domains()) then
@@ -51,7 +51,7 @@ import module namespace sc = "http://clarin.ids-mannheim.de/standards/sanity-che
                 <div>
                     <h2>Recommendations that are similar</h2>
                     <div>
-                    <p>Note that especially in this case, the similarity may be intended. Sets of 'similar' recommendations are marked with a frame.</p>
+                    <p>Note that, especially in this case, the similarity may be intended. Sets of 'similar' recommendations are marked with a frame.</p>
                     </div>
                 {sc:get-similar-recommendations()}
                 </div>
