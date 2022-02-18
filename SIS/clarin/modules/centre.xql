@@ -9,10 +9,26 @@ at "../model/recommendation-by-centre.xqm";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "domain.xql";
+import module namespace web="https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
 
 
 declare function cm:get-centre($id) {
     centre:get-centre($id)
+};
+
+declare function cm:getLastUpdateCommitId($id){
+    let $recommendation := recommendation:get-recommendations-for-centre($id)
+    let $commitId := $recommendation/header/lastUpdateCommitID/text()
+    let $githubLink := concat("https://github.com/clarin-eric/standards/commit/", $commitId)
+    let $short-commitId := fn:substring($commitId,1,8)
+    return <a href="{$githubLink}">{$short-commitId}</a>
+};
+
+
+declare function cm:getGithubCentreIssueLink($centre-id) {
+    let $ghLink := 'https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Suggestion regarding the recommendations of centre ID="' 
+    let $ghLink := concat($ghLink, $centre-id, '", webCommitId=',web:get-short-commitId())
+    return $ghLink
 };
 
 declare function cm:print-statuses($status){
@@ -83,10 +99,18 @@ declare function cm:print-recommendation-table($id, $sortBy) {
         if (count($recommendation/formats/format)>0)
         then
             (
-            <div>
+            <div style="margin-top: 30px;">
                 <span class="heading" id="recommendationTable">Recommendations: </span>
             </div>,
-            
+            <div style="margin-bottom: 30px;">
+                <span >Last update commit-id: </span>
+                <span id="commit-id">{cm:getLastUpdateCommitId($id)}</span>
+                <span style ="margin-left:10px;">
+                    <a href="{cm:getGithubCentreIssueLink($id)}" class="button" 
+                        style="padding: 5px 5px 2px 2px;">
+                        suggest a fix or extension</a>
+                </span>
+            </div>,
             <table cellspacing="4px" style="width:97%">
                 <tr>
                     <th class="header" style="width:15%;">
