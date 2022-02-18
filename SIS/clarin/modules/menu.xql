@@ -59,7 +59,7 @@ declare function menu:view() {
                 <tr>
                     <td width="10px"></td>
                     <td class="tdmenu">
-                        <a style="display:block" href="{app:link("views/sanity-checker.xq")}">Sanity Check</a>
+                        <a style="display:block" href="{app:link("views/sanity-check.xq")}">Sanity Check</a>
                     </td>
                 </tr>
                 <tr>

@@ -11,9 +11,14 @@ import module namespace sc = "http://clarin.ids-mannheim.de/standards/sanity-che
     @author margaretha
 :)
 
+let $recommendations-strange-domains := sc:get-recommendations-with-missing-or-unknown-domains()
+let $recommendations-strange-levels := sc:get-recommendations-with-missing-or-unknown-levels()
+let $similar-recommendations := sc:get-similar-recommendations()
+return
+
 <html>
     <head>
-        <title>Sanity checker</title>
+        <title>Sanity check</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
@@ -24,36 +29,37 @@ import module namespace sc = "http://clarin.ids-mannheim.de/standards/sanity-che
             {menu:view()}
             <div class="content">
                 <div class="navigation">
-                    &gt; <a href="{app:link("views/sanity-checker.xq")}">Sanity Checker</a>
+                    &gt; <a href="{app:link("views/sanity-check.xq")}">Sanity Check</a>
                 </div>
                 
-                <div class="title">SIS sanity checker</div>
+                <div class="title">SIS sanity check</div>
                 <div>
                     <p>The role of this page is to signal potential and real problems that may have arisen 
                     in the process of compiling recommendations or describing formats, etc.</p>
                 </div>
                 
-                {if (sc:get-recommendations-with-missing-or-unknown-domains()) then
+                {if ($recommendations-strange-domains) then
                 <div>
                     <h2>Recommendations with missing or invalid domains</h2>
-                    {sc:get-recommendations-with-missing-or-unknown-domains()}
+                    {$recommendations-strange-domains}
                 </div>
                 else ''}
                 
-                {if (sc:get-recommendations-with-missing-or-unknown-levels()) then
+                {if ($recommendations-strange-levels) then
                 <div>
                     <h2>Recommendations with missing or invalid levels</h2>
-                    {sc:get-recommendations-with-missing-or-unknown-levels()}
+                    {$recommendations-strange-levels}
                 </div>
                 else ''}
                 
-                {if (sc:get-similar-recommendations()) then
+                {if ($similar-recommendations) then
                 <div>
                     <h2>Recommendations that are similar</h2>
                     <div>
-                    <p>Note that, especially in this case, the similarity may be intended. Sets of 'similar' recommendations are marked with a frame.</p>
+                    <p>Note that, especially in this case, the similarity may be intended. Sets of 'similar' 
+                    recommendations are marked with a frame.</p>
                     </div>
-                {sc:get-similar-recommendations()}
+                {$similar-recommendations}
                 </div>
                 else ''}
                 </div>
