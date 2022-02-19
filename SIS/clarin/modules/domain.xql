@@ -18,6 +18,24 @@ declare function dm:get-domain-by-name($name as xs:string) {
     domain:get-domain-by-name($name)
 };
 
+declare function dm:get-id-by-name($name as xs:string){
+    domain:get-id-by-name($name)
+};
+
+(: get the name of the metadomain by passing a domain name or a domain ID :)
+declare function dm:get-metadomain($nameOrId as xs:string){
+       domain:get-metadomain($nameOrId) 
+};
+
+(: return a sequence of full domain nodes by passing the name of a metadomain, e.g. 'Annotation' :)
+declare function dm:get-domains-by-metadomain($name as xs:string){
+    domain:get-domains-by-metadomain($name)
+};
+
+declare function dm:get-domain-names-by-metadomain($name as xs:string){
+    domain:get-domains-by-metadomain($name)/name
+};
+
 
 (: Generate the list of domains for the particular group :)
 declare function dm:list-domains($group as xs:string) {
@@ -49,3 +67,4 @@ declare function dm:list-domains-grouped() {
                 style="padding-left:15px">{dm:list-domains($group)}</ul>
         </li>
 };
+
