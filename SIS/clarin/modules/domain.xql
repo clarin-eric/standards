@@ -40,13 +40,15 @@ declare function dm:get-domain-names-by-metadomain($name as xs:string){
 (: Generate the list of domains for the particular group :)
 declare function dm:list-domains($group as xs:string) {
     for $domain in $domain:domains[@orderBy eq $group]
-    let $domain-id := $domain/@id
-    let $domain-name := $domain/name/text()
-    let $domain-snippet := $domain/desc
+       let $domain-id := $domain/@id
+       let $domain-name := $domain/name/text()
+       let $domain-snippet := $domain/desc
+       let $recommendation-link := app:link(concat("views/recommended-formats-with-search.xq?domain=",
+        $domain-id,"#searchRecommendation"))
         order by $domain-name
     return
         <li>
-            <span class="list-text">{$domain-name}</span>
+            <span class="list-text"><a href="{$recommendation-link}">{$domain-name}</a></span>
             {app:create-copy-button($domain-id,$domain-name,"Copy name to clipboard", "copied")}
             <span
                 id="{$domain-id}"
