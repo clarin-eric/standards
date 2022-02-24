@@ -40,7 +40,7 @@ declare function dm:get-domain-names-by-metadomain($name as xs:string){
 (: Generate the list of domains for the particular group :)
 declare function dm:list-domains($group as xs:string) {
     for $domain in $domain:domains[@orderBy eq $group]
-    let $domain-id := $domain/@id (: this is now always empty :)
+    let $domain-id := $domain/@id
     let $domain-name := $domain/name/text()
     let $domain-snippet := $domain/desc
         order by $domain-name
