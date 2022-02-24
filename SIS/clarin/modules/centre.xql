@@ -105,9 +105,9 @@ declare function cm:print-recommendation-table($id, $sortBy) {
             <div style="margin-bottom: 30px;">
                 <span >Last update commit-id: </span>
                 <span id="commit-id">{cm:getLastUpdateCommitId($id)}</span>
-                <span style ="margin-left:10px;">
+                <span style ="float:right;">
                     <a href="{cm:getGithubCentreIssueLink($id)}" class="button" 
-                        style="padding: 5px 5px 2px 2px;">
+                        style="padding: 5px 5px 2px 5px; color:darkred; border-color:darkred">
                         suggest a fix or extension</a>
                 </span>
             </div>,

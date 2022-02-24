@@ -75,7 +75,8 @@ return
                         
                         <div style="float:right; text-align:right">
                                 <a href="{app:getGithubIssueLink($id)}" class="button" 
-                                    style="padding: 5px 5px 2px 5px;">suggest a fix or extension</a>
+                                    style="padding: 5px 5px 2px 5px; color:darkred; border-color:darkred">
+                                    suggest a fix or extension</a>
                         </div>
                         
                         <div>
