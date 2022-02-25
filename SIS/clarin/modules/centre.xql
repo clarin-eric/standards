@@ -92,50 +92,8 @@ declare function cm:print-centre-row($id, $name, $ri, $statuses){
     </tr>
 };
 
-declare function cm:print-recommendation-table($id, $sortBy) {
-    let $recommendation := recommendation:get-recommendations-for-centre($id)
-    let $path := concat('/db/apps/clarin/data/recommendations', $id, "-recommendation.xml")
-    return
-        if (count($recommendation/formats/format)>0)
-        then
-            (
-            <div style="margin-top: 30px;">
-                <span class="heading" id="recommendationTable">Recommendations: </span>
-            </div>,
-            <div style="margin-bottom: 30px;">
-                <span >Last update commit-id: </span>
-                <span id="commit-id">{cm:getLastUpdateCommitId($id)}</span>
-                <span style ="float:right;">
-                    <a href="{cm:getGithubCentreIssueLink($id)}" class="button" 
-                        style="padding: 5px 5px 2px 5px; color:darkred; border-color:darkred">
-                        suggest a fix or extension</a>
-                </span>
-            </div>,
-            <table cellspacing="4px" style="width:97%">
-                <tr>
-                    <th class="header" style="width:15%;">
-                        <a href="{
-                                    app:link(concat("views/view-centre.xq?id=", $id, "&amp;sortBy=format#recommendationTable"))
-                                }">Format</a>
-                    </th>
-                    <th class="header" style="width:30%;">
-                        <a href="{
-                                    app:link(concat("views/view-centre.xq?id=", $id, "&amp;sortBy=domain#recommendationTable"))
-                                }">Domain</a></th>
-                    <th class="header" style="width:15%;">
-                        <a href="{
-                                    app:link(concat("views/view-centre.xq?id=", $id, "&amp;sortBy=recommendation#recommendationTable"))
-                                }">
-                            Level</a></th>
-                    <th class="header" style="width:40%;">
-                        Comments
-                    </th>
-                </tr>
-                {cm:print-recommendation-rows($recommendation, $id, $sortBy)}
-            </table>
-            )
-        else
-            ()
+declare function cm:get-recommendations($id) {
+    recommendation:get-recommendations-for-centre($id)
 };
 
 declare function cm:print-recommendation-rows($recommendation, $centre-id, $sortBy) {

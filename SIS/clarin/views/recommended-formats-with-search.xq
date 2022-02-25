@@ -19,7 +19,8 @@ let $recommendationTable := rf:paging($rows,$page)
 
 return
 if ($export)
-then (rf:export-table($centre, $domainId, $recommendationLevel, $recommendationTable,"format-recommendation.xml"))
+then (rf:export-table($centre, $domainId, $recommendationLevel, $recommendationTable,
+    "format-recommendation.xml","views/recommended-formats-with-search.xq"))
 else 
 
     <html>

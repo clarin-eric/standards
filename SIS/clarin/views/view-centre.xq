@@ -7,6 +7,8 @@ declare option exist:serialize "method=xhtml media-type=text/html indent=yes doc
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
+import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
+
 
 (: Define centre page 
    @author margaretha
@@ -15,9 +17,9 @@ import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-mod
 
 
 let $id := request:get-parameter('id', '')
-let $domain := request:get-parameter('domain', '')
 let $recommendationType := request:get-parameter('type', '')
 let $sortBy := request:get-parameter('sortBy', '')
+let $export := request:get-parameter('export', '')
 
 let $centre := cm:get-centre($id)
 let $centre-name := $centre/name/text()
@@ -25,7 +27,14 @@ let $centre-link := data($centre/a/@href)
 let $centre-info := $centre/info
 let $centre-ri := $centre/nodeInfo/ri
 
+let $recommendation := cm:get-recommendations($id)
+let $recommendationRows := rf:print-centre-recommendation($id,"", "", $sortBy)
+let $exportFilename := concat($id,"-recommendation.xml")
+
 return
+if ($export)
+then (rf:export-table($id, "", "", $recommendationRows,$exportFilename, "views/view-centre.xq"))
+else 
     
     <html>
         <head>
@@ -74,7 +83,60 @@ return
                                 else
                                     ()
                             }
-                            {cm:print-recommendation-table($id,$sortBy)}
+                            
+                            {
+                                if (count($recommendation/formats/format)>0)
+                                then (
+                                    <div style="margin-top: 30px;">
+                                     <span class="heading" id="recommendationTable">Recommendations: </span>
+                                    </div>,
+                                    
+                                    <div>
+                                     <span >Last update commit-id: </span>
+                                     <span id="commit-id">{cm:getLastUpdateCommitId($id)}</span>
+                                     <span style="float: right;">
+                                         <a href="{cm:getGithubCentreIssueLink($id)}" class="button" 
+                                             style="margin-left:5px; padding: 5px 5px 2px 5px; height:25px;
+                                             color:darkred; border-color:darkred">
+                                             Suggest a fix or extension</a>
+                                     </span>
+                                     </div>,
+                                     
+                                     <div>
+                                        <form method="get" action="" style="float: right;">
+                                              <input name="export" class="button"
+                                              style="margin-bottom:5px; height:25px;width:165px;" 
+                                              type="submit" value="Export table to XML"/>
+                                              <input name="id" type="hidden" value="{$id}"/>
+                                              <input name="sortBy" type="hidden" value="{$sortBy}"/>
+                                       </form>
+                                    </div>
+                                     ,
+                                    <table cellspacing="4px" style="width:97%">
+                                     <tr>
+                                         <th class="header" style="width:15%;">
+                                             <a href="{
+                                                         app:link(concat("views/view-centre.xq?id=", $id, "&amp;sortBy=format#recommendationTable"))
+                                                     }">Format</a>
+                                         </th>
+                                         <th class="header" style="width:30%;">
+                                             <a href="{
+                                                         app:link(concat("views/view-centre.xq?id=", $id, "&amp;sortBy=domain#recommendationTable"))
+                                                     }">Domain</a></th>
+                                         <th class="header" style="width:15%;">
+                                             <a href="{
+                                                         app:link(concat("views/view-centre.xq?id=", $id, "&amp;sortBy=recommendation#recommendationTable"))
+                                                     }">
+                                                 Level</a></th>
+                                         <th class="header" style="width:40%;">
+                                             Comments
+                                         </th>
+                                     </tr>
+                                     {cm:print-recommendation-rows($recommendation, $id, $sortBy)}
+                                    </table>
+                                    )
+                                else ()
+                            }
                         </div>
                     else
                         <div class="content">

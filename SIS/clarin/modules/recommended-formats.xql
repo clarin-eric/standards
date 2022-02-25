@@ -291,7 +291,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
         </tr>
 };
 
-declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $filename) {
+declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $filename, $page) {
     let $domain := dm:get-domain($domainId)
     let $domainName := $domain/name/text()
     let $filter :=
@@ -341,8 +341,7 @@ declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $f
         <recommendation>
             <header>
                 <title>CLARIN Standards Information System (SIS) export</title>
-                <url>{app:link("views/recommended-formats-with-search.xq")}</url>
-                <date>{fn:current-dateTime()}</date>
+                <url>{app:link($page)}</url>
                 <filter>{$filter}</filter>
             </header>
             <formats>{$rows}</formats>
