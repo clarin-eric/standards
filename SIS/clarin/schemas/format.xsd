@@ -500,7 +500,13 @@
             </xs:simpleContent>
         </xs:complexType>
     </xs:element>
-    <xs:element name="formatFamily" type="xs:token"/>
+    <xs:element name="formatFamily" type="xs:token">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">Hooks the given format in a tree/graph representing the
+                hierarchy of formats as seen from the formal (as opposed to functional) point of
+                view.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
     <xs:element name="extId">
         <xs:annotation>
             <xs:documentation xml:lang="en">External IDs point to items in external reference lists
