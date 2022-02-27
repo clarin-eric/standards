@@ -16,17 +16,37 @@
     <xs:element name="header">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="title" minOccurs="0"/>
-                <xs:element ref="url" minOccurs="0"/>
-                <xs:element ref="lastUpdateCommitID"/>
-                <xs:element ref="filter"/>
+                <xs:element ref="title" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="url" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="lastUpdateCommitID" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="exportDate" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="filter" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="title" type="xs:string"/>
-    <xs:element name="url" type="xs:anyURI"/>
-    <xs:element name="lastUpdateCommitID" type="xs:string"/>
+    <xs:element name="url" type="xs:anyURI">
+        <xs:annotation>
+            <xs:documentation>Element inserted into exports, to document where they came from.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="lastUpdateCommitID" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>Element auto-inserted upon committing the file into the repository. It
+                will not appear in exports from aggregated lists in the SIS.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="exportDate" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>Element present in exports from the SIS; it encodes a standardized
+                date string of the export.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
     <xs:element name="filter">
+        <xs:annotation>
+            <xs:documentation>Element present in exports from aggregated and filtered lists in the
+                SIS.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="centre" minOccurs="0"/>
