@@ -98,7 +98,7 @@
             <domain>Statistical Data</domain>
             <level>recommended</level>
         </format>
-        <format id="fCoNNL">
+        <format id="fCoNLL-U">
             <domain>Text Annotation</domain>
             <level>recommended</level>
         </format>
