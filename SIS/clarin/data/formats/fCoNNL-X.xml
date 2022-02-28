@@ -1,0 +1,25 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCoNLL-X" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>CoNLL-X</title>
+    <abbr>CoNLL-X</abbr>
+  </titleStmt>
+  
+  <keyword>annotation format</keyword>
+  <keyword>corpus encoding</keyword>
+  
+  <!--<extId type=""></extId>-->
+  
+  <info type="description">
+    <p>CoNLL-X expands into "10th Conference on Computational Natural Language Learning (CoNLL-X)",
+      which is the name of the conference where this format was used for a shared task on
+      Multilingual Dependency Parsing, see <a href="https://aclanthology.org/W06-2920.pdf">Buchholz and Marsi, 2006</a>. It can be
+      considered to have been superseded by <a href="../views/view-format.xq?id=fCoNLL-U"
+        >CoNLL-U</a>, the base format of <a href="https://universaldependencies.org/format.html"
+        >Universal Dependencies</a>.</p>
+  </info>
+  <!--<relation target="Spec..." type="isDefinedBy"/>
+   -->
+<!--  <mimeType>text/plain</mimeType>
+  <fileExt>.conll</fileExt>-->
+  <formatFamily>CoNNL</formatFamily>
+</format>
