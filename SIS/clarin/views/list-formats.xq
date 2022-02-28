@@ -29,15 +29,18 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                 <div class="title">Data Deposition Formats</div>
                 <div>
                     <p>This page lists both the formats that are referenced in centre recommendations, and those that are defined in the SIS. Ideally,
-                        the latter set should properly contain the former, but because the aim of the SIS is to reflect the <i>current</i> recommendations, and
+                        the latter set should properly contain the former, but the aim of the SIS is to reflect the <i>current</i> recommendations, and
                         these are meant to be created in a dynamic fashion, as needed and as dictated by the evolving technological context. Therefore, this page
                         is divided into three sections: (a) formats that are referenced in recommendations but are not yet defined in the SIS, (b) formats
-                        defined in the SIS but not referenced in recommendations, and (c) (properly containing (b)) formats defined in the SIS, together with
-                        some basic details about them.</p>
+                        defined in the SIS but not referenced in recommendations, and (c) (properly containing (b)) formats defined in the SIS. The last list 
+                        provides some additional basic details.</p>
                 </div>
                 <div id="missing">
                     <h2>List of missing formats by ID ({fm:count-missing-format-ids()}): </h2>
-                    <p>Clicking on an ID below will open a pre-configured GitHub issue where you can suggest the content of the format description.</p>
+                    <p>These formats are referenced by centre recommendations, but not yet described in the SIS. Clicking on an ID 
+                    below will open a pre-configured GitHub issue where you can suggest the content of the format description.</p>
+                    <p>The list is also part of the sanity checking functionality: it may happen that some recommendation has a 
+                    typo in the format ID, and then it will show up here.</p>
                     <div>
                         <ul class="column" style="padding:0px; margin-left:15px;">
                             {fm:list-missing-format-ids()}
@@ -46,9 +49,9 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                 </div>
                 <div id="unreferenced">
                     <h2>Existing format descriptions not referenced by any recommendation ({fm:count-orphan-format-ids()}): </h2>
-                    <p>Note that membership in this list does not automatically indicate an error. Recommendations may change, and
-                        we may sometimes want to describe "unspecified" versions of formats, while their particular variants are
-                        used in recommendations (because finer granularity is usually better).</p>
+                    <p>Note that membership in this list does not automatically indicate an error. Recommendations may change and leave "stray" 
+                       formats unused, and we may sometimes want to merely describe "unspecified" versions of formats, while their 
+                       particular variants are used in recommendations (because finer granularity is nearly always better).</p>
                     <div>
                         <ul class="column" style="padding:0px; margin-left:15px;">
                             {fm:list-orphan-format-ids()}
@@ -63,7 +66,8 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                         containing suggested text or corrections, or by editing or adding the relevant
                         <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">format file</a> and submitting a pull request).</p>
                     
-                    <p>By clicking on the icon next to the format name, you can copy the format ID, useful for editing or adding centre recommendations.</p>
+                    <p>By clicking on the icon next to the format name, you can copy the format ID, which may be useful for editing or adding 
+                       centre recommendations.</p>
                     
                     <ul style="padding:0px; margin-left:15px;">
                         {fm:list-formats()}
