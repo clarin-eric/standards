@@ -14,6 +14,7 @@
       <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
     <p>I5 is a serialization of the TEI P5 Document Grammar for the IDS Text Model. See <a href="http://jtei.revues.org/508">Harald Lüngen, and C. M. Sperberg-McQueen (2012): A TEI P5
       Document Grammar for the IDS Text Model. In: Journal of the Text Encoding Initiative (2012), H. 3.</a></p>
+    <p>Documentation: <a href="https://www.ids-mannheim.de/en/digspra/corpus-linguistics/projects/corpus-development/ids-text-model/">https://www.ids-mannheim.de/en/digspra/corpus-linguistics/projects/corpus-development/ids-text-model/</a></p>
   </info>
   <!--<relation target="Spec..." type="isDefinedBy"/>
    -->
