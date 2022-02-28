@@ -35,7 +35,9 @@ return
                 <div class="title">SIS sanity check</div>
                 <div>
                     <p>The role of this page is to signal potential and real problems that may have arisen 
-                    in the process of compiling recommendations or describing formats, etc.</p>
+                    in the process of compiling recommendations or describing formats, etc. Feel welcome 
+                    to <a href="https://github.com/clarin-eric/standards/issues/115">share your ideas</a> 
+                    on what else may be useful here.</p>
                 </div>
                 
                 {if ($recommendations-strange-domains) then
