@@ -5,5 +5,12 @@
          <centre>CLARIN-PL1</centre>
       </filter>
     </header>
-    <formats/>
+    <formats>
+    <!--
+        <format id="null">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+    -->
+    </formats>
 </recommendation>
