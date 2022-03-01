@@ -1,6 +1,6 @@
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>e49e196f4e2a905e74f0060478de91d05c8e7a70</lastUpdateCommitID>
+        <lastUpdateCommitID>00fb8bd39cea8db57619a65f8f738364ce84dfef</lastUpdateCommitID>
         <filter>
          <centre>CLARIN.SI</centre>
       </filter>

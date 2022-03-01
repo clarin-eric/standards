@@ -1,6 +1,6 @@
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>54ebb3374f62212c4a0b9ba9fc7915e9b6f32ea8</lastUpdateCommitID>
+        <lastUpdateCommitID>769a30e1aa1d88ca6ff632af0047b829055fbe76</lastUpdateCommitID>
         <filter>
          <centre>EKUT</centre>
       </filter>
