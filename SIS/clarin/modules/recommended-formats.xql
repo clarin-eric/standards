@@ -349,3 +349,26 @@ declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $f
         </recommendation>
 
 };
+
+declare function rf:download-template($centre-id,$filename){
+    let $quote := "&#34;"
+    let $header1 := response:set-header("Content-Disposition", concat("attachment; filename=",
+    $quote, $filename, $quote))
+    let $header2 := response:set-header("Content-Type", "text/xml;charset=utf-8")
+    let $recommendation := recommendation:get-recommendations-for-centre($centre-id)
+
+    return 
+    
+        <recommendation xsi:noNamespaceSchemaLocation="https://clarin.ids-mannheim.de/standards/schemas/recommendation.xsd">
+            <header>
+                <title>CLARIN Standards Information System (SIS) export</title>
+                <url>{app:link(concat("/views/view-centre.xq?id=",$centre-id))}</url>
+                <exportDate>{fn:current-dateTime()}</exportDate>
+                <filter>
+                   <centre>ACE</centre>
+                </filter>
+            </header>
+            {$recommendation/formats}    
+        </recommendation>
+};
+

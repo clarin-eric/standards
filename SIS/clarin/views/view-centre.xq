@@ -20,6 +20,7 @@ let $id := request:get-parameter('id', '')
 let $recommendationType := request:get-parameter('type', '')
 let $sortBy := request:get-parameter('sortBy', '')
 let $export := request:get-parameter('export', '')
+let $template := request:get-parameter('template', '')
 
 let $centre := cm:get-centre($id)
 let $centre-name := $centre/name/text()
@@ -34,6 +35,8 @@ let $exportFilename := concat($id,"-recommendation.xml")
 return
 if ($export)
 then (rf:export-table($id, "", "", $recommendationRows,$exportFilename, "views/view-centre.xq"))
+else if ($template)
+then (rf:download-template($id,$exportFilename))
 else 
     
     <html>
@@ -57,6 +60,14 @@ else
                                 &gt; <a href="{app:link(concat("views/view-centre.xq?id=", $id))}">{$centre-name}</a>
                             </div>
                             <div class="title">{$centre-name}</div>
+                            <div style="float:right;">
+                                <span>
+                                    <a href="{cm:getGithubCentreIssueLink($id)}" class="button" 
+                                        style="margin-left:5px; padding: 5px 5px 2px 5px; height:25px;
+                                        color:darkred; border-color:darkred">
+                                        Suggest a fix or extension</a>
+                                </span>
+                            </div>
                             <div>
                                 <span class="heading">Abbreviation: </span>
                                 <span id="abbrtext" class="heading">{$id}</span>
@@ -87,22 +98,9 @@ else
                             {
                                 if (count($recommendation/formats/format)>0)
                                 then (
-                                    <div style="margin-top: 30px;">
-                                     <span class="heading" id="recommendationTable">Recommendations: </span>
-                                    </div>,
-                                    
                                     <div>
-                                     <span >Last update commit-id: </span>
-                                     <span id="commit-id">{cm:getLastUpdateCommitId($id)}</span>
-                                     <span style="float: right;">
-                                         <a href="{cm:getGithubCentreIssueLink($id)}" class="button" 
-                                             style="margin-left:5px; padding: 5px 5px 2px 5px; height:25px;
-                                             color:darkred; border-color:darkred">
-                                             Suggest a fix or extension</a>
-                                     </span>
-                                     </div>,
-                                     
-                                     <div>
+                                        <span class="heading" id="recommendationTable">Recommendations: </span>
+                                    
                                         <form method="get" action="" style="float: right;">
                                               <input name="export" class="button"
                                               style="margin-bottom:5px; height:25px;width:165px;" 
@@ -134,8 +132,24 @@ else
                                      </tr>
                                      {cm:print-recommendation-rows($recommendation, $id, $sortBy)}
                                     </table>
+                                    ,
+                                    <div style="text-align:right;">
+                                        <span >Last update commit-id: </span>
+                                        <span id="commit-id">{cm:getLastUpdateCommitId($id)}</span>
+                                    </div>
                                     )
-                                else ()
+                                else (
+                                    <div>
+                                        <span class="heading" id="recommendationTable">Recommendations: </span>
+                                        <span>not available</span>
+                                        <form method="get" action="" style="float: right;">
+                                              <input name="template" class="button"
+                                              style="margin-bottom:5px; height:25px;width:165px;" 
+                                              type="submit" value="Download template"/>
+                                              <input name="id" type="hidden" value="{$id}"/>
+                                       </form>
+                                    </div>
+                                )
                             }
                         </div>
                     else
