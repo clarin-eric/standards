@@ -338,10 +338,11 @@ declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $f
     let $header2 := response:set-header("Content-Type", "text/xml;charset=utf-8")
     
     return
-        <recommendation>
+        <recommendation xsi:noNamespaceSchemaLocation="https://clarin.ids-mannheim.de/standards/schemas/recommendation.xsd">
             <header>
                 <title>CLARIN Standards Information System (SIS) export</title>
                 <url>{app:link($page)}</url>
+                <exportDate>{fn:current-dateTime()}</exportDate>
                 <filter>{$filter}</filter>
             </header>
             <formats>{$rows}</formats>
