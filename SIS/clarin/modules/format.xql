@@ -205,3 +205,13 @@ declare function fm:get-formats-without-mime-types() {
         return <li>{$link}</li>
     
 };
+
+declare function fm:get-format-families(){
+    for $format in $format:formats
+    return
+        <tr>
+            <td class="row">{data($format/@id)}</td>
+            <td class="row">{$format/formatFamily}</td>
+        </tr>
+        
+};
