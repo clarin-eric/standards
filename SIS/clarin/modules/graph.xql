@@ -77,10 +77,10 @@ declare function graph:get-color($relations, $relation){
 
 (: Get all the relation links of a group of spec (e.g. for creating a relation 
    graph of 20 specs) :)
-declare function graph:get-relation($spec-ids,$specs,$spec-group,$relations){                    
-    
+declare function graph:get-relation($specs,$spec-relations,$relations){                    
+    let $spec-ids := $specs/@id
     let $results :=    
-        for $spec-relation in $spec-group/descendant-or-self::relation
+        for $spec-relation in $spec-relations
             let $spec-id := $spec-relation/ancestor-or-self::spec/@id[1]
             let $spec-index := fn:index-of($spec-ids,data($spec-id))-1
             

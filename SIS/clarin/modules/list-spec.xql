@@ -156,22 +156,24 @@ declare function lsm:list-specs($spec-group as item()*, $sortBy as xs:string, $l
 };
 
 (: Create a json object for relation graph among a spec-group :)
-declare function lsm:get-spec-json($spec-group){    
+declare function lsm:get-spec-json($spec-group,$spec-relations){    
+    let $target-specs :=
+        for $spec-relation in $spec-relations
+               let $target := $spec-relation/@target
+               let $targetnode := $lsm:specs[@id=$target]
+               return 
+                   if ($targetnode) then $targetnode
+                   else $lsm:specs[descendant-or-self::node()/@id=$target]
     
-    let $target-ids :=
-        for $spec-relation in $spec-group/descendant-or-self::relation
-            let $target := $spec-relation/@target
-            let $targetnode := $lsm:specs/descendant-or-self::*[@id=$target]
-            let $targetid := $targetnode/ancestor-or-self::spec/@id
-        return $targetid
+    let $reduced-target-specs := 
+        for $id in functx:value-except($target-specs/@id,$spec-group/@id)
+        return $target-specs[@id=$id]
     
-    let $spec-ids := functx:value-union($spec-group/@id,$target-ids)
-    
-    let $extended-specs := for $id in $spec-ids return spec:get-spec($id)
+    let $extended-specs := ($spec-group,$reduced-target-specs)    
     
     let $nodes := string-join( for $spec in $extended-specs return graph:create-spec-node($spec) , ",")
     
-    let $links := string-join(graph:get-relation($spec-ids,$extended-specs, $spec-group, $lsm:relations),",")
+    let $links := string-join(graph:get-relation($extended-specs, $spec-relations, $lsm:relations),",")
     
     let $json := concat("{", 
         graph:write-json-array("nodes", $nodes) ,",",
@@ -183,10 +185,10 @@ declare function lsm:get-spec-json($spec-group){
 };
 
 (: Create a legend for the standard relation graph :)
-declare function lsm:get-legend($spec-group){
+declare function lsm:get-legend($spec-relations){
 
     let $relations := fn:distinct-values(
-        for $spec-relation in $spec-group/descendant-or-self::relation
+        for $spec-relation in $spec-relations
         order by $spec-relation/@type
         return data($spec-relation/@type) 
     )
