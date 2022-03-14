@@ -206,12 +206,16 @@ declare function fm:get-formats-without-mime-types() {
     
 };
 
-declare function fm:get-format-families(){
+declare function fm:get-format-families($sortBy){
     for $format in $format:formats
+    let $id := data($format/@id)
+    let $ff := $format/formatFamily
+    let $order := if ($sortBy eq "ff") then $ff else $id
+    order by fn:lower-case($order)
     return
         <tr>
-            <td class="row">{data($format/@id)}</td>
-            <td class="row">{$format/formatFamily}</td>
+            <td class="row">{$id}</td>
+            <td class="row">{$ff}</td>
         </tr>
         
 };

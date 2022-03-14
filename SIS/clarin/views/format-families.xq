@@ -7,8 +7,8 @@ import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-module" at "../modules/format.xql";
 
-
-
+let $sortBy := request:get-parameter('sortBy', '')
+return
 <html>
     <head>
         <title>Format Families</title>
@@ -26,10 +26,10 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                 <div class="navigation">&gt; <a href="{app:link("views/format-families.xq")}">Format Families</a>
                     <table>
                         <tr>
-                            <th>Format</th>
-                            <th>Format Family</th>
+                            <th><a href="{app:link("views/format-families.xq?sortBy=id")}">Format</a></th>
+                            <th><a href="{app:link("views/format-families.xq?sortBy=ff")}">Format Family</a></th>
                         </tr>
-                        {fm:get-format-families()}
+                        {fm:get-format-families($sortBy)}
                     </table>
                 </div>
             </div>
