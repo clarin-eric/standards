@@ -11,7 +11,7 @@ declare function format:get-format($id as xs:string){
 
 (: Select a format by abbr :)
 declare function format:get-format-by-abbr($abbr as xs:string){
-    $format:formats/titleStmt[abbr=$abbr]
+    $format:formats[titleStmt/abbr=$abbr]
 };
 
 declare function format:get-all-ids(){

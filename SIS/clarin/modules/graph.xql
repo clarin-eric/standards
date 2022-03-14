@@ -32,9 +32,15 @@ declare function graph:write-json-array($key, $value){
 (: Create a graph node containing information about the node name, 
    the node link and the node size :)
 declare function graph:create-node($node-name, $node-link, $node-size){
+    let $link :=
+        if ($node-link)
+        then (graph:write-json-pair("reflink", app:link($node-link)))
+        else ()
+    return 
     concat("{", 
             graph:write-json-pair("name", $node-name) ,",",
-            graph:write-json-pair("reflink", app:link($node-link)) ,",",
+            $link,
+            if ($link) then(",") else (),
             graph:write-json-pair("size", $node-size),
         "}")
 };
@@ -67,6 +73,19 @@ declare function graph:create-spec-node($node){
     let $node-size := if ($node/@standardSettingBody) then 4 else 3 
     
     return graph:create-node($node-name, $node-link, $node-size) 
+    
+};
+
+declare function graph:create-format-node($node, $isFormat as xs:boolean){
+    let $node-name := 
+        if ($isFormat)
+        then $node/titleStmt/abbr/text()
+        else $node
+    let $node-link := 
+        if ($isFormat)
+        then app:link(concat("views/view-format.xq?id=",$node/data(@id)))
+        else ()
+    return graph:create-node($node-name, $node-link, 4) 
     
 };
 
