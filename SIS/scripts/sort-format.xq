@@ -2,15 +2,20 @@ xquery version "3.1";
 
 (:  XQuery program to sort formats in a recommendation file by domains alphabetically. 
     For each domain, the formats are sorted again by their id alphabetically.
+    
+    If there are no formats within the recommendation, an empty template will be 
+    produced.
 
     Input:
     
         A recommendation file in the following format:
         
-        <result>
+        <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
             <header>
-                <filter>
-                  <centre>ACDH-ARCHE</centre>
+                  <lastUpdateCommitID>147cb5ea659a5752efd819898b43da23e00c6a77</lastUpdateCommitID>
+                  <filter>
+                   <centre>ACDH-ARCHE</centre>
                 </filter>
             </header>
             <formats>
@@ -20,7 +25,7 @@ xquery version "3.1";
                    <level>recommended</level>
                 </format>
             </formats>
-        </result>
+        </recommendation>
         
     Requirements:
     
@@ -33,10 +38,13 @@ xquery version "3.1";
         Example:
     
         java -cp saxon-he-10.6.jar net.sf.saxon.Query -s:ACDH-ARCHE-recommendation.xml sort-format.xq > output.xml 
+        
+     
+     This program can also be run from Oxygen by configuring a new scenario for XML transformation using XQuery.
 
     Author: Eliza Margaretha
-    Date: October 14th, 2021
-
+    Creation Date: October 14th, 2021
+    Last Update: March 2022 
 :)
 
 declare namespace sf = "http://clarin.ids-mannheim.de/standards/sort-formats";
@@ -66,22 +74,45 @@ declare function sf:sort-domains($domains){
 };
 
 declare function sf:rewrite-recommendations($r) {
-
-        let $sorted-formats := sf:sort-formats-by-id($r/formats/format)
-        let $domains := sf:sort-domains($r/formats/format/domain)
-        let $new-formats := 
-            for $domain in $domains
-                let $formats := $r/formats/format[domain eq $domain]
-                return sf:sort-formats-by-id($formats)
-        let $new-recommendation := 
-        <result>
-            {$r/header}
-            <formats>
-            {$new-formats}
-            </formats>
-        </result>
+    let $sorted-formats := sf:sort-formats-by-id($r/formats/format)
+    let $domains := sf:sort-domains($r/formats/format/domain)
+    let $new-formats := 
+        for $domain in $domains
+            let $formats := $r/formats/format[domain eq $domain]
+            return sf:sort-formats-by-id($formats)
+    let $new-recommendation := 
+    <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
+        {$r/header}
+        <formats>
+        {$new-formats}
+        </formats>
+    </recommendation>
     return
     $new-recommendation
 };
 
-sf:rewrite-recommendations(//result)
+declare function sf:write-template($r){
+    <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
+        {$r/header}
+        <formats>
+        
+        <!--
+            <format id="null">
+                <domain>Audiovisual Annotation</domain>
+                <level>recommended</level>
+            </format> 
+        -->
+        
+        </formats>
+    </recommendation>
+};
+
+declare function sf:check-recommendation($r){
+    let $format := $r/formats/format
+    return
+    if ($format)
+    then (sf:rewrite-recommendations($r))
+    else (sf:write-template($r))
+};
+
+sf:check-recommendation(//recommendation)
