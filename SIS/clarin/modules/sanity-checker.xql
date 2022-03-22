@@ -108,7 +108,7 @@ declare function sc:get-similar-recommendations() {
 
 declare function sc:list-similar-recommendations($centre, $formats){
     for $f in $formats
-        let $comment := $f/comment/text()
+        let $comment := $f/comment
         return 
        <ul>
             <li>Centre : {$centre} <br/>
