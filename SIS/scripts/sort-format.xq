@@ -95,14 +95,20 @@ declare function sf:write-template($r){
     <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
         {$r/header}
         <formats>
-        
         <!--
+            This template will assist in adjusting/creating a recommendations document if you don't
+            have access to a schema-aware XML editor. Copy the XML fragment, 
+            *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
+            *  adjust the domain (https://clarin.ids-mannheim.de/standards/views/list-domains.xq ),
+            *  adjust the recommendation level ({ recommended, acceptable, deprecated }),
+            *  repeat as necessary;
+            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
+            
             <format id="null">
                 <domain>Audiovisual Annotation</domain>
                 <level>recommended</level>
             </format> 
-        -->
-        
+        -->&#10;
         </formats>
     </recommendation>
 };

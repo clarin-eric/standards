@@ -1,50 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
-    <header>
-        <lastUpdateCommitID>147cb5ea659a5752efd819898b43da23e00c6a77</lastUpdateCommitID>
-        <filter>
+   <header>
+      <lastUpdateCommitID>147cb5ea659a5752efd819898b43da23e00c6a77</lastUpdateCommitID>
+      <filter>
          <centre>ORTOLANG</centre>
       </filter>
-    </header>
-    <formats>
-        <format id="fCHAT">
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fFLAC">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fWave">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fPDF">
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fPDFA-2">
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fPDFA-3">
-            <domain>Documentation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fPDF">
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fPDFA-2">
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fPDFA-3">
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fTextPlain">
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-    </formats>
+   </header>
+   <formats>
+      <format id="fCHAT">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fFLAC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPDF">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPDFA-2">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPDFA-3">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPDF">
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPDFA-2">
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPDFA-3">
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fTextPlain">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+   </formats>
 </recommendation>

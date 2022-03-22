@@ -1,105 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
-    <header>
-        <lastUpdateCommitID>00eb783d79fc8243ac47f242eac08b3e08ed90d8</lastUpdateCommitID>
-        <filter>
+   <header>
+      <lastUpdateCommitID>00eb783d79fc8243ac47f242eac08b3e08ed90d8</lastUpdateCommitID>
+      <filter>
          <centre>LAC</centre>
       </filter>
-    </header>
-    <formats>
-        <format id="fCMDI">
-            <domain>Metadata</domain>
-            <level>recommended</level>
-            <comment>Profile <a href="http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_147513601619/xsd">BLAM-bundle-repository-v0.14</a></comment>
-        </format>
-        <format id="fXML">
-            <domain>Metadata</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fCMDI">
-            <domain>Metadata</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fCSV">
-            <domain>Metadata</domain>
-            <level>acceptable</level>
-            <comment>preferably with <a href="https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/">W3C Metadata for Tabular Data</a> annotations</comment>
-        </format>
-        <format id="fELAN">
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fEXB">
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fEXS">
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fPraat">
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fFLEx">
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fToolbox">
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-            <comment>Toolbox files are still acceptable, but the format itself has proven to be problematic and should be avoided if possible. </comment>
-        </format>
-        <format id="fTEISpoken">
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fTEI">
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fWave">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>LPCM audio (preferred sampling rate 48 kHz and bit depth 16 bit)</comment>
-        </format>
-        <format id="fMP4">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>Video codec h.264 (preferred profile: main, level: 4.0, 1080p, 30fps), Audio encoding AAC (LC) (preferred sampling rate 48 kHz and bit rate 128–384 kbps)</comment>
-        </format>
-        <format id="fMOV">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>Video codec h.264 (preferred profile: main, level: 4.0, 1080p, 30fps), Audio encoding LPCM (preferred sampling rate 48 kHz and bit depth 16 bit)</comment>
-        </format>
-        <format id="fPDFA">
-            <domain>Contextual Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fTextPlain">
-            <domain>Contextual Data</domain>
-            <level>recommended</level>
-            <comment>UTF-8 encoding</comment>
-        </format>
-        <format id="fXHTML">
-            <domain>Contextual Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fTIFF">
-            <domain>Contextual Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fJP2">
-            <domain>Contextual Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fPNG">
-            <domain>Contextual Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fJPEG">
-            <domain>Contextual Data</domain>
-            <level>acceptable</level>
-        </format>
-    </formats>
+   </header>
+   <formats>
+      <format id="fELAN">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fEXB">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fEXS">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fFLEx">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPraat">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fTEI">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTEISpoken">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fToolbox">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+         <comment>Toolbox files are still acceptable, but the format itself has proven to be problematic and should be avoided if possible. </comment>
+      </format>
+      <format id="fMOV">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>Video codec h.264 (preferred profile: main, level: 4.0, 1080p, 30fps), Audio encoding LPCM (preferred sampling rate 48 kHz and bit depth 16 bit)</comment>
+      </format>
+      <format id="fMP4">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>Video codec h.264 (preferred profile: main, level: 4.0, 1080p, 30fps), Audio encoding AAC (LC) (preferred sampling rate 48 kHz and bit rate 128–384 kbps)</comment>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>LPCM audio (preferred sampling rate 48 kHz and bit depth 16 bit)</comment>
+      </format>
+      <format id="fJP2">
+         <domain>Contextual Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fJPEG">
+         <domain>Contextual Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPDFA">
+         <domain>Contextual Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPNG">
+         <domain>Contextual Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fTextPlain">
+         <domain>Contextual Data</domain>
+         <level>recommended</level>
+         <comment>UTF-8 encoding</comment>
+      </format>
+      <format id="fTIFF">
+         <domain>Contextual Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fXHTML">
+         <domain>Contextual Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCMDI">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+         <comment>Profile <a href="http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_147513601619/xsd">BLAM-bundle-repository-v0.14</a>
+         </comment>
+      </format>
+      <format id="fCMDI">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fCSV">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+         <comment>preferably with <a href="https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/">W3C Metadata for Tabular Data</a> annotations</comment>
+      </format>
+      <format id="fXML">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+      </format>
+   </formats>
 </recommendation>

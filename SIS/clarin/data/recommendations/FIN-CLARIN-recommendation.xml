@@ -1,98 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
-    <header>
-        <lastUpdateCommitID>769a30e1aa1d88ca6ff632af0047b829055fbe76</lastUpdateCommitID>
-        <filter>
+   <header>
+      <lastUpdateCommitID>769a30e1aa1d88ca6ff632af0047b829055fbe76</lastUpdateCommitID>
+      <filter>
          <centre>FIN-CLARIN</centre>
       </filter>
-    </header>
-    <formats>
-        <format id="fTEISpoken">
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fWave">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fCMDI">
-            <domain>Catalogue Metadata</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fPDFA">
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fTEI">
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fXML">
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fJP2">
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fJPEG">
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fPNG">
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fSVG">
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fCSV">
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fLMF">
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fCoNLL-U">
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fTEI">
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fXML">
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fELAN">
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fPDFA">
-            <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fPraat">
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fTextPlain">
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fGZIP">
-            <domain>Tool Support</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fTAR">
-            <domain>Tool Support</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fZIP">
-            <domain>Tool Support</domain>
-            <level>recommended</level>
-        </format>
-    </formats>
+   </header>
+   <formats>
+      <format id="fTEISpoken">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCMDI">
+         <domain>Catalogue Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPDFA">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTEI">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fXML">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fJP2">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fJPEG">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPNG">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fSVG">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCSV">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fLMF">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCoNLL-U">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTEI">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fXML">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fELAN">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPDFA">
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPraat">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTextPlain">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fGZIP">
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTAR">
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fZIP">
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
+   </formats>
 </recommendation>
