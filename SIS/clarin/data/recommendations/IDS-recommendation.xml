@@ -1,197 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
-    <header>
-        <lastUpdateCommitID>147cb5ea659a5752efd819898b43da23e00c6a77</lastUpdateCommitID>
-        <filter>
+   <header>
+      <lastUpdateCommitID>147cb5ea659a5752efd819898b43da23e00c6a77</lastUpdateCommitID>
+      <filter>
          <centre>IDS</centre>
       </filter>
-    </header>
-    <formats>
-        <format id="fAnvil">
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fCHAT">
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format id="fCHAT-XML">
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format id="fDOCX">
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format id="fELAN">
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fEXB">
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fEXS">
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fF4">
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format id="fFLN">
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fPraat">
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fTEISpoken">
-            <domain>Audiovisual Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fTextPlain">
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format id="fTransana">
-            <domain>Audiovisual Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format id="fTRS">
-            <domain>Audiovisual Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fAIFF">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fFLAC">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fM2J">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fMP3">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>deprecated</level>
-            <comment>lossy formats should be avoided if possible</comment>
-        </format>
-        <format id="fMPEG-4-AVC">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>25 fps, 1920×1080, constant bit rate </comment>
-        </format>
-        <format id="fMP4">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fMPEG1">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fMPEG2">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fWave">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>PCM-WAV, 48 kHz, 16 bit</comment>
-        </format>
-        <format id="fWave">
-            <domain>Audiovisual Source Language Data</domain>
-            <level>acceptable</level>
-            <comment>PCM-WAV with non-recommended parameters (not 48 kHz, 16 bit)</comment>
-        </format>
-        <format id="fPDFA">
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fTextPlain">
-            <domain>Documentation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fPDFA">
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fHDF5">
-            <domain>Lexical Resource</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fCMDI">
-            <domain>Metadata</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fComa">
-            <domain>Metadata</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fCSV">
-            <domain>Metadata</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fDC-XML">
-            <domain>Metadata</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fDGD-XML">
-            <domain>Metadata</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fDOCX">
-            <domain>Metadata</domain>
-            <level>deprecated</level>
-        </format>
-        <format id="fTEI">
-            <domain>Metadata</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fXML">
-            <domain>Metadata</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fALTO">
-            <domain>Text Annotation</domain>
-            <level>acceptable</level>
-        </format>
-        <format id="fDTABf">
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fI5">
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fPAULA">
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fGrAF">
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fTEI">
-            <domain>Text Annotation</domain>
-            <level>recommended</level>
-            <comment>with ODD or other schema</comment>
-        </format>
-        <format id="fTextPlain">
-            <domain>Text Annotation</domain>
-            <level>deprecated</level>
-        </format>
-        <format id="fHTML">
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>without js etc.</comment>
-        </format>
-        <format id="fTextPlain">
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-            <comment>without markup</comment>
-        </format>
-    </formats>
+   </header>
+   <formats>
+      <format id="fAnvil">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fCHAT">
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format id="fCHAT-XML">
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format id="fDOCX">
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format id="fELAN">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fEXB">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fEXS">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fF4">
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format id="fFLN">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPraat">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fTEISpoken">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTextPlain">
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format id="fTransana">
+         <domain>Audiovisual Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format id="fTRS">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fAIFF">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fFLAC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fM2J">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fMP3">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>deprecated</level>
+         <comment>lossy formats should be avoided if possible</comment>
+      </format>
+      <format id="fMP4">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fMPEG-4-AVC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>25 fps, 1920×1080, constant bit rate </comment>
+      </format>
+      <format id="fMPEG1">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fMPEG2">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>PCM-WAV, 48 kHz, 16 bit</comment>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>PCM-WAV with non-recommended parameters (not 48 kHz, 16 bit)</comment>
+      </format>
+      <format id="fPDFA">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTextPlain">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPDFA">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fHDF5">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCMDI">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fComa">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCSV">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fDC-XML">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fDGD-XML">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fDOCX">
+         <domain>Metadata</domain>
+         <level>deprecated</level>
+      </format>
+      <format id="fTEI">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fXML">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fALTO">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fDTABf">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fGrAF">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fI5">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPAULA">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTEI">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>with ODD or other schema</comment>
+      </format>
+      <format id="fTextPlain">
+         <domain>Text Annotation</domain>
+         <level>deprecated</level>
+      </format>
+      <format id="fHTML">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>without js etc.</comment>
+      </format>
+      <format id="fTextPlain">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>without markup</comment>
+      </format>
+   </formats>
 </recommendation>
