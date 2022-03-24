@@ -205,17 +205,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
             {if ($format-abbr) then $format-abbr else $format-id}
             </a>
         )
-        else (
-            fn:substring($format-id,2), 
-            <span class="tooltip">
-                <a style="margin-left:5px;" href="{app:getGithubIssueLink($format-id)}">
-                    <img src="{app:resource("plus.png", "img")}" height="15"/> </a>
-                <span
-                    class="tooltiptext"
-                    style="width:300px;">Click to add or suggest missing format information
-                </span>
-            </span>
-                             )
+        else rf:print-missing-format-link($format-id)
         
     let $level := $format/level/text()
     let $format-comment := $format/comment
@@ -289,6 +279,18 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                     </td>
             }
         </tr>
+};
+
+declare function rf:print-missing-format-link($format-id){
+    (fn:substring($format-id,2), 
+    <span class="tooltip">
+        <a style="margin-left:5px;" href="{app:getGithubIssueLink($format-id)}">
+            <img src="{app:resource("plus.png", "img")}" height="15"/> </a>
+        <span
+            class="tooltiptext"
+            style="width:300px;">Click to add or suggest missing format information
+        </span>
+    </span>)
 };
 
 declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $filename, $page) {
