@@ -15,6 +15,7 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
 
 let $reset := request:get-parameter('reset', '')
 let $threshold := if ($reset) then (1) else request:get-parameter('threshold', 1)
+let $top3 := if ($reset) then () else request:get-parameter('top3', '')
 return
 
 
@@ -53,6 +54,21 @@ return
                                         style="margin:0;height:25px;" type="submit" value="Filter"/>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <span class="tooltip">
+                                        <input name="top3" class="button"
+                                            style="margin:0;height:25px;width:260px;" type="submit" value="Most recommended formats"/>
+                                    <span class="tooltiptext"
+                                           style="width:300px; left:0%; top: 130%;">Show formats with the 3 highest numbers of recommendations
+                                           </span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <input name="reset" class="button"
+                                        style="margin-bottom:5px;height:25px;" type="submit" value="Reset"/>
+                                </td>
+                            </tr>
                         </table>
                     </form>
                     
@@ -62,7 +78,9 @@ return
                             <th>Format</th>
                             <th style="width:150px">Number of Recommendations</th>
                         </tr>
-                        {   
+                        {   if ($top3) 
+                            then stm:filterTop3Values()
+                            else
                             stm:get-formats-per-domain($threshold)
                         }
                     </table>

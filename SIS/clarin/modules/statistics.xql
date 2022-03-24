@@ -63,6 +63,26 @@ declare function stm:get-formats-per-domain($threshold as xs:int){
         return $sorted 
 };
 
+declare function stm:filterTop3Values(){
+    let $sorted := stm:get-formats-per-domain(1)
+    
+    for $domain in $domain:domains/name
+        let $recommendations-by-domain := $sorted[td = $domain]
+        let $unique-sum := fn:reverse(functx:sort-as-numeric(fn:distinct-values($recommendations-by-domain/td[3])))
+        let $top-number := min((count($unique-sum),3))
+        let $min-value := xs:int(fn:subsequence($unique-sum,$top-number,1))
+        
+        order by fn:lower-case($domain)
+    return 
+        for $r in $recommendations-by-domain
+        let $sum := xs:int($r/td[3])
+        order by $sum descending
+        return 
+            if ($sum ge $min-value)
+            then $r
+            else ()
+    };
+
 declare function stm:getMimeTypes(){
     fn:distinct-values($format:formats/mimeType/text())
 };
