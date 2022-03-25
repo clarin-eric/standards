@@ -32,6 +32,8 @@ return
             {menu:view()}
             <div class="content">
                 <div class="navigation">
+                    &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
+                    &gt; <a href="{app:link("views/list-statistics.xq")}">Statistics</a>
                     &gt; <a href="{app:link("views/list-popular-formats.xq")}">Popular Formats</a>
                 </div>
                 <div class="title">Popular Formats</div>

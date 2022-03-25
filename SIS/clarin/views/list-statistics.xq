@@ -26,6 +26,7 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
             {menu:view()}
             <div class="content">
                 <div class="navigation">
+                    &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     &gt; <a href="{app:link("views/list-statistics.xq")}">Statistics</a>
                 </div>
                 <div class="title">Format Statistics</div>

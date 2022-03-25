@@ -24,6 +24,7 @@ import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-mod
             {menu:view()}
             <div class="content">
                 <div class="navigation">
+                    &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     &gt; <a href="{app:link("views/list-domains.xq")}">Functional Domains</a>
                 </div>
                 <div class="title">Functional domains</div>

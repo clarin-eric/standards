@@ -24,6 +24,7 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
             {menu:view()}
             <div class="content">
                 <div class="navigation">
+                    &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
                 </div>
                 <div class="title">Data Deposition Formats</div>
