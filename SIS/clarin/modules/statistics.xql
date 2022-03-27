@@ -34,7 +34,14 @@ declare function stm:list-format-by-domain(){
 
 declare function stm:get-formats-per-domain($threshold as xs:int){
     let $min-recommendations := if ($threshold) then $threshold else 1
-    for $domain in $domain:domains/name
+    
+    let $domain-names := fn:sort($domain:domains/name)
+    let $domain-size := count($domain-names)
+    
+    for $i in (1 to $domain-size)
+        let $domain := $domain-names[$i]
+        let $isEven := $i mod 2  
+        
         let $recommendations := recommendation:get-formats-by-domain($domain)
         let $format-ids := fn:distinct-values($recommendations/@id)
         
@@ -43,11 +50,12 @@ declare function stm:get-formats-per-domain($threshold as xs:int){
              let $sum := count($recommendations[@id=$id])
              let $format-link := app:link(concat("views/view-format.xq?id=",$id))
              let $format-abbr := format:get-format($id)/titleStmt/abbr/text()
+             let $row-class := if ($isEven eq 0) then "row" else "row-odd"
              order by $sum descending
              return
              if ($sum ge $min-recommendations)
              then
-                <tr>
+                <tr class="{$row-class}">
                     <td>{$domain}</td>
                     <td>{
                         if ($format-abbr) 
@@ -81,7 +89,7 @@ declare function stm:filterTop3Values(){
             if ($sum ge $min-value)
             then $r
             else ()
-    };
+};
 
 declare function stm:getMimeTypes(){
     fn:distinct-values($format:formats/mimeType/text())
