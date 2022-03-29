@@ -1,0 +1,32 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fFoLiA" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>FoLiA: Format for Linguistic Annotation</title>
+    <abbr>FoLiA</abbr>
+  </titleStmt>
+  <keyword>annotation format</keyword>  
+  <keyword>corpus encoding</keyword>
+  
+<!-- suggested keywords, let's see how many of them we can accommodate (we need those keyword issues prioritized! :-)
+  
+  text, linguistic annotation, NLP, speech transcription, text structure, text markup, document-based, xml, morpho-syntactic annotation
+  
+  https://github.com/clarin-eric/standards/issues/145
+  -->
+  
+  <info type="description">
+    <p>FoLiA, an acronym for Format for Linguistic Annotation, is a data model and file format to represent digitised language 
+      resources enriched with linguistic annotation, e.g. linguistically enriched textual documents or transcriptions of speech. 
+      The format is intended to provide a standard for the storage and exchange of such language resources, including corpora 
+      and to promote interoperability between Natural Language Processing tools that use the format.</p>
+    <p>See 
+      <a href="https://folia.readthedocs.io/en/latest/index.html">https://folia.readthedocs.io/en/latest/index.html</a> for details.</p>
+  </info>
+  <mimeType>application/xml</mimeType>
+  <!--  suggested but not registered: application/folia+xml, text/folia+xml
+    
+    should we have an attribute for that?  it could then also work for the parameters, perhaps;
+    -->
+  <fileExt>.xml</fileExt>
+  <fileExt>.folia.xml</fileExt>
+  <formatFamily>XML</formatFamily>
+</format>
