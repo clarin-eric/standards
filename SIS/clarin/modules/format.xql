@@ -39,7 +39,7 @@ declare function fm:list-formats() {
     return
         <div>
             <li>
-                <span class="list-text"><a style="color:black;" href="{$link}">{$link-title}</a></span>
+                <span class="list-text"><a href="{$link}">{$link-title}</a></span>
                 {
                     app:create-copy-button($format-id,$format-id,"Copy ID to clipboard","Format ID copied"),
                     if ($format-name != 'Other' and ($mime-type or $file-ext)) then
