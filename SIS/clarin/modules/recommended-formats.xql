@@ -81,6 +81,21 @@ declare function rf:print-domains($domainId) {
                 title="{$d/desc/text()}">{$d/name/text()}</option>
 };
 
+declare function rf:print-keywords($keyword) {
+    let $keywords := $format:formats/keyword
+    for $k in fn:distinct-values($keywords)
+        order by fn:lower-case($k)
+    return
+        if ($k eq $keyword)
+        then
+            (<option
+                value="{$k}"
+                selected="selected">{$k}</option>)
+        else
+            (<option
+                value="{$k}">{$k}</option>)
+};
+
 declare function rf:print-option($selected, $value, $label) {
     if ($selected eq $value)
     then

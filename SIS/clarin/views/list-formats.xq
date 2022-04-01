@@ -6,7 +6,12 @@ declare option exist:serialize "method=xhtml media-type=text/html indent=yes doc
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-module" at "../modules/format.xql";
+import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 
+let $reset := request:get-parameter('resetButton', '')
+let $keyword := if ($reset) then () else request:get-parameter('keyword', '')
+
+return
 (: 
     @author margaretha
 :)
@@ -70,8 +75,31 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
                     <p>By clicking on the icon next to the format name, you can copy the format ID, which may be useful for editing or adding 
                        centre recommendations.</p>
                     
+                    <div>
+                       <form method="get" action="{app:link("views/list-formats.xq#defined")}">
+                            <table style="margin:0;">
+                                <tr>
+                                    <td><span class="heading3">Keyword</span>:
+                                        <select name="keyword" class="inputSelect" style="width:185px;">
+                                            {rf:print-option($keyword, "", "Select keyword ...")}
+                                            {rf:print-keywords($keyword)}
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input name="searchButton" class="button"
+                                        style="margin:0;height:25px;" type="submit" value="Search"/>
+                                    </td>
+                                    <td>
+                                        <input name="resetButton" class="button"
+                                        style="margin-bottom:5px;height:25px;" type="submit" value="Reset"/>
+                                    </td>
+                                </tr>
+                            </table>
+                       </form>
+                    </div>
+                    
                     <ul style="padding:0px; margin-left:15px;">
-                        {fm:list-formats()}
+                        {fm:list-formats($keyword)}
                     </ul>
                 </div>
             
