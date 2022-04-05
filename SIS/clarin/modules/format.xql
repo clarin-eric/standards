@@ -24,22 +24,26 @@ declare function fm:count-defined-formats() {
 };
 
 (: Generate the list of formats :)
-declare function fm:list-formats() {
-    for $format in $format:formats
-    let $format-id := data($format/@id)
-    let $format-name := $format/titleStmt/title/text()
-    let $format-abbr := $format/titleStmt/abbr/text()
-    (:let $format-snippet := $format/info[@type="description"]/p[1]/text():)
-    let $mime-type := $format/mimeType/text()
-    let $file-ext := $format/fileExt/text()
-    let $link := app:link(concat("views/view-format.xq?id=", $format-id))
-        order by fn:lower-case($format-abbr)
-    let $link-title := concat($format-abbr, " (",$format-name,")")
-    let $mime-types := fm:print-multiple-values($format/mimeType, "MIME types:")    
+declare function fm:list-formats($keyword) {
+    let $formats := 
+        if ($keyword) then $format:formats[keyword=$keyword]
+        else $format:formats
+
+    for $format in $formats
+        let $format-id := data($format/@id)
+        let $format-name := $format/titleStmt/title/text()
+        let $format-abbr := $format/titleStmt/abbr/text()
+        (:let $format-snippet := $format/info[@type="description"]/p[1]/text():)
+        let $mime-type := $format/mimeType/text()
+        let $file-ext := $format/fileExt/text()
+        let $link := app:link(concat("views/view-format.xq?id=", $format-id))
+            order by fn:lower-case($format-abbr)
+        let $link-title := concat($format-abbr, " (",$format-name,")")
+        let $mime-types := fm:print-multiple-values($format/mimeType, "MIME types:")    
     return
         <div>
             <li>
-                <span class="list-text"><a style="color:black;" href="{$link}">{$link-title}</a></span>
+                <span class="list-text"><a href="{$link}">{$link-title}</a></span>
                 {
                     app:create-copy-button($format-id,$format-id,"Copy ID to clipboard","Format ID copied"),
                     if ($format-name != 'Other' and ($mime-type or $file-ext)) then
