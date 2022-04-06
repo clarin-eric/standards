@@ -75,7 +75,6 @@ return
                     <p>By clicking on the icon next to the format name, you can copy the format ID, which may be useful for editing or adding 
                        centre recommendations.</p>
                     
-                    <div>
                        <form method="get" action="{app:link("views/list-formats.xq#defined")}">
                             <table style="margin:0;">
                                 <tr>
@@ -96,13 +95,15 @@ return
                                 </tr>
                             </table>
                        </form>
-                    </div>
-                    
-                    <ul style="padding:0px; margin-left:15px;">
-                        {fm:list-formats($keyword)}
-                    </ul>
                 </div>
-            
+                <table>
+                    <tr>
+                        <th style="width:60%">Format</th>
+                        <th style="width:20%">MIME types</th>
+                        <th style="width:20%">File Extensions</th>
+                    </tr>
+                    {fm:list-formats($keyword)}
+                </table>
             </div>
             <div
                 class="footer">{app:footer()}</div>
