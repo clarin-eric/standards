@@ -1,4 +1,6 @@
-<domains>
+<domains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="../schemas/domains.xsd">
+<!-- sync the state of this taxonomy with the schema for recommendations, i.e. recommendation.xsd   -->
     <domain id="1" orderBy="Source Data">
         <name>Audiovisual Source Language Data</name>
         <desc>Audio or video recordings providing spoken/multimodal or signed language data for
