@@ -6,6 +6,7 @@ declare option exist:serialize "method=xhtml media-type=text/html indent=yes doc
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace sc = "http://clarin.ids-mannheim.de/standards/sanity-checker" at "../modules/sanity-checker.xql";
+import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-module" at "../modules/format.xql";
 
 (: 
     @author margaretha
@@ -39,6 +40,30 @@ return
                     in the process of compiling recommendations or describing formats, etc. Feel welcome 
                     to <a href="https://github.com/clarin-eric/standards/issues/115">share your ideas</a> 
                     on what else may be useful here.</p>
+                </div>
+                
+                <div id="missing">
+                    <h2>List of missing formats by ID ({fm:count-missing-format-ids()}): </h2>
+                    <p>These formats are referenced by centre recommendations, but not yet described in the SIS. Clicking on an ID 
+                    below will open a pre-configured GitHub issue where you can suggest the content of the format description.</p>
+                    <p>The list is also part of the sanity checking functionality: it may happen that some recommendation has a 
+                    typo in the format ID, and then it will show up here.</p>
+                    <div>
+                        <ul class="column" style="padding:0px; margin-left:15px;">
+                            {fm:list-missing-format-ids()}
+                        </ul>
+                    </div>
+                </div>
+                <div id="unreferenced">
+                    <h2>Existing format descriptions not referenced by any recommendation ({fm:count-orphan-format-ids()}): </h2>
+                    <p>Note that membership in this list does not automatically indicate an error. Recommendations may change and leave "stray" 
+                       formats unused, and we may sometimes want to merely describe "unspecified" versions of formats, while their 
+                       particular variants are used in recommendations (because finer granularity is nearly always better).</p>
+                    <div>
+                        <ul class="column" style="padding:0px; margin-left:15px;">
+                            {fm:list-orphan-format-ids()}
+                        </ul>
+                    </div>
                 </div>
                 
                 {if ($recommendations-strange-domains) then
