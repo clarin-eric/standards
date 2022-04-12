@@ -5,6 +5,9 @@ import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "ap
 import module namespace spec="http://clarin.ids-mannheim.de/standards/specification" at "../model/spec.xqm";
 import module namespace sb="http://clarin.ids-mannheim.de/standards/standardbody" at "../model/sb.xqm";
 
+import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
+
+
 (: Count the frequency of appearance of an id in a list or sequence :)
 declare function index:count-frequency($list as item()*, $id as xs:string){
     count (for $item in $list[. = ($id)] return $item)
@@ -72,3 +75,19 @@ declare function index:print-sb-links(){
             else ()
             
 };
+
+declare function index:print-format-keywords(){
+    let $unique-keywords := fn:distinct-values($format:formats/keyword/text()) 
+    for $k in $unique-keywords
+        let $keyword := fn:replace($k," ","+")
+        let $link :=  app:link(concat("views/list-formats.xq?keyword=",$keyword))
+        let $frequency := fn:count($format:formats[keyword/text() = $k])
+        return
+            if ($frequency > 5)
+            then <a  href="{$link}" class="tag" style="font-size:25px;" >{$k}</a>
+            else if ($frequency > 1)
+            then <a  href="{$link}" class="tag" style="font-size:20px;" >{$k}</a>
+            else <a  href="{$link}" class="tag" style="font-size:15px;" >{$k}</a>
+};
+
+

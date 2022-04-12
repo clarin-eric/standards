@@ -36,8 +36,8 @@ declare function lsm:page($sortBy as xs:string, $page as xs:int){
     return
         if ($i=$page) then $page
         else if ($i < $page)
-        then (<a href="{app:link(concat("views/list-specs.xq?sortBy=", $sortBy,"&amp;page=",$i))}">{$i}</a>," < ") 
-        else (" > ",<a href="{app:link(concat("views/list-specs.xq?sortBy=", $sortBy,"&amp;page=",$i))}">{$i}</a>)
+        then (<a href="{app:link(concat("views/list-specs.xq?sortBy=", $sortBy,"&amp;page=",$i,"#spec-table"))}">{$i}</a>," < ") 
+        else (" > ",<a href="{app:link(concat("views/list-specs.xq?sortBy=", $sortBy,"&amp;page=",$i,"#spec-table"))}">{$i}</a>)
 };
 
 declare function lsm:letter-filter(){
@@ -47,7 +47,7 @@ declare function lsm:letter-filter(){
         for $i in 1 to count($letters)
             let $letter := $letters[$i]
         return (<a href="{app:link(concat("views/list-specs.xq?sortBy=name", 
-            "&amp;page=",1, "&amp;letter=",$letter))}">{$letter}</a>, " | ")
+            "&amp;page=",1, "&amp;letter=",$letter,"#spec-table"))}">{$letter}</a>, " | ")
    return ("| ", $links)
 };
 
