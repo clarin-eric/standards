@@ -41,6 +41,14 @@ declare function vfm:print-bullets($list,$id){
     return <ul>{$items}</ul>
 };
 
+declare function vfm:print-keyword-links($format){
+    for $k in $format/keyword/text()
+        let $keyword := fn:replace($k," ","+")
+        let $link :=  app:link(concat("views/list-formats.xq?keyword=",$keyword))
+        return
+            <a style="font-size:15px;" href="{$link}">{$k}</a>            
+};
+
 declare function vfm:print-multiple-values($list, $id, $label) {
     vfm:print-multiple-values($list, $id, $label, fn:false())
 };

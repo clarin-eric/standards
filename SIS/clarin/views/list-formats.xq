@@ -41,29 +41,6 @@ return
                         defined in the SIS but not referenced in recommendations, and (c) (properly containing (b)) formats defined in the SIS. The last list 
                         provides some additional basic details.</p>
                 </div>
-                <div id="missing">
-                    <h2>List of missing formats by ID ({fm:count-missing-format-ids()}): </h2>
-                    <p>These formats are referenced by centre recommendations, but not yet described in the SIS. Clicking on an ID 
-                    below will open a pre-configured GitHub issue where you can suggest the content of the format description.</p>
-                    <p>The list is also part of the sanity checking functionality: it may happen that some recommendation has a 
-                    typo in the format ID, and then it will show up here.</p>
-                    <div>
-                        <ul class="column" style="padding:0px; margin-left:15px;">
-                            {fm:list-missing-format-ids()}
-                        </ul>
-                    </div>
-                </div>
-                <div id="unreferenced">
-                    <h2>Existing format descriptions not referenced by any recommendation ({fm:count-orphan-format-ids()}): </h2>
-                    <p>Note that membership in this list does not automatically indicate an error. Recommendations may change and leave "stray" 
-                       formats unused, and we may sometimes want to merely describe "unspecified" versions of formats, while their 
-                       particular variants are used in recommendations (because finer granularity is nearly always better).</p>
-                    <div>
-                        <ul class="column" style="padding:0px; margin-left:15px;">
-                            {fm:list-orphan-format-ids()}
-                        </ul>
-                    </div>
-                </div>
                 <div id="defined">
                     <h2>Formats described in the SIS ({fm:count-defined-formats()}): </h2>
                     <p>The name of the format links to its description, sometimes rather stubby (you are welcome to help us extend the list
