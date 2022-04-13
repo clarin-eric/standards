@@ -23,6 +23,7 @@ import module namespace tm="http://clarin.ids-mannheim.de/standards/topic-module
     		{menu:view()}
             <div class="content">
                 <div class="navigation">
+                    &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>
                     &gt; <a href="{app:link("views/list-topics.xq")}">Topics</a>
                 </div>
               	<div class="title">Topics</div>

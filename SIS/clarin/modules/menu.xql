@@ -71,7 +71,7 @@ declare function menu:view() {
                 </tr>
                 <tr>
                     <td colspan="3" class="tdmenu">
-                        <a style="display:block" href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards</a>
+                        <a style="display:block" href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>
                     </td>
                 </tr>
                 {
@@ -94,17 +94,20 @@ declare function menu:view() {
                </tr>
 -->
                 <tr>
-                    <td colspan="3" class="tdmenu">
-                        <a style="display:block" href="{app:link("views/list-sbs.xq")}">Standardization bodies</a>
+                    <td width="10px"></td>
+                    <td colspan="2" class="tdmenu">
+                        <a style="display:block" href="{app:link("views/list-sbs.xq")}">Standard Bodies</a>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="3" class="tdmenu">
+                    <td width="10px"></td>
+                    <td colspan="2" class="tdmenu">
                         <a style="display:block" href="{app:link("views/list-topics.xq")}">Topics</a>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="3" class="tdmenu">
+                    <td width="10px"></td>
+                    <td colspan="2" class="tdmenu">
                         <a style="display:block" href="{app:link("search/search-spec.xq")}">Search</a>
                     </td>
                 </tr>
