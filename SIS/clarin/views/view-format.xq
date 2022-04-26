@@ -130,7 +130,7 @@ return
                         </div>
                         <div id="tags" style="display:none">
                             <a style="font-size:22px" onclick="return false">{$format-abbr}</a>
-                            {vsm:print-keyword-links($format)}
+                            {vfm:print-keyword-links($format)}
                         </div>
                         
                         {vsm:print-spec-relation($format,$id, fn:true())}

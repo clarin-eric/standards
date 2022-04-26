@@ -23,7 +23,8 @@ import module namespace sbm = "http://clarin.ids-mannheim.de/standards/sb-module
             {menu:view()}
             <div class="content">
                 <div class="navigation">
-                    &gt; <a href="{app:link("views/list-sbs.xq")}">Standard Setting Bodies</a>
+                    &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>
+                    &gt; <a href="{app:link("views/list-sbs.xq")}">Standard Bodies</a>
                 </div>
                 <div class="title">Standard Bodies</div>
                 <div><p>Standard bodies are organizations that develop standards. </p></div>

@@ -54,13 +54,15 @@ import module namespace index="http://clarin.ids-mannheim.de/standards/index" at
                     {if (session:get-attribute("user")) then "register" else <a href="{app:link("user/register.xq")}">register</a>} with this service.</p>
                 </div>
                 <!-- The tag cloud of standards and standard bodies -->
-                <div style="margin-left:12%; margin-bottom:20px; width:450px;">
+                <div style="margin-left:10%; margin-bottom:20px;">
                     <div id="myCanvasContainer">
-                        <canvas width="500" height="400" id="myCanvas"/>
+                        <canvas width="600" height="500" id="myCanvas"/>
                     </div>
                     <div id="tags" style="border:1px solid #DDDDDD; padding:8px;" >
-                      {index:print-spec-links()}
+                      <!--{index:print-spec-links()}
                       {index:print-sb-links()}
+                      -->
+                      {index:print-format-keywords()}
                     </div>
                 </div>                
             </div>            

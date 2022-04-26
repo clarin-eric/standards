@@ -34,26 +34,32 @@ declare function fm:list-formats($keyword) {
         let $format-name := $format/titleStmt/title/text()
         let $format-abbr := $format/titleStmt/abbr/text()
         (:let $format-snippet := $format/info[@type="description"]/p[1]/text():)
-        let $mime-type := $format/mimeType/text()
-        let $file-ext := $format/fileExt/text()
+        let $mime-types := $format/mimeType
+        let $file-exts := $format/fileExt
         let $link := app:link(concat("views/view-format.xq?id=", $format-id))
             order by fn:lower-case($format-abbr)
         let $link-title := concat($format-abbr, " (",$format-name,")")
-        let $mime-types := fm:print-multiple-values($format/mimeType, "MIME types:")    
     return
-        <div>
-            <li>
+        <tr>
+            <td class="row" style="vertical-align:top">
                 <span class="list-text"><a href="{$link}">{$link-title}</a></span>
-                {
-                    app:create-copy-button($format-id,$format-id,"Copy ID to clipboard","Format ID copied"),
-                    if ($format-name != 'Other' and ($mime-type or $file-ext)) then
-                        <p>{if ($mime-types) then ($mime-types,<br/>) else ()}
-                            {fm:print-multiple-values($format/fileExt, "File extensions:")}</p>
-                    else
-                        ()
+                {app:create-copy-button($format-id,$format-id,"Copy ID to clipboard","Format ID copied")}
+            </td>
+            <td class="row">
+            {      
+                if ($format-name != 'Other' and $mime-types) 
+                then  fm:print-multiple-values($mime-types)
+                else ()
                 }
-            </li>
-        </div>
+            </td>
+            <td class="row">
+            {
+                if ($format-name != 'Other' and $file-exts)
+                then fm:print-multiple-values($file-exts)
+                else ()
+            }
+            </td>
+        </tr>
 };
 
 declare function fm:count-orphan-format-ids(){
@@ -94,46 +100,34 @@ declare function fm:list-missing-format-abbrs(){
             else <li>{$abbr}</li> 
 };
 
-declare function fm:print-multiple-values($list, $label) {
+declare function fm:print-multiple-values($list) {
     let $numOfItems := count($list)
-    let $max := fn:max(($numOfItems, 1))
     let $list := fn:sort($list)
-    return
-        if ($list)
-        then
-            (
-            <span>{$label}&#160;</span>,
-            <span
-                id="keytext">
-                {
-                    for $k in (1 to $numOfItems)
-                    return
-                        ($list[$k]/text(),
-                        if ($list[$k]/@type)
-                        then
-                            (<span
-                                id="abbrinternalText"
-                                style="margin-left:5px;">({data($list[$k]/@type)})</span>)
-                        else
-                            (),
-                        if ($list[$k][@recommended = "yes"])
-                        then
-                            (<span
-                                id="abbrinternalText"
-                                style="font-size:10px;margin-left:5px;">[recommended]</span>)
-                        else
-                            (),
-                        if ($k = $numOfItems) then
-                            ()
-                        else
-                            ", "
-                        )
-                }
-            </span>
-            
+    let $text-width := 25
+    
+    for $k in (1 to $numOfItems)
+        let $text := $list[$k]/text()
+        return
+            (fm:substring-every-width($text,$text-width),
+            (:if ($list[$k][@recommended = "yes"] )
+            then
+                (<span
+                    id="abbrinternalText"
+                    style="font-size:10px;margin-left:5px;">[recommended]</span>)
+            else
+                (),:)
+            if ($k = $numOfItems) then () else ", "
             )
-        else
-            ()
+};
+
+declare function fm:substring-every-width($text,$text-width){
+        let $text-length := string-length($text)
+        return
+            if ($text-length > $text-width) then
+                for $i in 0 to $text-length idiv $text-width
+                let $pos := $i * $text-width + 1
+                return substring($text, $pos, $text-width)
+            else $text
 };
 
 declare function fm:list-mime-types() {
