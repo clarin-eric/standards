@@ -57,9 +57,10 @@ else
                            by an authorised person. In order to aid in the process, please consult the separate lists of all 
                            <a href="{app:link("views/list-formats.xq")}">available file formats</a> and of the 
                            functional groupings of formats (<a href="{app:link("views/list-domains.xq")}">functional domains</a>).</p>
-                           <p>In the current shape, the list should be expected to be incorrect, partially because the information 
-                           provided by the centres could not be straightforwardly mapped into the feature matrix offered by the SIS (created on the basis 
-                           of the SIS functional domains and levels of recommendation). Please 
+                           
+                           <p>As of mid-2022, not every centre with depositing services has submitted the information to the SIS; in some cases, the information 
+                           had to be unreliably mapped from lists provided on centre homepages onto the feature matrix offered by the SIS (created on the basis 
+                           of the SIS functional domains and levels of recommendation). If you think you see an error, please 
                            <a href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">kindly help us get it right</a>.</p></div>
                     <div style="margin-top:30px;">
                         <form id="searchRecommendation" style="float:left;" method="get" action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
