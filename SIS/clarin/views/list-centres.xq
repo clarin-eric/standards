@@ -36,6 +36,11 @@ return
                     </div>
                     <div class="title">Centres</div>
                     <div>
+                    <p>This page lists centres encoded in the SIS, together with their status. For CLARIN centres, B-centres and 
+                    centres with the status 'aiming for B' should in most cases be expected to maintain their format 
+                    recommendations in the SIS.</p>
+                    </div>
+                    <div>
                         <form id="filterCentre" method="get" action="">
                             <table style="margin:0;">
                                 <tr>
