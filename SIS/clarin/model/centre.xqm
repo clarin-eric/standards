@@ -7,6 +7,8 @@ module namespace centre="http://clarin.ids-mannheim.de/standards/centre";
 :)
 
 declare variable $centre:centres := doc('/db/apps/clarin/data/centres.xml')/centres/centre;
+declare variable $centre:ids := data($centre:centres/@id);
+declare variable $centre:names := $centre:centres/name/text();
     
 declare function centre:get-centre($id as xs:string){
     $centre:centres[@id=$id]
