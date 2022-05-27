@@ -8,7 +8,7 @@ module namespace domain="http://clarin.ids-mannheim.de/standards/domain";
 :)
 
 declare variable $domain:domains := doc('/db/apps/clarin/data/domains.xml')/domains/domain;
-    
+declare variable $domain:names := $domain:domains/name/text();    
 
 (: Select a domain by id :)
 declare function domain:get-domain($id as xs:string){

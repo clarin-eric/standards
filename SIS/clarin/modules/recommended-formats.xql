@@ -13,6 +13,73 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
 
 declare variable $rf:pageSize := 50;
+declare variable $rf:searchMap := rf:getSearchMap();
+    
+declare function rf:getSearchMap(){
+    let $fids := distinct-values(($recommendation:format-ids, $format:ids))
+    let $fabbrs := distinct-values(($recommendation:format-abbrs,$format:abbrs))
+    
+    (: $centre:names problematic:)
+    let $formatIdMap := for $item in $fids return map:entry($item,"fid")
+    let $formatAbbrMap := for $item in $fabbrs return map:entry($item,"fabbr")
+    let $formatNameMap := for $item in $format:titles return map:entry($item,"fname")
+    let $centreIdMap := for $item in $centre:ids return map:entry($item,"cid")
+    let $domainMap := for $item in $domain:names return map:entry($item,"dname")
+    let $searchMap := map:merge(($formatIdMap,$formatAbbrMap,$formatNameMap,$centreIdMap, $domainMap))
+    return $searchMap
+    (:map:get($searchMap,"DANS"):)
+};
+
+declare function rf:countFid(){
+    (count($recommendation:format-ids),
+    count(distinct-values(($recommendation:format-ids, $format:ids))))
+};
+
+declare function rf:listSearchSuggestions(){
+    (: $centre:names problematic:)
+    let $fids := distinct-values(($recommendation:format-ids, $format:ids))
+    let $fabbrs := distinct-values(($recommendation:format-abbrs,$format:abbrs))
+    
+    let $union := 
+        for $item in ($fids,$fabbrs,$format:titles,$centre:ids,$domain:names) 
+        order by fn:lower-case($item) 
+        return $item 
+
+    return fn:string-join($union,",")
+};
+
+declare function rf:searchFormat($searchItem){
+    let $category := map:get($rf:searchMap,$searchItem)
+    return 
+    if ($category eq "fid")
+        then rf:print-centre-recommendation($searchItem)
+    else if ($category eq "fabbr")
+        then rf:searchFormatByAbbr($searchItem)
+    else if ($category eq "fname")
+        then rf:searchFormatByName($searchItem)
+    else if ($category eq "cid") 
+        then rf:print-centre-recommendation($searchItem,'','','')
+    else if ($category eq "dname")
+        then rf:searchFormatByDomain($searchItem)
+    else ()
+};
+
+declare function rf:searchFormatByAbbr($abbr){
+    let $fid := data(format:get-format-by-abbr($abbr)/@id)
+    let $fid := if ($fid) then $fid else concat("f",$abbr)
+    return rf:print-centre-recommendation($fid)
+};
+
+declare function rf:searchFormatByName($name){
+    let $fid := data($format:formats[titleStmt/title=$name]/@id)
+    return rf:print-centre-recommendation($fid)
+};
+
+
+declare function rf:searchFormatByDomain($searchItem){
+    let $domainId := domain:get-id-by-name($searchItem)
+    return rf:print-centre-recommendation('',$domainId,'','')
+};
 
 declare function rf:print-page-links($numOfRows, $sortBy, $domainId, $recommendationLevel, $centre, $page as xs:int) {
     let $numberOfPages := xs:integer(fn:ceiling($numOfRows div $rf:pageSize))
@@ -105,6 +172,26 @@ declare function rf:print-option($selected, $value, $label) {
     else
         <option
             value="{$value}">{$label}</option>
+};
+
+declare function rf:print-centre-recommendation($requestedFormatId){
+    for $r in $recommendation:centres
+        let $centre := $r/header/filter/centre/text()
+        for $format in $r/formats/format
+            let $format-id := data($format/@id)
+            let $format-abbr := $format:formats[@id=$format-id]/titleStmt/abbr/text()
+            
+            let $domainName := $format/domain/text()
+            let $domain := 
+                if ($domainName) then
+                    dm:get-domain-by-name($domainName)
+                else ()
+            
+            order by (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2))) (:abbr:)
+        return 
+            if ($format-id eq $requestedFormatId)
+            then rf:print-recommendation-row($format, $centre, $domain)
+            else ()
 };
 
 declare function rf:print-centre-recommendation($requestedCentre, $requestedDomain,
@@ -388,4 +475,3 @@ declare function rf:download-template($centre-id,$filename){
             {$recommendation/formats}    
         </recommendation>
 };
-
