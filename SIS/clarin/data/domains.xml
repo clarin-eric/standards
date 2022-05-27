@@ -41,7 +41,7 @@
     </domain>
     <domain id="10" orderBy="Data/Resource Description">
         <name>Metadata</name>
-        <desc>Comprehensive structured information including descriptive, structural and administrative metadata. See the <a href="https://groups.niso.org/apps/group_public/download.php/17446/Understanding%20Metadata.pdf">National Information Standards Organization primer on metadata</a> for further hints.</desc>
+        <desc>Comprehensive structured information including descriptive, structural and administrative metadata. See the <a href="https://www.niso.org/publications/understanding-metadata-2017">National Information Standards Organization primer on metadata</a> for further hints.</desc>
     </domain>
     <domain id="11" orderBy="Data/Resource Description">
         <name>Documentation</name>
