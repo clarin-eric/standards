@@ -7,6 +7,8 @@ import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 
+let $searchItem := request:get-parameter('searchFormat', '')
+
 let $reset := request:get-parameter('resetButton', '')
 let $centre := if ($reset) then () else request:get-parameter('centre', '')
 let $domainId := if ($reset) then () else request:get-parameter('domain', '')
@@ -14,7 +16,10 @@ let $recommendationLevel := if ($reset) then () else request:get-parameter('leve
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
 let $export := request:get-parameter('export', '')
 let $page := request:get-parameter('page', 1) 
-let $rows := rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
+let $rows :=
+    if ($searchItem)
+    then rf:searchFormat($searchItem)
+    else rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
 let $recommendationTable := rf:paging($rows,$page)
 
 return
@@ -27,8 +32,10 @@ else
         <head>
             <title>Format Recommendations</title>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
+            <link rel="stylesheet" type="text/css" href="{app:resource("autocomplete.css", "css")}"/>
+            <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
         </head>
-        <body>
+        <body onload="suggestion('searchId', '{rf:listSearchSuggestions()}')">
             <div id="all">
                 <div class="logoheader"/>
                 {menu:view()}
@@ -63,7 +70,8 @@ else
                            of the SIS functional domains and levels of recommendation). If you think you see an error, please 
                            <a href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">kindly help us get it right</a>.</p></div>
                     <div style="margin-top:30px;">
-                        <form id="searchRecommendation" style="float:left;" method="get" action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
+                        <form id="filterRecommendation"  autocomplete="off" style="float:left;" method="get"
+                            action="{app:link("views/recommended-formats-with-search.xq?#filterRecommendation")}">
                             <table style="margin:0;">
                                 <tr>
                                     <td>
@@ -87,8 +95,8 @@ else
                                         </select>
                                     </td>
                                     <td>
-                                        <input name="searchButton" class="button"
-                                        style="margin:0;height:25px;" type="submit" value="Search"/>
+                                        <input name="filterButton" class="button"
+                                        style="margin:0;height:25px;" type="submit" value="Filter"/>
                                     </td>
                                     <td>
                                         <input name="resetButton" class="button"
@@ -96,6 +104,17 @@ else
                                     </td>
                                 </tr>
                             </table>
+                        </form>
+                    </div>
+                    <div>
+                        <form id="searchRecommendation"  autocomplete="off" style="float:left;" method="get"
+                            action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
+                            <div class ="autocomplete">
+                                    <input id="searchId" name="searchFormat" style="width:400px;" class="inputText" type="text" 
+                                        placeholder="Search format" value="{$searchItem}"/>
+                                    <input name="searchButton" class="button"
+                                        style="margin: 0 0 0 5px;height:25px;" type="submit" value="Search"/>
+                            </div>
                         </form>
                     </div>
                     <div>
@@ -108,6 +127,7 @@ else
                             <input name="sortBy" type="hidden" value="{$sortBy}"/>
                         </form>
                     </div>
+                    
                     
                     <table id="recommendationTable" style="width:97%">
                         <tr>
