@@ -187,7 +187,7 @@
          <domain>Tool Support</domain>
          <level>recommended</level>
       </format>
-      <format id="fECMA">
+      <format id="fJScript">
          <domain>Tool Support</domain>
          <level>recommended</level>
       </format>
