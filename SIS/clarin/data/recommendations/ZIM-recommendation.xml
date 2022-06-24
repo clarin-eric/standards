@@ -179,7 +179,7 @@
          <domain>Tool Support</domain>
          <level>recommended</level>
       </format>
-      <format id="fJScript">
+      <format id="fJS">
          <domain>Tool Support</domain>
          <level>recommended</level>
       </format>
