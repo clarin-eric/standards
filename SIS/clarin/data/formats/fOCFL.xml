@@ -1,0 +1,18 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fHDF5" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Oxford Common File Layout</title>
+    <abbr>OCFL</abbr>
+  </titleStmt>
+  <keyword>storage format</keyword>
+  <keyword>hierarchical format</keyword>
+  <keyword>dataset format</keyword>
+  <extId type="wikidata">Q97063584</extId>
+  <info type="description">
+    <p>"This Oxford Common File Layout (OCFL) specification describes an application-independent approach to the storage of digital information 
+      in a structured, transparent, and predictable manner. It is designed to promote long-term object management best practices within digital 
+      repositories." (from <a href="https://ocfl.io/">https://ocfl.io/</a>)</p>
+    <p>The format is capable of storing BagIt and Moab objects, with support for versioning.</p>
+  </info>
+  <mimeType></mimeType>
+  <fileExt></fileExt>
+</format>
