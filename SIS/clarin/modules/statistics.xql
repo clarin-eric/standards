@@ -32,6 +32,9 @@ declare function stm:list-format-by-domain(){
     </tr>
 };
 
+(: note that this function is intended as always returning _positive_ recommendations, 
+to the exclusion of deprecations;
+   this is why it calls recommendation:get-positive-formats-by-domain()     :)
 declare function stm:get-formats-per-domain($threshold as xs:int){
     let $min-recommendations := if ($threshold) then $threshold else 1
     
@@ -42,7 +45,7 @@ declare function stm:get-formats-per-domain($threshold as xs:int){
         let $domain := $domain-names[$i]
         let $isEven := $i mod 2  
         
-        let $recommendations := recommendation:get-formats-by-domain($domain)
+        let $recommendations := recommendation:get-positive-formats-by-domain($domain)
         let $format-ids := fn:distinct-values($recommendations/@id)
         
         let $sorted :=

@@ -24,6 +24,10 @@ declare function recommendation:get-formats-by-domain($domain){
     $recommendation:centres/formats/format[domain=$domain]
 };
 
+(: this could be generalized; for Sep 2022, it's a quick way to only get positive recommendations, for KPI-related statistics :)
+declare function recommendation:get-positive-formats-by-domain($domain){
+    $recommendation:centres/formats/format[domain=$domain][level != 'deprecated']
+};
 
 declare function recommendation:get-formats-by-recommendation-level($level){
     $recommendation:centres/formats/format[level=$level]
