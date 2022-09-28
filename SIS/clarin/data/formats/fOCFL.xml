@@ -12,6 +12,8 @@
       in a structured, transparent, and predictable manner. It is designed to promote long-term object management best practices within digital 
       repositories." (from <a href="https://ocfl.io/">https://ocfl.io/</a>)</p>
     <p>The format is capable of storing BagIt and Moab objects, with support for versioning.</p>
+    <p>There exists a possibility to add new functionality to OCFL clients by means of
+      <a href="https://github.com/OCFL/extensions/">extensions</a>.</p>
   </info>
   <mimeType></mimeType>
   <fileExt></fileExt>
