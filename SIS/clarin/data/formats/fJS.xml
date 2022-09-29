@@ -1,0 +1,30 @@
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fJS" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>JavaScript</title>
+    <abbr>JS</abbr>
+  </titleStmt>
+  <keyword>scripting</keyword>
+  <keyword>ECMAScript</keyword>
+  <keyword>text format</keyword>
+  <extId type="wikidata">Q5924007</extId>
+  <extId type="loc">fdd000443</extId>
+  <extId type="pronom">x-fmt/423</extId>
+  <info type="description">
+    <p>"JavaScript is a programming language that is one of the core technologies of the World Wide
+      Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side
+      for webpage behavior, often incorporating third-party libraries. All major web
+      browsers have a dedicated JavaScript engine to execute the code on users' devices. JavaScript
+      is a high-level, often just-in-time compiled language that conforms to the ECMAScript
+      standard." (<a href="https://en.wikipedia.org/wiki/JavaScript">Wikipedia</a>)</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript specification</a></li>
+    </ul>
+  </info>
+  <mimeType recommended="yes">application/javascript</mimeType>
+  <mimeType>application/ecmascript</mimeType>
+  <fileExt recommended="yes">.js</fileExt>
+  <fileExt>.cjs</fileExt>
+  <fileExt>.mjs</fileExt>
+  <fileExt>.es</fileExt>
+</format>
