@@ -6,6 +6,15 @@
     <xs:element name="format">
         <xs:annotation>
             <xs:documentation xml:lang="en">Root element for describing a format document.</xs:documentation>
+            <xs:appinfo>
+                <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                    <sch:rule context="@id">
+                        <sch:let name="ids" value="collection('../data/formats')/format/@id"/>
+                        <sch:assert test="count($ids) eq count(distinct-values($ids))">The id attribute
+                            must be unique across all format descriptions.</sch:assert>
+                    </sch:rule>
+                </sch:pattern>
+            </xs:appinfo>
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
