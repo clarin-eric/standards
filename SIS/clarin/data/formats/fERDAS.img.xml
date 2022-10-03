@@ -1,3 +1,4 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fERDAS.img" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
     <title>ERDAS IMAGINE File Format</title>
