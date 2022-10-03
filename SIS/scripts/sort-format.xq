@@ -101,6 +101,7 @@ declare function sf:write-template($r){
             *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
             *  adjust the domain (https://clarin.ids-mannheim.de/standards/views/list-domains.xq ),
             *  adjust the recommendation level ({ recommended, acceptable, deprecated }),
+            *  if a comment is needed, it can be added as `<comment>...</comment>` below the `<level>` element
             *  repeat as necessary;
             *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
             
