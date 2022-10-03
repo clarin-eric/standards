@@ -1,4 +1,4 @@
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fHDF5" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fOCFL" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
     <title>Oxford Common File Layout</title>
     <abbr>OCFL</abbr>
@@ -15,6 +15,6 @@
     <p>There exists a possibility to add new functionality to OCFL clients by means of
       <a href="https://github.com/OCFL/extensions/">extensions</a>.</p>
   </info>
-  <mimeType></mimeType>
-  <fileExt></fileExt>
+<!--  <mimeType></mimeType>
+  <fileExt></fileExt>-->
 </format>
