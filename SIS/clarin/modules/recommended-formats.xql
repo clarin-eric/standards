@@ -222,7 +222,7 @@ $requestedLevel, $sortBy) {
                 if ($sortBy = 'recommendation') then
                     $level
                 else
-                    (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2))) (:abbr:)
+                    (if ($format-abbr) then fn:lower-case(fn:string-join($format-abbr,"++++")) else fn:lower-case(fn:substring($format-id,2))) (:abbr:)
     
     return
         if ($requestedCentre)
