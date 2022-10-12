@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Report an obvious error, quirky behaviour, or anything that seems off
 title: ''
 labels: bug, templatic
 assignees: ''
