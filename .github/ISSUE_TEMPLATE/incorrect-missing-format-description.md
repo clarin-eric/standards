@@ -1,6 +1,6 @@
 ---
 name: Incorrect/missing format description
-about: Use it to suggest changes or extensions in the SIS format descriptions
+about: Use it to suggest changes or extensions in the SIS format descriptions. These reports can also be triggered from inside the system, with some values pre-filled for you.
 title: ''
 labels: SIS:formats, templatic
 assignees: ''
