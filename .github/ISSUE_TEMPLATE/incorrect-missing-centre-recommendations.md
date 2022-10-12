@@ -1,6 +1,6 @@
 ---
 name: Incorrect/missing centre recommendations
-about: Use it to report incorrect or missing centre recommendations
+about: Use it to report incorrect or missing centre recommendations. These reports can also be triggered from inside the system, with some values pre-filled for you.
 title: ''
 labels: centre data, templatic
 assignees: ''
