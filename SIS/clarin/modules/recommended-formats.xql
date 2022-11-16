@@ -469,7 +469,7 @@ declare function rf:download-template($centre-id,$filename){
                 <url>{app:link(concat("/views/view-centre.xq?id=",$centre-id))}</url>
                 <exportDate>{fn:current-dateTime()}</exportDate>
                 <filter>
-                   <centre>ACE</centre>
+                   <centre>{$centre-id}</centre>
                 </filter>
             </header>
             {$recommendation/formats}    
