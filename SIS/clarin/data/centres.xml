@@ -48,83 +48,6 @@
       <ri status="B-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
-  <centre id="TRTC">
-    <name>CLARIN Knowledge Centre for Terminology Resources and Translation Corpora</name>
-    <a href="https://centres.clarin.eu/centre/55"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="ACE">
-    <name>CLARIN Knowledge Centre for Atypical Communication Expertise</name>
-    <a href="https://centres.clarin.eu/centre/61"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="K-BLP">
-    <name>CLARIN Knowledge Centre for Belarusian text and speech processing</name>
-    <a href="https://centres.clarin.eu/centre/67"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="NSD">
-    <name>CLARIN Knowledge Centre for Data Management at NSD</name>
-    <a href="https://centres.clarin.eu/centre/63"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="CKLD">
-    <name>CLARIN Knowledge Centre for linguistic diversity and language documentation</name>
-    <a href="https://centres.clarin.eu/centre/46"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="CLASSLA">
-    <name>CLARIN Knowledge Centre for South Slavic Languages</name>
-    <a href="https://centres.clarin.eu/centre/59"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="CLARIN-SPEECH">
-    <name>CLARIN Knowledge Centre for Speech Analysis</name>
-    <a href="https://centres.clarin.eu/centre/57"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="CLARIN-SMS">
-    <name>CLARIN Knowledge Centre for Swedish in a Multilingual Setting (SMS)</name>
-    <a href="https://centres.clarin.eu/centre/53"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="SAFMORIL">
-    <name>CLARIN Knowledge Centre for Systems and Frameworks for Morphologically Rich Languages</name>
-    <a href="https://centres.clarin.eu/centre/69"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="SWELANG">
-    <name>CLARIN Knowledge Centre for The Languages of Sweden</name>
-    <a href="https://centres.clarin.eu/centre/56"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="DiaRes">
-    <name>Clarin Knowledge Centre on Diachronic Language Resources</name>
-    <a href="https://centres.clarin.eu/centre/54"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
   <centre id="CLARIN-IS" deposition="1">
     <name>CLARIN-IS</name>
     <a href="https://centres.clarin.eu/centre/64"/>
@@ -186,13 +109,6 @@
     <a href="https://centres.clarin.eu/centre/33"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="CORLI-K">
-    <name>CORLI French CLARIN Knowledge Centre for Corpora, Languages and Interaction</name>
-    <a href="https://centres.clarin.eu/centre/72"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="CNC">
@@ -289,13 +205,6 @@
       <ri status="B-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
-  <centre id="IMPACT-CKC">
-    <name>IMPACT Centre of Competence</name>
-    <a href="https://centres.clarin.eu/centre/52"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
   <centre id="IMS" deposition="1">
     <name>Institut für Maschinelle Sprachverarbeitung</name>
     <a href="https://centres.clarin.eu/centre/10"/>
@@ -373,13 +282,6 @@
       <ri status="C-centre aiming-for-B">CLARIN</ri>
     </nodeInfo>
   </centre>
-  <centre id="NLPEL">
-    <name>NLP:EL - CLARIN Knowledge Centre for Natural Language Processing in Greece</name>
-    <a href="https://centres.clarin.eu/centre/70"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
   <centre id="ORTOLANG" deposition="1">
     <name>Open Resources and TOols for LANGuage</name>
     <a href="https://centres.clarin.eu/centre/73"/>
@@ -394,25 +296,11 @@
       <ri status="C-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
-  <centre id="Phonogrammarchiv">
-    <name>Phonogrammarchiv Institute for audiovisual Research and Documentation</name>
-    <a href="https://centres.clarin.eu/centre/41"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
   <centre id="PolMine">
     <name>PolMine Project</name>
     <a href="https://centres.clarin.eu/centre/38"/>
     <nodeInfo>
       <ri status="C-centre">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="PORTULAN_CLARIN-K-Centre">
-    <name>PORTULAN CLARIN K-Centre: CLARIN Knowledge Centre for the Science and Technology of the Portuguese Language</name>
-    <a href="https://centres.clarin.eu/centre/66"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="PORTULAN-CLARIN" deposition="1">
@@ -427,13 +315,6 @@
     <a href="https://centres.clarin.eu/centre/58"/>
     <nodeInfo>
       <ri status="C-centre aiming-for-B">CLARIN</ri>
-    </nodeInfo>
-  </centre>
-  <centre id="Spanish_K-Centre">
-    <name>Spanish CLARIN K-Centre</name>
-    <a href="https://centres.clarin.eu/centre/32"/>
-    <nodeInfo>
-      <ri status="K-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="Sprakbanken" deposition="1">
