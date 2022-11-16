@@ -41,6 +41,13 @@
       <ri status="C-centre aiming-for-B">CLARIN</ri>
     </nodeInfo>
   </centre>
+  <centre id="CLARIN-EL">
+    <name>CLARIN:EL National Infrastructure for Language Resources and Technologies in Greece</name>
+    <a href="https://centres.clarin.eu/centre/75"/>
+    <nodeInfo>
+      <ri status="B-centre">CLARIN</ri>
+    </nodeInfo>
+  </centre>
   <centre id="CLARIN-LV">
     <name>CLARIN Centre of Latvian language resources and tools</name>
     <a href="https://centres.clarin.eu/centre/68"/>
