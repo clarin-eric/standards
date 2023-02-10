@@ -53,16 +53,16 @@ declare function cm:list-centre($sortBy,$statusFilter) {
         let $id := data($c/@id)
         let $status-text := data($c/nodeInfo/ri/@status)
         let $statuses :=
-        if (fn:contains($status-text, ","))
-        then
-            <span>{
-                    for $status in fn:tokenize(data($c/nodeInfo/ri/@status), ",")
-                    return
-                        ($status, <br/>)
-                }
-            </span>
-        else
-            $status-text
+            if (fn:contains($status-text, ","))
+            then
+                <span>{
+                        for $status in fn:tokenize(data($c/nodeInfo/ri/@status), ",")
+                        return
+                            ($status, <br/>)
+                    }
+                </span>
+            else
+                $status-text
         
         order by
         
@@ -77,7 +77,7 @@ declare function cm:list-centre($sortBy,$statusFilter) {
         return
             if ($statusFilter)
             then 
-                if ($statuses[.=$statusFilter])
+                if (fn:contains($status-text, $statusFilter))
                 then cm:print-centre-row($id, $name, $ri, $statuses)
                 else ()
             else (cm:print-centre-row($id, $name, $ri, $statuses))
