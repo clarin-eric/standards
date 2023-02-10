@@ -10,9 +10,9 @@ import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-mod
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 
 
-(: Define centre page 
+(: Describes a centre and  lists formats recommended by that centre
+
    @author margaretha
-   @date Dec 2021
 :)
 
 
@@ -78,11 +78,7 @@ else
                             </div>
                             <div>
                                 <span class="heading">Research Infrastructure: </span>
-                                <span id="ri">{$centre-ri/text()}</span>
-                            </div>
-                            <div>
-                                <span class="heading">Status(es): </span>
-                                <span id="ri">{data($centre-ri/@status) }</span>
+                                <span id="ri">{$centre-ri/text()} ({data($centre-ri/@status)})</span>
                             </div>
                             {
                                 if ($centre-info)
