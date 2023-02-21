@@ -5,9 +5,9 @@
     <abbr>GML</abbr>
   </titleStmt>
   <keyword>GIS</keyword>
-  <extId type="loc">fdd000296</extId>
-  <extId type="wikidata">Q926165</extId>
-  <extId type="pronom">x-fmt/227</extId>
+  <extId type="LOC">fdd000296</extId>
+  <extId type="Wikidata">Q926165</extId>
+  <extId type="PRONOM">x-fmt/227</extId>
   <info type="description">
     <p>"GML is the XML grammar defined by the Open Geospatial Consortium (OGC) to express
       geographical features. GML serves as a modeling language for geographic systems as well as an

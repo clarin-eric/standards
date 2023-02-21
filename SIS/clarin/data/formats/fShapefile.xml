@@ -6,10 +6,10 @@
   </titleStmt>
   <keyword>GIS</keyword>
   <keyword>ArcGIS</keyword>
-  <extId type="loc">fdd000280</extId>
-  <extId type="pronom">x-fmt/235</extId>
-  <extId type="babelnet">bn:02131405n</extId>
-  <extId type="wikidata">Q278934</extId>
+  <extId type="LOC">fdd000280</extId>
+  <extId type="PRONOM">x-fmt/235</extId>
+  <extId type="BabelNet">bn:02131405n</extId>
+  <extId type="Wikidata">Q278934</extId>
   <info type="description">
     <p>"The shapefile format is a geospatial vector data format for geographic information system
       (GIS) software. It is developed and regulated by Esri as a mostly open specification for data

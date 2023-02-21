@@ -9,8 +9,8 @@
   <keyword>GIS</keyword>
   <keyword>georeference</keyword>
   <keyword>proprietary format</keyword>
-  <extId type="wikidata">Q28206049</extId>
-  <extId type="loc">fdd000420</extId>
+  <extId type="Wikidata">Q28206049</extId>
+  <extId type="LOC">fdd000420</extId>
   <info type="description">
     <p>"ERDAS Imagine is a software package designed for working with GIS raster data. It has its
       own binary "img" format for images. The content of this file can vary: it can be a

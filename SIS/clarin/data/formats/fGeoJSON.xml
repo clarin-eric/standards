@@ -5,9 +5,9 @@
     <abbr>GeoJSON</abbr>
   </titleStmt>
   <keyword>GIS</keyword>
-  <extId type="loc">fdd000382</extId>
-  <extId type="pronom">fmt/1367</extId>
-  <extId type="wikidata">Q5533904</extId>
+  <extId type="LOC">fdd000382</extId>
+  <extId type="PRONOM">fmt/1367</extId>
+  <extId type="Wikidata">Q5533904</extId>
   <info type="description">
     <p>"GeoJSON is an open standard format designed for representing simple geographical
       features, along with their non-spatial attributes. It is based on the JSON format. The

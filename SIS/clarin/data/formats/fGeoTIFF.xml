@@ -8,9 +8,9 @@
   <keyword>raster graphics</keyword>
   <keyword>GIS</keyword>
   <keyword>georeference</keyword>
-  <extId type="wikidata">Q1502796</extId>
-  <extId type="pronom">fmt/155</extId>
-  <extId type="loc">fdd000279</extId>
+  <extId type="Wikidata">Q1502796</extId>
+  <extId type="PRONOM">fmt/155</extId>
+  <extId type="LOC">fdd000279</extId>
   <info type="description">
     <p>"GeoTIFF is a public domain metadata standard which allows georeferencing information to be
       embedded within a TIFF file. The potential additional information includes map projection,
