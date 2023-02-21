@@ -1,19 +1,21 @@
 <landingPages>
     <landingPage>
-        <type>pronom</type>
+        <type>PRONOM</type>
         <prefix>https://www.nationalarchives.gov.uk/PRONOM/</prefix>
+        <tooltip>UK National Archives</tooltip>
     </landingPage>
     <landingPage>
-        <type>loc</type>
+        <type>LOC</type>
         <prefix>https://www.loc.gov/preservation/digital/formats/fdd/</prefix>
         <suffix>.shtml</suffix>
+        <tooltip>Library of Congress</tooltip>
     </landingPage>
     <landingPage>
-        <type>wikidata</type>
+        <type>Wikidata</type>
         <prefix>https://www.wikidata.org/wiki/</prefix>
     </landingPage>
     <landingPage>
-        <type>babelnet</type>
+        <type>BabelNet</type>
         <prefix>https://babelnet.org/synset?id=</prefix>
         <suffix>&amp;lang=EN</suffix>
     </landingPage>
