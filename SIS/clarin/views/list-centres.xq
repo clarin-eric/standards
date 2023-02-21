@@ -46,7 +46,7 @@ return
                                 <tr>
                                     <td>
                                         <select name="status" class="inputSelect" style="width:185px;">
-                                            {rf:print-option($status, "", "Select status ...")}
+                                            {rf:print-option("select", "", "Select status ...")}
                                             {cm:print-statuses($status)}
                                         </select>
                                     </td>

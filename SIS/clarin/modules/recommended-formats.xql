@@ -12,6 +12,8 @@ at "../model/recommendation-by-centre.xqm";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
 
+import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+
 declare variable $rf:pageSize := 50;
 declare variable $rf:searchMap := rf:getSearchMap();
     
@@ -131,12 +133,12 @@ declare function rf:print-centres($centre) {
                 value="{$c}">{$c}</option>)
 };
 
-declare function rf:print-domains($domainId) {
+declare function rf:print-domains($domains) {
     for $d in $domain:domains
     let $id := $d/@id
         order by fn:lower-case($d/name/text())
     return
-        if ($id eq $domainId)
+        if (functx:is-value-in-sequence($id,$domains))
         then
             <option
                 value="{$id}"
@@ -164,14 +166,20 @@ declare function rf:print-keywords($keyword) {
 };
 
 declare function rf:print-option($selected, $value, $label) {
-    if ($selected eq $value)
+    if(empty($selected))
     then
-        <option
-            value="{$value}"
-            selected="selected">{$label}</option>
+        <option value="{$value}">{$label}</option>
     else
-        <option
-            value="{$value}">{$label}</option>
+        for $s in $selected
+        return
+            if ($s eq $value)
+            then
+                <option
+                    value="{$value}"
+                    selected="selected">{$label}</option>
+            else
+                <option
+                    value="{$value}">{$label}</option>
 };
 
 declare function rf:print-centre-recommendation($requestedFormatId){
@@ -227,11 +235,11 @@ $requestedLevel, $sortBy) {
     return
         if ($requestedCentre)
         then
-            (
+        (
             if ($requestedCentre eq $centre)
             then
                 (
-                if ($requestedDomain)
+                if (not(empty($requestedDomain)))
                 then
                     (rf:checkRequestedDomain($requestedDomain, $requestedLevel,
                     $format, $centre, $domain))
@@ -246,10 +254,10 @@ $requestedLevel, $sortBy) {
                 )
             else
                 ()
-            )
+         )
         else
-            (
-            if ($requestedDomain)
+        (
+            if (not(empty($requestedDomain)))
             then
                 (rf:checkRequestedDomain($requestedDomain, $requestedLevel,
                 $format, $centre, $domain))
@@ -261,16 +269,17 @@ $requestedLevel, $sortBy) {
                 else
                     (rf:print-recommendation-row($format, $centre, $domain))
                 )
-            )
+        )
 
 };
 
 declare function rf:checkRequestedDomain($requestedDomain, $requestedLevel,
 $format, $centre, $domain) {
     
-    if ($requestedDomain eq data($domain/@id))
+    if (functx:is-value-in-sequence(data($domain/@id),$requestedDomain))
     then
         (
+        
         if ($requestedLevel)
         then
             (rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain))
