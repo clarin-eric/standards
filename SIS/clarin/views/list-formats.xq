@@ -76,7 +76,7 @@ return
                                 <tr>
                                     <td><span class="heading3">Keyword</span>:
                                         <select name="keyword" class="inputSelect" style="width:185px;">
-                                            {rf:print-option($keyword, "", "Select keyword ...")}
+                                            {rf:print-option("select", "", "Select keyword ...")}
                                             {rf:print-keywords($keyword)}
                                         </select>
                                     </td>
