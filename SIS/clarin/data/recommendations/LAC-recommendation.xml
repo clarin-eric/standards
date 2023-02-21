@@ -45,7 +45,7 @@
          <level>recommended</level>
          <comment>Video codec h.264 (preferred profile: main, level: 4.0, 1080p, 30fps), Audio encoding LPCM (preferred sampling rate 48 kHz and bit depth 16 bit)</comment>
       </format>
-      <format id="fMP4">
+      <format id="fMPEG-4-AVC">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
          <comment>Video codec h.264 (preferred profile: main, level: 4.0, 1080p, 30fps), Audio encoding AAC (LC) (preferred sampling rate 48 kHz and bit rate 128–384 kbps)</comment>
