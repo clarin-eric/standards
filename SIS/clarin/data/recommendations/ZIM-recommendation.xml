@@ -187,10 +187,6 @@
          <domain>Tool Support</domain>
          <level>recommended</level>
       </format>
-      <format id="fJS">
-         <domain>Tool Support</domain>
-         <level>recommended</level>
-      </format>
       <format id="fXSD">
          <domain>Tool Support</domain>
          <level>recommended</level>
