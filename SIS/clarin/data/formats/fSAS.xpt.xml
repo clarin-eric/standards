@@ -7,12 +7,12 @@
   <keyword>statistical data</keyword>
   <keyword>SAS</keyword>
   <keyword>binary format</keyword>
+  <extId type="LOC">fdd000464</extId>
+  <extId type="Wikidata">Q33120268</extId>
   <info type="description">
     <p>This extension appears to signal versions 5-8 the SAS software. See:</p>
     <ul>
       <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/statistical-data">DANS information on statistical formats</a></li>
-      <li>LoC ID: <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000464.shtml">fdd000464</a></li>
-      <li>Wikidata ID: <a href="https://www.wikidata.org/wiki/Q33120268">Q33120268</a></li>
     </ul>
   </info>
   <mimeType>application/x-sas-xport</mimeType>

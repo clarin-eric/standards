@@ -5,8 +5,9 @@
     <abbr>DOCX</abbr>
   </titleStmt>
   <keyword>document format</keyword>
+  <extId type="LOC">fdd000400</extId>
   <info type="description">
-    <p>See: <a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-376/">ECMA-376</a> and <a href="https://www.iso.org/committee/45374/x/catalogue/">ISO/IEC 29500</a>, and <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000400.shtml">LoC entry</a>. </p> 
+    <p>See: <a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-376/">ECMA-376</a> and <a href="https://www.iso.org/committee/45374/x/catalogue/">ISO/IEC 29500</a>.</p> 
   </info> 
   <mimeType>application/vnd.openxmlformats-officedocument.wordprocessingml.document</mimeType>
   <fileExt>.docx</fileExt>

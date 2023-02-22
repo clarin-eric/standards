@@ -6,6 +6,7 @@
   </titleStmt>
   <keyword>document format</keyword>
   <keyword>binarized TextualData</keyword>
+  <extId type="LOC">fdd000319</extId>
   <info type="description">
     <p>PDF/A-2 is a format created by subsetting the PDF 1.7 (ISO 32000-1) format, with the aim of
       prohibiting features unsuitable for long-term archiving, such as font linking (as opposed to

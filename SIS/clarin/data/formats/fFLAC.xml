@@ -8,6 +8,7 @@
   <keyword>audio file format</keyword>
   <keyword>lossless</keyword>
   <extId type="PRONOM">fmt/279</extId>
+  <extId type="LOC">fdd000198</extId>
   <info type="description">
     <p>FLAC (/flæk/; Free Lossless Audio Codec) is an audio coding format for lossless compression
       of digital audio, developed by the Xiph.Org Foundation, and is also the name of the free

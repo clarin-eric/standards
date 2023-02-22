@@ -7,6 +7,7 @@
   <keyword>statistical data</keyword>
   <keyword>format family</keyword>
   <keyword>STATA</keyword>
+  <extId type="Wikidata">Q1204300</extId>
   <info type="description">
     <p>See the <a href="https://en.wikipedia.org/wiki/Stata">corresponding Wikipedia article</a> for comprehensive description.</p>
     <p>In CLARIN, various formats produced by STATA are recognized, with various degrees of recommendations, according to their openness and sustainability:</p>

@@ -8,12 +8,12 @@
   <keyword>SPSS</keyword>
   <keyword>proprietary format</keyword>
   <keyword>binary format</keyword>
+  <extId type="LOC">fdd000469</extId>
+  <extId type="PRONOM">fmt/638</extId>
   <info type="description">
     <p>See the <a
       href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/spss-sav"
-      >DANS description</a>. See also <a
-        href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000469.shtml">Loc
-        info</a>. PRONOM ID: <a href="https://www.nationalarchives.gov.uk/PRONOM/fmt/638">fmt/638</a></p>
+      >DANS description</a>.</p>
   </info>
   <mimeType>application/x-spss-sav</mimeType>
   <fileExt>.sav</fileExt>

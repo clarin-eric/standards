@@ -15,4 +15,5 @@
   <mimeType>text/plain</mimeType>
   <fileExt>.DO</fileExt>
   <fileExt>.dat</fileExt>
+  <formatFamily>STATA</formatFamily>
 </format>

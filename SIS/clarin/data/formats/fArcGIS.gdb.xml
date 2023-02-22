@@ -6,6 +6,9 @@
   </titleStmt>
   <keyword>GIS</keyword>
   <keyword>ArcGIS</keyword>
+  <extId type="LOC">fdd000294</extId>
+  <extId type="PRONOM">fmt/990</extId>
+  <extId type="Wikidata">Q50376365</extId>
   <info type="description">
     <p>"Esri created the file geodatabase to be a container for storing multiple attribute tables,
       vector and raster data sets. It’s the successor of the personal geodatabase (MDB) – and Esri
@@ -24,10 +27,6 @@
           href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/esri-geodatabase"
           >DANS info</a>
       </li>
-      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000294.shtml">LoC
-        info</a>, ID: fdd000294</li>
-      <li><a href="https://www.nationalarchives.gov.uk/pronom/fmt/990">PRONOM info</a>, PUID: fmt/990</li>
-      <li><a href="https://www.wikidata.org/wiki/Q50376365">Wikidata entry</a>, ID: Q50376365</li>
       <li>
         <a href="https://inspire.ec.europa.eu/media-types/application/x-filegdb">x-filegdb info</a>
       </li>

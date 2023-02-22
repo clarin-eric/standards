@@ -6,6 +6,7 @@
   </titleStmt>
   <keyword>document format</keyword>
   <keyword>binarized TextualData</keyword>
+  <extId type="LOC">fdd000360</extId>
   <info type="description">
     <p>PDF/A-3 is a format that differs from PDF/A-2 in only one regard: it allows embedding of
       arbitrary file formats (such as XML, CSV, CAD, word-processing documents, spreadsheet

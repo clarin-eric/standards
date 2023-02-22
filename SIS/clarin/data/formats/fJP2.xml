@@ -7,8 +7,12 @@
   <keyword>image format</keyword>
   <keyword>raster graphics</keyword>
   <keyword>image compression</keyword>
+  <extId type="LOC">fdd000143</extId>
+  <extId type="PRONOM">x-fmt/392</extId>
+  <extId type="Wikidata">Q27979401</extId>
 <!--  this is also video, and can be lossy... messy  -->
   <info type="description">
+    <p>The external IDs are for JPEG 2000 Part 1 (Core) jp2 File Format</p>
     <p>Please feel welcome to supply the description of this format file via GitHub: either as an
       <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
       request after forking or browsing the

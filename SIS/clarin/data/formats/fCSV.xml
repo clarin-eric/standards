@@ -4,9 +4,11 @@
     <title>Comma-separated values</title>
     <abbr>CSV</abbr>
   </titleStmt>
+  <keyword>database format</keyword>
+  <keyword>column format</keyword>
+  <extId type="LOC">fdd000323</extId>
   <info type="description">
-    <p>See <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000323.shtml">LoC entry</a>.</p>
-    <p>See also:</p>
+    <p>See:</p>
     <ul>
       <li>"<a href="https://www.bitsondisk.com/writing/2021/retire-the-csv/">It's Time to Retire the
           CSV</a>", by Alex Rasmussen (August 16, 2021)</li>

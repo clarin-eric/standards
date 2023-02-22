@@ -6,8 +6,9 @@
   </titleStmt>
   <keyword>documentation format</keyword>
   <keyword>format family</keyword>
+  <extId type="PRONOM">fmt/1149</extId>
   <info type="description">
-    <p>See the [Wikipedia description](https://en.wikipedia.org/wiki/Markdown) of the Markdown (and
+    <p>See the <a href="https://en.wikipedia.org/wiki/Markdown">Wikipedia description</a> of the Markdown (and
       Commonmark) family of languages. Please feel welcome to extend this stub.</p>
   </info>
   

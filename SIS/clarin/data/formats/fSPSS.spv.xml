@@ -8,6 +8,7 @@
   <keyword>SPSS</keyword>
   <keyword>proprietary format</keyword>
   <keyword>binary format</keyword>
+  <extId type="PRONOM">fmt/274</extId>
   <info type="description">
     <p>This format is the format for SPSS statistics output files. A variation of it was .spo, now
       no longer used. See <a
@@ -19,8 +20,7 @@
       format files directly into Statistics version 16 and later."). See also <a
         href="https://www.wikidata.org/wiki/Q34290425">info on .spo from Wikidata</a> and <a
         href="https://www.wikidata.org/wiki/Q29943954">info on .spv from Wikidata</a>, and <a
-        href="http://fileformats.archiveteam.org/wiki/SPSS">Fileformat wiki on SPSS formats</a>.
-      PRONOM PUID: <a href="fmt/274">fmt/274</a></p>
+        href="http://fileformats.archiveteam.org/wiki/SPSS">Fileformat wiki on SPSS formats</a>.</p>
   </info>
 <!--  <mimeType>application/x-spss-sav</mimeType>-->
   <fileExt recommended="yes">.spv</fileExt>

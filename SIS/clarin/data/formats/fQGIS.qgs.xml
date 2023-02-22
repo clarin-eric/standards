@@ -6,6 +6,8 @@
   </titleStmt>
   <keyword>GIS</keyword>
   <keyword>GIS workspace format</keyword>
+  <extId type="LOC">fdd000340</extId>
+  <extId type="Wikidata">Q15631639</extId>
   <info type="description">
     <p>"QGIS (until 2013 known as Quantum GIS) is a free and open-source cross-platform desktop
       geographic information system (GIS) application that supports viewing, editing, and analysis
@@ -13,10 +15,8 @@
     <p>See the following for more information:</p>
     <ul>
       <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces">DANS info</a></li>
-      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000340.shtml">LoC info</a>, ID: fdd000340</li>
       <li><a href="https://en.wikipedia.org/wiki/QGIS">Wikipedia entry</a></li> 
       <li><a href="https://docs.qgis.org/3.16/en/docs/user_manual/appendices/qgis_file_formats.html">QGIS file formats</a></li>
-      <li><a href="https://www.wikidata.org/wiki/Q15631639">Wikidata entry</a>, ID: Q15631639</li>
     </ul>
   </info>
   <fileExt>.qgs</fileExt>

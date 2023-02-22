@@ -6,6 +6,9 @@
   </titleStmt>
   <keyword>CAD format</keyword>
   <keyword>AutoCAD</keyword>
+  <extId type="LOC">fdd000446</extId>
+  <extId type="PRONOM">fmt/63</extId>
+  <extId type="Wikidata">Q691652</extId>
   <info type="description">
     <p>Family of formats, of which <a href="../views/view-format.xq?id=fDXF.R12">version R12</a> is advocated by several CLARIN centres.</p>
     <p>See the following for more information:</p>

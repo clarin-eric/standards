@@ -7,6 +7,7 @@
   <keyword>speech data</keyword>
   <keyword>audio file format</keyword>
   <keyword>container format</keyword>
+  <extId type="LOC">fdd000001</extId>
   <info type="description">
     <p>Waveform Audio File Format (WAVE, or WAV due to its filename extension; pronounced "wave") is
       an audio file format standard, developed by IBM and Microsoft, for storing an audio bitstream

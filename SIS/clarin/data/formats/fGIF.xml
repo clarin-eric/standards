@@ -9,6 +9,8 @@
   <keyword>image compression</keyword>
   <keyword>lossless compression</keyword>
   <extId type="PRONOM">fmt/4</extId>
+  <extId type="LOC">fdd000133</extId>
+  <extId type="Wikidata">Q27526739</extId>
   <info type="description">
     <p>Please feel welcome to supply the description of this format file via GitHub: either as an
       <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull

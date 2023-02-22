@@ -6,12 +6,14 @@
   </titleStmt>
   <keyword>CAD format</keyword>
   <keyword>AutoCAD</keyword>
+  <extId type="PRONOM">fmt/75</extId>
   <info type="description">
     <p>Version R12 of the <a href="../views/view-format.xq?id=fDXF">AutoCAD DXF format</a> appears to be stable, open, and widespread. As a text-based format, it is advocated by several CLARIN centres.</p>
     <p>See the following for more information:</p>
     <ul>
       <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/autocad-dxf-version-r12-ascii">DANS description of R12</a></li>
-      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000446.shtml">LoC info on the DXF format family</a>, with references to PRONOM</li>
+      <li><a href="https://www.martinreddy.net/gfx/3d/DXF12.spec">the R12 specification document</a></li>
+      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000446.shtml">LoC info on the DXF format family</a>, with references to multiple versions identified by PRONOM</li>
     </ul>
   </info>
   <mimeType>image/vnd.dxf</mimeType>

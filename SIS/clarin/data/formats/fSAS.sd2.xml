@@ -8,6 +8,8 @@
   <keyword>SAS</keyword>
   <keyword>binary format</keyword>
   <keyword>portable format</keyword>
+  <extId type="Wikidata">Q29904526</extId>
+  <extId type="PRONOM">fmt/1015</extId>
   <info type="description">
     <p>The .sd2 extension appears to be common to several versions of the SAS software. The
       corresponding long extension for version 9.x is .sas7bdat. DANS mentions also .7dat and .tpt.
@@ -15,8 +17,6 @@
     <ul>
       <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/sas">DANS information on dataset SAS formats</a></li>
       <li><a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/hostwin/n0sk6o15955yoen19n9ghdziqw1u.htm#n0mqfkm2esyf6ln1rxt8qynf5cho">File extensions for SAS files</a></li>
-      <li>Wikidata ID: <a href="https://www.wikidata.org/wiki/Q29904526">Q29904526</a></li>
-      <li>PRONOM PUID: <a href="https://www.nationalarchives.gov.uk/pronom/fmt/1015">fmt/1015</a></li>
     </ul>
   </info>
   <fileExt>.sd2</fileExt>

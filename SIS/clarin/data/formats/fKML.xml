@@ -5,6 +5,8 @@
     <abbr>KML</abbr>
   </titleStmt>
   <keyword>GIS</keyword>
+  <extId type="LOC">fdd000340</extId>
+  <extId type="Wikidata">Q79587</extId>
   <info type="description">
     <p>"KML is an XML notation for expressing geographic annotation and
       visualization within two-dimensional maps and three-dimensional Earth browsers. KML was
@@ -16,9 +18,7 @@
     <p>See the following for more information:</p>
     <ul>
       <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/kml">DANS info</a></li>
-      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000340.shtml">LoC info</a>, ID: fdd000340</li>
       <li><a href="https://en.wikipedia.org/wiki/Keyhole_Markup_Language">Wikipedia entry</a></li> 
-      <li><a href="https://www.wikidata.org/wiki/Q79587">Wikidata entry</a>, ID: Q79587</li>
     </ul>
   </info>
   <!--<relation target="" type="isDefinedBy"></relation>   Open Geospatial Consortium -->
