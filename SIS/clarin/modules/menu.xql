@@ -65,6 +65,13 @@ declare function menu:view() {
                 </tr>
                 <tr>
                     <td width="10px"></td>
+                    <td width="10px"></td>
+                    <td class="tdmenu">
+                        <a style="display:block" href="{app:link("views/kpi.xq")}">Relevant KPIs</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="10px"></td>
                     <td colspan="2" class="tdmenu">
                         <a style="display:block" href="{app:link("views/sanity-check.xq")}">Sanity Check</a>
                     </td>
