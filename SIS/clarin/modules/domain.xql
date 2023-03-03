@@ -64,9 +64,21 @@ declare function dm:list-domains-grouped() {
         order by $group
     return
         <li>
-            <h2>{$group}</h2>
+            <h2><a href="{dm:create-domain-group-recommendation-link($group)}">
+                {$group}</a></h2>
             <ul
                 style="padding-left:15px">{dm:list-domains($group)}</ul>
         </li>
 };
 
+
+declare function dm:create-domain-group-recommendation-link($group as xs:string){
+        
+    let $domain-ids := 
+        for $id in $domain:domains[@orderBy eq $group]/@id
+        return concat("domain=",$id)
+    let $joined-domains := fn:string-join($domain-ids,"&amp;")
+    
+    return app:link(concat("views/recommended-formats-with-search.xq?",
+        $joined-domains,"#searchRecommendation"))
+};
