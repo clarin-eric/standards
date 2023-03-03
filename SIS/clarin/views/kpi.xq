@@ -41,8 +41,7 @@ return
                 <div class="title">Relevant CLARIN KPIs</div>
                   <div>
                     <p>Among the 12 Key Performance Indicators that have been adopted as measures of performance of
-                    CLARIN, at least three reference areas that the SIS either draws on or directly serves. These 
-                    three are the following:</p>
+                    CLARIN, at least three reference areas that the SIS either draws on or directly serves. The two crucial ones are the following:</p>
                   </div>
                   <div>
                     <table style="">
@@ -54,26 +53,27 @@ return
                         <tr>
                         <td style="vertical-align:top">1.</td>
                         <td>Number of certified B-centres</td>
-                        <td>Number of certified B-centres ((:count(cm:get_centres(RI=CLARIN, status=B)):))</td>
+                        <td>Number of certified B-centres</td>
                         </tr>
                                                 <tr>
                         <td style="vertical-align:top">2.</td>
                         <td style="vertical-align:top">Collections of standards and mappings</td>
                         <td>Percentage of centres offering repository services that have published an 
-                        overview of formats that can be processed in their repository 
-                        ((: 100 * 
-                        rf:get_centres_where count(/recommendation/formats/* gt 0)  / 
-                                                        count(get_centres(RI, status)):))</td>
+                        overview of formats that can be processed in their repository</td>
                         </tr>
                         
-                        <tr style="background: lightgray">
-                        <td style="vertical-align:top">3.</td>
-                        <td>Collaboration with RIs</td>
-                        <td>Number of official collaborations with RIs as confirmed in formal agreements</td>
-                        </tr>
                     </table>
                     </div>
-                    <div><p>Above, we provide data on KPIs #1 and #2, on the basis of the current content of the SIS.</p>
+                    <div><p>Below, we provide data on KPIs #1 and #2, on the basis of the current content of the SIS.</p>
+                    <ul>
+                    <li>CLARIN B-centres recorded in the SIS: <b>count(cm:get_centres(RI=CLARIN, status=B-centre))</b> </li>
+                    <li>Number of B-centres that have provided information (and recorded that in the SIS): <b>count( rf:get_centres_where count(/recommendation/formats/* gt 0) )</b></li>
+                    <li>KPI "Collections of standards and mappings" as represented in the SIS: <b>100 * 
+                        count(rf:get_centres_where count(/recommendation/formats/* gt 0))  / 
+                                                        count(get_centres(RI=CLARIN, status=B-centre)) %</b></li>
+                    </ul>
+                    </div>
+                    <div>
                     <p>Please note that:</p>
                     <ul>
                     <li>CLARIN is a dynamic and developing infrastructure: new centres join, existing centres can be disbanded or 
@@ -83,13 +83,14 @@ return
                     or keeping them current for each centre – that is <a href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">the 
                     role of the centres themselves</a>. If you notice that recommendations from some data-depositing centre are missing, please kindly consider inviting that 
                     centre to provide their information to the SIS.</li>
-                    <li>The SIS provides information on <a href="{app:link("views/list-centres.xq")}">centres that allow 
-                    for data depositions</a>. That set is wider than the set of 
+                    <li>The SIS provides information on all <a href="{app:link("views/list-centres.xq")}">centres that allow 
+                    for data depositions</a> (some of them are not B-centres, and some of them may not be CLARIN centres either). That set is wider than the set of 
                     <a href="{app:link("views/list-centres.xq?status=B-centre&amp;submit=Filter")}">CLARIN B-centres</a>, 
-                    which provides the basis for the calculation of the CLARIN KPI listed as #2 above.</li>
+                    which is the basis for the calculation of the CLARIN KPI listed as #2 above.</li>
                     </ul>
-                    <p>As for KPI #3, we provide only indirect and imprecise information: it can be extracted from the number of 
-                    Research Infrastructures other than CLARIN that the SIS has information on. Some information in this area can be found at 
+                    <p>The third potentially relevant KPI is "Collaboration with RIs", and its measure is "Number of official collaborations with RIs as 
+                    confirmed in formal agreements". Regarding this KPI, the SIS can provide only indirect and rather imprecise information: it can be gleaned from the number of 
+                    Research Infrastructures other than CLARIN that the SIS lists information on. More details in this area can be found in 
                     <a href="https://www.clarin.eu/content/clarin-and">the relevant section(s) of clarin.eu</a>.</p>
                     </div>
             </div>
