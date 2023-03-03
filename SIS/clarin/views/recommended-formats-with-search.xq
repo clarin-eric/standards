@@ -11,7 +11,7 @@ let $searchItem := request:get-parameter('searchFormat', '')
 
 let $reset := request:get-parameter('resetButton', '')
 let $centre := if ($reset) then () else request:get-parameter('centre', '')
-let $domainId := if ($reset) then () else request:get-parameter('domain',())
+let $domainId := if ($reset) then (()) else request:get-parameter('domain',())
 let $recommendationLevel := if ($reset) then () else request:get-parameter('level', '')
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
 let $export := request:get-parameter('export', '')
@@ -80,11 +80,11 @@ else
                             <table style="margin:0;">
                                 <tr >
                                     <td width="180px;" style="vertical-align: top;">
-                                        <select name="centre" class="inputSelect" style="width:190px;padding:2px;height:30px;margin-bottom:5px;">
+                                        <select name="centre" class="inputSelect" style="width:200px;padding:2px;height:30px;margin-bottom:5px;">
                                             {rf:print-option("select", "", "Select centre ...")}
                                             {rf:print-centres($centre)}
                                         </select>
-                                        <select name="level" class="inputSelect" style="width:190px; padding:2px;height:30px;">
+                                        <select name="level" class="inputSelect" style="width:200px; padding:2px;height:30px;">
                                             {rf:print-option("select", "", "Select recommendation ...")}
                                             {rf:print-option($recommendationLevel, "recommended", "recommended")}
                                             {rf:print-option($recommendationLevel, "acceptable", "acceptable")}
@@ -92,7 +92,7 @@ else
                                         </select>
                                     </td>
                                     <td style="vertical-align: top;">
-                                        <select name="domain" class="inputSelect" style="width:185px;height:65px;" multiple="multiple">
+                                        <select name="domain" class="inputSelect" style="width:200px;height:65px;" multiple="multiple">
                                             {rf:print-option("select", "", "Select domain ...")}
                                             {rf:print-domains($domainId)}
                                         </select>
@@ -113,7 +113,7 @@ else
                                     </td>
                                     <td style="vertical-align: top;">
                                         <input name="resetButton" class="button"
-                                        style="margin:0;height:30px;" type="submit" value="Reset"/>
+                                        style="margin:0 0 0 1px;height:30px;" type="submit" value="Reset"/>
                                     </td>
                                 </tr>
                             </table>
@@ -133,7 +133,7 @@ else
                     <div>
                         <form method="get" action="" style="text-align:right;">
                             <input name="export" class="button"
-                                style="margin-bottom:5px; margin-right:2px; margin-top:2px; 
+                                style="margin-bottom:5px; margin-right:2px; margin-top:12px; 
                                 height:30px;width:165px;" type="submit" value="Export Table to XML"/>
                             <input name="centre" type="hidden" value="{$centre}"/>
                             <input name="domain" type="hidden" value="{$domainId}"/>
