@@ -6,6 +6,7 @@
   </titleStmt>
   <keyword>GIS</keyword>
   <keyword>ArcGIS</keyword>
+  <keyword>Esri</keyword>
   <extId type="LOC">fdd000280</extId>
   <extId type="PRONOM">x-fmt/235</extId>
   <extId type="BabelNet">bn:02131405n</extId>
@@ -25,7 +26,7 @@
     <p>Note also that newer media types have been requested, respectively application/vnd.shp, /vnd.shx, and /vnd.dbf (see below).</p>
     <p>See the following for more information:</p>
     <ul>
-      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/esri-shapefile">DANS info</a></li>
+      <li><a href="https://dans.knaw.nl/en/file-formats/geographical-information-systems-gis/">DANS info</a></li>
       <li><a href="http://en.wikipedia.org/wiki/Shapefile">Wikipedia entry</a></li>
       <li><a href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/shapefiles/what-is-a-shapefile.htm">"What is a shapefile?"</a> from ESRI</li>
       <li><a href="https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf">technical description</a> by ESRI</li>

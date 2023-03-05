@@ -4,7 +4,7 @@
     <title>Plain text</title>
     <abbr>plainText</abbr>
   </titleStmt>
-  <keyword>text</keyword>
+  <keyword>plain text format</keyword>
 <!-- what other keywords should we add here? -->
   <info type="description">
     <p>Plain text is a pure sequence of character codes. (...) Plain text represents character

@@ -9,6 +9,7 @@
   <keyword>GIS</keyword>
   <keyword>georeference</keyword>
   <keyword>proprietary format</keyword>
+  <keyword>ERDAS</keyword>
   <extId type="Wikidata">Q28206049</extId>
   <extId type="LOC">fdd000420</extId>
   <info type="description">
@@ -17,7 +18,7 @@
       georeferenced image or a GIS grid file." (DANS)</p>
     <p>See the following for more information:</p>
     <ul>
-      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/erdas-imagine-file-format">DANS info</a></li>
+      <li><a href="https://dans.knaw.nl/en/file-formats/images-georeference/">DANS info</a></li>
       <li><a href="http://fileformats.archiveteam.org/wiki/ERDAS_Imagine_IMG">File Format Wiki info</a></li>
     </ul>
   </info>

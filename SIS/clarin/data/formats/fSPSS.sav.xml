@@ -12,7 +12,7 @@
   <extId type="PRONOM">fmt/638</extId>
   <info type="description">
     <p>See the <a
-      href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/spss-sav"
+      href="https://dans.knaw.nl/en/file-formats/statistical-data/"
       >DANS description</a>.</p>
   </info>
   <mimeType>application/x-spss-sav</mimeType>

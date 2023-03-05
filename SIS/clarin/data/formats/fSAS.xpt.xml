@@ -10,9 +10,9 @@
   <extId type="LOC">fdd000464</extId>
   <extId type="Wikidata">Q33120268</extId>
   <info type="description">
-    <p>This extension appears to signal versions 5-8 the SAS software. See:</p>
+    <p>The .xpt extension appears to signal versions 5-8 the SAS software. See:</p>
     <ul>
-      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/statistical-data">DANS information on statistical formats</a></li>
+      <li><a href="https://dans.knaw.nl/en/file-formats/statistical-data/">DANS information on statistical formats</a></li>
     </ul>
   </info>
   <mimeType>application/x-sas-xport</mimeType>
