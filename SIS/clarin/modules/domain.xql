@@ -80,5 +80,5 @@ declare function dm:create-domain-group-recommendation-link($group as xs:string)
     let $joined-domains := fn:string-join($domain-ids,"&amp;")
     
     return app:link(concat("views/recommended-formats-with-search.xq?",
-        $joined-domains,"#searchRecommendation"))
+        $joined-domains,"#filterRecommendation"))
 };
