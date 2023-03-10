@@ -15,7 +15,7 @@
       corresponding long extension for version 9.x is .sas7bdat. DANS mentions also .7dat and .tpt.
       See:</p>
     <ul>
-      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/statistical-data/sas">DANS information on dataset SAS formats</a></li>
+      <li><a href="https://dans.knaw.nl/en/file-formats/statistical-data/">DANS information on dataset SAS formats</a></li>
       <li><a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/hostwin/n0sk6o15955yoen19n9ghdziqw1u.htm#n0mqfkm2esyf6ln1rxt8qynf5cho">File extensions for SAS files</a></li>
     </ul>
   </info>

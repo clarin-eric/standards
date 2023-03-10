@@ -6,6 +6,7 @@
   </titleStmt>
   <keyword>GIS</keyword>
   <keyword>ArcGIS</keyword>
+  <keyword>Esri</keyword>
   <extId type="LOC">fdd000294</extId>
   <extId type="PRONOM">fmt/990</extId>
   <extId type="Wikidata">Q50376365</extId>
@@ -24,7 +25,7 @@
     <ul>
       <li>
         <a
-          href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/esri-geodatabase"
+          href="https://dans.knaw.nl/en/file-formats/raster-gis/"
           >DANS info</a>
       </li>
       <li>

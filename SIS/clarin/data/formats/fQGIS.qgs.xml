@@ -5,19 +5,25 @@
     <abbr>QGIS.qgs</abbr>
   </titleStmt>
   <keyword>GIS</keyword>
-  <keyword>GIS workspace format</keyword>
-  <extId type="LOC">fdd000340</extId>
+  <keyword>proprietary format</keyword>
+  <keyword>georeference</keyword>
+  <keyword>ERDAS</keyword>
+  <extId type="LOC">fdd000420</extId> 
+  <!-- the above is really "related" - maybe we should have a @comment attribute here? -->
   <extId type="Wikidata">Q15631639</extId>
   <info type="description">
-    <p>"QGIS (until 2013 known as Quantum GIS) is a free and open-source cross-platform desktop
+    <p>QGIS is the XML-based format used by the QGIS software. "QGIS (until 2013 known as Quantum GIS) is a free and open-source cross-platform desktop
       geographic information system (GIS) application that supports viewing, editing, and analysis
       of geospatial data." (Wikipedia))</p>
     <p>See the following for more information:</p>
     <ul>
-      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/project-files-workspaces">DANS info</a></li>
       <li><a href="https://en.wikipedia.org/wiki/QGIS">Wikipedia entry</a></li> 
-      <li><a href="https://docs.qgis.org/3.16/en/docs/user_manual/appendices/qgis_file_formats.html">QGIS file formats</a></li>
+      <li><a href="https://docs.qgis.org/3.22/en/docs/user_manual/appendices/qgis_file_formats.html">QGIS file formats (v. 3.22)</a></li>
     </ul>
   </info>
   <fileExt>.qgs</fileExt>
+  <fileExt>.qgz</fileExt>
+  <fileExt>.qgd</fileExt>
+  <fileExt>.qlr</fileExt>
+  <fileExt>.qml</fileExt>
 </format>

@@ -16,7 +16,7 @@
       "vector" or discrete objects, but coverages and sensor data." (Wikipedia)</p>
     <p>See the following for more information:</p>
     <ul>
-      <li><a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/gml">DANS info</a></li>
+      <li><a href="https://dans.knaw.nl/en/file-formats/geographical-information-systems-gis/">DANS info</a></li>
       <li><a href="https://en.wikipedia.org/wiki/Geography_Markup_Language">Wikipedia entry</a></li> 
       <li><a href="https://inspire.ec.europa.eu/media-types/application/x-gmz">x-gmz</a> media-type application, possibly falling out of use</li>
     </ul>

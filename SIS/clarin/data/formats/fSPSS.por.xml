@@ -10,9 +10,7 @@
   <extId type="PRONOM">fmt/997</extId>
   <extId type="LOC">fdd000468</extId>
   <info type="description">
-    <p>See the <a
-        href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/spss-portable"
-        >DANS description</a>.</p>
+    <p>See the <a href="https://dans.knaw.nl/en/file-formats/statistical-data/">DANS description</a>.</p>
   </info>
   <mimeType>application/x-spss-por</mimeType>
   <fileExt>.por</fileExt>

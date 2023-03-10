@@ -6,10 +6,9 @@
   </titleStmt>  
   <keyword>plain text format</keyword>
   <keyword>statistical data</keyword>
+  <keyword>SPSS</keyword>
   <info type="description">
-    <p>See the <a
-        href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/data-and-setup"
-        >DANS description</a>.</p>
+    <p>See the <a href="https://dans.knaw.nl/en/file-formats/statistical-data/">DANS description</a>.</p>
   </info>
   <mimeType>text/plain</mimeType>
   <fileExt>.sps</fileExt>

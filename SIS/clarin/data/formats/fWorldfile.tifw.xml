@@ -8,9 +8,10 @@
   <keyword>world file</keyword>
   <keyword>sidecar file</keyword>
   <keyword>georeference</keyword>
+  <keyword>Esri</keyword>
   <info type="description">
     <p>See <a href="../views/view-format.xq?id=fWorldfile.jpgw">Esri world file description</a>.</p>
-    <p>See <a href="https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats/tiff-world-file">DANS info</a>.</p>
+    <p>See <a href="https://dans.knaw.nl/en/file-formats/images-georeference/">DANS info</a>.</p>
   </info>
   <mimeType>text/plain</mimeType>
   <fileExt>.tifw</fileExt>
