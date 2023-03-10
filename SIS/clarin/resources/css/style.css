@@ -6,6 +6,7 @@ body {
 	color:#333;
 	font-family:helvetica,arial,sans-serif;
 	font-size:13px;
+	line-height:1.4;
 }
 
 div#all {
@@ -53,6 +54,10 @@ ul.column {
     -webkit-column-gap: 20px;
     column-count: 4;
     column-gap: 20px;
+}
+
+li{
+    margin-bottom:5px;
 }
 
 .button{    
@@ -260,6 +265,12 @@ th {
   border-bottom-style:solid;
   border-bottom-width:1pt;
   border-bottom-color:black;
+}
+
+.column{
+    border: 1px solid lightgrey;
+    padding:5px;
+    vertical-align:top;
 }
 
 .row{
