@@ -8,7 +8,7 @@ import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
-
+import module namespace em = "http://clarin.ids-mannheim.de/standards/export" at "../modules/export.xql";
 
 (: Describes a centre and  lists formats recommended by that centre
 
@@ -29,14 +29,14 @@ let $centre-info := $centre/info
 let $centre-ri := $centre/nodeInfo/ri
 
 let $recommendation := cm:get-recommendations($id)
-let $recommendationRows := rf:print-centre-recommendation($id,"", "", $sortBy)
+let $recommendationRows := rf:print-centre-recommendation($id,(), "", $sortBy)
 let $exportFilename := concat($id,"-recommendation.xml")
 
 return
 if ($export)
-then (rf:export-table($id, "", "", $recommendationRows,$exportFilename, "views/view-centre.xq"))
+then (em:export-table($id, (), "", $recommendationRows,$exportFilename, "views/view-centre.xq"))
 else if ($template)
-then (rf:download-template($id,$exportFilename))
+then (em:download-template($id,$exportFilename))
 else 
     
     <html>
