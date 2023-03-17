@@ -11,7 +11,7 @@ let $searchItem := request:get-parameter('searchFormat', '')
 
 let $reset := request:get-parameter('resetButton', '')
 let $centre := if ($reset) then () else request:get-parameter('centre', '')
-let $domainId := if ($reset) then () else request:get-parameter('domain',())
+let $domainId := if ($reset) then (()) else request:get-parameter('domain',())
 let $recommendationLevel := if ($reset) then () else request:get-parameter('level', '')
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
 let $export := request:get-parameter('export', '')
@@ -39,6 +39,7 @@ else
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("autocomplete.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
+            <script type="text/javascript" src="{app:resource("multiselect-dropdown.js", "js")}"/>
         </head>
         <body onload="suggestion('searchId', '{rf:listSearchSuggestions()}')">
             <div id="all">
@@ -77,73 +78,76 @@ else
                     <div style="margin-top:30px;">
                         <form id="filterRecommendation"  autocomplete="off" style="float:left;" method="get"
                             action="{app:link("views/recommended-formats-with-search.xq?#filterRecommendation")}">
-                            <table style="margin:0;">
+                            <table style="margin:0; border: solid 1px #c0c0c0; border-radius:4px;padding:5px;background-color:#c3d3e3;">
                                 <tr >
-                                    <td width="180px;" style="vertical-align: top;">
-                                        <select name="centre" class="inputSelect" style="width:190px;padding:2px;height:30px;margin-bottom:5px;">
+                                    <td width="180px;" >
+                                        <select name="centre" class="inputSelect" style="width:290px;height:30px;padding:5px;background-color:white;">
                                             {rf:print-option("select", "", "Select centre ...")}
                                             {rf:print-centres($centre)}
                                         </select>
-                                        <select name="level" class="inputSelect" style="width:190px; padding:2px;height:30px;">
+                                    </td>
+                                    
+                                    <td>
+                                        <select name="level" class="inputSelect" style="width:290px;height:30px;padding:5px;background-color:white;">
                                             {rf:print-option("select", "", "Select recommendation ...")}
                                             {rf:print-option($recommendationLevel, "recommended", "recommended")}
                                             {rf:print-option($recommendationLevel, "acceptable", "acceptable")}
                                             {rf:print-option($recommendationLevel, "deprecated", "deprecated")}
                                         </select>
                                     </td>
-                                    <td style="vertical-align: top;">
-                                        <select name="domain" class="inputSelect" style="width:185px;height:65px;" multiple="multiple">
-                                            {rf:print-option("select", "", "Select domain ...")}
+                                    
+                                </tr>
+                                <tr>
+                                <td>
+                                        <select name="domain" class="inputSelect" style="width:280px;margin:0;" 
+                                            multiple="multiple" placeholder="Select domain ...">
+                                            <!-- {rf:print-option("select", "", "Select domain ...")} -->
                                             {rf:print-domains($domainId)}
                                         </select>
                                     </td>
-<!--
-                                    <td>
-                                        <select name="level" class="inputSelect" style="width:190px;">
-                                            {rf:print-option("select", "", "Select recommendation ...")}
-                                            {rf:print-option($recommendationLevel, "recommended", "recommended")}
-                                            {rf:print-option($recommendationLevel, "acceptable", "acceptable")}
-                                            {rf:print-option($recommendationLevel, "deprecated", "deprecated")}
-                                        </select>
-                                    </td>
-                                    -->
-                                    <td style="vertical-align: top;">
+                                    <td style="vertical-align:top">
                                         <input name="filterButton" class="button"
                                         style="margin:0;height:30px;" type="submit" value="Filter"/>
-                                    </td>
-                                    <td style="vertical-align: top;">
                                         <input name="resetButton" class="button"
-                                        style="margin:0;height:30px;" type="submit" value="Reset"/>
+                                        style="margin:0 0 0 1px;height:30px;" type="submit" value="Reset"/>
                                     </td>
                                 </tr>
                             </table>
                         </form>
                     </div>
-                    <div>
-                        <form id="searchRecommendation"  autocomplete="off" style="float:left; margin:10px 0 10px 0;" method="get"
-                            action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
-                            <div class ="autocomplete">
-                                    <input id="searchId" name="searchFormat" style="width:400px;height:26px;" class="inputText" type="text" 
-                                        placeholder="Search format" value="{$searchItem}"/>
-                                    <input name="searchButton" class="button"
-                                        style="margin: 0 0 0 5px;height:30px;" type="submit" value="Search"/>
-                            </div>
-                        </form>
-                    </div>
-                    <div>
-                        <form method="get" action="" style="text-align:right;">
-                            <input name="export" class="button"
-                                style="margin-bottom:5px; margin-right:2px; margin-top:2px; 
-                                height:30px;width:165px;" type="submit" value="Export Table to XML"/>
-                            <input name="centre" type="hidden" value="{$centre}"/>
-                            <input name="domain" type="hidden" value="{$domainId}"/>
-                            <input name="level" type="hidden" value="{$recommendationLevel}"/>
-                            <input name="sortBy" type="hidden" value="{$sortBy}"/>
-                        </form>
-                    </div>
                     
-                    
-                    <table id="recommendationTable" style="width:97%;">
+                    <table style="margin-left: 10px;" >
+                        <tr>
+                            <td>
+                                <form id="searchRecommendation"  autocomplete="off" style="margin:10px 0 10px 0;
+                                    border: solid 1px #c0c0c0; border-radius:4px;padding:5px;background-color:#c3d3e3;width:590px" 
+                                    method="get"
+                                    action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
+                                    <div class ="autocomplete">
+                                            <input id="searchId" name="searchFormat" style="width:400px;height:26px;padding-left:5px" 
+                                                class="inputText" type="text" 
+                                                placeholder="Search format ..." value="{$searchItem}"/>
+                                    </div>
+                                     <input name="searchButton" class="button"
+                                                style="margin: 0 0 0 3px;height:30px; vertical-align:middle;" 
+                                                type="submit" value="Search"/>
+                                </form>
+                            </td>
+                            <td style="padding-left:5px;">
+                                <form method="get" action="" style="text-align:right;">
+                                    <input name="export" class="button"
+                                        style="margin-bottom:5px; margin-right:2px; 
+                                        height:30px;width:165px;" type="submit" value="Export Table to XML"/>
+                                    <input name="centre" type="hidden" value="{$centre}"/>
+                                    <input name="domain" type="hidden" value="{$domainId}"/>
+                                    <input name="level" type="hidden" value="{$recommendationLevel}"/>
+                                    <input name="sortBy" type="hidden" value="{$sortBy}"/>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                        
+                    <table id="recommendationTable" style="width:98%;">
                         <tr>
                             <th class="header" style="width:19%;">
                                 <a href="{

@@ -90,7 +90,9 @@ declare function rf:print-page-links($numOfRows, $sortBy, $domainId, $recommenda
     let $pageLink := <a
         href="{
                 app:link(concat("views/recommended-formats-with-search.xq?sortBy=",
-                $sortBy, "&amp;domain=", $domainId, "&amp;level=", $recommendationLevel,
+                $sortBy,
+                (:"&amp;domain=",:)
+                $domainId, "&amp;level=", $recommendationLevel,
                 "&amp;centre=", $centre, "&amp;page=", $i, "#searchRecommendation"))
             }">{$i}</a>
     return

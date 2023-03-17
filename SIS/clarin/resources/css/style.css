@@ -6,11 +6,12 @@ body {
 	color:#333;
 	font-family:helvetica,arial,sans-serif;
 	font-size:13px;
+	line-height:1.4;
 }
 
 div#all {
 	margin:0pt auto;
-	width:1070px;
+	width:1100px;
 	padding:5pt;
 	text-align:justify;
 	color:#333;
@@ -23,7 +24,7 @@ div#all {
 .logoheader {
 	background:white URL(../images/bannerNeu.png) no-repeat bottom center;
 	color:#111;
-	min-height:180px;
+	min-height:185px;
 	margin:0em 10px 0 10px;
 	padding:12px;
 	text-align:left;
@@ -55,6 +56,10 @@ ul.column {
     column-gap: 20px;
 }
 
+li{
+    margin-bottom:5px;
+}
+
 .button{    
     margin-top:5px; 
     border: 1px #CCCCCC solid; 
@@ -62,7 +67,7 @@ ul.column {
     width:80px; 
     padding:2px; 
     text-align:center;
-    background-color:white;
+    background-color:whitesmoke;
     color:grey;    
     margin-left:2px;    
 }
@@ -71,7 +76,7 @@ ul.column {
     float:left;
     margin-left:5px;
     border-left: 2px solid #CCCCCC;   
-    padding-left:10px;    
+    padding-left:15px;    
     width:72%;
     min-height:615px;
     text-align:left;
@@ -150,6 +155,7 @@ hr{
     font-size: 13px;
     padding-left:2px;
     padding-right:2px;
+    font-family:inherit;
 }
 
 .inputTextError{
@@ -169,6 +175,8 @@ hr{
    border:1px solid #c0c0c0; 
    border-radius:3px;
    vertical-align:bottom;
+   font-family:inherit;
+   color:grey;
 }
 
 .inputSelectError{
@@ -257,6 +265,12 @@ th {
   border-bottom-style:solid;
   border-bottom-width:1pt;
   border-bottom-color:black;
+}
+
+.column{
+    border: 1px solid lightgrey;
+    padding:5px;
+    vertical-align:top;
 }
 
 .row{
