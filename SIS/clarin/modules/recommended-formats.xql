@@ -342,8 +342,10 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
             {
                 if ($includeCentre)
                 then
-                <td
-                    class="recommendation-row">{$centre}</td>
+                <td class="recommendation-row">{ 
+                        <a href="{app:link(concat("views/view-centre.xq?id=", $centre))}">
+                        {$centre}</a>}
+                </td>
                 else ()
             }
             <td
