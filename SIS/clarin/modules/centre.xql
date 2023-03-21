@@ -16,6 +16,23 @@ declare function cm:get-centre($id) {
     centre:get-centre($id)
 };
 
+declare function cm:get-centre-by-research-infrastructure($ri as xs:string, $status as xs:string) {
+    centre:get-centre-by-research-infrastructure($ri,$status)
+};
+
+declare function cm:count-number-of-centres-with-recommendations($centres){
+    let $centre-with-recommendations :=
+        for $c in $centres
+             let $recommendations := cm:get-recommendations(data($c/@id))
+             let $numOfRecommendations := count($recommendations/formats/format)
+         return 
+            if ($numOfRecommendations >0)
+            then 1
+            else 0
+            
+     return sum($centre-with-recommendations)
+};
+
 declare function cm:getLastUpdateCommitId($id){
     let $recommendation := recommendation:get-recommendations-for-centre($id)
     let $commitId := $recommendation/header/lastUpdateCommitID/text()

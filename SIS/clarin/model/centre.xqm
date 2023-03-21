@@ -28,3 +28,15 @@ let $flat :=
 
 return fn:distinct-values($flat)
 };
+
+declare function centre:get-centre-by-research-infrastructure($ri as xs:string,
+    $status as xs:string){
+    for $c in $centre:centres[nodeInfo/ri=$ri]
+        let $c-status :=  $c/nodeInfo/ri/@status
+    return
+        if (contains($c-status,$status))
+        then $c
+        else ()
+        
+    
+};
