@@ -204,35 +204,35 @@ declare function rf:print-centre-recommendation($requestedFormatId){
             else ()
 };
 
-declare function rf:print-centre-recommendation($requestedCentre, $requestedDomain,
+declare function rf:print-centre-recommendation($requestedCentre, $requestedDomain as xs:string*,
 $requestedLevel, $sortBy) {
     
     for $r in $recommendation:centres
-    let $centre := $r/header/filter/centre/text()
+        let $centre := $r/header/filter/centre/text()
     
-    for $format in $r/formats/format
-    let $domainName := $format/domain/text()
-    let $domain := if ($domainName) then
-        dm:get-domain-by-name($domainName)
-    else
-        ()
-    
-    let $level := $format/level/text()
-    let $format-id := data($format/@id)
-    let $format-abbr := $format:formats[@id=$format-id]/titleStmt/abbr/text()
-    let $format-info := $format/info/text()
+        for $format in $r/formats/format
+            let $domainName := $format/domain/text()
+            let $domain := 
+                if ($domainName) 
+                then dm:get-domain-by-name($domainName)
+                else ()
         
-        order by
-        if ($sortBy = 'centre') then
-            $centre
-        else
-            if ($sortBy = 'domain') then
-                $domainName
-            else
-                if ($sortBy = 'recommendation') then
-                    $level
-                else
-                    (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2))) (:abbr:)
+             let $level := $format/level/text()
+             let $format-id := data($format/@id)
+             let $format-abbr := $format:formats[@id=$format-id]/titleStmt/abbr/text()
+             let $format-info := $format/info/text()
+                 
+             order by
+                 if ($sortBy = 'centre') then
+                     $centre
+                 else
+                     if ($sortBy = 'domain') then
+                         $domainName
+                     else
+                         if ($sortBy = 'recommendation') then
+                             $level
+                         else
+                             (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2))) (:abbr:)
     
     return
         if ($requestedCentre)
@@ -406,83 +406,5 @@ declare function rf:print-missing-format-link($format-id){
     </span>)
 };
 
-declare function rf:export-table($centre, $domainId, $requestedLevel, $nodes, $filename, $page) {
-    let $domain := dm:get-domain($domainId)
-    let $domainName := $domain/name/text()
-    let $filter :=
-    (if ($centre) then
-        <centre>{$centre}</centre>
-    else
-        (),
-    if ($domainName) then
-        <domain>{$domainName}</domain>
-    else
-        (),
-    if ($requestedLevel) then
-        <level>{$requestedLevel}</level>
-    else
-        ())
-    
-    let $rows :=
-    for $row in $nodes
-    return
-        <format id="{$row/td[1]/@id}">
-            {
-                if ($centre eq "") then
-                    <centre>{$row/td[2]/text()}</centre>
-                else
-                    (),
-                if ($domainId eq "") then
-                    (:<domain
-                            id="{$row/td[3]/@id}">{$row/td[3]/text()}</domain>:)
-                    <domain>{$row/td[3]/span/text()}</domain>
-                else
-                    (),
-                if ($requestedLevel eq "") then
-                    (<level>{$row/td[4]/text()}</level>)
-                else
-                    ()
-            }
-        
-        </format>
-        
-        (:let $isExportSuccessful := file:serialize($data, $filename,fn:false()):)
-    let $quote := "&#34;"
-    let $header1 := response:set-header("Content-Disposition", concat("attachment; filename=",
-    $quote, $filename, $quote))
-    let $header2 := response:set-header("Content-Type", "text/xml;charset=utf-8")
-    
-    return
-        <recommendation xsi:noNamespaceSchemaLocation="https://clarin.ids-mannheim.de/standards/schemas/recommendation.xsd">
-            <header>
-                <title>CLARIN Standards Information System (SIS) export</title>
-                <url>{app:link($page)}</url>
-                <exportDate>{fn:current-dateTime()}</exportDate>
-                <filter>{$filter}</filter>
-            </header>
-            <formats>{$rows}</formats>
-        </recommendation>
 
-};
 
-declare function rf:download-template($centre-id,$filename){
-    let $quote := "&#34;"
-    let $header1 := response:set-header("Content-Disposition", concat("attachment; filename=",
-    $quote, $filename, $quote))
-    let $header2 := response:set-header("Content-Type", "text/xml;charset=utf-8")
-    let $recommendation := recommendation:get-recommendations-for-centre($centre-id)
-
-    return 
-    
-        <recommendation xsi:noNamespaceSchemaLocation="https://clarin.ids-mannheim.de/standards/schemas/recommendation.xsd">
-            <header>
-                <title>CLARIN Standards Information System (SIS) export</title>
-                <url>{app:link(concat("/views/view-centre.xq?id=",$centre-id))}</url>
-                <exportDate>{fn:current-dateTime()}</exportDate>
-                <filter>
-                   <centre>{$centre-id}</centre>
-                </filter>
-            </header>
-            {$recommendation/formats}    
-        </recommendation>
-};

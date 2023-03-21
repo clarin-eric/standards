@@ -6,6 +6,8 @@ declare option exist:serialize "method=xhtml media-type=text/html indent=yes doc
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
+import module namespace em = "http://clarin.ids-mannheim.de/standards/export" at "../modules/export.xql";
+
 
 let $searchItem := request:get-parameter('searchFormat', '')
 
@@ -29,7 +31,7 @@ let $recommendationTable := rf:paging($rows,$page)
 
 return
 if ($export)
-then (rf:export-table($centre, $domainId, $recommendationLevel, $recommendationTable,
+then (em:export-table($centre, $domainId, $recommendationLevel, $recommendationTable,
     "format-recommendation.xml","views/recommended-formats-with-search.xq"))
 else 
 
@@ -99,7 +101,7 @@ else
                                 </tr>
                                 <tr>
                                 <td>
-                                        <select name="domain" class="inputSelect" style="width:280px;margin:0;" 
+                                        <select name="domain" class="inputSelect" style="width:278px;margin:0;" 
                                             multiple="multiple" placeholder="Select domain ...">
                                             <!-- {rf:print-option("select", "", "Select domain ...")} -->
                                             {rf:print-domains($domainId)}
@@ -139,7 +141,11 @@ else
                                         style="margin-bottom:5px; margin-right:2px; 
                                         height:30px;width:165px;" type="submit" value="Export Table to XML"/>
                                     <input name="centre" type="hidden" value="{$centre}"/>
-                                    <input name="domain" type="hidden" value="{$domainId}"/>
+                                    {
+                                        for $id in $domainId
+                                        return
+                                        <input name="domain" type="hidden" value="{$id}"/>
+                                    }
                                     <input name="level" type="hidden" value="{$recommendationLevel}"/>
                                     <input name="sortBy" type="hidden" value="{$sortBy}"/>
                                 </form>
