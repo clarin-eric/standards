@@ -38,9 +38,9 @@ return
                 </div>
                 <div class="title">Popular Formats</div>
                   <div>
-                    <p>This section presents statistics concerning popular data deposition 
-                    formats and is still work in progress. Feel welcome to add your suggestions to the 
-                    <a href="https://github.com/clarin-eric/standards/issues/67">discussion at GitHub</a>.</p>
+                    <p>This section presents statistics concerning "popular" data deposition 
+                    formats (however popularity can be defined) and should be considered work in progress. Feel welcome to add your suggestions to the 
+                    <a href="https://github.com/clarin-eric/standards/issues/201">discussion at GitHub</a>.</p>
                   </div>
                     <div>
                     
