@@ -9,8 +9,14 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="header"/>
+                <xs:element ref="info"/>
                 <xs:element ref="formats"/>
             </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="info">
+        <xs:complexType>
+            <xs:group ref="textblock" minOccurs="1" maxOccurs="unbounded"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="header">
@@ -205,15 +211,7 @@
             <xs:attribute name="id" use="required" type="xs:NCName"/>
         </xs:complexType>
     </xs:element>
-    <xs:element name="comment">
-        <xs:complexType mixed="true">
-            <xs:sequence>
-                <xs:element minOccurs="0" maxOccurs="unbounded" ref="a"/>
-                <xs:element minOccurs="0" maxOccurs="unbounded" ref="i"/>
-                <xs:element minOccurs="0" maxOccurs="unbounded" ref="code"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name="comment" type="commentType"/>
     <xs:element name="a">
         <xs:complexType>
             <xs:simpleContent>
@@ -233,5 +231,31 @@
             <xs:restriction base="xs:string"/>
         </xs:simpleType>
     </xs:element>
-    
+    <xs:element name="li" type="commentType"/>
+    <xs:group name="textblock">
+        <xs:choice>
+            <xs:element name="p" type="commentType"/>
+            <xs:element name="ul">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="li" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ol">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="li" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:choice>
+    </xs:group>
+    <xs:complexType name="commentType" mixed="true">
+        <xs:choice maxOccurs="unbounded">
+            <xs:element ref="a" minOccurs="0"/>
+            <xs:element ref="i" minOccurs="0"/>
+            <xs:element ref="code" minOccurs="0"/>
+        </xs:choice>
+    </xs:complexType>
 </xs:schema>

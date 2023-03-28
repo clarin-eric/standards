@@ -43,11 +43,6 @@
                             <xs:element name="name" type="xs:string"/>
                             <xs:element ref="a"/>
                             <xs:element ref="nodeInfo"/>
-                            <xs:element name="info" minOccurs="0" maxOccurs="1">
-                                <xs:complexType>
-                                    <xs:group ref="textblock" minOccurs="1" maxOccurs="unbounded"/>
-                                </xs:complexType>
-                            </xs:element>
                         </xs:sequence>
                         <xs:attribute name="id" type="xs:ID" use="required"/>
                         <xs:attribute name="deposition" type="xs:boolean" use="optional" default="false"/>

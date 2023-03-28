@@ -138,30 +138,6 @@
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
     </nodeInfo>
-    <info>
-      <p>Preferred formats are file formats of which DANS is confident that they will offer
-        the best long-term guarantees in terms of usability, accessibility and
-        sustainability. Deposits of research data in preferred formats will always be
-        accepted by DANS.</p>
-      <p>Non-preferred formats are file formats that are widely used in addition to the
-        preferred formats, and which will be moderately to reasonably usable, accessible and
-        robust in the long term.</p>
-      
-      <p>As a general guideline, DANS believes that the file formats best suited for long-term
-        sustainability and accessibility:</p>
-      <ul>
-        <li>Are frequently used</li>
-        <li>Have open specifications</li>
-        <li>Are independent of specific software, developers or vendors</li>
-      </ul>
-      <p>In practice, it is not always possible to use formats which satisfy all of these criteria.</p>
-      <p>It may be desirable to make certain original data available in ‘Non-preferred
-        format(s)’ because these can be characterized as current usage formats. Examples
-        include Esri Shapefiles, Microsoft Access databases, SPSS .sav files. DANS then asks
-        you to deposit your data in these original formats as well as in Preferred formats
-        aimed at long-term sustainability.</p>
-      <p>If your data are stored in other formats than those mentioned in the <a href="https://standards.clarin.eu/sis//views/recommended-formats-with-search.xq?centre=DANS">recommendations</a>, please <a href="https://dans.knaw.nl/en/ask-your-question/">contact DANS</a>.</p>
-    </info>
   </centre>
   <centre id="EKUT" deposition="1">
     <name>Eberhard Karls Universität Tübingen</name>
