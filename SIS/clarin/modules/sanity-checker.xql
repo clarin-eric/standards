@@ -69,7 +69,7 @@ declare function sc:get-recommendations-with-missing-or-unknown-levels() {
                             Format ID: {$format/data(@id)} <br/>
                         </li>    
                     </ul>
-                else  if ($level eq 'recommended' or $level eq 'acceptable' or $level eq 'deprecated')
+                else  if ($level eq 'recommended' or $level eq 'acceptable' or $level eq 'discouraged')
                 then ()
                 else
                     <ul>

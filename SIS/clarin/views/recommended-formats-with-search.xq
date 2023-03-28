@@ -54,7 +54,7 @@ else
                     <div class="title" id="pagetitle">Format Recommendations</div>
                     
                     <div><p>This page presents formats of data depositions that various CLARIN centres are ready to accept. Each format,
-                            for each centre, can be "recommended", "acceptable" or "deprecated" in the context of several domains that represent the
+                            for each centre, can be "recommended", "acceptable" or "discouraged" in the context of several domains that represent the
                             functions that the deposited data can play. The level of recommendation should always be viewed as relative to the profile 
                             of the given centre.
                             <ul>
@@ -63,7 +63,7 @@ else
                             in that format (the specifics are up to that centre);</li>
                             <li><b>"acceptable"</b> should be interpreted as meaning that the centre may need to spend some time and resources 
                             on the up-conversion of the data, and that the data may be preserved in one of the recommended formats instead;</li>
-                            <li><b>"deprecated"</b> should be understood as indicating that the centre may find it problematic to up-convert the data.</li>
+                            <li><b>"discouraged"</b> should be understood as indicating that the centre may find it problematic to up-convert the data.</li>
                             </ul>
                             </p> 
                         <p>Use the dropboxes to select the particular domain, centre, and/or level of recommendation. Columns can be sorted, 
@@ -94,7 +94,7 @@ else
                                             {rf:print-option("select", "", "Select recommendation ...")}
                                             {rf:print-option($recommendationLevel, "recommended", "recommended")}
                                             {rf:print-option($recommendationLevel, "acceptable", "acceptable")}
-                                            {rf:print-option($recommendationLevel, "deprecated", "deprecated")}
+                                            {rf:print-option($recommendationLevel, "discouraged", "discouraged")}
                                         </select>
                                     </td>
                                     

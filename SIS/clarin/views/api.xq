@@ -73,7 +73,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                             <td>level</td>
                             <td>no</td>
                             <td>a recommendation level: <code>recommended</code>, <code>acceptable</code>
-                                or <code>deprecated</code></td>
+                                or <code>discouraged</code></td>
                             <td>recommended</td>
                         </tr>
                         <tr>

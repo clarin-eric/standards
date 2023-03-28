@@ -11,7 +11,7 @@ import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommende
 import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
 
 declare function stm:list-formats-by-recommendation-level(){
-    for $level in ("Recommended","Acceptable","Deprecated")
+    for $level in ("Recommended","Acceptable","Discouraged")
     let $l := lower-case($level)
     return
     <tr>
