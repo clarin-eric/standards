@@ -9,7 +9,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="header"/>
-                <xs:element ref="info"/>
+                <xs:element ref="info" minOccurs="0"/>
                 <xs:element ref="formats"/>
             </xs:sequence>
         </xs:complexType>
