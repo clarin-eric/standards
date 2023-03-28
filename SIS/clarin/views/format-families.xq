@@ -24,6 +24,13 @@ return
             {menu:view()}
             <div class="content">
                 <div class="navigation">&gt; <a href="{app:link("views/format-families.xq")}">Format Families</a>
+                <p>This page is made visible only to the most seasoned, relentless, and uncompromising discoverers 
+                of the murky internals of the SIS. It shows yet another idea for how information on formats may be traversed. 
+                It builds on the ideas sketched in the 
+                <a href="https://github.com/clarin-eric/standards/blob/master/MM/Formal%20Format%20Families.png">formal 
+                families tree graphic</a>, available from this repository. Feel welcome to add your suggestions to the 
+                    <a href="https://github.com/clarin-eric/standards/issues/201">discussion at GitHub</a>.</p>
+                
                     <table>
                         <tr>
                             <th><a href="{app:link("views/format-families.xq?sortBy=id")}">Format</a></th>
