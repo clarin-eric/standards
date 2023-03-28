@@ -53,11 +53,11 @@
       </format>
       <format id="fPhonDat1">
          <domain>Audiovisual Source Language Data</domain>
-         <level>deprecated</level>
+         <level>discouraged</level>
       </format>
       <format id="fPhonDat2">
          <domain>Audiovisual Source Language Data</domain>
-         <level>deprecated</level>
+         <level>discouraged</level>
       </format>
       <format id="fRAW">
          <domain>Audiovisual Source Language Data</domain>

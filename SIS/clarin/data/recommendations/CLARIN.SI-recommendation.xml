@@ -153,7 +153,7 @@
       </format>
       <format id="fPDF">
          <domain>Text Annotation</domain>
-         <level>deprecated</level>
+         <level>discouraged</level>
       </format>
       <format id="fRDFXML">
          <domain>Text Annotation</domain>
@@ -185,7 +185,7 @@
       </format>
       <format id="fPDF">
          <domain>Textual Source Language Data</domain>
-         <level>deprecated</level>
+         <level>discouraged</level>
       </format>
       <format id="fPraat">
          <domain>Textual Source Language Data</domain>
