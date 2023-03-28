@@ -40,7 +40,10 @@ return
                   <div>
                     <p>This section presents statistics concerning "popular" data deposition 
                     formats (however popularity can be defined) and should be considered work in progress. Feel welcome to add your suggestions to the 
-                    <a href="https://github.com/clarin-eric/standards/issues/201">discussion at GitHub</a>.</p>
+                    <a href="https://github.com/clarin-eric/standards/issues/201">discussion at GitHub</a>. For a bit of inspiration, you might want 
+                    to consult the page that is for now only made available to you, our 1-millionth viewer, and which visualises (at the bottom) our 
+                    still skeletal and imperfectly implemented idea of 
+                    <a href="https://clarin.ids-mannheim.de/standards/views/format-families.xq">format families</a>.</p>
                   </div>
                     <div>
                     
