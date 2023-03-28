@@ -19,19 +19,29 @@ declare function vfm:get-format($id as xs:string) {
 
 declare function vfm:print-identifiers($extIdList){
     for $extId in $extIdList
-    let $id := $extId/text()
-    let $type := data($extId/@type)
-    let $landing-page := $lp:locations[type=$type]
-    let $url-suffix := $landing-page/suffix/text()
-    let $url := 
-        if ($url-suffix) 
-        then concat ($landing-page/prefix/text(), $id,$url-suffix)
-        else concat ($landing-page/prefix/text(), $id)
+        let $id := $extId/text()
+        let $type := data($extId/@type)
+        let $landing-page := $lp:locations[type=$type]
+        let $url-suffix := $landing-page/suffix/text()
+        let $url := 
+            if ($url-suffix) 
+            then concat ($landing-page/prefix/text(), $id,$url-suffix)
+            else concat ($landing-page/prefix/text(), $id)
+        let $tooltip := $landing-page/tooltip/text()
     return
         <tr>
-            <td class="recommendation-row">{$type}</td>
+            <td class="recommendation-row">{vfm:create-tooltip($type,$tooltip)}</td>
             <td class="recommendation-row"><a href="{$url}">{$id}</a></td>
         </tr>
+};
+
+declare function vfm:create-tooltip($label, $tooltip){
+    if ($tooltip)
+    then 
+        <span class="tooltip">{$label}
+            <span class="tooltiptext" style="width:200px">{$tooltip}</span>
+        </span>
+    else $label
 };
 
 declare function vfm:print-bullets($list,$id){
