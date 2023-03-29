@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+    
     <xs:annotation>
         <xs:documentation xml:lang="en">This schema defines the structure of the recommendation
             files that reside under data/recommendations/. Mostly auto-derived thru the magic of
@@ -9,7 +11,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="header"/>
-                <xs:element ref="info" minOccurs="0"/>
+                <xs:element ref="info" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element ref="formats"/>
             </xs:sequence>
         </xs:complexType>
@@ -17,6 +19,7 @@
     <xs:element name="info">
         <xs:complexType>
             <xs:group ref="textblock" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:attribute ref="xml:lang" use="optional" />
         </xs:complexType>
     </xs:element>
     <xs:element name="header">
@@ -206,7 +209,7 @@
             <xs:sequence>
                 <xs:element ref="domain"/>
                 <xs:element ref="level"/>
-                <xs:element minOccurs="0" ref="comment"/>
+                <xs:element minOccurs="0" ref="comment" maxOccurs="unbounded"/>
             </xs:sequence>
             <xs:attribute name="id" use="required" type="xs:NCName"/>
         </xs:complexType>
@@ -257,5 +260,6 @@
             <xs:element ref="i" minOccurs="0"/>
             <xs:element ref="code" minOccurs="0"/>
         </xs:choice>
+        <xs:attribute ref="xml:lang" use="optional" />
     </xs:complexType>
 </xs:schema>

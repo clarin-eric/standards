@@ -6,6 +6,57 @@
          <centre>IDS</centre>
       </filter>
    </header>
+   <info xml:lang="en">
+      <p>The following measures are taken to enhance the chance of future interpretability of the
+         data.</p>
+      <p>The number of accepted file formats is small and well documented to make future conversions
+         to other formats more feasible. As much as possible, open (non-proprietary) file formats
+         are used. For textual resources, XML formats are used whenever possible, to ensure future
+         interpretation of the files even if the tool that was used to create them no longer exists.
+         The IDS repository recommends to use formats listed in the CLARIN
+         <a href="https://standards.clarin.eu/sis/">Standards Information System</a>. In addition,
+         for spoken corpora, the data formats of
+         <a href="http://agd.ids-mannheim.de/folker.shtml">FOLKER</a>
+         (<a href="http://agd.ids-mannheim.de/download/FOLKER-Datenmodell.pdf">Documentation in German</a>,
+         <a href="http://agd.ids-mannheim.de/download/Folker_Schema.xsd">XML
+            Schema</a>) and <a href="http://exmaralda.org/">EXMARaLDA</a>
+         (<a href="http://jtei.revues.org/142">Documentation</a>,
+         <a href="http://www.exmaralda.org/downloads.html#dtd">Document Type Definitions</a>) are
+         currently accepted. The encoding for textual sources (plain text, XML, etc.) should be
+         <a href="http://www.unicode.org/">Unicode</a>, to ensure future interpretability.</p>
+      <p>The IDS participation in relevant networks like e.g.
+         <a href="https://www.clarin.eu/content/overview-clarin-centres">CLARIN</a> and
+         <a href="http://www.langzeitarchivierung.de/">nestor</a> enables steady information about
+         recent developments in file formats and encodings. Plans to migrate or convert files will
+         be developed if new standards arise; all relevant features of the old formats will be
+         preserved employing reliable procedures.</p>
+   </info>
+   <info xml:lang="de">
+      <p>Die Hauptanlaufstellen für Datengeber*innen sind bezüglich Schriftkorpora das Projekt
+         Ausbau und Pflege der Korpora geschriebener Gegenwartssprache für das Deutsche
+         Referenzkorpus (DeReKo) und bezüglich Korpora gesprochener Sprache das Archiv für
+         Gesprochenes Deutsch mit der Datenbank für Gesprochenes Deutsch
+         (<a href="http://agd.ids-mannheim.de/">AGD</a> mit
+         <a href="https://dgd.ids-mannheim.de/">DGD</a>), da dies die beiden großen Korpora bzw.
+         Korpussammlungen des IDS sind. Das Langzeitarchiv und Repositorium des Leibniz-Instituts
+         für Deutsche Sprache übernimmt mittelfristig alle dort abgelegten Daten und orientiert sich
+         an deren Formatvorgaben für den Import.</p>
+      <p>Die
+         <a href="https://repos.ids-mannheim.de/resources/LZA_IDS_Depositing_Policy.pdf">Datenübernahmerichtlinien des Leibniz-Instituts für Deutsche Sprache</a>
+         geben weitere Informationen zur Datenübernahme.</p>
+      <p>Daten werden nicht zwingend in den gelieferten Formaten abgespeichert, sondern ggf. in
+         Formate konvertiert, die für die Langzeitarchivierung geeignet sind.</p>
+      <p>Ein auf die Sprachwissenschaft ausgerichteter Überblick über die Landschaft der Formate,
+         best practices und Standards findet sich in den
+         <a href="https://www.dfg.de/download/pdf/foerderung/grundlagen_dfg_foerderung/informationen_fachwissenschaften/geisteswissenschaften/standards_sprachkorpora.pdf">Empfehlungen des DFG-Fachkollegiums 104
+         “Sprachwissenschaften”</a>.</p>
+      <p>Daten, die nicht den empfohlen Formaten entsprechen, haben in der Regel einen höheren
+         Kurationsaufwand. Sie können daher nur nach vorheriger Abstimmung und einer Abschätzung des
+         Aufwands angenommen werden, sofern die entsprechenden Kapazitäten zur Verfügung stehen bzw.
+         zur Verfügung gestellt werden.</p>
+      <p>Plain Text und XML werden grundsätzlich nur in Unicode-Kodierung akzeptiert, also UTF-8 (⊇
+         ASCII), notfalls UTF-16 oder UTF-32.</p>
+   </info>
    <formats>
       <format id="fAnvil">
          <domain>Audiovisual Annotation</domain>

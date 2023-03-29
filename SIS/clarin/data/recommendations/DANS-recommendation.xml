@@ -6,7 +6,7 @@
          <centre>DANS</centre>
       </filter>
    </header>
-   <info>
+   <info xml:lang="en">
       <p>Preferred formats are file formats of which DANS is confident that they will offer
          the best long-term guarantees in terms of usability, accessibility and
          sustainability. Deposits of research data in preferred formats will always be
@@ -28,7 +28,7 @@
          include Esri Shapefiles, Microsoft Access databases, SPSS .sav files. DANS then asks
          you to deposit your data in these original formats as well as in Preferred formats
          aimed at long-term sustainability.</p>
-      <p>If your data are stored in other formats than those mentioned in the 
+      <p xml:lang="en">If your data are stored in other formats than those mentioned in the 
          <a href="https://standards.clarin.eu/sis//views/recommended-formats-with-search.xq?centre=DANS">recommendations</a>, 
          please <a href="https://dans.knaw.nl/en/ask-your-question/">contact DANS</a>.</p>
    </info>
@@ -36,7 +36,7 @@
       <format id="fXML">
          <domain>Audiovisual Annotation</domain>
          <level>recommended</level>
-         <comment>See <a href="https://dans.knaw.nl/en/file-formats/">more info from DANS</a></comment>
+         <comment xml:lang="en">See <a href="https://dans.knaw.nl/en/file-formats/">more info from DANS</a></comment>
       </format>
       <format id="fAAC">
          <domain>Audiovisual Source Language Data</domain>
