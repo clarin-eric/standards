@@ -165,7 +165,7 @@ else
                                 <a href="{
                                             app:link(concat("views/recommended-formats-with-search.xq?sortBy=centre",
                                             $domainParams, "&amp;level=", $recommendationLevel, "&amp;centre=",$centre, "#searchRecommendation"))
-                                        }">Clarin Centres</a>
+                                        }">Centre</a>
                             </th>
                             <th class="header" style="width:40%;">
                                 <a href="{
