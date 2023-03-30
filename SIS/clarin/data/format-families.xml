@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<family-ties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="../schemas/format-families.xsd">
+<!-- these are almost all non-leaf nodes;
+     some non-leaf nodes are described as hub formats: XML, TEI, CoNNL - so for those three, the structure
+     can be recreated, to a point. But for the formats listed here, the structure is not derivable from format descriptions,
+     so it has to be explicitly defined. -->
+  <node name="root" rel="">
+<!-- at the top level, we are looking at the eventual digestion mode -->
+    <node name="AudioVisualData" rel=""/>
+    <node name="ImageData" rel=""/>
+    <node name="TextualData" rel=""/>
+    <node name="NumericData" rel=""/>
+    <node name="Other" rel=""/>
+    <!--<node name="Mixed" rel=""/>-->
+  </node>
+  <node name="AudioVisualData" rel="">
+    <node name="Audio" rel=""/>
+    <node name="Video" rel=""/>
+  </node>
+  <node name="ImageData" rel="">
+    <node name="Raster" rel=""/>
+    <node name="Vector" rel=""/>
+  </node>
+  <node name="TextualData" rel="">
+    <node name="Markup" rel=""/>
+    <node name="Plain" rel=""/>
+<!-- here, Binary means primarily, "not directly human-readable"   -->
+    <node name="Binary" rel=""/>
+  </node>
+ 
+  <node name="Audio" rel="">
+<!--  should it be Audio.Uncompressed here, or rather single-segment names here (for visualisation) but dotted names in the format description files? 
+      The latter means that a format would say <formatFamily>Audio.Uncompressed</formatFamily> and that would be parsed and 
+      matched to this piece of the graph (?) -->
+    <node name="Uncompressed" rel="encoding"/>
+    <node name="Lossless" rel="encoding"/>
+    <node name="Lossy" rel="encoding"/>
+  </node>
+  <node name="Video" rel="">
+    <node name="Uncompressed" rel="encoding"/>
+    <node name="Lossless" rel="encoding"/>
+    <node name="Lossy" rel="encoding"/>
+  </node>
+  <node name="Raster" rel="">
+    <node name="Uncompressed" rel="encoding"/>
+    <node name="Lossless" rel="encoding"/>
+    <node name="Lossy" rel="encoding"/>
+  </node>
+  <node name="Markup" rel="">
+    <node name="Full" rel=""/>
+    <node name="Partial" rel=""/>
+  </node>
+  <node name="Plain" rel="">
+    <node name="Columnar" rel=""/>
+    <node name="Running" rel=""/>
+  </node>
+  
+</family-ties>
