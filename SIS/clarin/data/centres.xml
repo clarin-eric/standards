@@ -1,6 +1,6 @@
 <centres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/spec.xsd">
-  <centre id="ASV" deposition="1">
-    <name>ASV Leipzig</name>
+  <centre id="SAW" deposition="1">
+    <name>SAW Leipzig</name>
     <a href="https://centres.clarin.eu/centre/4"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
