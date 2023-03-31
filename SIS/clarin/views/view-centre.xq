@@ -25,16 +25,17 @@ let $template := request:get-parameter('template', '')
 let $centre := cm:get-centre($id)
 let $centre-name := $centre/name/text()
 let $centre-link := data($centre/a/@href)
-let $centre-info := $centre/info
+
 let $centre-ri := $centre/nodeInfo/ri
 
 let $recommendation := cm:get-recommendations($id)
+let $centre-info := $recommendation/info 
 let $recommendationRows := rf:print-centre-recommendation($id,(), "", $sortBy)
 let $exportFilename := concat($id,"-recommendation.xml")
 
 return
 if ($export)
-then (em:export-table($id, (), "", $recommendationRows,$exportFilename, "views/view-centre.xq"))
+then (em:export-table($id, (), "", $recommendationRows,$exportFilename, "views/view-centre.xq", $centre-info))
 else if ($template)
 then (em:download-template($id,$exportFilename))
 else 

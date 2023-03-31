@@ -113,6 +113,13 @@ declare function cm:get-recommendations($id) {
     recommendation:get-recommendations-for-centre($id)
 };
 
+declare function cm:get-centre-info($id) {
+    if ($id)
+    then cm:get-recommendations($id)/info
+    else ()
+};
+
+
 declare function cm:print-recommendation-rows($recommendation, $centre-id, $sortBy) {
     for $format in $recommendation/formats/format
         let $format-id := data($format/@id)

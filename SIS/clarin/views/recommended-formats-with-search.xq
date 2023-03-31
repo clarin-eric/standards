@@ -7,6 +7,7 @@ import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 import module namespace em = "http://clarin.ids-mannheim.de/standards/export" at "../modules/export.xql";
+import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 
 
 let $searchItem := request:get-parameter('searchFormat', '')
@@ -27,12 +28,12 @@ let $rows :=
     else rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
 let $recommendationTable := rf:paging($rows,$page)
 
-
+let $centreInfo := cm:get-centre-info($centre)
 
 return
 if ($export)
-then (em:export-table($centre, $domainId, $recommendationLevel, $recommendationTable,
-    "format-recommendation.xml","views/recommended-formats-with-search.xq"))
+then (em:export-table($centre, $domainId, $recommendationLevel, $rows,
+    "format-recommendation.xml","views/recommended-formats-with-search.xq",$centreInfo))
 else 
 
     <html>
