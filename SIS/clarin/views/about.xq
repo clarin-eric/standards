@@ -20,13 +20,32 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
             <div class="logoheader"/>
             {menu:view()}
             <div class="content">                
-                <div class="navigation">&gt; <a href="{app:link("views/contact.xq")}">Contact</a></div>                
-                <div><span class="title">Contact</span></div>
+                <div class="navigation">&gt; <a href="{app:link("views/about.xq")}">About / F.A.Q.</a></div>                
+                <div><span class="title">About SIS</span></div>
                 
-                <div>If you have any question or feedback about the content of this website
+                
+                <div id="about">
+                </div>
+                
+                <div id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <ol>
+                <li><h3>The data about my centre do not seem entirely correct. Where did you take these recommendations from?</h3>
+                <p>We bootstrapped the system with data coming from those centres that made that information available on their 
+                homepages. Note that the information had to be interpreted by us, at least with respect to the functions of data 
+                and often with respect to the level of recommendation (recommended vs. acceptable vs. discouraged). That initial 
+                state of information is only meant as 'seed' for further work by the centre.</p>
+                </li>
+                </ol>
+                </div>
+
+                
+                <div id="contact">
+                <h2>Contact</h2>
+                <p>If you have any question or feedback about the content of this website
                 or the <a href="{app:link("schemas/spec.xsd")}"> XML Schema</a> of the 
                 <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">standards</a>, 
-                please contact:
+                please contact:</p>
                 
                 <p><b>Eliza Margaretha (main developer) </b><br />
                     <img src="{app:resource("margaretha.png","img")}"/><br />

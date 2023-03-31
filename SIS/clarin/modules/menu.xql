@@ -125,7 +125,7 @@ declare function menu:view() {
                 </tr>
                 <tr>
                     <td colspan="3" class="tdmenu">
-                        <a style="display:block" href="{app:link("views/contact.xq")}">Contact</a>
+                        <a style="display:block" href="{app:link("views/about.xq")}">About / F.A.Q.</a>
                     </td>
                 </tr>
                 <tr><td colspan="3" height="20px"/></tr>
