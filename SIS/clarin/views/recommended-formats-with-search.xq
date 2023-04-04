@@ -44,7 +44,7 @@ else
             <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("multiselect-dropdown.js", "js")}"/>
         </head>
-        <body onload="suggestion('searchId', '{rf:listSearchSuggestions()}')">
+        <body onload="suggestion('searchId', '{rf:listSearchSuggestions($recommendationTable)}')">
             <div id="all">
                 <div class="logoheader"/>
                 {menu:view()}
@@ -53,7 +53,6 @@ else
                         &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     </div>
                     <div class="title" id="pagetitle">Format Recommendations</div>
-                    
                     <div><p>This page presents formats of data depositions that various CLARIN centres are ready to accept. Each format,
                             for each centre, can be "recommended", "acceptable" or "discouraged" in the context of several domains that represent the
                             functions that the deposited data can play. The level of recommendation should always be viewed as relative to the profile 
