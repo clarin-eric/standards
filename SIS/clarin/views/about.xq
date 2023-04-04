@@ -25,6 +25,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                 
                 
                 <div id="about">
+                <p>This service has been created and is maintained at IDS Mannheim as part of the Institute's activity </p>
                 </div>
                 
                 <div id="faq">
@@ -32,9 +33,15 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                 <ol>
                 <li><h3>The data about my centre do not seem entirely correct. Where did you take these recommendations from?</h3>
                 <p>We bootstrapped the system with data coming from those centres that made that information available on their 
-                homepages. Note that the information had to be interpreted by us, at least with respect to the functions of data 
+                homepages, as early as 2020 (and thereabouts). Note that the information had to be interpreted by us, at least 
+                with respect to the functions of data used by the SIS 
                 and often with respect to the level of recommendation (recommended vs. acceptable vs. discouraged). That initial 
-                state of information is only meant as 'seed' for further work by the centre.</p>
+                state of information is only meant as 'seed' for further work by the centre. The need for that work has been 
+                re-iterated in the committee presentations at CACs, at NCF meetings, and often directly in conversations with 
+                members of centres.</p>
+                <p>In the meantime, we have tried to make the system as frustration-free when it comes to updating or entering recommendations 
+                by the individual centres, as possible. Please have a look at the documentation and contact us (best via GitHub issues, so 
+                that you can see how we respond).</p>
                 </li>
                 </ol>
                 </div>
@@ -42,10 +49,12 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                 
                 <div id="contact">
                 <h2>Contact</h2>
-                <p>If you have any question or feedback about the content of this website
-                or the <a href="{app:link("schemas/spec.xsd")}"> XML Schema</a> of the 
-                <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">standards</a>, 
-                please contact:</p>
+                <p>If you have any question or feedback about the content of this website, please consider using GitHub issues, 
+                so that you can see how the matter is processed and what decisions are made (and often why). Link to pre-filled 
+                templates of GitHub issues are also placed at various crucial spots in the SIS.</p>
+                <p>If issues don't suffice for some reason, contact us directly at the addresses below, but please be aware 
+                that that often extends the path (because then, 
+                most often, we need to post your issue, and that might take a while, and until then, the process is non-transparent), and consequently the time to handle your feedback.
                 
                 <p><b>Eliza Margaretha (main developer) </b><br />
                     <img src="{app:resource("margaretha.png","img")}"/><br />
