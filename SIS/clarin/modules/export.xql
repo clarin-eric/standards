@@ -17,19 +17,18 @@ declare function em:list-domains($domainIds as xs:string*){
         else ()
 };
 
-declare function em:export-table($centre, $domainId, $requestedLevel, $nodes, $filename, $page) {
+declare function em:export-table($centre, $domainId, $requestedLevel, $nodes, $filename, $page,$centreInfo) {
     
     let $filter :=
-    (if ($centre) then
-        <centre>{$centre}</centre>
-    else
-        (),
-    em:list-domains($domainId),
-    if ($requestedLevel) then
-        <level>{$requestedLevel}</level>
-    else
-        ())
-    
+        (if ($centre) then
+            <centre>{$centre}</centre>
+        else (),
+        em:list-domains($domainId),
+        if ($requestedLevel) then
+            <level>{$requestedLevel}</level>
+        else
+            ())
+        
     let $rows :=
         for $row in $nodes
         return
@@ -65,6 +64,7 @@ declare function em:export-table($centre, $domainId, $requestedLevel, $nodes, $f
                 <exportDate>{fn:current-dateTime()}</exportDate>
                 <filter>{$filter}</filter>
             </header>
+            {$centreInfo}
             <formats>{$rows}</formats>
         </recommendation>
 

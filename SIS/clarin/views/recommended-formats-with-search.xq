@@ -7,6 +7,7 @@ import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 import module namespace em = "http://clarin.ids-mannheim.de/standards/export" at "../modules/export.xql";
+import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 
 
 let $searchItem := request:get-parameter('searchFormat', '')
@@ -27,12 +28,12 @@ let $rows :=
     else rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
 let $recommendationTable := rf:paging($rows,$page)
 
-
+let $centreInfo := cm:get-centre-info($centre)
 
 return
 if ($export)
-then (em:export-table($centre, $domainId, $recommendationLevel, $recommendationTable,
-    "format-recommendation.xml","views/recommended-formats-with-search.xq"))
+then (em:export-table($centre, $domainId, $recommendationLevel, $rows,
+    "format-recommendation.xml","views/recommended-formats-with-search.xq",$centreInfo))
 else 
 
     <html>
@@ -43,7 +44,7 @@ else
             <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("multiselect-dropdown.js", "js")}"/>
         </head>
-        <body onload="suggestion('searchId', '{rf:listSearchSuggestions()}')">
+        <body onload="suggestion('searchId', '{rf:listSearchSuggestions($recommendationTable)}')">
             <div id="all">
                 <div class="logoheader"/>
                 {menu:view()}
@@ -52,7 +53,6 @@ else
                         &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     </div>
                     <div class="title" id="pagetitle">Format Recommendations</div>
-                    
                     <div><p>This page presents formats of data depositions that various CLARIN centres are ready to accept. Each format,
                             for each centre, can be "recommended", "acceptable" or "discouraged" in the context of several domains that represent the
                             functions that the deposited data can play. The level of recommendation should always be viewed as relative to the profile 
