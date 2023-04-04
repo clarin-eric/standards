@@ -56,21 +56,32 @@ return
                     
                     <div>
                     
-(:                 <p></p>
-                    <p>The CLARIN Standards Information System lists language-technology-related standards 
-                    that CLARIN centres are willing to accept and recognize, and visualizes some of their 
-                    interdependencies.</p>
-                    <p>The system is in the process of development and extension. Until this notice is gone, 
-                    the system should not be expected to provide exhaustive up-to-date information on CLARIN standards.</p>
-                   :)
-                    
-                    
-                        <p>ISO defines a standard as “a document that provides requirements, specifications, guidelines or characteristics that can be used
-                            consistently to ensure that materials, products, processes and services are fit for their purpose.”
-                            (see <a href="http://www.iso.org/iso/home/standards.htm">ISO</a>). Commonly a standard developed within a standard body must meet some strict requirements and rules defined by a panel of experts. After going through a public review process, the standard organization members (e.g. representatives from governmental, industry or academic organisations) must agree that the standard can be published. Although the standardization process is time-consuming, it ensures a transparent and fair development of standards with respect to considerations of multiple perspectives and needs of all standard organization members. The official standards that are developed within one accredited body, such as ISO, DIN, IEEE, CEN/ISSS or NISO, are generally defined as de jure standards.</p>
-                        
-                        <p>On the other hand, a specification is “an explicit set of requirements to be satisfied by a material, product, system, or Service” (see <a href="http://www.astm.org/COMMIT/Regs.pdf">Regulations Governing ASTM Technical Committees</a>). Any private individual, company or organization may develop a specification, which is typically limited to a specific application and defines the application tasks and objectives. When a specification is often used and acknowledged by the users more than any other existing specification, it is referred to as a de facto standard.
-                            Many specifications, such as PDF, CMDI, HTML, were developed outside a standard body, but by the virtue of acceptance and broad dissemination, they were adopted by a recognized standard body, such as ISO.</p>
+                    <p></p>
+                    <p>Note: information provided in this part of the Standards Information System may be outdated. 
+                    This means that the relationships between standards and specifications listed here are still valid, 
+                    but some new versions (and consequently new relationships) may still be missing. Since this is an 
+                    open system, you are cordially invited to help extend it, either by posting a ticket listing the 
+                    missing information, or by forking/cloning the source and submitting your additions via a pull request.</p>
+                   
+                    <div id="introduction">
+                    <h2>Introduction</h2>
+                    <p>ISO defines a <a href="https://www.iso.org/obp/ui#home">standard</a> as “a document that provides requirements, 
+                    specifications, guidelines or characteristics that can be used consistently to ensure that materials, products, 
+                    processes and services are fit for their purpose.” Commonly, a standard developed within a standardization body
+                    must meet some strict requirements and rules defined by a panel of experts. After going through a public review 
+                    process, the standardization organization members (e.g. representatives from governmental, industry or academic 
+                    organisations) must agree that the standard can be published. Although the standardization process is time-consuming, 
+                    it ensures a transparent and fair development of standards with respect to considerations of multiple perspectives 
+                    and needs of all members of a standardization organization. The official standards that are developed within one 
+                    accredited body, such as ISO, DIN, IEEE, CEN/ISSS or NISO, are generally defined as <i>de jure</i> standards.</p>
+                    <p>On the other hand, a (technical) specification is “document that prescribes technical requirements to
+                    be fulfilled by a product, process or service” (see <a href="https://www.iso.org/iso-guides.html">ISO/IEC Guide 2</a>). 
+                    Any private individual, company or organization may develop a specification, which is typically limited to a specific 
+                    application and defines the tasks and objectives of that application. When a specification is often used and acknowledged by 
+                    the users more than any other existing specification, it is referred to as a <i>de facto</i> standard.
+                    Many specifications, such as PDF, CMDI, HTML, were developed outside a standardization body, but by the virtue of acceptance 
+                    and broad dissemination, they got later adopted by a recognized standardization body, such as ISO.</p>
+                    </div>
                     </div>
                     <!-- The tag cloud of standards and standard bodies -->
                     <div style="margin-left:10%; margin-bottom:20px;">
@@ -83,7 +94,8 @@ return
                         </div>
                     </div>  
                     
-                    <div>
+                    <div id="list">
+                    <h2>Introduction</h2>
                         <p>The table below lists {$lsm:spec-sum} standards and specifications described in this website. You can get more information about a standard or a specification by clicking on the abbreviations. When hovering over an abbreviation, the standard/specification name will be shown on a tool tip. The topic column shows which area(s) a standard belongs to, and the resonsibility column shows the person, organization or standard body that has developed or currently maintains the standard/specification. The CLARIN Centre(s) column shows which clarin centres using a particular standard/specification. </p>
                         <p>To sort the table below by topic, responsibility or CLARIN centre, please click on the corresponding column header. You can also filter the standards by the first letter of their abbreviation or name, by clicking on a letter below.</p>
                         <p>Please note that the information concerning centre recommendations for particular standards should be considered outdated and will change with the upcoming revisions of the Standards Information System. Please refer to the "Data Deposition Formats" page for up-to-date information.</p>
