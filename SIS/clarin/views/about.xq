@@ -21,11 +21,12 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
             {menu:view()}
             <div class="content">                
                 <div class="navigation">&gt; <a href="{app:link("views/about.xq")}">About / F.A.Q.</a></div>                
-                <div><span class="title">About SIS</span></div>
+                <div><span class="title">About SIS</span>
                 
                 
                 <div id="about">
-                <p>This service has been created and is maintained at IDS Mannheim as part of the Institute's activity </p>
+                <p>This service has been created in 2012 and has been maintained since then at <a href="https://www.ids-mannheim.de/">IDS Mannheim</a> 
+                as part of the Institute's activity as a <a href="https://clarin.eu/">CLARIN</a> B-Centre.</p>
                 </div>
                 
                 <div id="faq">
@@ -36,39 +37,57 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                 homepages, as early as 2020 (and thereabouts). Note that the information had to be interpreted by us, at least 
                 with respect to the functions of data used by the SIS 
                 and often with respect to the level of recommendation (recommended vs. acceptable vs. discouraged). That initial 
-                state of information is only meant as 'seed' for further work by the centre. The need for that work has been 
+                state of information is only meant as 'seed' for further work by the centre itself. The need for that work has been 
                 re-iterated in the committee presentations at CACs, at NCF meetings, and often directly in conversations with 
-                members of centres.</p>
+                members of centres. We will gladly deliver a zoom presentation to your centre -- please contact us about that.</p>
                 <p>In the meantime, we have tried to make the system as frustration-free when it comes to updating or entering recommendations 
-                by the individual centres, as possible. Please have a look at the documentation and contact us (best via GitHub issues, so 
+                by the individual centres, as possible. Please have a look at the <a href="https://github.com/clarin-eric/standards/wiki">documentation</a>
+                and contact us (preferably via <a href="https://github.com/clarin-eric/standards/issues">GitHub issues</a>, so
                 that you can see how we respond).</p>
+                </li>
+                <li><h3>Why put work into the SIS if we can have our own page, structured and styled as we please?</h3>
+                <p>The "as we please" bit would mean resigning from all the goodies that can be extracted out of data aggregation across CLARIN 
+                (and, in the future, across comparable research infrastructures). The idea of the SIS is not only to make it possible to fulfil 
+                the CTS requirements in a relatively painless manner, but also to visualize the aggregated data, and also to return the centre's 
+                data back to it, thanks to the <a href="{app:link("views/api.xq")}">API point</a> that we make available. "Soon" (hopefully 
+                after the summer of 2023 at the latest), we will provide examples of how a centre can make use of its data that have been 
+                input into the SIS in order to display them on the centre's own pages.</p>
                 </li>
                 </ol>
                 </div>
-
                 
                 <div id="contact">
                 <h2>Contact</h2>
-                <p>If you have any question or feedback about the content of this website, please consider using GitHub issues, 
+                <p>If you have any question or feedback about the content of this website, please consider using <a href="https://github.com/clarin-eric/standards/issues">GitHub issues</a>, 
                 so that you can see how the matter is processed and what decisions are made (and often why). Link to pre-filled 
                 templates of GitHub issues are also placed at various crucial spots in the SIS.</p>
                 <p>If issues don't suffice for some reason, contact us directly at the addresses below, but please be aware 
                 that that often extends the path (because then, 
-                most often, we need to post your issue, and that might take a while, and until then, the process is non-transparent), and consequently the time to handle your feedback.
+                most often, we need to re-post your issue ourselves, and that might take a while, and until then, the process is non-transparent), 
+                and consequently the time to handle your feedback.</p>
                 
                 <p><b>Eliza Margaretha (main developer) </b><br />
                     <img src="{app:resource("margaretha.png","img")}"/><br />
-                   <b>Piotr Banski (contact to CLARIN Standards Committee) </b><br />
+                   <b>Piotr Banski (conceptual work and contact to the CLARIN <a href="https://www.clarin.eu/content/standards">Standards and Interoperability Committee</a>)</b><br />
                     <img src="{app:resource("banski.png","img")}"/> <br />
                     
                     Institut für Deutsche Sprache <br />
                     R5, 6-13 <br />
-                    68161 Mannheim <br />
+                    68-161 Mannheim <br />
                     Germany
                 </p>
                  </div>
+                 
+                 
+                 <div id="tech">
+                <h2>Technicalities</h2>
+                 <p>The SIS is an open-source project hosted at <a href="https://github.com/clarin-eric/standards">GitHub</a>, built using mainly XQuery (1-3.1) and XML. 
+                 It is running atop of <a href="https://exist-db.org/exist/apps/homepage/index.html">eXist-db 6.2.0</a>.</p>
+                 </div>
+                 
+                 </div>
             </div>            
-            <div class="footer">{app:footer()}</div>        
-        </div>
+            <div class="footer">{app:footer()}</div>
+            </div>
     </body>
 </html>
