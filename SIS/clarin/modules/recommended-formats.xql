@@ -50,18 +50,20 @@ declare function rf:listSearchSuggestions(){
     return fn:string-join($union,",")
 };
 
-declare function rf:listSearchSuggestions($recommendationTable){
-    (: $centre:names problematic:)
-    let $fids := data($recommendationTable/td[1]/@id)
-    let $fabbrs := $recommendationTable/td[1]/a/text()
-    let $centre := $recommendationTable/td[2]/a/text()
-    let $domains := $recommendationTable/td[3]/span/text()
+declare function rf:listSearchSuggestions($recommendations){
+    let $recommendationTable := 
+        util:deep-copy(<table>{$recommendations}</table>)
+
+    let $fids := data($recommendationTable/tr/td[1]/@id)
+    let $fabbrs := $recommendationTable/tr/td[1]/a/text()
+    let $centre := $recommendationTable/tr/td[2]/a/text()
+    let $domains := $recommendationTable/tr/td[3]/span/text()
 
     let $union := 
         for $item in ($fids,$fabbrs,$centre,$domains)
         order by fn:lower-case($item) 
         return $item
-
+    
     let $union := distinct-values($union)
      return fn:string-join($union,",")
 };
