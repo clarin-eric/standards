@@ -23,9 +23,13 @@ let $page := request:get-parameter('page', 1)
 let $domainParams := fn:string-join(for $d in $domainId return ("&amp;domain=",$d))
 
 let $rows :=
+     rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
+
+let $rows := 
     if ($searchItem)
-    then rf:searchFormat($searchItem)
-    else rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
+    then rf:searchFormat($searchItem,$rows)
+    else $rows
+
 let $recommendationTable := rf:paging($rows,$page)
 
 let $centreInfo := cm:get-centre-info($centre)
@@ -124,7 +128,7 @@ else
                                 <form id="searchRecommendation"  autocomplete="off" style="margin:10px 0 10px 0;
                                     border: solid 1px #c0c0c0; border-radius:4px;padding:5px;background-color:#c3d3e3;width:590px" 
                                     method="get"
-                                    action="{app:link("views/recommended-formats-with-search.xq?#searchRecommendation")}">
+                                    action="{app:link("views/recommended-formats-with-search.xq?#filterRecommendation")}">
                                     <div class ="autocomplete">
                                             <input id="searchId" name="searchFormat" style="width:400px;height:26px;padding-left:5px" 
                                                 class="inputText" type="text" 
@@ -133,6 +137,14 @@ else
                                      <input name="searchButton" class="button"
                                                 style="margin: 0 0 0 3px;height:30px; vertical-align:middle;" 
                                                 type="submit" value="Search"/>
+                                     <input name="centre" type="hidden" value="{$centre}"/>
+                                    {
+                                        for $id in $domainId
+                                        return
+                                        <input name="domain" type="hidden" value="{$id}"/>
+                                    }
+                                    <input name="level" type="hidden" value="{$recommendationLevel}"/>
+                                    <input name="sortBy" type="hidden" value="{$sortBy}"/>           
                                 </form>
                             </td>
                             <td style="padding-left:5px;">
@@ -148,6 +160,7 @@ else
                                     }
                                     <input name="level" type="hidden" value="{$recommendationLevel}"/>
                                     <input name="sortBy" type="hidden" value="{$sortBy}"/>
+                                    <input name="searchFormat" type="hidden" value="{$searchItem}"/>
                                 </form>
                             </td>
                         </tr>

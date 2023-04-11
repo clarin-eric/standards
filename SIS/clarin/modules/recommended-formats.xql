@@ -75,12 +75,33 @@ declare function rf:searchFormat($searchItem){
         then rf:print-centre-recommendation($searchItem)
     else if ($category eq "fabbr")
         then rf:searchFormatByAbbr($searchItem)
-    else if ($category eq "fname")
-        then rf:searchFormatByName($searchItem)
+   (: else if ($category eq "fname")
+        then rf:searchFormatByName($searchItem):)
     else if ($category eq "cid") 
         then rf:print-centre-recommendation($searchItem,(),'','')
     else if ($category eq "dname")
         then rf:searchFormatByDomain($searchItem)
+    else ()
+};
+
+declare function rf:searchFormat($searchItem, $rows){
+    let $category := map:get($rf:searchMap,$searchItem)
+    return 
+    if ($category eq "fid")
+        then $rows[td[1]/@id=$searchItem]
+        
+    else if ($category eq "fabbr")
+        then $rows[td[1]/text()=$searchItem or td[1]/a/text()=$searchItem]
+        
+   (: else if ($category eq "fname")
+        then rf:searchFormatByName($searchItem):)
+        
+    else if ($category eq "cid") 
+        then $rows[td[2]/a/text()=$searchItem]
+        (:then rf:print-centre-recommendation($searchItem,(),'',''):)
+    
+    else if ($category eq "dname")
+        then $rows[td[3]/span/text()=$searchItem]
     else ()
 };
 
