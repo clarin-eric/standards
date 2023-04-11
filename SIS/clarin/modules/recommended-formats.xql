@@ -78,7 +78,7 @@ declare function rf:searchFormat($searchItem){
     else if ($category eq "fname")
         then rf:searchFormatByName($searchItem)
     else if ($category eq "cid") 
-        then rf:print-centre-recommendation($searchItem,'','','')
+        then rf:print-centre-recommendation($searchItem,(),'','')
     else if ($category eq "dname")
         then rf:searchFormatByDomain($searchItem)
     else ()
