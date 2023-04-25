@@ -30,6 +30,7 @@
                 <xs:element ref="lastUpdateCommitID" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="exportDate" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="filter" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="respStmt" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -197,6 +198,24 @@
             </xs:restriction>
         </xs:simpleType>
     </xs:element>
+    <xs:element name="respStmt">
+        <xs:annotation>
+            <xs:documentation>This is an element filled with the name of the curator and date of 
+                curation, and used as an official 'stamp' stating that the set of recommendations 
+                is now ready for public consumption. It should be set at inputhons and, at the latest 
+                manually, when receiving subsequent PRs from the given centre.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="curator" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="github" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="reviewDate" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="curator" type="xs:string"/>
+    <xs:element name="github" type="xs:string"/>
+    <xs:element name="reviewDate" type="xs:date"/>
     <xs:element name="formats">
         <xs:complexType>
             <xs:sequence>
