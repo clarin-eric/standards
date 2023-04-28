@@ -29,9 +29,11 @@ let $centre-link := data($centre/a/@href)
 let $centre-ri := $centre/nodeInfo/ri
 
 let $recommendation := cm:get-recommendations($id)
-let $centre-info := $recommendation/info 
+let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
+let $centre-info := $recommendation/info[@xml:lang =$languageHeader] 
 let $recommendationRows := rf:print-centre-recommendation($id,(), "", $sortBy)
 let $exportFilename := concat($id,"-recommendation.xml")
+let $respStmt := $recommendation/header/respStmt
 
 return
 if ($export)
@@ -81,6 +83,7 @@ else
                                 <span class="heading">Research Infrastructure: </span>
                                 <span id="ri">{$centre-ri/text()} ({data($centre-ri/@status)})</span>
                             </div>
+                            {cm:print-curation($respStmt,$languageHeader)}
                             {
                                 if ($centre-info)
                                 then
@@ -97,7 +100,7 @@ else
                                 then (
                                     <div>
                                         <span class="heading" id="recommendationTable">Recommendations: </span>
-                                    
+                                       
                                         <form method="get" action="" style="float: right;">
                                               <input name="export" class="button"
                                               style="margin-bottom:5px; height:25px;width:165px;" 
