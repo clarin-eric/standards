@@ -119,6 +119,32 @@ declare function cm:get-centre-info($id) {
     else ()
 };
 
+declare function cm:print-curation($respStmt,$language){
+    if ($respStmt)
+    then (
+        <div>
+            <span class="heading">Curator: </span>
+            <span>{$respStmt/curator/text()}</span>
+            {if (empty($respStmt/github/text()))
+              then ()
+              else (
+              " (",<a href="{$respStmt/github/text()}">github</a>,")")
+            }
+        </div>,
+        <div>
+            <span class="heading">Review date: </span>
+            <span>{format-date($respStmt/reviewDate/text(), 
+        "[MNn] [D], [Y]", $language, (), () )}</span>
+        </div>
+    )
+    else (
+        <div>
+             <span  class="heading" style="color:darkred">Warning: </span> 
+            <span style="color:darkred">The recommendations have not been curated yet.</span>
+        </div>
+    )
+};
+
 
 declare function cm:print-recommendation-rows($recommendation, $centre-id, $sortBy) {
     for $format in $recommendation/formats/format
