@@ -63,7 +63,16 @@ declare function cm:print-statuses($status){
                    value="{$s}">{$s}</option>)
 };
 
-declare function cm:list-centre($sortBy,$statusFilter) {
+declare function cm:print-ri($centre-ri){
+    for $ri in $centre-ri
+    let $status := 
+        if ($ri/@status ne "") 
+        then concat(" (",data($ri/@status),")") 
+        else () 
+    return <li>{$ri/text(), $status}</li>
+};
+
+declare function cm:list-centre-old($sortBy,$statusFilter) {
     for $c in $centre:centres
         let $name := $c/name/text()
         let $ri := $c/nodeInfo/ri/text()
@@ -100,12 +109,45 @@ declare function cm:list-centre($sortBy,$statusFilter) {
             else (cm:print-centre-row($id, $name, $ri, $statuses))
 };
 
+declare function cm:list-centre($sortBy,$statusFilter) {
+    for $c in $centre:centres
+        let $name := $c/name/text()
+        let $id := data($c/@id)
+        
+        let $ris := 
+            for $ri in $c/nodeInfo/ri
+            let $status := data($ri/@status)
+            return 
+                if ($status ne "") then ($ri, concat(" (", $status,")"),<br/>) 
+                else ($ri,<br/>)
+            
+        let $combinedStatuses := fn:string-join($c/nodeInfo/ri/@status,",")    
+        let $statuses :=  fn:tokenize($combinedStatuses, ",")
+        order by
+        
+        if ($sortBy eq 'name')
+        then fn:lower-case($name)
+        else if ($sortBy eq 'ri')
+        then fn:lower-case($ris)
+        else if ($sortBy eq 'id')
+        then (fn:lower-case($id))
+        else (fn:lower-case($id))
+        
+        return
+            if ($statusFilter)
+            then 
+                if (fn:contains($statuses, $statusFilter))
+                then cm:print-centre-row($id, $name, $ris, $statuses)
+                else ()
+            else (cm:print-centre-row($id, $name, $ris, $statuses))
+};
+
 declare function cm:print-centre-row($id, $name, $ri, $statuses){
     <tr>
         <td class="recommendation-row"><a href="{app:link(concat("views/view-centre.xq?id=", $id))}">{$id}</a></td>
         <td class="recommendation-row">{$name}</td>
         <td class="recommendation-row">{$ri}</td>
-        <td class="recommendation-row">{$statuses}</td>
+        <!-- <td class="recommendation-row">{$statuses}</td> -->
     </tr>
 };
 

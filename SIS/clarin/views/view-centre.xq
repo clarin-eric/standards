@@ -1,4 +1,4 @@
-xquery version "3.0";
+xquery version "3.1";
 
 declare namespace request = "http://exist-db.org/xquery/request";
 declare namespace exist = "http://exist.sourceforge.net/NS/exist";
@@ -30,7 +30,7 @@ let $centre-ri := $centre/nodeInfo/ri
 
 let $recommendation := cm:get-recommendations($id)
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
-let $centre-info := $recommendation/info[@xml:lang =$languageHeader] 
+let $centre-info := cm:get-centre-info($id)[@xml:lang =$languageHeader] 
 let $recommendationRows := rf:print-centre-recommendation($id,(), "", $sortBy)
 let $exportFilename := concat($id,"-recommendation.xml")
 let $respStmt := $recommendation/header/respStmt
@@ -81,7 +81,7 @@ else
                             </div>
                             <div>
                                 <span class="heading">Research Infrastructure: </span>
-                                <span id="ri">{$centre-ri/text()} ({data($centre-ri/@status)})</span>
+                                <ul>{cm:print-ri($centre-ri)}</ul>
                             </div>
                             {cm:print-curation($respStmt,$languageHeader)}
                             {
