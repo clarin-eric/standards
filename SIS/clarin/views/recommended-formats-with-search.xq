@@ -32,7 +32,8 @@ let $rows :=
 
 let $recommendationTable := rf:paging($rows,$page)
 
-let $centreInfo := cm:get-centre-info($centre)
+let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
+let $centreInfo := cm:get-centre-info($centre,$languageHeader)
 
 return
 if ($export)

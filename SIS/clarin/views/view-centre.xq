@@ -30,7 +30,8 @@ let $centre-ri := $centre/nodeInfo/ri
 
 let $recommendation := cm:get-recommendations($id)
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
-let $centre-info := cm:get-centre-info($id)[@xml:lang =$languageHeader] 
+let $centre-info := cm:get-centre-info($id,$languageHeader)
+
 let $recommendationRows := rf:print-centre-recommendation($id,(), "", $sortBy)
 let $exportFilename := concat($id,"-recommendation.xml")
 let $respStmt := $recommendation/header/respStmt

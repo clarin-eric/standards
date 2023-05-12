@@ -155,10 +155,18 @@ declare function cm:get-recommendations($id) {
     recommendation:get-recommendations-for-centre($id)
 };
 
-declare function cm:get-centre-info($id) {
-    if ($id)
-    then cm:get-recommendations($id)/info
-    else ()
+declare function cm:get-centre-info($id,$lang) {
+    let $centre-info := 
+        if ($id)
+        then cm:get-recommendations($id)/info[@xml:lang =$lang]
+        else ()
+    
+    let $centre-info := 
+        if ($centre-info) 
+        then $centre-info 
+        else  cm:get-recommendations($id)/info[@xml:lang ="en"]
+        
+   return $centre-info     
 };
 
 declare function cm:print-curation($respStmt,$language){
