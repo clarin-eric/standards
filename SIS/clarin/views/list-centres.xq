@@ -66,8 +66,8 @@ return
                         <tr>
                             <th class="header" style="width:20%;"><a href="?sortBy=id">ID</a></th>
                             <th class="header" style="width:40%;"><a href="?sortBy=name">Name</a></th>
-                            <th class="header" style="width:20%;"><a href="?sortBy=ri">Research Infrastructure</a></th>
-                            <th class="header" style="width:20%;">Status</th>
+                            <th class="header" style="width:40%;"><a href="?sortBy=ri">Research Infrastructure</a></th>
+                            <!-- <th class="header" style="width:20%;">Status</th> -->
                         </tr>
                         {cm:list-centre($sortBy, $status)}
                     </table>
