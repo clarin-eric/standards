@@ -25,5 +25,5 @@
 
   <mimeType>text/plain</mimeType>
   <fileExt>.txt</fileExt>
-  <formatFamily>Text</formatFamily>
+  <formatFamily>Plain.Running</formatFamily>
 </format>

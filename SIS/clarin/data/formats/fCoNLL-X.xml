@@ -22,5 +22,5 @@
    -->
 <!--  <mimeType>text/plain</mimeType>
   <fileExt>.conll</fileExt>-->
-  <formatFamily>CoNNL</formatFamily>
+  <formatFamily>CoNLL</formatFamily>
 </format>

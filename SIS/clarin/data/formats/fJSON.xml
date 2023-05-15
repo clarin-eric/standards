@@ -1,0 +1,25 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fJSON" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>JavaScript Object Notation</title>
+    <abbr>JSON</abbr>
+  </titleStmt>
+  <keyword>data format</keyword>
+  <extId type="LOC">fdd000381</extId>
+  <extId type="PRONOM">fmt/817</extId>
+  <extId type="Wikidata">Q2063</extId>
+  <info type="description">
+    <p>"JSON is an open standard file format and data interchange format that uses human-readable
+      text to store and transmit data objects consisting of attribute–value pairs and arrays (or
+      other serializable values). It is a common data format with diverse uses in electronic data
+      interchange, including that of web applications with servers." (Wikipedia)</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/JSON">Wikipedia entry</a></li>
+    </ul>
+  </info>
+  <!--<relation target="" type="isDefinedBy">https://www.rfc-editor.org/rfc/rfc8259.txt</relation>   -->
+  <mimeType>application/json</mimeType>
+  <fileExt>.json</fileExt>
+  <formatFamily>Markup.Full</formatFamily> <!-- its creator wouldn't agree, but ... -->
+</format>

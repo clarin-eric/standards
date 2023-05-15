@@ -1,8 +1,8 @@
 <?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCoNLL-U" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCoNLL-U-Plus" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>CoNLL-U (Universal Dependencies)</title>
-    <abbr>CoNLL-U</abbr>
+    <title>CoNLL-U Plus (extended Universal Dependencies)</title>
+    <abbr>CoNLL-U Plus</abbr>
   </titleStmt>
   
   <keyword>annotation format</keyword>
@@ -11,12 +11,12 @@
   <!--<extId type=""></extId>-->
   
   <info type="description">
-    <p>CoNLL-U is the base format of <a href="https://universaldependencies.org/format.html"
+    <p><a href="https://universaldependencies.org/ext-format.html">CoNLL-U Plus</a> is a template for extending the base format of <a href="https://universaldependencies.org/format.html"
         >Universal Dependencies</a>.</p>
   </info>
   <!--<relation target="Spec..." type="isDefinedBy"/>
    -->
 <!--  <mimeType>text/plain</mimeType>
   <fileExt>.conll</fileExt>-->
-  <formatFamily>CoNNL</formatFamily>
+  <formatFamily>CoNLL</formatFamily>
 </format>

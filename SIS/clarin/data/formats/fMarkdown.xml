@@ -17,5 +17,5 @@
   <fileExt>.markdown</fileExt>
   <fileExt>.mdown</fileExt>
   <fileExt>.mkd</fileExt>
-  <formatFamily>markup-lightweight</formatFamily>
+  <formatFamily>Markup.Partial</formatFamily>
 </format>

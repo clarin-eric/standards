@@ -6,9 +6,11 @@
   </titleStmt>
   <keyword>video file format</keyword>
   <keyword>container format</keyword>
+  <extId type="LOC">fdd000155</extId>
   <info type="description">
     <p>Unspecified MP4 container format.</p>
   </info>
   <mimeType>video/mp4</mimeType>
   <fileExt>.mp4</fileExt>
+  <formatFamily>Video.Lossy</formatFamily> <!--specialists may argue this point-->
 </format>

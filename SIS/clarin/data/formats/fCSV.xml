@@ -18,4 +18,5 @@
   </info>
   <mimeType>text/csv</mimeType>
   <fileExt>.csv</fileExt>
+  <formatFamily>Plain.Columnar</formatFamily>
 </format>

@@ -23,5 +23,5 @@
   <mimeType>image/jpeg</mimeType>
   <fileExt recommended="yes">.jpg</fileExt>
   <fileExt>.jpeg</fileExt>
-  <formatFamily>lossy</formatFamily>
+  <formatFamily>Raster.Lossy</formatFamily>
 </format>

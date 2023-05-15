@@ -17,5 +17,5 @@
   <mimeType>image/bmp</mimeType>
   <fileExt recommended="yes">.bmp</fileExt>
   <fileExt>.dib</fileExt>
-  <formatFamily>uncompressed</formatFamily> <!--not entirely true, tho prolly tru enuf-->
+  <formatFamily>Raster.Uncompressed</formatFamily>
 </format>

@@ -13,7 +13,7 @@
   
   <info type="description">
     <p>CoNLL expands into "Computational Natural Language Learning", which is the name of a
-      conference chain where the format(s) originated. Unqalified "CoNNL" should be considered a
+      conference chain where the format(s) originated. Unqalified "CoNLL" should be considered a
       meta-format (plain text, column-based) that should <i>not</i> be referenced by SIS
       recommendations.</p>
     <p>Formats that can be used across CLARIN:</p>
@@ -27,5 +27,5 @@
    -->
 <!--  <mimeType>text/plain</mimeType>
   <fileExt>.conll</fileExt>-->
-  <formatFamily>CoNNL</formatFamily>
+  <formatFamily>Plain.Columnar</formatFamily>
 </format>

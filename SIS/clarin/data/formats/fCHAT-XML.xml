@@ -29,4 +29,5 @@
   <mimeType>text/xml</mimeType>
   <schemaLoc type="XSD">https://talkbank.org/software/talkbank.xsd</schemaLoc>
   <fileExt>.xml</fileExt>
+  <formatFamily>XML</formatFamily>
 </format>

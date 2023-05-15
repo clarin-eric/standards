@@ -39,5 +39,5 @@
   <relation target="SpecXML" type="isDefinedBy"/>
   <mimeType>application/xml</mimeType>
   <fileExt>.xml</fileExt>
-  <formatFamily>markup-full</formatFamily>
+  <formatFamily>Markup.Full</formatFamily>
 </format>

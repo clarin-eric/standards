@@ -5,7 +5,7 @@
      some non-leaf nodes are described as hub formats: XML, TEI, CoNNL - so for those three, the structure
      can be recreated, to a point. But for the formats listed here, the structure is not derivable from format descriptions,
      so it has to be explicitly defined. -->
-  <node name="root" rel="">
+  <node name="FileFormats" rel="">
 <!-- at the top level, we are looking at the eventual digestion mode -->
     <node name="AudioVisualData" rel=""/>
     <node name="ImageData" rel=""/>
@@ -33,27 +33,27 @@
 <!--  should it be Audio.Uncompressed here, or rather single-segment names here (for visualisation) but dotted names in the format description files? 
       The latter means that a format would say <formatFamily>Audio.Uncompressed</formatFamily> and that would be parsed and 
       matched to this piece of the graph (?) -->
-    <node name="Uncompressed" rel="encoding"/>
-    <node name="Lossless" rel="encoding"/>
-    <node name="Lossy" rel="encoding"/>
+    <node name="Audio.Uncompressed" rel="encoding"/>
+    <node name="Audio.Lossless" rel="encoding"/>
+    <node name="Audio.Lossy" rel="encoding"/>
   </node>
   <node name="Video" rel="">
-    <node name="Uncompressed" rel="encoding"/>
-    <node name="Lossless" rel="encoding"/>
-    <node name="Lossy" rel="encoding"/>
+    <node name="Video.Uncompressed" rel="encoding"/>
+    <node name="Video.Lossless" rel="encoding"/>
+    <node name="Video.Lossy" rel="encoding"/>
   </node>
   <node name="Raster" rel="">
-    <node name="Uncompressed" rel="encoding"/>
-    <node name="Lossless" rel="encoding"/>
-    <node name="Lossy" rel="encoding"/>
+    <node name="Raster.Uncompressed" rel="encoding"/>
+    <node name="Raster.Lossless" rel="encoding"/>
+    <node name="Raster.Lossy" rel="encoding"/>
   </node>
   <node name="Markup" rel="">
-    <node name="Full" rel=""/>
-    <node name="Partial" rel=""/>
+    <node name="Markup.Full" rel=""/>
+    <node name="Markup.Partial" rel=""/>
   </node>
   <node name="Plain" rel="">
-    <node name="Columnar" rel=""/>
-    <node name="Running" rel=""/>
+    <node name="Plain.Columnar" rel=""/>
+    <node name="Plain.Running" rel=""/>
   </node>
   
 </family-ties>

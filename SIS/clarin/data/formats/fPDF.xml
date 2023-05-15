@@ -30,5 +30,5 @@
   <relation target="SpecPDF" type="isRelatedTo"/> 
   <mimeType>application/pdf</mimeType>
   <fileExt>.pdf</fileExt>
-  <formatFamily>binarized</formatFamily>
+  <formatFamily>Binary</formatFamily>
 </format>

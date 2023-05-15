@@ -20,5 +20,5 @@
   <mimeType>image/tiff</mimeType>
   <fileExt recommended="yes">.tiff</fileExt>
   <fileExt>.tif</fileExt>
-  <formatFamily>uncompressed</formatFamily>  <!--this is probably impractical -->
+  <formatFamily>Raster.Uncompressed</formatFamily>
 </format>

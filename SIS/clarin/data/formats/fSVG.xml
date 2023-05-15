@@ -19,5 +19,6 @@
   <mimeType>image/svg+xml</mimeType>
   <fileExt recommended="yes">.svg</fileExt>
   <fileExt>.svgz</fileExt>
-  <formatFamily>vector</formatFamily>
+  <formatFamily>Vector</formatFamily>
+  <formatFamily>XML</formatFamily>
 </format>

@@ -20,5 +20,5 @@
    -->
   <mimeType>image/png</mimeType>
   <fileExt>.png</fileExt>
-  <formatFamily>lossless</formatFamily>
+  <formatFamily>Raster.Lossless</formatFamily>
 </format>
