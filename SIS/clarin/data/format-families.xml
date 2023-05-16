@@ -5,7 +5,7 @@
      some non-leaf nodes are described as hub formats: XML, TEI, CoNNL - so for those three, the structure
      can be recreated, to a point. But for the formats listed here, the structure is not derivable from format descriptions,
      so it has to be explicitly defined. -->
-  <node name="FileFormats" rel="">
+  <node name="DataFormats" rel="">
 <!-- at the top level, we are looking at the eventual digestion mode -->
     <node name="AudioVisualData" rel=""/>
     <node name="ImageData" rel=""/>
