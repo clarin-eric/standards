@@ -32,13 +32,13 @@ let $recommendation := cm:get-recommendations($id)
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 let $centre-info := cm:get-centre-info($id,$languageHeader)
 
-let $recommendationRows := rf:print-centre-recommendation($id,(), "", $sortBy)
 let $exportFilename := concat($id,"-recommendation.xml")
 let $respStmt := $recommendation/header/respStmt
 
 return
 if ($export)
-then (em:export-table($id, (), "", $recommendationRows,$exportFilename, "views/view-centre.xq", $centre-info))
+then (em:export-table($id, (), "", rf:print-centre-recommendation($id,(), "", $sortBy,$languageHeader),
+            $exportFilename, "views/view-centre.xq", $centre-info))
 else if ($template)
 then (em:download-template($id,$exportFilename))
 else 
@@ -131,7 +131,7 @@ else
                                              Comments
                                          </th>
                                      </tr>
-                                     {cm:print-recommendation-rows($recommendation, $id, $sortBy)}
+                                     {cm:print-recommendation-rows($recommendation, $id, $sortBy, $languageHeader)}
                                     </table>
                                     ,
                                     <div style="text-align:right;">

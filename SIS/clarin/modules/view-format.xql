@@ -158,7 +158,8 @@ declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendat
     else ()
 };
 
-declare function vfm:print-recommendation-rows($recommendations,$format-id,$sortBy){
+declare function vfm:print-recommendation-rows($recommendations,$format-id,$sortBy,
+$language){
     for $r in $recommendations
         let $centre := $r/header/filter/centre/text()
         let $formats := $r/formats/format[@id=$format-id]
@@ -181,5 +182,6 @@ declare function vfm:print-recommendation-rows($recommendations,$format-id,$sort
                         $level
                     else
                         ()
-            return rf:print-recommendation-row($format, $centre,$domain, fn:false(),fn:true())
+            return rf:print-recommendation-row($format, $centre,$domain, $language, 
+                fn:false(),fn:true())
 };

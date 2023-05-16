@@ -19,11 +19,12 @@ let $recommendationLevel := if ($reset) then () else request:get-parameter('leve
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
 let $export := request:get-parameter('export', '')
 let $page := request:get-parameter('page', 1) 
+let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 
 let $domainParams := fn:string-join(for $d in $domainId return ("&amp;domain=",$d))
 
 let $rows :=
-     rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy)
+     rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy,$languageHeader)
 
 let $rows := 
     if ($searchItem)
@@ -32,7 +33,7 @@ let $rows :=
 
 let $recommendationTable := rf:paging($rows,$page)
 
-let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
+
 let $centreInfo := cm:get-centre-info($centre,$languageHeader)
 
 return
@@ -49,7 +50,7 @@ else
             <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("multiselect-dropdown.js", "js")}"/>
         </head>
-        <body onload="suggestion('searchId', '{rf:listSearchSuggestions($recommendationTable)}')">
+        <body onload="suggestion('searchId', '{rf:listSearchSuggestions($rows)}')">
             <div id="all">
                 <div class="logoheader"/>
                 {menu:view()}

@@ -5,6 +5,7 @@ import module namespace centre = "http://clarin.ids-mannheim.de/standards/centre
 import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
 import module namespace recommendation = "http://clarin.ids-mannheim.de/standards/recommendation-model"
 at "../model/recommendation-by-centre.xqm";
+import module namespace data = "http://clarin.ids-mannheim.de/standards/data" at "../model/data.xqm";
 
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";
@@ -156,6 +157,8 @@ declare function cm:get-recommendations($id) {
 };
 
 declare function cm:get-centre-info($id,$lang) {
+    let $check-format-tag := cm:parse-format-tag(cm:get-recommendations($id)/info)
+    
     let $centre-info := 
         if ($id)
         then cm:get-recommendations($id)/info[@xml:lang =$lang]
@@ -164,9 +167,28 @@ declare function cm:get-centre-info($id,$lang) {
     let $centre-info := 
         if ($centre-info) 
         then $centre-info 
-        else  cm:get-recommendations($id)/info[@xml:lang ="en"]
-        
+        else cm:get-default-info($id)
+   
    return $centre-info     
+};
+
+declare function cm:get-default-info($id){
+    let $en-info := cm:get-recommendations($id)/info[@xml:lang ="en"]
+    return
+        if ($en-info)
+        then $en-info
+        else cm:get-recommendations($id)/info[not(@xml:lang)]
+};
+
+declare function cm:parse-format-tag($centre-info){
+    let $login := data:open-access-to-database()    
+    let $check := 
+        for $format in $centre-info/p/format
+        return update replace $format with 
+        <a href="{app:link(concat("views/view-format.xq?id=", $format/text()))}">
+        {$format/text()}</a>
+     let $login := data:close-access-to-database()
+     return ""
 };
 
 declare function cm:print-curation($respStmt,$language){
@@ -196,7 +218,8 @@ declare function cm:print-curation($respStmt,$language){
 };
 
 
-declare function cm:print-recommendation-rows($recommendation, $centre-id, $sortBy) {
+declare function cm:print-recommendation-rows($recommendation, $centre-id, $sortBy,
+$language) {
     for $format in $recommendation/formats/format
         let $format-id := data($format/@id)
         let $format-obj := format:get-format($format-id)
@@ -220,5 +243,5 @@ declare function cm:print-recommendation-rows($recommendation, $centre-id, $sort
                 else (:by format:)
                     (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2)))
     return 
-        rf:print-recommendation-row($format, $centre-id, $domain, fn:true(), fn:false())
+        rf:print-recommendation-row($format, $centre-id, $domain, $language, fn:true(), fn:false())
 };
