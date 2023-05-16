@@ -50,7 +50,7 @@ else
             <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("multiselect-dropdown.js", "js")}"/>
         </head>
-        <body onload="suggestion('searchId', '{rf:listSearchSuggestions($recommendationTable)}')">
+        <body onload="suggestion('searchId', '{rf:listSearchSuggestions($rows)}')">
             <div id="all">
                 <div class="logoheader"/>
                 {menu:view()}
