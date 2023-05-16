@@ -214,6 +214,7 @@
     <a href="https://centres.clarin.eu/centre/11"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
+      <ri status="Collections, Lexical Resources">Text+</ri>
     </nodeInfo>
   </centre>
   <centre id="LINDAT" deposition="1">
