@@ -157,6 +157,8 @@ declare function cm:get-recommendations($id) {
 };
 
 declare function cm:get-centre-info($id,$lang) {
+    let $check-format-tag := cm:parse-format-tag(cm:get-recommendations($id)/info)
+    
     let $centre-info := 
         if ($id)
         then cm:get-recommendations($id)/info[@xml:lang =$lang]
@@ -167,7 +169,6 @@ declare function cm:get-centre-info($id,$lang) {
         then $centre-info 
         else cm:get-default-info($id)
    
-   let $check-format-tag := cm:parse-format-tag($centre-info)
    return $centre-info     
 };
 

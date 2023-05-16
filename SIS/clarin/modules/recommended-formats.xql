@@ -8,6 +8,7 @@ import module namespace centre = "http://clarin.ids-mannheim.de/standards/centre
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
 import module namespace recommendation = "http://clarin.ids-mannheim.de/standards/recommendation-model"
 at "../model/recommendation-by-centre.xqm";
+import module namespace data = "http://clarin.ids-mannheim.de/standards/data" at "../model/data.xqm";
 
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
@@ -362,6 +363,7 @@ $includeFormat,$includeCentre) {
         
     let $level := $format/level/text()
     let $format-comment := rf:print-format-comments($format,$language)
+    let $check-format-tag := rf:parse-format-tag($format/comment)
     
     let $domainId := data($domain/@id)
     let $domainName := $domain/name/text()
@@ -443,6 +445,17 @@ declare function rf:print-format-comments($format,$language){
         if ($format-comment) then $format-comment
         else if ($format/comment[@xml:lang="en"]) then $format/comment[@xml:lang="en"]
         else $format/comment[not(@xml:lang)]
+};
+
+declare function rf:parse-format-tag($comment){
+    let $login := data:open-access-to-database()    
+    let $check := 
+        for $format in $comment/format
+        return update replace $format with 
+        <a href="{app:link(concat("views/view-format.xq?id=", $format/text()))}">
+        {$format/text()}</a>
+     let $login := data:close-access-to-database()
+     return ""
 };
 
 declare function rf:print-missing-format-link($format-id){
