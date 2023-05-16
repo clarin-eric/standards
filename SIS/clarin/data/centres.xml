@@ -4,6 +4,7 @@
     <a href="https://centres.clarin.eu/centre/4"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
+      <ri status="Lexical Resources, Operations">Text+</ri>
     </nodeInfo>
   </centre>
   <centre id="ACDH-ARCHE" deposition="1">
@@ -18,6 +19,7 @@
     <a href="https://centres.clarin.eu/centre/5"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
+      <ri status="Collections">Text+</ri>
     </nodeInfo>
   </centre>
   <centre id="BBAW" deposition="1">
@@ -25,6 +27,7 @@
     <a href="https://centres.clarin.eu/centre/6"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
+      <ri status="Collections, Lexical Resources, Editions">Text+</ri>
     </nodeInfo>
   </centre>
   <centre id="CELR-EKK" deposition="1">
@@ -129,7 +132,8 @@
     <name>DARIAH-DE Repository</name>
     <a href="https://centres.clarin.eu/centre/62"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="C-centre">CLARIN</ri>
+      <ri status="">DARIAH</ri>
     </nodeInfo>
   </centre>
   <centre id="DANS" deposition="1">
@@ -144,6 +148,7 @@
     <a href="https://centres.clarin.eu/centre/1"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
+      <ri status="Collections, Lexical Resources">Text+</ri>
     </nodeInfo>
   </centre>
   <centre id="ERCC" deposition="1">
@@ -158,13 +163,14 @@
     <a href="https://centres.clarin.eu/centre/7"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
+      <ri status="Operations">Text+</ri>
     </nodeInfo>
   </centre>
   <centre id="GEI">
     <name>Georg Eckert Institute for International Textbook Research</name>
     <a href="https://centres.clarin.eu/centre/60"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="C-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="GWDG">
@@ -172,13 +178,14 @@
     <a href="https://centres.clarin.eu/centre/8"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
+      <ri status="Operations">Text+</ri>
     </nodeInfo>
   </centre>
   <centre id="HZSK" deposition="1">
     <name>Hamburger Zentrum für Sprachkorpora</name>
     <a href="https://centres.clarin.eu/centre/9"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="C-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="Huygens">
@@ -192,7 +199,7 @@
     <name>Institut für Maschinelle Sprachverarbeitung</name>
     <a href="https://centres.clarin.eu/centre/10"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="C-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="IVDNT" deposition="1">
@@ -207,6 +214,7 @@
     <a href="https://centres.clarin.eu/centre/47"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
+      <ri status="Collections, Lexical Resources">Text+</ri>
     </nodeInfo>
   </centre>
   <centre id="IDS" deposition="1">
@@ -214,6 +222,7 @@
     <a href="https://centres.clarin.eu/centre/11"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
+      <ri status="Collections, Lexical Resources, Operations">Text+</ri>
     </nodeInfo>
   </centre>
   <centre id="LINDAT" deposition="1">
@@ -344,9 +353,10 @@
   </centre>
   <centre id="UdS" deposition="1">
     <name>Universität des Saarlandes</name>
-    <a href="Universität des Saarlandes"/>
+    <a href="https://centres.clarin.eu/centre/13"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
+      <ri status="Collections">Text+</ri>
     </nodeInfo>
   </centre>
   <centre id="ZIM" deposition="1">
