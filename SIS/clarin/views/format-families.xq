@@ -18,12 +18,13 @@ return
         <script type="text/javascript" src="{app:resource("d3.v2.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("forcegraph.js", "js")}"/>
     </head>
-    <body onload="drawGraph('{ff:create-graph-json()}','650','650','-90');">
+    <body onload="drawGraph('{ff:create-graph-json()}','720','700','-100');">
         <div id="all">
             <div class="logoheader"/>
             {menu:view()}
             <div class="content">
-                <div class="navigation">&gt; <a href="{app:link("views/format-families.xq")}">Format Families</a>
+                <div class="navigation">&gt; <a href="{app:link("views/format-families.xq")}">Format Families</a></div>
+                <div>
                 <p>This page is made visible only to the most seasoned, relentless, and uncompromising discoverers 
                 of the murky internals of the SIS. It shows yet another idea for how information on formats may be traversed. 
                 It builds on the ideas sketched in the 
@@ -31,15 +32,15 @@ return
                 families tree graphic</a>, available from this repository. Feel welcome to add your suggestions to the 
                     <a href="https://github.com/clarin-eric/standards/issues/201">discussion at GitHub</a>.</p>
                 
-                    <table>
-                        <tr>
-                            <th><a href="{app:link("views/format-families.xq?sortBy=id")}">Format</a></th>
-                            <th><a href="{app:link("views/format-families.xq?sortBy=ff")}">Format Family</a></th>
-                        </tr>
-                        {fm:get-format-families($sortBy)}
-                    </table>
-                    <div id="chart" class="version"></div>
+                <table>
+                    <tr>
+                        <th><a href="{app:link("views/format-families.xq?sortBy=id")}">Format</a></th>
+                        <th><a href="{app:link("views/format-families.xq?sortBy=ff")}">Format Family</a></th>
+                    </tr>
+                    {fm:get-format-families($sortBy)}
+                </table>
                 </div>
+                <div id="chart" class="version"></div>
             </div>
             <div class="footer">{app:footer()}</div>
         </div>
