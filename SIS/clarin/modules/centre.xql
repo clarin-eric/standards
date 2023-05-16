@@ -165,10 +165,18 @@ declare function cm:get-centre-info($id,$lang) {
     let $centre-info := 
         if ($centre-info) 
         then $centre-info 
-        else  cm:get-recommendations($id)/info[@xml:lang ="en"]
+        else cm:get-default-info($id)
    
    let $check-format-tag := cm:parse-format-tag($centre-info)
    return $centre-info     
+};
+
+declare function cm:get-default-info($id){
+    let $en-info := cm:get-recommendations($id)/info[@xml:lang ="en"]
+    return
+        if ($en-info)
+        then $en-info
+        else cm:get-recommendations($id)/info[not(@xml:lang)]
 };
 
 declare function cm:parse-format-tag($centre-info){
@@ -209,7 +217,8 @@ declare function cm:print-curation($respStmt,$language){
 };
 
 
-declare function cm:print-recommendation-rows($recommendation, $centre-id, $sortBy) {
+declare function cm:print-recommendation-rows($recommendation, $centre-id, $sortBy,
+$language) {
     for $format in $recommendation/formats/format
         let $format-id := data($format/@id)
         let $format-obj := format:get-format($format-id)
@@ -233,5 +242,5 @@ declare function cm:print-recommendation-rows($recommendation, $centre-id, $sort
                 else (:by format:)
                     (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2)))
     return 
-        rf:print-recommendation-row($format, $centre-id, $domain, fn:true(), fn:false())
+        rf:print-recommendation-row($format, $centre-id, $domain, $language, fn:true(), fn:false())
 };

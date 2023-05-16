@@ -78,7 +78,7 @@ declare function rf:searchFormat($searchItem){
    (: else if ($category eq "fname")
         then rf:searchFormatByName($searchItem):)
     else if ($category eq "cid") 
-        then rf:print-centre-recommendation($searchItem,(),'','')
+        then rf:print-centre-recommendation($searchItem,(),'','', $language)
     else if ($category eq "dname")
         then rf:searchFormatByDomain($searchItem)
     else ()
@@ -119,7 +119,7 @@ declare function rf:searchFormatByName($name){
 
 declare function rf:searchFormatByDomain($searchItem){
     let $domainId := domain:get-id-by-name($searchItem)
-    return rf:print-centre-recommendation('',$domainId,'','')
+    return rf:print-centre-recommendation('',$domainId,'','',$language)
 };
 
 declare function rf:print-page-links($numOfRows, $sortBy, $domainId, $recommendationLevel, $centre, $page as xs:int) {
@@ -239,12 +239,12 @@ declare function rf:print-centre-recommendation($requestedFormatId){
             order by (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2))) (:abbr:)
         return 
             if ($format-id eq $requestedFormatId)
-            then rf:print-recommendation-row($format, $centre, $domain)
+            then rf:print-recommendation-row($format, $centre, $domain,$language)
             else ()
 };
 
 declare function rf:print-centre-recommendation($requestedCentre, $requestedDomain as xs:string*,
-$requestedLevel, $sortBy) {
+$requestedLevel, $sortBy, $language) {
     
     for $r in $recommendation:centres
         let $centre := $r/header/filter/centre/text()
@@ -283,14 +283,14 @@ $requestedLevel, $sortBy) {
                 if (not(empty($requestedDomain)))
                 then
                     (rf:checkRequestedDomain($requestedDomain, $requestedLevel,
-                    $format, $centre, $domain))
+                    $format, $centre, $domain, $language))
                 else
                     (
                     if ($requestedLevel)
                     then
-                        (rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain))
+                        (rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain, $language))
                     else
-                        (rf:print-recommendation-row($format, $centre, $domain))
+                        (rf:print-recommendation-row($format, $centre, $domain, $language))
                     )
                 )
             else
@@ -301,21 +301,21 @@ $requestedLevel, $sortBy) {
             if (not(empty($requestedDomain)))
             then
                 (rf:checkRequestedDomain($requestedDomain, $requestedLevel,
-                $format, $centre, $domain))
+                $format, $centre, $domain, $language))
             else
                 (
                 if ($requestedLevel)
                 then
-                    (rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain))
+                    (rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain, $language))
                 else
-                    (rf:print-recommendation-row($format, $centre, $domain))
+                    (rf:print-recommendation-row($format, $centre, $domain,$language))
                 )
         )
 
 };
 
 declare function rf:checkRequestedDomain($requestedDomain, $requestedLevel,
-$format, $centre, $domain) {
+$format, $centre, $domain, $language) {
     
     if (functx:is-value-in-sequence(data($domain/@id),$requestedDomain))
     then
@@ -323,30 +323,31 @@ $format, $centre, $domain) {
         
         if ($requestedLevel)
         then
-            (rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain))
+            (rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain, $language))
         else
-            (rf:print-recommendation-row($format, $centre, $domain))
+            (rf:print-recommendation-row($format, $centre, $domain,$language))
         )
     else
         ()
 };
 
-declare function rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain) {
+declare function rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain, $language) {
     
     if ($requestedLevel eq $format/level/text())
     then
-        (rf:print-recommendation-row($format, $centre, $domain))
+        (rf:print-recommendation-row($format, $centre, $domain,$language))
     else
         ()
 
 };
 
-declare function rf:print-recommendation-row($format, $centre, $domain) {
-    rf:print-recommendation-row($format, $centre, $domain, fn:true(), fn:true())
+declare function rf:print-recommendation-row($format, $centre, $domain, $language) {
+    rf:print-recommendation-row($format, $centre, $domain, $language, fn:true(), fn:true())
 
 };
 
-declare function rf:print-recommendation-row($format, $centre, $domain, $includeFormat,$includeCentre) {
+declare function rf:print-recommendation-row($format, $centre, $domain, $language, 
+$includeFormat,$includeCentre) {
     
     let $format-id := data($format/@id)
     let $format-obj := format:get-format($format-id)
@@ -360,7 +361,7 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
         else rf:print-missing-format-link($format-id)
         
     let $level := $format/level/text()
-    let $format-comment := $format/comment
+    let $format-comment := rf:print-format-comments($format,$language)
     
     let $domainId := data($domain/@id)
     let $domainName := $domain/name/text()
@@ -433,6 +434,15 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $include
                     </td>
             }
         </tr>
+};
+
+
+declare function rf:print-format-comments($format,$language){
+    let $format-comment := $format/comment[@xml:lang=$language]
+    return
+        if ($format-comment) then $format-comment
+        else if ($format/comment[@xml:lang="en"]) then $format/comment[@xml:lang="en"]
+        else $format/comment[not(@xml:lang)]
 };
 
 declare function rf:print-missing-format-link($format-id){

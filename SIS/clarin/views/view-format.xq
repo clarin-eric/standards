@@ -15,6 +15,8 @@ let $domain := request:get-parameter('domain', '')
 let $recommendationType := request:get-parameter('type', '')
 let $sortBy := request:get-parameter('sortBy', '')
 
+let $language := fn:substring(request:get-header("Accept-Language"),0,3)
+
 let $format := vfm:get-format($id)
 let $format-name := $format/titleStmt/title/text()
 let $format-abbr := $format/titleStmt/abbr/text()
@@ -115,7 +117,8 @@ return
                         
                         
                         {vfm:print-recommendation-in-clarin($format,$id)}
-                        {vfm:print-recommendation-table($id,$domain,$centre,$recommendationType,$sortBy)}
+                        {vfm:print-recommendation-table($id,$domain,$centre,$recommendationType,
+                            $sortBy,$language)}
                         <div>
                             <span class="heading">Description: </span>
                             <span id="desctext{$id}" class="desctext">{$format/info[@type = "description"]}</span>
