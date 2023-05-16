@@ -5,6 +5,7 @@ import module namespace centre = "http://clarin.ids-mannheim.de/standards/centre
 import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
 import module namespace recommendation = "http://clarin.ids-mannheim.de/standards/recommendation-model"
 at "../model/recommendation-by-centre.xqm";
+import module namespace data = "http://clarin.ids-mannheim.de/standards/data" at "../model/data.xqm";
 
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";
@@ -165,8 +166,20 @@ declare function cm:get-centre-info($id,$lang) {
         if ($centre-info) 
         then $centre-info 
         else  cm:get-recommendations($id)/info[@xml:lang ="en"]
-        
+   
+   let $check-format-tag := cm:parse-format-tag($centre-info)
    return $centre-info     
+};
+
+declare function cm:parse-format-tag($centre-info){
+    let $login := data:open-access-to-database()    
+    let $check := 
+        for $format in $centre-info/p/format
+        return update replace $format with 
+        <a href="{app:link(concat("views/view-format.xq?id=", $format/text()))}">
+        {$format/text()}</a>
+     let $login := data:close-access-to-database()
+     return ""
 };
 
 declare function cm:print-curation($respStmt,$language){
