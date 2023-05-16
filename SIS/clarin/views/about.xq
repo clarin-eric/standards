@@ -30,7 +30,8 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                 as part of the Institute's activity as a <a href="https://clarin.eu/">CLARIN</a> B-Centre. Around 2020, the system was refreshed and 
                 extended with, among others, the section <a href="{app:link("views/recommended-formats-with-search.xq")}">"Format Recommendations"</a>. 
                 Much of its history can be seen in the <a href="https://github.com/clarin-eric/standards">versioning system</a> hosted at GitHub.</p>
-                </div>
+                <p>The SIS is listed as a knowledge base at Fairsharing: <a href="https://fairsharing.org/4705">https://fairsharing.org/4705</a></p>
+                                </div>
                 
                 <div id="faq">
                 <h2>Frequently Asked Questions</h2>
