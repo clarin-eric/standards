@@ -71,7 +71,6 @@ return
                             <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a> &gt;
                             <a href="{app:link(concat("views/view-format.xq?id=", $id))}">{$format-name}</a>
                         </div>
-                        
                         <div class="title">
                             <span id="nametext">{$format-name}</span>
                         </div>
