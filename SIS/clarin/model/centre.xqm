@@ -37,6 +37,8 @@ declare function centre:get-centre-by-research-infrastructure($ri as xs:string,
         if (contains($c-status,$status))
         then $c
         else ()
-        
-    
+};
+
+declare function centre:get-distinct-research-infrastructures(){
+    fn:distinct-values($centre:centres/nodeInfo/ri)
 };

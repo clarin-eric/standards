@@ -72,6 +72,22 @@ li{
     margin-left:2px;    
 }
 
+.ri{    
+    background-color:white;
+    border: 1px solid #DDDDDD; 
+    border-radius:3px;
+    width:65px; 
+    padding:2px; 
+    text-align:center;
+    color:grey;    
+    margin-left:2px;    
+}
+
+.ri-active{
+  background-color: darkred;
+  color:white;
+}
+
 .content{
     float:left;
     margin-left:5px;

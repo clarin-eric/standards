@@ -23,6 +23,7 @@ return
 	<head>
 		<title>{$topic-name}</title>
 		<link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
+		<script type="text/javascript" src="{app:resource("session.js", "js")}"/>"/>
 	</head>
 	<body>
 		<div id="all">

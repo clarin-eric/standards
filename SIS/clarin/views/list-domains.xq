@@ -17,6 +17,7 @@ import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-mod
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
+        <script type="text/javascript" src="{app:resource("session.js", "js")}"/>"/>
     </head>
     <body>
         <div id="all">

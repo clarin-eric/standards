@@ -34,6 +34,8 @@ return
             <link rel="stylesheet" type="text/css" href="{app:resource("tagclouds.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("tagcanvas.min.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("tagclouds.js","js")}"/>
+            
+            <script type="text/javascript" src="{app:resource("session.js", "js")}"/>"/>
         </head>
         <body onload="createTags();drawGraph('{lsm:get-spec-json($spec-group, $spec-relations)}','650','550','-90');">
             <!--body-->

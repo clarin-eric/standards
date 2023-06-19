@@ -17,6 +17,7 @@ return
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("d3.v2.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("forcegraph.js", "js")}"/>
+        <script type="text/javascript" src="{app:resource("session.js", "js")}"/>"/>
     </head>
     <body onload="drawGraph('{ff:create-graph-json()}','720','700','-100');">
         <div id="all">
