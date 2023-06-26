@@ -29,7 +29,10 @@ let $centre-link := data($centre/a/@href)
 let $centre-ri := $centre/nodeInfo/ri
 
 let $recommendation := cm:get-recommendations($id)
+
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
+let $riCookie :=  request:get-cookie-value("ri")
+let $languageHeader := if (not($riCookie eq "CLARIN")) then "de" else $languageHeader
 let $centre-info := cm:get-centre-info($id,$languageHeader)
 
 let $exportFilename := concat($id,"-recommendation.xml")

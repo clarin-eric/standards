@@ -21,6 +21,9 @@ let $export := request:get-parameter('export', '')
 let $page := request:get-parameter('page', 1) 
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 
+let $riCookie :=  request:get-cookie-value("ri")
+let $languageHeader := if (not($riCookie eq "CLARIN")) then "de" else $languageHeader
+
 let $domainParams := fn:string-join(for $d in $domainId return ("&amp;domain=",$d))
 
 let $rows :=
