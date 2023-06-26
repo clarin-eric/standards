@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function setSessionCookie(cookieName, cookieValue) {
     document.cookie = cookieName + '=' + cookieValue + ';path=/';
     setActiveRI(cookieValue);
+    location.reload();
 }
 
 // Get session cookie value

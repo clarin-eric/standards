@@ -21,11 +21,9 @@ declare function menu:setResearchInfrastructure() {
 
 declare function menu:view() {
     <div class="menu" style="margin-left:20px;">
-        <!--
         <table>
             <tr>{menu:setResearchInfrastructure()}</tr>
         </table>
-        -->
         <table style="font-size:13.5px; width:210px">
             <tr>
                 <td colspan="3" class="tdmenu">
