@@ -20,7 +20,7 @@ import module namespace index="http://clarin.ids-mannheim.de/standards/index" at
         <link rel="stylesheet" type="text/css" href="resources/css/tagclouds.css"/>
         <script type="text/javascript" src="resources/scripts/tagcanvas.min.js"/>
         <script type="text/javascript" src="resources/scripts/tagclouds.js"/>
-        <script type="text/javascript" src="resources/scripts/session.js"/>
+        <!--<script type="text/javascript" src="resources/scripts/session.js"/>-->
     </head>
     <body onload="createTags()">
         <div id="all">
