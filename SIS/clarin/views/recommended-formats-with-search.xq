@@ -52,7 +52,7 @@ else
             <link rel="stylesheet" type="text/css" href="{app:resource("autocomplete.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("multiselect-dropdown.js", "js")}"/>
-            <script type="text/javascript" src="{app:resource("session.js", "js")}"/>"/>
+            <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
         </head>
         <body onload="suggestion('searchId', '{rf:listSearchSuggestions($rows)}')">
             <div id="all">

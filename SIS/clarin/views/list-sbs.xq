@@ -16,7 +16,7 @@ import module namespace sbm = "http://clarin.ids-mannheim.de/standards/sb-module
         <title>Standard Bodies</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
-        <script type="text/javascript" src="{app:resource("session.js", "js")}"/>"/>
+        <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
     </head>
     <body>
         <div id="all">

@@ -14,7 +14,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
     <head>
         <title>About / F.A.Q.</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
-        <script type="text/javascript" src="{app:resource("session.js", "js")}"/>"/>
+        <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
     </head>
     <body>
         <div id="all">
