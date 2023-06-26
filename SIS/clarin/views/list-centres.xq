@@ -9,14 +9,9 @@ import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-mod
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 
 let $reset := request:get-parameter('reset', '')
-let $status := if ($reset) then
-    ()
-else
-    request:get-parameter('status', '')
-let $sortBy := if ($reset) then
-    ()
-else
-    request:get-parameter('sortBy', '')
+let $status := if ($reset) then () else request:get-parameter('status', '')
+let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
+let $riCookie :=  request:get-cookie-value("ri")
 
 return
     
@@ -72,7 +67,7 @@ return
                             </th>
                             <!-- <th class="header" style="width:20%;">Status</th> -->
                         </tr>
-                        {cm:list-centre($sortBy, $status)}
+                        {cm:list-centre($sortBy, $status, $riCookie)}
                     </table>
                 </div>
                 <div class="footer">{app:footer()}</div>
