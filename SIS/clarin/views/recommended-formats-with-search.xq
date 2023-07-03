@@ -9,7 +9,6 @@ import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommende
 import module namespace em = "http://clarin.ids-mannheim.de/standards/export" at "../modules/export.xql";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 
-
 let $searchItem := request:get-parameter('searchFormat', '')
 
 let $reset := request:get-parameter('resetButton', '')
@@ -21,13 +20,14 @@ let $export := request:get-parameter('export', '')
 let $page := request:get-parameter('page', 1) 
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 
-let $riCookie :=  request:get-cookie-value("ri")
-let $languageHeader := if (not($riCookie eq "CLARIN")) then "de" else $languageHeader
+let $ri :=  request:get-cookie-value("ri")
+let $languageHeader := if (not($ri eq "CLARIN")) then "de" else $languageHeader
 
 let $domainParams := fn:string-join(for $d in $domainId return ("&amp;domain=",$d))
 
 let $rows :=
-     rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, $sortBy,$languageHeader)
+     rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, 
+     $sortBy, $languageHeader, $ri)
 
 let $rows := 
     if ($searchItem)
@@ -36,7 +36,7 @@ let $rows :=
 
 let $recommendationTable := rf:paging($rows,$page)
 
-
+(: centre info is only included in the exported file if a centre is selected :)
 let $centreInfo := cm:get-centre-info($centre,$languageHeader)
 
 return

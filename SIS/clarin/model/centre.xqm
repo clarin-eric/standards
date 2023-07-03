@@ -29,6 +29,10 @@ let $flat :=
 return fn:distinct-values($flat)
 };
 
+declare function centre:get-centre-ids-by-ri($ri as xs:string){
+    data($centre:centres[nodeInfo/ri=$ri]/@id)
+};
+
 declare function centre:get-centre-by-research-infrastructure($ri as xs:string,
     $status as xs:string){
     for $c in $centre:centres[nodeInfo/ri=$ri]
