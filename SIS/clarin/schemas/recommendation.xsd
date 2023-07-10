@@ -253,6 +253,11 @@
             <xs:restriction base="xs:string"/>
         </xs:simpleType>
     </xs:element>
+    <xs:element name="formatRef">
+        <xs:complexType>
+            <xs:attribute name="ref" use="required" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="li" type="commentType"/>
     <xs:group name="textblock">
         <xs:choice>
@@ -278,6 +283,7 @@
             <xs:element ref="a" minOccurs="0"/>
             <xs:element ref="i" minOccurs="0"/>
             <xs:element ref="code" minOccurs="0"/>
+            <xs:element ref="formatRef" minOccurs="0"/>
         </xs:choice>
         <xs:attribute ref="xml:lang" use="optional" />
     </xs:complexType>
