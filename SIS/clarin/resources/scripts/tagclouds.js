@@ -1,4 +1,12 @@
-    
+document.addEventListener('DOMContentLoaded', function() {
+  window.onload=init();
+});
+
+function init(){
+    checkActiveRI();
+    createTags();
+}
+
 function createTags() {      
 try {
   TagCanvas.Start('myCanvas','tags',{
@@ -18,4 +26,3 @@ try {
   document.getElementById('myCanvasContainer').style.display = 'none';
 }
 };
-    

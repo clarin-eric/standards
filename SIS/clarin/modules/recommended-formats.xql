@@ -69,21 +69,22 @@ declare function rf:listSearchSuggestions($recommendations){
      return fn:string-join($union,",")
 };
 
-declare function rf:searchFormat($searchItem){
+(: @deprecated :)
+(:declare function rf:searchFormat($searchItem){
     let $category := map:get($rf:searchMap,$searchItem)
     return 
     if ($category eq "fid")
         then rf:print-centre-recommendation($searchItem)
     else if ($category eq "fabbr")
         then rf:searchFormatByAbbr($searchItem)
-   (: else if ($category eq "fname")
-        then rf:searchFormatByName($searchItem):)
+   (\: else if ($category eq "fname")
+        then rf:searchFormatByName($searchItem):\)
     else if ($category eq "cid") 
         then rf:print-centre-recommendation($searchItem,(),'','', $language)
     else if ($category eq "dname")
         then rf:searchFormatByDomain($searchItem)
     else ()
-};
+};:)
 
 declare function rf:searchFormat($searchItem, $rows){
     let $category := map:get($rf:searchMap,$searchItem)
@@ -106,7 +107,7 @@ declare function rf:searchFormat($searchItem, $rows){
     else ()
 };
 
-declare function rf:searchFormatByAbbr($abbr){
+(:declare function rf:searchFormatByAbbr($abbr){
     let $fid := data(format:get-format-by-abbr($abbr)/@id)
     let $fid := if ($fid) then $fid else concat("f",$abbr)
     return rf:print-centre-recommendation($fid)
@@ -121,7 +122,7 @@ declare function rf:searchFormatByName($name){
 declare function rf:searchFormatByDomain($searchItem){
     let $domainId := domain:get-id-by-name($searchItem)
     return rf:print-centre-recommendation('',$domainId,'','',$language)
-};
+};:)
 
 declare function rf:print-page-links($numOfRows, $sortBy, $domainId, $recommendationLevel, $centre, $page as xs:int) {
     let $numberOfPages := xs:integer(fn:ceiling($numOfRows div $rf:pageSize))
@@ -224,7 +225,7 @@ declare function rf:print-option($selected, $value, $label) {
                     value="{$value}">{$label}</option>
 };
 
-declare function rf:print-centre-recommendation($requestedFormatId){
+(:declare function rf:print-centre-recommendation($requestedFormatId){
     for $r in $recommendation:centres
         let $centre := $r/header/filter/centre/text()
         for $format in $r/formats/format
@@ -237,19 +238,25 @@ declare function rf:print-centre-recommendation($requestedFormatId){
                     dm:get-domain-by-name($domainName)
                 else ()
             
-            order by (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2))) (:abbr:)
+            order by (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2))) (\:abbr:\)
         return 
             if ($format-id eq $requestedFormatId)
             then rf:print-recommendation-row($format, $centre, $domain,$language)
             else ()
-};
+};:)
 
 declare function rf:print-centre-recommendation($requestedCentre, $requestedDomain as xs:string*,
-$requestedLevel, $sortBy, $language) {
-    
-    for $r in $recommendation:centres
+$requestedLevel, $sortBy, $language, $ri) {
+    let $ri-centres := centre:get-centre-ids-by-ri($ri)
+    let $ri-recommendations := $recommendation:centres[contains($ri-centres,header/filter/centre/text())]
+        (:for $r in $recommendation:centres
+            let $centre := $r/header/filter/centre/text()
+            return
+            if (contains($ri-centres,$centre))
+            then $r else ():)
+   
+   for $r in $ri-recommendations
         let $centre := $r/header/filter/centre/text()
-    
         for $format in $r/formats/format
             let $domainName := $format/domain/text()
             let $domain := 
@@ -263,9 +270,9 @@ $requestedLevel, $sortBy, $language) {
              let $format-info := $format/info/text()
                  
              order by
-                 if ($sortBy = 'centre') then
-                     $centre
-                 else
+                if ($sortBy = 'centre') then
+                   $centre
+                   else 
                      if ($sortBy = 'domain') then
                          $domainName
                      else
@@ -273,14 +280,33 @@ $requestedLevel, $sortBy, $language) {
                              $level
                          else
                              (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2))) (:abbr:)
-    
-    return
-        if ($requestedCentre)
-        then
-        (
-            if ($requestedCentre eq $centre)
+                             
+        return
+       
+            if ($requestedCentre)
             then
-                (
+            (
+                if ($requestedCentre eq $centre)
+                then
+                    (
+                    if (not(empty($requestedDomain)))
+                    then
+                        (rf:checkRequestedDomain($requestedDomain, $requestedLevel,
+                        $format, $centre, $domain, $language))
+                    else
+                        (
+                        if ($requestedLevel)
+                        then
+                            (rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain, $language))
+                        else
+                            (rf:print-recommendation-row($format, $centre, $domain, $language))
+                        )
+                    )
+                else
+                    ()
+             )
+            else
+            (
                 if (not(empty($requestedDomain)))
                 then
                     (rf:checkRequestedDomain($requestedDomain, $requestedLevel,
@@ -291,28 +317,9 @@ $requestedLevel, $sortBy, $language) {
                     then
                         (rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain, $language))
                     else
-                        (rf:print-recommendation-row($format, $centre, $domain, $language))
+                        (rf:print-recommendation-row($format, $centre, $domain,$language))
                     )
-                )
-            else
-                ()
-         )
-        else
-        (
-            if (not(empty($requestedDomain)))
-            then
-                (rf:checkRequestedDomain($requestedDomain, $requestedLevel,
-                $format, $centre, $domain, $language))
-            else
-                (
-                if ($requestedLevel)
-                then
-                    (rf:checkRequestedLevel($requestedLevel, $format, $centre, $domain, $language))
-                else
-                    (rf:print-recommendation-row($format, $centre, $domain,$language))
-                )
-        )
-
+            )
 };
 
 declare function rf:checkRequestedDomain($requestedDomain, $requestedLevel,
