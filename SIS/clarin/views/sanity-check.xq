@@ -49,8 +49,8 @@ return
                     below will open a pre-configured GitHub issue where you can suggest the content of the format description.</p>
                     <p>The list is also part of the sanity checking functionality: it may happen that some recommendation has a 
                     typo in the format ID, and then it will show up here.</p>
-                    <div>
-                        <ul class="column" style="padding:0px; margin-left:15px;">
+                    <div style="column-count: 4;">
+                        <ul style="margin: 0; padding-left:15px;">
                             {fm:list-missing-format-ids()}
                         </ul>
                     </div>
@@ -61,7 +61,7 @@ return
                        formats unused, and we may sometimes want to merely describe "unspecified" versions of formats, while their 
                        particular variants are used in recommendations (because finer granularity is nearly always better).</p>
                     <div>
-                        <ul class="column" style="padding:0px; margin-left:15px;">
+                        <ul style="margin: 0; padding-left:15px;">
                             {fm:list-orphan-format-ids()}
                         </ul>
                     </div>

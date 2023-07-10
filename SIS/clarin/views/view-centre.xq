@@ -31,8 +31,8 @@ let $centre-ri := $centre/nodeInfo/ri
 let $recommendation := cm:get-recommendations($id)
 
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
-let $riCookie :=  request:get-cookie-value("ri")
-let $languageHeader := if (not($riCookie eq "CLARIN")) then "de" else $languageHeader
+let $ri :=  request:get-cookie-value("ri")
+let $languageHeader := if (not($ri eq "CLARIN")) then "de" else $languageHeader
 let $centre-info := cm:get-centre-info($id,$languageHeader)
 
 let $exportFilename := concat($id,"-recommendation.xml")
@@ -40,7 +40,7 @@ let $respStmt := $recommendation/header/respStmt
 
 return
 if ($export)
-then (em:export-table($id, (), "", rf:print-centre-recommendation($id,(), "", $sortBy,$languageHeader),
+then (em:export-table($id, (), "", rf:print-centre-recommendation($id,(), "", $sortBy,$languageHeader,$ri),
             $exportFilename, "views/view-centre.xq", $centre-info))
 else if ($template)
 then (em:download-template($id,$exportFilename))
