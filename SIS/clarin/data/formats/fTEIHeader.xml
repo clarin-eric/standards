@@ -1,0 +1,22 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTEIHeader" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>TEI Header elements</title>
+    <abbr>TEIHeader</abbr>
+  </titleStmt>
+  
+  <keyword>metadata format</keyword>
+  
+  <info type="description">
+    <p>TEI headers may be used as separate documents to provide structured metadata descriptions. See <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html">chapter 2 of the TEI Guidelines</a> for more information.</p>
+    
+    <p>Please feel welcome to supply the description of this format file via GitHub: either as an
+      <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
+      request after forking or browsing the
+      <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
+  </info>
+  <mimeType>application/tei+xml</mimeType>
+  <fileExt>.tei</fileExt>
+  <fileExt>.xml</fileExt>
+  <formatFamily>TEI</formatFamily>
+</format>

@@ -72,12 +72,12 @@
       <format id="fCHAT">
          <domain>Audiovisual Annotation</domain>
          <level>discouraged</level>
-         <comment>Consider using <formatRef ref="fTEISpoken"/>instead.</comment>
+         <comment>Consider using <formatRef ref="fTEISpoken"/> instead.</comment>
       </format>
       <format id="fCHAT-XML">
          <domain>Audiovisual Annotation</domain>
          <level>discouraged</level>
-         <comment>Consider using <formatRef ref="fTEISpoken"/>instead.</comment>
+         <comment>Consider using <formatRef ref="fTEISpoken"/> instead.</comment>
       </format>
       <format id="fDOCX">
          <domain>Audiovisual Annotation</domain>
@@ -110,6 +110,7 @@
       <format id="fTEISpoken">
          <domain>Audiovisual Annotation</domain>
          <level>recommended</level>
+         <comment>See <a href="http://jtei.revues.org/142">format description</a>.</comment>
       </format>
       <format id="fTextPlain">
          <domain>Audiovisual Annotation</domain>
@@ -179,10 +180,6 @@
          <domain>Image Source Language Data</domain>
          <level>recommended</level>
       </format>
-      <format id="fHDF5">
-         <domain>Lexical Resource</domain>
-         <level>recommended</level>
-      </format>
       <format id="fCMDI">
          <domain>Metadata</domain>
          <level>recommended</level>
@@ -190,6 +187,7 @@
       <format id="fComa">
          <domain>Metadata</domain>
          <level>recommended</level>
+         <comment>For transcriptions of speech. Coma is the <a href="https://exmaralda.org/en/corpus-manager-en/">EXMARaLDA Corpus-Manager</a>.</comment>
       </format>
       <format id="fCSV">
          <domain>Metadata</domain>
@@ -207,7 +205,7 @@
          <domain>Metadata</domain>
          <level>discouraged</level>
       </format>
-      <format id="fTEI">
+      <format id="fTEIHeader">
          <domain>Metadata</domain>
          <level>recommended</level>
       </format>
@@ -215,25 +213,67 @@
          <domain>Metadata</domain>
          <level>acceptable</level>
       </format>
+      <format id="fKorAPXML">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fKorAPXML">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fKorAPXML">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fJSON">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+         <comment>regular and structured; consider using <formatRef ref="fJSONLD"/> with a schema</comment>
+      </format>
+      <format id="fJSON">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+         <comment>regular and structured; consider using <formatRef ref="fJSONLD"/> with a schema</comment>
+      </format>
+      <format id="fJSON">
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>regular and structured; consider using <formatRef ref="fJSONLD"/> with a schema</comment>
+      </format>
+      <format id="fCoNLL-U">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCoNLL-U">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
       <format id="fALTO">
          <domain>Text Annotation</domain>
          <level>acceptable</level>
+         <comment>Conversion to a suitable TEI-based format is expected, per
+            <a href="https://www.dfg.de/download/pdf/foerderung/grundlagen_dfg_foerderung/informationen_fachwissenschaften/geisteswissenschaften/standards_sprachkorpora.pdf">Empfehlungen des DFG-Fachkollegiums 104 “Sprachwissenschaften"</a>
+            (Oct. 2019)</comment>
       </format>
       <format id="fDTABf">
          <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fGrAF">
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
+         <level>acceptable</level>
       </format>
       <format id="fI5">
          <domain>Text Annotation</domain>
          <level>recommended</level>
+         <comment>See the
+            <a href="https://www.ids-mannheim.de/en/digspra/corpus-linguistics/projects/corpus-development/ids-text-model/">format description</a>.</comment>
+      </format>
+      <format id="fI5">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>See the
+            <a href="https://www.ids-mannheim.de/en/digspra/corpus-linguistics/projects/corpus-development/ids-text-model/">format description</a>.</comment>
       </format>
       <format id="fPAULA">
          <domain>Text Annotation</domain>
-         <level>recommended</level>
+         <level>acceptable</level>
       </format>
       <format id="fTEI">
          <domain>Text Annotation</domain>
@@ -246,12 +286,12 @@
       </format>
       <format id="fHTML">
          <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
-         <comment>without js etc.</comment>
+         <level>acceptable</level>
+         <comment>without js etc. and with generic markup</comment>
       </format>
       <format id="fTextPlain">
          <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
+         <level>acceptable</level>
          <comment>without markup</comment>
          <comment xml:lang="de">ohne Mark-up</comment>
       </format>
