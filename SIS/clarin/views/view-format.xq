@@ -53,9 +53,24 @@ return
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
                 <link rel="stylesheet" type="text/css" href="{app:resource("tagclouds.css", "css")}"/>
                 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dijit/themes/claro/claro.css" media="screen"/>
+                
                 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js"
                     data-dojo-config="async: true, parseOnLoad: true"/>
                 <script>require(["dojo/parser", "dijit/form/ComboBox"]);</script>
+                <script>
+                    var graphJson = '{vsm:get-spec-json($format)}';
+                    
+                    document.addEventListener('DOMContentLoaded', function() {{
+                    window.onload = init();
+                    }});
+                
+                     function init(){{
+                         checkActiveRI();
+                         createTags();
+                         drawGraph(graphJson,'500','300','-200');
+                     }}
+                </script>
+                
                 <script type="text/javascript" src="{app:resource("d3.v2.js", "js")}"/>
                 <script type="text/javascript" src="{app:resource("forcegraph.js", "js")}"/>
                 <script type="text/javascript" src="{app:resource("tagcanvas.min.js", "js")}"/>
@@ -65,7 +80,8 @@ return
                 <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
                 <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
             </head>
-            <body onload="createTags();drawGraph('{vsm:get-spec-json($format)}','500','300','-200')">
+            <body>
+            <!-- <body onload="createTags();drawGraph('{vsm:get-spec-json($format)}','500','300','-200')">-->
                 <div id="all">
                     <div class="logoheader"/>
                     {menu:view()}

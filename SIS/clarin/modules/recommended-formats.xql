@@ -457,10 +457,11 @@ declare function rf:print-format-comments($format,$language){
 declare function rf:parse-format-tag($comment){
     let $login := data:open-access-to-database()    
     let $check := 
-        for $format in $comment/format
+        for $format in $comment/formatRef
+        let $formatRef := data($format/@ref)
         return update replace $format with 
-        <a href="{app:link(concat("views/view-format.xq?id=", $format/text()))}">
-        {$format/text()}</a>
+        <a href="{app:link(concat("views/view-format.xq?id=", $formatRef))}">
+        {substring($formatRef,2)}</a>
      let $login := data:close-access-to-database()
      return ""
 };
