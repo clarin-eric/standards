@@ -1,12 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  window.onload=init();
-});
-
-function init(){
-    checkActiveRI();
-    createTags();
-}
-
 function createTags() {      
 try {
   TagCanvas.Start('myCanvas','tags',{

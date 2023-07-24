@@ -9,17 +9,33 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
 import module namespace ff = "http://clarin.ids-mannheim.de/standards/format-family" at "../modules/format-family.xql";
 
 let $sortBy := request:get-parameter('sortBy', '')
+let $code := "
+
+"
 return
 
 <html>
     <head>
         <title>Format Families</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
+        <script>
+            var graphJson = '{ff:create-graph-json()}';
+            
+            document.addEventListener('DOMContentLoaded', function() {{
+                window.onload = init();
+            }});
+        
+             function init(){{
+                 checkActiveRI();
+                 drawGraph(graphJson,'720','700','-100');
+             }}
+           
+        </script>
         <script type="text/javascript" src="{app:resource("d3.v2.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("forcegraph.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
     </head>
-    <body onload="drawGraph('{ff:create-graph-json()}','720','700','-100');">
+    <body>
         <div id="all">
             <div class="logoheader"/>
             {menu:view()}

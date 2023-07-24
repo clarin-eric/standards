@@ -17,6 +17,16 @@ import module namespace index="http://clarin.ids-mannheim.de/standards/index" at
         <title>CLARIN Standards Information System</title>        
         <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>    
         <link rel="stylesheet" type="text/css" href="resources/css/tagclouds.css"/>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {{
+            window.onload=init();
+          }});
+          
+          function init(){{
+              checkActiveRI();
+              createTags();
+          }}
+        </script>
         <script type="text/javascript" src="resources/scripts/tagcanvas.min.js"/>
         <script type="text/javascript" src="resources/scripts/tagclouds.js"/>
         <script type="text/javascript" src="resources/scripts/session.js"/>
