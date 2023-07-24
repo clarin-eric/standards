@@ -72,10 +72,12 @@
       <format id="fCHAT">
          <domain>Audiovisual Annotation</domain>
          <level>discouraged</level>
+         <comment>Consider using <formatRef ref="fTEISpoken"/>instead.</comment>
       </format>
       <format id="fCHAT-XML">
          <domain>Audiovisual Annotation</domain>
          <level>discouraged</level>
+         <comment>Consider using <formatRef ref="fTEISpoken"/>instead.</comment>
       </format>
       <format id="fDOCX">
          <domain>Audiovisual Annotation</domain>
