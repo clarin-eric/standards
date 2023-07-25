@@ -40,8 +40,8 @@ let $respStmt := $recommendation/header/respStmt
 
 return
 if ($export)
-then (em:export-table($id, (), "", rf:print-centre-recommendation($id,(), "", $sortBy,$languageHeader,$ri),
-            $exportFilename, "views/view-centre.xq", $centre-info))
+then (em:export-table($id, (), "", rf:print-centre-recommendation($id,(), "", $sortBy,"*",$ri),
+            $exportFilename, "views/view-centre.xq", cm:get-recommendations($id)/info))
 else if ($template)
 then (em:download-template($id,$exportFilename))
 else 

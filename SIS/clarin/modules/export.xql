@@ -31,6 +31,7 @@ declare function em:export-table($centre, $domainId, $requestedLevel, $nodes, $f
         
     let $rows :=
         for $row in $nodes
+        let $comment := $row/td[5]//comment
         return
             <format id="{$row/td[1]/@id}">
                 {
@@ -46,7 +47,8 @@ declare function em:export-table($centre, $domainId, $requestedLevel, $nodes, $f
                     if ($requestedLevel eq "") then
                         (<level>{$row/td[4]/text()}</level>)
                     else
-                        ()
+                        (),
+                    if ($comment) then $comment else ()
                 }
             
             </format>

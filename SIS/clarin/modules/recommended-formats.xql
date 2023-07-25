@@ -447,7 +447,9 @@ $includeFormat,$includeCentre) {
 
 
 declare function rf:print-format-comments($format,$language){
-    let $format-comment := $format/comment[@xml:lang=$language]
+    let $format-comment := 
+        if ($language eq "*") then $format/comment
+        else $format/comment[@xml:lang=$language]
     return
         if ($format-comment) then $format-comment
         else if ($format/comment[@xml:lang="en"]) then $format/comment[@xml:lang="en"]

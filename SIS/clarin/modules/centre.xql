@@ -137,12 +137,10 @@ declare function cm:get-centre-info($id,$lang) {
         then cm:get-recommendations($id)/info[@xml:lang =$lang]
         else ()
     
-    let $centre-info := 
+   return
         if ($centre-info) 
         then $centre-info 
-        else cm:get-default-info($id)
-   
-   return $centre-info     
+        else cm:get-default-info($id)        
 };
 
 declare function cm:get-default-info($id){
