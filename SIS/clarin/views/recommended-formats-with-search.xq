@@ -53,8 +53,21 @@ else
             <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("multiselect-dropdown.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
+            <script>
+            var searchSuggestion = '{rf:listSearchSuggestions($rows)}';
+            
+            document.addEventListener('DOMContentLoaded', function() {{
+                window.onload = init();
+            }});
+        
+             function init(){{
+                 checkActiveRI();
+                 suggestion('searchId', searchSuggestion)
+             }}
+           
+        </script>
         </head>
-        <body onload="suggestion('searchId', '{rf:listSearchSuggestions($rows)}')">
+        <body>
             <div id="all">
                 <div class="logoheader"/>
                 {menu:view()}
