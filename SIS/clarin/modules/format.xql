@@ -23,10 +23,30 @@ declare function fm:count-defined-formats() {
     return count($formats)
 };
 
+declare function fm:list-search-suggestion(){
+    let $formats := $format:formats
+    let $format-name := $formats/titleStmt/title/text()
+    let $format-abbr := $formats/titleStmt/abbr/text()
+    (:let $mime-types := distinct-values($formats/mimeType)
+    let $file-exts := distinct-values($formats/fileExt):)
+        
+    let $union := 
+        for $item in ($format-name,$format-abbr)
+        (:,$mime-types,$file-exts):) 
+        order by fn:lower-case($item) 
+        return $item 
+
+    return fn:string-join($union,",")
+    
+};
+
 (: Generate the list of formats :)
-declare function fm:list-formats($keyword) {
-    let $formats := 
-        if ($keyword) then $format:formats[keyword=$keyword]
+declare function fm:list-formats($keyword,$searchItem) {
+    let $formats :=
+        if ($searchItem) 
+            then $format:formats[titleStmt/abbr/text()=$searchItem or 
+                titleStmt/title/text()=$searchItem]
+        else if ($keyword) then $format:formats[keyword=$keyword]
         else $format:formats
 
     for $format in $formats

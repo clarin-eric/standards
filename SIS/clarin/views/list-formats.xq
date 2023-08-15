@@ -10,6 +10,7 @@ import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommende
 
 let $reset := request:get-parameter('resetButton', '')
 let $keyword := if ($reset) then () else request:get-parameter('keyword', '')
+let $searchItem := if ($reset) then () else request:get-parameter('searchFormat', '')
 
 return
 (: 
@@ -20,9 +21,24 @@ return
     <head>
         <title>Data Deposition Formats</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
+        <link rel="stylesheet" type="text/css" href="{app:resource("autocomplete.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
+        <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
+        <script>
+            var searchSuggestion = '{fm:list-search-suggestion()}';
+            
+            document.addEventListener('DOMContentLoaded', function() {{
+                window.onload = init();
+            }});
+        
+             function init(){{
+                 checkActiveRI();
+                 suggestion('searchId', searchSuggestion)
+             }}
+           
+        </script>
     </head>
     <body>
         <div id="all">
@@ -72,34 +88,51 @@ return
                     <p>By clicking on the icon next to the format name, you can copy the format ID, which may be useful for editing or adding 
                        centre recommendations.</p>
                     
-                       <form method="get" action="{app:link("views/list-formats.xq#defined")}">
+                       <form id="filter" method="get" action="{app:link("views/list-formats.xq#filter")}"
+                            style="border: solid 1px #c0c0c0; border-radius:4px;padding:3px;
+                            background-color:#c3d3e3;width:500px;">
                             <table style="margin:0;">
                                 <tr>
-                                    <td><span class="heading3">Keyword</span>:
-                                        <select name="keyword" class="inputSelect" style="width:185px;">
+                                    <td><!--<span class="heading3">Keyword</span>-->
+                                        <select name="keyword" class="inputSelect" 
+                                        style="width:310px;height:25px;background-color:white;">
                                             {rf:print-option("select", "", "Select keyword ...")}
                                             {rf:print-keywords($keyword)}
                                         </select>
                                     </td>
                                     <td>
-                                        <input name="searchButton" class="button"
-                                        style="margin:0;height:25px;" type="submit" value="Search"/>
+                                        <input name="filterButton" class="button"
+                                        style="margin:0;height:25px;" type="submit" value="Filter"/>
                                     </td>
                                     <td>
                                         <input name="resetButton" class="button"
                                         style="margin-bottom:5px;height:25px;" type="submit" value="Reset"/>
                                     </td>
                                 </tr>
+                                <tr>
+                                <td class ="autocomplete">
+                                         <input id="searchId" name="searchFormat" 
+                                         style="width:300px;padding-left:5px" 
+                                        class="inputText" type="text" 
+                                        placeholder="Search format ..." value="{$searchItem}"/>
+                                </td>
+                                <td>
+                                    <input name="searchButton" class="button"
+                                    style="margin:0;height:25px;vertical-align:top;" type="submit" value="Search"/>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
                             </table>
                        </form>
                 </div>
                 <table>
                     <tr>
-                        <th style="width:60%">Format</th>
+                        <th style="width:60%;min-width:400px">Format</th>
                         <th style="width:20%">MIME types</th>
                         <th style="width:20%">File Extensions</th>
                     </tr>
-                    {fm:list-formats($keyword)}
+                    {fm:list-formats($keyword,$searchItem)}
                 </table>
             </div>
             <div
