@@ -457,14 +457,15 @@ declare function rf:print-format-comments($format,$language){
 };
 
 declare function rf:parse-format-tag($comment){
-    let $login := data:open-access-to-database()    
+    let $recommendation-path := "/db/apps/clarin/data/recommendations"
+    let $login := xmldb:login($recommendation-path, 'admin', $data:admin-pwd)    
     let $check := 
         for $format in $comment/formatRef
         let $formatRef := data($format/@ref)
         return update replace $format with 
         <a href="{app:link(concat("views/view-format.xq?id=", $formatRef))}">
         {substring($formatRef,2)}</a>
-     let $login := data:close-access-to-database()
+     let $login := xmldb:login($recommendation-path, 'guest', 'guest')
      return ""
 };
 
@@ -479,6 +480,3 @@ declare function rf:print-missing-format-link($format-id){
         </span>
     </span>)
 };
-
-
-
