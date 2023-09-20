@@ -62,9 +62,11 @@
                 <xs:element ref="centre" minOccurs="0"/>
                 <xs:element ref="domain" minOccurs="0"/>
                 <xs:element ref="level" minOccurs="0"/>
+                <xs:element ref="search" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    <xs:element name="search" type="xs:string"/>
     <xs:element name="centre" type="xs:string"/>
     <xs:element name="domain">
         <xs:simpleType>
