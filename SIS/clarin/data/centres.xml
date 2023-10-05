@@ -62,7 +62,7 @@
     <name>CLARIN-IS</name>
     <a href="https://centres.clarin.eu/centre/64"/>
     <nodeInfo>
-      <ri status="C-centre aiming-for-B">CLARIN</ri>
+      <ri status="B-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="CLARIN-LT" deposition="1">
