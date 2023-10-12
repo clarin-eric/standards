@@ -35,6 +35,10 @@ return
                     <p>This page lists centres encoded in the SIS, together with their status. For CLARIN centres, B-centres and 
                     centres with the status 'aiming for B' should in most cases be expected to maintain their format 
                     recommendations in the SIS.</p>
+                    <p>The life of a centre in a research infrastructure can be a dynamic affair, while the list below always 
+                    only holds a snapshot of the state of the network at a certain (usually fairly random) date. If you see 
+                    some omissions or errors in the list below, please kindly 
+                    <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">let us know</a>.</p>
                     </div>
                     <div>
                         <form id="filterCentre" method="get" action="">

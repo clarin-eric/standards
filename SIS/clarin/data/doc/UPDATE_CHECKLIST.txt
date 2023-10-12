@@ -1,0 +1,8 @@
+October 2023
+
+This is to help reduce the number of faulty upgrades of the online version of the SIS:
+
+* if there has been a change in the file name, remember to remove the old file by hand (you're overrwriting, so the old stuff remains until it's deleted
+* reset the base URL from localhost to production in ....
+* ...
+* ALWAYS check afterwards, by clicking at least a few pages maybe perform a simple search
