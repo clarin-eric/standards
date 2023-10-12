@@ -28,6 +28,18 @@ return
         <head>
             <title>Standards and Specifications</title>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
+            
+            <script>
+                  document.addEventListener('DOMContentLoaded', function() {{
+                  window.onload=init();
+                }});
+                
+                function init(){{
+                    checkActiveRI();
+                    createTags();
+                    drawGraph('{lsm:get-spec-json($spec-group, $spec-relations)}','650','550','-90');
+                }}
+            </script>
             <script type="text/javascript" src="{app:resource("d3.v2.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("forcegraph.js", "js")}"/>
             
@@ -37,7 +49,7 @@ return
             
             <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
         </head>
-        <body onload="createTags();drawGraph('{lsm:get-spec-json($spec-group, $spec-relations)}','650','550','-90');">
+        <body>
             <!--body-->
             <div id="all">
                 <div class="logoheader"/>
