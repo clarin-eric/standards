@@ -34,7 +34,7 @@
     <name>Center of Estonian Language Resources</name>
     <a href="https://centres.clarin.eu/centre/15"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="C-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="CEDIFOR" deposition="1">
@@ -59,7 +59,7 @@
     </nodeInfo>
   </centre>
   <centre id="CLARIN-IS" deposition="1">
-    <name>CLARIN-IS</name>
+    <name>CLARIN-IS (Árni Magnússon Institute for Icelandic Studies)</name>
     <a href="https://centres.clarin.eu/centre/64"/>
     <nodeInfo>
       <ri status="B-centre">CLARIN</ri>
@@ -111,21 +111,21 @@
     <name>Centre for Language and Speech Technology</name>
     <a href="https://centres.clarin.eu/centre/40"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="c-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="COCOON" deposition="1">
     <name>Collections de corpus oraux numeriques </name>
     <a href="https://centres.clarin.eu/centre/33"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="C-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="CNC">
     <name>Czech National Corpus</name>
     <a href="https://centres.clarin.eu/centre/51"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="K-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="DH-REP">
@@ -140,7 +140,7 @@
     <name>Data Archiving and Networked Services</name>
     <a href="https://centres.clarin.eu/centre/20"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="C-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="EKUT" deposition="1">
@@ -162,7 +162,7 @@
     <name>Forschungzentrum Jülich</name>
     <a href="https://centres.clarin.eu/centre/7"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="E-centre">CLARIN</ri>
       <ri status="Operations">Text+</ri>
     </nodeInfo>
   </centre>
@@ -177,7 +177,7 @@
     <name>Gesellschaft für wissenschaftliche Datenverarbeitung Göttingen</name>
     <a href="https://centres.clarin.eu/centre/8"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="E-centre">CLARIN</ri>
       <ri status="Operations">Text+</ri>
     </nodeInfo>
   </centre>
@@ -192,7 +192,7 @@
     <name>Huygens ING</name>
     <a href="https://centres.clarin.eu/centre/21"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="C-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="IMS" deposition="1">
@@ -213,7 +213,7 @@
     <name>Language Archive Cologne</name>
     <a href="https://centres.clarin.eu/centre/47"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="C-centre">CLARIN</ri>
       <ri status="Collections, Lexical Resources">Text+</ri>
     </nodeInfo>
   </centre>
@@ -221,7 +221,7 @@
     <name>Leibniz-Institut für Deutsche Sprache</name>
     <a href="https://centres.clarin.eu/centre/11"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="C-centre">CLARIN</ri>
       <ri status="Collections, Lexical Resources, Operations">Text+</ri>
     </nodeInfo>
   </centre>
@@ -243,7 +243,7 @@
     <name>Max Planck Computing and Data Facility</name>
     <a href="https://centres.clarin.eu/centre/12"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="E-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="MMSHs-Phonothèque">
@@ -299,7 +299,7 @@
     <name>PORTULAN CLARIN Research Infrastructure for the Science and Technology of Language</name>
     <a href="https://centres.clarin.eu/centre/50"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="B-centre,K-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="SADiLaR" deposition="1">
@@ -313,7 +313,7 @@
     <name>Språkbanken</name>
     <a href="https://centres.clarin.eu/centre/37"/>
     <nodeInfo>
-      <ri status="B-centre">CLARIN</ri>
+      <ri status="C-centre">CLARIN</ri>
     </nodeInfo>
   </centre>
   <centre id="TGrep">
