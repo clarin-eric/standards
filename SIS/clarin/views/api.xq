@@ -52,43 +52,51 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                     <p><span class="heading">Query parameters:</span>
                     </p>
                     <table>
-                        <tr>
+                        <tr style="vertical-align:top">
                             <th>Name</th>
                             <th>Required</th>
                             <th style="width:50%;">Description</th>
                             <th>Example</th>
                         </tr>
-                        <tr>
-                            <td>centre</td>
-                            <td>no</td>
-                            <td>a centre identifier, see <a href="{app:link("views/list-centre.xq")}">the centre page</a></td>
-                            <td>IDS</td>
+                        <tr style="vertical-align:top">
+                            <td class="row">centre</td>
+                            <td class="row">no</td>
+                            <td class="row">a centre identifier, see <a href="{app:link("views/list-centre.xq")}">the centre page</a></td>
+                            <td class="row">IDS</td>
                         </tr>
-                        <tr>
-                            <td>domain</td>
-                            <td>no</td>
-                            <td>a domain identifier, see <a href="#retrieving-domains">Retrieving domains</a></td>
-                            <td>1</td>
+                        <tr style="vertical-align:top">
+                            <td class="row">domain</td>
+                            <td class="row">no</td>
+                            <td class="row">a domain identifier, see <a href="#retrieving-domains">Retrieving domains</a></td>
+                            <td class="row">1</td>
                         </tr>
-                        <tr>
-                            <td>level</td>
-                            <td>no</td>
-                            <td>a recommendation level: <code>recommended</code>, <code>acceptable</code>
+                        <tr style="vertical-align:top">
+                            <td class="row">level</td>
+                            <td class="row">no</td>
+                            <td class="row">a recommendation level: <code>recommended</code>, <code>acceptable</code>
                                 or <code>discouraged</code></td>
-                            <td>recommended</td>
+                            <td class="row">recommended</td>
                         </tr>
-                        <tr>
-                            <td>export</td>
-                            <td>yes</td>
-                            <td>determine if the export should be done</td>
-                            <td>yes</td>
+                        <tr style="vertical-align:top">
+                            <td class="row">export</td>
+                            <td class="row">yes</td>
+                            <td class="row">determines if the export should be done</td>
+                            <td class="row">yes</td>
+                        </tr>
+                        <tr style="vertical-align:top">
+                            <td class="row">ri</td>
+                            <td class="row">no</td>
+                            <td class="row">filter the recommendations by research infrastructure. The value must be URL-encoded. 
+                            Possible values: Text+, CLARIN (default)</td>
+                            <td class="row">Text%2B</td>
                         </tr>
                     </table>
                     
                     <p><span class="heading">Example using curl:</span></p>
                     <p>
                         <code>
-                            curl 'https://clarin.ids-mannheim.de/standards/rest/views/recommended-formats-with-search.xq?centre=IDS&amp;domain=1&amp;level=recommended&amp;export=yes'
+                            curl 'https://clarin.ids-mannheim.de/standards/rest/views/recommended-formats-with-search.xq?
+                            centre=IDS&amp;domain=1&amp;level=recommended&amp;ri=Text%2B&amp;export=yes'
                         </code>
                     </p>
                 </div>

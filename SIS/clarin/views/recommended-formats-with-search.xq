@@ -20,7 +20,9 @@ let $export := request:get-parameter('export', '')
 let $page := request:get-parameter('page', 1) 
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 
-let $ri :=  request:get-cookie-value("ri")
+let $request-ri := request:get-parameter('ri', '')
+let $ri :=  if ($request-ri) then $request-ri else request:get-cookie-value("ri")
+let $ri := if (empty($ri)) then "CLARIN" else $ri
 let $languageHeader := if (not($ri eq "CLARIN")) then "de" else $languageHeader
 
 let $domainParams := fn:string-join(for $d in $domainId return ("&amp;domain=",$d))
