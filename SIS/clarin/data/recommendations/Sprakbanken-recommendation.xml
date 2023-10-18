@@ -5,8 +5,44 @@
         <filter>
             <centre>Sprakbanken</centre>
         </filter>
+        <respStmt>
+         <curator>Leif-Jöran Olsson</curator>
+         <github>https://github.com/ljo</github>
+         <reviewDate>2023-10-17</reviewDate>
+      </respStmt>
     </header>
-    <formats><!--
+    <info xml:lang="en">
+      <p>The following measures are taken to enhance the chance of future interpretability of the
+         data.</p>
+      <p>The number of accepted file formats is small and well documented to make future conversions
+         to other formats more feasible. As much as possible, open (non-proprietary) file formats
+         are used. For textual resources, XML formats are used whenever possible, to ensure future
+         interpretation of the files even if the tool that was used to create them no longer exists.
+         The Språkbanken Text repository recommends to use formats listed in the CLARIN
+         <a href="https://standards.clarin.eu/sis/">Standards Information System</a>.</p>
+      <p>The Språkbanken Text participation in relevant networks like e.g.
+         <a href="https://www.clarin.eu/content/overview-clarin-centres">CLARIN</a> 
+         enables steady information about recent developments in file formats and encodings. Plans 
+         to migrate or convert files will be developed if new standards arise; all relevant features
+         of the old formats will be preserved employing reliable procedures.</p>
+      <p>For more information, see the <a href="https://repos.spraakbanken.gu.se/xmlui/page/about">full 
+      	 Språkbanken Text repository description</a>.</p>
+      <p>
+         <a href="https://repos.spraakbanken.gu.se/xmlui/page/about">Språkbanken Text Clarin repository</a>
+         gives further information on policies.</p>
+      <p>Data will not necessarily be stored in the delivered formats. They might be converted to more appropriate formats for long-term preservation.</p>
+      <p>Data that are not delivered in the accepted formats usually require higher curation measures. By a consultation you can receive an estimation on when the capacity for depositing the not appropriate formats.</p>
+      <p>Plain text and XML files will normally only be accepted in Unicode character encoding, including UTF-8.</p>
+      <p>As a general guideline, Språkbanken Text believes that the file formats best suited for long-term
+         sustainability and accessibility:</p>
+      <ul>
+         <li>Are frequently used</li>
+         <li>Have open specifications</li>
+         <li>Are independent of specific software, developers or vendors</li>
+      </ul>
+    </info>
+    <formats>
+    <!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 
             *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
@@ -20,5 +56,226 @@
                 <level>recommended</level>
             </format> 
         -->
+       <format id="fCHAT">
+         <domain>Audiovisual Annotation</domain>
+         <level>discouraged</level>
+         <comment>Consider using <formatRef ref="fTEISpoken"/> instead.</comment>
+      </format>
+      <format id="fCHAT-XML">
+         <domain>Audiovisual Annotation</domain>
+         <level>discouraged</level>
+         <comment>Consider using <formatRef ref="fTEISpoken"/> instead.</comment>
+      </format>
+      <format id="fDOCX">
+         <domain>Audiovisual Annotation</domain>
+         <level>discouraged</level>
+      </format>
+      <format id="fELAN">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPraat">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fTEISpoken">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+         <comment>See <a href="http://jtei.revues.org/142">format description</a>.</comment>
+      </format>
+      <format id="fTextPlain">
+         <domain>Audiovisual Annotation</domain>
+         <level>discouraged</level>
+      </format>
+       <format id="fAIFF">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fFLAC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fM2J">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fMP3">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>discouraged</level>
+         <comment>lossy formats should be avoided if possible</comment>
+      </format>
+      <format id="fMP4">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fMPEG-4-AVC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>25 fps, 1920×1080, constant bit rate </comment>
+      </format>
+      <format id="fMPEG1">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fMPEG2">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>PCM-WAV, 48 kHz, 16 bit</comment>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>PCM-WAV with non-recommended parameters (not 48 kHz, 16 bit)</comment>
+      </format>
+      <format id="fODT">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fMarkdown">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPDF">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPDFA-1">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPDFA-2">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPDFA-3">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fTEI">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTextPlain">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fXML">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fSVG">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTIFF">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPDFA">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCMDI">
+         <domain>Metadata</domain>
+         <level>recommended</level><format id="fJSON">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+         <comment>regular and structured; consider using <formatRef ref="fJSONLD"/> with a schema</comment>
+      </format>
+      <format id="fJSON">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+         <comment>regular and structured; consider using <formatRef ref="fJSONLD"/> with a schema</comment>
+      </format>
+      <format id="fJSON">
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>regular and structured; consider using <formatRef ref="fJSONLD"/> with a schema</comment>
+      </format>
+      <format id="fCoNLL-U">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCoNLL-U">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fALTO">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+         <comment>Conversion to a suitable TEI-based format is expected.</comment>
+      </format>
+      <format id="fTEI">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>with ODD or other schema</comment>
+      </format>
+      <format id="fTextPlain">
+         <domain>Text Annotation</domain>
+         <level>discouraged</level>
+      </format>
+      <format id="fHTML">
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>without js etc. and with generic markup</comment>
+      </format>
+      <format id="fTextPlain">
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>without markup</comment>
+      </format>
+      </format>
+      <format id="fCSV">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fDC-XML">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fDOCX">
+         <domain>Metadata</domain>
+         <level>discouraged</level>
+      </format>
+      <format id="fTEIHeader">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fXML">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fQGIS.qgs">
+         <domain>Geodata</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fShapefile">
+         <domain>Geodata</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fGeoJSON">
+         <domain>Geodata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fGeoTIFF">
+         <domain>Geodata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fGML">
+         <domain>Geodata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fKML">
+         <domain>Geodata</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fXSD">
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
     </formats>
 </recommendation>
