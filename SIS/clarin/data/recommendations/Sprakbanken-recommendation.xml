@@ -181,7 +181,9 @@
       </format>
       <format id="fCMDI">
          <domain>Metadata</domain>
-         <level>recommended</level><format id="fJSON">
+         <level>recommended</level>
+      </format>
+         <format id="fJSON">
          <domain>Metadata</domain>
          <level>acceptable</level>
          <comment>regular and structured; consider using <formatRef ref="fJSONLD"/> with a schema</comment>
@@ -227,7 +229,6 @@
          <domain>Textual Source Language Data</domain>
          <level>acceptable</level>
          <comment>without markup</comment>
-      </format>
       </format>
       <format id="fCSV">
          <domain>Metadata</domain>
