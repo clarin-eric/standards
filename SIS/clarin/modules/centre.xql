@@ -156,7 +156,7 @@ declare function cm:parse-format-tag($centre-info){
     let $check := 
         for $format in $centre-info/p/format
         return update replace $format with 
-        <a href="{app:link(concat("views/view-format.xq?id=", $format/text()))}">
+        <a href="{concat("/>//views/view-format.xq?id=", $format/text())}">
         {$format/text()}</a>
      let $login := data:close-access-to-database()
      return ""

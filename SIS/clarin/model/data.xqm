@@ -33,14 +33,14 @@ declare function data:get-all-ids(){
 (: Open connection to specification or review data :)
 declare function data:open-access-to-database(){
     if (session:get-attribute("user") = 'webadmin' )
-    then xmldb:login($data:spec-path, 'admin', $data:admin-pwd)
+    then xmldb:login($data:path, 'admin', $data:admin-pwd)
     else xmldb:login($data:review-path, 'admin', $data:admin-pwd)
 };
 
 (: Close connection :)
 declare function data:close-access-to-database(){
     if (session:get-attribute("user") = 'webadmin' )
-    then xmldb:login($data:spec-path, 'guest', 'guest')
+    then xmldb:login($data:path, 'guest', 'guest')
     else xmldb:login($data:review-path, 'guest', 'guest')    
 };
 
