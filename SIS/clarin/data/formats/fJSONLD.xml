@@ -1,0 +1,22 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fJSONLD" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>JavaScript Object Notation for Linked Data</title>
+    <abbr>JSON-LD</abbr>
+  </titleStmt>
+  <keyword>data format</keyword>
+<!--  <extId type="LOC">fdd000381</extId>
+  <extId type="PRONOM">fmt/817</extId>
+  <extId type="Wikidata">Q2063</extId>
+-->  <info type="description">
+    <p>"JSON-LD (JavaScript Object Notation for Linked Data) is a method of encoding linked data using JSON." (Wikipedia)</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/JSON-LD">Wikipedia entry</a></li>
+    </ul>
+  </info>
+  <!--<relation target="" type="isDefinedBy">https://www.rfc-editor.org/rfc/rfc8259.txt</relation>   -->
+  <mimeType>application/ld+json</mimeType>
+  <fileExt>.jsonld</fileExt>
+  <formatFamily>Markup.Full</formatFamily> <!--next to JSON?-->
+</format>
