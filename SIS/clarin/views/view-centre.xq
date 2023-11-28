@@ -37,6 +37,7 @@ let $centre-info := cm:get-centre-info($id,$languageHeader)
 
 let $exportFilename := concat($id,"-recommendation.xml")
 let $respStmt := $recommendation/header/respStmt
+let $domains := fn:distinct-values($recommendation/formats/format/domain/text())
 
 return
 if ($export)
@@ -101,10 +102,29 @@ else
                             }
                             
                             {
+                                if (count($domains)>0)
+                                then(
+                                    <div>
+                                        <span class="heading">Domains of Recommendations: </span>
+                                        <div style="column-count:2">
+                                            <ul style="margin: 0; padding-left:15px;">
+                                                {
+                                                    for $d in $domains
+                                                    return <li>{$d}</li>
+                                                }
+                                                </ul>
+                                        </div>
+                                    </div>
+                                    
+                                )
+                                else ()
+                            }
+                            
+                            {
                                 if (count($recommendation/formats/format)>0)
                                 then (
                                     <div>
-                                        <span class="heading" id="recommendationTable">Recommendations: </span>
+                                        <span class="heading" id="recommendationTable">Format Recommendations: </span>
                                        
                                         <form method="get" action="" style="float: right;">
                                               <input name="export" class="button"
