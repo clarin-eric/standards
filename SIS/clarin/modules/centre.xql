@@ -166,19 +166,22 @@ declare function cm:print-curation($respStmt,$language){
     if ($respStmt)
     then (
         <div>
-            <span class="heading">Curator: </span>
-            <span>{$respStmt/curator/text()}</span>
-            {if (empty($respStmt/github/text()))
-              then ()
-              else (
-              " (",<a href="{$respStmt/github/text()}">github</a>,")")
-            }
+            <span class="heading">Curation: </span>
         </div>,
-        <div>
-            <span class="heading">Review date: </span>
-            <span>{format-date($respStmt/reviewDate/text(), 
-        "[MNn] [D], [Y]", $language, (), () )}</span>
-        </div>
+        for $rs in $respStmt
+        return (
+            <ul>
+                <li><span>{$rs/curator/text()}</span>
+                {if (empty($rs/github/text()))
+                  then ()
+                  else (
+                  " (",<a href="{$rs/github/text()}">github</a>,")")
+                }
+                <span> at {format-date($rs/reviewDate/text(), 
+            "[MNn] [D], [Y]", $language, (), () )}</span>
+                </li>
+            </ul>
+        )
     )
     else (
         <div>
