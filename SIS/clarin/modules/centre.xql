@@ -11,7 +11,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "domain.xql";
 import module namespace web="https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
-
+import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
 
 declare function cm:get-centre($id) {
     centre:get-centre($id)
@@ -171,14 +171,14 @@ declare function cm:print-curation($respStmt,$language){
         for $rs in $respStmt
         return (
             <ul>
-                <li><span>{$rs/curator/text()}</span>
-                {if (empty($rs/github/text()))
-                  then ()
+                <li>{functx:capitalize-first( $rs/resp/text())}: 
+                {if (empty($rs/handle/text()))
+                  then (<span>{$rs/name/text()}</span>)
                   else (
-                  " (",<a href="{$rs/github/text()}">github</a>,")")
+                  <a href="{$rs/handle/text()}">{$rs/name/text()}</a>)
                 }
-                <span> at {format-date($rs/reviewDate/text(), 
-            "[MNn] [D], [Y]", $language, (), () )}</span>
+                <span> ({format-date($rs/reviewDate/text(), 
+            "[MNn] [D], [Y]", $language, (), () )})</span>
                 </li>
             </ul>
         )

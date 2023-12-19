@@ -6,9 +6,16 @@
       </filter>
       
       <respStmt>
-         <curator>Piotr Banski</curator>
-         <github>https://github.com/bansp</github>
+         <name>Piotr Banski</name>
+         <resp>text formats</resp>
+         <handle>https://github.com/bansp</handle>
          <reviewDate>2023-07-24</reviewDate>
+      </respStmt>
+      <respStmt>
+         <name>Eliza Margaretha Illig</name>
+         <resp>audio visual formats</resp>
+         <handle>https://github.com/margaretha</handle>
+         <reviewDate>2023-12-19</reviewDate>
       </respStmt>
       
    </header>
