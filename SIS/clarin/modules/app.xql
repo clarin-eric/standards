@@ -2,15 +2,24 @@ xquery version "3.0";
 
 module namespace app="http://clarin.ids-mannheim.de/standards/app";
 import module namespace web="https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
-
+import module namespace request="http://exist-db.org/xquery/request";
 
 (: Define general functions
    @author margaretha
 :)
 
-(: Local Base URL :)
-declare variable $app:base as xs:string := "http://localhost:8889/exist/apps/clarin/";
+(: Base URI :)
+declare variable $app:base as xs:string := app:determine-base-uri();
 
+declare function app:determine-base-uri(){
+    let $server-name := request:get-server-name()
+    return
+       if ($server-name eq "localhost") 
+       then concat("http://", $server-name, ":", request:get-server-port(),"/exist/apps/clarin/")
+       else if ($server-name eq "standards.clarin.eu")
+       then concat("https://",$server-name,"/sis/")
+       else concat("https://",$server-name,"/standards/")
+};
 
 (: Wrap a link with the current session :)
 declare function app:link($path as xs:string) {
@@ -27,11 +36,11 @@ declare function app:resource($filename as xs:string, $type as xs:string){
 };
 
 (: Set a display value :)
-declare function app:get-display(){
+(:declare function app:get-display(){
     if (session:get-attribute('user')='webadmin')
     then 'inline' else 'none'
 };
-
+:)
 (: Define the class attribute of an input field :)
 declare function app:get-input-class($submitted, $field){
     if($submitted and not($field)) then "inputTextError" else "inputText"
