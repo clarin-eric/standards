@@ -207,18 +207,18 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="curator" minOccurs="1" maxOccurs="1"/>
-                <xs:element ref="scope" minOccurs="0" maxOccurs="1"/>
-                <xs:element ref="github" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="resp" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="link" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="reviewDate" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="curator" type="xs:string"/>
-    <xs:element name="scope" type="xs:string">
+    <xs:element name="name" type="xs:string"/>
+    <xs:element name="resp" type="xs:string">
         <xs:annotation><xs:documentation>Optionally specifies the scope of responsibility</xs:documentation></xs:annotation>
     </xs:element>
-    <xs:element name="github" type="xs:string">
+    <xs:element name="link" type="xs:string">
         <xs:annotation>
             <xs:documentation>Optionally provides the GitHub (or indeed any other) handle. Use an
                 URI to the curator's profile, preferably with contact
