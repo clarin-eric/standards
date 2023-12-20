@@ -3,7 +3,7 @@
     <header>
         <lastUpdateCommitID>38a46ffacb783ddf1181f9ec1c2445eff43cf2de</lastUpdateCommitID>
         <filter>
-            <centre>Sprakbanken</centre>
+            <centreID>Sprakbanken</centre>
         </filter>
         <respStmt>
          <curator>Leif-Jöran Olsson</curator>
