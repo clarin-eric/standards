@@ -30,6 +30,7 @@
                 <xs:element ref="exportDate" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="filter" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="respStmt" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="centre" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -58,7 +59,7 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="centre" minOccurs="0"/>
+                <xs:element ref="centreID" minOccurs="0"/>
                 <xs:element ref="domain" minOccurs="0"/>
                 <xs:element ref="level" minOccurs="0"/>
                 <xs:element ref="search" minOccurs="0" maxOccurs="1"/>
@@ -66,7 +67,7 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="search" type="xs:string"/>
-    <xs:element name="centre" type="xs:string"/>
+    <xs:element name="centreID" type="xs:string"/>
     <xs:element name="domain">
         <xs:simpleType>
             <xs:restriction base="xs:string">
@@ -216,7 +217,9 @@
     </xs:element>
     <xs:element name="name" type="xs:string"/>
     <xs:element name="resp" type="xs:string">
-        <xs:annotation><xs:documentation>Optionally specifies the scope of responsibility</xs:documentation></xs:annotation>
+        <xs:annotation>
+            <xs:documentation>Optionally specifies the scope of responsibility, if e.g. a centre manages data across different departments.</xs:documentation>
+        </xs:annotation>
     </xs:element>
     <xs:element name="link" type="xs:string">
         <xs:annotation>
@@ -225,7 +228,45 @@
                 information.</xs:documentation>
         </xs:annotation>
     </xs:element>
-    <xs:element name="reviewDate" type="xs:date"/>
+    <xs:element name="reviewDate" type="xs:date">
+        <xs:annotation>
+            <xs:documentation>Date of the last review, yyyy:mm:dd</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="centre">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element ref="a"/>
+                <xs:element ref="nodeInfo"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="deposition" type="xs:boolean" use="optional" default="false"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="nodeInfo" type="nodeInfoType"/>
+    <xs:complexType name="nodeInfoType">
+        <xs:sequence>
+            <xs:element ref="ri" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ri">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="ResearchInfrastructures">
+                    <xs:attribute name="status" use="required" type="xs:token"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="ResearchInfrastructures">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CLARIN"/>
+            <xs:enumeration value="DARIAH"/>
+            <xs:enumeration value="Text+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
     <xs:element name="formats">
         <xs:complexType>
             <xs:sequence>

@@ -2,7 +2,7 @@
    <header>
       <lastUpdateCommitID>76e7d21871f644d0ea8b5b62811a493304d9cd18</lastUpdateCommitID>
       <filter>
-         <centre>IDS</centre>
+         <centreID>IDS</centreID>
       </filter>
       
       <respStmt>
@@ -18,6 +18,14 @@
          <reviewDate>2023-12-19</reviewDate>
       </respStmt>
       
+      <centre id="IDS" deposition="1">
+         <name>Leibniz-Institut für Deutsche Sprache</name>
+         <a href="https://centres.clarin.eu/centre/11"/>
+         <nodeInfo>
+            <ri status="C-centre">CLARIN</ri>
+            <ri status="Collections, Lexical Resources, Operations">Text+</ri>
+         </nodeInfo>
+      </centre>
    </header>
    <info xml:lang="en">
       <p>The following measures are taken to enhance the chance of future interpretability of the
