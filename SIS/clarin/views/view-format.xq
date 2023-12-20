@@ -23,6 +23,8 @@ let $format := vfm:get-format($id)
 let $format-name := $format/titleStmt/title/text()
 let $format-abbr := $format/titleStmt/abbr/text()
 
+let $format-domains := vfm:get-recommended-domains-by-format($id)
+
 return
     
     if (not($id) or not($format)) then
@@ -135,7 +137,27 @@ return
                         {vfm:print-multiple-values($format/schemaLoc, $id, "Schema location:", fn:true())}
                         
                         
+                        {if (count($format-domains)>0)
+                                then(
+                                    <div>
+                                        <span class="heading">Domains of Recommendations: </span>
+                                        <div style="column-count:1">
+                                            <ul style="margin: 0; padding-left:15px;">
+                                                {
+                                                    for $d in $format-domains
+                                                    order by $d
+                                                    return <li>{$d}</li>
+                                                }
+                                                </ul>
+                                        </div>
+                                    </div>
+                                    
+                                )
+                                else ()}
+                        
+                        <!-- this seems to be deprecated-->
                         {vfm:print-recommendation-in-clarin($format,$id)}
+                        
                         {vfm:print-recommendation-table($id,$domain,$centre,$recommendationType,
                             $sortBy,$language)}
                         <div>

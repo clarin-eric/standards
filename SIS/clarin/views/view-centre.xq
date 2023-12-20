@@ -106,7 +106,7 @@ else
                                 then(
                                     <div>
                                         <span class="heading">Domains of Recommendations: </span>
-                                        <div style="column-count:2">
+                                        <div style="column-count:1">
                                             <ul style="margin: 0; padding-left:15px;">
                                                 {
                                                     for $d in $domains

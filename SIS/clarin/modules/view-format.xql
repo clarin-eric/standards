@@ -185,3 +185,10 @@ $language){
             return rf:print-recommendation-row($format, $centre,$domain, $language, 
                 fn:false(),fn:true())
 };
+
+
+declare function vfm:get-recommended-domains-by-format($formatId){
+    let $domains := $recommendation:centres/formats/format[@id=$formatId]/domain
+    return 
+        fn:distinct-values($domains)
+};
