@@ -5,6 +5,13 @@
         <filter>
             <centreID>CLARIN-LT</centreID>
         </filter>
+        <centre id="CLARIN-LT" deposition="1">
+        <name>CLARIN-LT</name>
+        <a href="https://centres.clarin.eu/centre/36"/>
+        <nodeInfo>
+          <ri status="C-centre aiming-for-B">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

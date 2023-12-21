@@ -5,6 +5,13 @@
         <filter>
             <centreID>CNC</centreID>
         </filter>
+        <centre id="CNC">
+        <name>Czech National Corpus</name>
+        <a href="https://centres.clarin.eu/centre/51"/>
+        <nodeInfo>
+          <ri status="K-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

@@ -5,6 +5,14 @@
         <filter>
             <centreID>FZJ</centreID>
         </filter>
+        <centre id="FZJ">
+        <name>Forschungzentrum Jülich</name>
+        <a href="https://centres.clarin.eu/centre/7"/>
+        <nodeInfo>
+          <ri status="E-centre">CLARIN</ri>
+          <ri status="Operations">Text+</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

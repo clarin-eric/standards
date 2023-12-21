@@ -5,6 +5,13 @@
         <filter>
             <centreID>IMS</centreID>
         </filter>
+        <centre id="IMS" deposition="1">
+        <name>Institut für Maschinelle Sprachverarbeitung</name>
+        <a href="https://centres.clarin.eu/centre/10"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

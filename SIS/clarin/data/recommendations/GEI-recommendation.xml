@@ -5,6 +5,13 @@
         <filter>
             <centreID>GEI</centreID>
         </filter>
+        <centre id="GEI">
+        <name>Georg Eckert Institute for International Textbook Research</name>
+        <a href="https://centres.clarin.eu/centre/60"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

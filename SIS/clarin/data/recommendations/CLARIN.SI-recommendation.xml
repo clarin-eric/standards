@@ -5,7 +5,14 @@
       <filter>
          <centreID>CLARIN.SI</centreID>
       </filter>
-   </header>
+   <centre id="CLARIN.SI" deposition="1">
+        <name>CLARIN.SI Language Technology Centre</name>
+        <a href="https://centres.clarin.eu/centre/30"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <formats>
       <format id="fEXB">
          <domain>Audiovisual Annotation</domain>

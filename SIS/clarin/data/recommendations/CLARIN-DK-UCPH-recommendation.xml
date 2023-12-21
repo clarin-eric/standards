@@ -5,7 +5,14 @@
       <filter>
          <centreID>CLARIN-DK-UCPH</centreID>
       </filter>
-   </header>
+   <centre id="CLARIN-DK-UCPH" deposition="1">
+        <name>The CLARIN Centre at the University of Copenhagen</name>
+        <a href="https://centres.clarin.eu/centre/14"/>
+        <nodeInfo>
+          <ri status="B-centre,K-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <formats>
       <format id="fFLAC">
          <domain>Audiovisual Source Language Data</domain>

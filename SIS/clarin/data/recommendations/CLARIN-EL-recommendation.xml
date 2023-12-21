@@ -5,6 +5,13 @@
         <filter>
             <centreID>CLARIN-EL</centreID>
         </filter>
+        <centre id="CLARIN-EL">
+        <name>CLARIN:EL National Infrastructure for Language Resources and Technologies in Greece</name>
+        <a href="https://centres.clarin.eu/centre/75"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

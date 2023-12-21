@@ -5,6 +5,13 @@
         <filter>
             <centreID>IVDNT</centreID>
         </filter>
+        <centre id="IVDNT" deposition="1">
+        <name>Instituut voor de Nederlandse Taal</name>
+        <a href="https://centres.clarin.eu/centre/22"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

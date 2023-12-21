@@ -10,6 +10,13 @@
          <github>https://github.com/ljo</github>
          <reviewDate>2023-10-17</reviewDate>
       </respStmt>
+        <centre id="Sprakbanken" deposition="1">
+        <name>Språkbanken</name>
+        <a href="https://centres.clarin.eu/centre/37"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <info xml:lang="en">
       <p>The following measures are taken to enhance the chance of future interpretability of the

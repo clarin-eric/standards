@@ -5,6 +5,13 @@
       <filter>
          <centreID>ACDH-ARCHE</centreID>
       </filter>
+      <centre id="ACDH-ARCHE" deposition="1">
+        <name>Austrian Centre for Digital Humanities and Cultural Heritage - A Resource Centre for the Humanities</name>
+        <a href="https://centres.clarin.eu/centre/45"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
    </header>
    <formats>
       <format id="fFLAC">

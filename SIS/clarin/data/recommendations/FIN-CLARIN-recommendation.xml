@@ -5,7 +5,14 @@
       <filter>
          <centreID>FIN-CLARIN</centreID>
       </filter>
-   </header>
+   <centre id="FIN-CLARIN" deposition="1">
+        <name>The Language Bank of Finland</name>
+        <a href="https://centres.clarin.eu/centre/17"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <formats>
       <format id="fTEISpoken">
          <domain>Audiovisual Annotation</domain>

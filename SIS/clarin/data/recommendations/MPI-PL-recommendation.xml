@@ -5,7 +5,14 @@
       <filter>
          <centreID>MPI-PL</centreID>
       </filter>
-   </header>
+   <centre id="MPI-PL" deposition="1">
+        <name>MPI for Psycholinguistics</name>
+        <a href="https://centres.clarin.eu/centre/24"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <formats>
       <format id="fCHAT">
          <domain>Audiovisual Annotation</domain>

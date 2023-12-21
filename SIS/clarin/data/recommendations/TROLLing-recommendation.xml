@@ -5,6 +5,13 @@
         <filter>
             <centreID>TROLLing</centreID>
         </filter>
+        <centre id="TROLLing">
+        <name>The Tromsø Repository of Language and Linguistics</name>
+        <a href="https://centres.clarin.eu/centre/48"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

@@ -5,6 +5,13 @@
         <filter>
             <centreID>SADiLaR</centreID>
         </filter>
+        <centre id="SADiLaR" deposition="1">
+        <name>South African Centre for Digital Language Resources</name>
+        <a href="https://centres.clarin.eu/centre/58"/>
+        <nodeInfo>
+          <ri status="C-centre aiming-for-B">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

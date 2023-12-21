@@ -5,6 +5,13 @@
         <filter>
             <centreID>CEDIFOR</centreID>
         </filter>
+        <centre id="CEDIFOR" deposition="1">
+        <name>Centre for the Digital Foundation of Research in the Humanities, Social, and Educational Sciences</name>
+        <a href="https://centres.clarin.eu/centre/35"/>
+        <nodeInfo>
+          <ri status="C-centre aiming-for-B">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

@@ -5,7 +5,15 @@
       <filter>
          <centreID>UdS</centreID>
       </filter>
-   </header>
+   <centre id="UdS" deposition="1">
+        <name>Universität des Saarlandes</name>
+        <a href="https://centres.clarin.eu/centre/13"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+          <ri status="Collections">Text+</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <formats>
       <format id="fMP3">
          <domain>Audiovisual Source Language Data</domain>

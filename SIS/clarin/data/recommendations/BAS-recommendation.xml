@@ -5,6 +5,14 @@
       <filter>
          <centreID>BAS</centreID>
       </filter>
+      <centre id="BAS" deposition="1">
+        <name>Bayerisches Archiv für Sprachsignale</name>
+        <a href="https://centres.clarin.eu/centre/5"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+          <ri status="Collections">Text+</ri>
+        </nodeInfo>
+      </centre>
    </header>
    <formats>
       <format id="fAGS">

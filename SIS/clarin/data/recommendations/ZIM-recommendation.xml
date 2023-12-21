@@ -5,7 +5,14 @@
       <filter>
          <centreID>ZIM</centreID>
       </filter>
-   </header>
+   <centre id="ZIM" deposition="1">
+        <name>ZIM Centre for Information Modelling</name>
+        <a href="https://centres.clarin.eu/centre/65"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <formats>
       <format id="fTEISpoken">
          <domain>Audiovisual Annotation</domain>

@@ -5,6 +5,13 @@
         <filter>
             <centreID>MMSHs-Phonothèque</centreID>
         </filter>
+        <centre id="MMSHs-Phonothèque">
+        <name>Mediterranean Research Centre for the Humanities' Phonothèque</name>
+        <a href="https://centres.clarin.eu/centre/44"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

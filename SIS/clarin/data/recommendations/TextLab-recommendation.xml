@@ -5,6 +5,13 @@
         <filter>
             <centreID>TextLab</centreID>
         </filter>
+        <centre id="TextLab">
+        <name>CLARINO Text Laboratory Centre</name>
+        <a href="https://centres.clarin.eu/centre/43"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

@@ -5,6 +5,13 @@
         <filter>
             <centreID>CLARIN-IS</centreID>
         </filter>
+        <centre id="CLARIN-IS" deposition="1">
+        <name>CLARIN-IS (Árni Magnússon Institute for Icelandic Studies)</name>
+        <a href="https://centres.clarin.eu/centre/64"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

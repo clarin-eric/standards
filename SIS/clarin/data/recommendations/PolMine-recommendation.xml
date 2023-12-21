@@ -5,6 +5,13 @@
         <filter>
             <centreID>PolMine</centreID>
         </filter>
+        <centre id="PolMine">
+        <name>PolMine Project</name>
+        <a href="https://centres.clarin.eu/centre/38"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

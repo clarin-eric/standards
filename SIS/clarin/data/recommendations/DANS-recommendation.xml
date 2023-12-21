@@ -5,7 +5,14 @@
       <filter>
          <centreID>DANS</centreID>
       </filter>
-   </header>
+   <centre id="DANS" deposition="1">
+        <name>Data Archiving and Networked Services</name>
+        <a href="https://centres.clarin.eu/centre/20"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <info xml:lang="en">
       <p>Preferred formats are file formats of which DANS is confident that they will offer
          the best long-term guarantees in terms of usability, accessibility and

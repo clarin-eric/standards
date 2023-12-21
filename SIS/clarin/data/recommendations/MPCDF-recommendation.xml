@@ -5,6 +5,13 @@
         <filter>
             <centreID>MPCDF</centreID>
         </filter>
+        <centre id="MPCDF">
+        <name>Max Planck Computing and Data Facility</name>
+        <a href="https://centres.clarin.eu/centre/12"/>
+        <nodeInfo>
+          <ri status="E-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

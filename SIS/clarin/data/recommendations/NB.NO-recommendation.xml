@@ -5,6 +5,13 @@
         <filter>
             <centreID>NB.NO</centreID>
         </filter>
+        <centre id="NB.NO" deposition="1">
+        <name>National Library of Norway</name>
+        <a href="https://centres.clarin.eu/centre/31"/>
+        <nodeInfo>
+          <ri status="C-centre aiming-for-B">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

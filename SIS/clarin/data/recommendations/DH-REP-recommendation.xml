@@ -5,6 +5,14 @@
         <filter>
             <centreID>DH-REP</centreID>
         </filter>
+        <centre id="DH-REP">
+        <name>DARIAH-DE Repository</name>
+        <a href="https://centres.clarin.eu/centre/62"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+          <ri status="">DARIAH</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

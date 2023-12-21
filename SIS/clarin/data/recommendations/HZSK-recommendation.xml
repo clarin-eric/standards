@@ -5,7 +5,14 @@
       <filter>
          <centreID>HZSK</centreID>
       </filter>
-   </header>
+   <centre id="HZSK" deposition="1">
+        <name>Hamburger Zentrum für Sprachkorpora</name>
+        <a href="https://centres.clarin.eu/centre/9"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <formats>
       <format id="fAnvil">
          <domain>Audiovisual Annotation</domain>

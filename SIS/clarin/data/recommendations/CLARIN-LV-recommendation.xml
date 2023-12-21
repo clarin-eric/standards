@@ -5,6 +5,13 @@
         <filter>
             <centreID>CLARIN-LV</centreID>
         </filter>
+        <centre id="CLARIN-LV">
+        <name>CLARIN Centre of Latvian language resources and tools</name>
+        <a href="https://centres.clarin.eu/centre/68"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

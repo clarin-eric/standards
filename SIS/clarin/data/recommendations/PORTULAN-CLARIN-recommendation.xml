@@ -5,6 +5,13 @@
         <filter>
             <centreID>PORTULAN-CLARIN</centreID>
         </filter>
+        <centre id="PORTULAN-CLARIN" deposition="1">
+        <name>PORTULAN CLARIN Research Infrastructure for the Science and Technology of Language</name>
+        <a href="https://centres.clarin.eu/centre/50"/>
+        <nodeInfo>
+          <ri status="B-centre,K-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

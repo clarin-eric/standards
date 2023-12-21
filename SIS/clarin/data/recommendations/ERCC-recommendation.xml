@@ -5,6 +5,13 @@
         <filter>
             <centreID>ERCC</centreID>
         </filter>
+        <centre id="ERCC" deposition="1">
+        <name>Eurac Research CLARIN Centre</name>
+        <a href="https://centres.clarin.eu/centre/49"/>
+        <nodeInfo>
+          <ri status="C-centre aiming-for-B">CLARIN</ri>
+        </nodeInfo>
+      </centre>
     </header>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't

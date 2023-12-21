@@ -5,7 +5,14 @@
       <filter>
          <centreID>ORTOLANG</centreID>
       </filter>
-   </header>
+   <centre id="ORTOLANG" deposition="1">
+        <name>Open Resources and TOols for LANGuage</name>
+        <a href="https://centres.clarin.eu/centre/73"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <formats>
       <format id="fCHAT">
          <domain>Audiovisual Annotation</domain>

@@ -5,7 +5,15 @@
       <filter>
          <centreID>LAC</centreID>
       </filter>
-   </header>
+   <centre id="LAC" deposition="1">
+        <name>Language Archive Cologne</name>
+        <a href="https://centres.clarin.eu/centre/47"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+          <ri status="Collections, Lexical Resources">Text+</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <formats>
       <format id="fELAN">
          <domain>Audiovisual Annotation</domain>

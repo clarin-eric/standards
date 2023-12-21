@@ -5,6 +5,14 @@
       <filter>
          <centreID>BBAW</centreID>
       </filter>
+      <centre id="BBAW" deposition="1">
+        <name>Berlin-Brandenburg Academy of Sciences and Humanities</name>
+        <a href="https://centres.clarin.eu/centre/6"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+          <ri status="Collections, Lexical Resources, Editions">Text+</ri>
+        </nodeInfo>
+      </centre>
    </header>
    <formats>
       <format id="fCMDI">

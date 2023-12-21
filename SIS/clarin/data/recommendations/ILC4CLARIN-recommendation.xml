@@ -5,6 +5,13 @@
       <filter>
          <centreID>ILC4CLARIN</centreID>
       </filter>
+          <centre id="ILC4CLARIN" deposition="1">
+        <name>The ILC4CLARIN Centre at the Institute for Computational Linguistics</name>
+        <a href="https://centres.clarin.eu/centre/34"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
    </header>
    <formats>
       <format id="fMOV">

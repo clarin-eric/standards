@@ -5,7 +5,15 @@
       <filter>
          <centreID>EKUT</centreID>
       </filter>
-   </header>
+   <centre id="EKUT" deposition="1">
+        <name>Eberhard Karls Universität Tübingen</name>
+        <a href="https://centres.clarin.eu/centre/1"/>
+        <nodeInfo>
+          <ri status="B-centre">CLARIN</ri>
+          <ri status="Collections, Lexical Resources">Text+</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <formats>
       <format id="fMP4">
          <domain>Audiovisual Source Language Data</domain>

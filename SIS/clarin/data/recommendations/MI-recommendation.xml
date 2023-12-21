@@ -5,7 +5,14 @@
       <filter>
          <centreID>MI</centreID>
       </filter>
-   </header>
+   <centre id="MI" deposition="1">
+        <name>Meertens Instituut/HuC</name>
+        <a href="https://centres.clarin.eu/centre/23"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
+    </header>
    <formats>
       <format id="fAVI">
          <domain>Audiovisual Source Language Data</domain>
