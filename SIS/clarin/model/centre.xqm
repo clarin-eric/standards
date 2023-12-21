@@ -1,12 +1,15 @@
 xquery version "3.0";
 
 module namespace centre="http://clarin.ids-mannheim.de/standards/centre";
+import module namespace recommendation = "http://clarin.ids-mannheim.de/standards/recommendation-model" 
+at "recommendation-by-centre.xqm";
 
 (: Define the methods for accessing centre data
    @author margaretha
 :)
 
-declare variable $centre:centres := doc('/db/apps/clarin/data/centres.xml')/centres/centre;
+(:declare variable $centre:centres := doc('/db/apps/clarin/data/centres.xml')/centres/centre;:)
+declare variable $centre:centres := $recommendation:centres/header/centre;
 declare variable $centre:ids := data($centre:centres/@id);
 declare variable $centre:names := $centre:centres/name/text();
     
