@@ -21,7 +21,7 @@ declare function em:export-table($centre, $domainId, $requestedLevel, $nodes, $f
     
     let $filter :=
         (if ($centre) then
-            <centre>{$centre}</centre>
+            <centreID>{$centre}</centreID>
         else (),
         em:list-domains($domainId),
         if ($requestedLevel) then
@@ -88,7 +88,7 @@ declare function em:download-template($centre-id,$filename){
                 <url>{app:link(concat("/views/view-centre.xq?id=",$centre-id))}</url>
                 <exportDate>{fn:current-dateTime()}</exportDate>
                 <filter>
-                   <centre>{$centre-id}</centre>
+                   <centreID>{$centre-id}</centreID>
                 </filter>
             </header>
             {$recommendation/formats}    

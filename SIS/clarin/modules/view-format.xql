@@ -161,7 +161,7 @@ declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendat
 declare function vfm:print-recommendation-rows($recommendations,$format-id,$sortBy,
 $language){
     for $r in $recommendations
-        let $centre := $r/header/filter/centre/text()
+        let $centre := $r/header/filter/centreID/text()
         let $formats := $r/formats/format[@id=$format-id]
         
         for $format in $formats

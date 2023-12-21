@@ -225,38 +225,13 @@ declare function rf:print-option($selected, $value, $label) {
                     value="{$value}">{$label}</option>
 };
 
-(:declare function rf:print-centre-recommendation($requestedFormatId){
-    for $r in $recommendation:centres
-        let $centre := $r/header/filter/centre/text()
-        for $format in $r/formats/format
-            let $format-id := data($format/@id)
-            let $format-abbr := $format:formats[@id=$format-id]/titleStmt/abbr/text()
-            
-            let $domainName := $format/domain/text()
-            let $domain := 
-                if ($domainName) then
-                    dm:get-domain-by-name($domainName)
-                else ()
-            
-            order by (if ($format-abbr) then fn:lower-case($format-abbr) else fn:lower-case(fn:substring($format-id,2))) (\:abbr:\)
-        return 
-            if ($format-id eq $requestedFormatId)
-            then rf:print-recommendation-row($format, $centre, $domain,$language)
-            else ()
-};:)
-
 declare function rf:print-centre-recommendation($requestedCentre, $requestedDomain as xs:string*,
 $requestedLevel, $sortBy, $language, $ri) {
     let $ri-centres := centre:get-centre-ids-by-ri($ri)
-    let $ri-recommendations := $recommendation:centres[contains($ri-centres,header/filter/centre/text())]
-        (:for $r in $recommendation:centres
-            let $centre := $r/header/filter/centre/text()
-            return
-            if (contains($ri-centres,$centre))
-            then $r else ():)
+    let $ri-recommendations := $recommendation:centres[contains($ri-centres,header/filter/centreID/text())]
    
    for $r in $ri-recommendations
-        let $centre := $r/header/filter/centre/text()
+        let $centre := $r/header/filter/centreID/text()
         for $format in $r/formats/format
             let $domainName := $format/domain/text()
             let $domain := 

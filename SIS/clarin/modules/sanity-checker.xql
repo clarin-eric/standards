@@ -9,7 +9,7 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
 
 declare function sc:get-recommendations-with-missing-or-unknown-domains() {
     for $r in $recommendation:centres
-        let $centre := $r/header/filter/centre/text()
+        let $centre := $r/header/filter/centreID/text()
         for $format in $r/formats/format
             let $domain := $format/domain/text()
             let $domainObj := if ($domain) then domain:get-domain-by-name($domain) else ()
@@ -37,7 +37,7 @@ declare function sc:get-recommendations-with-missing-or-unknown-domains() {
 
 declare function sc:get-recommendations-unknown-domains() {
     for $r in $recommendation:centres
-        let $centre := $r/header/filter/centre/text()
+        let $centre := $r/header/filter/centreID/text()
         for $format in $r/formats/format
             let $domain := $format/domain/text()
             let $domainObj := if ($domain) then domain:get-domain-by-name($domain) else ()
@@ -55,7 +55,7 @@ declare function sc:get-recommendations-unknown-domains() {
 
 declare function sc:get-recommendations-with-missing-or-unknown-levels() {
     for $r in $recommendation:centres
-        let $centre := $r/header/filter/centre/text()
+        let $centre := $r/header/filter/centreID/text()
         for $format in $r/formats/format
             let $id := data($format/@id)
             let $level := $format/level/text()
@@ -84,7 +84,7 @@ declare function sc:get-recommendations-with-missing-or-unknown-levels() {
 
 declare function sc:get-similar-recommendations() {
     for $r in $recommendation:centres
-        let $centre := $r/header/filter/centre/text()
+        let $centre := $r/header/filter/centreID/text()
         let $domains := fn:distinct-values($r/formats/format/domain/text())
         let $ids := data($r/formats/format/@id)
         
