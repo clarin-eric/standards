@@ -1,5 +1,6 @@
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
+        <lastUpdateCommitID>199988ae7e412f32f924bdf3b37ebbade76ebbcb</lastUpdateCommitID>
         <filter>
             <centreID>SAW</centreID>
         </filter>
