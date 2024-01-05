@@ -86,7 +86,7 @@ else
                                 <span id="link"><a href="{$centre-link}">{$centre-link}</a></span>
                             </div>
                             <div>
-                                <span class="heading">Research Infrastructure: </span>
+                                <span class="heading">Research infrastructure: </span>
                                 <ul>{cm:print-ri($centre-ri)}</ul>
                             </div>
                             {cm:print-curation($respStmt,$languageHeader)}
@@ -105,7 +105,7 @@ else
                                 if (count($domains)>0)
                                 then(
                                     <div>
-                                        <span class="heading">Domains of Recommendations: </span>
+                                        <span class="heading">Functional domains: </span>
                                         <div style="column-count:1">
                                             <ul style="margin: 0; padding-left:15px;">
                                                 {
@@ -124,7 +124,7 @@ else
                                 if (count($recommendation/formats/format)>0)
                                 then (
                                     <div>
-                                        <span class="heading" id="recommendationTable">Format Recommendations: </span>
+                                        <span class="heading" id="recommendationTable">Format recommendations: </span>
                                        
                                         <form method="get" action="" style="float: right;">
                                               <input name="export" class="button"

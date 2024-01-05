@@ -140,7 +140,7 @@ return
                         {if (count($format-domains)>0)
                                 then(
                                     <div>
-                                        <span class="heading">Domains of Recommendations: </span>
+                                        <span class="heading">Functional domains: </span>
                                         <div style="column-count:1">
                                             <ul style="margin: 0; padding-left:15px;">
                                                 {

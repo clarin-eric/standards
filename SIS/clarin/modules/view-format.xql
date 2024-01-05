@@ -130,7 +130,7 @@ declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendat
     if ($recommendations)
     then(
         <div>
-            <span class="heading" id="recommendationTable">Recommendation: </span>
+            <span class="heading" id="recommendationTable">Recommendations: </span>
         </div>,
         <table cellspacing="4px" style="width:97%">
             <tr>
