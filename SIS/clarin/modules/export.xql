@@ -36,7 +36,7 @@ declare function em:export-table($centre, $domainId, $requestedLevel, $nodes, $f
             <format id="{$row/td[1]/@id}">
                 {
                     if ($centre eq "") then
-                        <centre>{$row/td[2]/a/text()}</centre>
+                        <centreID>{$row/td[2]/a/text()}</centreID>
                     else
                         (),
                     if (count($domainId) ne 1) then
