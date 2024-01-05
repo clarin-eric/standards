@@ -277,6 +277,11 @@
     <xs:element name="format">
         <xs:complexType>
             <xs:sequence>
+                <xs:element ref="centreID" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>This element is only valid for exports from the "recommended formats" list, provided for all centres. 
+                            It should NOT be used for importing centre recommendations into SIS.</xs:documentation></xs:annotation>
+                </xs:element>
                 <xs:element ref="domain"/>
                 <xs:element ref="level"/>
                 <xs:element minOccurs="0" ref="comment" maxOccurs="unbounded"/>
