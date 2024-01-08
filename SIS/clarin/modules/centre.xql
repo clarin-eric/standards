@@ -130,17 +130,37 @@ declare function cm:get-recommendations($id) {
 };
 
 declare function cm:get-centre-info($id,$lang) {
-    let $check-format-tag := cm:parse-format-tag(cm:get-recommendations($id)/info)
-    
     let $centre-info := 
         if ($id)
         then cm:get-recommendations($id)/info[@xml:lang =$lang]
         else ()
     
-   return
+   let $info :=
         if ($centre-info) 
         then $centre-info 
-        else cm:get-default-info($id)        
+        else cm:get-default-info($id)
+
+    return cm:parseFormatRef($info)
+};
+
+declare function cm:parseFormatRef($info){
+  element info {
+    $info/@*,
+    for $node in $info/node()
+    return
+          if ($node/self::p)
+          then element p {
+            $node/@*,
+            for $pNode in $node/node()
+            return
+              if ($pNode/self::formatRef)
+              then <a href = "{app:link(concat("views/view-format.xq?id=", $pNode/@ref)) }"> 
+                {substring($pNode/@ref,2)}</a>
+              else $pNode
+      }
+      else ($node)
+  }
+
 };
 
 declare function cm:get-default-info($id){
@@ -149,17 +169,6 @@ declare function cm:get-default-info($id){
         if ($en-info)
         then $en-info
         else cm:get-recommendations($id)/info[not(@xml:lang)]
-};
-
-declare function cm:parse-format-tag($centre-info){
-    let $login := data:open-access-to-database()    
-    let $check := 
-        for $format in $centre-info/p/format
-        return update replace $format with 
-        <a href="{concat("/>//views/view-format.xq?id=", $format/text())}">
-        {$format/text()}</a>
-     let $login := data:close-access-to-database()
-     return ""
 };
 
 declare function cm:print-curation($respStmt,$language){

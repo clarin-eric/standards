@@ -329,6 +329,18 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $languag
 
 };
 
+declare function rf:parseFormatRef($format-comment){
+    element comment {
+          $format-comment/@*, 
+          for $node in $format-comment/node()
+          return
+            if ($node/self::formatRef)
+            then <a href = "{app:link(concat("views/view-format.xq?id=", $node/@ref)) }"> 
+                {substring($node/@ref,2)}</a>
+            else $node
+        }
+};
+
 declare function rf:print-recommendation-row($format, $centre, $domain, $language, 
 $includeFormat,$includeCentre) {
     
@@ -345,8 +357,10 @@ $includeFormat,$includeCentre) {
         
     let $level := $format/level/text()
     let $format-comment := rf:print-format-comments($format,$language)
-    let $check-format-tag := rf:parse-format-tag($format/comment)
     
+    let $modifiedComment := rf:parseFormatRef($format-comment)
+        
+
     let $domainId := data($domain/@id)
     let $domainName := $domain/name/text()
     let $domainDesc := $domain/desc/text()
@@ -394,7 +408,7 @@ $includeFormat,$includeCentre) {
                                     height="17"/>,
                                 <span
                                     class="tooltiptext"
-                                    style="width:200px;">{$format-comment}
+                                    style="width:200px;">{$modifiedComment}
                                 </span>)
                             else
                                 ()
@@ -411,11 +425,14 @@ $includeFormat,$includeCentre) {
                     }
                     </td>:)
                 )
-                else
+                else (
+                    if ($format-comment) then 
                     <td
                         class="recommendation-row">
-                        {$format-comment}
+                        {$modifiedComment}
                     </td>
+                    else ()
+                )
             }
         </tr>
 };
@@ -431,6 +448,9 @@ declare function rf:print-format-comments($format,$language){
         else $format/comment[not(@xml:lang)]
 };
 
+(: formatRef should only be parsed shallowly on text on view, 
+   and not be updated in the database 
+
 declare function rf:parse-format-tag($comment){
     let $recommendation-path := "/db/apps/clarin/data/recommendations"
     let $login := xmldb:login($recommendation-path, 'admin', $data:admin-pwd)    
@@ -443,7 +463,7 @@ declare function rf:parse-format-tag($comment){
      let $login := xmldb:login($recommendation-path, 'guest', 'guest')
      return ""
 };
-
+:)
 declare function rf:print-missing-format-link($format-id){
     (fn:substring($format-id,2), 
     <span class="tooltip">
