@@ -181,10 +181,10 @@ declare function cm:print-curation($respStmt,$language){
         return (
             <ul>
                 <li>{functx:capitalize-first( $rs/resp/text())}: 
-                {if (empty($rs/handle/text()))
+                {if (empty($rs/link/text()))
                   then (<span>{$rs/name/text()}</span>)
                   else (
-                  <a href="{$rs/handle/text()}">{$rs/name/text()}</a>)
+                  <a href="{$rs/link/text()}">{$rs/name/text()}</a>)
                 }
                 <span> ({format-date($rs/reviewDate/text(), 
             "[MNn] [D], [Y]", $language, (), () )})</span>
