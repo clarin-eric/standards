@@ -437,16 +437,12 @@ $includeFormat, $includeCentre) {
                     }
                     </td>:)
                     )
-                else
-                    (
-                    if ($format-comment) then
-                        <td
-                            class="recommendation-row">
-                            {$modifiedComment}
-                        </td>
-                    else
-                        ()
-                    )
+                else (
+                    <td
+                        class="recommendation-row">
+                        {$modifiedComment}
+                    </td>
+                )
             }
         </tr>
 };
