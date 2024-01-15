@@ -23,7 +23,8 @@ let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 let $request-ri := request:get-parameter('ri', '')
 let $ri :=  if ($request-ri) then $request-ri else request:get-cookie-value("ri")
 let $ri := if (empty($ri)) then "CLARIN" else $ri
-let $languageHeader := if (not($ri eq "CLARIN")) then "de" else $languageHeader
+let $languageHeader := 
+    if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader
 
 let $domainParams := fn:string-join(for $d in $domainId return ("&amp;domain=",$d))
 

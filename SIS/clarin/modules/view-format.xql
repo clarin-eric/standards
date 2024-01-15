@@ -137,7 +137,7 @@ declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendat
                 <th class="header" style="width:15%;">
                     <a href="{
                                 app:link(concat("views/view-format.xq?id=", $id ,"&amp;sortBy=centre#recommendationTable"))
-                            }">Clarin Centre</a>
+                            }">Centre</a>
                 </th>
                 <th class="header" style="width:30%;">
                     <a href="{

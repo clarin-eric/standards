@@ -128,7 +128,7 @@ declare function cm:list-centre($sortBy, $statusFilter, $riFilter) {
 
 
 declare function cm:filter-by-ri($id, $name, $ris, $riFilter) {
-    if ($riFilter)
+    if ($riFilter and not($riFilter eq 'all'))
     then
         if (fn:contains($ris, $riFilter))
         then

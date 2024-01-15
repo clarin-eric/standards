@@ -10,19 +10,19 @@ import module namespace centre = "http://clarin.ids-mannheim.de/standards/centre
 :)
 
 declare function menu:setResearchInfrastructure() {
+<input id="all-RI-ID" class="ri" type="button" value="All"
+                        onclick="setSessionCookie('ri','all')"/>,
     for $ri in centre:get-distinct-research-infrastructures()
-       return 
-       <td>
+    return
             <input id="{$ri}-RI-ID" class="ri" type="button" value="{$ri}"
-            onclick="setSessionCookie('ri','{$ri}')"/>
-       </td>
+                onclick="setSessionCookie('ri','{$ri}')"/>
 };
 
 
 declare function menu:view() {
     <div class="menu" style="margin-left:20px;">
         <table>
-            <tr>{menu:setResearchInfrastructure()}</tr>
+            <tr><td style="white-space: pre-wrap;">{menu:setResearchInfrastructure()}</td></tr>
         </table>
         <table style="font-size:13.5px; width:210px">
             <tr>
