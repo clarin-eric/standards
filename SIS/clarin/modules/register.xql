@@ -9,7 +9,9 @@ import module namespace data = "http://clarin.ids-mannheim.de/standards/data" at
 
 declare namespace http = "http://expath.org/ns/http-client";
 
-(: Define methods for user registration
+(: DEPRECATED
+   
+   Define methods for user registration
    @author margaretha
 :)
 

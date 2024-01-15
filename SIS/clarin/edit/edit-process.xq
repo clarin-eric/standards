@@ -12,7 +12,9 @@ import module namespace f = "http://clarin.ids-mannheim.de/standards/module/form
 import module namespace request = "http://exist-db.org/xquery/request";
 declare namespace exist="http://exist.sourceforge.net/NS/exist";
 
-(: Handling the standard editing requests 
+(: DEPRECATED
+
+   Handling the standard editing requests 
    @author margaretha
 :)
 

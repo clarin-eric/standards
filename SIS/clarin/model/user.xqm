@@ -3,7 +3,9 @@ xquery version "3.0";
 module namespace user = "http://clarin.ids-mannheim.de/standards/user";
 import module namespace data = "http://clarin.ids-mannheim.de/standards/data" at "data.xqm";
 
-(: Define methods for accessing and storing user data
+(: DEPRECATED
+
+   Define methods for accessing and storing user data
    @author margaretha
 :)
 
