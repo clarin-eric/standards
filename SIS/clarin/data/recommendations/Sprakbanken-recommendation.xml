@@ -6,17 +6,18 @@
             <centreID>Sprakbanken</centreID>
         </filter>
         <respStmt>
-         <curator>Leif-Jöran Olsson</curator>
-         <github>https://github.com/ljo</github>
+         <name>Leif-Jöran Olsson</name>
+         <link>https://github.com/ljo</link>
          <reviewDate>2023-10-17</reviewDate>
-      </respStmt>
+        </respStmt>
+        
         <centre id="Sprakbanken" deposition="1">
-        <name>Språkbanken</name>
-        <a href="https://centres.clarin.eu/centre/37"/>
-        <nodeInfo>
-          <ri status="C-centre">CLARIN</ri>
-        </nodeInfo>
-      </centre>
+         <name>Språkbanken</name>
+         <a href="https://centres.clarin.eu/centre/37"/>
+         <nodeInfo>
+           <ri status="C-centre">CLARIN</ri>
+         </nodeInfo>
+        </centre>
     </header>
     <info xml:lang="en">
       <p>The following measures are taken to enhance the chance of future interpretability of the

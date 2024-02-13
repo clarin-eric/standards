@@ -128,7 +128,7 @@ declare function cm:list-centre($sortBy, $statusFilter, $riFilter) {
 
 
 declare function cm:filter-by-ri($id, $name, $ris, $riFilter) {
-    if ($riFilter)
+    if ($riFilter and not($riFilter eq 'all'))
     then
         if (fn:contains($ris, $riFilter))
         then
@@ -217,11 +217,12 @@ declare function cm:print-curation($respStmt, $language) {
             <span class="heading">Curation: </span>
         </div>,
         for $rs in $respStmt
+        let $resp := functx:capitalize-first($rs/resp/text())
         return
             (
             <ul>
-                <li>{functx:capitalize-first($rs/resp/text())}:
-                    {
+                <li>{if ($resp) then concat($resp,": ") else (),
+                    
                         if (empty($rs/link/text()))
                         then
                             (<span>{$rs/name/text()}</span>)
