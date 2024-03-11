@@ -9,9 +9,9 @@
     <extId type="LOC">fdd000354</extId>
     <extId type="Wikidata">Q136218</extId>
     <info type="description">
-        <p></p>
+        <p>See <a href="https://pkware.cachefly.net/webdocs/APPNOTE/APPNOTE-6.3.9.TXT">the specification</a> from PKWARE.</p>
     </info>
     <mimeType>application/zip</mimeType>
     <fileExt>.zip</fileExt>
-    <formatFamily>lossless compression</formatFamily>
+    <formatFamily>lossless</formatFamily>
 </format>
