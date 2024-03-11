@@ -1,0 +1,17 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTAR" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>Tape Archive File Format</title>
+        <abbr>TAR</abbr>
+    </titleStmt>
+    <keyword>tape archive</keyword>
+    <extId type="LOC">fdd000531</extId>
+    <extId type="Wikidata"> Q283579</extId>
+    <info type="description">
+        <p>See:
+            <a href="https://www.gnu.org/software/tar/manual/html_node/Standard.html">https://www.gnu.org/software/tar/manual/html_node/Standard.html</a>
+        </p>
+    </info>
+    <mimeType>application/x-tar</mimeType>
+    <fileExt>.tar</fileExt>
+    <formatFamily>archive formats</formatFamily>
+</format>
