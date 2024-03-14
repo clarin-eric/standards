@@ -7,6 +7,7 @@
     <info type="description">
         <p>See ISO 24613-1</p>
     </info>
+    <relation target="SpecLMF" type="isDefinedBy"/>
     <mimeType>text/x-lmf+xml</mimeType>
     <fileExt>.lmf</fileExt>
     <formatFamily>Lexical file formats</formatFamily>

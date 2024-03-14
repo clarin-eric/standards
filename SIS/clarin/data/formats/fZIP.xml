@@ -1,6 +1,4 @@
-<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fZIP"
-    xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fZIP" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
     <titleStmt>
         <title>ZIP File Format</title>
         <abbr>ZIP</abbr>
@@ -9,7 +7,8 @@
     <extId type="LOC">fdd000354</extId>
     <extId type="Wikidata">Q136218</extId>
     <info type="description">
-        <p>See <a href="https://pkware.cachefly.net/webdocs/APPNOTE/APPNOTE-6.3.9.TXT">the specification</a> from PKWARE.</p>
+        <p>See <a href="https://pkware.cachefly.net/webdocs/APPNOTE/APPNOTE-6.3.9.TXT">the specification</a> 
+            from PKWARE and an <a href="https://en.wikipedia.org/wiki/ZIP_(file_format)">overview</a> from Wikipedia.</p>
     </info>
     <mimeType>application/zip</mimeType>
     <fileExt>.zip</fileExt>
