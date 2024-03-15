@@ -5,7 +5,7 @@
     </titleStmt>
     <keyword>Lexical Markup</keyword>
     <info type="description">
-        <p>See ISO 24613-1</p>
+        <p>See <a href="https://www.iso.org/standard/75411.html">ISO 24613-4:2021</a></p>
     </info>
     <relation target="SpecLMF" type="isDefinedBy"/>
     <mimeType>text/x-lmf+xml</mimeType>
