@@ -1,0 +1,16 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTSV" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>Tab Separated Values</title>
+        <abbr>TSV</abbr>
+    </titleStmt>
+    <keyword>formatted text</keyword>
+    <extId type="LOC">fdd000533</extId>
+    <extId type="Wikidata"> Q3513566</extId>
+    <info type="description">
+        <p>See: <a href="https://www.iana.org/assignments/media-types/text/tab-separated-values">https://www.iana.org/assignments/media-types/text/tab-separated-values</a>
+        </p>
+    </info>
+    <mimeType>text/tab-separated-values</mimeType>
+    <fileExt>.tsv</fileExt>
+    <formatFamily>separated values</formatFamily>
+</format>

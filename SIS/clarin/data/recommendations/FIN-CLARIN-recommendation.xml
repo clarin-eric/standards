@@ -1,26 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
    <header>
-      <lastUpdateCommitID>769a30e1aa1d88ca6ff632af0047b829055fbe76</lastUpdateCommitID>
+      <lastUpdateCommitID>f1792b82c36aa7632083ff91179330ea69df52b8</lastUpdateCommitID>
       <filter>
          <centreID>FIN-CLARIN</centreID>
       </filter>
-   <centre id="FIN-CLARIN" deposition="1">
+      <respStmt>
+         <name>Jussi Piitulainen</name>
+         <link>https://github.com/jpiitula</link>
+         <reviewDate>2024-02-15</reviewDate>
+      </respStmt>
+      <centre id="FIN-CLARIN" deposition="1">
         <name>The Language Bank of Finland</name>
         <a href="https://centres.clarin.eu/centre/17"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>
         </nodeInfo>
       </centre>
-    </header>
+   </header>
+   <info xml:lang="en">
+      <p>The following measures are taken to enhance the chance of future interpretability of the
+         data.</p>
+      <p>The number of accepted file formats is small and well documented to make future conversions
+         to other formats more feasible. Open (non-proprietary) file formats
+         are strongly preferred.
+         The Language Bank of Finland recommends formats listed in the CLARIN
+         <a href="https://standards.clarin.eu/sis/">Standards Information System</a>.</p>
+      <p>The Language Bank's participation in relevant networks like
+         <a href="https://www.clarin.eu/content/overview-clarin-centres">CLARIN</a>
+         enables steady information about recent developments in file formats and encodings. Plans
+         to migrate or convert files will be developed if new standards arise.</p>
+      <p>For more information, see the <a href="https://www.kielipankki.fi/language-bank/">Language Bank of Finland's Portal</a>.</p>
+      <p>Data to be deposited might need to be converted to accepted or recommended formats for long-term preservation.</p>
+      <p>Plain text and XML files will normally only be accepted in Unicode character encoding, preferably UTF-8.</p>
+      <p>As a general guideline we believe that the file formats best suited for long-term
+         sustainability and accessibility:</p>
+      <ul>
+         <li>Are frequently used</li>
+         <li>Have open specifications</li>
+         <li>Are independent of specific software, developers or vendors</li>
+      </ul>
+   </info>
    <formats>
+      <format id="fCHAT"> 
+         <domain>Audiovisual Annotation</domain>
+         <level>discouraged</level>
+         <comment>Consider using <formatRef ref="fTEISpoken"/> instead.</comment>
+      </format>
+      <format id="fCHAT-XML">
+         <domain>Audiovisual Annotation</domain>
+         <level>discouraged</level>
+         <comment>Consider using <formatRef ref="fTEISpoken"/> instead.</comment>
+      </format>
+      <format id="fDOCX">
+         <domain>Audiovisual Annotation</domain>
+         <level>discouraged</level>
+         <comment>Consider using <formatRef ref="fPDFA"/> instead.</comment>
+      </format>
+      <format id="fELAN">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
       <format id="fTEISpoken">
          <domain>Audiovisual Annotation</domain>
          <level>recommended</level>
+         <comment>See <a href="http://jtei.revues.org/142">format description</a>.</comment>
       </format>
       <format id="fWave">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
+         <comment>PCM-WAV, 48 kHz, 16 bit</comment>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>PCM-WAV above 22 kHz/16 bit</comment>
       </format>
       <format id="fCMDI">
          <domain>Catalogue Metadata</domain>
@@ -30,21 +84,25 @@
          <domain>Documentation</domain>
          <level>recommended</level>
       </format>
+      <format id="fPDF">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
       <format id="fTEI">
          <domain>Documentation</domain>
          <level>recommended</level>
       </format>
-      <format id="fXML">
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fJP2">
-         <domain>Image Source Language Data</domain>
-         <level>recommended</level>
+      <format id="fTextPlain">
+         <domain>Audiovisual Annotation</domain>
+         <level>discouraged</level>
       </format>
       <format id="fJPEG">
          <domain>Image Source Language Data</domain>
          <level>recommended</level>
+      </format>
+      <format id="fPraat">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
       </format>
       <format id="fPNG">
          <domain>Image Source Language Data</domain>
@@ -58,11 +116,19 @@
          <domain>Lexical Resource</domain>
          <level>recommended</level>
       </format>
+      <format id="fTSV">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
       <format id="fLMF">
          <domain>Lexical Resource</domain>
          <level>recommended</level>
       </format>
       <format id="fCoNLL-U">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+         <format id="fCWB-VRT">
          <domain>Text Annotation</domain>
          <level>recommended</level>
       </format>
@@ -72,14 +138,6 @@
       </format>
       <format id="fXML">
          <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fELAN">
-         <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fPDFA">
-         <domain>Textual Source Language Data</domain>
          <level>acceptable</level>
       </format>
       <format id="fPraat">
@@ -89,18 +147,59 @@
       <format id="fTextPlain">
          <domain>Textual Source Language Data</domain>
          <level>recommended</level>
+         <comment>UTF-8 encoded</comment>
+      </format>
+      <format id="fMP4">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fFLAC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fMP3">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>discouraged</level>
+         <comment>lossy formats should be avoided if possible</comment>
+      </format>
+      <format id="fMPEG-4-AVC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>25 fps, 1920×1080, constant bit rate </comment>
       </format>
       <format id="fGZIP">
          <domain>Tool Support</domain>
-         <level>recommended</level>
+         <level>acceptable</level>
       </format>
       <format id="fTAR">
          <domain>Tool Support</domain>
-         <level>recommended</level>
+         <level>acceptable</level>
       </format>
       <format id="fZIP">
          <domain>Tool Support</domain>
          <level>recommended</level>
+      </format>
+      <format id="fMarkdown">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTextPlain">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+         <comment>e.g. as README.txt</comment>
+      </format>
+      <format id="fJSON">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+         <comment>regular and structured; consider using <formatRef ref="fJSONLD"/> with a schema</comment>
+      </format>
+      <format id="fCSV">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fALTO">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
       </format>
    </formats>
 </recommendation>

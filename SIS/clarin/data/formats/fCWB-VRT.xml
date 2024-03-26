@@ -1,0 +1,16 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCWB-VRT" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>Corpus Workbench Verticalized Text</title>
+        <abbr>CWB-VRT</abbr>
+    </titleStmt>
+    <keyword>cwb corpus</keyword>
+    <info type="description">
+        <p>See:</p>
+        <ul>
+            <li><a href="https://cwb.sourceforge.io/files/CWB_Encoding_Tutorial/CWB_Encoding_Manual.html">CWB encoding manual</a></li>
+            <li><a href="http://urn.fi/urn:nbn:fi:lb-201806053">The Korp corpus input format at the Language Bank of Finland</a></li>
+        </ul>
+    </info>
+    <fileExt>.vrt</fileExt>
+    <formatFamily>corpus encoding formats</formatFamily>
+</format>

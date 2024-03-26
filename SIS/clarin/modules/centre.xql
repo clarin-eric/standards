@@ -215,27 +215,30 @@ declare function cm:print-curation($respStmt, $language) {
         (
         <div>
             <span class="heading">Curation: </span>
-        </div>,
-        for $rs in $respStmt
-        return
-            (
-            <ul>
-                <li>{functx:capitalize-first($rs/resp/text())}:
-                    {
-                        if (empty($rs/link/text()))
-                        then
-                            (<span>{$rs/name/text()}</span>)
-                        else
-                            (
-                            <a href="{$rs/link/text()}">{$rs/name/text()}</a>)
-                    }
-                    <span> ({
-                            format-date($rs/reviewDate/text(),
-                            "[MNn] [D], [Y]", $language, (), ())
-                        })</span>
-                </li>
-            </ul>
-            )
+            {
+                for $rs in $respStmt
+                let $resp := functx:capitalize-first($rs/resp/text())
+                return
+                    (
+                    <ul>
+                        <li>{if ($resp) then concat($resp,": ") else (),
+                            
+                                if (empty($rs/link/text()))
+                                then
+                                    (<span>{$rs/name/text()}</span>)
+                                else
+                                    (
+                                    <a href="{$rs/link/text()}">{$rs/name/text()}</a>)
+                            }
+                            <span> ({
+                                    format-date($rs/reviewDate/text(),
+                                    "[MNn] [D], [Y]", $language, (), ())
+                                })</span>
+                        </li>
+                    </ul>
+                    )
+            }
+        </div>
         )
     else
         (

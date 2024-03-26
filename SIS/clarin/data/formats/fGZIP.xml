@@ -1,0 +1,14 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fGZIP" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>GZIP File Format</title>
+        <abbr>GZIP</abbr>
+    </titleStmt>
+    <keyword>compression</keyword>
+    <extId type="Wikidata">Q10287816</extId>
+    <info type="description">
+        <p>See the specification <a href="https://datatracker.ietf.org/doc/html/rfc1952">RFC 1952</a>.</p>
+    </info>
+    <mimeType>application/gzip</mimeType>
+    <fileExt>.gz</fileExt>
+    <formatFamily>lossless</formatFamily>
+</format>
