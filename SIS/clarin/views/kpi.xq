@@ -11,9 +11,9 @@ import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-mod
     @author margaretha, banski
 :)
 
-let $B-centres := cm:get-centre-by-research-infrastructure("CLARIN","B-centre")
-let $numOfBCentres := fn:count($B-centres) 
-let $numOfBCentresWithRecommendations := cm:count-number-of-centres-with-recommendations($B-centres)
+let $depositioncentres := cm:get-deposition-centres("CLARIN")
+let $numOfBCentres := fn:count($depositioncentres) 
+let $numOfBCentresWithRecommendations := cm:count-number-of-centres-with-recommendations($depositioncentres)
 let $percentage := format-number($numOfBCentresWithRecommendations div $numOfBCentres,'0%')
 
 return
@@ -49,8 +49,8 @@ return
                             </tr>
                             <tr>
                                 <td class="column">1.</td>
-                                <td class="column">Number of certified B-centres</td>
-                                <td class="column">Number of certified B-centres</td>
+                                <td class="column">Number of certified deposition centres</td>
+                                <td class="column">Number of certified deposition centres</td>
                             </tr>
                             <tr>
                                 <td class="column">2.</td>
@@ -65,11 +65,11 @@ return
                     
                         <table style="width:600px; border-collapse:collapse;">
                             <tr>
-                                <td class="column">CLARIN B-centres recorded in the SIS</td>
+                                <td class="column">CLARIN deposition centres recorded in the SIS</td>
                                 <td class="column">{$numOfBCentres}</td>
                             </tr>
                             <tr>
-                                <td class="column">Number of B-centres that have provided information (and recorded that in the SIS)</td>
+                                <td class="column">Number of deposition centres that have provided information (and recorded that in the SIS)</td>
                                 <td class="column">{$numOfBCentresWithRecommendations}</td>
                             </tr>
                             <tr>
@@ -79,12 +79,12 @@ return
                         </table>
                         <!--
                         <ul>
-                            <li>CLARIN B-centres recorded in the SIS: <b>count(cm:get_centres(RI=CLARIN, status=B-centre))</b>
+                            <li>CLARIN deposition centres recorded in the SIS: <b>count(cm:get_centres(RI=CLARIN, status=deposition centre))</b>
                             </li>
-                            <li>Number of B-centres that have provided information (and recorded that in the SIS): <b>count( rf:get_centres_where count(/recommendation/formats/* gt 0) )</b></li>
+                            <li>Number of deposition centres that have provided information (and recorded that in the SIS): <b>count( rf:get_centres_where count(/recommendation/formats/* gt 0) )</b></li>
                             <li>KPI "Collections of standards and mappings" as represented in the SIS: <b>100 *
                                     count(rf:get_centres_where count(/recommendation/formats/* gt 0)) /
-                                    count(get_centres(RI=CLARIN, status=B-centre)) %</b></li>
+                                    count(get_centres(RI=CLARIN, status=deposition centre)) %</b></li>
                         </ul>
                         -->
                     </div>
