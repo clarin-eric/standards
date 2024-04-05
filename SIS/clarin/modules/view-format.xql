@@ -103,6 +103,9 @@ declare function vfm:print-multiple-values($list, $id, $label, $isLink as xs:boo
             ()
 };
 
+(: DEPRECATED
+indicating the old structure using ClarinRecommendation element in format files
+
 declare function vfm:print-recommendation-in-clarin($format,$format-id){
     let $recommendations := $format/ClarinRecommendation/recommendation
     let $n := count($recommendations)
@@ -122,7 +125,7 @@ declare function vfm:print-recommendation-in-clarin($format,$format-id){
             }
            </div>
        else ()
-};
+};:)
 
 declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendationType,$sortBy,$language){
     let $recommendations := recommendation:get-recommendations-for-format($id)

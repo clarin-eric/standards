@@ -155,9 +155,6 @@ return
                                 )
                                 else ()}
                         
-                        <!-- this seems to be deprecated-->
-                        {vfm:print-recommendation-in-clarin($format,$id)}
-                        
                         {vfm:print-recommendation-table($id,$domain,$centre,$recommendationType,
                             $sortBy,$language)}
                         <div>
