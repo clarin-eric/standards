@@ -21,6 +21,10 @@ declare function cm:get-centre-by-research-infrastructure($ri as xs:string, $sta
     centre:get-centre-by-research-infrastructure($ri, $status)
 };
 
+declare function cm:get-deposition-centres($ri as xs:string){
+    centre:get-deposition-centres($ri)
+};
+
 declare function cm:count-number-of-centres-with-recommendations($centres) {
     let $centre-with-recommendations :=
     for $c in $centres

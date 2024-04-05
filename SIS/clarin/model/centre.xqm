@@ -49,3 +49,7 @@ declare function centre:get-centre-by-research-infrastructure($ri as xs:string,
 declare function centre:get-distinct-research-infrastructures(){
     fn:distinct-values($centre:centres/nodeInfo/ri)
 };
+
+declare function centre:get-deposition-centres($ri){
+    $centre:centres[nodeInfo/ri=$ri and @deposition=1]
+};

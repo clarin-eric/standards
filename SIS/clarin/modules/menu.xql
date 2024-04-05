@@ -10,20 +10,37 @@ import module namespace centre = "http://clarin.ids-mannheim.de/standards/centre
 :)
 
 declare function menu:setResearchInfrastructure() {
-<input id="all-RI-ID" class="ri" type="button" value="All"
-                        onclick="setSessionCookie('ri','all')"/>,
+    <span class="tooltip">
+        <input id="all-RI-ID" class="ri" type="button" value="All"
+                            onclick="setSessionCookie('ri','all')"/>
+            <span
+            class="tooltiptext" style="width:300px; left: 10%; top: 180%; 
+            background-color: #9f9f9f; opacity:1;text-align:left;">Show all info regardless research infrastructures.
+        </span>
+    </span>,
     for $ri in centre:get-distinct-research-infrastructures()
     return
-            <input id="{$ri}-RI-ID" class="ri" type="button" value="{$ri}"
+            (<span class="tooltip">
+                <input id="{$ri}-RI-ID" class="ri" type="button" value="{$ri}"
                 onclick="setSessionCookie('ri','{$ri}')"/>
+                    <span
+                        class="tooltiptext" style="width:300px; left: 10%; top: 180%; 
+                        background-color: #9f9f9f;text-align:left;opacity:1;">Switch to {$ri} environment and show only 
+                        relevant info to {$ri}, e.g. format recommendations by {$ri} centres.
+                    </span>
+                </span>
+    )
 };
 
 
 declare function menu:view() {
+    <div class="ri-tab-line">
+    <!--<table>
+            <tr><td style="white-space: pre-wrap;"></td></tr>
+        </table>-->
+        {menu:setResearchInfrastructure()}
+    </div>,
     <div class="menu" style="margin-left:20px;">
-        <table>
-            <tr><td style="white-space: pre-wrap;">{menu:setResearchInfrastructure()}</td></tr>
-        </table>
         <table style="font-size:13.5px; width:210px">
             <tr>
                 <td colspan="3" class="tdmenu">

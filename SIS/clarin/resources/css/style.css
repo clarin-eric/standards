@@ -25,8 +25,8 @@ div#all {
 	background:white URL(../images/bannerNeu.png) no-repeat bottom center;
 	color:#111;
 	min-height:185px;
-	margin:0em 10px 0 10px;
-	padding:12px;
+	margin:0 10px 0 10px;
+	padding-top:20px;
 	text-align:left;
 	font-weight:normal;
 	line-height:1.5em;	
@@ -72,20 +72,41 @@ li{
     margin-left:2px;    
 }
 
-.ri{    
-    background-color:white;
-    border: 1px solid #DDDDDD; 
-    border-radius:3px;
-    width:65px; 
-    padding:2px; 
+div.ri-tab-line {
+    margin: 0px 35px 5px 35px;
+    border-bottom: 1px solid #AAA;
+    background:white URL(../images/bannerNeu-lastline.png) repeat-y bottom center;
+}
+
+.ri{
+    position:relative;
+    top:2px;
+    background-color:transparent;
+    border:transparent;
+    /* border: 1px solid #AAA;
+    border-color: transparent transparent #AAA transparent;
+    */ 
+    width:100px; 
+    padding:5px 7px; 
     text-align:center;
-    color:grey;    
-    margin-left:2px;    
+    color:white;
+    margin:0px;    
+}
+
+.ri:hover{
+    background-color: #FFFFFFDD;
+    color:grey;
 }
 
 .ri-active{
-  background-color: darkred;
-  color:white;
+    border-color: #DDD;
+    background-color:white;
+    border-bottom-color: transparent;
+    color:grey;
+}
+
+.ri-active:hover{
+    background-color:white;
 }
 
 .content{
@@ -337,7 +358,7 @@ th {
   /* Position the tooltip text*/
   position: absolute;
   top:100%;
-  z-index: 10;
+  z-index: 1;
 }
 
 .tooltip:hover .tooltiptext {
