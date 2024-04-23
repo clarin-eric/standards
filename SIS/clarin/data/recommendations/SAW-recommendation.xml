@@ -13,19 +13,226 @@
             </nodeInfo>
         </centre>
     </header>
-    <formats><!--
-            This template will assist in adjusting/creating a recommendations document if you don't
-            have access to a schema-aware XML editor. Copy the XML fragment, 
-            *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
-            *  adjust the domain (https://clarin.ids-mannheim.de/standards/views/list-domains.xq ),
-            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
-            *  repeat as necessary;
-            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
-            
-            <format id="null">
-                <domain>Audiovisual Annotation</domain>
-                <level>recommended</level>
-            </format> 
-        -->
+    <info xml:lang="en">
+        <p>The <a href="https://repo.data.saw-leipzig.de/en">Saxon Academy of Sciences and Humanities in Leipzig repository</a> offers longterm
+            preservation of digital resources, along with their descriptive metadata. The mission of the repository is to ensure the availability
+            and longterm preservation of resources, to preserve knowledge gained in research, to aid the transfer of knowledge
+            into new contexts, and to integrate new methods and resources into university curricula. A particular focus lies on
+            lexical resources and language resources for so-called "under-resourced" languages.</p>
+        <p> In case no recommended/well known and documented format is used, an exhaustive documentation on the syntax and semantic of the data has to be provided
+            (e.g. database dumps: names of tables and columns; specifications and examples on the contents of each column; examples on how to
+            retrieve different types of data). This documentation (English, PDF) is stored on the repository along with the
+            data and metadata and is provided to everyone who wishes to download/access the resource. </p>
+        <p>The repository web portal provides additional information about <a href="https://repo.data.saw-leipzig.de/depositing/en">depositing guidelines</a> and
+            <a href="https://repo.data.saw-leipzig.de/depositing-metadata/en">metadata requirements</a>.</p>
+
+    </info>
+    <info xml:lang="de">
+        <p>Das <a href="https://repo.data.saw-leipzig.de/de">Repositorium der Sächsischen Akademie der Wissenschaften zu Leipzig</a> bietet die
+            langfristige Sicherung digitaler Ressourcen und ihrer Metadaten. Der Auftrag des Repositoriums ist es die Verfügbarkeit und langfristige
+            Sicherung von Forschungsdaten sicherzustellen, Forschungsergebnisse zu sichern, den Wissenstransfer in neue Fachbereiche zu erleichtern
+            und neuartige Methoden und Ressourcen in den universitären Lehrplan zu integrieren. Ein besonderer inhaltlicher Fokus liegt auf
+            lexikalischen Ressourcen und Sprachressourcen für sogenannte "unterrepräsentierte" Sprachen.</p>
+        <p>Falls kein empfohlenes, standardisiertes und dokumentiertes Format verwendet wird, muss eine umfassende Dokumentation zur Syntax und Semantik der Daten
+            bereitgestellt werden (z. B. bei Datenbank-Dumps: Namen von Tabellen und Spalten; Spezifikationen und Beispiele zum Inhalt jeder Spalte; Beispiele zum
+            Abrufen verschiedene Arten von Daten). Diese Dokumentation (Englisch, PDF) wird zusammen mit den Daten und Metadaten im Repositorium gespeichert und
+            allen zur Verfügung gestellt, welche die Ressource herunterladen bzw. auf sie zugreifen möchten.</p>
+        <p>Auf dem Webportal des Repositoriums sind weiterführende Informationen zu <a href="https://repo.data.saw-leipzig.de/depositing/de">Datenhosting</a>
+            und <a href="https://repo.data.saw-leipzig.de/depositing-metadata/de">Metadatenanforderungen</a> zu finden.</p>
+    </info>
+    <formats>
+        <!-- Annotation -->
+        <format id="fDOCX">
+            <domain>Audiovisual Annotation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Audiovisual Annotation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fTEI">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTEISpoken">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Image Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCoNLL-U">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCoNLL-X">
+            <domain>Text Annotation</domain>
+            <level>acceptable</level>
+            <comment>consider using <formatRef ref="fCoNLL-U"/> instead</comment>
+        </format>
+        <format id="fJSON">
+            <domain>Text Annotation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fJSONLD">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Text Annotation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fPDF">
+            <domain>Text Annotation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fTEI">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fRDFXML">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <!-- Data/Resource Description -->
+        <format id="fCMDI">
+            <domain>Catalogue Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Catalogue Metadata</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fCMDI">
+            <domain>Contextual Information</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Contextual Information</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fDOCX">
+            <domain>Documentation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPDFA">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPDF">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>consider using <formatRef ref="fPDFA"/> instead</comment>
+        </format>
+        <format id="fMarkdown">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fHTML">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCMDI">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCSV">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fDC-XML">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fDOCX">
+            <domain>Metadata</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fJSONLD">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fJSON">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+            <comment>regular and structured; consider using <formatRef ref="fJSONLD"/> with a schema</comment>
+        </format>
+        <format id="fTEIHeader">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format>
+        <!-- Databases -->
+        <format id="fXML">
+            <domain>Language Description</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCSV">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fLMV">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTSV">
+            <domain>Lexical Resource</domain>
+            <level>acceptable</level>
+        </format>
+        <!-- Source Data -->
+        <format id="fCoNLL-U">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCoNLL-X">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>consider using <formatRef ref="fCoNLL-U"/> instead</comment>
+        </format>
+        <format id="fDOCX">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fHTML">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fJSON">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fMarkdown">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fPDF">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <!-- Uncategorized -->
+        <format id="fZIP">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
     </formats>
 </recommendation>
