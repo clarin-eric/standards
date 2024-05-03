@@ -30,7 +30,7 @@
             data and metadata and is provided to everyone who wishes to download/access the resource. </p>
         <p>The repository web portal provides additional information about <a href="https://repo.data.saw-leipzig.de/depositing/en">depositing guidelines</a> and
             <a href="https://repo.data.saw-leipzig.de/depositing-metadata/en">metadata requirements</a>.</p>
-
+        
     </info>
     <info xml:lang="de">
         <p>Das <a href="https://repo.data.saw-leipzig.de/de">Repositorium der Sächsischen Akademie der Wissenschaften zu Leipzig</a> bietet die
@@ -192,7 +192,7 @@
             <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
-        <format id="fLMV">
+        <format id="fLMF">
             <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
