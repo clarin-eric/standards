@@ -13,7 +13,7 @@ let $id := request:get-parameter('id', '')
 let $centre := request:get-parameter('centre', '')
 let $domain := request:get-parameter('domain', '')
 let $recommendationType := request:get-parameter('type', '')
-let $sortBy := request:get-parameter('sortBy', '')
+let $sortBy := request:get-parameter('sortBy', 'centre')
 
 let $language := fn:substring(request:get-header("Accept-Language"),0,3)
 let $riCookie :=  request:get-cookie-value("ri")
