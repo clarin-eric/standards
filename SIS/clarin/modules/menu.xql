@@ -11,7 +11,7 @@ import module namespace centre = "http://clarin.ids-mannheim.de/standards/centre
 
 declare function menu:setResearchInfrastructure() {
     <span class="tooltip">
-        <input id="all-RI-ID" class="ri" type="button" value="All"
+        <input id="all-RI-ID" class="ri" type="button" value="All RIs"
                             onclick="setSessionCookie('ri','all')"/>
             <span
             class="tooltiptext" style="width:300px; left: 10%; top: 180%; 
