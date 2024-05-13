@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
    <header>
       <lastUpdateCommitID>76e7d21871f644d0ea8b5b62811a493304d9cd18</lastUpdateCommitID>
@@ -9,14 +8,14 @@
       <respStmt>
          <name>Harald Lüngen</name>
          <resp>Text formats</resp>
-         <link>https://github.com/luengen</link>
+         <link>https://www.ids-mannheim.de/digspra/personal/luengen/</link>
          <reviewDate>2023-07-24</reviewDate>
       </respStmt>
       <respStmt>
-         <name>Eliza Margaretha Illig</name>
-         <resp>audio visual formats</resp>
-         <link>https://github.com/margaretha</link>
-         <reviewDate>2023-12-19</reviewDate>
+         <name>Siegwalt Lindenfelser</name>
+         <resp>Audio visual formats</resp>
+         <link>https://www.ids-mannheim.de/prag/personal/lindenfelser/</link>
+         <reviewDate>2024-05-08</reviewDate>
       </respStmt>
       
         <centre id="IDS" deposition="1">
@@ -165,6 +164,11 @@
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
          <comment>25 fps, 1920×1080, constant bit rate </comment>
+      </format>
+      <format id="fMPEG-4-AVC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>50 fps, 4096x2160, constant bit rate</comment>
       </format>
       <format id="fMPEG1">
          <domain>Audiovisual Source Language Data</domain>
