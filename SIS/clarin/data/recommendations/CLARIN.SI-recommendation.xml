@@ -134,8 +134,8 @@
          <domain>Language Description</domain>
          <level>recommended</level>
       </format>
-      <format id="fVRT">
-         <domain>Language Description</domain>
+      <format id="fCWB-VRT">
+         <domain>Text Annotation</domain>
          <level>recommended</level>
       </format>
       <format id="fCSV">
