@@ -126,18 +126,6 @@
          <domain>Image Source Language Data</domain>
          <level>recommended</level>
       </format>
-      <format id="fLisp">
-         <domain>Language Description</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fPerl">
-         <domain>Language Description</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fCWB-VRT">
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
       <format id="fCSV">
          <domain>Lexical Resource</domain>
          <level>recommended</level>
