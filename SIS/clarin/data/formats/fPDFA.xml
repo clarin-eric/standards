@@ -8,16 +8,16 @@
   <keyword>binarized TextualData</keyword>
   <extId type="LOC">fdd000318</extId>
   <info type="description">
-    <p>PDF/A differs from PDF by prohibiting features unsuitable for long-term archiving, such as
+    <p>PDF/A differs from <a href="../views/view-format.xq?id=fPDF">PDF</a> by prohibiting features unsuitable for long-term archiving, such as
       font linking (as opposed to font embedding) and encryption. Note that "PDF/A" is actually a collection of formats:</p>
     <ul>
-      <li>PDF/A-1: "Part 1: Use of PDF 1.4" (2005-09-28)</li>
-      <li>PDF/A-2: "Part 2: Use of ISO 32000-1" (2011-06-20)</li>
-      <li>PDF/A-3: "Part 3: Use of ISO 32000-1 with support for embedded files" (2012-10-15)</li>
-      <li>PDF/A-4: "Part 4: Use of ISO 32000-2" (2020-11)</li>
+      <li><a href="../views/view-format.xq?id=fPDFA-1">PDF/A-1</a>: "Part 1: Use of PDF 1.4" (2005-09-28)</li>
+      <li><a href="../views/view-format.xq?id=fPDFA-2">PDF/A-2</a>: "Part 2: Use of ISO 32000-1" (2011-06-20)</li>
+      <li><a href="../views/view-format.xq?id=fPDFA-3">PDF/A-3</a>: "Part 3: Use of ISO 32000-1 with support for embedded files" (2012-10-15)</li>
+      <li><a href="../views/view-format.xq?id=fPDFA-4">PDF/A-4</a>: "Part 4: Use of ISO 32000-2" (2020-11)</li>
     </ul>
     <p>Centres should note that Part 1 references an obsolete version of PDF, while parts 2 and 3 reference the fully open PDF 1.7.</p> 
-    <p><a href="https://verapdf.org/home/">VeraPDF</a> is an open-source validator for PDF/A 1-3 formats.</p>
+    <p><a href="https://verapdf.org/home/">VeraPDF</a> is an open-source validator for PDF/A formats.</p>
   </info>
   <relation target="SpecPDFA" type="isDefinedBy"/>
   
