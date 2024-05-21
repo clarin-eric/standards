@@ -37,12 +37,12 @@ import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-mod
                     containing a corpus manual, corpus guidelines or the annotation guidelines applied for the project, it is undoubtedly <i>not</i> suitable 
                     as a format for annotated corpus data. That demonstrates that recommending PDF/A or any other format to researchers and data 
                     depositors without information on the intended purpose of that format is bound to create issues rather than solve them. Therefore, the 
-                    CLARIN Standards Committee has, by reviewing the policies and deposited data of CLARIN centres, suggested a set of functional domains 
+                    CLARIN <a href="https://www.clarin.eu/content/standards">Standards and Interoperability Committee</a> has, by reviewing the policies and deposited data of CLARIN centres, suggested a set of functional domains 
                     representing purposes specifically relevant to the field of digital language resources.</p>
                     <p>It has to be borne in mind that the set of functional domains described below has been mainly designed to be useful in the practical 
-                    work of the Standards Committee in gathering information on standards and data formats currently in use within CLARIN. It does not claim 
+                    work of the Standards and Interoperability Committee in gathering information on standards and data formats currently in use within CLARIN. It does not claim 
                     or aim to be a complete and detailed taxonomy and does not reflect all possible distinctions between different resource (sub)types. 
-                    The Standards Committee acknowledges that in order to make an individual recommendation on suitable formats to be used within a specific 
+                    The Standards and Interoperability Committee acknowledges that in order to make an individual recommendation on suitable formats to be used within a specific 
                     research project, more subtle differences usually become relevant. As an example, the most suitable data format for a corpus will not only 
                     depend on whether it is based on audiovisual or textual source data, but also on the complexity of the source data and the annotation 
                     schemes and possibly interoperability with relevant existing resources within the same research area.</p>
