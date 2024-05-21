@@ -103,10 +103,6 @@ return
                                 <a href="{app:link("views/list-centres.xq?status=B-centre&amp;submit=Filter")}">CLARIN B-centres</a>,
                                 which is the basis for the calculation of the CLARIN KPI listed as #2 above.</li>
                         </ul>
-                        <p>The third potentially relevant KPI is "Collaboration with RIs", and its measure is "Number of official collaborations with RIs as
-                            confirmed in formal agreements". Regarding this KPI, the SIS can provide only indirect and rather imprecise information: it can be gleaned from the number of
-                            Research Infrastructures other than CLARIN that the SIS lists information on. More details in this area can be found in
-                            <a href="https://www.clarin.eu/content/clarin-and">the relevant section(s) of clarin.eu</a>.</p>
                     </div>
                 </div>
                 <div class="footer">{app:footer()}</div>
