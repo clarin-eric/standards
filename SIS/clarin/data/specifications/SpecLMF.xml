@@ -10,15 +10,18 @@
     <keyword>data category registry</keyword>
     <keyword>DCR</keyword>
     <info type="description">
-        <p>"ISO 24613:2008 describes the Lexical Markup Framework (LMF), a metamodel for representing data in lexical databases used with 
+        <p>"<a href="https://www.iso.org/standard/37327.html">ISO 24613:2008</a> is a <i>withdrawn standard</i> that 
+            describes the Lexical Markup Framework (LMF), a metamodel for representing data in lexical databases used with 
             monolingual and multilingual computer applications.</p>
         <p>LMF provides mechanisms that allow the development and integration of a variety of electronic lexical resource types. 
             These mechanisms will present existing lexicons as far as possible. If this is impossible, problematic information will be 
             identified and isolated."
             (<a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=37327">Abstract, ISO 24613:2008</a>)
         </p>
+        <p>(Search the <a href="https://www.iso.org/committee/297592/x/catalogue/p/1/u/0/w/0/d/0">published ISO TC37 SC4 standards</a> 
+            (with "LMF" in the title) for the list of the current LMF standards family.</p>
     </info>
-    <version id="SpecLMF-IS" status="International Standard" usedInCLARINCentre="MPI-PL CLARIN-DK-UCPH CLARIN-PL1">
+    <version id="SpecLMF-IS" status="International Standard">
         <titleStmt>
             <title>Language resource management — Lexical markup framework</title>
             <abbr internal="yes">LMF-2012</abbr>
