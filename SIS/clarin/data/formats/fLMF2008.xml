@@ -1,0 +1,23 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fLMF2008" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>Lexical Markup Framework (legacy)</title>
+        <abbr>LMF:2008</abbr>
+    </titleStmt>
+    <keyword>Lexical Markup</keyword>
+    <info type="description">
+        <p>This format corresponds to the withdrawn ISO 24613:2008 standard, devoted to the description of (mostly machine-readable) lexicons. 
+            It is superseded by a TEI-based format, defined 
+            by <a href="https://www.iso.org/standard/75411.html">ISO 24613-4:2021</a>. The 2021 format is not backwards-compatible.</p>
+        <p>The 2008 format (indeed, subsets of it) were used by several tools, most (all?) of which are not offered online any longer.</p>
+        <p>For more information on the legacy LMF format, see:</p>
+        <ul>
+            <li><a href="https://www.lexicalmarkupframework.org/">https://www.lexicalmarkupframework.org/</a></li>
+            <li><a href="https://www.iso.org/standard/37327.html">ISO page for the 2008 standard</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Lexical_Markup_Framework">LMF Wikipedia page</a> that, as of May 2024, provides information on the withdrawn standard</li>
+        </ul>
+    </info>
+    <relation target="SpecLMF" type="isDefinedBy"/>
+    <mimeType>text/x-lmf+xml</mimeType>
+    <fileExt>.lmf</fileExt>
+    <formatFamily>Lexical file formats</formatFamily>
+</format>
