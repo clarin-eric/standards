@@ -18,5 +18,81 @@
          <domain>Text Annotation</domain>
          <level>recommended</level>
       </format>
+      <format id="fPDFA">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPDF">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fTEI">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCSV">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCSV">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fTSV">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCMDI">
+         <domain>Catalogue Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>PCM-WAV, 48 kHz, 16 bit</comment>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>PCM-WAV above 22 kHz/16 bit</comment>
+      </format>
+      <format id="fMP3">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>         
+      </format>
+      <format id="fMP4">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fLMF">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCoNLL-X">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fCoNLL-U">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fXML">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+         <comment>consider depositing also schema documents (xsd, dtd and/or relaxng) for less known xml formats</comment>
+      </format>
+      <format id="fCoNLL">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>         
+      </format>
+      <format id="fCoNLL-X">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+         <comment>consider using <formatRef ref="fCoNLL-U"/> instead</comment>
+      </format>
+      <format id="fEAF">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+      </format>
    </formats>
 </recommendation>
