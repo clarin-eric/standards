@@ -1,14 +1,15 @@
 <?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fLMF" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
     <titleStmt>
-        <title>LMF Lexical Markup Framework</title>
+        <title>Lexical Markup Framework format</title>
         <abbr>LMF</abbr>
     </titleStmt>
-    <keyword>Lexical Markup</keyword>
+    <keyword>dictionary encoding</keyword>
     <info type="description">
-        <p>See <a href="https://www.iso.org/standard/75411.html">ISO 24613-4:2021</a></p>
+        <p>See <a href="https://www.iso.org/standard/75411.html">ISO 24613-4:2021</a>. This is a <a href="../views/view-format.xq?id=fTEI">TEI-based</a> format for dictionary encoding. 
+            It is not backwards-compatible with <a href="../views/view-format.xq?id=fLMF2008">LMF:2008</a>.</p>
     </info>
-    <relation target="SpecLMF" type="isDefinedBy"/>
-    <mimeType>text/x-lmf+xml</mimeType>
-    <fileExt>.lmf</fileExt>
-    <formatFamily>Lexical file formats</formatFamily>
+    <mimeType>application/tei+xml</mimeType>
+    <fileExt>.xml</fileExt>
+    <fileExt>.tei</fileExt>
+    <formatFamily>TEI</formatFamily>
 </format>

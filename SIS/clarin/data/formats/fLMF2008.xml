@@ -1,9 +1,10 @@
 <?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fLMF2008" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
     <titleStmt>
-        <title>Lexical Markup Framework (legacy)</title>
+        <title>Lexical Markup Framework 2008 format</title>
         <abbr>LMF:2008</abbr>
     </titleStmt>
-    <keyword>Lexical Markup</keyword>
+    <keyword>dictionary encoding</keyword>
+    <keyword>obsolete</keyword>
     <info type="description">
         <p>This format corresponds to the withdrawn ISO 24613:2008 standard, devoted to the description of (mostly machine-readable) lexicons. 
             It is superseded by a TEI-based format, defined 
@@ -19,5 +20,5 @@
     <relation target="SpecLMF" type="isDefinedBy"/>
     <mimeType>text/x-lmf+xml</mimeType>
     <fileExt>.lmf</fileExt>
-    <formatFamily>Lexical file formats</formatFamily>
+    <formatFamily>XML</formatFamily>
 </format>
