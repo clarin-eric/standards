@@ -1,0 +1,18 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fLex0" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>TEI Lex0 (dictionary encoding)</title>
+        <abbr>Lex0</abbr>
+    </titleStmt>
+    <keyword>dictionary encoding</keyword>
+    <keyword>retrodigitisation</keyword>
+    <info type="description">
+        <p>"TEI Lex-0 is both a technical specification and a set of community-based recommendations for 
+            encoding machine-readable dictionaries. It is rooted in the Guidelines of the Text Encoding Initiative (<a href="../views/view-format.xq?id=fTEI">TEI</a>) 
+            and delivered as a customization of the TEI schema." 
+            See <a href="https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html">TEI Lex0 guidelines</a> for more details.</p>
+    </info>
+    <mimeType>application/tei+xml</mimeType>
+    <fileExt>.xml</fileExt>
+    <fileExt>.tei</fileExt>
+    <formatFamily>TEI</formatFamily>
+</format>
