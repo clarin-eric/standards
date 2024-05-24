@@ -86,6 +86,8 @@ return
                                     count(rf:get_centres_where count(/recommendation/formats/* gt 0)) /
                                     count(get_centres(RI=CLARIN, status=deposition centre)) %</b></li>
                         </ul>
+                        
+                        <a href="{app:link("views/list-centres.xq?status=B-centre&amp;submit=Filter")}">CLARIN B-centres</a>
                         -->
                     </div>
                     <div>
@@ -98,10 +100,10 @@ return
                                 or keeping them current for each centre – that is <a href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">the
                                     role of the centres themselves</a>. If you notice that recommendations from some data-depositing centre are missing, please kindly consider inviting that
                                 centre to provide their information to the SIS.</li>
-                            <li>The SIS provides information on all <a href="{app:link("views/list-centres.xq")}">centres that allow
-                                    for data depositions</a> (some of them are not B-centres, and some of them may not be CLARIN centres either). That set is wider than the set of
-                                <a href="{app:link("views/list-centres.xq?status=B-centre&amp;submit=Filter")}">CLARIN B-centres</a>,
-                                which is the basis for the calculation of the CLARIN KPI listed as #2 above.</li>
+                            <li>The SIS provides information on (among others) all the <a href="{app:link("views/list-centres.xq")}">CLARIN centres that allow
+                                    for data depositions</a>. That set is wider than the set of 
+                                    <a href="{app:link("views/list-centres.xq?status=B-centre&amp;submit=Filter")}">CLARIN B-centres</a>, and it is the former set 
+                                    that constitutes the basis for the calculation of the CLARIN KPI listed as #2 above.</li>
                         </ul>
                     </div>
                 </div>
