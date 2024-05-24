@@ -12,9 +12,9 @@ import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-mod
 :)
 
 let $depositioncentres := cm:get-deposition-centres("CLARIN")
-let $numOfBCentres := fn:count($depositioncentres) 
-let $numOfBCentresWithRecommendations := cm:count-number-of-centres-with-recommendations($depositioncentres)
-let $percentage := format-number($numOfBCentresWithRecommendations div $numOfBCentres,'0%')
+let $numOfDepositionCentres := fn:count($depositioncentres) 
+let $numOfDepositionCentresWithRecommendations := cm:count-number-of-centres-with-recommendations($depositioncentres)
+let $percentage := format-number($numOfDepositionCentresWithRecommendations div $numOfDepositionCentres,'0%')
 
 return
     
@@ -66,11 +66,11 @@ return
                         <table style="width:600px; border-collapse:collapse;">
                             <tr>
                                 <td class="column">CLARIN deposition centres recorded in the SIS</td>
-                                <td class="column">{$numOfBCentres}</td>
+                                <td class="column">{$numOfDepositionCentres}</td>
                             </tr>
                             <tr>
                                 <td class="column">Number of deposition centres that have provided information (and recorded that in the SIS)</td>
-                                <td class="column">{$numOfBCentresWithRecommendations}</td>
+                                <td class="column">{$numOfDepositionCentresWithRecommendations}</td>
                             </tr>
                             <tr>
                                 <td class="column">KPI "Collections of standards and mappings" as represented in the SIS </td>
