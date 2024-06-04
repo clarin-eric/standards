@@ -37,7 +37,7 @@
       defines a series of restrictions on the overall TEI schema, referred to as 'templates' and
       meant as bases for further customization, as well as three fully-defined and maintained
       customizations: TEI Lite, TEI simplePrint, TEI Tite.</p>
-    <p>For the purpose of metadata descriptions, free-standing <a href="../views/view-format.xq?id=fTEIHeader">TEI headers</a> can often be found of use.</p>
+    <p>For the purpose of metadata descriptions, free-standing <a href="../views/view-format.xq?id=fTEIHeader">TEI headers</a> can often be useful.</p>
   </info>
   <relation target="SpecTei" type="isDefinedBy"/>
   <mimeType>application/tei+xml</mimeType>
