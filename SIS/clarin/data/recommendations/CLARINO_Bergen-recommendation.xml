@@ -13,10 +13,88 @@
         </nodeInfo>
       </centre>
     </header>
+   <info xml:lang="en">
+      <p>The CLARINO Bergen Centre recommends the listed file formats in the CLARIN
+         <a href="https://standards.clarin.eu/sis/">Standards Information System</a> </p>
+      <p>However we accept most file-formats (paired with documentation and supplemental files) even if not listed, to provide an archive for research output and activities for Language Technologies.</p>
+      <p>We have a more restrictive policy for accepting and importing files for use in our tools. See for instance <a href="https://clarino.uib.no/iness-prod/documentation/Valid_treebank_formats#">Valid treebank formats</a> for INESS</p>
+   </info>
    <formats>
       <format id="fTiger">
          <domain>Text Annotation</domain>
+         <level>acceptable</level>
+         <comment>Used internally for our tools and services.</comment>
+      </format>
+      <format id="fPDFA">
+         <domain>Documentation</domain>
          <level>recommended</level>
+      </format>
+      <format id="fPDF">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fTEI">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+         <comment>More specific dialects/customizations using ODD-documents to specify/extend. Consider reusing exist dialects over creating your own. E.g <formatRef ref="fMenota"/> </comment>
+      </format>
+      <format id="fEAF">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+      </format>
+         <format id="fCSV">
+         <domain>Lexical Resource</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fTSV">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>PCM-WAV, 48 kHz, 16 bit</comment>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>PCM-WAV above 22 kHz/16 bit</comment>
+      </format>
+      <format id="fMP3">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fMP4">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fLMF">
+         <domain>Lexical Resource</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fCoNLL-U">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fXML">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+         <comment>Well known and defined standards of XML-formats are preferred. When depositing non-standard, less known formats consider depositing also schema documents,(ODD, XSD, DTD or RelaxNG), guidelines and documentation to improve usability.</comment>
+      </format>
+      <format id="fCoNLL-X">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+         <comment>consider using <formatRef ref="fCoNLL-U"/> instead</comment>
+      </format>
+      <format id="fMenota">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>TEI extensions for Medieval Nordic texts</comment>
+      </format>
+      <format id="fFST">
+        <domain>Lexical Resource</domain>
+         <level>recommended</level>
+         <comment>Source code format for both XFST and HFST</comment>
       </format>
    </formats>
 </recommendation>
