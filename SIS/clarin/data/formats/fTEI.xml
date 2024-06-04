@@ -24,11 +24,12 @@
       TEI Stylesheets or Roma, XML editor add-ons, etc.</p>
     <p>In the context of CLARIN and LRT applications, the following TEI-based formats are recognizable:</p>
     <ul>
-      <li><a href="../views/view-format.xq?id=fTEISpoken">ISO/TEI Transcriptions of Spoken Language</a> -- serializing the <a href="../views/view-spec.xq?id=SpecTranScript">corresponding ISO standard</a></li>
       <li><a href="../views/view-format.xq?id=fDTABf">DTABf</a> -- Deutsches Textarchiv Basisformat, used at BBAW</li>
-      <li><a href="../views/view-format.xq?id=fLMF">ISO LMF</a> -- TEI serialization of the Lexical Markup Framework (part 4 of the 2020 <a href="../views/view-spec.xq?id=SpecLMF">LMF</a> standard)</li>
-      <li><a href="../views/view-format.xq?id=fLex0">TEI Lex0</a> -- an OASIS standard for the encoding of (a.o.) retrodigitised dictionaries, maintained by DARIAH</li>
       <li><a href="../views/view-format.xq?id=fI5">I5</a> -- tool format of DeReKo (Deutsches Referenzkorpus), used at IDS Mannheim</li>
+      <li><a href="../views/view-format.xq?id=fTEISpoken">ISO/TEI Transcriptions of Spoken Language</a> -- serializing the <a href="../views/view-spec.xq?id=SpecTranScript">corresponding ISO standard</a></li>
+      <li><a href="../views/view-format.xq?id=fLMF">ISO LMF</a> -- TEI serialization of the Lexical Markup Framework (part 4 of the 2020 <a href="../views/view-spec.xq?id=SpecLMF">LMF</a> standard)</li>
+      <li><a href="../views/view-format.xq?id=fMenota">Menota</a> -- the Medieval Nordic Text Archive TEI extensions</li>
+      <li><a href="../views/view-format.xq?id=fLex0">TEI Lex0</a> -- an OASIS standard for the encoding of (a.o.) retrodigitised dictionaries, maintained by DARIAH</li>
     </ul>
     <p>The above list is not meant to be exhaustive. While the above items would generally qualify
       as TEI extensions, the
