@@ -1,0 +1,28 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMenota" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>the Medieval Nordic Text Archive TEI extensions</title>
+    <abbr>Menota</abbr>
+  </titleStmt>
+  
+  <keyword>annotation format</keyword>
+  <keyword>manuscript encoding</keyword>
+  
+  <info type="description">
+    
+    
+    <p>Menota is based on the scheme defined by the [<a>Text Encoding Initiative</a>](https://tei-c.org/). It defines further extensions based primarily on two major differences between Medieval Nordic texts and most other comparable corpora:</p>
+    
+    <ol><li>A large degree of orthographical variation.</li> 
+    <li>A large degree of abbreviation of letters, groups of letters, words and so on.</li></ol>
+    <p>For more on how to use, see the <a href="https://menota.org/handbook.xml">Menota handbook</a> and the <a href="https://menota.org/HB3_D_schemas.xml">description of the schemas</a>.</p>
+    <p>See also:</p> 
+    <ul>
+      <li>Local description of the <a href="../views/view-format.xq?id=fTEI">TEI</a> format family.</li>
+    </ul>
+  </info>  
+    
+  <mimeType>application/xml+tei</mimeType>
+  <fileExt>.xml</fileExt>
+  <formatFamily>TEI</formatFamily>
+</format>
