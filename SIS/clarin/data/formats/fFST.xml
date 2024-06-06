@@ -1,0 +1,24 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fFST" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>Finite-state transducer source code</title>
+        <abbr>FST</abbr>
+    </titleStmt>
+    <keyword>regular expressions</keyword>
+    <keyword>finite state transducer</keyword>
+    <keyword>XFST</keyword>
+    <keyword>HFST</keyword>
+    <keyword>lexical analysis</keyword>
+    <info type="description">
+        <p>Finite-state transducers are finite-state automata that map between two sets of symbols. They are commonly used in lexical analysis. The XFST and HFST projects 
+            ("X" for Xerox, "H" for Helsinki) use a plain-text format defined by Beesley and Karttunen. See the following for more details:</p>
+        <ul>
+            <li><a href="https://press.uchicago.edu/ucp/books/book/distributed/F/bo3613750.html">Kenneth R. Beesley and Lauri Karttunen, Finite-State Morphology, 2003. Series: CSLI Studies in Computational Linguistics; University of Chicago Press. </a></li>
+            <li><a href="https://github.com/hfst/hfst/wiki/HfstXfst">HfstXfst wiki</a>, part of the <a href="https://github.com/hfst">Helsinki Finite-State Technology</a> project</li>
+            <li><a href="https://en.wikipedia.org/wiki/Finite-state_transducer">Wikipedia page on Finite-state transducers</a></li>
+        </ul>
+    </info>
+    <mimeType>text/plain</mimeType>
+    <fileExt>.regex</fileExt>
+    <formatFamily>Plain.Running</formatFamily>
+</format>
