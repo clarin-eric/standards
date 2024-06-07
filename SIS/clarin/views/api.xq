@@ -133,6 +133,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                     </p>
                 </div>
                 
+                <!--
                 <div id="retrieving-centres" style="margin-top:30px;"><span class="subtitle">Retrieving centres</span>
                     <hr/>
                     <p><span class="heading">Method: </span> GET</p>
@@ -147,6 +148,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                         </code>
                     </p>
                 </div>
+                -->
             </div>
             <div class="footer">{app:footer()}</div>
         </div>
