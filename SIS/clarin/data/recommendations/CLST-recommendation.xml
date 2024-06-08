@@ -5,14 +5,20 @@
       <filter>
          <centreID>CLST</centreID>
       </filter>
-   <centre id="CLST" deposition="1">
-        <name>Centre for Language and Speech Technology</name>
-        <a href="https://centres.clarin.eu/centre/40"/>
-        <nodeInfo>
-          <ri status="C-centre">CLARIN</ri>
-        </nodeInfo>
+<!--      <respStmt>
+         <name></name>
+         <!-\-more info can be added here: resp and link elements -\->
+         <reviewDate></reviewDate>
+      </respStmt>-->
+      <centre id="CLST" deposition="1">
+         <name>Centre for Language and Speech Technology</name>
+         <a href="https://centres.clarin.eu/centre/40"/>
+         <nodeInfo>
+            <ri status="C-centre">CLARIN</ri>
+         </nodeInfo>
       </centre>
     </header>
+   <info><p>See the <a href="https://www.ru.nl/en/cls/clst/about-clst">CLST home page</a> for some info.</p></info>
    <formats>
       <format id="fWave">
          <domain>Audiovisual Source Language Data</domain>
