@@ -5,6 +5,11 @@
         <filter>
             <centreID>CLARIN-LT</centreID>
         </filter>
+<!--      <respStmt>
+         <name></name>
+         <!-\-more info can be added here: resp and link elements -\->
+         <reviewDate></reviewDate>
+      </respStmt>-->
         <centre id="CLARIN-LT" deposition="1">
         <name>CLARIN-LT</name>
         <a href="https://centres.clarin.eu/centre/36"/>
@@ -13,6 +18,7 @@
         </nodeInfo>
       </centre>
     </header>
+    <info><p>For starters, see <a href="https://clarin.vdu.lt/xmlui/?locale-attribute=en">https://clarin.vdu.lt/xmlui/?locale-attribute=en</a></p></info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 

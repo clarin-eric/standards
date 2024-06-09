@@ -5,7 +5,7 @@
         <filter>
             <centreID>lundlab</centreID>
         </filter>
-        <centre id="lundlab">
+        <centre id="lundlab" deposition="true">
         <name>Lund University Humanities Lab</name>
         <a href="https://centres.clarin.eu/centre/42"/>
         <nodeInfo>
@@ -13,6 +13,7 @@
         </nodeInfo>
       </centre>
     </header>
+    <info><p>See <a href="https://archive.humlab.lu.se/flat/">https://archive.humlab.lu.se/flat/</a> for some deposition-related info.</p></info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 

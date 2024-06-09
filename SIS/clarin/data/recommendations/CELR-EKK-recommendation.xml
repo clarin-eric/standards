@@ -5,6 +5,11 @@
         <filter>
             <centreID>CELR-EKK</centreID>
         </filter>
+<!--      <respStmt>
+         <name></name>
+         <!-\-more info can be added here: resp and link elements -\->
+         <reviewDate></reviewDate>
+      </respStmt>-->
         <centre id="CELR-EKK" deposition="1">
         <name>Center of Estonian Language Resources</name>
         <a href="https://centres.clarin.eu/centre/15"/>
@@ -13,6 +18,7 @@
         </nodeInfo>
       </centre>
     </header>
+    <info><p>See also <a href="https://www.keeleressursid.ee/en/services">https://www.keeleressursid.ee/en/services</a></p></info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 

@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>bec52cd36a2996677ce07153a19ce774097f9130</lastUpdateCommitID>
+        <lastUpdateCommitID></lastUpdateCommitID>
         <filter>
-            <centreID>GEI</centreID>
+            <centreID>ELAR</centreID>
         </filter>
-        <centre id="GEI">
-        <name>Georg Eckert Institute for International Textbook Research</name>
-        <a href="https://centres.clarin.eu/centre/60"/>
+<!--      <respStmt>
+         <name></name>
+         <!-\-more info can be added here: resp and link elements -\->
+         <reviewDate></reviewDate>
+      </respStmt>-->
+        <centre id="ELAR" deposition="1">
+        <name>Endangered Languages Archive</name>
+        <a href="https://centres.clarin.eu/centre/36"/>
         <nodeInfo>
           <ri status="C-centre">CLARIN</ri>
         </nodeInfo>
       </centre>
     </header>
-    <info><p>This centre does not provide depositing services.</p></info>
+    <info><p>For starters, see <a href="https://www.elararchive.org/dk0000">https://www.elararchive.org/dk0000</a></p></info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 

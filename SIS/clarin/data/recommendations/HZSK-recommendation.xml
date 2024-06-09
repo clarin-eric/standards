@@ -10,9 +10,13 @@
         <a href="https://centres.clarin.eu/centre/9"/>
         <nodeInfo>
           <ri status="C-centre">CLARIN</ri>
+           <ri status="Collections">Text+</ri>
         </nodeInfo>
       </centre>
     </header>
+   <info>
+      <p>See <a href="https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html">https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html</a> 
+         for some info regarding deposition. Treat the recommendations below as potentially obsolete (contact the centre for confirmation).</p></info>
    <formats>
       <format id="fAnvil">
          <domain>Audiovisual Annotation</domain>
