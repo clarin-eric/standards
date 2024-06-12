@@ -214,7 +214,7 @@ declare function cm:get-default-info($id) {
 };
 
 declare function cm:print-curation($respStmt, $language) {
-    if ($respStmt)
+    if ($respStmt and string($respStmt[1]/name))
     then
         (
         <div>
