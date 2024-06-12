@@ -25,7 +25,7 @@ let $template := request:get-parameter('template', '')
 let $centre := cm:get-centre($id)
 let $centre-name := $centre/name/text()
 let $centre-link := data($centre/a/@href)
-
+let $isDepositing := $centre/@deposition
 let $centre-ri := $centre/nodeInfo/ri
 
 let $recommendation := cm:get-recommendations($id)
@@ -89,7 +89,12 @@ else
                                 <span class="heading">Research infrastructure: </span>
                                 <ul>{cm:print-ri($centre-ri)}</ul>
                             </div>
-                            {cm:print-curation($respStmt,$languageHeader)}
+                            {
+                                if ($isDepositing)
+                                then 
+                                    cm:print-curation($respStmt,$languageHeader)
+                                else ()
+                            }
                             {
                                 if ($centre-info)
                                 then
@@ -161,6 +166,9 @@ else
                                     </div>
                                     )
                                 else (
+                                        if ($isDepositing)
+                                        then (
+                                        
                                     <div>
                                         <span class="heading" id="recommendationTable">Recommendations: </span>
                                         <span>not available</span>
@@ -171,6 +179,8 @@ else
                                               <input name="id" type="hidden" value="{$id}"/>
                                        </form>
                                     </div>
+                                            )
+                                        else ()
                                 )
                             }
                         </div>
