@@ -19,7 +19,7 @@
             </nodeInfo>
         </centre>
     </header>
-    <info><p>It is not at all clear that the centre still provides deposition services.</p></info>
+    <info><p>See <a href="http://clarin04.ims.uni-stuttgart.de/repo/">http://clarin04.ims.uni-stuttgart.de/repo/</a> for some hints.</p></info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 
