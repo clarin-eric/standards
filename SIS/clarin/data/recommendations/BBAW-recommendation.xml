@@ -5,6 +5,12 @@
       <filter>
          <centreID>BBAW</centreID>
       </filter>
+      <respStmt>
+         <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+         <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
+         <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
+         <reviewDate>0001-01-01</reviewDate>
+      </respStmt>
       <centre id="BBAW" deposition="1">
         <name>Berlin-Brandenburg Academy of Sciences and Humanities</name>
         <a href="https://centres.clarin.eu/centre/6"/>
@@ -14,6 +20,7 @@
         </nodeInfo>
       </centre>
    </header>
+   <info><!--use p, ul, ol elements here--></info>
    <formats>
       <format id="fCMDI">
          <domain>Catalogue Metadata</domain>

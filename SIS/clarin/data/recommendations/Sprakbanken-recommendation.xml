@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
-    <header>
-        <lastUpdateCommitID>38a46ffacb783ddf1181f9ec1c2445eff43cf2de</lastUpdateCommitID>
-        <filter>
-            <centreID>Sprakbanken</centreID>
-        </filter>
-        <respStmt>
+   <header>
+      <lastUpdateCommitID>38a46ffacb783ddf1181f9ec1c2445eff43cf2de</lastUpdateCommitID>
+      <filter>
+         <centreID>Sprakbanken</centreID>
+      </filter>
+      <respStmt>
          <name>Leif-Jöran Olsson</name>
          <link>https://github.com/ljo</link>
          <reviewDate>2023-10-17</reviewDate>
-        </respStmt>
-        
-        <centre id="Sprakbanken" deposition="1">
+      </respStmt>
+      <centre id="Sprakbanken" deposition="1">
          <name>Språkbanken</name>
          <a href="https://centres.clarin.eu/centre/37"/>
          <nodeInfo>
-           <ri status="C-centre">CLARIN</ri>
+            <ri status="C-centre">CLARIN</ri>
          </nodeInfo>
-        </centre>
-    </header>
+      </centre>
+   </header>
     <info xml:lang="en">
       <p>The following measures are taken to enhance the chance of future interpretability of the
          data.</p>

@@ -10,12 +10,12 @@
          <link>https://www.ling-phil.ox.ac.uk/people/martin-wynne</link>
          <reviewDate>2024-06-12</reviewDate>
       </respStmt>
-        <centre id="OTA" deposition="1">
-        <name>Oxford Text Archive</name>
-        <a href="https://centres.clarin.eu/centre/26"/>
-        <nodeInfo>
-          <ri status="C-centre">CLARIN</ri>
-        </nodeInfo>
+      <centre id="OTA" deposition="1">
+         <name>Oxford Text Archive</name>
+         <a href="https://centres.clarin.eu/centre/26"/>
+         <nodeInfo>
+            <ri status="C-centre">CLARIN</ri>
+         </nodeInfo>
       </centre>
     </header>
     <info xml:lang="en">

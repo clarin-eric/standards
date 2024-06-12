@@ -5,14 +5,21 @@
         <filter>
             <centreID>LINDAT</centreID>
         </filter>
+        <respStmt>
+            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+            <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
+            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
+            <reviewDate>0001-01-01</reviewDate>
+        </respStmt>
         <centre id="LINDAT" deposition="1">
-        <name>LINDAT/CLARIN</name>
-        <a href="https://centres.clarin.eu/centre/3"/>
-        <nodeInfo>
-          <ri status="B-centre">CLARIN</ri>
-        </nodeInfo>
-      </centre>
+            <name>LINDAT/CLARIN</name>
+            <a href="https://centres.clarin.eu/centre/3"/>
+            <nodeInfo>
+                <ri status="B-centre">CLARIN</ri>
+            </nodeInfo>
+        </centre>
     </header>
+    <info><!--use p, ul, ol elements here--></info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 

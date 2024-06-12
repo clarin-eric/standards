@@ -5,14 +5,21 @@
       <filter>
          <centreID>MPI-PL</centreID>
       </filter>
-   <centre id="MPI-PL" deposition="1">
-        <name>MPI for Psycholinguistics</name>
-        <a href="https://centres.clarin.eu/centre/24"/>
-        <nodeInfo>
-          <ri status="B-centre">CLARIN</ri>
-        </nodeInfo>
+      <respStmt>
+         <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+         <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
+         <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
+         <reviewDate>0001-01-01</reviewDate>
+      </respStmt>
+      <centre id="MPI-PL" deposition="1">
+         <name>MPI for Psycholinguistics</name>
+         <a href="https://centres.clarin.eu/centre/24"/>
+         <nodeInfo>
+            <ri status="B-centre">CLARIN</ri>
+         </nodeInfo>
       </centre>
     </header>
+   <info><!--use p, ul, ol elements here--></info>
    <formats>
       <format id="fCHAT">
          <domain>Audiovisual Annotation</domain>

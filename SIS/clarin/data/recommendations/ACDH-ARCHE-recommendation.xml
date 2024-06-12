@@ -5,6 +5,12 @@
       <filter>
          <centreID>ACDH-ARCHE</centreID>
       </filter>
+      <respStmt>
+         <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+         <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
+         <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
+         <reviewDate>0001-01-01</reviewDate>
+      </respStmt>
       <centre id="ACDH-ARCHE" deposition="1">
         <name>Austrian Centre for Digital Humanities and Cultural Heritage - A Resource Centre for the Humanities</name>
         <a href="https://centres.clarin.eu/centre/45"/>
@@ -13,6 +19,7 @@
         </nodeInfo>
       </centre>
    </header>
+   <info><!--use p, ul, ol elements here--></info>
    <formats>
       <format id="fFLAC">
          <domain>Audiovisual Source Language Data</domain>

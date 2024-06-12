@@ -4,7 +4,6 @@
       <filter>
          <centreID>IDS</centreID>
       </filter>
-      
       <respStmt>
          <name>Harald Lüngen</name>
          <resp>Text formats</resp>
@@ -17,8 +16,7 @@
          <link>https://www.ids-mannheim.de/prag/personal/lindenfelser/</link>
          <reviewDate>2024-05-08</reviewDate>
       </respStmt>
-      
-        <centre id="IDS" deposition="1">
+      <centre id="IDS" deposition="1">
          <name>Leibniz-Institut für Deutsche Sprache</name>
          <a href="https://centres.clarin.eu/centre/11"/>
          <nodeInfo>

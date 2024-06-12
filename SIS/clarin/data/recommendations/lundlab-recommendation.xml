@@ -5,13 +5,19 @@
         <filter>
             <centreID>lundlab</centreID>
         </filter>
-        <centre id="lundlab" deposition="true">
-        <name>Lund University Humanities Lab</name>
-        <a href="https://centres.clarin.eu/centre/42"/>
-        <nodeInfo>
-          <ri status="C-centre, K-centre">CLARIN</ri>
-        </nodeInfo>
-      </centre>
+        <respStmt>
+            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+            <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
+            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
+            <reviewDate>0001-01-01</reviewDate>
+        </respStmt>
+        <centre id="lundlab" deposition="1">
+            <name>Lund University Humanities Lab</name>
+            <a href="https://centres.clarin.eu/centre/42"/>
+            <nodeInfo>
+                <ri status="C-centre, K-centre">CLARIN</ri>
+            </nodeInfo>
+        </centre>
     </header>
     <info><p>See <a href="https://archive.humlab.lu.se/flat/">https://archive.humlab.lu.se/flat/</a> for some deposition-related info.</p></info>
     <formats><!--

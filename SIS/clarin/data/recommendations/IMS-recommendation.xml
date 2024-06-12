@@ -5,13 +5,19 @@
         <filter>
             <centreID>IMS</centreID>
         </filter>
+        <respStmt>
+            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+            <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
+            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
+            <reviewDate>0001-01-01</reviewDate>
+        </respStmt>
         <centre id="IMS" deposition="1">
-        <name>Institut für Maschinelle Sprachverarbeitung</name>
-        <a href="https://centres.clarin.eu/centre/10"/>
-        <nodeInfo>
-          <ri status="C-centre">CLARIN</ri>
-        </nodeInfo>
-      </centre>
+            <name>Institut für Maschinelle Sprachverarbeitung</name>
+            <a href="https://centres.clarin.eu/centre/10"/>
+            <nodeInfo>
+                <ri status="C-centre">CLARIN</ri>
+            </nodeInfo>
+        </centre>
     </header>
     <info><p>It is not at all clear that the centre still provides deposition services.</p></info>
     <formats><!--
