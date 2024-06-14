@@ -33,8 +33,8 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
                 <div class="title">Format Statistics</div>
                   <div>
                     <p>This section presents various statistics concerning data deposition 
-                    formats and is still work in progress. Feel welcome to add your suggestions to the 
-                    <a href="https://github.com/clarin-eric/standards/issues/67">discussion at GitHub</a>.</p>
+                    formats and is still work in progress. Feel welcome to add your suggestions as a 
+                    <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS:enhancement&amp;title=Idea for the statistics page">GitHub issue</a>.</p>
                   </div>
                     <div>
                     
