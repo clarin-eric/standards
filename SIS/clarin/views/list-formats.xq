@@ -95,7 +95,8 @@ return
                                 <tr>
                                     <td><!--<span class="heading3">Keyword</span>-->
                                         <select name="keyword" class="inputSelect" 
-                                        style="width:310px;height:25px;background-color:white;">
+                                        style="width:308px;height:25px;background-color:white;padding:4px;
+                                        margin-left:2px;">
                                             {rf:print-option("select", "", "Select keyword ...")}
                                             {rf:print-keywords($keyword)}
                                         </select>
@@ -112,7 +113,7 @@ return
                                 <tr>
                                 <td class ="autocomplete">
                                          <input id="searchId" name="searchFormat" 
-                                         style="width:300px;padding-left:5px" 
+                                         style="width:300px;padding:4px 4px 0px 4px;" 
                                         class="inputText" type="text" 
                                         placeholder="Search format ..." value="{$searchItem}"/>
                                 </td>
