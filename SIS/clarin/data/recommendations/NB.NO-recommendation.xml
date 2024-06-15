@@ -11,7 +11,7 @@
             <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
-        <centre id="NB.NO" deposition="1">
+        <centre id="NB.NO" deposition="0">
             <name>National Library of Norway</name>
             <a href="https://centres.clarin.eu/centre/31"/>
             <nodeInfo>
