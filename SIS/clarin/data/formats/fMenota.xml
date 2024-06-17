@@ -9,16 +9,20 @@
   <keyword>manuscript encoding</keyword>
   
   <info type="description">
-    
-    
-    <p>Menota is based on the scheme defined by the <a href="https://tei-c.org/">Text Encoding Initiative</a>. It defines further extensions based primarily on two major differences between Medieval Nordic texts and most other comparable corpora:</p>
-    
-    <ol><li>A large degree of orthographical variation.</li> 
-    <li>A large degree of abbreviation of letters, groups of letters, words and so on.</li></ol>
-    <p>For more on how to use, see the <a href="https://menota.org/handbook.xml">Menota handbook</a> and the <a href="https://menota.org/HB3_D_schemas.xml">description of the schemas</a>.</p>
-    <p>See also:</p> 
+    <p>Menota is based on the scheme defined by the
+      <a href="https://tei-c.org/">Text Encoding Initiative</a>. It defines further extensions based
+      primarily on two major differences between Medieval Nordic texts and most other comparable
+      corpora:</p>
+    <ol>
+      <li>A large degree of orthographical variation.</li>
+      <li>A large degree of abbreviation of letters, groups of letters, words and so on.</li>
+    </ol>
+    <p>For more on how to use, see the <a href="https://menota.org/handbook.xml">Menota handbook</a>
+      and the <a href="https://menota.org/HB3_D_schemas.xml">description of the schemas</a>.</p>
+    <p>See also:</p>
     <ul>
-      <li>Local description of the <a href="../views/view-format.xq?id=fTEI">TEI</a> format family.</li>
+      <li>Local description of the <a href="../views/view-format.xq?id=fTEI">TEI</a> format
+        family.</li>
     </ul>
   </info>  
     
