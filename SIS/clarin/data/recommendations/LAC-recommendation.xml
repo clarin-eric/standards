@@ -22,7 +22,7 @@
     </header>
    <info><!--use p, ul, ol elements here--></info>
    <formats>
-      <format id="fELAN">
+      <format id="fEAF">
          <domain>Audiovisual Annotation</domain>
          <level>recommended</level>
       </format>

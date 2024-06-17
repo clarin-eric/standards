@@ -57,7 +57,7 @@
          <level>discouraged</level>
          <comment>Consider using <formatRef ref="fPDFA"/> instead.</comment>
       </format>
-      <format id="fELAN">
+      <format id="fEAF">
          <domain>Audiovisual Annotation</domain>
          <level>acceptable</level>
       </format>

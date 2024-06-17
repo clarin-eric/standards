@@ -77,7 +77,7 @@
          <domain>Audiovisual Annotation</domain>
          <level>discouraged</level>
       </format>
-      <format id="fELAN">
+      <format id="fEAF">
          <domain>Audiovisual Annotation</domain>
          <level>acceptable</level>
       </format>
