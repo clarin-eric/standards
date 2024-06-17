@@ -1,7 +1,7 @@
 <?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fEAF" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>ELAN EAF</title>
+    <title>ELAN Annotation Format</title>
     <abbr>EAF</abbr>
   </titleStmt>
   <extId type="PRONOM">fmt/1543</extId>
