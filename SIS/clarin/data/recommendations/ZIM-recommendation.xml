@@ -118,7 +118,7 @@
          <level>recommended</level>
       </format>
       <format id="fHDF5">
-         <domain>Lexical Resource</domain>
+         <domain>Packaging</domain>
          <level>recommended</level>
       </format>
       <format id="fBiBTeX">
@@ -198,7 +198,7 @@
          <level>recommended</level>
       </format>
       <format id="fGZIP">
-         <domain>Tool Support</domain>
+         <domain>Packaging</domain>
          <level>recommended</level>
       </format>
       <format id="fXSD">
@@ -210,7 +210,7 @@
          <level>recommended</level>
       </format>
       <format id="fZIP">
-         <domain>Tool Support</domain>
+         <domain>Packaging</domain>
          <level>recommended</level>
       </format>
    </formats>

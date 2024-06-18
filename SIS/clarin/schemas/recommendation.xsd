@@ -180,6 +180,12 @@
                             potential patterns that may give rise to new domains.</xs:documentation>
                     </xs:annotation>
                 </xs:enumeration>
+                <xs:enumeration value="Packaging">
+                    <xs:annotation>
+                        <xs:documentation>Packaging formats of various nature (archiving,
+                            compression, storage) if no more specific domain is suitable.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
                 <xs:enumeration value="Tool Support">
                     <xs:annotation>
                         <xs:documentation>Tool-related formats required for specific functionality
