@@ -11,7 +11,7 @@
             <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
-        <centre id="DH-REP">
+        <centre id="DH-REP" deposition="1">
         <name>DARIAH-DE Repository</name>
         <a href="https://centres.clarin.eu/centre/62"/>
         <nodeInfo>
