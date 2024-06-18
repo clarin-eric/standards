@@ -11,7 +11,7 @@
             <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
-        <centre id="NB.NO" deposition="0">
+        <centre id="NB.NO">
             <name>National Library of Norway</name>
             <a href="https://centres.clarin.eu/centre/31"/>
             <nodeInfo>
@@ -30,7 +30,7 @@
             *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
             
             <format id="null">
-                <domain>Audiovisual Annotation</domain>
+                <domain>Audiovisual Annotation</domain>NB.NO-recommendation.xml
                 <level>recommended</level>
             </format> 
         -->
