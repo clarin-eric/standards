@@ -171,7 +171,7 @@ else
                                         
                                     <div>
                                         <span class="heading" id="recommendationTable">Recommendations: </span>
-                                        <span>not available</span>
+                                        <span>not yet available in the SIS</span>
                                         <form method="get" action="" style="float: right;">
                                               <input name="template" class="button"
                                               style="margin-bottom:5px; height:25px;width:165px;" 
