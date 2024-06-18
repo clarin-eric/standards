@@ -68,6 +68,10 @@
         <desc>Structured or unstructured descriptions of linguistic varieties or phenomena, typological databases etc.</desc>
     </domain>
     <domain id="17" orderBy="Uncategorized">
+        <name>Packaging</name>
+        <desc>Packaging formats of various nature (archiving, compression, library) if no more specific domain is suitable.</desc>
+    </domain>
+    <domain id="18" orderBy="Uncategorized">
         <name>Other</name>
         <desc>Any other function that cannot be included in an existing domain. The content of this domain will be periodically examined for potential patterns that may give rise to new domains.</desc>
     </domain>
