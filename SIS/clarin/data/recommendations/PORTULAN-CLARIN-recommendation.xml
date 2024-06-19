@@ -8,7 +8,7 @@
         <respStmt>
             <name>João Silva</name>
             <resp>All formats</resp>
-            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
+            <link>https://github.com/joaormfsilva</link>
             <reviewDate>2024-06-19</reviewDate>
         </respStmt>
         <centre id="PORTULAN-CLARIN" deposition="1">
@@ -23,20 +23,7 @@
         <p>The set of recommended file formats is small, and comprises well-documented standards, as to ease the handling of the resources in possible future data manipulations that may be needed.</p>
         <p>PORTULAN, however, poses no restriction on what formats are accepted and will preserve the resource in the format that it was submitted.</p>
     </info>
-    <formats><!--
-            This template will assist in adjusting/creating a recommendations document if you don't
-            have access to a schema-aware XML editor. Copy the XML fragment, 
-            *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
-            *  adjust the domain (https://clarin.ids-mannheim.de/standards/views/list-domains.xq ),
-            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
-            *  repeat as necessary;
-            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
-            
-            <format id="null">
-                <domain>Audiovisual Annotation</domain>
-                <level>recommended</level>
-            </format> 
-        -->
+    <formats>
         <format id="fAIFF">
             <domain>Audiovisual Source Language Data</domain>
             <level>acceptable</level>
