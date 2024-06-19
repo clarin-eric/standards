@@ -168,6 +168,11 @@
             <domain>Text Annotation</domain>
             <level>acceptable</level>
         </format>
+        <format id="fTextPlain">
+            <domain>Lexical Resource</domain>
+            <level>acceptable</level>
+            <comment>for simple word lists</comment>
+        </format>
         <format id="fTIFF">
             <domain>Image Source Language Data</domain>
             <level>acceptable</level>
@@ -182,6 +187,10 @@
         </format>
         <format id="fWAVE">
             <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fXML">
+            <domain>Lexical Resource</domain>
             <level>acceptable</level>
         </format>
         <format id="fXML">
