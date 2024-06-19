@@ -168,15 +168,15 @@
          <comment>25 fps, 1920×1080, constant bit rate </comment>
       </format>
       <format id="fGZIP">
-         <domain>Tool Support</domain>
+         <domain>Packaging</domain>
          <level>acceptable</level>
       </format>
       <format id="fTAR">
-         <domain>Tool Support</domain>
+         <domain>Packaging</domain>
          <level>acceptable</level>
       </format>
       <format id="fZIP">
-         <domain>Tool Support</domain>
+         <domain>Packaging</domain>
          <level>recommended</level>
       </format>
       <format id="fMarkdown">

@@ -236,7 +236,7 @@
         </format>
         <!-- Uncategorized -->
         <format id="fZIP">
-            <domain>Tool Support</domain>
+            <domain>Packaging</domain>
             <level>recommended</level>
         </format>
     </formats>

@@ -139,15 +139,15 @@
          <level>recommended</level>
       </format>
       <format id="fGZIP">
-         <domain>Tool Support</domain>
+         <domain>Packaging</domain>
          <level>recommended</level>
       </format>
       <format id="fRAR">
-         <domain>Tool Support</domain>
+         <domain>Packaging</domain>
          <level>recommended</level>
       </format>
       <format id="fTAR">
-         <domain>Tool Support</domain>
+         <domain>Packaging</domain>
          <level>recommended</level>
       </format>
       <format id="fXSD">
@@ -159,7 +159,7 @@
          <level>recommended</level>
       </format>
       <format id="fZIP">
-         <domain>Tool Support</domain>
+         <domain>Packaging</domain>
          <level>recommended</level>
       </format>
    </formats>
