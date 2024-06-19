@@ -51,5 +51,5 @@ declare function centre:get-distinct-research-infrastructures(){
 };
 
 declare function centre:get-deposition-centres($ri){
-    $centre:centres[nodeInfo/ri=$ri and @deposition=1]
+    $centre:centres[nodeInfo/ri=$ri and xs:boolean(@deposition)]
 };
