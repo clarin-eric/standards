@@ -12,7 +12,7 @@
             <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
-        <centre id="CLARIN-EL">
+        <centre id="CLARIN:EL">
         <name>CLARIN:EL National Infrastructure for Language Resources and Technologies in Greece</name>
         <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/75"/>
         <nodeInfo>
