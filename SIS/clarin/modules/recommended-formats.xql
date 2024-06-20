@@ -18,6 +18,54 @@ import module namespace functx = "http://www.functx.com" at "../resources/lib/fu
 declare variable $rf:pageSize := 50;
 declare variable $rf:searchMap := rf:getSearchMap();
 
+declare function rf:isCurated($respStmt){
+    let $respName := string($respStmt[1]/name)
+    return 
+        if ($respName) then true() else false()
+};
+
+declare function rf:print-curation($recommendation, $language) {
+   let $respStmt := $recommendation/header/respStmt
+   return
+   if (rf:isCurated($respStmt))
+   then
+        (
+        <div>
+            <span class="heading">Curation: </span>
+            {
+                for $rs in $respStmt
+                let $resp := functx:capitalize-first($rs/resp/text())
+                return
+                    (
+                    <ul>
+                        <li>{if ($resp) then concat($resp,": ") else (),
+                            
+                                if (empty($rs/link/text()))
+                                then
+                                    (<span>{$rs/name/text()}</span>)
+                                else
+                                    (
+                                    <a href="{$rs/link/text()}">{$rs/name/text()}</a>)
+                            }
+                            <span> ({
+                                    format-date($rs/reviewDate/text(),
+                                    "[MNn] [D], [Y]", $language, (), ())
+                                })</span>
+                        </li>
+                    </ul>
+                    )
+            }
+        </div>
+        )
+    else
+        (
+        <div>
+            <span class="heading" style="color:darkred">Warning: </span>
+            <span style="color:darkred">The recommendations have not been curated yet.</span>
+        </div>
+        )
+};
+
 declare function rf:getSearchMap() {
     let $fids := distinct-values(($recommendation:format-ids, $format:ids))
     let $fabbrs := distinct-values(($recommendation:format-abbrs, $format:abbrs))

@@ -25,10 +25,8 @@ let $template := request:get-parameter('template', '')
 let $centre := cm:get-centre($id)
 let $centre-name := $centre/name/text()
 let $centre-link := data($centre/a/@href)
-let $isDepositing := xs:boolean($centre/@deposition)
+let $isDepositing := cm:isDepositing($centre)
 let $centre-ri := $centre/nodeInfo/ri
-
-let $recommendation := cm:get-recommendations($id)
 
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 let $ri :=  request:get-cookie-value("ri")
@@ -36,7 +34,7 @@ let $languageHeader := if (not($ri eq "CLARIN") and not($ri eq "all")) then "de"
 let $centre-info := cm:get-centre-info($id,$languageHeader)
 
 let $exportFilename := concat($id,"-recommendation.xml")
-let $respStmt := $recommendation/header/respStmt
+let $recommendation := cm:get-recommendations($id)
 let $domains := fn:distinct-values($recommendation/formats/format/domain/text())
 
 return
@@ -92,7 +90,7 @@ else
                             {
                                 if ($isDepositing)
                                 then 
-                                    cm:print-curation($respStmt,$languageHeader)
+                                    rf:print-curation($recommendation,$languageHeader)
                                 else ()
                             }
                             {
