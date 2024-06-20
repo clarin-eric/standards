@@ -199,8 +199,8 @@ declare function rf:paging($rows, $page as xs:int) {
         $rows[position() >= $min and position() < $max]
 };
 
-declare function rf:print-centres($centre) {
-    let $depositing-centres := $centre:centres[@deposition = "1" or @deposition = "true"]
+declare function rf:print-centres($centre,$ri) {
+    let $depositing-centres := centre:get-deposition-centres($ri)
     for $c in data($depositing-centres/@id)
         order by fn:lower-case($c)
     return

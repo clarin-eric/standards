@@ -111,7 +111,7 @@ else
                                     <td width="180px;" >
                                         <select name="centre" class="inputSelect" style="width:290px;height:30px;padding:5px;background-color:white;">
                                             {rf:print-option("select", "", "Select centre ...")}
-                                            {rf:print-centres($centre)}
+                                            {rf:print-centres($centre,$ri)}
                                         </select>
                                     </td>
                                     
