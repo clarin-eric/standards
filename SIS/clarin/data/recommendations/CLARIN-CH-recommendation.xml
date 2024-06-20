@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
+    <header>
+        <lastUpdateCommitID></lastUpdateCommitID>
+        <filter>
+            <centreID>CLARIN-CH</centreID>
+        </filter>
+        <respStmt>
+            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+            <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
+            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
+            <reviewDate>0001-01-01</reviewDate>
+        </respStmt>
+        <centre id="CLARIN-CH" deposition="1">
+            <name>CLARIN Switzerland</name>
+            <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/80" label="CLARIN-CH-LiRI"/>
+            <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/81" label="CLARIN-CH-LaRS"/>
+            <nodeInfo>
+                <ri status="B-centre">CLARIN</ri>
+            </nodeInfo>
+        </centre>
+    </header>
+    <info><p>For starters, see <a href="https://clarin-ch.ch/start">https://clarin-ch.ch/start</a></p></info>
+    <formats><!--
+            This template will assist in adjusting/creating a recommendations document if you don't
+            have access to a schema-aware XML editor. Copy the XML fragment, 
+            *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
+            *  adjust the domain (https://clarin.ids-mannheim.de/standards/views/list-domains.xq ),
+            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
+            *  repeat as necessary;
+            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
+            
+            <format id="null">
+                <domain>Audiovisual Annotation</domain>
+                <level>recommended</level>
+            </format> 
+        -->
+    </formats>
+</recommendation>
