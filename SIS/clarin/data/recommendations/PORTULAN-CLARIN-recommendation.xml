@@ -36,11 +36,28 @@
             <domain>Image Source Language Data</domain>
             <level>acceptable</level>
         </format>
-        <format id="fCoNLL">
-            <domain>Text Annotation</domain>
+        <format id="fCHAT">
+            <domain>Audiovisual Annotation</domain>
             <level>acceptable</level>
         </format>
+        <format id="fCHAT-XML">
+            <domain>Audiovisual Annotation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fCMDI">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fCoNLL">
+            <domain>Text Annotation</domain>
+            <level>discouraged</level>
+            <comment>should use CoNLL-X or CoNLL-U</comment>
+        </format>
         <format id="fCoNLL-U">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCoNLL-X">
             <domain>Text Annotation</domain>
             <level>acceptable</level>
         </format>
@@ -49,6 +66,10 @@
             <level>acceptable</level>
         </format>
         <format id="fCSV">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fDC-XML">
             <domain>Metadata</domain>
             <level>acceptable</level>
         </format>
@@ -86,7 +107,11 @@
             <comment>what is relevant are the contents of the archive</comment>
         </format>
         <format id="fHDF5">
-            <domain>Other</domain>
+            <domain>Packaging</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fHTML">
+            <domain>Documentation</domain>
             <level>acceptable</level>
         </format>
         <format id="fHTML">
@@ -130,6 +155,10 @@
             <domain>Textual Source Language Data</domain>
             <level>discouraged</level>
         </format>
+        <format id="fPDF">
+            <domain>Text Annotation</domain>
+            <level>discouraged</level>
+        </format>
         <format id="fPDFA">
             <domain>Documentation</domain>
             <level>acceptable</level>
@@ -142,6 +171,10 @@
             <domain>Audiovisual Annotation</domain>
             <level>acceptable</level>
         </format>
+        <format id="fRAW">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
         <format id="fTAR">
             <domain>Packaging</domain>
             <level>acceptable</level>
@@ -149,6 +182,10 @@
         </format>
         <format id="fTEI">
             <domain>Text Annotation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTEIHeader">
+            <domain>Metadata</domain>
             <level>acceptable</level>
         </format>
         <format id="fTEISpoken">
