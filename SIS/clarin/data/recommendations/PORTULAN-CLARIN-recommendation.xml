@@ -20,8 +20,8 @@
         </centre>
     </header>
     <info xml:lang="en">
-        <p>The set of recommended file formats is small, and comprises well-documented standards, as to ease the handling of the resources in possible future data manipulations that may be needed.</p>
-        <p>PORTULAN, however, poses no restriction on what formats are accepted and will preserve the resource in the format that it was submitted.</p>
+        <p>The set of recommended file formats comprises open, well-documented standards, and should be understood as an advice concerning best-practices.</p>
+        <p>PORTULAN, however, poses no restriction on what formats it accepts and will preserve the resource in the format that it was submitted.</p>
     </info>
     <formats>
         <format id="fAIFF">
