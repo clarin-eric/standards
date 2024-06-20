@@ -67,7 +67,11 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="search" type="xs:string"/>
-    <xs:element name="centreID" type="xs:string"/>
+    <xs:element name="centreID" type="xs:string">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">'shorthand' for the centre that acts as its ID</xs:documentation>
+        </xs:annotation>
+    </xs:element>
     <xs:element name="domain">
         <xs:simpleType>
             <xs:restriction base="xs:string">
@@ -208,9 +212,10 @@
     </xs:element>
     <xs:element name="respStmt">
         <xs:annotation>
-            <xs:documentation>This is an element filled with the name of the curator and date of 
-                curation, and used as an official 'stamp' stating that the set of recommendations 
-                is now ready for public consumption. It should be set at inputhons or manually, when receiving subsequent PRs from the given centre.</xs:documentation>
+            <xs:documentation>This is an element filled with the name of the curator and date of
+                curation, and used as an official 'stamp' stating that the set of recommendations is
+                now ready for public consumption. It should be set at inputhons or manually, when
+                receiving subsequent PRs from the given centre.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
@@ -224,7 +229,8 @@
     <xs:element name="name" type="xs:string"/>
     <xs:element name="resp" type="xs:string">
         <xs:annotation>
-            <xs:documentation>Optionally specifies the scope of responsibility, if e.g. a centre manages data across different departments.</xs:documentation>
+            <xs:documentation>Optionally specifies the scope of responsibility, if e.g. a centre
+                manages data across different departments.</xs:documentation>
         </xs:annotation>
     </xs:element>
     <xs:element name="link" type="xs:string">
@@ -240,18 +246,65 @@
         </xs:annotation>
     </xs:element>
     <xs:element name="centre">
-        <xs:complexType mixed="true">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">information about the centre</xs:documentation>
+            <xs:appinfo>
+                <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                    <sch:rule context="header/centre">
+                        <sch:assert
+                            test="count(../filter/centreID) = 0 or @id = ../filter/centreID/text()"
+                            >The attribute @id of header/centre has to match header/filter/centreID if
+                            the latter is present.</sch:assert>
+                    </sch:rule>
+                </sch:pattern>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType mixed="false">
             <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
-                <xs:element ref="a"/>
+                <xs:element name="name" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>the full name of the centre</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element ref="registryLink" minOccurs="1" maxOccurs="unbounded"/>
                 <xs:element ref="nodeInfo"/>
             </xs:sequence>
-            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="id" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">'shorthand' for the centre that acts as its ID</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="deposition" type="xs:boolean" use="optional" default="false"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="registryLink">
+        <xs:annotation>
+            <xs:documentation>Link to a registry / database, e.g. the CLARIN centre registry; it is
+                assumed that a centre always comes from some catalogue of centres in the given RI. A
+                centre may be part of different registries. If multiple registryLink elements are
+                present sharing an identical attribute @registry, then, for statistical purposes, it
+                is assumed that the described entity is an abstraction (e.g. a consortium) that
+                consists of more than one centre.</xs:documentation></xs:annotation>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="uri" use="required" type="xs:anyURI"/>
+                    <xs:attribute name="registry" use="optional" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Name of the registry being linked to. Default: the
+                                CLARIN centre registry.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="label" use="optional" type="xs:string">
+                        <xs:annotation><xs:documentation>Optional label</xs:documentation></xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
         </xs:complexType>
     </xs:element>
     <xs:element name="nodeInfo" type="nodeInfoType"/>
     <xs:complexType name="nodeInfoType">
+        
         <xs:sequence>
             <xs:element ref="ri" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -281,12 +334,14 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="format">
+        <xs:annotation>
+            <xs:documentation>The centreID element is only valid for exports from the
+                "recommended formats" list, provided for all centres. It should NOT be
+                used for importing centre recommendations into SIS.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="centreID" minOccurs="0" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>This element is only valid for exports from the "recommended formats" list, provided for all centres. 
-                            It should NOT be used for importing centre recommendations into SIS.</xs:documentation></xs:annotation>
                 </xs:element>
                 <xs:element ref="domain"/>
                 <xs:element ref="level"/>
