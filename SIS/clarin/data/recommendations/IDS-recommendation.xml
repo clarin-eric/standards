@@ -18,7 +18,7 @@
       </respStmt>
       <centre id="IDS" deposition="1">
          <name>Leibniz-Institut für Deutsche Sprache</name>
-         <a href="https://centres.clarin.eu/centre/11"/>
+         <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/11"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
             <ri status="Collections, Lexical Resources, Operations">Text+</ri>

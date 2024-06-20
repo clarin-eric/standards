@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
         <lastUpdateCommitID>bec52cd36a2996677ce07153a19ce774097f9130</lastUpdateCommitID>
@@ -13,7 +14,7 @@
         </respStmt>
         <centre id="DH-REP" deposition="1">
         <name>DARIAH-DE Repository</name>
-        <a href="https://centres.clarin.eu/centre/62"/>
+        <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/62"/>
         <nodeInfo>
           <ri status="C-centre">CLARIN</ri>
           <ri status="">DARIAH</ri>
