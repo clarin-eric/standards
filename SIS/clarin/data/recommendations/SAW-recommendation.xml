@@ -11,7 +11,7 @@
         </respStmt>
         <centre id="SAW" deposition="1">
             <name>SAW Leipzig</name>
-            <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/4"/>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/4"/>
             <nodeInfo>
                 <ri status="B-centre">CLARIN</ri>
                 <ri status="Lexical Resources, Operations">Text+</ri>

@@ -14,7 +14,7 @@
       </respStmt>
       <centre id="BBAW" deposition="1">
         <name>Berlin-Brandenburg Academy of Sciences and Humanities</name>
-        <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/6"/>
+        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/6"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>
           <ri status="Collections, Lexical Resources, Editions">Text+</ri>

@@ -14,7 +14,7 @@
         </respStmt>
         <centre id="IMS" deposition="1">
             <name>Institut für Maschinelle Sprachverarbeitung</name>
-            <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/10"/>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/10"/>
             <nodeInfo>
                 <ri status="C-centre">CLARIN</ri>
             </nodeInfo>

@@ -14,7 +14,7 @@
       </respStmt>
       <centre id="MPI-PL" deposition="1">
          <name>MPI for Psycholinguistics</name>
-         <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/24"/>
+         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/24"/>
          <nodeInfo>
             <ri status="B-centre">CLARIN</ri>
          </nodeInfo>

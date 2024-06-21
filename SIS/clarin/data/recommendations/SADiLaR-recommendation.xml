@@ -14,7 +14,7 @@
         </respStmt>
         <centre id="SADiLaR" deposition="1">
             <name>South African Centre for Digital Language Resources</name>
-            <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/58"/>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/58"/>
             <nodeInfo>
                 <ri status="C-centre aiming-for-B">CLARIN</ri>
             </nodeInfo>

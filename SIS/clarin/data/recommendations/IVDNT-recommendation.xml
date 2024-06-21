@@ -14,7 +14,7 @@
         </respStmt>
         <centre id="IVDNT" deposition="1">
             <name>Instituut voor de Nederlandse Taal</name>
-            <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/22"/>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/22"/>
             <nodeInfo>
                 <ri status="B-centre">CLARIN</ri>
             </nodeInfo>

@@ -14,7 +14,7 @@
         </respStmt>
         <centre id="PORTULAN-CLARIN" deposition="1">
             <name>PORTULAN CLARIN Research Infrastructure for the Science and Technology of Language</name>
-            <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/50"/>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/50"/>
             <nodeInfo>
                 <ri status="B-centre,K-centre">CLARIN</ri>
             </nodeInfo>

@@ -8,7 +8,7 @@
         </filter>
         <centre id="FZJ">
         <name>Forschungzentrum Jülich</name>
-        <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/7"/>
+        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/7"/>
         <nodeInfo>
           <ri status="E-centre">CLARIN</ri>
           <ri status="Operations">Text+</ri>

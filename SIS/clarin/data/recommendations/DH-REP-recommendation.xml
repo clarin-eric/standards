@@ -14,7 +14,7 @@
         </respStmt>
         <centre id="DH-REP" deposition="1">
         <name>DARIAH-DE Repository</name>
-        <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/62"/>
+        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/62"/>
         <nodeInfo>
           <ri status="C-centre">CLARIN</ri>
           <ri status="">DARIAH</ri>

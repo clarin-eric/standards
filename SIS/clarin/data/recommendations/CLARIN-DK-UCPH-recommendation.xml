@@ -14,7 +14,7 @@
       </respStmt>
    <centre id="CLARIN-DK-UCPH" deposition="1">
         <name>The CLARIN Centre at the University of Copenhagen</name>
-        <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/14"/>
+        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/14"/>
         <nodeInfo>
           <ri status="B-centre,K-centre">CLARIN</ri>
         </nodeInfo>

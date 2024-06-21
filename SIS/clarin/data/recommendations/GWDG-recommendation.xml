@@ -8,7 +8,7 @@
         </filter>
         <centre id="GWDG">
         <name>Gesellschaft für wissenschaftliche Datenverarbeitung Göttingen</name>
-        <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/8"/>
+        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/8"/>
         <nodeInfo>
           <ri status="E-centre">CLARIN</ri>
           <ri status="Operations">Text+</ri>

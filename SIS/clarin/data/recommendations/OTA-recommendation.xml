@@ -13,7 +13,7 @@
       </respStmt>
       <centre id="OTA" deposition="1">
          <name>Oxford Text Archive</name>
-         <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/26"/>
+         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/26"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
          </nodeInfo>

@@ -14,7 +14,7 @@
         </respStmt>
         <centre id="lundlab" deposition="1">
             <name>Lund University Humanities Lab</name>
-            <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/42"/>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/42"/>
             <nodeInfo>
                 <ri status="C-centre, K-centre">CLARIN</ri>
             </nodeInfo>

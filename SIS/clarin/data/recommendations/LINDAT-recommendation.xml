@@ -14,7 +14,7 @@
         </respStmt>
         <centre id="LINDAT" deposition="1">
             <name>LINDAT/CLARIN</name>
-            <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/3"/>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/3"/>
             <nodeInfo>
                 <ri status="B-centre">CLARIN</ri>
             </nodeInfo>

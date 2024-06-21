@@ -8,7 +8,7 @@
         </filter>
         <centre id="Huygens">
         <name>Huygens ING</name>
-        <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/21"/>
+        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/21"/>
         <nodeInfo>
           <ri status="C-centre">CLARIN</ri>
         </nodeInfo>

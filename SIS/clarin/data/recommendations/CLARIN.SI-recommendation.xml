@@ -14,7 +14,7 @@
       </respStmt>
    <centre id="CLARIN.SI" deposition="1">
         <name>CLARIN.SI Language Technology Centre</name>
-        <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/30"/>
+        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/30"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>
         </nodeInfo>

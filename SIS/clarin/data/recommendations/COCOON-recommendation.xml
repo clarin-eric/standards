@@ -14,7 +14,7 @@
       </respStmt>
       <centre id="COCOON" deposition="1">
          <name>Collections de corpus oraux numeriques </name>
-         <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/33"/>
+         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/33"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
          </nodeInfo>

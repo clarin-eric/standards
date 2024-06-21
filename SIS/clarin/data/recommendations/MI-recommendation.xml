@@ -14,7 +14,7 @@
       </respStmt>
       <centre id="MI" deposition="1">
          <name>Meertens Instituut/HuC</name>
-         <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/23"/>
+         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/23"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
          </nodeInfo>

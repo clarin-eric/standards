@@ -8,7 +8,7 @@
         </filter>
         <centre id="MMSHs-Phonothèque">
         <name>Mediterranean Research Centre for the Humanities' Phonothèque</name>
-        <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/44"/>
+        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/44"/>
         <nodeInfo>
           <ri status="C-centre">CLARIN</ri>
         </nodeInfo>

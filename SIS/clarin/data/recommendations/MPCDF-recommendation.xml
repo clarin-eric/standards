@@ -8,7 +8,7 @@
         </filter>
         <centre id="MPCDF">
         <name>Max Planck Computing and Data Facility</name>
-        <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/12"/>
+        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/12"/>
         <nodeInfo>
           <ri status="E-centre">CLARIN</ri>
         </nodeInfo>

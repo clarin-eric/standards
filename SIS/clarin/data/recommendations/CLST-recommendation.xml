@@ -14,7 +14,7 @@
       </respStmt>
       <centre id="CLST" deposition="1">
          <name>Centre for Language and Speech Technology</name>
-         <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/40"/>
+         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/40"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
          </nodeInfo>

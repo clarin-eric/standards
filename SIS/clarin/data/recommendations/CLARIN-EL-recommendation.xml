@@ -14,7 +14,7 @@
         </respStmt>
         <centre id="CLARIN:EL" deposition="1">
         <name>CLARIN:EL National Infrastructure for Language Resources and Technologies in Greece</name>
-        <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/75"/>
+        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/75"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>
         </nodeInfo>

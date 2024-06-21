@@ -14,7 +14,7 @@
       </respStmt>
       <centre id="EKUT" deposition="1">
          <name>Eberhard Karls Universität Tübingen</name>
-         <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/1"/>
+         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/1"/>
          <nodeInfo>
             <ri status="B-centre">CLARIN</ri>
             <ri status="Collections, Lexical Resources">Text+</ri>

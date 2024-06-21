@@ -14,7 +14,7 @@
       </respStmt>
       <centre id="UdS" deposition="1">
          <name>Universität des Saarlandes</name>
-         <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/13"/>
+         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/13"/>
          <nodeInfo>
             <ri status="B-centre">CLARIN</ri>
             <ri status="Collections">Text+</ri>

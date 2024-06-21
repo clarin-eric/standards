@@ -14,7 +14,7 @@
         </respStmt>
         <centre id="TROLLing" deposition="1">
             <name>The Tromsø Repository of Language and Linguistics</name>
-            <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/48"/>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/48"/>
             <nodeInfo>
                 <ri status="C-centre">CLARIN</ri>
             </nodeInfo>

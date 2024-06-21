@@ -289,12 +289,12 @@
             <xs:simpleContent>
                 <xs:extension base="xs:string">
                     <xs:attribute name="uri" use="required" type="xs:anyURI"/>
-                    <xs:attribute name="registry" use="required">
+                    <xs:attribute name="registry" use="required" type="ResearchInfrastructures">
                         <xs:annotation>
                             <xs:documentation>Name of the registry being linked to. Default: the
                                 CLARIN centre registry.</xs:documentation>
                         </xs:annotation>
-                        <xs:simpleType>
+<!--                        <xs:simpleType>
                             <xs:restriction base="xs:string">
                                 <xs:enumeration value="CLARIN CR">
                                     <xs:annotation>
@@ -312,7 +312,7 @@
                                     </xs:annotation>
                                 </xs:enumeration>
                             </xs:restriction>
-                        </xs:simpleType>
+                        </xs:simpleType>-->
                     </xs:attribute>
                     <xs:attribute name="label" use="optional" type="xs:string">
                         <xs:annotation><xs:documentation>Optional label</xs:documentation></xs:annotation>

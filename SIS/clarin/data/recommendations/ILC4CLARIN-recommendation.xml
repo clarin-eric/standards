@@ -14,7 +14,7 @@
       </respStmt>
       <centre id="ILC4CLARIN" deposition="1">
          <name>The ILC4CLARIN Centre at the Institute for Computational Linguistics</name>
-         <registryLink registry="CLARIN CR" uri="https://centres.clarin.eu/centre/34"/>
+         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/34"/>
          <nodeInfo>
             <ri status="B-centre">CLARIN</ri>
          </nodeInfo>
