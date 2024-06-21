@@ -9,7 +9,7 @@
             <name>João Silva</name>
             <resp>All formats</resp>
             <link>https://github.com/joaormfsilva</link>
-            <reviewDate>2024-06-19</reviewDate>
+            <reviewDate>2024-06-21</reviewDate>
         </respStmt>
         <centre id="PORTULAN-CLARIN" deposition="1">
             <name>PORTULAN CLARIN Research Infrastructure for the Science and Technology of Language</name>
@@ -20,8 +20,8 @@
         </centre>
     </header>
     <info xml:lang="en">
-        <p>The set of recommended file formats comprises open, well-documented standards, and should be understood as an advice concerning best-practices.</p>
-        <p>PORTULAN, however, poses no restriction on what formats it accepts and will preserve the resource in the format that it was submitted.</p>
+        <p>The set of recommended and discouraged file formats should be understood only as advice concerning best-practices and the use of open and well-documented standards.</p>
+        <p>PORTULAN poses no restriction on what formats it accepts and will preserve the resource in the format that it was submitted.</p>
     </info>
     <formats>
         <format id="fAIFF">
