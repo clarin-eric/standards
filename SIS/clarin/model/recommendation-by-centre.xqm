@@ -12,7 +12,8 @@ declare variable $recommendation:format-ids := data($recommendation:centres/form
 declare variable $recommendation:format-abbrs := for $id in $recommendation:format-ids return fn:substring($id,2);
 
 declare function recommendation:get-recommendations-for-centre($id){
-    let $path := concat('/db/apps/clarin/data/recommendations/',$id,"-recommendation.xml")
+    let $convertedId := translate($id,':','-')
+    let $path := concat('/db/apps/clarin/data/recommendations/',$convertedId,"-recommendation.xml")
     return doc($path)/recommendation
 };
 
