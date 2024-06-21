@@ -24,7 +24,7 @@ let $template := request:get-parameter('template', '')
 
 let $centre := cm:get-centre($id)
 let $centre-name := $centre/name/text()
-let $centre-link := data($centre/a/@href)
+let $registry-links := $centre/registryLink
 let $isDepositing := xs:boolean($centre/@deposition) 
 let $centre-ri := $centre/nodeInfo/ri
 
@@ -81,10 +81,45 @@ else
                                 <span class="heading">Abbreviation: </span>
                                 <span id="abbrtext" class="heading">{$id}</span>
                             </div>
+                            {
+                            if (count($registry-links) eq 1)
+                            then 
                             <div>
                                 <span class="heading">Link: </span>
-                                <span id="link"><a href="{$centre-link}">{$centre-link}</a></span>
-                            </div>
+                                {
+                                    let $uri := data($registry-links/@uri)
+                                    let $label := 
+                                           if (data($registry-links/@label))
+                                           then
+                                             concat('   (',data($registry-links/@label), ')')
+                                           else () 
+                                     
+                                     return
+                                    <span id="reg-link"><a href="{$uri}">{$uri}</a>{$label}</span>
+                                 }
+
+                             </div>                            
+                             else 
+                             <div>
+                                <span class="heading">Links: </span>
+                                <ul>
+                                {
+                                    for $registry-link at $pos in ($registry-links)
+                                       let $uri := data($registry-link/@uri)
+                                       let $label := 
+                                           if (data($registry-link/@label))
+                                           then
+                                             concat('   (',data($registry-link/@label), ')')
+                                           else () 
+                                    return 
+                                      <li><span id="{concat('reg-link_',$pos)}"><a href="{$uri}">{$uri}</a></span><span id="{concat('reg-label_',$pos)}">{$label}</span></li>
+                                 }
+                                 </ul>
+
+                             </div>
+                            
+                           }
+
                             <div>
                                 <span class="heading">Research infrastructure: </span>
                                 <ul>{cm:print-ri($centre-ri)}</ul>
