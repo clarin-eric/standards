@@ -127,7 +127,7 @@ else
                             {
                                 if ($isDepositing)
                                 then 
-                                    cm:print-curation($respStmt,$languageHeader)
+                                    rf:print-curation($recommendation,$languageHeader)
                                 else ()
                             }
                             {
