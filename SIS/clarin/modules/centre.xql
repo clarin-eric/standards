@@ -17,6 +17,10 @@ declare function cm:get-centre($id) {
     centre:get-centre($id)
 };
 
+declare function cm:isDepositing($centre){
+    xs:boolean($centre/@deposition)
+};
+
 declare function cm:get-centre-by-research-infrastructure($ri as xs:string, $status as xs:string) {
     centre:get-centre-by-research-infrastructure($ri, $status)
 };
@@ -212,47 +216,6 @@ declare function cm:get-default-info($id) {
         else
             cm:get-recommendations($id)/info[not(@xml:lang)]
 };
-
-declare function cm:print-curation($respStmt, $language) {
-    if ($respStmt and string($respStmt[1]/name))
-    then
-        (
-        <div>
-            <span class="heading">Curation: </span>
-            {
-                for $rs in $respStmt
-                let $resp := functx:capitalize-first($rs/resp/text())
-                return
-                    (
-                    <ul>
-                        <li>{if ($resp) then concat($resp,": ") else (),
-                            
-                                if (empty($rs/link/text()))
-                                then
-                                    (<span>{$rs/name/text()}</span>)
-                                else
-                                    (
-                                    <a href="{$rs/link/text()}">{$rs/name/text()}</a>)
-                            }
-                            <span> ({
-                                    format-date($rs/reviewDate/text(),
-                                    "[MNn] [D], [Y]", $language, (), ())
-                                })</span>
-                        </li>
-                    </ul>
-                    )
-            }
-        </div>
-        )
-    else
-        (
-        <div>
-            <span class="heading" style="color:darkred">Warning: </span>
-            <span style="color:darkred">The recommendations have not been curated yet.</span>
-        </div>
-        )
-};
-
 
 declare function cm:print-recommendation-rows($recommendation, $centre-id, $sortBy,
 $language) {

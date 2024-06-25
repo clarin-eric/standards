@@ -25,7 +25,7 @@ let $template := request:get-parameter('template', '')
 let $centre := cm:get-centre($id)
 let $centre-name := $centre/name/text()
 let $registry-links := $centre/registryLink
-let $isDepositing := xs:boolean($centre/@deposition) 
+let $isDepositing := cm:isDepositing($centre)
 let $centre-ri := $centre/nodeInfo/ri
 
 let $recommendation := cm:get-recommendations($id)
