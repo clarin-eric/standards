@@ -136,7 +136,7 @@ else
                                 else ()
                             }
                             {
-                                if ($centre-info)
+                                if ($centre-info/info)
                                 then
                                     <div>
                                         <span class="heading">Description: </span>
