@@ -69,6 +69,9 @@ else
                                 &gt; <a href="{app:link(concat("views/view-centre.xq?id=", $id))}">{$centre-name}</a>
                             </div>
                             <div class="title">{$centre-name}</div>
+                            {
+                            if (not(rf:isCurated($respStmt)))
+                            then
                             <div style="float:right;">
                                 <span>
                                     <a href="{cm:getGithubCentreIssueLink($id)}" class="button" 
@@ -77,6 +80,8 @@ else
                                         Suggest a fix or extension</a>
                                 </span>
                             </div>
+                            else ()
+                            }
                             <div>
                                 <span class="heading">Abbreviation: </span>
                                 <span id="abbrtext" class="heading">{$id}</span>
@@ -220,6 +225,19 @@ else
                                             )
                                         else ()
                                 )
+                            }
+                            {
+                            if (rf:isCurated($respStmt))
+                            then
+                            <div style="float:right;">
+                                <span>
+                                    <a href="{cm:getGithubCentreIssueLink($id)}" class="button" 
+                                        style="margin-left:5px; padding: 5px 5px 2px 5px; height:25px;
+                                        color:darkred; border-color:darkred">
+                                        Suggest a fix or extension</a>
+                                </span>
+                            </div>
+                            else ()
                             }
                         </div>
                     else
