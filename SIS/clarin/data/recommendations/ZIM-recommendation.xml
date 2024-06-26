@@ -20,7 +20,7 @@
          </nodeInfo>
       </centre>
     </header>
-   <info><!--use p, ul, ol elements here--></info>
+   <info><!--use p, ul, ol elements here--><p>While the list below is not curated, see <a href="https://gams.uni-graz.at/context:gams?mode=about&amp;locale=en#formats">recommendations mentioned by GAMS</a>, which appears to provide the repository service for ZIM.</p></info>
    <formats>
       <format id="fTEISpoken">
          <domain>Audiovisual Annotation</domain>
