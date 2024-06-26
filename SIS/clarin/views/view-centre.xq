@@ -145,13 +145,16 @@ else
                                 if (count($domains)>0)
                                 then(
                                     <div>
-                                        <span class="heading">Functional domains: </span>
+                                        <span class="heading">Data functions covered by the recommendations</span>
+                                        <div>
+                                        <span class="desctext">Recommendations provided by this centre concern the following <a href="{app:link('views/list-domains.xq')}">functions of data</a>:</span>
                                             <ul>
                                                 {
                                                     for $d in $domains
                                                     return <li>{$d}</li>
                                                 }
                                             </ul>
+                                        </div>
                                     </div>
                                 )
                                 else ()
