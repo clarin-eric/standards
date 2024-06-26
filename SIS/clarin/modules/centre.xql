@@ -175,15 +175,17 @@ declare function cm:get-centre-info($id, $lang) {
         cm:get-default-info($id)
     
     return
-        cm:parseFormatRef($info)
+        cm:parseFormatRef($info, $id)
 };
 
-declare function cm:parseFormatRef($info) {
+declare function cm:parseFormatRef($info,$id) {
     if ($info)
     then
         (
-        element info {
+        element span {
             $info/@*,
+            attribute {"id"} {concat("desctext",$id)},
+            attribute {"class"} {"desctext"},
             for $node in $info/node()
             return
                 if ($node/self::p)

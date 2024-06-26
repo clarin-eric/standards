@@ -136,11 +136,11 @@ else
                                 else ()
                             }
                             {
-                                if ($centre-info)
+                                if ($centre-info/*)
                                 then
                                     <div>
                                         <span class="heading">Description: </span>
-                                        <span id="desctext{$id}" class="desctext">{$centre-info}</span>
+                                        {$centre-info}
                                     </div>
                                 else
                                     ()
