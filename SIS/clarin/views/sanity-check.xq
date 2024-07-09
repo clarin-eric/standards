@@ -49,7 +49,7 @@ return
                     below will open a pre-configured GitHub issue where you can suggest the content of the format description.</p>
                     <p>The list is also part of the sanity checking functionality: it may happen that some recommendation has a 
                     typo in the format ID, and then it will show up here.</p>
-                    <div style="column-count: 4;">
+                    <div style="column-count: 3;">
                         <ul style="margin: 0; padding-left:15px;">
                             {fm:list-missing-format-ids()}
                         </ul>

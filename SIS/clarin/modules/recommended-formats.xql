@@ -415,8 +415,10 @@ $includeFormat, $includeCentre) {
             }
         </a>
         )
-    else
+    else(
+        fn:substring($format-id, 2),
         rf:print-missing-format-link($format-id)
+        )
     
     let $level := $format/level/text()
     let $format-comment := rf:print-format-comments($format, $language)
@@ -518,7 +520,6 @@ declare function rf:print-format-comments($format, $language) {
 };
 
 declare function rf:print-missing-format-link($format-id) {
-    (fn:substring($format-id, 2),
     <span class="tooltip">
         <a style="margin-left:5px;" href="{app:getGithubIssueLink($format-id)}">
             <img src="{app:resource("plus.png", "img")}" height="15"/>
@@ -527,5 +528,5 @@ declare function rf:print-missing-format-link($format-id) {
             class="tooltiptext"
             style="width:300px;">Click to add or suggest missing format information
         </span>
-    </span>)
+    </span>
 };
