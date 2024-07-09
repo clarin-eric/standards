@@ -108,6 +108,14 @@ declare function menu:view() {
                 </td>
             </tr>
             <tr>
+                <td width="10px"></td>
+                <td width="10px"></td>
+                <td class="tdmenu">
+                    <a style="display:block" href="{app:link("views/sanity-check-keywords.xq")}">Keyword Check</a>
+                </td>
+            </tr>
+            
+            <tr>
                 <td colspan="3" class="tdmenu">
                     <a style="display:block" href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>
                 </td>

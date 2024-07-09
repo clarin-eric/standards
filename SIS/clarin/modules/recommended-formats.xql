@@ -232,8 +232,7 @@ declare function rf:print-domains($domains) {
 };
 
 declare function rf:print-keywords($keyword) {
-    let $keywords := $format:formats/keyword
-    for $k in fn:distinct-values($keywords)
+    for $k in $format:keywords
         order by fn:lower-case($k)
     return
         if ($k eq $keyword)

@@ -40,6 +40,17 @@ declare function fm:list-search-suggestion(){
     
 };
 
+declare function fm:create-format-link($format-id, $format-abbr, $format-name){
+        let $link := app:link(concat("views/view-format.xq?id=", $format-id))
+            
+        let $link-title := 
+            if (exists($format-name))
+                then $format-abbr
+                else concat($format-abbr, " (",$format-name,")")
+                
+        return <a href="{$link}">{$link-title}</a>
+};
+
 (: Generate the list of formats :)
 declare function fm:list-formats($keyword,$searchItem) {
     let $formats :=
@@ -56,13 +67,16 @@ declare function fm:list-formats($keyword,$searchItem) {
         (:let $format-snippet := $format/info[@type="description"]/p[1]/text():)
         let $mime-types := $format/mimeType
         let $file-exts := $format/fileExt
-        let $link := app:link(concat("views/view-format.xq?id=", $format-id))
+      (:  let $link := app:link(concat("views/view-format.xq?id=", $format-id))
             order by fn:lower-case($format-abbr)
-        let $link-title := concat($format-abbr, " (",$format-name,")")
+        let $link-title := concat($format-abbr, " (",$format-name,")"):)
+        order by fn:lower-case($format-abbr)
     return
         <tr>
             <td class="row" style="vertical-align:top">
-                <span class="list-text"><a href="{$link}">{$link-title}</a></span>
+                <span class="list-text">{fm:create-format-link($format-id,$format-abbr,$format-name)}
+                <!--<a href="{$link}">{$link-title}</a>-->
+                </span>
                 {app:create-copy-button($format-id,$format-id,"Copy ID to clipboard","Format ID copied")}
             </td>
             <td class="row">

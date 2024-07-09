@@ -10,6 +10,8 @@ declare variable $format:titles := $format:formats/titleStmt/title/text();
 declare variable $format:ids := data($format:formats/@id);
 declare variable $format:abbrs := $format:formats/titleStmt/abbr/text();
 
+declare variable $format:keywords := fn:distinct-values($format:formats/keyword);
+
 declare function format:get-format($id as xs:string){
     $format:formats[@id=$id]
 };
@@ -22,3 +24,8 @@ declare function format:get-format-by-abbr($abbr as xs:string){
 declare function format:get-all-ids(){
     data($format:formats/@id)
 };
+
+declare function format:get-formats-with-keyword($key as xs:string){
+    $format:formats[keyword=$key]
+};
+
