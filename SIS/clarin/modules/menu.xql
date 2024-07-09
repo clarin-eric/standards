@@ -111,7 +111,7 @@ declare function menu:view() {
                 <td width="10px"></td>
                 <td width="10px"></td>
                 <td class="tdmenu">
-                    <a style="display:block" href="{app:link("views/sanity-check-keywords.xq")}">Keyword Check</a>
+                    <a style="display:block" href="{app:link("views/sanity-check-keywords.xq")}">Keywords</a>
                 </td>
             </tr>
             

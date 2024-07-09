@@ -19,7 +19,7 @@ return
 
 <html>
     <head>
-        <title>Keyword Check</title>
+        <title>Sanity Check Keywords</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
@@ -33,10 +33,10 @@ return
                 <div class="navigation">
                     &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     &gt; <a href="{app:link("views/sanity-check.xq")}">Sanity Check</a>
-                    &gt; <a href="{app:link("views/similar-recommendation.xq")}">Keyword Check</a>
+                    &gt; <a href="{app:link("views/similar-recommendation.xq")}">Keywords</a>
                 </div>
                 
-                <div class="title">Keyword check</div>
+                <div class="title">Sanity Check Keywords</div>
                 
                  <div id="keywords">
                     <h2>List of keywords</h2>

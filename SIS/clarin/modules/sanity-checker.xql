@@ -138,7 +138,7 @@ declare function sc:list-keywords(){
             <span class="pointer" onclick="openEditor('{$k}')">
                 {$k} ({count($formats-with-keyword)})
             </span>
-            <ul id="{$k}" style="display:none;column-count: 4;">
+            <ul id="{$k}" style="display:none;column-count: 4; padding-left:15px;">
                 {$format-list}
             </ul> 
         </li>
