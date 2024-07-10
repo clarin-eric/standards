@@ -62,6 +62,7 @@
                 <xs:element ref="centreID" minOccurs="0"/>
                 <xs:element ref="domain" minOccurs="0"/>
                 <xs:element ref="level" minOccurs="0"/>
+                <xs:element ref="ri" minOccurs="0"/>
                 <xs:element ref="search" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
@@ -329,10 +330,21 @@
         </xs:sequence>
     </xs:complexType>
     <xs:element name="ri">
+        <xs:annotation>
+            <xs:documentation>Identify the research infrastructure to which the centre belongs. This
+                element occurs in a centre description and in the exports of recommendation
+                lists.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="ResearchInfrastructures">
-                    <xs:attribute name="status" use="required" type="xs:token"/>
+                    <xs:attribute name="status" use="optional" type="xs:token">
+                        <xs:annotation>
+                            <xs:documentation>Status of the centre (node) in the given research
+                                infrastructure. (In CLARIN, it's e.g. "B-centre", in Text+, e.g.
+                                "Collections".)</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
                 </xs:extension>
             </xs:simpleContent>
         </xs:complexType>
