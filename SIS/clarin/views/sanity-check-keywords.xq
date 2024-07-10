@@ -33,7 +33,7 @@ return
                 <div class="navigation">
                     &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     &gt; <a href="{app:link("views/sanity-check.xq")}">Sanity Check</a>
-                    &gt; <a href="{app:link("views/similar-recommendation.xq")}">Keywords</a>
+                    &gt; <a href="{app:link("views/sanity-check-keywords.xq")}">Keywords</a>
                 </div>
                 
                 <div class="title">Sanity Check Keywords</div>
