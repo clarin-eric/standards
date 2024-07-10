@@ -18,22 +18,21 @@ import module namespace functx = "http://www.functx.com" at "../resources/lib/fu
 declare variable $rf:pageSize := 50;
 declare variable $rf:searchMap := rf:getSearchMap();
 
-declare function rf:isCurated($respStmt){
+declare function rf:isCurated($recommendation){
+    let $respStmt := $recommendation/header/respStmt
     let $respName := string($respStmt[1]/name)
     return 
         if ($respName) then true() else false()
 };
 
 declare function rf:print-curation($recommendation, $language) {
-   let $respStmt := $recommendation/header/respStmt
-   return
-   if (rf:isCurated($respStmt))
+   if (rf:isCurated($recommendation))
    then
         (
         <div>
             <span class="heading">Curation: </span>
             {
-                for $rs in $respStmt
+                for $rs in $recommendation/header/respStmt
                 let $resp := functx:capitalize-first($rs/resp/text())
                 return
                     (
