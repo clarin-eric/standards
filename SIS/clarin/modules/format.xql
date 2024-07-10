@@ -123,23 +123,27 @@ declare function fm:list-missing-format-ids(){
     order by lower-case($id)
     return
         if (format:get-format($id)) then ()
-            else(<li>{
-                    <span class="pointer" onclick="openEditor('{$id}')"> {fn:substring($id, 2)}</span>,
-                    rf:print-missing-format-link($id),
-                    app:create-copy-button($id,$id,"Copy ID to clipboard","Format ID copied")
-                }
-                
-                    <ul id="{$id}" style="display:none; padding-left:15px;">
-                    {for $r in recommendation:get-recommendations-for-format($id)
-                        let $centre-id := data($r/header/centre/@id)
-                        return
-                        <li><a href="{app:link(concat("views/view-centre.xq?id=", $centre-id))}">{$centre-id}</a></li>
-                    }
-                </ul> 
-                </li>
-            ) 
-            
+        else(fm:print-missing-format($id)) 
             (:<li><a href="{app:getGithubIssueLink($id)}">{$id}</a></li>:) 
+};
+
+declare function fm:print-missing-format($id as xs:string){
+    let $recommendations := recommendation:get-recommendations-for-format($id)
+    return 
+        <li>
+            <span class="pointer" onclick="openEditor('{$id}')"> 
+                {fn:substring($id, 2)} ({count($recommendations)}) </span>
+            {rf:print-missing-format-link($id)}
+            {app:create-copy-button($id,$id,"Copy ID to clipboard","Format ID copied")}
+            <ul id="{$id}" style="display:none; padding-left:15px;">
+                {for $r in $recommendations
+                    let $centre-id := data($r/header/centre/@id)
+                    return
+                    <li><a href="{app:link(concat("views/view-centre.xq?id=", $centre-id))}">{$centre-id}</a></li>
+                }
+            </ul> 
+        </li>
+        
 };
 
 (:@Deprecated:)
