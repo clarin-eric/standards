@@ -7,6 +7,8 @@ import module namespace spec = "http://clarin.ids-mannheim.de/standards/specific
 import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
 import module namespace recommendation = "http://clarin.ids-mannheim.de/standards/recommendation-model"
 at "../model/recommendation-by-centre.xqm";
+import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" 
+at "../modules/recommended-formats.xql";
 
 (:  Define format-related functions
     @author margaretha
@@ -40,6 +42,17 @@ declare function fm:list-search-suggestion(){
     
 };
 
+declare function fm:create-format-link($format-id, $format-abbr, $format-name){
+        let $link := app:link(concat("views/view-format.xq?id=", $format-id))
+            
+        let $link-title := 
+            if (exists($format-name))
+                then $format-abbr
+                else concat($format-abbr, " (",$format-name,")")
+                
+        return <a href="{$link}">{$link-title}</a>
+};
+
 (: Generate the list of formats :)
 declare function fm:list-formats($keyword,$searchItem) {
     let $formats :=
@@ -56,13 +69,16 @@ declare function fm:list-formats($keyword,$searchItem) {
         (:let $format-snippet := $format/info[@type="description"]/p[1]/text():)
         let $mime-types := $format/mimeType
         let $file-exts := $format/fileExt
-        let $link := app:link(concat("views/view-format.xq?id=", $format-id))
+      (:  let $link := app:link(concat("views/view-format.xq?id=", $format-id))
             order by fn:lower-case($format-abbr)
-        let $link-title := concat($format-abbr, " (",$format-name,")")
+        let $link-title := concat($format-abbr, " (",$format-name,")"):)
+        order by fn:lower-case($format-abbr)
     return
         <tr>
             <td class="row" style="vertical-align:top">
-                <span class="list-text"><a href="{$link}">{$link-title}</a></span>
+                <span class="list-text">{fm:create-format-link($format-id,$format-abbr,$format-name)}
+                <!--<a href="{$link}">{$link-title}</a>-->
+                </span>
                 {app:create-copy-button($format-id,$format-id,"Copy ID to clipboard","Format ID copied")}
             </td>
             <td class="row">
@@ -107,7 +123,27 @@ declare function fm:list-missing-format-ids(){
     order by lower-case($id)
     return
         if (format:get-format($id)) then ()
-            else <li><a href="{app:getGithubIssueLink($id)}">{$id}</a></li> 
+        else(fm:print-missing-format($id)) 
+            (:<li><a href="{app:getGithubIssueLink($id)}">{$id}</a></li>:) 
+};
+
+declare function fm:print-missing-format($id as xs:string){
+    let $recommendations := recommendation:get-recommendations-for-format($id)
+    return 
+        <li>
+            <span class="pointer" onclick="openEditor('{$id}')"> 
+                {fn:substring($id, 2)} ({count($recommendations)}) </span>
+            {rf:print-missing-format-link($id)}
+            {app:create-copy-button($id,$id,"Copy ID to clipboard","Format ID copied")}
+            <ul id="{$id}" style="display:none; padding-left:15px;">
+                {for $r in $recommendations
+                    let $centre-id := data($r/header/centre/@id)
+                    return
+                    <li><a href="{app:link(concat("views/view-centre.xq?id=", $centre-id))}">{$centre-id}</a></li>
+                }
+            </ul> 
+        </li>
+        
 };
 
 (:@Deprecated:)

@@ -62,14 +62,15 @@ return
                             </table>
                         </form>
                     </div>
-                    <table>
+                    <table id ="centre-table">
                         <tr>
-                            <th class="header" style="width:20%;"><a href="?sortBy=id">ID</a></th>
-                            <th class="header" style="width:40%;"><a href="?sortBy=name">Name</a></th>
-                            <th class="header" style="width:40%;">Research Infrastructure
+                            <th class="header" style="width:20%;"><a href="?sortBy=id#centre-table">ID</a></th>
+                            <th class="header" style="width:30%;"><a href="?sortBy=name#centre-table">Name</a></th>
+                            <th class="header" style="width:30%;">Research Infrastructure
                                 <!--<a href="?sortBy=ri">Research Infrastructure</a>-->
                             </th>
-                            <!-- <th class="header" style="width:20%;">Status</th> -->
+                            <th class="header" style="width:10%;"><a href="?sortBy=depositing#centre-table">Depositing</a></th>
+                            <th class="header" style="width:10%;"><a href="?sortBy=curated#centre-table">Curated</a></th>
                         </tr>
                         {cm:list-centre($sortBy, $status, $riCookie)}
                     </table>

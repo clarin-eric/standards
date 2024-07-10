@@ -36,7 +36,6 @@ let $languageHeader := if (not($ri eq "CLARIN") and not($ri eq "all")) then "de"
 let $centre-info := cm:get-centre-info($id,$languageHeader)
 
 let $exportFilename := concat($id,"-recommendation.xml")
-let $respStmt := $recommendation/header/respStmt
 let $domains := fn:distinct-values($recommendation/formats/format/domain/text())
 
 return
@@ -70,7 +69,7 @@ else
                             </div>
                             <div class="title">{$centre-name}</div>
                             {
-                            if (not(rf:isCurated($respStmt)))
+                            if (not(rf:isCurated($recommendation)))
                             then
                             <div style="float:right;">
                                 <span>
@@ -227,7 +226,7 @@ else
                                 )
                             }
                             {
-                            if (rf:isCurated($respStmt))
+                            if (rf:isCurated($recommendation))
                             then
                             <div style="float:right;">
                                 <span>

@@ -5,3 +5,13 @@
 /**/secrets.xml
 /**/test
 /**/commit-id.xml
+
+# from exide
+/**/build.xml
+/**/cypress.config.js
+/**/expath-pkg.xml
+/**/icon.png
+/**/LICENSE
+/**/package-lock.json
+/**/package.json
+/**/repo.xml
