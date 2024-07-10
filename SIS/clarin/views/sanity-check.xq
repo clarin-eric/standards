@@ -44,9 +44,13 @@ return
                 </div>
                 
                 <div id="missing">
-                    <h2>List of missing formats by ID ({fm:count-missing-format-ids()}): </h2>
-                    <p>These formats are referenced by centre recommendations, but not yet described in the SIS. Clicking on an ID 
-                    below will open a pre-configured GitHub issue where you can suggest the content of the format description.</p>
+                    <h2>List of missing format descriptions({fm:count-missing-format-ids()}): </h2>
+                    <p>These formats are referenced by centre recommendations, but not yet described in the SIS. Clicking on 
+                    a format below will open a list of centres referenced that format. The number of centres referenced a missing
+                    format is shown next to the format abbreviation. Clicking on the ⊕ characted will open a pre-configured 
+                    GitHub issue where you can suggest the content of the format description. Clicking on the 
+                    <img src="{app:resource("copy.png","image")}" width="12" /> symbol will 
+                    copy the format id, e.g. to be used in a format recommendation.</p>
                     <p>The list is also part of the sanity checking functionality: it may happen that some recommendation has a 
                     typo in the format ID, and then it will show up here.</p>
                     <div style="column-count: 3;">
@@ -60,7 +64,7 @@ return
                     <p>Note that membership in this list does not automatically indicate an error. Recommendations may change and leave "stray" 
                        formats unused, and we may sometimes want to merely describe "unspecified" versions of formats, while their 
                        particular variants are used in recommendations (because finer granularity is nearly always better).</p>
-                    <div>
+                    <div style="column-count: 3;">
                         <ul style="margin: 0; padding-left:15px;">
                             {fm:list-orphan-format-ids()}
                         </ul>
