@@ -4,8 +4,9 @@ module namespace sc = "http://clarin.ids-mannheim.de/standards/sanity-checker";
 
 import module namespace recommendation = "http://clarin.ids-mannheim.de/standards/recommendation-model"
 at "../model/recommendation-by-centre.xqm";
-
+import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
+import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-module" at "../modules/format.xql";
 
 declare function sc:get-recommendations-with-missing-or-unknown-domains() {
     for $r in $recommendation:centres
@@ -119,3 +120,30 @@ declare function sc:list-similar-recommendations($centre, $formats){
 
         </ul>
 };
+
+declare function sc:list-keywords(){
+    for $k in $format:keywords
+        let $formats-with-keyword := format:get-formats-with-keyword($k) 
+        let $format-list :=
+                for $format in $formats-with-keyword
+                    let $format-id := data($format/@id)
+                    let $format-abbr := $format/titleStmt/abbr/text()
+                    order by $format-abbr
+                    return 
+                        <li>{fm:create-format-link($format-id,$format-abbr,"")}</li>
+        
+        order by fn:lower-case($k)
+    return
+        <li>
+            <span class="pointer" onclick="openEditor('{$k}')">
+                {$k} ({count($formats-with-keyword)})
+            </span>
+            <ul id="{$k}" style="display:none;column-count: 4; padding-left:15px;">
+                {$format-list}
+            </ul> 
+        </li>
+    
+};
+
+
+

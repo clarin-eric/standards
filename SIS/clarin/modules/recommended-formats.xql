@@ -18,22 +18,21 @@ import module namespace functx = "http://www.functx.com" at "../resources/lib/fu
 declare variable $rf:pageSize := 50;
 declare variable $rf:searchMap := rf:getSearchMap();
 
-declare function rf:isCurated($respStmt){
+declare function rf:isCurated($recommendation){
+    let $respStmt := $recommendation/header/respStmt
     let $respName := string($respStmt[1]/name)
     return 
         if ($respName) then true() else false()
 };
 
 declare function rf:print-curation($recommendation, $language) {
-   let $respStmt := $recommendation/header/respStmt
-   return
-   if (rf:isCurated($respStmt))
+   if (rf:isCurated($recommendation))
    then
         (
         <div>
             <span class="heading">Curation: </span>
             {
-                for $rs in $respStmt
+                for $rs in $recommendation/header/respStmt
                 let $resp := functx:capitalize-first($rs/resp/text())
                 return
                     (
@@ -232,8 +231,7 @@ declare function rf:print-domains($domains) {
 };
 
 declare function rf:print-keywords($keyword) {
-    let $keywords := $format:formats/keyword
-    for $k in fn:distinct-values($keywords)
+    for $k in $format:keywords
         order by fn:lower-case($k)
     return
         if ($k eq $keyword)
@@ -416,8 +414,10 @@ $includeFormat, $includeCentre) {
             }
         </a>
         )
-    else
+    else(
+        fn:substring($format-id, 2),
         rf:print-missing-format-link($format-id)
+        )
     
     let $level := $format/level/text()
     let $format-comment := rf:print-format-comments($format, $language)
@@ -519,7 +519,6 @@ declare function rf:print-format-comments($format, $language) {
 };
 
 declare function rf:print-missing-format-link($format-id) {
-    (fn:substring($format-id, 2),
     <span class="tooltip">
         <a style="margin-left:5px;" href="{app:getGithubIssueLink($format-id)}">
             <img src="{app:resource("plus.png", "img")}" height="15"/>
@@ -528,5 +527,5 @@ declare function rf:print-missing-format-link($format-id) {
             class="tooltiptext"
             style="width:300px;">Click to add or suggest missing format information
         </span>
-    </span>)
+    </span>
 };
