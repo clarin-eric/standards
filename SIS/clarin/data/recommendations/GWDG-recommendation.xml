@@ -15,7 +15,9 @@
         </nodeInfo>
       </centre>
     </header>
-    <info><p>This centre does not provide depositing services.</p></info>
+    <info><p>This <a href="https://www.clarin.eu/content/clarin-centres">E-centre</a> allows for safe deposition of massive amounts of data. 
+        The question of data formats at the scale of documents does not arise here. See
+        <a href="https://gwdg.de/en/fdm/">more info on the centre's data management</a>.</p></info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 

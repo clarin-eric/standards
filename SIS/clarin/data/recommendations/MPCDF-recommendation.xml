@@ -15,9 +15,9 @@
       </centre>
     </header>
     <info>
-        <p>This E-centre allows for safe deposition of massive amounts of data. The question of data
-            formats at the scale of documents does not arise here. See
-            <a href="https://docs.mpcdf.mpg.de/doc/data/backup-archive/BA_MPG/backup-archive-for-any-max-planck-institute.html">more info at the MPCDF pages</a>.</p>
+        <p>This <a href="https://www.clarin.eu/content/clarin-centres">E-centre</a> allows for safe deposition of massive amounts of data. 
+            The question of data formats at the scale of documents does not arise here. See
+            <a href="https://docs.mpcdf.mpg.de/doc/data/backup-archive/BA_MPG/backup-archive-for-any-max-planck-institute.html">more info on the centre's data management</a>.</p>
     </info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
