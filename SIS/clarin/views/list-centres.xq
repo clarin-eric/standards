@@ -32,12 +32,17 @@ return
                     </div>
                     <div class="title">Centres</div>
                     <div>
-                    <p>This page lists centres encoded in the SIS, together with their status. For CLARIN centres, B-centres and 
-                    centres with the status 'aiming for B' should in most cases be expected to maintain their format 
-                    recommendations in the SIS.</p>
+                    <p>This page lists centres encoded in the SIS, together with their status. Among the 
+                    <a href="https://centres.clarin.eu/">CLARIN centres</a>, B-centres and 
+                    numerous C-centres provide data deposition services. It is a safe assumption that centres belonging to other 
+                    research infrastructures that are listed here also provide depositing services, but that feature may change in time 
+                    and this is why there is a separate column indicating the 'depositing' status.</p>
+                    <p>While the ideal situation would be one where all depositing centres maintain their recommendations in the SIS, in 
+                    fact that depends on several factors. Centres that have explicitly curated their recommendations are indicated by 
+                    a tick in the 'Curated' column.</p>
                     <p>The life of a centre in a research infrastructure can be a dynamic affair, while the list below always 
-                    only holds a snapshot of the state of the network at a certain (usually fairly random) date. If you see 
-                    some omissions or errors in the list below, please kindly 
+                    only holds a snapshot of the state of the network at a certain (usually fairly random) date. We are not able to monitor
+                    that in real time. If you see omissions or errors in the list below, please kindly 
                     <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">let us know</a>.</p>
                     </div>
                     <div>

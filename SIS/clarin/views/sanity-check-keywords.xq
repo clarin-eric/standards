@@ -19,7 +19,7 @@ return
 
 <html>
     <head>
-        <title>Sanity Check Keywords</title>
+        <title>Sanity check: Keywords</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
@@ -36,7 +36,10 @@ return
                     &gt; <a href="{app:link("views/sanity-check-keywords.xq")}">Keywords</a>
                 </div>
                 
-                <div class="title">Sanity Check Keywords</div>
+                <div class="title">Sanity check: Keywords</div>
+                <div><p>This page lists all keywords used in <a href="{app:link("views/list-formats.xq")}">format descriptions</a>. 
+                The number of descriptions using the keyword (key phrase) in question is provided in the brackets. Clicking on a 
+                keyword opens a list of links to the particular descriptions.</p></div>
                 
                  <div id="keywords">
                     <h2>List of keywords</h2>

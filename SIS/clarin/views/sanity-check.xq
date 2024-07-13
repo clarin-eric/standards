@@ -41,18 +41,18 @@ return
                     in the process of compiling recommendations or describing formats, etc. Feel welcome 
                     to <a href="https://github.com/clarin-eric/standards/issues/115">share your ideas</a> 
                     on what else may be useful here.</p>
+                    <p>Note that a summary of <a href="{app:link("views/sanity-check-keywords.xq")}">keywords used in format descriptions</a> 
+                    is provided on a separate page.</p>
                 </div>
                 
                 <div id="missing">
-                    <h2>List of missing format descriptions({fm:count-missing-format-ids()}): </h2>
-                    <p>These formats are referenced by centre recommendations, but not yet described in the SIS. Clicking on 
-                    a format below will open a list of centres referenced that format. The number of centres referenced a missing
-                    format is shown next to the format abbreviation. Clicking on the ⊕ characted will open a pre-configured 
-                    GitHub issue where you can suggest the content of the format description. Clicking on the 
-                    <img src="{app:resource("copy.png","image")}" width="12" /> symbol will 
-                    copy the format id, e.g. to be used in a format recommendation.</p>
-                    <p>The list is also part of the sanity checking functionality: it may happen that some recommendation has a 
-                    typo in the format ID, and then it will show up here.</p>
+                    <h2>List of missing format descriptions ({fm:count-missing-format-ids()}): </h2>
+                    <p>The formats listed below are referenced by recommendations, but not yet described <a href="{app:link("views/list-formats.xq")}">inside the SIS</a>. 
+                    Clicking on a format name below opens a list of centres whose recommendations reference that format. The number of such centres is shown in brackets. 
+                    Clicking on the ⊕ character opens a pre-configured GitHub issue where you can suggest the content of the format description. Clicking on the 
+                    <img src="{app:resource("copy.png","image")}" width="12" /> symbol copies the format ID, e.g. to be used in editing format recommendations.</p>
+                    <p>The list is also part of the sanity checking functionality: it may happen that some recommendation has a typo in the format ID, and then it 
+                    will show up here.</p>
                     <div style="column-count: 3;">
                         <ul style="margin: 0; padding-left:15px;">
                             {fm:list-missing-format-ids()}
