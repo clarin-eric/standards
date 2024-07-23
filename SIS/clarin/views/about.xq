@@ -39,26 +39,42 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                 <ol>
                 <li><h3>The data about my centre do not seem entirely correct. Where did you take these recommendations from?</h3>
                 <p>We bootstrapped the system with data coming from those centres that made that information available on their 
-                homepages, as early as 2020 (and thereabouts). Note that the information had to be interpreted by us, at least 
+                homepages, as early as 2020 (and thereabouts). Some of these data had been supplied by members of the Standards 
+                Committee connected with those centres, and, in selected cases that offered interesting testing grounds (e.g. 
+                negative recommendations or inter-format relationships), the data was added by hand, on the basis of information 
+                provided publicly by the centre (back then).</p>
+                <p>Note that the information had to be interpreted by us, at least 
                 with respect to the <a href="{app:link("views/list-domains.xq")}">functions of data</a> 
                 and often with respect to the level of recommendation (recommended vs. acceptable vs. discouraged). That initial 
-                state of information is only meant as 'seed' for further work by the centre itself. The need for that work has been 
+                state of information is only meant as 'seed' for further work by the centre itself. The need for that work had been 
                 re-iterated in the committee presentations at the yearly CLARIN conferences, at NCF (National Coordinators' Forum) meetings, 
-                and often directly in conversations with 
-                members of centres. We will gladly deliver a zoom presentation to your centre -- please contact us about that.</p>
-                <p>In the meantime, we have tried to make the system as frustration-free when it comes to updating or entering recommendations 
-                by the individual centres, as possible. Please have a look at the <a href="https://github.com/clarin-eric/standards/wiki">documentation</a>
-                and contact us (preferably via <a href="https://github.com/clarin-eric/standards/issues">GitHub issues</a>, so
-                that you can see how we react and so that others can see that the issue is being worked on).</p>
-                </li>
+                and often directly in conversations with members of centres, to a moderate degree of success, until the Technical Centres 
+                committee took the issue up as a cyclic task, in early 2024.</p></li>
                 <li><h3>Why put work into the SIS if we can have our own page, structured and styled as we please?</h3>
                 <p>The "as we please" bit would mean resigning from all the goodies that can be extracted out of data aggregation across CLARIN 
                 (and, in the future, across comparable research infrastructures). The idea of the SIS is not only to make it possible to fulfil 
                 the <a href="https://www.coretrustseal.org/">CTS</a> requirements in a relatively painless manner, but also to visualize the 
                 aggregated data, and also to return the centre's 
-                data back to it, thanks to the <a href="{app:link("views/api.xq")}">API point</a> that we make available. "Soon" (hopefully 
-                after the summer of 2023 at the latest), we will provide examples of how a centre can make use of its data that have been 
-                input into the SIS in order to display them on the centre's own pages.</p>
+                data back to it, thanks to the <a href="{app:link("views/api.xq")}">API point</a> that we make available.</p>
+                <p>For example, for the IDS, you would use, e.g., 
+                <tt>curl 'https://clarin.ids-mannheim.de/standards/rest/views/recommended-formats-with-search.xq?centre=IDS&amp;export=yes'</tt> -- 
+                have a look at the API documentation to see what parameters are possible, etc.</p>
+
+               <p>You can see an example way of querying the data with jQuery at 
+               <a href="https://github.com/IDS-Mannheim/IDS-Mannheim.github.io">https://github.com/IDS-Mannheim/IDS-Mannheim.github.io</a>, and 
+               the corresponding simple webpage is available for viewing at 
+               <a href="https://ids-mannheim.github.io/standards/">https://ids-mannheim.github.io/standards/</a> (many browsers will allow you \
+               to view the source by doing Ctrl+U). If you would like to contribute a CSS (or XSL) stylesheet to render the info in a nicer way, 
+               please feel welcome to contact us and we will set up a directory for such contributions.</p>
+                </li>
+                <li><h3>Where can one learn more?</h3>
+                <p>We will gladly deliver a zoom presentation to your centre -- please contact us about that.</p>
+                <p>The Centres Committee has an internal checklist document for the purpose of tracking centres' progress -- if you're a 
+                centre representative, please do contact your representative on the Centres' committee (or contact us).</p>
+                <p>In the meantime, we have tried to make the system as frustration-free when it comes to updating or entering recommendations 
+                by the individual centres, as possible. Please have a look at the <a href="https://github.com/clarin-eric/standards/wiki">documentation</a>
+                and contact us (preferably via <a href="https://github.com/clarin-eric/standards/issues">GitHub issues</a>, so
+                that you can see how we react and so that others can see that the issue is being worked on).</p>
                 </li>
                 </ol>
                 </div>
