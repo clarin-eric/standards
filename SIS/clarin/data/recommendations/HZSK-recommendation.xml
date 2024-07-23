@@ -13,10 +13,10 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="HZSK" deposition="1">
-         <name>Hamburger Zentrum für Sprachkorpora</name>
+         <name>Universität Hamburg, Hamburger Zentrum für Sprachkorpora</name>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/9"/>
          <nodeInfo>
-            <ri status="C-centre">CLARIN</ri>
+            <ri status="K-Centre">CLARIN</ri>
             <ri status="Collections">Text+</ri>
          </nodeInfo>
       </centre>
@@ -25,14 +25,6 @@
       <p>See <a href="https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html">https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html</a> 
          for some info regarding deposition. Treat the recommendations below as potentially obsolete (contact the centre for confirmation).</p></info>
    <formats>
-      <format id="fAnvil">
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fEAF">
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
       <format id="fEXB">
          <domain>Audiovisual Annotation</domain>
          <level>recommended</level>
@@ -43,17 +35,13 @@
       </format>
       <format id="fFLN">
          <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
+         <level>acceptable</level>
       </format>
       <format id="fPraat">
          <domain>Audiovisual Annotation</domain>
          <level>recommended</level>
       </format>
       <format id="fTEISpoken">
-         <domain>Audiovisual Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fTRS">
          <domain>Audiovisual Annotation</domain>
          <level>recommended</level>
       </format>
@@ -69,10 +57,6 @@
       </format>
       <format id="fComa">
          <domain>Contextual Information</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fFLEx">
-         <domain>Lexical Resource</domain>
          <level>recommended</level>
       </format>
       <format id="fCMDI">
