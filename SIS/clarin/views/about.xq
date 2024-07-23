@@ -84,6 +84,24 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                 </p>
                  </div>
                  
+                 <div id="bibl">
+                 <h2>Further reading</h2>
+                 <p>The following publications focus on the Standards Information System at various stages of its development.</p>
+                 <ul>
+                 <li>Bański, Piotr and Eliza Margaretha Illig. 2024. <a href="https://ecp.ep.liu.se/index.php/clarin/article/view/1020">Standards 
+                 Information System for CLARIN centres and beyond</a>. In: Lindén, Krister and Kontino, Thalassia and Niemi, Jyrki (eds) 
+                 Selected papers from the CLARIN Annual Conference 2023. Series: Linköping Electronic Conference Proceedings 210. Linköping, 2024. 
+                 DOI: <a href="https://doi.org/10.3384/ecp210004">https://doi.org/10.3384/ecp210004</a>.</li>
+                 <li>Bański, Piotr and Hanna Hedeland. 2022. <a href="https://www.degruyter.com/document/doi/10.1515/9783110767377-012/html">Standards 
+                 in CLARIN</a>. In: <i>CLARIN: The Infrastructure for Language Resources</i>. Darja Fišer and Andreas Witt (eds). De 
+                 Gruyter (open access). DOI: <a href="https://doi.org/10.1515/9783110767377-012">https://doi.org/10.1515/9783110767377-012</a></li>
+                 <li>Stührenberg, Maik, Antonina Werthmann, and Andreas Witt. 2012. 
+                 <a href="https://ids-pub.bsz-bw.de/frontdoor/deliver/index/docId/4494/file/Stuehrenberg_Werthmann_Witt_Guidance_through_the_standards_jungle_2012.pdf">Guidance 
+                 through the Standards Jungle for Linguistic Resources</a>. In Proceedings of the LREC 2012 Workshop on Collaborative Resource 
+                 Development and Delivery, 9–13. URN: <a href="urn:nbn:de:bsz:mh39-44943">urn:nbn:de:bsz:mh39-44943</a></li>
+                 </ul>
+                 <p>The SIS offers some of its documentation through the <a href="https://github.com/clarin-eric/standards/wiki">GitHub wiki</a>.</p>
+                 </div>
                  
                  <div id="tech">
                 <h2>Technicalities</h2>
