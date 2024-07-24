@@ -44,7 +44,7 @@ let $centreInfo := cm:get-centre-info($centre,$languageHeader)
 
 return
 if ($export)
-then (em:export-table($centre, $domainId, $recommendationLevel, $rows,
+then (em:export-table($ri,$centre, $domainId, $recommendationLevel, $rows,
     "format-recommendation.xml","views/recommended-formats-with-search.xq",$centreInfo))
 else 
 

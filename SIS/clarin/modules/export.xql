@@ -17,7 +17,8 @@ declare function em:list-domains($domainIds as xs:string*){
         else ()
 };
 
-declare function em:export-table($centre, $domainId, $requestedLevel, $nodes, $filename, $page,$centreInfo) {
+declare function em:export-table($ri, $centre, $domainId, $requestedLevel, 
+    $nodes, $filename, $page,$centreInfo) {
     
     let $filter :=
         (if ($centre) then
@@ -64,7 +65,10 @@ declare function em:export-table($centre, $domainId, $requestedLevel, $nodes, $f
                 <title>CLARIN Standards Information System (SIS) export</title>
                 <url>{app:link($page)}</url>
                 <exportDate>{fn:current-dateTime()}</exportDate>
-                <filter>{$filter}</filter>
+                <filter>
+                {if($ri) then <riID>{$ri}</riID> else ()}
+                {$filter}
+                </filter>
             </header>
             {$centreInfo}
             <formats>{$rows}</formats>

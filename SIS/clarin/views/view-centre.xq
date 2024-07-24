@@ -40,7 +40,8 @@ let $domains := fn:distinct-values($recommendation/formats/format/domain/text())
 
 return
 if ($export)
-then (em:export-table($id, (), "", rf:print-centre-recommendation($id,(), "", $sortBy,$languageHeader,$ri),
+then (em:export-table("", $id, (), "", 
+            rf:print-centre-recommendation($id,(), "", $sortBy,$languageHeader,$ri),
             $exportFilename, "views/view-centre.xq", $centre-info))
 else if ($template)
 then (em:download-template($id,$exportFilename))
