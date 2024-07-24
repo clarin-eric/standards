@@ -63,7 +63,7 @@ declare function stm:get-formats-per-domain($threshold as xs:int){
                     <td>{
                         if ($format-abbr) 
                         then <a href="{$format-link}">{$format-abbr }</a>
-                        else rf:print-missing-format-link($id)
+                        else (fn:substring($id, 2), rf:print-missing-format-link($id))
                     }
                     </td>
                     <td>{$sum}</td>
