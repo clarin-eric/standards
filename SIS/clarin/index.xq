@@ -73,7 +73,7 @@ import module namespace index="http://clarin.ids-mannheim.de/standards/index" at
 
                 <div>
                 <p>This website is managed by the Digital Linguistics department of IDS Mannheim for the 
-                <a href="https://www.clarin.eu/governance/standards-committee">CLARIN Standards and Infrastructure Committee</a>. 
+                <a href="https://www.clarin.eu/governance/standards-committee">CLARIN Standards and Interoperability Committee</a>. 
                 Feel welcome to contact us via "issues" at <a href="https://github.com/clarin-eric/standards/issues">our GitHub repository</a> with 
                 suggestions or problem reports.</p>
                     <p>See the wiki pages <a href="https://github.com/clarin-eric/standards/wiki/How-to-contribute-to-the-SIS">"How to contribute to the SIS"</a> 
