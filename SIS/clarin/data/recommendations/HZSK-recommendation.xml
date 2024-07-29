@@ -7,10 +7,9 @@
          <centreID>HZSK</centreID>
       </filter>
       <respStmt>
-         <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
-         <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-         <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-         <reviewDate>0001-01-01</reviewDate>
+         <name>Marcel Fladrich</name>
+         <link>https://github.com/mflad</link>
+         <reviewDate>2024-07-29</reviewDate>
       </respStmt>
       <centre id="HZSK" deposition="1">
          <name>Universität Hamburg, Hamburger Zentrum für Sprachkorpora</name>
@@ -21,9 +20,23 @@
          </nodeInfo>
       </centre>
     </header>
-   <info>
+   <info xml:lang="en">
       <p>See <a href="https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html">https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html</a> 
-         for some info regarding deposition. Treat the recommendations below as potentially obsolete (contact the centre for confirmation).</p></info>
+         for more info regarding deposition.</p>
+      <p>New data sets (corpora of spoken language) can be added to the 
+         <a href="https://www.fdr.uni-hamburg.de/communities/hzsk/?page=1&amp;size=20">HZSK-Community</a> within the
+         FDR upon application to Prof. Dr Kristin Bührig, spokesperson of the Hamburg Centre for
+         Language Corpora. The prerequisite for the integration of the data into the FDR is that it
+         has already been fully curated.</p>
+   </info>
+   <info xml:lang="de">
+      <p>Weitere Informationen finden Sie unter
+         <a href="https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html">https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html</a>.</p>
+      <p>Neue Datensätze (Korpora gesprochener Sprache) können auf Antrag an Prof. Dr. Kristin
+         Bührig, Sprecherin des Hamburger Zentrums für Sprachkorpora, in die
+         <a href="https://www.fdr.uni-hamburg.de/communities/hzsk/?page=1&amp;size=20">HZSK-Community</a>
+         innerhalb des FDRs aufgenommen werden. Voraussetzung für die Integration der Daten ins FDR
+         ist ihre bereits vollständige Kuration.</p></info>
    <formats>
       <format id="fEXB">
          <domain>Audiovisual Annotation</domain>
