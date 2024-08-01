@@ -66,7 +66,7 @@ declare function em:export-table($ri, $centre, $domainId, $requestedLevel,
                 <url>{app:link($page)}</url>
                 <exportDate>{fn:current-dateTime()}</exportDate>
                 <filter>
-                {if($ri) then <riID>{$ri}</riID> else ()}
+                {if($ri) then <ri>{$ri}</ri> else ()}
                 {$filter}
                 </filter>
             </header>
