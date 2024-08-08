@@ -13,7 +13,7 @@ import module namespace sc = "http://clarin.ids-mannheim.de/standards/sanity-che
 
 <html>
     <head>
-        <title>Sanity check: Keywords</title>
+        <title>Sanity check: Media Types</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
@@ -27,17 +27,17 @@ import module namespace sc = "http://clarin.ids-mannheim.de/standards/sanity-che
                 <div class="navigation">
                     &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     &gt; <a href="{app:link("views/sanity-check.xq")}">Sanity Check</a>
-                    &gt; <a href="{app:link("views/sanity-check-keywords.xq")}">Keywords</a>
+                    &gt; <a href="{app:link("views/sanity-check-media-types.xq")}">Media Types</a>
                 </div>
                 
-                <div class="title">Sanity check: Keywords</div>
-                <div><p>This page lists all keywords used in <a href="{app:link("views/list-formats.xq")}">format descriptions</a>. 
-                The number of descriptions using the keyword (key phrase) in question is provided in the brackets. Clicking on a 
-                keyword opens a list of links to the particular descriptions.</p></div>
+                <div class="title">Sanity check: Media types</div>
+                <div><p>This page lists all media types used in <a href="{app:link("views/list-formats.xq")}">format descriptions</a>. 
+                The number of descriptions using the mime-type in question is provided in the brackets. Clicking on a 
+                mime-type opens a list of links to the particular descriptions.</p></div>
                 
-                 <div id="keywords">
-                    <h2>List of keywords</h2>
-                    <ul style="column-count: 2;">{sc:list-keywords()}</ul>
+                 <div id="mime-types" >
+                    <h2>List of Mime Types</h2>
+                    <ul style="column-count: 2;">{sc:list-media-types()}</ul>
                 </div>
                 </div>
             <div

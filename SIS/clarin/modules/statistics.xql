@@ -18,10 +18,10 @@ declare function stm:list-all-centre-statistics(){
     let $numOfCuratedCentres := count(cm:get-curated-centres(""))
     return
     <tr>
-        <td>All</td>
-        <td style="text-align:right;">{$numOfCentres }</td>
-        <td style="text-align:right;">{$numOfDepositingCentres}</td>
-        <td style="text-align:right;">{$numOfCuratedCentres}</td>
+        <td class="row">All</td>
+        <td class="row" style="text-align:right;">{$numOfCentres }</td>
+        <td class="row" style="text-align:right;">{$numOfDepositingCentres}</td>
+        <td class="row" style="text-align:right;">{$numOfCuratedCentres}</td>
     </tr>
 };
 
@@ -33,10 +33,10 @@ declare function stm:list-centre-statistics(){
         let $numOfCuratedCentres := count(cm:get-curated-centres($ri))
     return
         <tr>
-            <td>{$ri}</td>
-            <td style="text-align:right;">{$numOfCentres }</td>
-            <td style="text-align:right;">{$numOfDepositingCentres}</td>
-            <td style="text-align:right;">{$numOfCuratedCentres}</td>
+            <td class="row">{$ri}</td>
+            <td class="row" style="text-align:right;">{$numOfCentres }</td>
+            <td class="row" style="text-align:right;">{$numOfDepositingCentres}</td>
+            <td class="row" style="text-align:right;">{$numOfCuratedCentres}</td>
         </tr>
 };
 
@@ -138,3 +138,4 @@ declare function stm:list-format-by-media-types(){
         <td style="text-align:right;">{count($format:formats[mimeType=$type])}</td>
     </tr>
 };
+
