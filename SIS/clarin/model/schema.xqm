@@ -9,6 +9,12 @@ module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema";
 
 declare variable $xsd:doc := doc('../schemas/spec.xsd');
 declare variable $xsd:format := doc('../schemas/format.xsd');
+declare variable $xsd:recommendation := doc('../schemas/recommendation.xsd');
+
+(:get research infrastructures:)
+declare function xsd:get-ris(){
+    $xsd:recommendation/xs:schema/xs:simpleType/xs:restriction/xs:enumeration/data(@value)
+};
 
 (: Select relation types :)
 declare function xsd:get-relations(){

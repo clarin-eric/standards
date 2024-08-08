@@ -2,13 +2,43 @@ xquery version "3.1";
 
 module namespace stm = "http://clarin.ids-mannheim.de/standards/statistics-module";
 
+import module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema" at "../model/schema.xqm";
 import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
 import module namespace recommendation = "http://clarin.ids-mannheim.de/standards/recommendation-model" 
 at "../model/recommendation-by-centre.xqm";
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
+import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+
+declare function stm:list-all-centre-statistics(){
+    let $numOfCentres := count($recommendation:centres) 
+    let $numOfDepositingCentres := count(cm:get-deposition-centres(""))
+    let $numOfCuratedCentres := count(cm:get-curated-centres(""))
+    return
+    <tr>
+        <td>All</td>
+        <td style="text-align:right;">{$numOfCentres }</td>
+        <td style="text-align:right;">{$numOfDepositingCentres}</td>
+        <td style="text-align:right;">{$numOfCuratedCentres}</td>
+    </tr>
+};
+
+declare function stm:list-centre-statistics(){
+    let $ris := xsd:get-ris()
+    for $ri in $ris
+        let $numOfCentres := count(cm:get-centre-by-research-infrastructure($ri,""))
+        let $numOfDepositingCentres := count(cm:get-deposition-centres($ri))
+        let $numOfCuratedCentres := count(cm:get-curated-centres($ri))
+    return
+        <tr>
+            <td>{$ri}</td>
+            <td style="text-align:right;">{$numOfCentres }</td>
+            <td style="text-align:right;">{$numOfDepositingCentres}</td>
+            <td style="text-align:right;">{$numOfCuratedCentres}</td>
+        </tr>
+};
 
 declare function stm:list-formats-by-recommendation-level(){
     for $level in ("Recommended","Acceptable","Discouraged")
