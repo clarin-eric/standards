@@ -78,6 +78,7 @@ declare function em:export-table($ri, $centre, $domainId, $requestedLevel,
 
 
 declare function em:download-template($centre-id,$filename){
+    let $filename := fn:replace($filename,":","-")
     let $quote := "&#34;"
     let $header1 := response:set-header("Content-Disposition", concat("attachment; filename=",
     $quote, $filename, $quote))
