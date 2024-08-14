@@ -185,6 +185,35 @@ declare function rf:print-page-links($numOfRows, $sortBy, $domainId, $recommenda
 
 };
 
+declare function rf:print-page-navigation($numberOfPages, $sortBy, $domainId, 
+    $recommendationLevel, $centre, $currentPage as xs:int){
+    
+    let $nextLink :=
+        if ($currentPage = $numberOfPages) then ()
+        else ( 
+            rf:create-page-link($sortBy, $domainId, $recommendationLevel, $centre, 
+            $currentPage +1, " >>")
+        )
+    let $prevLink := 
+        if ($currentPage = 1) then () 
+        else ( 
+                rf:create-page-link($sortBy, $domainId, $recommendationLevel, $centre,
+               $currentPage -1, "<< ")
+       )
+    return ($prevLink, $currentPage, $nextLink)
+};
+
+declare function rf:create-page-link($sortBy, $domainId, $recommendationLevel, $centre, 
+$page as xs:int, $label) {
+    <a href="{
+                app:link(concat("views/recommended-formats-with-search.xq?sortBy=",
+                $sortBy,
+                (:"&amp;domain=",:)
+                $domainId, "&amp;level=", $recommendationLevel,
+                "&amp;centre=", $centre, "&amp;page=", $page, "#searchRecommendation"))
+            }">{$label}</a>
+};
+
 declare function rf:paging($rows, $page as xs:int) {
     let $numOfRows := count($rows)
     

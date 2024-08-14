@@ -42,6 +42,8 @@ let $recommendationTable := rf:paging($rows,$page)
 (: centre info is only included in the exported file if a centre is selected :)
 let $centreInfo := cm:get-centre-info($centre,$languageHeader)
 
+let $numberOfPages := xs:integer(fn:ceiling(count($rows) div $rf:pageSize))
+
 return
 if ($export)
 then (em:export-table($ri,$centre, $domainId, $recommendationLevel, $rows,
@@ -217,8 +219,9 @@ else
                         </tr>
                         {$recommendationTable}
                     </table>
-                    <div style="text-align:right; margin-right:40px;">{rf:print-page-links(count($rows),$sortBy,$domainParams,
+                    <div style="text-align:center;">{rf:print-page-navigation($numberOfPages ,$sortBy,$domainParams,
                         $recommendationLevel,$centre,$page)}</div>
+                        
                 </div>
                 <div class="footer">{app:footer()}</div>
             </div>
