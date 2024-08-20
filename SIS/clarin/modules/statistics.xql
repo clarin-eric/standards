@@ -51,14 +51,17 @@ declare function stm:list-formats-by-recommendation-level(){
 
 };
 
-declare function stm:list-format-by-domain(){
+declare function stm:list-format-by-domain($sortBy as xs:string){
     for $domain in $domain:domains/name
-    let $recommendations := recommendation:get-formats-by-domain($domain)
-    order by fn:lower-case($domain)
+        let $recommendations := recommendation:get-formats-by-domain($domain)
+        let $numOfRecommendations := count($recommendations)
+    order by 
+         if ($sortBy eq "number") then $numOfRecommendations
+        else fn:lower-case($domain)
     return 
     <tr>
         <td>{$domain}</td>
-        <td style="text-align:right;">{count($recommendations)}</td>
+        <td style="text-align:right;">{$numOfRecommendations}</td>
     </tr>
 };
 
