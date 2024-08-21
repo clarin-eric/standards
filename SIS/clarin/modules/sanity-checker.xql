@@ -8,6 +8,7 @@ import module namespace format = "http://clarin.ids-mannheim.de/standards/format
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
 import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-module" at "../modules/format.xql";
 import module namespace stm = "http://clarin.ids-mannheim.de/standards/statistics-module" at "../modules/statistics.xql";
+import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 
 declare function sc:get-recommendations-with-missing-or-unknown-domains() {
     for $r in $recommendation:centres
@@ -152,12 +153,17 @@ declare function sc:list-formats($formats){
 };
 
 declare function sc:create-format-item($k, $numOfFormats, $format-list){
-    <li>
+    let $label := ($k, concat("(",$numOfFormats,")"))
+    return
+        <li> {app:create-collapse-expand($k, $label,$format-list,
+                "column-count:2; padding-left:15px;")}
+            <!--
             <span class="pointer" onclick="openEditor('{$k}')">
                 {$k} ({$numOfFormats})
             </span>
             <ul id="{$k}" style="display:none; column-count:2; padding-left:15px;">
                 {$format-list}
             </ul> 
+            -->
         </li>
 };
