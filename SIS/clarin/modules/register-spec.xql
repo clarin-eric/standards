@@ -11,6 +11,11 @@ import module namespace functx = "http://www.functx.com" at "../resources/lib/fu
    @author margaretha
 :)
 
+(: Define the class attribute of an input field :)
+declare function rsm:get-input-class($submitted, $field){
+    if($submitted and not($field)) then "inputTextError" else "inputText"
+};
+
 (: Define the class for the id field :)
 declare function rsm:get-id-class($submitted, $field, $valid){
     if($submitted and (not($field) or not($valid))) then "inputTextError" else "inputText"

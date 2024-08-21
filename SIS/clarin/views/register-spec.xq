@@ -86,7 +86,7 @@ return
                      </tr>
                     <tr>
                         <td style="width:180px">Name:*</td>
-                        <td><input name="name" type="text" class="{app:get-input-class($submitted,$name)}" 
+                        <td><input name="name" type="text" class="{rsm:get-input-class($submitted,$name)}" 
                             style="width:400px;" value="{$name}" /></td>                            
                     </tr>
                     <tr>
@@ -102,7 +102,7 @@ return
                     <tr>
                         <td>Scope:*</td>
                         <td><input name="scope" placeholder="Describe the standard purpose, e.g. Corpus annotation." 
-                            type="text" value="{$scope}" class="{app:get-input-class($submitted,$scope)}" style="width:400px;"/></td>
+                            type="text" value="{$scope}" class="{rsm:get-input-class($submitted,$scope)}" style="width:400px;"/></td>
                     </tr>
                     <tr>
                        <td>Topic:*</td>

@@ -1,15 +1,35 @@
-xquery version "3.0";
+xquery version "3.1";
 
 module namespace app="http://clarin.ids-mannheim.de/standards/app";
 import module namespace web="https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
 import module namespace request="http://exist-db.org/xquery/request";
 
+(:declare namespace request="http://exist-db.org/xquery/request";
+declare namespace functx = "http://www.functx.com";
+
+declare variable $app:request-module := load-xquery-module("http://exist-db.org/xquery/request");
+declare variable $app:functx-module :=load-xquery-module("http://www.functx.com");
+:)
 (: Define general functions
    @author margaretha
 :)
 
 (: Base URI :)
 declare variable $app:base as xs:string := app:determine-base-uri();
+
+(:declare function app:determine-base-uri(){
+    let $get-server-name := $app:request-module?functions?(xs:QName("request:get-server-name"))
+    (\:let $get-server-name := $app:request-module?functions(xs:QName("request:get-server-name"))?0:\)
+    let $server-name := request:get-server-name()
+    (\:let $server-name := $app:functx-module?functions(xs:QName('functx:substring-after-last'))?2('This-is-a-test.','is'):\)
+    return     
+       if ($server-name eq "localhost") 
+       then concat("http://", $server-name, ":", $app:request-module?functions?get-server-port(),"/exist/apps/clarin/")
+       else if ($server-name eq "standards.clarin.eu")
+       then concat("https://",$server-name,"/sis/")
+       else concat("https://",$server-name,"/standards/")
+       
+};:)
 
 declare function app:determine-base-uri(){
     let $server-name := request:get-server-name()
@@ -33,17 +53,6 @@ declare function app:resource($filename as xs:string, $type as xs:string){
         if ($type = "css") then concat($path,"css/",$filename)
         else if ($type = "js") then concat($path,"scripts/",$filename)
         else concat($path,"images/",$filename)    
-};
-
-(: Set a display value :)
-(:declare function app:get-display(){
-    if (session:get-attribute('user')='webadmin')
-    then 'inline' else 'none'
-};
-:)
-(: Define the class attribute of an input field :)
-declare function app:get-input-class($submitted, $field){
-    if($submitted and not($field)) then "inputTextError" else "inputText"
 };
 
 declare function app:create-copy-button($id, $copy-text, $tooltiptext, $hint){
