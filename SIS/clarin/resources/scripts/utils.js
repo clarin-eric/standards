@@ -10,11 +10,11 @@ function copyTextToClipboard(id,text) {
   });
 }
 
-function openEditor(frame){   
-    if (frame){ 
-        if (document.getElementById(frame).style.display == "none")
-            document.getElementById(frame).style.display = 'block';
+function showHide(id,type){   
+    if (id){ 
+        if (document.getElementById(id).style.display == "none")
+            document.getElementById(id).style.display = type;
         else 
-            document.getElementById(frame).style.display = 'none';    
+            document.getElementById(id).style.display = 'none';    
     }
 }

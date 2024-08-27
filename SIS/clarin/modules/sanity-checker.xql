@@ -153,17 +153,9 @@ declare function sc:list-formats($formats){
 };
 
 declare function sc:create-format-item($k, $numOfFormats, $format-list){
-    let $label := ($k, concat("(",$numOfFormats,")"))
+    let $label := ($k, concat("(",$numOfFormats,"): "))
     return
         <li> {app:create-collapse-expand($k, $label,$format-list,
                 "column-count:2; padding-left:15px;")}
-            <!--
-            <span class="pointer" onclick="openEditor('{$k}')">
-                {$k} ({$numOfFormats})
-            </span>
-            <ul id="{$k}" style="display:none; column-count:2; padding-left:15px;">
-                {$format-list}
-            </ul> 
-            -->
         </li>
 };

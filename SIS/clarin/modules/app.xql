@@ -69,9 +69,12 @@ declare function app:create-collapse-expand($id, $label, $content, $customStyle)
         if ($customStyle) then concat($basic,$customStyle)
         else $basic
     return
-    (<span class="pointer" onclick="openEditor('{$id}')">
+    (<span class="pointer" onclick="showHide('dots-{$id}','inline');
+        showHide('{$id}','block')">
         {$label}
     </span>,
+    <span id="dots-{$id}" style="display:inline;">...</span> 
+    ,
     <ul id="{$id}" style="{$style}">
         {$content}
     </ul>)
