@@ -200,7 +200,7 @@ declare function rf:print-page-navigation($numberOfPages, $sortBy, $domainId,
                 rf:create-page-link($sortBy, $domainId, $recommendationLevel, $centre,
                $currentPage -1, "<< ")
        )
-    return ($prevLink, $currentPage, $nextLink)
+    return ($prevLink, concat($currentPage ,"/",$numberOfPages), $nextLink)
 };
 
 declare function rf:create-page-link($sortBy, $domainId, $recommendationLevel, $centre, 
