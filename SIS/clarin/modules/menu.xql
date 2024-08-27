@@ -91,14 +91,14 @@ declare function menu:view() {
                 <td width="10px"></td>
                 <td width="10px"></td>
                 <td class="tdmenu">
-                    <a style="display:block" href="{app:link("views/list-statistics-centre.xq")}">Centre Statistics</a>
+                    <a style="display:block" href="{app:link("views/list-popular-formats.xq")}">Popular Formats</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
                 <td width="10px"></td>
                 <td class="tdmenu">
-                    <a style="display:block" href="{app:link("views/list-popular-formats.xq")}">Popular Formats</a>
+                    <a style="display:block" href="{app:link("views/list-statistics-centre.xq")}">Centre Statistics</a>
                 </td>
             </tr>
             <tr>
