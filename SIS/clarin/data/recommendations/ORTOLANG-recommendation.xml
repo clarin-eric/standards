@@ -16,7 +16,7 @@
          <name>Open Resources and TOols for LANGuage</name>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/73"/>
          <nodeInfo>
-            <ri status="C-centre">CLARIN</ri>
+            <ri status="B-centre">CLARIN</ri>
          </nodeInfo>
       </centre>
     </header>
