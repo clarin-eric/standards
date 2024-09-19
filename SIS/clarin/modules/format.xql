@@ -131,7 +131,7 @@ declare function fm:print-missing-format($id as xs:string){
     let $recommendations := recommendation:get-recommendations-for-format($id)
     return 
         <li>
-            <span class="pointer" onclick="openEditor('{$id}')"> 
+            <span class="pointer" onclick="showHide('{$id}','block')"> 
                 {fn:substring($id, 2)} ({count($recommendations)}) </span>
             {rf:print-missing-format-link($id)}
             {app:create-copy-button($id,$id,"Copy ID to clipboard","Format ID copied")}

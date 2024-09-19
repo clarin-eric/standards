@@ -102,7 +102,7 @@ return
                      </tr>
                     <tr><td style="width:100px">Title:*</td>
                          <td><input name="pname" value="{$part-name}" type="text" 
-                            class="{app:get-input-class($submitted,$part-name)}" style="width:450px;"/></td>
+                            class="{rsm:get-input-class($submitted,$part-name)}" style="width:450px;"/></td>
                     </tr>
                     <tr><td>Abbreviation:</td>
                         <td><input name="pabbr" value="{$part-abbr}" type="text" class="inputText" style="width:450px;"/></td>

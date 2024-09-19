@@ -10,3 +10,11 @@ function copyTextToClipboard(id,text) {
   });
 }
 
+function showHide(id,type){   
+    if (id){ 
+        if (document.getElementById(id).style.display == "none")
+            document.getElementById(id).style.display = type;
+        else 
+            document.getElementById(id).style.display = 'none';    
+    }
+}

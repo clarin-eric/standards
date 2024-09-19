@@ -54,6 +54,7 @@ else
             <script type="text/javascript" src="{app:resource("d3.v2.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("forcegraph.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
+            <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
         </head>
         
         <!--<body onload="drawGraph('{sbm:get-sb-json($id)}','500','300','-100');">-->
@@ -149,7 +150,11 @@ else
                             {
                                 if (count($domains)>0)
                                 then(
-                                    <div>
+                                    <div> {app:create-collapse-expand("domainList", 
+                                        <span class="heading">Data functions covered by the recommendations: </span>, 
+                                        for $d in $domains return <li>{$d}</li>, "")
+                                    }
+                                        <!--
                                         <span class="heading">Data functions covered by the recommendations</span>
                                         <div>
                                         <span class="desctext">Recommendations provided by this centre concern the following <a href="{app:link('views/list-domains.xq')}">functions of data</a>:</span>
@@ -160,6 +165,7 @@ else
                                                 }
                                             </ul>
                                         </div>
+                                        -->
                                     </div>
                                 )
                                 else ()

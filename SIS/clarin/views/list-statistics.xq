@@ -13,6 +13,9 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
     @author margaretha
 :)
 
+let $domainSortBy :=  request:get-parameter('domainSortBy', '')
+return
+
 <html>
     <head>
         <title>Statistics</title>
@@ -30,10 +33,9 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
                     &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     &gt; <a href="{app:link("views/list-statistics.xq")}">Statistics</a>
                 </div>
-                <div class="title">Format Statistics</div>
+                <div class="title">Statistics</div>
                   <div>
-                    <p>This section presents various statistics concerning data deposition 
-                    formats and is still work in progress. Feel welcome to add your suggestions as a 
+                    <p>This section presents various statistics and is still work in progress. Feel welcome to add your suggestions as a 
                     <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS:enhancement&amp;title=Idea for the statistics page">GitHub issue</a>.</p>
                   </div>
                     <div>
@@ -57,7 +59,6 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
                         </tr>
                     </table>
                     
-                    
                     <table style="width:500px">
                         <tr>
                             <th>Recommendation Level</th>
@@ -66,14 +67,20 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
                         {stm:list-formats-by-recommendation-level()}
                     </table>
                     
-                    <table style="width:500px">
+                    <table id = "domainTable" style="width:500px">
                         <tr>
-                            <th>Domain</th>
-                            <th style="width:150px">Number of Recommendations</th>
+                            <th><a href="{app:link("views/list-statistics.xq?domainSortBy=alphabet#domainTable")}">
+                                Domain</a>
+                            </th>
+                            <th style="width:150px">
+                                <a href="{app:link("views/list-statistics.xq?domainSortBy=number#domainTable")}">
+                                Number of Recommendations</a>
+                            </th>
                         </tr>
-                        {stm:list-format-by-domain()}
+                        {stm:list-format-by-domain($domainSortBy)}
                     </table>
                     
+                    <!--
                     <table style="width:500px">
                         <tr>
                             <th>Media-types</th>
@@ -81,9 +88,9 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
                         </tr>
                         {stm:list-format-by-media-types()}
                     </table>
+                    -->
                     
-                    
-                    </div>
+                </div>
             </div>
             <div class="footer">{app:footer()}</div>
         </div>
