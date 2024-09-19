@@ -37,7 +37,7 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
                     lists research infrastructures (note that a single centre may represent more than one RI). 
                     Depositing centres are those that allow for data deposition. They may be a proper subset of all 
                     centres for the given RI, given the usual fluctuations in the status. The last column counts those 
-                    centres that actively maintain the information provided by the SIS, and that have designated a curator
+                    centres that actively maintain the information stored in the SIS, and that have designated a curator
                     for that information. See the verbose <a href="{app:link("views/list-centres.xq")}">list of centres</a> 
                     for more information. </p>
                     </div>

@@ -37,7 +37,7 @@ return
                   <div>
                     <p>This section presents various format-related statistics and is still work in progress. Feel welcome to add your suggestions as a 
                     <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS:enhancement&amp;title=Idea for the statistics page">GitHub issue</a>.
-                    <a href="{app:link("views/list-statistics-centres.xq")}">Centre-related statistics</a> are listed separately.</p>
+                    Note that <a href="{app:link("views/list-statistics-centre.xq")}">centre-related statistics</a> are listed separately.</p>
                   </div>
                     <div>
                     
