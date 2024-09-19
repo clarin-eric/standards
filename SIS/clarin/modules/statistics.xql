@@ -34,9 +34,9 @@ declare function stm:list-centre-statistics(){
     return
         <tr>
             <td class="row">{$ri}</td>
-            <td class="row" style="text-align:right;">{$numOfCentres }</td>
-            <td class="row" style="text-align:right;">{$numOfDepositingCentres}</td>
-            <td class="row" style="text-align:right;">{$numOfCuratedCentres}</td>
+            <td class="row" style="text-align:center;">{$numOfCentres }</td>
+            <td class="row" style="text-align:center;">{$numOfDepositingCentres}</td>
+            <td class="row" style="text-align:center;">{$numOfCuratedCentres}</td>
         </tr>
 };
 

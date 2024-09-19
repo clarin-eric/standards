@@ -32,15 +32,23 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
                     &gt; <a href="{app:link("views/list-statistics-formats.xq")}">Centre Statistics</a>
                 </div>
                 <div class="title">Centre Statistics</div>
-                    
+
+                    <div><p>These statistics provide numbers concerning the centres stored in the SIS. The "RI" column 
+                    lists research infrastructures (note that a single centre may represent more than one RI). 
+                    Depositing centres are those that allow for data deposition. They may be a proper subset of all 
+                    centres for the given RI, given the usual fluctuations in the status. The last column counts those 
+                    centres that actively maintain the information provided by the SIS, and that have designated a curator
+                    for that information. See the verbose <a href="{app:link("views/list-centres.xq")}">list of centres</a> 
+                    for more information. </p>
+                    </div>
                     <table style="width:600px">
                         <tr>
                             <th style="width:100px">RI</th>
-                            <th >Number of Centres</th>
-                            <th >Number of Depositing Centres</th>
-                            <th>Number of Curated Centres</th>
+                            <th style="text-align:center;">Number of centres</th>
+                            <th style="text-align:center;">Depositing centres</th>
+                            <th style="text-align:center;">Centres with curators</th>
                         </tr>
-                        {stm:list-all-centre-statistics()}
+                       <!-- {stm:list-all-centre-statistics()} -->
                         {stm:list-centre-statistics()}
                     </table>
             </div>
