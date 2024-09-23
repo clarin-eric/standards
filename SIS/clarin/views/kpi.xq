@@ -16,6 +16,9 @@ let $numOfDepositionCentres := fn:count($depositioncentres)
 let $numOfDepositionCentresWithRecommendations := cm:count-number-of-centres-with-recommendations($depositioncentres)
 let $percentage := format-number($numOfDepositionCentresWithRecommendations div $numOfDepositionCentres,'0%')
 
+let $date := fn:current-dateTime()
+let $timestamp :=  format-dateTime($date, "[MNn] [D1o], [Y]", "en", (), ())
+
 return
     
     
@@ -76,7 +79,11 @@ return
                                 <td class="column">KPI "Collections of standards and mappings" as represented in the SIS </td>
                                 <td class="column">{$percentage}</td>
                             </tr>
+                            <tr>
+                                <td colspan="2" style="padding-top: 10px; text-align:right">Timestamp: {$timestamp}</td>
+                            </tr>
                         </table>
+                        
                         <!--
                         <ul>
                             <li>CLARIN deposition centres recorded in the SIS: <b>count(cm:get_centres(RI=CLARIN, status=deposition centre))</b>
