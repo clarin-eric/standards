@@ -12,7 +12,7 @@ import module namespace index="http://clarin.ids-mannheim.de/standards/index" at
 :)
 
 
-<html>
+<html lang="en">
     <head>
         <title>CLARIN Standards Information System</title>        
         <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>    
