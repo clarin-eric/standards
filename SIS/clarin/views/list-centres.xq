@@ -15,7 +15,7 @@ let $riCookie :=  request:get-cookie-value("ri")
 
 return
     
-    <html>
+    <html lang="en">
         <head>
             <title>Centres</title>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

@@ -17,7 +17,7 @@ let $recommendations-strange-levels := sc:get-recommendations-with-missing-or-un
 let $similar-recommendations := sc:get-similar-recommendations()
 return
 
-<html>
+<html lang="en">
     <head>
         <title>Sanity check</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

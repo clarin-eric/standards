@@ -14,7 +14,7 @@ let $code := "
 "
 return
 
-<html>
+<html lang="en">
     <head>
         <title>Format Families</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

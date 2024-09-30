@@ -33,7 +33,7 @@ let $submitted-part := request:get-parameter("part-title","")
 
 return 
 
-<html>
+<html lang="en">
     <head>
        <title>Registering Standard Parts</title>       
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>

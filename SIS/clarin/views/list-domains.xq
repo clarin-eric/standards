@@ -11,7 +11,7 @@ import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-mod
     @author banski, margaretha
 :)
 
-<html>
+<html lang="en">
     <head>
         <title>Functional domains</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

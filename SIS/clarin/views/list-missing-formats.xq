@@ -11,7 +11,7 @@ import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-mod
     @author margaretha
 :)
 
-<html>
+<html lang="en">
     <head>
         <title>Missing Format Descriptions</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

@@ -22,7 +22,7 @@ let $timestamp :=  format-dateTime($date, "[MNn] [D1o], [Y]", "en", (), ())
 return
     
     
-    <html>
+    <html lang="en">
         <head>
             <title>Relevant CLARIN KPIs</title>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

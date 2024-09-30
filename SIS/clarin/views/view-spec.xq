@@ -24,7 +24,7 @@ return
 if (not($id) or not($spec))
 then 
 
-<html>
+<html lang="en">
     <head>
         <title>Not Found</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
@@ -47,7 +47,7 @@ then
 
 
 else
-<html>
+<html lang="en">
     <head>
        <title>{$spec-name}</title>       
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>

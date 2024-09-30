@@ -11,7 +11,7 @@ import module namespace tm="http://clarin.ids-mannheim.de/standards/topic-module
     @author margaretha
 :)
 
-<html>
+<html lang="en">
     <head>
     	<title>Topics</title>
     	<link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>

@@ -19,7 +19,7 @@ let $topic-name := $topic/titleStmt/title/text()
 
 return 
 
-<html>
+<html lang="en">
 	<head>
 		<title>{$topic-name}</title>
 		<link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>

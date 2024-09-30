@@ -10,7 +10,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
    @author margaretha
 :)
 
-<html>
+<html lang="en">
     <head>
         <title>About / F.A.Q.</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>

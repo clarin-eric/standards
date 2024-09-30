@@ -17,7 +17,7 @@ return
     @author margaretha
 :)
 
-<html>
+<html lang="en">
     <head>
         <title>Data Deposition Formats</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

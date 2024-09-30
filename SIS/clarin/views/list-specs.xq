@@ -24,7 +24,7 @@ return
    (: if ($spec-relations)
     then lsm:get-spec-json($spec-group, $spec-relations)
     else :)
-    <html>
+    <html lang="en">
         <head>
             <title>Standards and Specifications</title>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

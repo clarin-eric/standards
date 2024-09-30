@@ -50,7 +50,7 @@ then (em:export-table($ri,$centre, $domainId, $recommendationLevel, $rows,
     "format-recommendation.xml","views/recommended-formats-with-search.xq",$centreInfo))
 else 
 
-    <html>
+    <html lang="en">
         <head>
             <title>Format Recommendations</title>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

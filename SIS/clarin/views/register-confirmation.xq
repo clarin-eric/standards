@@ -12,7 +12,7 @@ let $spec := asm:get-spec($id)
 let $spec-name := $spec/titleStmt/title/text()
 
 return
-<html>
+<html lang="en">
     <head>
        <title>Registering Standard Parts</title>       
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>

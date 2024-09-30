@@ -16,7 +16,7 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
 let $domainSortBy :=  request:get-parameter('domainSortBy', '')
 return
 
-<html>
+<html lang="en">
     <head>
         <title>Statistics</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

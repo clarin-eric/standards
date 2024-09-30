@@ -30,7 +30,7 @@ let $keyword := request:get-parameter('keyword', '')
 
 return
     
-    <html>
+    <html lang="en">
     <head>
        <title>Registering Standard</title>       
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
