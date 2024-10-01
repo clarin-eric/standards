@@ -63,7 +63,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                <p>You can see an example way of querying the data with jQuery at 
                <a href="https://github.com/IDS-Mannheim/IDS-Mannheim.github.io">https://github.com/IDS-Mannheim/IDS-Mannheim.github.io</a>, and 
                the corresponding simple webpage is available for viewing at 
-               <a href="https://ids-mannheim.github.io/standards/">https://ids-mannheim.github.io/standards/</a> (many browsers will allow you \
+               <a href="https://ids-mannheim.github.io/standards/">https://ids-mannheim.github.io/standards/</a> (many browsers will allow you 
                to view the source by doing Ctrl+U). If you would like to contribute a CSS (or XSL) stylesheet to render the info in a nicer way, 
                please feel welcome to contact us and we will set up a directory for such contributions.</p>
                 </li>
