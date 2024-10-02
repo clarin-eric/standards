@@ -7,7 +7,7 @@ import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 
 
-<html>
+<html lang="en">
     <head>
         <title>API</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

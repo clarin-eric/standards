@@ -30,7 +30,7 @@ declare function sc:get-recommendations-with-missing-or-unknown-domains() {
             else 
                 <ul>
                         <li>
-                            Centre : {$centre} <br/>
+                            Centre: {$centre} <br/>
                             Format ID: {$format/data(@id)} <br/>
                             Domain: {$domain}
                         </li>    

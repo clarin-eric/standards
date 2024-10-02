@@ -47,7 +47,7 @@ else if ($template)
 then (em:download-template($id,$exportFilename))
 else 
     
-    <html>
+    <html lang="en">
         <head>
             <title>Centre: {$id}</title>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

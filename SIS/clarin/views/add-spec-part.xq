@@ -30,7 +30,7 @@ let $validation := asm:validate-part($submitted,$spec,$validate-id,$part-id,
 
 return
 
-<html>
+<html lang="en">
     <head>
        <title>Adding a Part of {$spec-name}</title>       
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>

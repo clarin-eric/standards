@@ -13,7 +13,7 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
     @author margaretha
 :)
 
-<html>
+<html lang="en">
     <head>
         <title>Centre Statistics</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

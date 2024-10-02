@@ -17,7 +17,7 @@
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/80" label="CLARIN-CH-LiRI"/>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/81" label="CLARIN-CH-LaRS"/>
             <nodeInfo>
-                <ri status="CLARIN (C-centre aiming-for-B)">CLARIN</ri>
+                <ri status="C-centre aiming-for-B">CLARIN</ri>
             </nodeInfo>
         </centre>
     </header>

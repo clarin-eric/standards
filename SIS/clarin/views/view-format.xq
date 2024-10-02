@@ -28,7 +28,7 @@ let $format-domains := vfm:get-recommended-domains-by-format($id)
 return
     
     if (not($id) or not($format)) then
-        <html>
+        <html lang="en">
             <head>
                 <title>Not Found</title>
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
@@ -49,7 +49,7 @@ return
             </body>
         </html>
     else
-        <html>
+        <html lang="en">
             <head>
                 <title>{$format-name}</title>
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

@@ -59,7 +59,7 @@ let $submitted-version := request:get-parameter("versionid","")
 
 return
 
-<html>
+<html lang="en">
     <head>
        <title>Registering Standard Parts</title>       
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>

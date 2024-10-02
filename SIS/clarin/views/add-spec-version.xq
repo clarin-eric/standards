@@ -57,7 +57,7 @@ let $spec-name := asm:get-spec-name($spec)
 
 return
 
-    <html>
+    <html lang="en">
     <head>
        <title>Adding a Version of {$spec-name}</title>       
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>

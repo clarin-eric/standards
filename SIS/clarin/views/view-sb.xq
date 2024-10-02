@@ -20,7 +20,7 @@ let $specs-by-sb := sbm:get-specs-by-sb($id)
 
 return
     
-    <html>
+    <html lang="en">
         <head>
             <title>Standard Setting Body: {$sb-title}</title>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

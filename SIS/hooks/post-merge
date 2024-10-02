@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 echo "Writing commit-id"
-echo "<commitId>" > SIS/clarin/commit-id.xml
+echo -n "<commitId>" > SIS/clarin/commit-id.xml
 git rev-parse HEAD >> SIS/clarin/commit-id.xml
+truncate -s-1 SIS/clarin/commit-id.xml
 echo "</commitId>" >> SIS/clarin/commit-id.xml
 exit 0

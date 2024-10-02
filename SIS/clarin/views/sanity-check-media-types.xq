@@ -11,7 +11,7 @@ import module namespace sc = "http://clarin.ids-mannheim.de/standards/sanity-che
     @author margaretha
 :)
 
-<html>
+<html lang="en">
     <head>
         <title>Sanity check: Media Types</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>

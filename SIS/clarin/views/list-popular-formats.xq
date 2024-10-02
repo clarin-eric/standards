@@ -19,7 +19,7 @@ let $top3 := if ($reset) then () else request:get-parameter('top3', '')
 return
 
 
-<html>
+<html lang="en">
     <head>
         <title>Popular Formats</title>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
