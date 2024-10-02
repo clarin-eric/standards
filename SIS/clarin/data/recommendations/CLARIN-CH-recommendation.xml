@@ -36,52 +36,52 @@
                 <level>recommended</level>
             </format> 
         -->
-        <format id="fR">
-            <domain>Statistical data</domain>
+            <format id="fR">
+            <domain>Statistical Data</domain>
             <level>recommended</level>
         </format>
         <format id="fSPSS">
-            <domain>Statistical data</domain>
+            <domain>Statistical Data</domain>
             <level>discouraged</level>
         </format>
         <format id="fpy">
-            <domain>Statistical data</domain>
+            <domain>Statistical Data</domain>
             <level>recommended</level>
         </format>
         <format id="fSAS">
-            <domain>Statistical data</domain>
+            <domain>Statistical Data</domain>
             <level>discouraged</level>
         </format>
         <format id="fPDF">
-            <domain>Text annotation</domain>
+            <domain>Text Annotation</domain>
             <level>discouraged</level>
         </format>
         <format id="fTEI">
-            <domain>Text annotation</domain>
+            <domain>Text Annotation</domain>
             <level>recommended</level>
         </format>
         <format id="fEAF">
-            <domain>Audiovisual annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format id="fPraat">
-            <domain>Audiovisual annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format id="fXML">
-            <domain>Textual source language data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
         <format id="fMP4">
-            <domain>Audiovisual source language data</domain>
+            <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
         <format id="fCoNLL-U">
-            <domain>Text annotation</domain>
+            <domain>Text Annotation</domain>
             <level>recommended</level>
         </format>
         <format id="fXML">
-            <domain>Text annotation</domain>
+            <domain>Text Annotation</domain>
             <level>recommended</level>
         </format>
         <format id="fDOC">
@@ -89,11 +89,11 @@
             <level>discouraged</level>
         </format>
         <format id="fDOC">
-            <domain>Textual source language data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>discouraged</level>
         </format>
         <format id="fDOCX">
-            <domain>Audiovisual annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>discouraged</level>
         </format>
         <format id="fRTF">
@@ -109,11 +109,11 @@
             <level>discouraged</level>
         </format>
         <format id="fWAVE">
-            <domain>Audiovisual source language data</domain>
+            <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
         <format id="fPDF">
-            <domain>Textual source language data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>discouraged</level>
         </format>
         <format id="fXML">
@@ -121,27 +121,27 @@
             <level>acceptable</level>
         </format>
         <format id="fMarkdown">
-            <domain>Textual source language data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>discouraged</level>
         </format>
         <format id="fJSON">
-            <domain>Text annotation</domain>
+            <domain>Text Annotation</domain>
             <level>acceptable</level>
         </format>
         <format id="fHTML">
-            <domain>Textual source language data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>acceptable</level>
         </format>
         <format id="fODT">
-            <domain>Textual source language data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>discouraged</level>
         </format>
         <format id="fCoNLL-U">
-            <domain>Textual source language data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
         <format id="fJSON">
-            <domain>Textual source language data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
         <format id="fXML">
@@ -157,19 +157,19 @@
             <level>recommended</level>
         </format>
         <format id="fXML">
-            <domain>Audiovisual annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>recommended</level>
         </format>
         <format id="fMP3">
-            <domain>Audiovisual source language data</domain>
+            <domain>Audiovisual Source Language Data</domain>
             <level>acceptable</level>
         </format>
         <format id="fOGG">
-            <domain>Audiovisual source language data</domain>
+            <domain>Audiovisual Source Language Data</domain>
             <level>acceptable</level>
         </format>
         <format id="fMPEG">
-            <domain>Audiovisual source language data</domain>
+            <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
         <format id="fHTML">
@@ -177,23 +177,23 @@
             <level>acceptable</level>
         </format>
         <format id="fXML">
-            <domain>Language description</domain>
+            <domain>Language Description</domain>
             <level>recommended</level>
         </format>
         <format id="fFLEx">
-            <domain>Lexical resources</domain>
+            <domain>Lexical Resource</domain>
             <level>acceptable</level>
         </format>
         <format id="fSQL">
-            <domain>Lexical resources</domain>
+            <domain>Lexical Resource</domain>
             <level>acceptable</level>
         </format>
         <format id="fCSV">
-            <domain>Lexical resources</domain>
+            <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
         <format id="fXML">
-            <domain>Lexical resources</domain>
+            <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
         <format id="fBiBTeX">
@@ -205,15 +205,15 @@
             <level>acceptable</level>
         </format>
         <format id="fplainText">
-            <domain>Audiovisual annotation</domain>
+            <domain>Audiovisual Annotation</domain>
             <level>discouraged</level>
         </format>
-        <format id="fDC XML">
+        <format id="fDC-XML">
             <domain>Metadata</domain>
             <level>recommended</level>
         </format>
         <format id="fplainText">
-            <domain>Textual source language data</domain>
+            <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
     </formats>
