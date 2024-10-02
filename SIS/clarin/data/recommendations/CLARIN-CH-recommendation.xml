@@ -17,7 +17,7 @@
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/80" label="CLARIN-CH-LiRI"/>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/81" label="CLARIN-CH-LaRS"/>
             <nodeInfo>
-                <ri status="B-centre">CLARIN</ri>
+                <ri status="CLARIN (C-centre aiming-for-B)">CLARIN</ri>
             </nodeInfo>
         </centre>
     </header>
@@ -44,7 +44,7 @@
             <domain>Statistical Data</domain>
             <level>discouraged</level>
         </format>
-        <format id="fpy">
+        <format id="fPython">
             <domain>Statistical Data</domain>
             <level>recommended</level>
         </format>
@@ -108,7 +108,7 @@
             <domain>Metadata</domain>
             <level>discouraged</level>
         </format>
-        <format id="fWAVE">
+        <format id="fWave">
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
@@ -204,7 +204,7 @@
             <domain>Metadata</domain>
             <level>acceptable</level>
         </format>
-        <format id="fplainText">
+        <format id="fTextPlain">
             <domain>Audiovisual Annotation</domain>
             <level>discouraged</level>
         </format>
@@ -212,7 +212,7 @@
             <domain>Metadata</domain>
             <level>recommended</level>
         </format>
-        <format id="fplainText">
+        <format id="fTextPlain">
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
