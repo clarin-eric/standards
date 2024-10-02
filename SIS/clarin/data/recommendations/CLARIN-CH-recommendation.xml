@@ -9,7 +9,7 @@
         <respStmt>
             <name>Alexandru Craevschi</name>
             <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-            <link>alexandru.craevschi@uzh.ch</link>
+            <link>mailto:alexandru.craevschi@uzh.ch</link>
             <reviewDate>2024-10-02</reviewDate>
         </respStmt>
         <centre id="CLARIN-CH" deposition="1">
