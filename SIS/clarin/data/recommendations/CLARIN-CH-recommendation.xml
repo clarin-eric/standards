@@ -14,8 +14,8 @@
         </respStmt>
         <centre id="CLARIN-CH" deposition="1">
             <name>CLARIN Switzerland</name>
-            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/80" label="CLARIN-CH-LiRI"/>
-            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/81" label="CLARIN-CH-LaRS"/>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/80" label="LiRI"/>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/81" label="LaRS"/>
             <nodeInfo>
                 <ri status="C-centre aiming-for-B">CLARIN</ri>
             </nodeInfo>
