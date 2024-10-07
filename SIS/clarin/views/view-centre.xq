@@ -91,9 +91,10 @@ else
                             if (count($registry-links) eq 1)
                             then 
                             <div>
-                                <span class="heading">Link: </span>
+                                <span class="heading">Registry: </span>
                                 {
                                     let $uri := data($registry-links/@uri)
+                                    let $registry := data($registry-links/@registry)
                                     let $label := 
                                            if (data($registry-links/@label))
                                            then
@@ -101,24 +102,25 @@ else
                                            else () 
                                      
                                      return
-                                    <span id="reg-link"><a href="{$uri}">{$uri}</a>{$label}</span>
+                                    <span id="reg-link">{$registry}: <a href="{$uri}">{$uri}</a>{$label}</span>
                                  }
 
                              </div>                            
                              else 
                              <div>
-                                <span class="heading">Links: </span>
+                                <span class="heading">Registry: </span>
                                 <ul>
                                 {
                                     for $registry-link at $pos in ($registry-links)
                                        let $uri := data($registry-link/@uri)
+                                       let $registry := data($registry-link/@registry)
                                        let $label := 
                                            if (data($registry-link/@label))
                                            then
                                              concat('   (',data($registry-link/@label), ')')
                                            else () 
                                     return 
-                                      <li><span id="{concat('reg-link_',$pos)}"><a href="{$uri}">{$uri}</a></span><span id="{concat('reg-label_',$pos)}">{$label}</span></li>
+                                      <li><span id="{concat('reg-link_',$pos)}">{$registry}: <a href="{$uri}">{$uri}</a></span><span id="{concat('reg-label_',$pos)}">{$label}</span></li>
                                  }
                                  </ul>
 
