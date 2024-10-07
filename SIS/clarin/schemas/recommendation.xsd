@@ -289,32 +289,13 @@
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="xs:string">
-                    <xs:attribute name="uri" use="required" type="xs:anyURI"/>
                     <xs:attribute name="registry" use="required" type="ResearchInfrastructures">
                         <xs:annotation>
                             <xs:documentation>Name of the registry being linked to. Default: the
                                 CLARIN centre registry.</xs:documentation>
                         </xs:annotation>
-<!--                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:enumeration value="CLARIN CR">
-                                    <xs:annotation>
-                                        <xs:documentation>CLARIN centre registry at https://centres.clarin.eu/</xs:documentation>
-                                    </xs:annotation>
-                                </xs:enumeration>
-                                <xs:enumeration value="Text+ CR">
-                                    <xs:annotation>
-                                        <xs:documentation>Text+ centre registry, informally at https://text-plus.org/vernetzung/daten-kompetenzzentren/</xs:documentation>
-                                    </xs:annotation>
-                                </xs:enumeration>
-                                <xs:enumeration value="DARIAH CR">
-                                    <xs:annotation>
-                                        <xs:documentation>DARIAH list of repositories</xs:documentation>
-                                    </xs:annotation>
-                                </xs:enumeration>
-                            </xs:restriction>
-                        </xs:simpleType>-->
                     </xs:attribute>
+                    <xs:attribute name="uri" use="required" type="xs:anyURI"/>
                     <xs:attribute name="label" use="optional" type="xs:string">
                         <xs:annotation><xs:documentation>Optional label</xs:documentation></xs:annotation>
                     </xs:attribute>
