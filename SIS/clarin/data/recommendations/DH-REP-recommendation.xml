@@ -13,15 +13,30 @@
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
         <centre id="DH-REP" deposition="1">
-        <name>DARIAH-DE Repository</name>
-        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/62"/>
-        <nodeInfo>
-          <ri status="C-centre">CLARIN</ri>
-          <ri status="">DARIAH</ri>
-        </nodeInfo>
-      </centre>
+            <name>DARIAH-DE Repository</name>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/62"/>
+            <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/892e7ca0-cb78-41ba-aef6-d705bf499d33/"/>
+            <registryLink registry="DARIAH" uri="https://repository.de.dariah.eu/"/> <!--this one is, admittedly, not a registry link-->
+            <nodeInfo>
+                <ri status="C-centre">CLARIN</ri>
+                <ri status="Collections">Text+</ri>
+                <ri status="">DARIAH</ri>
+            </nodeInfo>
+        </centre>
     </header>
-    <info><!--use p, ul, ol elements here--></info>
+    <info xml:lang="en">
+        <p>The DARIAH-DE Repository is a central component of the DARIAH-DE Research Data Federation
+            Architecture and allows for storing research data sustainably and securely, and it is
+            CoreTrustSeal certified. The repository allows for finding research data through the
+            Repository Search as well as through the DARIAH-DE Generic Search. Read more about
+            sustainability, FAIR and Open Access in the Mission Statement of the DARIAH-DE
+            Repository.</p></info>
+    <info xml:lang="de">
+        <p>Das DARIAH-DE Repository ermöglicht als zentrale Komponente der DARIAH-DE
+            Forschungsdaten-Föderationsarchitektur die nachhaltige und sichere Speicherung von
+            Forschungsdaten und ist mit dem CoreTrustSeal zertifiziert. Alle publizierten Daten sind
+            durch die Repository Suche und die DARIAH-DE Generische Suche auffindbar. Mehr zum Thema
+            Nachhaltigkeit, FAIR und Open Access im Mission Statement des DARIAH-DE Repository.</p></info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 

@@ -19,6 +19,7 @@
       <centre id="IDS" deposition="1">
          <name>Leibniz-Institut für Deutsche Sprache</name>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/11"/>
+         <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/fbb09340-0dd4-473d-bd54-13a0518d1e47/"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
             <ri status="Collections, Lexical Resources, Operations">Text+</ri>

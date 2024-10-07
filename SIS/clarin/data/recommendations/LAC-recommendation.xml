@@ -14,14 +14,24 @@
       </respStmt>
       <centre id="LAC" deposition="1">
          <name>Language Archive Cologne</name>
+         <!-- Data Centrer for the Humanities (DCH) -->
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/47"/>
+         <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/aa27e760-680e-44a6-8753-90414da0eefe/"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
             <ri status="Collections, Lexical Resources">Text+</ri>
          </nodeInfo>
       </centre>
     </header>
-   <info><!--use p, ul, ol elements here--></info>
+   <info xml:lang="en">
+      <p>The Language Archive Cologne (LAC) supports research, learning and teaching with high
+         quality and dependable digital language resources. The LAC facilitates free and open online
+         access to research data. It does this by preserving digital audio and video data,
+         annotations, and other digital language data in the long term, and by promoting and
+         disseminating these resources. The LAC promotes open and sustainable practices in the use
+         of digital language data in the humanities and provides technical advice to the research
+         community, and supports the deployment of digital technologies in research and
+         teaching.</p></info>
    <formats>
       <format id="fEAF">
          <domain>Audiovisual Annotation</domain>

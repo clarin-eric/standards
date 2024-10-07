@@ -15,12 +15,22 @@
         <centre id="TGrep" deposition="1">
             <name>TextGrid Repository</name>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/71"/>
+            <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/fb9ba505-dca8-41c1-aa19-b37090724816/"/>
             <nodeInfo>
                 <ri status="C-centre">CLARIN</ri>
+                <ri status="Collections">Text+</ri>
             </nodeInfo>
         </centre>
     </header>
-    <info><!--use p, ul, ol elements here--></info>
+    <info xml:lang="de">
+        <p>Das TextGrid Repository ist ein Langzeitarchiv für geisteswissenschaftliche
+            Forschungsdaten. Es liefert einen umfangreichen, durchsuch- und nachnutzbaren Bestand an
+            Texten und Bildern. An den Grundsätzen von Open Access und den FAIR-Prinzipien
+            orientiert, wurde das TextGrid Repository 2020 mit dem CoreTrustSeal versehen. Für
+            Forschende bietet das TextGrid Repository eine nachhaltige, dauerhafte und sichere
+            Möglichkeit, zur zitierfähigen Publikation ihrer Forschungsdaten und zur verständlichen
+            Beschreibung derselben durch erforderliche Metadaten. Mehr zum Thema Nachhaltigkeit,
+            FAIR und Open Access im Mission Statement des TextGrid Repository.</p></info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 
