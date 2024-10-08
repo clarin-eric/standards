@@ -20,7 +20,7 @@
             <nodeInfo>
                 <ri status="C-centre">CLARIN</ri>
                 <ri status="Collections">Text+</ri>
-                <ri status="">DARIAH</ri>
+                <ri status="Repository">DARIAH</ri>
             </nodeInfo>
         </centre>
     </header>

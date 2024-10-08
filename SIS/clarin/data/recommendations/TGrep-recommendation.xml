@@ -16,9 +16,11 @@
             <name>TextGrid Repository</name>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/71"/>
             <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/fb9ba505-dca8-41c1-aa19-b37090724816/"/>
+            <registryLink registry="DARIAH" uri="https://www.dariah.eu/tools-services/tools-services-detail-view/?id=oKFMi6"/>
             <nodeInfo>
                 <ri status="C-centre">CLARIN</ri>
                 <ri status="Collections">Text+</ri>
+                <ri status="Repository">DARIAH</ri>
             </nodeInfo>
         </centre>
     </header>
