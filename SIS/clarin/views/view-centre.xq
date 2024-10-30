@@ -2,7 +2,7 @@ xquery version "3.1";
 
 declare namespace request = "http://exist-db.org/xquery/request";
 declare namespace exist = "http://exist.sourceforge.net/NS/exist";
-declare option exist:serialize "method=xhtml media-type=text/html indent=yes doctype-system=about:legacy-compat";
+declare option exist:serialize "method=xhtml media-type=text/html indent=yes doctype-public=about:legacy-compat";
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
@@ -19,8 +19,6 @@ import module namespace em = "http://clarin.ids-mannheim.de/standards/export" at
 let $id := request:get-parameter('id', '')
 let $recommendationType := request:get-parameter('type', '')
 let $sortBy := request:get-parameter('sortBy', '')
-let $export := request:get-parameter('export', '')
-let $template := request:get-parameter('template', '')
 
 let $centre := cm:get-centre($id)
 let $centre-name := $centre/name/text()
@@ -35,17 +33,9 @@ let $ri :=  request:get-cookie-value("ri")
 let $languageHeader := if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader
 let $centre-info := cm:get-centre-info($id,$languageHeader)
 
-let $exportFilename := concat($id,"-recommendation.xml")
 let $domains := fn:distinct-values($recommendation/formats/format/domain/text())
 
 return
-if ($export)
-then (em:export-table("", $id, (), "", 
-            rf:print-centre-recommendation($id,(), "", $sortBy,$languageHeader,$ri),
-            $exportFilename, "views/view-centre.xq", $centre-info))
-else if ($template)
-then (em:download-template($id,$exportFilename))
-else 
     
     <html lang="en">
         <head>
@@ -76,7 +66,7 @@ else
                             <div style="float:right;">
                                 <span>
                                     <a href="{cm:getGithubCentreIssueLink($id)}" class="button" 
-                                        style="margin-left:5px; padding: 5px 5px 2px 5px; height:25px;
+                                        style="margin-left:5px; padding: 5px 5px 5px 5px; height:25px;
                                         color:darkred; border-color:darkred">
                                         Suggest a fix or extension</a>
                                 </span>
@@ -179,12 +169,13 @@ else
                                     <div>
                                         <span class="heading" id="recommendationTable">Format recommendations: </span>
                                        
-                                        <form method="get" action="" style="float: right;">
+                                        <form method="get" action="export.xq" style="float: right;">
                                               <input name="export" class="button"
                                               style="margin-bottom:5px; height:25px;width:165px;" 
                                               type="submit" value="Export table to XML"/>
                                               <input name="id" type="hidden" value="{$id}"/>
                                               <input name="sortBy" type="hidden" value="{$sortBy}"/>
+                                              <input name="source" type="hidden" value="views/view-centre.xq"/>
                                        </form>
                                     </div>
                                      ,
@@ -223,11 +214,12 @@ else
                                     <div>
                                         <span class="heading" id="recommendationTable">Recommendations: </span>
                                         <span>not yet available in the SIS</span>
-                                        <form method="get" action="" style="float: right;">
+                                        <form method="get" action="export.xq" style="float: right;">
                                               <input name="template" class="button"
                                               style="margin-bottom:5px; height:25px;width:165px;" 
                                               type="submit" value="Download template"/>
                                               <input name="id" type="hidden" value="{$id}"/>
+                                              <input name="source" type="hidden" value="views/view-centre.xq"/>
                                        </form>
                                     </div>
                                             )

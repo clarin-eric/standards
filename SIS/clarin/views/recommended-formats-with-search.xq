@@ -16,7 +16,6 @@ let $centre := if ($reset) then () else request:get-parameter('centre', '')
 let $domainId := if ($reset) then (()) else request:get-parameter('domain',())
 let $recommendationLevel := if ($reset) then () else request:get-parameter('level', '')
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
-let $export := request:get-parameter('export', '')
 let $page := request:get-parameter('page', 1) 
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 
@@ -39,16 +38,9 @@ let $rows :=
 
 let $recommendationTable := rf:paging($rows,$page)
 
-(: centre info is only included in the exported file if a centre is selected :)
-let $centreInfo := cm:get-centre-info($centre,$languageHeader)
-
 let $numberOfPages := xs:integer(fn:ceiling(count($rows) div $rf:pageSize))
 
 return
-if ($export)
-then (em:export-table($ri,$centre, $domainId, $recommendationLevel, $rows,
-    "format-recommendation.xml","views/recommended-formats-with-search.xq",$centreInfo))
-else 
 
     <html lang="en">
         <head>
@@ -172,7 +164,7 @@ else
                                 </form>
                             </td>
                             <td style="padding-left:5px;">
-                                <form method="get" action="" style="text-align:right;">
+                                <form method="get" action="export.xq" style="text-align:right;">
                                     <input name="export" class="button"
                                         style="margin-bottom:5px; margin-right:2px; 
                                         height:30px;width:165px;" type="submit" value="Export Table to XML"/>
@@ -185,6 +177,7 @@ else
                                     <input name="level" type="hidden" value="{$recommendationLevel}"/>
                                     <input name="sortBy" type="hidden" value="{$sortBy}"/>
                                     <input name="searchFormat" type="hidden" value="{$searchItem}"/>
+                                    <input name="source" type="hidden" value="views/recommended-formats-with-search.xq"/>
                                 </form>
                             </td>
                         </tr>
