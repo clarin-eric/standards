@@ -69,7 +69,8 @@ li{
     text-align:center;
     background-color:whitesmoke;
     color:grey;    
-    margin-left:2px;    
+    margin-left:2px;
+    cursor:pointer;
 }
 
 div.ri-tab-line {
