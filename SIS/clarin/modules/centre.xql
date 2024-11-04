@@ -210,15 +210,12 @@ declare function cm:get-centre-info($id, $lang) {
     else
         ()
     
-    let $info :=
-    if ($centre-info)
-    then
-        $centre-info
-    else
-        cm:get-default-info($id)
-    
     return
-        cm:parseFormatRef($info, $id)
+        if ($centre-info)
+        then
+            $centre-info
+        else
+            cm:get-default-info($id)
 };
 
 declare function cm:parseFormatRef($info,$id) {

@@ -1,7 +1,6 @@
 xquery version "3.1";
 
 declare namespace exist = "http://exist.sourceforge.net/NS/exist";
-declare option exist:serialize "method=xhtml media-type=text/xml indent=yes";
 
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
