@@ -121,6 +121,7 @@ declare function menu:view() {
                     <a style="display:block" href="{app:link("views/sanity-check-keywords.xq")}">Keywords</a>
                 </td>
             </tr>
+            <!--
             <tr>
                 <td width="10px"></td>
                 <td width="10px"></td>
@@ -128,6 +129,7 @@ declare function menu:view() {
                     <a style="display:block" href="{app:link("views/sanity-check-media-types.xq")}">Media Types</a>
                 </td>
             </tr>
+            -->
             <tr>
                 <td colspan="3" class="tdmenu">
                     <a style="display:block" href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>
