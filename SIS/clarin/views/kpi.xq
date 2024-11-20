@@ -1,4 +1,4 @@
-xquery version "3.0";
+xquery version "3.1";
 
 declare namespace exist = "http://exist.sourceforge.net/NS/exist";
 declare option exist:serialize "method=xhtml media-type=text/html indent=yes doctype-system=about:legacy-compat";
@@ -52,8 +52,8 @@ return
                             </tr>
                             <tr>
                                 <td class="column">1.</td>
-                                <td class="column">Number of certified deposition centres</td>
-                                <td class="column">Number of certified deposition centres</td>
+                                <td class="column">Number of certified <a href="{app:link("views/list-statistics-centre.xq")}">deposition centres</a></td>
+                                <td class="column">Number of certified <a href="{app:link("views/list-statistics-centre.xq")}">deposition centres</a></td>
                             </tr>
                             <tr>
                                 <td class="column">2.</td>
@@ -68,11 +68,12 @@ return
                     
                         <table style="width:600px; border-collapse:collapse;">
                             <tr>
-                                <td class="column">CLARIN deposition centres recorded in the SIS</td>
+                                <td class="column">CLARIN <a href="{app:link("views/list-statistics-centre.xq")}">deposition centres</a> recorded in the SIS</td>
                                 <td class="column">{$numOfDepositionCentres}</td>
                             </tr>
                             <tr>
-                                <td class="column">Number of deposition centres that have provided information (and recorded that in the SIS)</td>
+                                <td class="column">Number of <a href="{app:link("views/list-statistics-centre.xq")}">deposition centres</a> 
+                                    that have provided information (and recorded that in the SIS)</td>
                                 <td class="column">{$numOfDepositionCentresWithRecommendations}</td>
                             </tr>
                             <tr>

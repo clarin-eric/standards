@@ -46,9 +46,10 @@ import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain
                             <th style="width:100px">RI</th>
                             <th style="text-align:center;">Number of centres</th>
                             <th style="text-align:center;">Depositing centres</th>
-                            <th style="text-align:center;">Centres with curators</th>
+                            <th style="text-align:center;">Centres with recommendations</th>
+                            <th style="text-align:center;">Centres with curated recommendations</th>
                         </tr>
-                       <!-- {stm:list-all-centre-statistics()} -->
+                       <!-- {stm:list-all-centre-statistics()} without ri-->
                         {stm:list-centre-statistics()}
                     </table>
             </div>
