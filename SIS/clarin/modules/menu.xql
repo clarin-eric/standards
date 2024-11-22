@@ -169,7 +169,7 @@ declare function menu:view() {
             <tr>
                 <td width="10px"></td>
                 <td colspan="2" class="tdmenu">
-                    <a style="display:block" href="{app:link("search/search-spec.xq")}">Search</a>
+                    <a style="display:block" href="{app:link("views/search-spec.xq")}">Search</a>
                 </td>
             </tr>
             <tr>

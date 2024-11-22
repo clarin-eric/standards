@@ -1,13 +1,16 @@
-xquery version "3.0";
-
-declare namespace exist="http://exist.sourceforge.net/NS/exist";
-declare option exist:serialize "method=xhtml media-type=text/html indent=yes doctype-system=about:legacy-compat";
+xquery version "3.1";
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace tm ="http://clarin.ids-mannheim.de/standards/topic-module" at "../modules/topic.xql";
 import module namespace sbm="http://clarin.ids-mannheim.de/standards/sb-module" at "../modules/sb.xql";
 import module namespace search ="http://clarin.ids-mannheim.de/standards/search-spec" at "../modules/search-spec.xql";
+
+declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+declare option output:method "html";
+declare option output:media-type "text/html";
+declare option output:indent "yes";
+declare option output:html-version "5";
 
 (: Define search standard page
    @author margaretha
@@ -38,7 +41,7 @@ return
 			<div class="content">
                 <div class="navigation">
                     &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>
-                    &gt; <a href="{app:link("search/search-spec.xq")}">Search Standards</a>
+                    &gt; <a href="{app:link("views/search-spec.xq")}">Search Standards</a>
                 </div>
                 <div><span class="title">Search for Standards</span></div>
      			<div>By default, given keyword(s) are matched to standard names. For an advanced search, you can specify the other optional fields.
