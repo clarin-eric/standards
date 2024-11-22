@@ -28,6 +28,7 @@ return
     <html lang="en">
         <head>
             <title>Relevant CLARIN KPIs</title>
+            <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
         </head>

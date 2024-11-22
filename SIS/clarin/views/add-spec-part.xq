@@ -37,6 +37,7 @@ return
 <html lang="en">
     <head>
        <title>Adding a Part of {$spec-name}</title>       
+        <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js","js")}"/>
         <script type="text/javascript" src="{app:resource("tinymce/tinymce.min.js","js")}"/>

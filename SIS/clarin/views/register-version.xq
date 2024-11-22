@@ -64,7 +64,8 @@ return
 
 <html lang="en">
     <head>
-       <title>Registering Standard Parts</title>       
+        <title>Registering Standard Parts</title>       
+        <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dijit/themes/claro/claro.css" media="screen"/>        
         <script type="text/javascript" src="{app:resource("edit.js","js")}"/>        

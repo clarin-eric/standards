@@ -34,6 +34,7 @@ return
         <html lang="en">
             <head>
                 <title>Not Found</title>
+                <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
                 <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
             </head>
@@ -55,6 +56,7 @@ return
         <html lang="en">
             <head>
                 <title>{$format-name}</title>
+                <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
                 <link rel="stylesheet" type="text/css" href="{app:resource("tagclouds.css", "css")}"/>
                 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dijit/themes/claro/claro.css" media="screen"/>
