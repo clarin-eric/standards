@@ -30,7 +30,7 @@ declare option output:html-version "5";
                 
                 
                 <div id="about">
-                <p>This service (more precisely, its <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">"Standards and Specifications" section</a>) was created in 2012 
+                <p>This service (more precisely, its <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">"Standards Watchtower" section</a>) was created in 2012 
                 and has been maintained since then at <a href="https://www.ids-mannheim.de/">IDS Mannheim</a> 
                 as part of the Institute's activity as a <a href="https://clarin.eu/">CLARIN</a> B-Centre. Around 2020, the system was refreshed and 
                 extended with, among others, the section <a href="{app:link("views/recommended-formats-with-search.xq")}">"Format Recommendations"</a>. 

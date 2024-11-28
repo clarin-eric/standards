@@ -28,7 +28,7 @@ declare option output:html-version "5";
             {menu:view()}
             <div class="content">
                 <div class="navigation">
-                    &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>
+                    &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards Watchtower</a>
                     &gt; <a href="{app:link("views/list-sbs.xq")}">Standard Bodies</a>
                 </div>
                 <div class="title">Standard Bodies</div>

@@ -70,7 +70,7 @@ declare option output:html-version "5";
                 <div>
                 <p>The original and, at this time, not actively developed function of the SIS is to collect information on the 
                 human language technology standards in use by the CLARIN community. Visit the 
-                "<a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>" section in order to access 
+                "<a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards Watchtower</a>" section in order to access 
                 that functionality.</p>
                 <p style="text-align:center">* * * * *</p>
                 </div>

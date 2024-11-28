@@ -29,7 +29,7 @@ return
     else :)
     <html lang="en">
         <head>
-            <title>Standards and Specifications</title>
+            <title>Standards Watchtower</title>
             <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             
@@ -59,7 +59,7 @@ return
                 <div class="logoheader"/>
                 {menu:view()}
                 <div class="content">
-                    <div class="navigation">&gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>
+                    <div class="navigation">&gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards Watchtower</a>
                         {
                             if ($letter) then
                                 (" > ",
@@ -70,7 +70,7 @@ return
                         }
                     </div>
                     
-                    <div class="title">Standards and Specifications</div>
+                    <div class="title">Standards Watchtower</div>
                     
                     <div>
                     

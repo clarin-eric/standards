@@ -43,7 +43,7 @@ return
                 {menu:view()}
                 <div class="content">
                     <div class="navigation">
-                        &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>
+                        &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards Watchtower</a>
                         &gt; <a href="{app:link("views/search-spec.xq")}">Search Standards</a>
                     </div>
                     <div><span class="title">Search for Standards</span></div>
