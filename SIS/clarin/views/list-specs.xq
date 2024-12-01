@@ -79,7 +79,7 @@ return
                     as well as the appearance (and demise...) of practices and trends that may lead to the establishment of new 
                     standards. We stress that this is an effort open to anyone interested and dependent on the needs and sensitivity 
                     of its users: we welcome submissions from anyone willing to share standards-related information with others, via 
-                    <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3AWatchtower%2C+templatic&amp;title=Watchtower%3A new information">GitHub issues</a> 
+                    <a title="Open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3AWatchtower%2C+UserInput&amp;title=Watchtower%3A new information">GitHub issues</a> 
                     or GitHub pull requests.</p>
                    
                     <h2 id="waiting_room">Waiting room</h2>
@@ -88,12 +88,35 @@ return
                     some more intricate ways of sharing information about standards-related issues that pop up in the field. (Please
                     feel very welcome to share your feedback and to share information that you consider worth mentioning here and eventually 
                     in the SIS internals.)</p>
-                    <!-- <table cols="3">
-                    <row role="label">
-                    <cell>Date</cell>
-                    <cell>Item</cell>
-                    </row>
-                    </table> -->
+                    <table cols="3">
+                    <thead>
+                    <tr>
+                    <th>Date</th>
+                    <th>Link (inactive)</th>
+                    <th>Short description</th>
+                    <th>Remarks</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>2024-12-01</td>
+                     <td>https://www.iso.org/standard/79083.html</td>
+<td>New ISO standard, ISO/DIS 24635-1, Language ​ resource ​
+management ​ — ​ Corpus ​ Annotation ​ Project ​ Management ​ — ​ Part ​ 1: ​ Core ​ model</td>
+                     <td>About to be published, not sure if shareable in the SIC, ask Piotr if interested</td>
+                    </tr>
+                    <tr>
+                    <td>2024-12-01</td>
+                     <td>https://techpolicylab.uw.edu/data-statements/</td>
+<td>Data Statements for language datasets for NLP</td>
+                     <td>potential good practice, maybe a <i>de facto</i></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    
+                    <p><a title="Open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3AWatchtower%2C+UserInput%2C+templatic&amp;projects=&amp;template=watchtower_submission.md&amp;title=Watchtower%3A+new+submission">Add an entry suggestion</a>
+                    (opens a new GitHub issue with a template for structured input).</p>
+                    <p>Entries from the above table will be deleted once the item in question is integrated with the SIS or discarded.</p>
                     
                     <h2 id="introduction">Introduction: standards and specifications</h2>
                     <p>ISO defines a <a href="https://www.iso.org/obp/ui#home">standard</a> as “a document that provides requirements, 
@@ -130,7 +153,7 @@ return
                     This means that the relationships between standards and specifications listed here are still valid, 
                     but some new versions (and consequently new relationships) may still be missing. Since this is an 
                     open system, you are cordially invited to help extend it, either by 
-                    <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=Watchtower%2C+templatic&amp;title=Watchtower:info correction">posting a ticket</a> 
+                    <a title="Open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=Watchtower%2C+UserInput&amp;title=Watchtower:info correction">posting a ticket</a> 
                     to suggest a correction to missing or incorrect information, or by forking/cloning the source and submitting 
                     your additions via a pull request.</p>
 
