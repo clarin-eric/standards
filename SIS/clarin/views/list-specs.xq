@@ -74,14 +74,51 @@ return
                     
                     <div>
                     
-                    <p></p>
-                    <p>Note: information provided in this part of the Standards Information System may be outdated. 
-                    This means that the relationships between standards and specifications listed here are still valid, 
-                    but some new versions (and consequently new relationships) may still be missing. Since this is an 
-                    open system, you are cordially invited to help extend it, either by posting a ticket listing the 
-                    missing information, or by forking/cloning the source and submitting your additions via a pull request.</p>
+                    <p>Standards Watchtower is the name of the running project of the CLARIN Standards and Interoperability 
+                    Committee, where it is possible to trace the relationships among existing standards of various kinds and status,
+                    as well as the appearance (and demise...) of practices and trends that may lead to the establishment of new 
+                    standards. We stress that this is an effort open to anyone interested and dependent on the needs and sensitivity 
+                    of its users: we welcome submissions from anyone willing to share standards-related information with others, via 
+                    <a title="Open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3AWatchtower%2C+UserInput&amp;title=Watchtower%3A new information">GitHub issues</a> 
+                    or GitHub pull requests.</p>
                    
-                    <h2 id="introduction">Introduction</h2>
+                    <h2 id="waiting_room">Waiting room</h2>
+                    <p>This section lists "points of interest" that may be standards or best practices not yet woven into the SIS-internal 
+                    network of relationships. For the time being, access to it is via GitHub, and, in time, we shall see if it needs
+                    some more intricate ways of sharing information about standards-related issues that pop up in the field. (Please
+                    feel very welcome to share your feedback and to share information that you consider worth mentioning here and eventually 
+                    in the SIS internals.)</p>
+                    <table cols="3">
+                    <thead>
+                    <tr>
+                    <th>Date</th>
+                    <th>Link (inactive)</th>
+                    <th>Short description</th>
+                    <th>Remarks</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>2024-12-01</td>
+                     <td>https://www.iso.org/standard/79083.html</td>
+<td>New ISO standard, ISO/DIS 24635-1, Language ​ resource ​
+management ​ — ​ Corpus ​ Annotation ​ Project ​ Management ​ — ​ Part ​ 1: ​ Core ​ model</td>
+                     <td>About to be published, not sure if shareable in the SIC, ask Piotr if interested</td>
+                    </tr>
+                    <tr>
+                    <td>2024-12-01</td>
+                     <td>https://techpolicylab.uw.edu/data-statements/</td>
+<td>Data Statements for language datasets for NLP</td>
+                     <td>potential good practice, maybe a <i>de facto</i></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    
+                    <p><a title="Open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3AWatchtower%2C+UserInput%2C+templatic&amp;projects=&amp;template=watchtower_submission.md&amp;title=Watchtower%3A+new+submission">Add an entry suggestion</a>
+                    (opens a new GitHub issue with a template for structured input).</p>
+                    <p>Entries from the above table will be deleted once the item in question is integrated with the SIS or discarded.</p>
+                    
+                    <h2 id="introduction">Introduction: standards and specifications</h2>
                     <p>ISO defines a <a href="https://www.iso.org/obp/ui#home">standard</a> as “a document that provides requirements, 
                     specifications, guidelines or characteristics that can be used consistently to ensure that materials, products, 
                     processes and services are fit for their purpose.” Commonly, a standard developed within a standardization body
@@ -112,6 +149,14 @@ return
                     
                     <div id="list">
                     <h2>Content</h2>
+                    <p><b>Note</b>: information provided in this part of the Standards Information System may be outdated. 
+                    This means that the relationships between standards and specifications listed here are still valid, 
+                    but some new versions (and consequently new relationships) may still be missing. Since this is an 
+                    open system, you are cordially invited to help extend it, either by 
+                    <a title="Open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=Watchtower%2C+UserInput&amp;title=Watchtower:info correction">posting a ticket</a> 
+                    to suggest a correction to missing or incorrect information, or by forking/cloning the source and submitting 
+                    your additions via a pull request.</p>
+
                         <p>The table below lists the {$lsm:spec-sum} standards and specifications described in this website. You can get more 
                         information about a standard or a specification by clicking on the abbreviations. When hovering over an abbreviation, 
                         the standard/specification name will be shown on a tooltip. The topic column shows which area(s) a standard belongs 
