@@ -99,8 +99,9 @@ return
                            
                            <p>As of mid-2022, not every centre with depositing services has submitted the information to the SIS; in some cases, the information 
                            had to be unreliably mapped from lists provided on centre homepages onto the feature matrix offered by the SIS (created on the basis 
-                           of the SIS functional domains and levels of recommendation). If you think you see an error, please 
-                           <a href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">kindly help us get it right</a>.</p></div>
+                           of the SIS functional domains and levels of recommendation). If you think you see an error, please kindly help us get it right, by 
+                           <a title="open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic%2C+UserInput&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">posting an issue</a> or 
+                           <a title="consult the SIC wiki at GitHub" href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">editing the source</a>.</p></div>
                     <div style="margin-top:30px;">
                         <form id="filterRecommendation"  autocomplete="off" style="float:left;" method="get"
                             action="{app:link("views/recommended-formats-with-search.xq?#filterRecommendation")}">

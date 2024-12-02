@@ -47,7 +47,7 @@ return
                     <p>The life of a centre in a research infrastructure can be a dynamic affair, while the list below always 
                     only holds a snapshot of the state of the network at a certain (usually fairly random) date. We are not able to monitor
                     that in real time. If you see omissions or errors in the list below, please kindly 
-                    <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">let us know</a>.</p>
+                    <a title="open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic%2C+UserInput&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">let us know</a>.</p>
                     </div>
                     <div>
                         <form id="filterCentre" method="get" action="">
