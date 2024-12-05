@@ -55,16 +55,16 @@ declare function lsm:letter-filter(){
 (: Define the list header and column size :)
 declare function lsm:header($header as xs:string, $sortBy as xs:string, $page as xs:string, $letter as xs:string){
     let $width := 
-        if ($header = 'name') then "25%"
-        else if ($header = 'topic') then "35%"
+        if ($header = 'name') then "30%"
+        else if ($header = 'topic') then "50%"
         else if ($header = 'org') then "20%"
-        else if ($header = 'clarin-centres') then "20%"
+        (:else if ($header = 'clarin-centres') then "20%":)
         else ()
     let $value := 
         if ($header = 'name') then "Abbreviation/Name"
         else if ($header = 'topic') then "Topic(s)"
         else if ($header = 'org') then "Responsibility"
-        else if ($header = 'clarin-centres') then "CLARIN Centre(s)"
+        (:else if ($header = 'clarin-centres') then "CLARIN Centre(s)":)
         else () 
         (:"CLARIN Approved":)
         
@@ -74,7 +74,7 @@ declare function lsm:header($header as xs:string, $sortBy as xs:string, $page as
         if ($header = $sortBy)
         then <th class="header" style="width:{$width}; color:#404040">{$value}</th>
         else <th class="header" style="width:{$width};"><a href="{app:link(concat("views/list-specs.xq?sortBy=", $header,"&amp;page=",$page, $lt))}">{$value}</a></th>
-};
+};                                                                                                              (: can we add "#spec_table" anywhere sensible? :)
 
 (: Define the standard groups per page :)
 declare function lsm:group-specs($page as xs:int, $sortBy as xs:string, $letter as xs:string){    
@@ -84,7 +84,7 @@ declare function lsm:group-specs($page as xs:int, $sortBy as xs:string, $letter 
         if ($sortBy = 'name') then spec:sort-specs-by-abbr($specs,$letter)
         else if ($sortBy = 'topic') then spec:sort-specs-by-topic($specs,$letter)
         else if ($sortBy = 'org') then spec:sort-specs-by-sb($specs,$letter)
-        else if ($sortBy = 'clarin-centres') then spec:sort-specs-by-clarin-centres($specs,$letter)
+        (:else if ($sortBy = 'clarin-centres') then spec:sort-specs-by-clarin-centres($specs,$letter):)
         else ()
             
     let $max := fn:min(($lsm:spec-sum,$page*$lsm:pageSize)) +1
@@ -102,8 +102,9 @@ declare function lsm:list-specs($spec-group as item()*, $sortBy as xs:string, $l
         let $spec-topics := spec:get-topics($spec)
         let $number-of-spec-topics := count($spec-topics)
         
-        let $clarin-centres := spec:get-clarin-centres($spec)
-        let $num-of-centres := count($clarin-centres)
+    (:  let $clarin-centres := spec:get-clarin-centres($spec)
+        let $num-of-centres := count($clarin-centres) :)
+        
         (:let $clarin-approved := spec:get-clarin-approval($spec):)
         
         let $spec-abbr :=$spec/titleStmt/abbr/text()
@@ -111,7 +112,7 @@ declare function lsm:list-specs($spec-group as item()*, $sortBy as xs:string, $l
             if ($sortBy = 'name') then lower-case($spec-abbr)
             else if ($sortBy = 'topic') then $spec/functx:sort(tokenize(data($spec/@topic),' '))[1]
             else if ($sortBy = 'org') then $spec-org
-            else if ($sortBy = 'clarin-centres') then $clarin-centres[1]
+    (:        else if ($sortBy = 'clarin-centres') then $clarin-centres[1]:)
             else () (:$clarin-approved[1]:)
     return
         <tr>
@@ -136,7 +137,8 @@ declare function lsm:list-specs($spec-group as item()*, $sortBy as xs:string, $l
             else <a href="{app:link(concat("views/view-sb.xq?id=", $spec-org))}">{$sb/titleStmt/abbr/text()}</a>             
           }
           </td>
-          <td style="border-bottom:1px solid #DDDDDD; width:50px;  text-align:left; vertical-align:top;">
+
+       <!--   <td style="border-bottom:1px solid #DDDDDD; width:50px;  text-align:left; vertical-align:top;">
           { for $i in 1 to $num-of-centres
               let $id := $clarin-centres[$i]
               let $c := <a href="{centre:get-centre($id)/a/@href}">{$id}</a>
@@ -145,7 +147,8 @@ declare function lsm:list-specs($spec-group as item()*, $sortBy as xs:string, $l
                 then ($c, ', ')
                 else <a href="{centre:get-centre($id)/a/@href}">{$id}</a>
           }
-          </td>
+          </td> -->
+          
          <!-- <td style="border-bottom:1px solid #DDDDDD; text-align:centre; vertical-align:top;">
           { if ($clarin-approved)
             then 'yes'
