@@ -13,7 +13,7 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="ACDH-ARCHE" deposition="1">
-        <name>Austrian Centre for Digital Humanities and Cultural Heritage - A Resource Centre for the Humanities</name>
+        <centreName>Austrian Centre for Digital Humanities and Cultural Heritage - A Resource Centre for the Humanities</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/45"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>

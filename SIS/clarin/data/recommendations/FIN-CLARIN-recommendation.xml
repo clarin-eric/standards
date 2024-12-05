@@ -12,7 +12,7 @@
          <reviewDate>2024-02-15</reviewDate>
       </respStmt>
       <centre id="FIN-CLARIN" deposition="1">
-        <name>The Language Bank of Finland</name>
+        <centreName>The Language Bank of Finland</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/17"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>

@@ -12,7 +12,7 @@
          <reviewDate>2024-06-05</reviewDate>
       </respStmt>
       <centre id="CLARINO_Bergen" deposition="1">
-        <name>CLARINO Bergen Center</name>
+        <centreName>CLARINO Bergen Center</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/29"/>
         <nodeInfo>
           <ri status="B-centre,K-centre">CLARIN</ri>

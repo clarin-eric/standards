@@ -13,7 +13,7 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="BAS" deposition="1">
-        <name>Bayerisches Archiv für Sprachsignale</name>
+        <centreName>Bayerisches Archiv für Sprachsignale</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/5"/>
         <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/508c77d0-7856-4659-9ede-c2c7cd3fc339/"/>
         <nodeInfo>

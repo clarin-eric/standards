@@ -18,7 +18,7 @@
          <reviewDate>2024-05-08</reviewDate>
       </respStmt>
       <centre id="IDS" deposition="1">
-         <name>Leibniz-Institut für Deutsche Sprache</name>
+         <centreName>Leibniz-Institut für Deutsche Sprache</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/11"/>
          <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/fbb09340-0dd4-473d-bd54-13a0518d1e47/"/>
          <nodeInfo>

@@ -13,7 +13,7 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="UdS" deposition="1">
-         <name>Universität des Saarlandes</name>
+         <centreName>Universität des Saarlandes</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/13"/>
          <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/f5c8bc96-66ba-457b-a5d2-42a4a5617e93/"/>
          <nodeInfo>

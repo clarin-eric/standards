@@ -7,7 +7,7 @@
             <centreID>FZJ</centreID>
         </filter>
         <centre id="FZJ">
-        <name>Forschungzentrum Jülich</name>
+        <centreName>Forschungzentrum Jülich</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/7"/>
         <nodeInfo>
           <ri status="E-centre">CLARIN</ri>

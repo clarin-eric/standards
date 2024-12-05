@@ -13,7 +13,7 @@
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
         <centre id="CEDIFOR" deposition="1">
-        <name>Centre for the Digital Foundation of Research in the Humanities, Social, and Educational Sciences</name>
+        <centreName>Centre for the Digital Foundation of Research in the Humanities, Social, and Educational Sciences</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/35"/>
         <nodeInfo>
           <ri status="C-centre aiming-for-B">CLARIN</ri>

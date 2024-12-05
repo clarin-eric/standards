@@ -13,7 +13,7 @@
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
         <centre id="CELR-EKK" deposition="1">
-        <name>Center of Estonian Language Resources</name>
+        <centreName>Center of Estonian Language Resources</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/15"/>
         <nodeInfo>
           <ri status="C-centre">CLARIN</ri>

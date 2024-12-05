@@ -13,7 +13,7 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="ZIM" deposition="1">
-         <name>ZIM Centre for Information Modelling</name>
+         <centreName>ZIM Centre for Information Modelling</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/65"/>
          <nodeInfo>
             <ri status="B-centre">CLARIN</ri>

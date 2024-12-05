@@ -13,7 +13,7 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="EKUT" deposition="1">
-         <name>Eberhard Karls Universität Tübingen</name>
+         <centreName>Eberhard Karls Universität Tübingen</centreName>
          <!--Tübingen Archive of Language Resources - we need multiple <name> elements! -->
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/1"/>
          <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/48ad519f-5023-481a-82eb-8e701fda1dee/"/>

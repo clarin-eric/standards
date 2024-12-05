@@ -129,7 +129,7 @@ declare function cm:list-centre($sortBy, $statusFilter, $riFilter) {
     then cm:list-centre-descending($sortBy, $statusFilter, $riFilter)
     else
         for $c in $centre:centres
-            let $name := $c/name/text()
+            let $name := $c/centreName/text()
             let $id := data($c/@id)
             let $ris :=cm:get-ris($c)
     
@@ -182,7 +182,7 @@ declare function cm:filter-by-ri($c, $ris, $riFilter) {
 };
 
 declare function cm:print-centre-row($c, $ri) {
-    let $name := $c/name/text()
+    let $name := $c/centreName/text()
     let $id := data($c/@id)
     let $isDepositing := 
         if (cm:isDepositing($c)) then "✓" else ""

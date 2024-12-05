@@ -13,7 +13,7 @@
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
         <centre id="CLARIN-PL1" deposition="1">
-        <name>CLARIN-PL Language Technology Centre</name>
+        <centreName>CLARIN-PL Language Technology Centre</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/25"/>
         <nodeInfo>
           <ri status="B-centre,K-centre">CLARIN</ri>
