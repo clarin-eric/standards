@@ -12,8 +12,9 @@
          <reviewDate>2024-07-29</reviewDate>
       </respStmt>
       <centre id="HZSK" deposition="1">
-         <name>Universität Hamburg, Hamburger Zentrum für Sprachkorpora</name>
+         <centreName>Universität Hamburg, Hamburger Zentrum für Sprachkorpora</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/9"/>
+         <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/a5f3e2cc-c2c6-4e26-bdad-63136b626b3a/"/>
          <nodeInfo>
             <ri status="K-Centre">CLARIN</ri>
             <ri status="Collections">Text+</ri>
@@ -21,6 +22,16 @@
       </centre>
     </header>
    <info xml:lang="en">
+      <p>The University of Hamburg (UHH), with the expertise of the Hamburg Centre for Language
+         Corpora (HZSK) — a collaboration of members from various faculties and institutions of UHH —
+         supports the consistency and coordination of computer-assisted empirical research and
+         teaching in linguistics, as well as in related disciplines affiliated with the University
+         of Hamburg. Together with the HZSK community, UHH aims to ensure the sustainable usability
+         of primary linguistic research data beyond the duration of individual research projects.
+         The UHH repository, managed by the Center for Sustainable Research Data Management (ZFDM),
+         houses more than 50 corpora within the HZSK community. The majority of these corpora belong
+         to thematic areas such as multilingual oral and written data, as well as data from less
+         commonly spoken or endangered languages.</p>
       <p>See <a href="https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html">https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html</a> 
          for more info regarding deposition.</p>
       <p>New data sets (corpora of spoken language) can be added to the 
@@ -30,6 +41,17 @@
          has already been fully curated.</p>
    </info>
    <info xml:lang="de">
+      <p>Die Universität Hamburg (UHH) unterstützt mit der Erfahrung des Hamburger Zentrums für
+         Sprachkorpora (HZSK), einem Zusammenschluss von Mitgliedern verschiedener Fakultäten und
+         Instiutionen der UHH, die Konsistenz und Koordination computergestützter empirischer
+         Forschung und Lehre der Sprachwissenschaft sowie der an die UHH angegliederten
+         Nachbardisziplinen. Dabei verfolgt sie zusammen mit der Community HZSK das Ziel, die
+         nachhaltige Nutzbarkeit sprachwissenschaftlicher Primärforschungsdaten über befristete
+         Forschungsprojekte hinaus zu gewährleisten. Das Repositorium der UHH, welches durch das
+         Zentrum für nachhaltiges Forschungsdatenmanagement (ZFDM) betrieben wird, beherbergt in der
+         HZSK Community mehr als 50 Korpora. Mehrheitlich gehören die Korpora dem thematischen
+         Bereich der mehrsprachigen mündlichen und schriftlichen Daten sowie Daten aus weniger
+         verbreiteten oder gefährdeten Sprachen an. </p>
       <p>Weitere Informationen finden Sie unter
          <a href="https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html">https://www.slm.uni-hamburg.de/hzsk/angebote/korpora.html</a>.</p>
       <p>Neue Datensätze (Korpora gesprochener Sprache) können auf Antrag an Prof. Dr. Kristin

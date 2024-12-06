@@ -13,7 +13,7 @@
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
         <centre id="LINDAT" deposition="1">
-            <name>LINDAT/CLARIN</name>
+            <centreName>LINDAT/CLARIN</centreName>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/3"/>
             <nodeInfo>
                 <ri status="B-centre">CLARIN</ri>

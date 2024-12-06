@@ -1,13 +1,16 @@
-xquery version "3.0";
-
-declare namespace exist = "http://exist.sourceforge.net/NS/exist";
-declare option exist:serialize "method=xhtml media-type=text/html indent=yes doctype-system=about:legacy-compat";
+xquery version "3.1";
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 import module namespace em = "http://clarin.ids-mannheim.de/standards/export" at "../modules/export.xql";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
+
+declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+declare option output:method "html";
+declare option output:media-type "text/html";
+declare option output:indent "yes";
+declare option output:html-version "5";
 
 let $searchItem := request:get-parameter('searchFormat', '')
 
@@ -16,7 +19,6 @@ let $centre := if ($reset) then () else request:get-parameter('centre', '')
 let $domainId := if ($reset) then (()) else request:get-parameter('domain',())
 let $recommendationLevel := if ($reset) then () else request:get-parameter('level', '')
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
-let $export := request:get-parameter('export', '')
 let $page := request:get-parameter('page', 1) 
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 
@@ -39,20 +41,14 @@ let $rows :=
 
 let $recommendationTable := rf:paging($rows,$page)
 
-(: centre info is only included in the exported file if a centre is selected :)
-let $centreInfo := cm:get-centre-info($centre,$languageHeader)
-
 let $numberOfPages := xs:integer(fn:ceiling(count($rows) div $rf:pageSize))
 
 return
-if ($export)
-then (em:export-table($ri,$centre, $domainId, $recommendationLevel, $rows,
-    "format-recommendation.xml","views/recommended-formats-with-search.xq",$centreInfo))
-else 
 
     <html lang="en">
         <head>
             <title>Format Recommendations</title>
+            <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("autocomplete.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
@@ -103,8 +99,9 @@ else
                            
                            <p>As of mid-2022, not every centre with depositing services has submitted the information to the SIS; in some cases, the information 
                            had to be unreliably mapped from lists provided on centre homepages onto the feature matrix offered by the SIS (created on the basis 
-                           of the SIS functional domains and levels of recommendation). If you think you see an error, please 
-                           <a href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">kindly help us get it right</a>.</p></div>
+                           of the SIS functional domains and levels of recommendation). If you think you see an error, please kindly help us get it right, by 
+                           <a title="open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic%2C+UserInput&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">posting an issue</a> or 
+                           <a title="consult the SIC wiki at GitHub" href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">editing the source</a>.</p></div>
                     <div style="margin-top:30px;">
                         <form id="filterRecommendation"  autocomplete="off" style="float:left;" method="get"
                             action="{app:link("views/recommended-formats-with-search.xq?#filterRecommendation")}">
@@ -172,7 +169,7 @@ else
                                 </form>
                             </td>
                             <td style="padding-left:5px;">
-                                <form method="get" action="" style="text-align:right;">
+                                <form method="get" action="export.xq" style="text-align:right;">
                                     <input name="export" class="button"
                                         style="margin-bottom:5px; margin-right:2px; 
                                         height:30px;width:165px;" type="submit" value="Export Table to XML"/>
@@ -185,6 +182,7 @@ else
                                     <input name="level" type="hidden" value="{$recommendationLevel}"/>
                                     <input name="sortBy" type="hidden" value="{$sortBy}"/>
                                     <input name="searchFormat" type="hidden" value="{$searchItem}"/>
+                                    <input name="source" type="hidden" value="views/recommended-formats-with-search.xq"/>
                                 </form>
                             </td>
                         </tr>

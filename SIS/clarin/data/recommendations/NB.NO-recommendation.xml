@@ -13,7 +13,7 @@
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
         <centre id="NB.NO" deposition="0">
-            <name>National Library of Norway</name>
+            <centreName>National Library of Norway</centreName>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/31"/>
             <nodeInfo>
                 <ri status="C-centre aiming-for-B">CLARIN</ri>

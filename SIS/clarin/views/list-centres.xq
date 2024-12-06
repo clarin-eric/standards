@@ -1,12 +1,15 @@
-xquery version "3.0";
-
-declare namespace exist = "http://exist.sourceforge.net/NS/exist";
-declare option exist:serialize "method=xhtml media-type=text/html indent=yes doctype-system=about:legacy-compat";
+xquery version "3.1";
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
+
+declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+declare option output:method "html";
+declare option output:media-type "text/html";
+declare option output:indent "yes";
+declare option output:html-version "5";
 
 let $reset := request:get-parameter('reset', '')
 let $status := if ($reset) then () else request:get-parameter('status', '')
@@ -18,6 +21,7 @@ return
     <html lang="en">
         <head>
             <title>Centres</title>
+            <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
@@ -43,7 +47,7 @@ return
                     <p>The life of a centre in a research infrastructure can be a dynamic affair, while the list below always 
                     only holds a snapshot of the state of the network at a certain (usually fairly random) date. We are not able to monitor
                     that in real time. If you see omissions or errors in the list below, please kindly 
-                    <a href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">let us know</a>.</p>
+                    <a title="open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic%2C+UserInput&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">let us know</a>.</p>
                     </div>
                     <div>
                         <form id="filterCentre" method="get" action="">

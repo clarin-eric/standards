@@ -1,12 +1,15 @@
-xquery version "3.0";
-
-declare namespace exist = "http://exist.sourceforge.net/NS/exist";
-declare option exist:serialize "method=xhtml media-type=text/html indent=yes doctype-system=about:legacy-compat";
+xquery version "3.1";
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-module" at "../modules/format.xql";
 import module namespace ff = "http://clarin.ids-mannheim.de/standards/format-family" at "../modules/format-family.xql";
+
+declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+declare option output:method "html";
+declare option output:media-type "text/html";
+declare option output:indent "yes";
+declare option output:html-version "5";
 
 let $sortBy := request:get-parameter('sortBy', '')
 let $code := "
@@ -17,6 +20,7 @@ return
 <html lang="en">
     <head>
         <title>Format Families</title>
+        <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script>
             var graphJson = '{ff:create-graph-json()}';

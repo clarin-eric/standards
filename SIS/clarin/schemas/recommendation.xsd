@@ -262,11 +262,7 @@
         </xs:annotation>
         <xs:complexType mixed="false">
             <xs:sequence>
-                <xs:element name="name" type="xs:string">
-                    <xs:annotation>
-                        <xs:documentation>the full name of the centre</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
+                <xs:element ref="centreName" minOccurs="1" maxOccurs="unbounded"/>
                 <xs:element ref="registryLink" minOccurs="1" maxOccurs="unbounded"/>
                 <xs:element ref="nodeInfo"/>
             </xs:sequence>
@@ -276,6 +272,24 @@
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="deposition" type="xs:boolean" use="optional" default="false"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="centreName">
+        <xs:annotation>
+            <xs:documentation>the full name of the centre</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="ri" use="optional" type="ResearchInfrastructures">
+                        <xs:annotation>
+                            <xs:documentation>Name of the research infrastructure, if the preferred
+                                centre name depends on the research
+                                infrastructure.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
         </xs:complexType>
     </xs:element>
     <xs:element name="registryLink">
@@ -289,32 +303,13 @@
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="xs:string">
-                    <xs:attribute name="uri" use="required" type="xs:anyURI"/>
                     <xs:attribute name="registry" use="required" type="ResearchInfrastructures">
                         <xs:annotation>
                             <xs:documentation>Name of the registry being linked to. Default: the
                                 CLARIN centre registry.</xs:documentation>
                         </xs:annotation>
-<!--                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:enumeration value="CLARIN CR">
-                                    <xs:annotation>
-                                        <xs:documentation>CLARIN centre registry at https://centres.clarin.eu/</xs:documentation>
-                                    </xs:annotation>
-                                </xs:enumeration>
-                                <xs:enumeration value="Text+ CR">
-                                    <xs:annotation>
-                                        <xs:documentation>Text+ centre registry, informally at https://text-plus.org/vernetzung/daten-kompetenzzentren/</xs:documentation>
-                                    </xs:annotation>
-                                </xs:enumeration>
-                                <xs:enumeration value="DARIAH CR">
-                                    <xs:annotation>
-                                        <xs:documentation>DARIAH list of repositories</xs:documentation>
-                                    </xs:annotation>
-                                </xs:enumeration>
-                            </xs:restriction>
-                        </xs:simpleType>-->
                     </xs:attribute>
+                    <xs:attribute name="uri" use="required" type="xs:anyURI"/>
                     <xs:attribute name="label" use="optional" type="xs:string">
                         <xs:annotation><xs:documentation>Optional label</xs:documentation></xs:annotation>
                     </xs:attribute>

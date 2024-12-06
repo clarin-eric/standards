@@ -7,7 +7,7 @@
             <centreID>TextLab</centreID>
         </filter>
         <centre id="TextLab">
-            <name>CLARINO Text Laboratory Centre</name>
+            <centreName>CLARINO Text Laboratory Centre</centreName>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/43"/>
             <nodeInfo>
                 <ri status="C-centre">CLARIN</ri>

@@ -14,15 +14,34 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="BBAW" deposition="1">
-        <name>Berlin-Brandenburg Academy of Sciences and Humanities</name>
+        <centreName>Berlin-Brandenburg Academy of Sciences and Humanities</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/6"/>
+        <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/90c00f37-a101-44b5-a29a-aa91ba1e3bb2/"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>
           <ri status="Collections, Lexical Resources, Editions">Text+</ri>
         </nodeInfo>
       </centre>
    </header>
-   <info><!--use p, ul, ol elements here--></info>
+   <info xml:lang="en">
+      <p>The CLARIN center at the BBAW focuses on historical text corpora (predominantly provided by
+         the 'Deutsches Textarchiv'/German Text Archive, DTA) as well as on lexical resources (e.g.
+         dictionaries provided by the 'Digitales Wörterbuch der Deutschen Sprache'/Digital
+         Dictionary of the German Language, DWDS). The CLARIN center at the BBAW also offers
+         publishing of research data from external institutions via the repository. The CLARIN
+         service center at the BBAW meets the technical requirements for securing long-term
+         availability of linguistic and lexicographic services and resources. The repository is
+         certified by the 'Core Trust Seal'. In particular, the Seal covers organizational aspects
+         as well as issues concerning data workflow, quality management and sustainability.</p></info>
+   <info xml:lang="de">
+      <p>Schwerpunkte des CLARIN-Zentrums der BBAW sind historische Textkorpora (vorwiegend des
+         Deutschen Textarchivs) und lexikalische Ressourcen (Wörterbücher des DWDS). Das
+         CLARIN-Zentrum der BBAW bietet darüber hinaus an, Forschungsdaten externer Institutionen
+         über das Repositorium zu veröffentlichen. Das CLARIN-Servicezentrum stellt die technischen
+         Voraussetzungen bereit, die die langfristige Verfügbarkeit von linguistischen und
+         lexikographischen Services und Ressourcen sichern. Garantiert wird dies durch die
+         Zertifizierung entsprechend dem "Core Trust Seal". Dies umfasst insbesondere die Aspekte
+         der Organisation, des Workflows, der Qualitätssicherung und der Nachhaltigkeit.</p></info>
    <formats>
       <format id="fCMDI">
          <domain>Catalogue Metadata</domain>

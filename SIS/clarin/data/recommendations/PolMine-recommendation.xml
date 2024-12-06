@@ -7,7 +7,7 @@
             <centreID>PolMine</centreID>
         </filter>
         <centre id="PolMine">
-        <name>PolMine Project</name>
+        <centreName>PolMine Project</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/38"/>
         <nodeInfo>
           <ri status="C-centre">CLARIN</ri>

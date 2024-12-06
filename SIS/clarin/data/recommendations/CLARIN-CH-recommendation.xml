@@ -2,7 +2,7 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID></lastUpdateCommitID>
+        <lastUpdateCommitID>7e71ef73a8caf224caa0836296085830d1ac25ef</lastUpdateCommitID>
         <filter>
             <centreID>CLARIN-CH</centreID>
         </filter>
@@ -13,9 +13,9 @@
             <reviewDate>2024-10-02</reviewDate>
         </respStmt>
         <centre id="CLARIN-CH" deposition="1">
-            <name>CLARIN Switzerland</name>
-            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/80" label="CLARIN-CH-LiRI"/>
-            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/81" label="CLARIN-CH-LaRS"/>
+            <centreName>CLARIN Switzerland</centreName>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/80" label="LiRI"/>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/81" label="LaRS"/>
             <nodeInfo>
                 <ri status="C-centre aiming-for-B">CLARIN</ri>
             </nodeInfo>

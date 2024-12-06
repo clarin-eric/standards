@@ -13,15 +13,32 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="BAS" deposition="1">
-        <name>Bayerisches Archiv für Sprachsignale</name>
+        <centreName>Bayerisches Archiv für Sprachsignale</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/5"/>
+        <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/508c77d0-7856-4659-9ede-c2c7cd3fc339/"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>
           <ri status="Collections">Text+</ri>
         </nodeInfo>
       </centre>
    </header>
-   <info><!--use p, ul, ol elements here--></info>
+   <info xml:lang="en">
+      <p>BAS collects, standardises, maintains and distributes digital spoken language resources
+         with a focus on German. Such resources may be technically motivated, but also scientific
+         data collections, whose producers or owners require a permanent and actively maintained
+         archive for their data. Furthermore, BAS develops tools for automatic recording,
+         processing, labeling and segmentation, which are provided primarily as public web
+         services.</p>
+   </info>
+   <info xml:lang="de">
+      <p>Das BAS sammelt, standardisiert, pflegt und distribuiert digitale Sprachressourcen mit dem
+         Schwerpunkt gesprochenes Deutsch. Dies können technisch motivierte, aber auch
+         wissenschaftliche Sprachdatensammlungen sein, derer Urheber/Produzenten eine sichere,
+         dauerhafte und aktiv betreute Archivierung ihrer Daten wünschen. Am BAS werden außerdem
+         eigene Verfahren zur automatischen Aufnahme, Verarbeitung, Ettikettierung und Segmentierung
+         entwickelt, die primär in Form von öffentlichen Webservices zur Verfügung gestellt
+         werden.</p>
+   </info>
    <formats>
       <format id="fAGS">
          <domain>Audiovisual Annotation</domain>

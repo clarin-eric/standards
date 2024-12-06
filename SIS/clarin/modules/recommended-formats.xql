@@ -220,26 +220,22 @@ declare function rf:paging($rows, $page as xs:int) {
     let $max := fn:min(($numOfRows, $page * $rf:pageSize)) + 1
     let $min := if ($page > 1) then
         (($page - 1) * $rf:pageSize)
-    else
-        1
+    else 1
     
     return
         $rows[position() >= $min and position() < $max]
 };
 
 declare function rf:print-centres($centre,$ri) {
-    let $depositing-centres := centre:get-deposition-centres($ri)
+    let $depositing-centres := 
+        if ($ri eq "all") 
+        then $centre:centres 
+        else centre:get-deposition-centres($ri)
+        
     for $c in data($depositing-centres/@id)
         order by fn:lower-case($c)
     return
-        if ($c eq $centre)
-        then
-            (<option
-                value="{$c}"
-                selected="selected">{$c}</option>)
-        else
-            (<option
-                value="{$c}">{$c}</option>)
+        rf:print-option($centre,$c,$c)
 };
 
 declare function rf:print-domains($domains) {
@@ -251,26 +247,17 @@ declare function rf:print-domains($domains) {
         then
             <option
                 value="{$id}"
-                selected="selected"
-                title="{$d/desc/text()}">{$d/name/text()}</option>
+                selected="selected">{$d/name/text()}</option>
         else
             <option
-                value="{$id}"
-                title="{$d/desc/text()}">{$d/name/text()}</option>
+                value="{$id}">{$d/name/text()}</option>
 };
 
 declare function rf:print-keywords($keyword) {
     for $k in $format:keywords
         order by fn:lower-case($k)
     return
-        if ($k eq $keyword)
-        then
-            (<option
-                value="{$k}"
-                selected="selected">{$k}</option>)
-        else
-            (<option
-                value="{$k}">{$k}</option>)
+        rf:print-option($keyword,$k,$k)
 };
 
 declare function rf:print-option($selected, $value, $label) {
@@ -278,16 +265,14 @@ declare function rf:print-option($selected, $value, $label) {
     then
         <option value="{$value}">{$label}</option>
     else
-        for $s in $selected
-        return
-            if ($s eq $value)
-            then
-                <option
-                    value="{$value}"
-                    selected="selected">{$label}</option>
-            else
-                <option
-                    value="{$value}">{$label}</option>
+        if ($selected eq $value)
+        then
+            <option
+                value="{$value}"
+                selected="selected">{$label}</option>
+        else
+            <option
+                value="{$value}">{$label}</option>
 };
 
 declare function rf:print-centre-recommendation($requestedCentre, 
@@ -455,7 +440,7 @@ $includeFormat, $includeCentre) {
     
     let $domainId := data($domain/@id)
     let $domainName := $domain/name/text()
-    let $domainDesc := $domain/desc/text()
+    let $domainDesc := $domain/desc
     
     return
         <tr>

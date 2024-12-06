@@ -7,7 +7,7 @@
             <centreID>Huygens</centreID>
         </filter>
         <centre id="Huygens">
-        <name>Huygens ING</name>
+        <centreName>Huygens ING</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/21"/>
         <nodeInfo>
           <ri status="C-centre">CLARIN</ri>

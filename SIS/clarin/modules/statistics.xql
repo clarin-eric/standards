@@ -12,10 +12,12 @@ import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-mod
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
 
+(:DEPRECATED:)
 declare function stm:list-all-centre-statistics(){
     let $numOfCentres := count($recommendation:centres) 
     let $numOfDepositingCentres := count(cm:get-deposition-centres(""))
     let $numOfCuratedCentres := count(cm:get-curated-centres(""))
+
     return
     <tr>
         <td class="row">All</td>
@@ -29,13 +31,18 @@ declare function stm:list-centre-statistics(){
     let $ris := xsd:get-ris()
     for $ri in $ris
         let $numOfCentres := count(cm:get-centre-by-research-infrastructure($ri,""))
-        let $numOfDepositingCentres := count(cm:get-deposition-centres($ri))
+        let $depositionCentres := cm:get-deposition-centres($ri)
+        let $numOfDepositingCentres := count($depositionCentres)
         let $numOfCuratedCentres := count(cm:get-curated-centres($ri))
+        let $numOfCentresWithRecommendations := 
+            cm:count-number-of-centres-with-recommendations($depositionCentres)
+        
     return
         <tr>
             <td class="row">{$ri}</td>
             <td class="row" style="text-align:center;">{$numOfCentres }</td>
             <td class="row" style="text-align:center;">{$numOfDepositingCentres}</td>
+            <td class="row" style="text-align:center;">{$numOfCentresWithRecommendations}</td>
             <td class="row" style="text-align:center;">{$numOfCuratedCentres}</td>
         </tr>
 };

@@ -13,7 +13,7 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="MI" deposition="1">
-         <name>Meertens Instituut/HuC</name>
+         <centreName>Meertens Instituut/HuC</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/23"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>

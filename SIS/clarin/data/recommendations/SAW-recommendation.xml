@@ -10,8 +10,9 @@
             <reviewDate>2024-04-23</reviewDate>
         </respStmt>
         <centre id="SAW" deposition="1">
-            <name>SAW Leipzig</name>
+            <centreName>SAW Leipzig</centreName>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/4"/>
+            <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/c7758bba-fac4-42ea-92ea-c78a35273ff9/"/>
             <nodeInfo>
                 <ri status="B-centre">CLARIN</ri>
                 <ri status="Lexical Resources, Operations">Text+</ri>

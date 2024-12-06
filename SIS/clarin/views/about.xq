@@ -1,10 +1,13 @@
-xquery version "3.0";
-
-declare namespace exist="http://exist.sourceforge.net/NS/exist";
-declare option exist:serialize "method=xhtml media-type=text/html indent=yes doctype-system=about:legacy-compat";
+xquery version "3.1";
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
+
+declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+declare option output:method "html";
+declare option output:media-type "text/html";
+declare option output:indent "yes";
+declare option output:html-version "5";
 
 (: Define the contact page
    @author margaretha
@@ -13,6 +16,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 <html lang="en">
     <head>
         <title>About / F.A.Q.</title>
+        <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
         <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
     </head>
@@ -26,7 +30,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                 
                 
                 <div id="about">
-                <p>This service (more precisely, its <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">"Standards and Specifications" section</a>) was created in 2012 
+                <p>This service (more precisely, the original forms of its <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">"Standards Watchtower" section</a>) was created in 2012 
                 and has been maintained since then at <a href="https://www.ids-mannheim.de/">IDS Mannheim</a> 
                 as part of the Institute's activity as a <a href="https://clarin.eu/">CLARIN</a> B-Centre. Around 2020, the system was refreshed and 
                 extended with, among others, the section <a href="{app:link("views/recommended-formats-with-search.xq")}">"Format Recommendations"</a>. 
@@ -122,7 +126,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
                  <div id="tech">
                 <h2>Technicalities</h2>
                  <p>The SIS is an open-source project hosted at <a href="https://github.com/clarin-eric/standards">GitHub</a>, built using mainly XQuery (1-3.1) and XML. 
-                 It is running atop <a href="https://exist-db.org/exist/apps/homepage/index.html">eXist-db 6.2.0</a>.</p>
+                 It is running atop <a href="https://exist-db.org/exist/apps/homepage/index.html">eXist-db 6.3.x</a>.</p>
                  </div>
                  
                  </div>

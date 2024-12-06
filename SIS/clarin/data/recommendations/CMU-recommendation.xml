@@ -13,7 +13,7 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="CMU" deposition="1">
-         <name>CMU-TalkBank</name>
+         <centreName>CMU-TalkBank</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/18"/>
          <nodeInfo>
             <ri status="K-centre">CLARIN</ri>

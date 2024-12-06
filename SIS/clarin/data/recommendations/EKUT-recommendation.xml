@@ -13,15 +13,102 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="EKUT" deposition="1">
-         <name>Eberhard Karls Universität Tübingen</name>
+         <centreName>Eberhard Karls Universität Tübingen</centreName>
+         <!--Tübingen Archive of Language Resources - we need multiple <name> elements! -->
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/1"/>
+         <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/48ad519f-5023-481a-82eb-8e701fda1dee/"/>
          <nodeInfo>
             <ri status="B-centre">CLARIN</ri>
             <ri status="Collections, Lexical Resources">Text+</ri>
          </nodeInfo>
       </centre>
     </header>
-   <info><!--use p, ul, ol elements here--></info>
+   <info xml:lang="en">
+      <p>The data of the Tübingen Archive of Language Resources (TALAR) include corpora for spoken
+         and written language that are annotated at different levels of linguistic analysis:
+         morphology, syntax and semantics. In addition, TALAR hosts lexical resources that are
+         closely linked to other lexical and textual resources represented in Text+. The corpora and
+         lexical resources are indispensable for data-driven research in both theoretical and
+         computational linguistics. The annotations include various grammatical frameworks and
+         adhere to the coding standards widely used in the community as well as the coding standards
+         of the International Standards Organization (ISO). The TALAR data repository has been
+         certified by the Core Trust Seal (CTS) and it has standardized protocols for data ingest.
+         TALAR hosts a collection of widely used syntactically annotated corpora, the so-called TüBa
+         treebanks for German, English and Japanese. In addition, it gives access to a large number
+         of externally developed treebanks as part of the Universal Dependencies project. All
+         linguistically annotated corpora of the UniTÜ can be searched for and visualized with
+         TüNDRA (Tübingen Annotated Data Retrieval Application), our in-house web application. Also,
+         access to these resources is granted via CLARIN's and Text+'s Federated Content Search. In
+         addition to the linguistically annotated corpora, the UniTÜ offers data services in the
+         form of vector space word representations and associated software tools. It also offers
+         software services for the incremental annotation of external text corpora via the virtual
+         research environment WebLicht. Among other things, WebLicht enables the automatic
+         enrichment of text corpora with name-entity recognition based on deep learning tools and
+         can thus be used as a tool for the automatic enrichment of unstructured data and subsequent
+         linking with authority data as well as linked open data. The lexical resources are closely
+         linked to other lexical and textual resources and are interoperable with them. The valency
+         dictionary of German verbs was derived from large text corpora and is therefore linked to
+         corpus data. GermaNet is a lexical database of word meanings for contemporary German nouns,
+         verbs and adjectives, which is directly linked to wordnets of more than fifty languages of
+         the world via an interlingual index. In addition to other wordnets, GermaNet is linked to
+         other digital resources such as Wikipedia and Wiktionary. Taken together, they provide a
+         principled basis for assessing lexical similarity and dissimilarity. These two concepts are
+         essential for psycho- and neurolinguistic research as well as for topic modeling and
+         semantic search in a broad spectrum of disciplines ranging from applications in computer
+         science to literary research. Examples include author identification and genre
+         classification as well as semantic searches for dictionary data or large metadata
+         collections. In addition to the academic sector, GermaNet is also in great demand for
+         industrial applications. Furthermore, the linking of word senses via semantic relationships
+         provides an ideal starting point for the conversion of wordnet data into linked open data
+         formats and for easy integration into knowledge graphs. Accordingly, mapping GermaNet to
+         linked open data and knowledge graphs will add significant value to Text+ and provide a
+         direct data bridge to other NFDI consortia.</p></info>
+   <info xml:lang="de">
+      <p>Die Datenressourcen von TALAR (Tübingen Archive for Language Resources) der Universität
+         Tübingen umfassen Korpora für gesprochene Sprache und geschriebene Texte, die auf
+         verschiedenen Ebenen der linguistischen Annotation von Morphologie, Syntax und Semantik
+         annotiert werden. Dazu kommen lexikalischen Ressourcen, die eng verbunden sind mit anderen
+         lexikalischen und textuellen Ressourcen aus dem Text+ Konsortium. Die Korpora und
+         lexikalischen Ressourcen sind für die datengetriebene Forschung sowohl in der theoretischen
+         Linguistik als auch in der Computerlinguistik unverzichtbar. Die Annotationen umfassen
+         verschiedene grammatikalische Rahmen und halten sich an die in der Gemeinschaft weit
+         verbreiteten Kodierungsstandards sowie an die Kodierungsstandards der International
+         Standards Organization (ISO). Diese Ressourcen sind im TALAR-Datenrepository untergebracht,
+         das mit dem Core Trust Seal (CTS) zertifiziert wurde und standardisierte Protokolle für den
+         Daten-Ingest von externen Datenressourcen entwickelt hat. TALAR beherbergt eine Sammlung
+         von weit verbreiteten syntaktisch annotierten Korpora, die so genannten TüBa-Baumbanken für
+         Deutsch, Englisch und Japanisch. Darüber hinaus enthält TALAR eine große Anzahl extern
+         entwickelter Treebanks im Rahmen der Universal Dependencies. Alle sprachlich annotierten
+         Korpora der UniTÜ können mit der Webanwendung TüNDRA (Tübingen Annotated Data Retrieval
+         Application) durchsucht und visualisiert werden und sind auch über die CLARIN und Text+
+         Federated Content Search zugänglich. Zusätzlich zu den sprachlich annotierten Korpora
+         bietet die UniTÜ Datendienste in Form von Vektorraum-Wortdarstellungen und zugehörigen
+         Softwaretools an. Darüber hinaus bietet UniTü Softwaredienste für die inkrementelle
+         Annotation externer Textkorpora über die virtuelle Forschungsumgebung WebLicht an. WebLicht
+         ermöglicht u.a. die automatische Anreicherung von Textkorpora mit einer
+         Names-Entity-Erkennung auf der Basis von Deep-Learning-Tools und kann somit als Werkzeug
+         für die automatische Anreicherung unstrukturierter Daten und die anschließende Verknüpfung
+         mit Autoritätsdaten sowie verknüpften offenen Daten genutzt werden. Die lexikalischen
+         Ressourcen sind eng mit anderen lexikalischen und textuellen Ressourcen verbunden und mit
+         ihnen interoperabel. Das Valenzwörterbuch der deutschen Verben wurde aus großen Textkorpora
+         abgeleitet und ist daher mit Korpusdaten verknüpft. GermaNet ist eine lexikalische
+         Datenbank der Wortbedeutungen für zeitgenössiche deutsche Substantive, Verben und
+         Adjektive, die über einen interlingualen Index direkt mit Wortnetzen von mehr als fünfzig
+         Sprachen der Welt verbunden ist. Neben anderen Wortnetzen ist GermaNet mit anderen digital
+         entstandenen Ressourcen wie Wikipedia und Wiktionary verknüpft. Zusammengenommen bieten sie
+         eine solide Grundlage für die Beurteilung lexikalischer Ähnlichkeit und Unähnlichkeit.
+         Diese beiden Begriffe sind sowohl für die psycho- und neurolinguistische Forschung als auch
+         für die Themenmodellierung und die semantische Suche in einem breiten Spektrum von
+         Disziplinen, das von Anwendungen in der Informatik bis hin zur literaturwissenschaftlichen
+         Forschung reicht, unerlässlich. Hier sind z.B. Autorenidentifizierung und
+         Genreklassifizierung sowie die semantische Suche nach Wörterbuchdaten oder nach großen
+         Metadatensammlungen zu nennen. Neben dem akademischen Bereich ist GermaNet auch für
+         industrielle Anwendungen sehr gefragt. Darüber hinaus bietet die Verknüpfung der Wortsinne
+         über semantische Beziehungen einen idealen Ausgangspunkt für die Konvertierung von
+         Wortnetzdaten in verknüpfte offene Datenformate und für die einfache Integration in
+         Wissensgraphen. Dementsprechend wird das Mapping von GermaNet auf verknüpfte offene Daten
+         und Wissensgraphen einen erheblichen Mehrwert für Text+ bieten und eine direkte Datenbrücke
+         zu anderen NFDI-Konsortien bilden.</p></info>
    <formats>
       <format id="fMP4">
          <domain>Audiovisual Source Language Data</domain>

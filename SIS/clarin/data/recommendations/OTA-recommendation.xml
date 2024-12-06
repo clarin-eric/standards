@@ -12,7 +12,7 @@
          <reviewDate>2024-06-12</reviewDate>
       </respStmt>
       <centre id="OTA" deposition="1">
-         <name>Oxford Text Archive</name>
+         <centreName>Oxford Text Archive</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/26"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>

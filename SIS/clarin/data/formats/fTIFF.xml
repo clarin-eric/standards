@@ -6,13 +6,25 @@
   </titleStmt>
   <keyword>image format</keyword>
   <keyword>raster graphics</keyword>
+  <keyword>lossless compression</keyword>
+  <keyword>lossy compression</keyword>
+  <extId type="LOC">fdd000022</extId>
   <extId type="LOC">fdd000023</extId>
+  <extId type="LOC">fdd000145</extId>
+  <extId type="PRONOM">fmt/353</extId>
+  <extId type="Wikidata">Q27231633</extId>
   <info type="description">
     <p>Please feel welcome to supply the description of this format file via GitHub: either as an
       <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
       request after forking or browsing the
       <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
-<!--  mention that uncompressed is the default, others are possible  -->
+    <p>Note: uncompressed and therefore <i>lossless</i> TIFF is the default. Other compression schemes are possible, some of them <i>lossy</i>.</p>
+<p>Note: this description document may be split into sub-types, if a centre sees the need for that. Please don't hesitate to suggest changes or contact us.</p>
+    <p>See also:</p>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/TIFF" title="Wikipedia page">Wikipedia page</a></li>
+      <li><a href="../views/view-format.xq?id=fGeoTIFF">GeoTIFF</a>, one of the extension formats</li>
+    </ol>
   </info>
   <!--<relation target="SpecTIFF" type="isDefinedBy"/>
     ISO 12639
