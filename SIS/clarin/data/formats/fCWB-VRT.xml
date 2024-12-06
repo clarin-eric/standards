@@ -1,6 +1,6 @@
 <?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCWB-VRT" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
     <titleStmt>
-        <title>Corpus Workbench Verticalized Text</title>
+        <title>Corpus Workbench VeRticalized Text</title>
         <abbr>CWB-VRT</abbr>
     </titleStmt>
     <keyword>corpus</keyword>
@@ -16,5 +16,5 @@
         </ul>
     </info>
     <fileExt>.vrt</fileExt>
-    <formatFamily>corpus encoding</formatFamily>
+    <formatFamily>Markup.Columnar</formatFamily>
 </format>
