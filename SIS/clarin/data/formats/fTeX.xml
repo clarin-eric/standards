@@ -1,10 +1,11 @@
 <?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTeX" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>TeX</title>
+    <title>TeX document</title>
     <abbr>TeX</abbr>
   </titleStmt>
   <keyword>TeX</keyword>
+  <keyword>typesetting</keyword>
   <extId type="LOC">n92022754</extId>
   <extId type="Wikidata">Q5301</extId>
   <info type="description">
