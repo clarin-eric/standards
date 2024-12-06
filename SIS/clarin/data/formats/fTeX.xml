@@ -1,0 +1,17 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTeX" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>TeX</title>
+    <abbr>TeX</abbr>
+  </titleStmt>
+  <keyword>TeX</keyword>
+  <extId type="LOC">n92022754</extId>
+  <extId type="Wikidata">Q5301</extId>
+  <info type="description">
+    <p>TeX is a typesetting format.</p>
+    <p>See: <a href="https://en.wikipedia.org/wiki/TeX">Wikipedia</a></p>
+  </info>
+  <mimeType>text/x-tex</mimeType>
+  <fileExt>.tex</fileExt>
+  <formatFamily>Markup.Full</formatFamily>
+</format>
