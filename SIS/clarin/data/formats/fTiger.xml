@@ -1,0 +1,21 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTiger" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>TIGER XML</title>
+    <abbr>TIGER</abbr>
+  </titleStmt>
+  <keyword>annotation format</keyword>
+  <keyword>corpus encoding</keyword>
+  <!-- <extId type=""></extId> -->
+  <info type="description">
+    <p>XML format used by the TIGER project.</p>
+    <p>See:</p>
+    <ul>
+      <li><a href="https://www.ims.uni-stuttgart.de/documents/ressourcen/korpora/tiger-corpus/download/start.html">TIGER corpus</a></li>
+      <li><a href="https://www.ims.uni-stuttgart.de/documents/ressourcen/werkzeuge/tigersearch/doc/html/TigerXML.html">TIGER XML</a></li>
+      <li><a href="https://aclanthology.org/L00-1042/">TIGER XML</a></li>
+    </ul>
+  </info>
+  <fileExt>.xml</fileExt>
+  <formatFamily>XML</formatFamily>
+</format>
