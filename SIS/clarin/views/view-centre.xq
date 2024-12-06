@@ -23,7 +23,7 @@ let $recommendationType := request:get-parameter('type', '')
 let $sortBy := request:get-parameter('sortBy', '')
 
 let $centre := cm:get-centre($id)
-let $centre-name := $centre/name/text()
+let $centre-name := $centre/centreName/text()
 let $registry-links := $centre/registryLink
 let $isDepositing := cm:isDepositing($centre)
 let $centre-ri := $centre/nodeInfo/ri

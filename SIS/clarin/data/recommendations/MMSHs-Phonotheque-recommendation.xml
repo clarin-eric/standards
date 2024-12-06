@@ -7,7 +7,7 @@
             <centreID>MMSHs-Phonothèque</centreID>
         </filter>
         <centre id="MMSHs-Phonothèque">
-        <name>Mediterranean Research Centre for the Humanities' Phonothèque</name>
+        <centreName>Mediterranean Research Centre for the Humanities' Phonothèque</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/44"/>
         <nodeInfo>
           <ri status="C-centre">CLARIN</ri>

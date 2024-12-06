@@ -262,11 +262,7 @@
         </xs:annotation>
         <xs:complexType mixed="false">
             <xs:sequence>
-                <xs:element name="name" type="xs:string">
-                    <xs:annotation>
-                        <xs:documentation>the full name of the centre</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
+                <xs:element ref="centreName" minOccurs="1" maxOccurs="unbounded"/>
                 <xs:element ref="registryLink" minOccurs="1" maxOccurs="unbounded"/>
                 <xs:element ref="nodeInfo"/>
             </xs:sequence>
@@ -276,6 +272,24 @@
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="deposition" type="xs:boolean" use="optional" default="false"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="centreName">
+        <xs:annotation>
+            <xs:documentation>the full name of the centre</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="ri" use="optional" type="ResearchInfrastructures">
+                        <xs:annotation>
+                            <xs:documentation>Name of the research infrastructure, if the preferred
+                                centre name depends on the research
+                                infrastructure.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
         </xs:complexType>
     </xs:element>
     <xs:element name="registryLink">

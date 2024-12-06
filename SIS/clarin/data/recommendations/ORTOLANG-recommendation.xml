@@ -13,7 +13,7 @@
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
       <centre id="ORTOLANG" deposition="1">
-         <name>Open Resources and TOols for LANGuage</name>
+         <centreName>Open Resources and TOols for LANGuage</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/73"/>
          <nodeInfo>
             <ri status="B-centre">CLARIN</ri>

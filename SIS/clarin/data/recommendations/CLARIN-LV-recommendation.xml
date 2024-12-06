@@ -13,7 +13,7 @@
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
         <centre id="CLARIN-LV">
-        <name>CLARIN Centre of Latvian language resources and tools</name>
+        <centreName>CLARIN Centre of Latvian language resources and tools</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/68"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>

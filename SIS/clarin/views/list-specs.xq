@@ -183,7 +183,7 @@ management ​ — ​ Corpus ​ Annotation ​ Project ​ Management ​ — 
                                     {lsm:header("name", $sortBy, $page, $letter)}
                                     {lsm:header("topic", $sortBy, $page, $letter)}
                                     {lsm:header("org", $sortBy, $page, $letter)}
-                                    {lsm:header("clarin-centres", $sortBy, $page, $letter)}
+                                  <!-- {lsm:header("clarin-centres", $sortBy, $page, $letter)} -->
                                     <!--{lsm:header("clarin-approved", $sortBy, $page)}-->
                                 </tr>
                                 {lsm:list-specs($spec-group, $sortBy, $letter)}

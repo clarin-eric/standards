@@ -12,7 +12,7 @@
          <reviewDate>2023-10-17</reviewDate>
       </respStmt>
       <centre id="Sprakbanken" deposition="1">
-         <name>Språkbanken</name>
+         <centreName>Språkbanken</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/37"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
