@@ -3,7 +3,11 @@
         <title>Corpus Workbench Verticalized Text</title>
         <abbr>CWB-VRT</abbr>
     </titleStmt>
-    <keyword>cwb corpus</keyword>
+    <keyword>corpus</keyword>
+    <keyword>CWB</keyword>
+    <keyword>CQPweb</keyword>
+    <keyword>Korp</keyword>
+    <keyword>VRT</keyword>
     <info type="description">
         <p>See:</p>
         <ul>
@@ -12,5 +16,5 @@
         </ul>
     </info>
     <fileExt>.vrt</fileExt>
-    <formatFamily>corpus encoding formats</formatFamily>
+    <formatFamily>corpus encoding</formatFamily>
 </format>
