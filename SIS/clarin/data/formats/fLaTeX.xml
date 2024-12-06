@@ -1,0 +1,17 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fLaTeX" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>LaTeX document</title>
+    <abbr>LaTeX</abbr>
+  </titleStmt>
+  <keyword>LaTeX</keyword>
+  <extId type="LOC">n92088870</extId>
+  <extId type="Wikidata">Q5310</extId>
+  <info type="description">
+    <p>LaTeX is a typesetting format.</p>
+    <p>See: <a href="https://en.wikipedia.org/wiki/LaTeX">Wikipedia</a></p>
+  </info>
+  <mimeType>application/x-latex</mimeType>
+  <fileExt>.latex</fileExt>
+  <formatFamily>Markup.Full</formatFamily>
+</format>
