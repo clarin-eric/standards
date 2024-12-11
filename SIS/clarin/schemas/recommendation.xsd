@@ -1,4 +1,5 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1">
     <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
     
     <xs:annotation>
@@ -373,7 +374,23 @@
                 <xs:element ref="level"/>
                 <xs:element minOccurs="0" ref="comment" maxOccurs="unbounded"/>
             </xs:sequence>
-            <xs:attribute name="id" use="required" type="xs:NCName"/>
+            <xs:attribute name="id" use="required" type="xs:NCName">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">Existing or postulated ID of a format description.</xs:documentation>
+                    <xs:appinfo>
+<!--                        <assert xmlns="http://purl.oclc.org/dsdl/schematron" test="string-length(.) eq 1+string-length(normalize-space(.))">Oi oi.</assert>
+                        doesn't work either -->
+                        <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                            <sch:rule context="formats/format">
+                                <sch:assert
+                                    test="string-length(@id) eq string-length(normalize-space(@id))"
+                                    >Remove spurious whitespace from the @id string.</sch:assert>
+                            </sch:rule>
+                        </sch:pattern>
+<!--  this schematron check fires and the math is correct, and yet it doesn't signal trailing space! -->
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
     <xs:element name="comment" type="commentType"/>
