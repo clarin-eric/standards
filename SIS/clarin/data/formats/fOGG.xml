@@ -1,0 +1,16 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fOGG" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Ogg Container</title>
+    <abbr>Ogg</abbr>
+  </titleStmt>
+  <keyword>audio file format</keyword>
+  <extId type="LOC">fdd000026</extId>
+  <extId type="PRONOM">fmt/944</extId>
+  <extId type="Wikidata">Q188199</extId>
+  <info type="description">
+     <p>See: <a href="https://en.wikipedia.org/wiki/Ogg">Wikipedia</a></p>
+  </info>
+  <mimeType>audio/ogg</mimeType>
+  <fileExt>.ogg</fileExt>
+</format>
