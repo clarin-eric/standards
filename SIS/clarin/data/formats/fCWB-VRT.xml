@@ -17,4 +17,5 @@
     </info>
     <fileExt>.vrt</fileExt>
     <formatFamily>Markup.Partial</formatFamily>
+    <formatFamily>Plain.Columnar</formatFamily> <!-- this is an experiment -->
 </format>

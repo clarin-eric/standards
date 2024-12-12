@@ -53,7 +53,8 @@
   </node>
   <node name="Plain" rel="">
     <node name="Plain.Columnar" rel=""/>
-    <node name="Plain.Running" rel=""/>
+    <node name="Plain.Running" rel=""/> <!-- may imply high-level structuring: chapters, etc. down to paragraphs and s -->
+    <node name="Plain.Statements" rel=""/>  <!-- computer code, EBNF, etc. -->
   </node>
   
 </family-ties>

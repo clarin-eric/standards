@@ -17,5 +17,5 @@
     </ul>
   </info>
   <fileExt>.xml</fileExt>
-  <formatFamily>XML</formatFamily>
+  <formatFamily>Markup.Full</formatFamily>
 </format>
