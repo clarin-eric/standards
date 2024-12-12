@@ -20,5 +20,5 @@
     </info>
     <mimeType>text/plain</mimeType>
     <fileExt>.regex</fileExt>
-    <formatFamily>Plain.Running</formatFamily>
+    <formatFamily>Plain.Statements</formatFamily>
 </format>

@@ -25,7 +25,7 @@
   <node name="TextualData" rel="">
     <node name="Markup" rel=""/>
     <node name="Plain" rel=""/>
-<!-- here, Binary means primarily, "not directly human-readable"   -->
+<!-- here, Binary means primarily, "not directly human-readable" and this is SO wrong   -->
     <node name="Binary" rel=""/>
   </node>
  
