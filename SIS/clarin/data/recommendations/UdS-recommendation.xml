@@ -233,20 +233,20 @@
       <format id="fGZIP">
          <domain>Packaging</domain>
          <level>recommended</level>
-         <comment>Das Archiv sollte Dateien in empfohlenen Formaten enthalten.</comment>
-         <comment xml:lang="de">The archive should contain files in recommended formats.</comment>
+         <comment xml:lang="de">Das Archiv sollte Dateien in empfohlenen Formaten enthalten.</comment>
+         <comment>The archive should contain files in recommended formats.</comment>
       </format>
       <format id="fTAR">
          <domain>Packaging</domain>
          <level>recommended</level>
-         <comment>Das Archiv sollte Dateien in empfohlenen Formaten enthalten.</comment>
-         <comment xml:lang="de">The archive should contain files in recommended formats.</comment>
+         <comment xml:lang="de">Das Archiv sollte Dateien in empfohlenen Formaten enthalten.</comment>
+         <comment>The archive should contain files in recommended formats.</comment>
       </format>
       <format id="fZIP">
          <domain>Packaging</domain>
          <level>recommended</level>
-         <comment>Das Archiv sollte Dateien in empfohlenen Formaten enthalten.</comment>
-         <comment xml:lang="de">The archive should contain files in recommended formats.</comment>
+         <comment xml:lang="de">Das Archiv sollte Dateien in empfohlenen Formaten enthalten.</comment>
+         <comment>The archive should contain files in recommended formats.</comment>
       </format>
 
       <!-- tool support -->
