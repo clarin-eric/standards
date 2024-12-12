@@ -1,0 +1,27 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPS" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>PostScript</title>
+    <abbr>PS</abbr>
+  </titleStmt>
+  <keyword>document format</keyword>
+  <keyword>programming language</keyword>
+  <keyword>exchange format</keyword>
+  <extId type="LOC">fdd000029</extId>
+  <extId type="Wikidata">Q218170</extId>
+  <info type="description">
+    <p>"PostScript (PS) is a page description language and dynamically typed, stack-based
+      programming language. It is most commonly used in the electronic publishing and desktop
+      publishing realm, but as a Turing complete programming language, it can be used for many other
+      purposes as well. PostScript was created at Adobe Systems by John Warnock, Charles Geschke,
+      Doug Brotz, Ed Taft and Bill Paxton from 1982 to 1984. The most recent version, PostScript 3,
+      was released in 1997."</p>
+    <p>See the <a href="https://en.wikipedia.org/wiki/PostScript">Wikipedia article</a>.</p>
+
+  </info>
+<!--  <relation target="SpecPS" type="isDefinedBy"/>-->
+  <relation target="SpecPDF" type="isRelatedTo"/> 
+  <mimeType>application/postscript</mimeType>
+  <fileExt>.ps</fileExt>
+  <formatFamily>Plain.Statements</formatFamily>
+</format>

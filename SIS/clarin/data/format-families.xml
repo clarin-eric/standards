@@ -9,8 +9,8 @@
 <!-- at the top level, we are looking at the eventual digestion mode -->
     <node name="AudioVisualData" rel=""/>
     <node name="ImageData" rel=""/>
-    <node name="TextualData" rel=""/>
-    <node name="NumericData" rel=""/>
+    <node name="TextualData" rel=""/> 
+    <node name="NumericData" rel=""/> <!-- this is somewhat mysterious; meant for statistical formats, probably; probably should change -->
     <node name="Other" rel=""/>
     <!--<node name="Mixed" rel=""/>-->
   </node>
@@ -25,10 +25,13 @@
   <node name="TextualData" rel="">
     <node name="Markup" rel=""/>
     <node name="Plain" rel=""/>
-<!-- here, Binary means primarily, "not directly human-readable" and this is SO wrong   -->
-    <node name="Binary" rel=""/>
   </node>
- 
+
+  <node name="Other" rel="">
+    <node name="Container" rel=""/> 
+    <node name="Container.Compressed" rel=""/> <!-- compressed should be solo, for PNG etc -->
+  </node>
+
   <node name="Audio" rel="">
 <!--  should it be Audio.Uncompressed here, or rather single-segment names here (for visualisation) but dotted names in the format description files? 
       The latter means that a format would say <formatFamily>Audio.Uncompressed</formatFamily> and that would be parsed and 

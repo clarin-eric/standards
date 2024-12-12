@@ -10,5 +10,5 @@
     </info>
     <mimeType>application/gzip</mimeType>
     <fileExt>.gz</fileExt>
-    <formatFamily>lossless</formatFamily>
+    <formatFamily>Container.Compressed</formatFamily>
 </format>

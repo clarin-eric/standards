@@ -6,6 +6,8 @@
   </titleStmt>
   <keyword>document format</keyword>
   <keyword>binarized TextualData</keyword>
+  <extId type="LOC">fdd000030</extId>
+  <extId type="Wikidata">Q42332</extId>
   <info type="description">
     <p>For the purpose of CLARIN format recommendations, we treat PDF as a format collection that is
       divided along two lines: the development line from 1.0 through 1.7 and 2.0 (the latter two
@@ -30,5 +32,6 @@
   <relation target="SpecPDF" type="isRelatedTo"/> 
   <mimeType>application/pdf</mimeType>
   <fileExt>.pdf</fileExt>
-  <formatFamily>Binary</formatFamily>
+  <formatFamily>PS</formatFamily>
+  <formatFamily>Container</formatFamily>
 </format>

@@ -11,6 +11,6 @@
   </info> 
   <mimeType>application/vnd.openxmlformats-officedocument.wordprocessingml.document</mimeType>
   <fileExt>.docx</fileExt>
-  <formatFamily>Binary</formatFamily>
+  <formatFamily>ZIP</formatFamily>
   <formatFamily>XML</formatFamily>
 </format>
