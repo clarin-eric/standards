@@ -16,5 +16,5 @@
         </ul>
     </info>
     <fileExt>.vrt</fileExt>
-    <formatFamily>Markup.Columnar</formatFamily>
+    <formatFamily>Markup.Partial</formatFamily>
 </format>
