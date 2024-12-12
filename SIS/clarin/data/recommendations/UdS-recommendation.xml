@@ -72,7 +72,7 @@
         <domain>Text Annotation</domain>
         <level>acceptable</level>
       </format>
-      <format id="fVRT">
+      <format id="fCWB-VRT">
         <domain>Text Annotation</domain>
         <level>recommended</level>
         <comment>Structural and positional attributes must be documented.</comment>
