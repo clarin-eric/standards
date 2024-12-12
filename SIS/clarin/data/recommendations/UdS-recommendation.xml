@@ -7,10 +7,9 @@
          <centreID>UdS</centreID>
       </filter>
       <respStmt>
-         <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
-         <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-         <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-         <reviewDate>0001-01-01</reviewDate>
+         <name>Stefan Fischer</name>
+         <link>https://github.com/sfischer-uds</link>
+         <reviewDate>2024-12-12</reviewDate>
       </respStmt>
       <centre id="UdS" deposition="1">
          <centreName>Universität des Saarlandes</centreName>
@@ -26,84 +25,237 @@
       <p>CLARIND-UdS, the language resource repository at Saarland University, is part of the Text+
          data domain Collections. The data centre specializes in register corpora, multilingual
          corpora and translation corpora. Metadata of the archived resources are available in Dublin
-         Core and CMDI format. The data repository was certified with the CoreTrustSeal.</p></info>
+         Core and CMDI format. The data repository was certified with the CoreTrustSeal.</p>
+      <p>Plain text files and XML files should be encoded in UTF-8 or ASCII.</p>
+      <p>Files in formats that are not recommended or well documented must be provided with a detailed format specification for archival.</p>
+      <p>The repository does not specialize in audiovisual data. Image files can be archived as part of the documentation.</p>
+   </info>
    <info xml:lang="de">
       <p>CLARIND-UdS, das Repositorium für Sprachressourcen an der Universität des Saarlandes, ist
          Teil der Text+ Datendomäne Collections. Der Fokus des Datenzentrums liegt auf
          Registerkorpora, multilingualen Korpora und Übersetzungskorpora. Metadaten der archivierten
          Ressourcen liegen in den Formaten Dublin Core und CMDI vor. Das Datenrepositorium wurde mit
-         dem CoreTrustSeal zertifiziert.</p></info>
+         dem CoreTrustSeal zertifiziert.</p>
+      <p>Text- und XML-Dateien sollten in UTF-8 oder ASCII kodiert sein.</p>
+      <p>Dateien in Formaten, die nicht empfohlen werden oder nicht gut dokumentiert sind, müssen mit einer detaillierten Formatspezifikation für die Archivierung ergänzt werden.</p>
+      <p>Der Fokus des Repositoriums liegt nicht auf audiovisuellen Daten. Bilddateien können als Teil der Dokumentation archiviert werden.</p>
+   </info>
    <formats>
-      <format id="fMP3">
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
+      <!-- ANNOTATION -->
+
+      <!-- audiovisual annotation -->
+
+      <!-- image annotation -->
+
+      <!-- text annotation -->
+      <format id="fCoNLL">
+        <domain>Text Annotation</domain>
+        <level>discouraged</level>
+        <comment><formatRef ref="fCoNLL-U"/> should be used instead.</comment>
+        <comment xml:lang="de"><formatRef ref="fCoNLL-U"/> sollte bevorzugt werden.</comment>
       </format>
-      <format id="fOGG">
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
+      <format id="fCoNLL-U">
+        <domain>Text Annotation</domain>
+        <level>recommended</level>
       </format>
-      <format id="fWave">
-         <domain>Audiovisual Source Language Data</domain>
-         <level>recommended</level>
+      <format id="fTextPlain">
+         <domain>Text Annotation</domain>
+         <level>discouraged</level>
       </format>
+      <format id="fCoNLL-X">
+        <domain>Text Annotation</domain>
+        <level>discouraged</level>
+        <comment><formatRef ref="fCoNLL-U"/> should be used instead.</comment>
+        <comment xml:lang="de"><formatRef ref="fCoNLL-U"/> sollte bevorzugt werden.</comment>
+      </format>
+      <format id="fTiger">
+        <domain>Text Annotation</domain>
+        <level>acceptable</level>
+      </format>
+      <format id="fVRT">
+        <domain>Text Annotation</domain>
+        <level>recommended</level>
+        <comment>Structural and positional attributes must be documented.</comment>
+        <comment xml:lang="de">Strukturelle und positionelle Attribute müssen dokumentiert sein.</comment>
+      </format>
+      <format id="fXML">
+        <domain>Text Annotation</domain>
+        <level>discouraged</level>
+        <comment>General XML is discouraged. Corpora should be based on a specific XML variant that can be validated.</comment>
+        <comment xml:lang="de">Allgemeines XML wird nicht empfohlen. Korpora sollten auf einer spezifischen XML-Variante, die validiert werden kann, basieren.</comment>
+      </format>
+
+      <!-- DATA/RESOURCE DESCRIPTION -->
+
+      <!-- catalogue metadata -->
+      <format id="fCMDI">
+        <domain>Catalogue Metadata</domain>
+        <level>recommended</level>
+      </format>
+      <format id="fDC-XML">
+        <domain>Catalogue Metadata</domain>
+        <level>recommended</level>
+      </format>
+
+      <!-- contextual information -->
+
+      <!-- documentation -->
       <format id="fHTML">
          <domain>Documentation</domain>
          <level>recommended</level>
+         <comment>HTML files should be static and be accepted by the W3C validator.</comment>
+         <comment xml:lang="de">HTML-Dateien sollten statisch sein und vom W3C-Validator akzeptiert werden.</comment>
       </format>
       <format id="fLaTeX">
          <domain>Documentation</domain>
+         <level>acceptable</level>
+         <comment>Non-standard packages should be archived as well.</comment>
+         <comment xml:lang="de">Pakete, die nicht zur Standardauswahl gehören, sollten ebenfalls archiviert werden.</comment>
+      </format>
+      <format id="fMarkdown">
+         <domain>Documentation</domain>
          <level>recommended</level>
       </format>
       <format id="fPDF">
          <domain>Documentation</domain>
          <level>acceptable</level>
+         <comment>For long-term archiving <formatRef ref="fPDFA"/> should be preferred.</comment>
+         <comment xml:lang="de">Für die Langzeitarchivierung sollte <formatRef ref="fPDFA"/> bevorzugt werden.</comment>
+      </format>
+      <format id="fPDFA">
+         <domain>Documentation</domain>
+         <level>recommended</level>
       </format>
       <format id="fTeX">
          <domain>Documentation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fTextPlain">
+         <domain>Documentation</domain>
          <level>recommended</level>
       </format>
+
+      <!-- metadata -->
+      <format id="fCSV">
+        <domain>Metadata</domain>
+        <level>acceptable</level>
+      </format>
+      <format id="fCMDI">
+        <domain>Metadata</domain>
+        <level>recommended</level>
+      </format>
+      <format id="fDC-XML">      
+        <domain>Metadata</domain>
+        <level>recommended</level>
+      </format>
+      <format id="fDOCX">
+        <domain>Metadata</domain>
+        <level>discouraged</level>
+      </format>      
+      <format id="fTSV">
+        <domain>Metadata</domain>
+        <level>recommended</level>
+        <comment>Tables must contain descriptive column headers.</comment>
+        <comment xml:lang="de">Tabellen müssen beschreibende Spaltennamen enthalten.</comment>        
+      </format>
+
+      <!-- DATABASES -->
+
+      <!-- geodata -->
+
+      <!-- language description -->
+
+      <!-- lexical resource -->
+
+      <!-- statistical data -->
+
+      <!-- SOURCE DATA -->
+
+      <!-- audiovisual source language data -->
+      <format id="fMP3">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>discouraged</level>
+      </format>
+      <format id="fOGG">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>discouraged</level>
+      </format>
+      <format id="fWave">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>discouraged</level>
+      </format>
+  
+      <!-- contextual data -->
+
+      <!-- image source language data -->
       <format id="fGIF">
          <domain>Image Source Language Data</domain>
-         <level>recommended</level>
+         <level>acceptable</level>
       </format>
       <format id="fJPEG">
          <domain>Image Source Language Data</domain>
-         <level>recommended</level>
+         <level>acceptable</level>
       </format>
       <format id="fPNG">
          <domain>Image Source Language Data</domain>
-         <level>recommended</level>
+         <level>acceptable</level>
       </format>
       <format id="fSVG">
          <domain>Image Source Language Data</domain>
-         <level>recommended</level>
+         <level>acceptable</level>
       </format>
       <format id="fTIFF">
          <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fCWB-VRT">
-         <domain>Language Description</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fTiger">
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fPDF">
-         <domain>Textual Source Language Data</domain>
          <level>acceptable</level>
       </format>
+      
+      <!-- textual source language data -->
+      <format id="fPDF">
+         <domain>Textual Source Language Data</domain>
+         <level>discouraged</level>
+         <comment>For long-term archiving <formatRef ref="fPDFA"/> should be preferred.</comment>
+         <comment xml:lang="de">Für die Langzeitarchivierung sollte <formatRef ref="fPDFA"/> bevorzugt werden.</comment>
+      </format>
+      <format id="fPDFA">
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+      </format>  
       <format id="fTextPlain">
          <domain>Textual Source Language Data</domain>
          <level>recommended</level>
       </format>
+
+      <!-- UNCATEGORIZED -->
+
+      <!-- other -->
+
+      <!-- packaging -->
       <format id="fGZIP">
          <domain>Packaging</domain>
          <level>recommended</level>
+         <comment>Das Archiv sollte Dateien in empfohlenen Formaten enthalten.</comment>
+         <comment xml:lang="de">The archive should contain files in recommended formats.</comment>
+      </format>
+      <format id="fTAR">
+         <domain>Packaging</domain>
+         <level>recommended</level>
+         <comment>Das Archiv sollte Dateien in empfohlenen Formaten enthalten.</comment>
+         <comment xml:lang="de">The archive should contain files in recommended formats.</comment>
       </format>
       <format id="fZIP">
          <domain>Packaging</domain>
+         <level>recommended</level>
+         <comment>Das Archiv sollte Dateien in empfohlenen Formaten enthalten.</comment>
+         <comment xml:lang="de">The archive should contain files in recommended formats.</comment>
+      </format>
+
+      <!-- tool support -->
+      <format id="fDTD">
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fXSD">
+         <domain>Tool Support</domain>
          <level>recommended</level>
       </format>
    </formats>
