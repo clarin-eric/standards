@@ -52,7 +52,13 @@ return
                 <a href="https://github.com/clarin-eric/standards/blob/master/MM/Formal%20Format%20Families.png">formal 
                 families tree graphic</a>, available from this repository. Feel welcome to add your suggestions to the 
                     <a href="https://github.com/clarin-eric/standards/issues/201">discussion at GitHub</a>.</p>
+                    <p>Below the SISghetti Monster is a table listing the current relationships across the families.</p>
                 
+                </div>
+                
+                <div id="chart" class="version"></div>
+                
+                <div>
                 <table>
                     <tr>
                         <th><a href="{app:link("views/format-families.xq?sortBy=id")}">Format</a></th>
@@ -61,7 +67,7 @@ return
                     {fm:get-format-families($sortBy)}
                 </table>
                 </div>
-                <div id="chart" class="version"></div>
+                <!-- <div id="chart" class="version"></div> -->
             </div>
             <div class="footer">{app:footer()}</div>
         </div>
