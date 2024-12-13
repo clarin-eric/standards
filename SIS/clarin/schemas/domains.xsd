@@ -18,7 +18,7 @@
           <xs:documentation>This is an internal handle, used at some places for easier processing.</xs:documentation>
         </xs:annotation>
       </xs:attribute>
-      <xs:attribute name="orderBy" use="required">
+      <xs:attribute name="orderBy" use="optional">
         <xs:annotation><xs:documentation>This attribute identifies the metadomain, such as "Annotation" for various specific kinds of annotation.</xs:documentation></xs:annotation>
       </xs:attribute>
     </xs:complexType>

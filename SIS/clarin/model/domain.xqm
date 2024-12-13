@@ -32,6 +32,10 @@ declare function domain:get-metadomain($nameOrId as xs:string){
 
 (: return a sequence of full domain nodes by passing the name of a metadomain, e.g. 'Annotation' :)
 declare function domain:get-domains-by-metadomain($name as xs:string){
+if ($name eq 'Uncategorized') 
+then
+    $domain:domains[count(@orderBy) eq 0] (:add also @orderBy eq '' ? :)
+else
     $domain:domains[@orderBy eq $name]
 };
 

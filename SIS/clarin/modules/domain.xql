@@ -24,7 +24,17 @@ declare function dm:get-id-by-name($name as xs:string){
 
 (: get the name of the metadomain by passing a domain name or a domain ID :)
 declare function dm:get-metadomain($nameOrId as xs:string){
-       domain:get-metadomain($nameOrId) 
+   let $domain-name := domain:get-metadomain($nameOrId)
+   let $metadomain := if ($domain-name eq '')
+   then "Uncategorized"
+   else $domain-name
+
+    return $metadomain
+
+(:   if ($domain-name eq '')
+   then 
+        return "Uncategorized"
+   else :)
 };
 
 (: return a sequence of full domain nodes by passing the name of a metadomain, e.g. 'Annotation' :)
