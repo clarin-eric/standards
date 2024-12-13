@@ -23,22 +23,17 @@ declare function dm:get-id-by-name($name as xs:string){
 };
 
 (: get the name of the metadomain by passing a domain name or a domain ID :)
-declare function dm:get-metadomain($nameOrId as xs:string){
+declare function dm:get-metadomain($nameOrId as xs:string) as xs:string {
    let $domain-name := domain:get-metadomain($nameOrId)
    let $metadomain := if ($domain-name eq '')
    then "Uncategorized"
    else $domain-name
 
     return $metadomain
-
-(:   if ($domain-name eq '')
-   then 
-        return "Uncategorized"
-   else :)
 };
 
 (: return a sequence of full domain nodes by passing the name of a metadomain, e.g. 'Annotation' :)
-declare function dm:get-domains-by-metadomain($name as xs:string){
+declare function dm:get-domains-by-metadomain($name as xs:string) as element(domain)+ {
     domain:get-domains-by-metadomain($name)
 };
 
@@ -48,8 +43,8 @@ declare function dm:get-domain-names-by-metadomain($name as xs:string){
 
 
 (: Generate the list of domains for the particular group :)
-declare function dm:list-domains($group as xs:string) {
-    for $domain in $domain:domains[@orderBy eq $group]
+declare function dm:list-domains($group as xs:string) as element(li)+ {
+    for $domain in dm:get-domains-by-metadomain($group)
        let $domain-id := $domain/@id
        let $domain-name := $domain/name/text()
        let $domain-snippet := $domain/desc
@@ -70,7 +65,7 @@ declare function dm:list-domains($group as xs:string) {
 
 (: iterate across the groups of domains :)
 declare function dm:list-domains-grouped() {
-    for $group in distinct-values($domain:domains/@orderBy)
+    for $group in domain:get-all-metadomains()
         order by $group
     return
         <li>
@@ -82,10 +77,10 @@ declare function dm:list-domains-grouped() {
 };
 
 
-declare function dm:create-domain-group-recommendation-link($group as xs:string){
+declare function dm:create-domain-group-recommendation-link($group as xs:string) as xs:string {
         
     let $domain-ids := 
-        for $id in $domain:domains[@orderBy eq $group]/@id
+        for $id in dm:get-domains-by-metadomain($group)/@id
         return concat("domain=",$id)
     let $joined-domains := fn:string-join($domain-ids,"&amp;")
     

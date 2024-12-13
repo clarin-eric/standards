@@ -1,4 +1,4 @@
-xquery version "3.0";
+xquery version "3.1";
 
 module namespace domain="http://clarin.ids-mannheim.de/standards/domain";
 
@@ -31,11 +31,22 @@ declare function domain:get-metadomain($nameOrId as xs:string){
 };
 
 (: return a sequence of full domain nodes by passing the name of a metadomain, e.g. 'Annotation' :)
-declare function domain:get-domains-by-metadomain($name as xs:string){
-if ($name eq 'Uncategorized') 
-then
-    $domain:domains[count(@orderBy) eq 0] (:add also @orderBy eq '' ? :)
-else
+declare function domain:get-domains-by-metadomain($name as xs:string) as element(domain)+ {
+  (:if ($name eq 'Uncategorized') 
+  then
+    $domain:domains[count(@orderBy) eq 0] (\:add also @orderBy eq '' ? Let it bug out, rather... :\)
+  else:)
     $domain:domains[@orderBy eq $name]
 };
+
+(: return a sequence of metadomain names together with "Uncategorized" :)
+declare function domain:get-all-metadomains() as xs:string+ {
+   distinct-values($domain:domains/@orderBy)
+   (:distinct-values($domain:domains/@orderBy)[string-length() gt 0], "Uncategorized":)
+   (:distinct-values($domain:domains/@orderBy), "Uncategorized":)
+};
+
+
+
+
 
