@@ -44,7 +44,7 @@ declare function dm:get-domain-names-by-metadomain($name as xs:string){
 
 (: Generate the list of domains for the particular group :)
 declare function dm:list-domains($group as xs:string) as element(li)+ {
-    for $domain in dm:get-domains-by-metadomain($group)
+    for $domain in domain:get-domains-by-metadomain($group)
        let $domain-id := $domain/@id
        let $domain-name := $domain/name/text()
        let $domain-snippet := $domain/desc
@@ -80,7 +80,7 @@ declare function dm:list-domains-grouped() {
 declare function dm:create-domain-group-recommendation-link($group as xs:string) as xs:string {
         
     let $domain-ids := 
-        for $id in dm:get-domains-by-metadomain($group)/@id
+        for $id in domain:get-domains-by-metadomain($group)/@id
         return concat("domain=",$id)
     let $joined-domains := fn:string-join($domain-ids,"&amp;")
     
