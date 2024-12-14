@@ -1,17 +1,17 @@
 <domains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="../schemas/domains.xsd">
 <!-- sync the state of this taxonomy with the schema for recommendations, i.e. recommendation.xsd   -->
-    <domain id="1" orderBy="Source Data">
+    <domain id="1" orderBy="Source Language Data">
         <name>Audiovisual Source Language Data</name>
         <desc>Audio or video recordings providing spoken/multimodal or signed language data for
             research purposes.</desc>
     </domain>
-    <domain id="2" orderBy="Source Data">
+    <domain id="2" orderBy="Source Language Data">
         <name>Image Source Language Data</name>
         <desc>Digitized images of analogue sources of written language data for research purposes
             (e.g. facsimiles, scans of handwriting, photos of inscriptions).</desc>
     </domain>
-    <domain id="3" orderBy="Source Data">
+    <domain id="3" orderBy="Source Language Data">
         <name>Textual Source Language Data</name>
         <desc>Written unstructured/plain text or originally structured text (e.g. HTML), without linguistic or other mark-up added for research purposes.</desc>
     </domain>
