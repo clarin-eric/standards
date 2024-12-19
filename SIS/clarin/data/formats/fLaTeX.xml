@@ -15,5 +15,5 @@
   </info>
   <mimeType>application/x-latex</mimeType>
   <fileExt>.latex</fileExt>
-  <formatFamily>Markup.Full</formatFamily>
+  <formatFamily>TeX</formatFamily>
 </format>

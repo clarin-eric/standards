@@ -14,5 +14,5 @@
   </info>
   <mimeType>application/xml-dtd</mimeType>
   <fileExt>.dtd</fileExt>
-  <formatFamily>Markup.Full</formatFamily>
+  <formatFamily>Plain.Statements</formatFamily>
 </format>

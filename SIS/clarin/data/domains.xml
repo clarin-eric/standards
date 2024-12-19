@@ -1,23 +1,23 @@
 <domains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="../schemas/domains.xsd">
 <!-- sync the state of this taxonomy with the schema for recommendations, i.e. recommendation.xsd   -->
-    <domain id="1" orderBy="Source Data">
+    <domain id="1" orderBy="Source Language Data">
         <name>Audiovisual Source Language Data</name>
         <desc>Audio or video recordings providing spoken/multimodal or signed language data for
             research purposes.</desc>
     </domain>
-    <domain id="2" orderBy="Source Data">
+    <domain id="2" orderBy="Source Language Data">
         <name>Image Source Language Data</name>
         <desc>Digitized images of analogue sources of written language data for research purposes
             (e.g. facsimiles, scans of handwriting, photos of inscriptions).</desc>
     </domain>
-    <domain id="3" orderBy="Source Data">
+    <domain id="3" orderBy="Source Language Data">
         <name>Textual Source Language Data</name>
-        <desc>Written unstructured/plain text or originally structured text (e.g. HTML) without linguistic or other mark-up added for research purposes.</desc>
+        <desc>Written unstructured/plain text or originally structured text (e.g. HTML), without linguistic or other mark-up added for research purposes.</desc>
     </domain>
-    <domain id="4" orderBy="Source Data">
+    <domain id="4">
         <name>Contextual Data</name>
-        <desc>Images (photos or drawings) or documents relevant to the communicative event or text but not part of the source language data.</desc>
+        <desc>Images (photos or drawings) or documents relevant to the communicative event or text, but not part of the source language data.</desc>
     </domain>
     <domain id="5" orderBy="Annotation">
         <name>Text Annotation</name>
@@ -25,7 +25,7 @@
     </domain>
     <domain id="6" orderBy="Annotation">
         <name>Audiovisual Annotation</name>
-        <desc>Annotations of audiovisual sources, usually including a basic rendering of the spoken content (transcription) and sometimes further annotation.</desc>
+        <desc>Annotations of audiovisual sources, usually including a basic rendering of the spoken content (transcription) and, sometimes, further annotation.</desc>
     </domain>
     <domain id="7" orderBy="Annotation">
         <name>Image Annotation</name>
@@ -47,31 +47,31 @@
         <name>Documentation</name>
         <desc>Unstructured documentation of the resource and its parts such as corpus or annotation guidelines.</desc>
     </domain>
-    <domain id="12" orderBy="Databases">
+    <domain id="12">
         <name>Lexical Resource</name>
-        <desc>Structured (item-based) resources for lexical and/or conceptual information on units of language (e.g. wordlists, lexicons, WordNets etc.)</desc>
+        <desc>Structured (item-based) resources for lexical and/or conceptual information on units of language (e.g., wordlists, lexicons, WordNets, etc.)</desc>
     </domain>
-    <domain id="13" orderBy="Uncategorized">
+    <domain id="13">
         <name>Tool Support</name>
-        <desc>Tool-related formats required for specific functionality of the tool or reliable reuse of resources (e.g. tagsets, annotation schemes, vocabularies, language models, parameter files, and other specifications or settings)</desc>
+        <desc>Tool-related formats required for specific functionality of the tool or reliable reuse of resources (e.g., tagsets, annotation schemes, vocabularies, language models, parameter files, and other specifications or settings).</desc>
     </domain>
-    <domain id="14" orderBy="Databases">
+    <domain id="14">
         <name>Geodata</name>
         <desc>Information on geographic locations.</desc>
     </domain>
-    <domain id="15" orderBy="Databases">
+    <domain id="15">
         <name>Statistical Data</name>
         <desc>Data from surveys and tests in numeric formats.</desc>
     </domain>
-    <domain id="16" orderBy="Databases">
+    <domain id="16">
         <name>Language Description</name>
-        <desc>Structured or unstructured descriptions of linguistic varieties or phenomena, typological databases etc.</desc>
+        <desc>Structured or unstructured descriptions of linguistic varieties or phenomena, typological databases, etc.</desc>
     </domain>
-    <domain id="17" orderBy="Uncategorized">
+    <domain id="17">
         <name>Packaging</name>
         <desc>Packaging formats of various nature (archiving, compression, library) if no more specific domain is suitable.</desc>
     </domain>
-    <domain id="18" orderBy="Uncategorized">
+    <domain id="18">
         <name>Other</name>
         <desc>Any other function that cannot be included in an existing domain. The content of this domain will be periodically examined for potential patterns that may give rise to new domains.</desc>
     </domain>

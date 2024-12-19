@@ -13,5 +13,5 @@
     </info>
     <mimeType>application/x-tar</mimeType>
     <fileExt>.tar</fileExt>
-    <formatFamily>archive formats</formatFamily>
+    <formatFamily>Container</formatFamily>
 </format>

@@ -12,5 +12,5 @@
     </info>
     <mimeType>application/zip</mimeType>
     <fileExt>.zip</fileExt>
-    <formatFamily>lossless</formatFamily>
+    <formatFamily>Container.Compressed</formatFamily>
 </format>
