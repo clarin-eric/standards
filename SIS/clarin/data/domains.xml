@@ -1,6 +1,11 @@
 <domains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="../schemas/domains.xsd">
-<!-- sync the state of this taxonomy with the schema for recommendations, i.e. recommendation.xsd   -->
+<!-- manually sync the state of this taxonomy with the schema for recommendations, i.e. recommendation.xsd   -->
+    <metadomain>
+        <name>Source Language Data</name>
+        <desc></desc>
+    </metadomain>
+    
     <domain id="1" orderBy="Source Language Data">
         <name>Audiovisual Source Language Data</name>
         <desc>Audio or video recordings providing spoken/multimodal or signed language data for
