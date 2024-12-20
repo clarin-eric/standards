@@ -66,10 +66,6 @@ return
                             <td>Functional domains</td>
                             <td style="text-align:right;">{count($domain:domains)}</td>
                         </tr>
-                        <tr>
-                            <td>Media types</td>
-                            <td style="text-align:right;">{count(stm:getMimeTypes())}</td>
-                        </tr>
                     </table>
                     
                     <div style="width:500px;margin-bottom:40px">
@@ -77,8 +73,9 @@ return
                         More information about them is provided in the <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a> section.</p>
                         <p>The second row counts all formats mentioned by the recommendations, and that includes 
                         <a href="{app:link("views/sanity-check.xq#missing")}">formats that do not (yet) have a dedicated description file</a> in the SIS.</p>
-                        <p>The third row provides the count of all the recommendations defined in the SIS. See immediately below for the various sub-counts.</p>
-                        <p><a href="{app:link("views/list-domains.xq")}">Functional domains</a> (see also immediately below) and <a href="{app:link("views/list-mimetypes.xq")}">media types</a> also have dedicated sections in the SIS.</p>
+                        <p>The third row provides the count of <a href="{app:link("views/recommended-formats-with-search.xq")}">all the recommendations</a> 
+                        defined in the SIS. See below for various partitions of that set.</p>
+                        <p><a href="{app:link("views/list-domains.xq")}">Functional domains</a> (see also immediately below) have a dedicated section in the SIS.</p>
                         
                     </div>
                     
