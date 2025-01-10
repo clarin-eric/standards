@@ -96,7 +96,7 @@
                             original text included or as stand-off.</xs:documentation>
                     </xs:annotation>
                 </xs:enumeration>
-                <!--Data/Resource Description-->
+
                 <xs:enumeration value="Catalogue Metadata">
                     <xs:annotation>
                         <xs:documentation>Basic structured information for discoverability and
@@ -125,7 +125,7 @@
                             hints.</xs:documentation>
                     </xs:annotation>
                 </xs:enumeration>
-                <!--Databases-->
+
                 <xs:enumeration value="Geodata">
                     <xs:annotation>
                         <xs:documentation>Information on geographic locations.</xs:documentation>
@@ -150,7 +150,7 @@
                             formats.</xs:documentation>
                     </xs:annotation>
                 </xs:enumeration>
-                <!--Source Data-->
+
                 <xs:enumeration value="Audiovisual Source Language Data">
                     <xs:annotation>
                         <xs:documentation>Audio or video recordings providing spoken/multimodal or
@@ -198,6 +198,21 @@
                             of the tool or reliable reuse of resources (e.g. tagsets, annotation
                             schemes, vocabularies, language models, parameter files, and other
                             specifications or settings)</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ML Data Preparation">
+                    <xs:annotation>
+                        <xs:documentation>Data curated and formatted for integration into machine learning systems.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ML Model Training">
+                    <xs:annotation>
+                        <xs:documentation>Data used for pre-training and fine-tuning of machine learning models.</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ML Model Exchange">
+                    <xs:annotation>
+                        <xs:documentation>Data that enable the sharing and deployment of machine learning models across different systems and platforms.</xs:documentation>
                     </xs:annotation>
                 </xs:enumeration>
             </xs:restriction>
@@ -285,8 +300,7 @@
                     <xs:attribute name="ri" use="optional" type="ResearchInfrastructures">
                         <xs:annotation>
                             <xs:documentation>Name of the research infrastructure, if the preferred
-                                centre name depends on the research
-                                infrastructure.</xs:documentation>
+                                centre name depends on the research infrastructure.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
                 </xs:extension>

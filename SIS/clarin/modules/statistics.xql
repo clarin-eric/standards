@@ -149,3 +149,6 @@ declare function stm:list-format-by-media-types(){
     </tr>
 };
 
+declare function stm:count-all-recommendations(){
+    count(recommendation:get-all-recommendations())
+};

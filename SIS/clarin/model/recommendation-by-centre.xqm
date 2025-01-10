@@ -11,6 +11,12 @@ declare variable $recommendation:centres := collection('/db/apps/clarin/data/rec
 declare variable $recommendation:format-ids := data($recommendation:centres/formats/format/@id);
 declare variable $recommendation:format-abbrs := for $id in $recommendation:format-ids return fn:substring($id,2);
 
+
+(:
+It should be mentioned at this point that a recommendation is encoded in an element that it called <format>;
+this is why functions that are actually counting recommendations below have "format" in the name.
+:)
+
 declare function recommendation:get-recommendations-for-centre($id){
     let $convertedId := translate($id,':','-')
     let $path := concat('/db/apps/clarin/data/recommendations/',$convertedId,"-recommendation.xml")
@@ -34,3 +40,6 @@ declare function recommendation:get-formats-by-recommendation-level($level){
     $recommendation:centres/formats/format[level=$level]
 };
 
+declare function recommendation:get-all-recommendations(){
+    $recommendation:centres/formats/format
+};

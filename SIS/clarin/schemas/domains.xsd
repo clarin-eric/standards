@@ -3,7 +3,16 @@
   <xs:element name="domains">
     <xs:complexType>
       <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="metadomain"/>
         <xs:element maxOccurs="unbounded" ref="domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="metadomain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="desc"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
