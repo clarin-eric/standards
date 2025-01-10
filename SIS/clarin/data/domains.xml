@@ -1,6 +1,30 @@
 <domains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="../schemas/domains.xsd">
-<!-- manually sync the state of this taxonomy with the schema for recommendations, i.e. recommendation.xsd   -->
+    
+    <metadomain>
+        <name>Annotation</name>
+        <desc>These domains group together functions of additional pieces of data that are used to classify elements of the source data in various ways.</desc>
+    </metadomain>
+    <metadomain>
+        <name>Data/Resource Description</name>
+        <desc>These domains describe functions related to various kinds of descriptions of particular kinds of data and also entire resources. 
+            Most of them correspond to various aspects of the unqualified notion of metadata.</desc>
+    </metadomain>
+    <metadomain>
+        <name>Source Language Data</name>
+        <desc>These domains group what is often referred to as "primary data" -- electronic, curated and prepared to be annotated and futher processed.</desc>
+    </metadomain>
+    <metadomain>
+        <name>Machine Learning</name>
+        <desc>These domains group the functions of data used in the creation, fine-tuning and serving machine learning models, from "classical" 
+            through neural networks to large language models.</desc>
+    </metadomain>
+    
+    <!-- manually sync the state of the taxonomy below with the schema for recommendations, i.e. recommendation.xsd -
+     unless an automatic method is created, e.g. by parsing this file into a schema fragment by script, and
+     making sure that that fragment gets imported by recommendation.xsd... The purpose of such a move would be 
+     content-completion and dynamic documentation of content selections (as in the definition of the element "domain"). -->
+    
     <domain id="1" orderBy="Source Language Data">
         <name>Audiovisual Source Language Data</name>
         <desc>Audio or video recordings providing spoken/multimodal or signed language data for
@@ -15,7 +39,7 @@
         <name>Textual Source Language Data</name>
         <desc>Written unstructured/plain text or originally structured text (e.g. HTML), without linguistic or other mark-up added for research purposes.</desc>
     </domain>
-    <domain id="4">
+    <domain id="4" orderBy="Data/Resource Description">
         <name>Contextual Data</name>
         <desc>Images (photos or drawings) or documents relevant to the communicative event or text, but not part of the source language data.</desc>
     </domain>
@@ -63,7 +87,7 @@
         <name>Statistical Data</name>
         <desc>Data from surveys and tests in numeric formats.</desc>
     </domain>
-    <domain id="16">
+    <domain id="16" orderBy="Data/Resource Description">
         <name>Language Description</name>
         <desc>Structured or unstructured descriptions of linguistic varieties or phenomena, typological databases, etc.</desc>
     </domain>
@@ -71,7 +95,19 @@
         <name>Packaging</name>
         <desc>Packaging formats of various nature (archiving, compression, library) if no more specific domain is suitable.</desc>
     </domain>
-    <domain id="18">
+    <domain id="18" orderBy="Machine Learning">
+        <name>ML Data Preparation</name>
+        <desc>Data curated and formatted for integration into machine learning systems. </desc>
+    </domain>
+    <domain id="19" orderBy="Machine Learning">
+        <name>ML Model Training</name>
+        <desc>Data used for pre-training and fine-tuning of machine learning models.</desc>
+    </domain>
+    <domain id="20" orderBy="Machine Learning">
+        <name>ML Model Exchange</name>
+        <desc>Data that enable the sharing and deployment of machine learning models across different systems and platforms.</desc>
+    </domain>
+    <domain id="21">
         <name>Other</name>
         <desc>Any other function that cannot be included in an existing domain. The content of this domain will be periodically examined for potential patterns that may give rise to new domains.</desc>
     </domain>
