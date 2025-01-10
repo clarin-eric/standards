@@ -7,21 +7,21 @@ module namespace domain="http://clarin.ids-mannheim.de/standards/domain";
     @author margaretha
 :)
 
-declare variable $domain:domains := doc('/db/apps/clarin/data/domains.xml')/domains/domain;
-declare variable $domain:names := $domain:domains/name/text();    
+declare variable $domain:domains as element(domain)+ := doc('/db/apps/clarin/data/domains.xml')/domains/domain;
+declare variable $domain:names  as text()+ := $domain:domains/name/text();    
 
 (: Select a domain by id :)
-declare function domain:get-domain($id as xs:string){
+declare function domain:get-domain($id as xs:string) as element(domain) {
     $domain:domains[@id=$id]
 };
 
 (: Select a domain by name :)
-declare function domain:get-domain-by-name($name as xs:string){
+declare function domain:get-domain-by-name($name as xs:string) as element(domain) {
     $domain:domains[name=$name]
 };
 
 (: Query the internal domain ID by providing a string name :)
-declare function domain:get-id-by-name($name as xs:string){
+declare function domain:get-id-by-name($name as xs:string) as xs:integer {
     data($domain:domains[name=$name]/@id)
 };
 
@@ -41,9 +41,7 @@ declare function domain:get-domains-by-metadomain($name as xs:string) as element
 
 (: return a sequence of metadomain names together with "Uncategorized" :)
 declare function domain:get-all-metadomains() as xs:string+ {
-   (:distinct-values($domain:domains/@orderBy):)
-   (:distinct-values($domain:domains/@orderBy)[string-length() gt 0], "Uncategorized":)
-   distinct-values($domain:domains/@orderBy), "Uncategorized"
+  distinct-values($domain:domains/@orderBy), "Uncategorized"
 };
 
 
