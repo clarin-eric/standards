@@ -71,6 +71,7 @@ declare function dm:list-domains-grouped() {
         <li>
             <h2><a href="{dm:create-domain-group-recommendation-link($group)}">
                 {$group}</a></h2>
+                <p>{domain:get-metadomain-description($group)}</p>
             <ul
                 style="padding-left:15px">{dm:list-domains($group)}</ul>
         </li>
