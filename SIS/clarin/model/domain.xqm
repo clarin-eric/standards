@@ -39,7 +39,10 @@ declare function domain:get-domains-by-metadomain($name as xs:string) as element
     $domain:domains[@orderBy eq $name]
 };
 
-(: return a sequence of metadomain names together with "Uncategorized" :)
+(: return a sequence of metadomain names together with "Uncategorized".
+   note that this presents the real thing: the actually used metadomains, 
+   rather than those that are merely declared at the top; there should be a 
+   consistency check for the legality of the values of @orderBy :)
 declare function domain:get-all-metadomains() as xs:string+ {
   distinct-values($domain:domains/@orderBy), "Uncategorized"
 };
