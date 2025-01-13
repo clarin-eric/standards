@@ -1,5 +1,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1">
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
+    xmlns:xerces="http://xerces.apache.org" xmlns:saxon="http://saxon.sf.net/">
     <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
     
     <xs:annotation>
@@ -379,32 +380,30 @@
             <xs:documentation>The centreID element is only valid for exports from the
                 "recommended formats" list, provided for all centres. It should NOT be
                 used for importing centre recommendations into SIS.</xs:documentation>
+            <!--<xs:appinfo>
+                <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                    <sch:rule context="formats/format">
+                        <sch:assert
+                            test="string-length(@id) eq string-length(normalize-space(@id))"
+                            >Remove spurious whitespace from the @id string.</sch:assert>
+                    </sch:rule>
+                </sch:pattern>
+                <!-\-  this schematron check needs an extra PI in each recommendation doc and I'd rather avoid adding that -\->
+            </xs:appinfo>-->
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="centreID" minOccurs="0" maxOccurs="1">
-                </xs:element>
+                <xs:element ref="centreID" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="domain"/>
                 <xs:element ref="level"/>
                 <xs:element minOccurs="0" ref="comment" maxOccurs="unbounded"/>
             </xs:sequence>
-            <xs:attribute name="id" use="required" type="xs:NCName">
+            <xs:attribute name="id" use="required" type="xs:string">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">Existing or postulated ID of a format description.</xs:documentation>
-                    <xs:appinfo>
-<!--                        <assert xmlns="http://purl.oclc.org/dsdl/schematron" test="string-length(.) eq 1+string-length(normalize-space(.))">Oi oi.</assert>
-                        doesn't work either -->
-                        <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-                            <sch:rule context="formats/format">
-                                <sch:assert
-                                    test="string-length(@id) eq string-length(normalize-space(@id))"
-                                    >Remove spurious whitespace from the @id string.</sch:assert>
-                            </sch:rule>
-                        </sch:pattern>
-<!--  this schematron check fires and the math is correct, and yet it doesn't signal trailing space! -->
-                    </xs:appinfo>
                 </xs:annotation>
             </xs:attribute>
+            <xs:assert xerces:message="Remove spurious whitespace from the @id string." saxon:message="Remove spurious whitespace from the @id string." test="count(tokenize(@id, '\s+')) eq 1"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="comment" type="commentType"/>
