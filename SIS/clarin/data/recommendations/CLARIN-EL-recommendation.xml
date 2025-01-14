@@ -35,5 +35,429 @@
                 <level>recommended</level>
             </format> 
         -->
+		
+	<format id="fAIFF">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fARPA">
+		<domain>Language Description</domain>
+		<level>recommended</level>
+		<comment>N-gram model</comment>
+	</format>
+	<format id="fAVI">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fBMP">
+		<domain>Image Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fCoNLL">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+		<comment>CoNLL family (CoNLL-U, CoNLL-2000, CoNLL-2002, CoNLL-2003, CoNLL-2006, CoNLL-2008, CoNLL-2009, CoNLL-2012) model for linguistic annotation</comment>
+	</format>
+	<format id="fCSV">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fCSV">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fDOCX">
+		<domain>Textual Source Language Data</domain>
+		<level>recommended</level>
+		<comment>Formatted/Encoded</comment>
+	</format>
+	<format id="fELLOGON">
+		<domain>Text Annotation</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fEPS">
+		<domain>Image Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fFLAC">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fFPX">
+		<domain>Image Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fFLV">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fFLV4">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fGATE">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+		<comment>model for linguistic annotation</comment>
+	</format>
+	<format id="fGIF">
+		<domain>Image Source Language Data</domain>
+		<level>recommended</level>
+		<comment>all images</comment>
+	</format>
+	<format id="fGrAF">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+		<comment>model for linguistic annotation</comment>
+	</format>
+	<format id="fH5">
+		<domain>Language Description</domain>
+		<level>recommended</level>
+		<comment>ML model</comment>
+	</format>
+	<format id="fHDT">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fHDT">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fHTML">
+		<domain>Textual Source Language Data</domain>
+		<level>recommended</level>
+		<comment>Formatted/Encoded</comment>
+	</format>
+	<format id="fJPEG">
+		<domain>Image Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fJPEG">
+		<domain>Image Source Language Data</domain>
+		<level>recommended</level>
+		<comment>all images</comment>
+	</format>
+	<format id="fJSON">
+		<domain>Language Description</domain>
+		<level>recommended</level>
+		<comment>ML model</comment>
+	</format>
+	<format id="fJSON">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fJSONLD">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fJSONLD">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fLaTeX">
+		<domain>Textual Source Language Data</domain>
+		<level>recommended</level>
+		<comment>Formatted/Encoded</comment>
+	</format>
+	<format id="fLMF">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+		<comment>model for lexica</comment>
+	</format>
+	<format id="fXLSX">
+		<domain>Lexical Resource</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fXLSX">
+		<domain>Text Annotation</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fDOC">
+		<domain>Textual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fMLeap">
+		<domain>Language Description</domain>
+		<level>recommended</level>
+		<comment>ML model</comment>
+	</format>
+	<format id="fMOSES">
+		<domain>Textual Source Language Data</domain>
+		<level>recommended</level>
+		<comment>text-based format for parallel aligned data. </comment>
+	</format>
+	<format id="fMP3">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fMPEG">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fMPEG-4-AVC">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fNIF">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+		<comment>model for linguistic annotation for RDF data</comment>
+	</format>
+	<format id="fNifTi">
+		<domain>Image Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fN3">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+		<comment>serialization format for RDF data</comment>
+	</format>
+	<format id="fN3">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+		<comment>serialization format for RDF data</comment>
+	</format>
+	<format id="fNQuads">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fNQuads">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fNTriples">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fNTriples">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fODT">
+		<domain>Textual Source Language Data</domain>
+		<level>recommended</level>
+		<comment>Formatted/Encoded</comment>
+	</format>
+	<format id="fONNX">
+		<domain>Language Description</domain>
+		<level>recommended</level>
+		<comment>ML model</comment>
+	</format>
+	<format id="fOntoLexLemon">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+		<comment>model for lexica</comment>
+	</format>
+	<format id="fOWL">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+		<comment>model for ontologies</comment>
+	</format>
+	<format id="fPDF">
+		<domain>Image Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fPDF">
+		<domain>Textual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fPDFA">
+		<domain>Image Source Language Data</domain>
+		<level>recommended</level>
+		<comment>scanned images</comment>
+	</format>
+	<format id="fPDFA">
+		<domain>Textual Source Language Data</domain>
+		<level>recommended</level>
+		<comment>Formatted/Encoded</comment>
+	</format>
+	<format id="fPkl">
+		<domain>Language Description</domain>
+		<level>recommended</level>
+		<comment>ML model</comment>
+	</format>
+	<format id="fPICT">
+		<domain>Image Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fTextPlain">
+		<domain>Lexical Resource</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fTextPlain">
+		<domain>Text Annotation</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fTextPlain">
+		<domain>Textual Source Language Data</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fPMML">
+		<domain>Language Description</domain>
+		<level>recommended</level>
+		<comment>ML model</comment>
+	</format>
+	<format id="fPNG">
+		<domain>Image Source Language Data</domain>
+		<level>recommended</level>
+		<comment>all images</comment>
+	</format>
+	<format id="fPS">
+		<domain>Textual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fPROTO">
+		<domain>Language Description</domain>
+		<level>recommended</level>
+		<comment>ML model</comment>
+	</format>
+	<format id="fPSB">
+		<domain>Image Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fPsd">
+		<domain>Image Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fMOV">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fRAW">
+		<domain>Image Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fRDFXML">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fRDFXML">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fRV">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fRTF">
+		<domain>Textual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fSGML">
+		<domain>Text Annotation</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fSGML">
+		<domain>Textual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fSKOS">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+		<comment>model  for thesauri and controlled vocabularies</comment>
+	</format>
+	<format id="fSQL">
+		<domain>Lexical Resource</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fSVG">
+		<domain>Image Source Language Data</domain>
+		<level>recommended</level>
+		<comment>all images</comment>
+	</format>
+	<format id="fTBX">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+		<comment>XML model for terminological data</comment>
+	</format>
+	<format id="fTEI">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+		<comment>model for structural and linguistic annotation</comment>
+	</format>
+	<format id="fTeX">
+		<domain>Textual Source Language Data</domain>
+		<level>recommended</level>
+		<comment>Formatted/Encoded</comment>
+	</format>
+	<format id="fTIFF">
+		<domain>Image Source Language Data</domain>
+		<level>recommended</level>
+		<comment>all images</comment>
+	</format>
+	<format id="fTMX">
+		<domain>Textual Source Language Data</domain>
+		<level>recommended</level>
+		<comment>XML based format for aligned data</comment>
+	</format>
+	<format id="fTrig">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fTrig">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fTSV">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fTSV">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fTurtle">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fTurtle">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fWARC">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+		<comment>model for web crawled data</comment>
+	</format>
+	<format id="fWave">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fWMA">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fWMV">
+		<domain>Audiovisual Source Language Data</domain>
+		<level>acceptable</level>
+	</format>
+	<format id="fXCES">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+		<comment>model for corpora with structural and linguistic annotation</comment>
+	</format>
+	<format id="fXCESILSPVariant">
+		<domain>Textual Source Language Data</domain>
+		<level>recommended</level>
+		<comment>XML based format compliant with the XCES model for corpora</comment>
+	</format>
+	<format id="fXMI">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fXML">
+		<domain>Lexical Resource</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fXML">
+		<domain>Text Annotation</domain>
+		<level>recommended</level>
+	</format>
+	<format id="fYAML">
+		<domain>Language Description</domain>
+		<level>recommended</level>
+		<comment>ML model</comment>
+	</format>
+
     </formats>
 </recommendation>

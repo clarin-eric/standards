@@ -3,7 +3,16 @@
   <xs:element name="domains">
     <xs:complexType>
       <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="metadomain"/>
         <xs:element maxOccurs="unbounded" ref="domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="metadomain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="desc"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -19,7 +28,17 @@
         </xs:annotation>
       </xs:attribute>
       <xs:attribute name="orderBy" use="optional">
-        <xs:annotation><xs:documentation>This attribute identifies the metadomain, such as "Annotation" for various specific kinds of annotation.</xs:documentation></xs:annotation>
+        <xs:annotation><xs:documentation>This attribute identifies the metadomain, such as "Annotation" for various specific kinds of annotation.</xs:documentation>
+          <xs:appinfo>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:rule context="//domain/@orderBy">
+                <sch:assert
+                  test=". = //domains/metadomain/name"
+                  >The value of @orderBy (<sch:value-of select="."/>) must be registered as a metadomain name.</sch:assert>
+              </sch:rule>
+            </sch:pattern>
+          </xs:appinfo>
+        </xs:annotation>
       </xs:attribute>
     </xs:complexType>
   </xs:element>

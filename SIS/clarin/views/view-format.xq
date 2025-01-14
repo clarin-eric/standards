@@ -6,6 +6,8 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 import module namespace vfm = "http://clarin.ids-mannheim.de/standards/view-format" at "../modules/view-format.xql";
 import module namespace vsm = "http://clarin.ids-mannheim.de/standards/view-spec" at "../modules/view-spec.xql";
 
+import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
+
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 declare option output:method "html";
 declare option output:media-type "text/html";
@@ -141,17 +143,20 @@ return
                         {vfm:print-multiple-values($format/formatFamily, $id, "Format family:")}
                         {vfm:print-multiple-values($format/schemaLoc, $id, "Schema location:", fn:true())}
                         
-                        
                         {if (count($format-domains)>0)
                                 then(
                                     <div>
-                                        <span class="heading">Functional domains: </span>
+                                        <span class="heading">Functional domains extracted from the recommendations: </span>
                                         <div style="column-count:1">
                                             <ul style="margin: 0; padding-left:15px;">
                                                 {
                                                     for $d in $format-domains
                                                     order by $d
-                                                    return <li>{$d}</li>
+                                                    return <li><a href="{app:link(concat("views/recommended-formats-with-search.xq?searchFormat=",$id,
+                                                    "&amp;searchButton=Search&amp;centre=&amp;domain=",domain:get-id-by-name($d),"&amp;level=&amp;sortBy=#filterRecommendation"))}">{$d}</a></li>
+                                                    
+                                                    (:return <li><a href="{app:link(concat("views/recommended-formats-with-search.xq?searchFormat=",fPDF,"&amp;searchButton=Search&amp;centre=&amp;domain=",21,"&amp;level=&amp;sortBy=#filterRecommendation))}">{$d}</a></li>:)
+                                                    (:return <li>{$d}</li>:)
                                                 }
                                                 </ul>
                                         </div>
