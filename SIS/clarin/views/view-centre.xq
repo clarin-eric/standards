@@ -5,6 +5,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 import module namespace em = "http://clarin.ids-mannheim.de/standards/export" at "../modules/export.xql";
+import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
 
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 declare option output:method "html";
@@ -147,7 +148,11 @@ return
                                 then(
                                     <div> {app:create-collapse-expand("domainList", 
                                         <span class="heading">Data functions covered by the recommendations: </span>, 
-                                        for $d in $domains return <li>{$d}</li>, "")
+                                        for $d in $domains 
+                                          let $domain-id := dm:get-id-by-name($d)
+                                          order by $d
+                                        return <li><a href="{app:link(concat('views/recommended-formats-with-search.xq?domain=',$domain-id,'#searchRecommendation'))}">{$d}</a></li>,
+                                        "")
                                     }
                                         <!--
                                         <span class="heading">Data functions covered by the recommendations</span>
