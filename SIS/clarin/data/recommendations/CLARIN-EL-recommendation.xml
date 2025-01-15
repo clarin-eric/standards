@@ -7,10 +7,10 @@
             <centreID>CLARIN:EL</centreID>
         </filter>
         <respStmt>
-            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+            <name>Sasa Kolovou</name>
             <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-            <reviewDate>0001-01-01</reviewDate>
+        	<link>https://github.com/raspberryjoy</link>
+            <reviewDate>2025-01-15</reviewDate>
         </respStmt>
         <centre id="CLARIN:EL" deposition="1">
         <centreName>CLARIN:EL National Infrastructure for Language Resources and Technologies in Greece</centreName>
@@ -92,7 +92,7 @@
 	</format>
 	<format id="fCoNLL">
 		<domain>Text Annotation</domain>
-		<level>recommended</level>
+		<level>acceptable</level>
 		<comment>CoNLL family (CoNLL-U, CoNLL-2000, CoNLL-2002, CoNLL-2003, CoNLL-2006, CoNLL-2008, CoNLL-2009, CoNLL-2012) model for linguistic annotation</comment>
 	</format>
 	<format id="fCSV">
