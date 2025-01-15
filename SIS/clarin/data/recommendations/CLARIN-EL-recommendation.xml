@@ -20,7 +20,7 @@
         </nodeInfo>
       </centre>
     </header>
-    <info><p>This page lists the file formats which are recommended for depositing in CLARIN:EL. For aditional information, see <a href="https://www.clarin.gr/en/services/share">https://www.clarin.gr/en/services/share</a></p>
+    <info><p>This page lists the file formats which are recommended for depositing in CLARIN:EL. For additional information, see <a href="https://www.clarin.gr/en/services/share">https://www.clarin.gr/en/services/share</a></p>
 		<p>File Formats for Digital Preservation Policy</p>
 		<p>To ensure access and usability of your data to the broadest audience into the long term,
 			the CLARIN:EL team has considered the following factors to determine which file formats
@@ -29,15 +29,15 @@
     	<ul>
     		<li>Suitability for the type of resource and/or type of processing.</li>
     		<li>In order to be processable by the <a href="https://inventory.clarin.gr/workflows/">CLARIN:EL integrated NLP workflows</a>,
-    			textual data have to be in one of the formats that the workflows can process.</li>    		
+    			textual data have to be in one of the formats that the workflows can process.</li>
     	</ul>
     	<p>Preservation</p>
     	<ul>
     		<li>Suitability for research by the designated communities.</li>
     		<li>How widespread the format is: broadly used formats, not deprecated,
-    			known to the designated communities.</li>    
-    		<li>Use of open source rather than proprietary format.</li>    
-    		<li>Whether the format employs lossy or lossless compression.</li>    
+    			known to the designated communities.</li>
+    		<li>Use of open source rather than proprietary format.</li>
+    		<li>Whether the format employs lossy or lossless compression.</li>
     	</ul>
     	<p>The policy, which is based upon the above-mentioned factors, meets the mission of
     		CLARIN:EL to collect, preserve and distribute digital language resources and language
