@@ -7,10 +7,10 @@
             <centreID>CLARIN:EL</centreID>
         </filter>
         <respStmt>
-            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+            <name>Sasa Kolovou</name>
             <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-            <reviewDate>0001-01-01</reviewDate>
+        	<link>https://github.com/raspberryjoy</link>
+            <reviewDate>2025-01-15</reviewDate>
         </respStmt>
         <centre id="CLARIN:EL" deposition="1">
         <centreName>CLARIN:EL National Infrastructure for Language Resources and Technologies in Greece</centreName>
@@ -21,20 +21,7 @@
       </centre>
     </header>
     <info><p>For starters, see <a href="https://www.clarin.gr/en/services/share">https://www.clarin.gr/en/services/share</a></p></info>
-    <formats><!--
-            This template will assist in adjusting/creating a recommendations document if you don't
-            have access to a schema-aware XML editor. Copy the XML fragment,
-            *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
-            *  adjust the domain (https://clarin.ids-mannheim.de/standards/views/list-domains.xq ),
-            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
-            *  repeat as necessary;
-            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
-
-            <format id="null">
-                <domain>Audiovisual Annotation</domain>
-                <level>recommended</level>
-            </format>
-        -->
+    <formats>
         <format id="fAIFF">
 		<domain>Audiovisual Source Language Data</domain>
 		<level>recommended</level>
@@ -54,7 +41,7 @@
 	</format>
 	<format id="fCoNLL">
 		<domain>Text Annotation</domain>
-		<level>recommended</level>
+		<level>acceptable</level>
 		<comment>CoNLL family (CoNLL-U, CoNLL-2000, CoNLL-2002, CoNLL-2003, CoNLL-2006, CoNLL-2008, CoNLL-2009, CoNLL-2012) model for linguistic annotation</comment>
 	</format>
 	<format id="fCSV">
