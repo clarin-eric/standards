@@ -21,7 +21,7 @@
     <ul>
       <li>.shp — shape format; the feature geometry itself {content-type: x-gis/x-shapefile}</li>
       <li>.shx — shape index format; a positional index of the feature geometry to allow seeking forwards and backwards quickly {content-type: x-gis/x-shapefile}</li>
-      <li>.dbf — attribute format; columnar attributes for each shape, in dBase IV format {content-type: application/octet-stream OR text/plain}</li>
+      <li>.dbf — attribute format;  attributes for each shape, in dBase IV format {content-type: application/octet-stream OR text/plain}</li>
     </ul>
     <p>Note also that newer media types have been requested, respectively application/vnd.shp, /vnd.shx, and /vnd.dbf (see below).</p>
     <p>See the following for more information:</p>
