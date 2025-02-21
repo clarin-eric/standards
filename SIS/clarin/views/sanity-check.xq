@@ -78,6 +78,12 @@ return
                             {$missingFormats}
                         </ul>
                     </div>
+                    
+                    <p> The list below presents the centres with the greatest number of references to non-existent formats:</p>
+                    <div>
+                        <ul>{fm:list-centre-with-missing-formats()}</ul>
+                    </div>
+                    
                 </div>
                 <div id="unreferenced">
                     <h2>Existing format descriptions not referenced by any recommendation ({fm:count-orphan-format-ids()}): </h2>
