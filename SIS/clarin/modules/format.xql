@@ -112,38 +112,73 @@ declare function fm:list-orphan-format-ids(){
         <li><a href="{app:link(concat("views/view-format.xq?id=",$id))}">{data($id)}</a></li> 
 };
 
+declare function fm:get-missing-format-ids(){
+    let $format-ids := fn:distinct-values($recommendation:centres/formats/format/@id)
+    for $id in $format-ids
+        return
+               if (format:get-format($id)) then ()
+               else ($id)
+};
+
 declare function fm:count-missing-format-ids(){
-    let $format-ids := data(fm:list-missing-format-ids())
+    let $format-ids := fm:get-missing-format-ids()
     return count($format-ids)
 };
 
-declare function fm:list-missing-format-ids(){
-    let $format-ids := fn:distinct-values($recommendation:centres/formats/format/@id)
-    for $id in $format-ids
-    order by lower-case($id)
-    return
-        if (format:get-format($id)) then ()
-        else(fm:print-missing-format($id)) 
-            (:<li><a href="{app:getGithubIssueLink($id)}">{$id}</a></li>:) 
+declare function fm:list-missing-format-ids($sortBy){
+    let $missingFormatIds := fm:get-missing-format-ids()
+    let $isAscending := if ($sortBy eq "id") then fn:true() else fn:false()
+
+    let $results := 
+    for $id in $missingFormatIds
+        let $recommendations := recommendation:get-recommendations-for-format($id)
+        let $numOfRecommendations := count($recommendations)
+        let $sortBy := if ($sortBy eq "id") then $id else $numOfRecommendations 
+        order by $sortBy
+        descending
+        return 
+            <li>
+                <span class="pointer" onclick="showHide('{$id}','block')"> 
+                    {fn:substring($id, 2)} ({$numOfRecommendations}) </span>
+                {rf:print-missing-format-link($id)}
+                {app:create-copy-button($id,$id,"Copy ID to clipboard","Format ID copied")}
+                <ul id="{$id}" style="display:none; padding-left:15px;">
+                    {for $r in $recommendations
+                        let $centre-id := data($r/header/centre/@id)
+                        order by lower-case($centre-id)
+                        return
+                        <li><a href="{app:link(concat("views/view-centre.xq?id=", $centre-id))}">{$centre-id}</a></li>
+                    }
+                </ul> 
+            </li>
+      
+      return
+      if ($isAscending) then fn:reverse($results) else $results
 };
 
-declare function fm:print-missing-format($id as xs:string){
-    let $recommendations := recommendation:get-recommendations-for-format($id)
-    return 
-        <li>
-            <span class="pointer" onclick="showHide('{$id}','block')"> 
-                {fn:substring($id, 2)} ({count($recommendations)}) </span>
-            {rf:print-missing-format-link($id)}
-            {app:create-copy-button($id,$id,"Copy ID to clipboard","Format ID copied")}
-            <ul id="{$id}" style="display:none; padding-left:15px;">
-                {for $r in $recommendations
-                    let $centre-id := data($r/header/centre/@id)
-                    return
-                    <li><a href="{app:link(concat("views/view-centre.xq?id=", $centre-id))}">{$centre-id}</a></li>
-                }
-            </ul> 
-        </li>
-        
+
+
+declare function fm:list-centre-with-missing-formats(){
+    let $missingFormatIds := fm:get-missing-format-ids()
+    
+    let $centres := 
+        for $r in $recommendation:centres
+        let $format-ids := $r/formats/format/@id
+        let $actualMissingFormatIds :=
+            for $id in $format-ids
+            return
+                if (contains($missingFormatIds,$id)) then $id else ()
+        let $numOfMissingFormats := count($actualMissingFormatIds)
+        let $centre-id := data($r/header/centre/@id)
+        order by $numOfMissingFormats
+        descending
+        return 
+        if ($numOfMissingFormats = 0 ) then () 
+        else <li><a href="{app:link(concat("views/view-centre.xq?id=", $centre-id))}">{$centre-id}</a> 
+            ({$numOfMissingFormats})</li>
+    
+    for $c in $centres[position()]
+    return $c
 };
 
 (:@Deprecated:)

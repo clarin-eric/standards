@@ -15,9 +15,15 @@ declare option output:html-version "5";
     @author margaretha
 :)
 
+let $sortBy := request:get-parameter('sortBy', '')
+
 let $recommendations-strange-domains := sc:get-recommendations-with-missing-or-unknown-domains()
 let $recommendations-strange-levels := sc:get-recommendations-with-missing-or-unknown-levels()
 let $similar-recommendations := sc:get-similar-recommendations()
+
+let $missingFormats := fm:list-missing-format-ids($sortBy)
+let $numOfMissingFormats :=  count($missingFormats)
+    
 return
 
 <html lang="en">
@@ -50,18 +56,34 @@ return
                 </div>
                 
                 <div id="missing">
-                    <h2>List of missing format descriptions ({fm:count-missing-format-ids()}): </h2>
+                    <h2>List of missing format descriptions ({$numOfMissingFormats}): </h2>
                     <p>The formats listed below are referenced by recommendations, but not yet described <a href="{app:link("views/list-formats.xq")}">inside the SIS</a>. 
                     Clicking on a format name below opens a list of centres whose recommendations reference that format. The number of such centres is shown in brackets. 
                     Clicking on the ⊕ character opens a pre-configured GitHub issue where you can suggest the content of the format description. Clicking on the 
                     <img src="{app:resource("copy.png","image")}" width="12" /> symbol copies the format ID, e.g. to be used in editing format recommendations.</p>
                     <p>The list is also part of the sanity checking functionality: it may happen that some recommendation has a typo in the format ID, and then it 
                     will show up here.</p>
+                    
+                    <p> 
+                        <form id ="missing-form" action="{app:link("views/sanity-check.xq?#missing-form")}">
+                            <button name="sortBy" class="button" style="margin-right:15px;height:30px;width:200px;" 
+                                type="submit" value= "id">Sort by Format Ids </button>
+                            <button name="sortBy" class="button" style="margin:0;height:30px;width:300px;" 
+                                type="submit" value= "recommendation">Sort by Number of Recommendations</button>
+                         </form>
+                    </p>
+                    
                     <div style="column-count: 3;">
                         <ul style="margin: 0; padding-left:15px;">
-                            {fm:list-missing-format-ids()}
+                            {$missingFormats}
                         </ul>
                     </div>
+                    
+                    <p> The list below presents the centres with the greatest number of references to non-existent formats:</p>
+                    <div style="column-count: 3;">
+                        <ul style="margin: 0; padding-left:15px;">{fm:list-centre-with-missing-formats()}</ul>
+                    </div>
+                    
                 </div>
                 <div id="unreferenced">
                     <h2>Existing format descriptions not referenced by any recommendation ({fm:count-orphan-format-ids()}): </h2>
