@@ -172,9 +172,12 @@ declare function fm:list-centre-with-missing-formats(){
         let $centre-id := data($r/header/centre/@id)
         order by $numOfMissingFormats
         descending
-        return <li><a href="{app:link(concat("views/view-centre.xq?id=", $centre-id))}">{$centre-id}</a> ({$numOfMissingFormats})</li>
+        return 
+        if ($numOfMissingFormats = 0 ) then () 
+        else <li><a href="{app:link(concat("views/view-centre.xq?id=", $centre-id))}">{$centre-id}</a> 
+            ({$numOfMissingFormats})</li>
     
-    for $c in $centres[position() lt 8]
+    for $c in $centres[position()]
     return $c
 };
 

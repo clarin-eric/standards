@@ -80,8 +80,8 @@ return
                     </div>
                     
                     <p> The list below presents the centres with the greatest number of references to non-existent formats:</p>
-                    <div>
-                        <ul>{fm:list-centre-with-missing-formats()}</ul>
+                    <div style="column-count: 3;">
+                        <ul style="margin: 0; padding-left:15px;">{fm:list-centre-with-missing-formats()}</ul>
                     </div>
                     
                 </div>
