@@ -23,6 +23,7 @@ let $similar-recommendations := sc:get-similar-recommendations()
 
 let $missingFormats := fm:list-missing-format-ids($sortBy)
 let $numOfMissingFormats :=  count($missingFormats)
+let $centresWithMissingFormats := fm:list-centre-with-missing-formats()
     
 return
 
@@ -79,9 +80,12 @@ return
                         </ul>
                     </div>
                     
-                    <p> The list below presents the centres with the greatest number of references to non-existent formats:</p>
+                    <h2>List of centres with missing format descriptions ({count($centresWithMissingFormats)}): </h2>
+                    
+                    <p> Below is a list of centres with references to non-existent formats. The number of missing formats is shown in parantheses. 
+                        The list is sorted in descending order, starting with the centres having the greatest number of missing formats.</p>
                     <div style="column-count: 3;">
-                        <ul style="margin: 0; padding-left:15px;">{fm:list-centre-with-missing-formats()}</ul>
+                        <ul style="margin: 0; padding-left:15px;">{$centresWithMissingFormats}</ul>
                     </div>
                     
                 </div>
