@@ -20,7 +20,7 @@ return
 <html lang="en">
     <head>
         <title>Format Families</title>
-        <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+        <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script>
             var graphJson = '{ff:create-graph-json()}';

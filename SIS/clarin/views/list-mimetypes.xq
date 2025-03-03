@@ -18,7 +18,7 @@ declare option output:html-version "5";
 <html lang="en">
     <head>
         <title>Media Types</title>
-        <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+        <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>

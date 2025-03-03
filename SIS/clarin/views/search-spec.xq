@@ -32,7 +32,7 @@ else
 return
     <html>
         <head>
-            <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+            <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
             <title>Search Standards</title>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("session.js", "js")}"/>"/>

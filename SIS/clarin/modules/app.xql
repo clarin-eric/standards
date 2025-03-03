@@ -50,6 +50,10 @@ declare function app:link($path as xs:string) {
     fn:resolve-uri($path, $app:base)
 };
 
+declare function app:favicon(){
+    app:resource("medal-sis.png", "image")
+};
+
 (: Resolve a resource location :)
 declare function app:resource($filename as xs:string, $type as xs:string) {
     let $path := "../resources/"
