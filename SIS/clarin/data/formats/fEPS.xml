@@ -1,0 +1,18 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fEPS" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Encapsulated PostScript (EPS)</title>
+    <abbr>EPS</abbr>
+  </titleStmt>
+  <keyword>vector graphics</keyword>
+  <keyword>image data</keyword>
+  <keyword>interoperability</keyword>
+   <info type="description">
+   <p>
+   Encapsulated PostScript (EPS) file is a PostScript program, saved as a single file that includes a low-resolution preview "encapsulated" within it, allowing some programs to display a preview on the screen.</p>
+    <p>See:
+      <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000246.shtml"> description at the Digital Formats web site by the Library of Congress</a>.</p>
+  </info>
+  <mimeType>application/postscript</mimeType>
+  <fileExt>.eps</fileExt>
+</format>
