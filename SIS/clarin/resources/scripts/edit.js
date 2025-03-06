@@ -572,6 +572,7 @@ function createRelation(result,newpath,specid,addpath){
     ul = document.getElementById('vrel'+vid+'ul')    
     ul.appendChild(li)
     e = createEditRel(result,newpath,specid,addpath)
+    e.innerHTML = escapeHtml(e.innerHTML);
     ul.appendChild(e)
 }
 
