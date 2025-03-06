@@ -663,8 +663,8 @@ function writeRelResponse(result,path,frame,errorpath){
         else if (r==3) {
             r = result[3].split("++")
             a = document.getElementById(path+'link')
-            a.href = r[0]
-            a.innerHTML=r[1]
+            a.href = escapeHtml(r[0])
+            a.innerHTML=escapeHtml(r[1])
             
             document.getElementById(path+'pid').innerHTML = result[1]
             document.getElementById(frame).style.display = 'none';
