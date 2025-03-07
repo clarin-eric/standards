@@ -1,0 +1,19 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMLeap" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>MLeap Bundle File Format</title>
+    <abbr>MLeap</abbr>
+  </titleStmt>
+  <keyword>ML deployment</keyword>
+  <keyword>model serialization</keyword>
+  <keyword>pipeline serialization</keyword>
+   <info type="description">
+   <p>
+    MLeap is a library designed to serialize and deserialize machine learning pipelines and models, facilitating their deployment across various platforms.</p>
+    <p>See:
+      <a href="https://combust.github.io/mleap-docs/"> for a detailed description</a>.</p>
+  </info>
+  <fileExt>.zip</fileExt>
+  <fileExt>.json</fileExt>
+  <fileExt>.pb</fileExt>
+</format>

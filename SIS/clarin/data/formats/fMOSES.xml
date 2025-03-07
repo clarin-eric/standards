@@ -1,0 +1,18 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMOSES " xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Moses Statistical Machine Translation (SMT) File Formats</title>
+    <abbr>MOSES</abbr>
+  </titleStmt>
+  <keyword>statistical machine translation</keyword>
+  <keyword>SMT</keyword>
+  <keyword>language model</keyword>
+  <keyword>parallel corpus</keyword>
+   <info type="description">
+   <p>
+    Moses is an open-source statistical machine translation system that facilitates the training of translation models from parallel corpora, enabling automatic translation between languages.</p>
+    <p>See:
+      <a href="https://www2.statmt.org/moses/"> for a detailed description</a>.</p>
+  </info>
+  <mimeType>text/plain</mimeType>
+</format>
