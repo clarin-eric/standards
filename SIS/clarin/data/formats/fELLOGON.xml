@@ -1,0 +1,17 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fELLOGON" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>ELLOGON Data Model</title>
+    <abbr>ELLOGON</abbr>
+  </titleStmt>
+  <keyword>collection</keyword>
+  <keyword>documents</keyword>
+  <keyword>annotations</keyword>
+   <info type="description">
+    <p>See:
+      <a href="https://www.ellogon.org/index.php/what-is-ellogon?showall=&start=2"> description of ELLOGON architecture</a>.</p>
+  </info>
+  <mimeType>application/xml</mimeType>
+  <fileExt recommended="yes">.xml</fileExt>
+  <fileExt>.ann</fileExt>
+</format>

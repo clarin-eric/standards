@@ -1,0 +1,16 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fARPA" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>ARPA Language models</title>
+    <abbr>ARPA</abbr>
+  </titleStmt>
+  <keyword>statistical language models</keyword>
+  <keyword>N-gram models</keyword>
+  <keyword>interoperability</keyword>
+   <info type="description">
+    <p>See:
+      <a href="https://cmusphinx.github.io/wiki/arpaformat/"> description of ARPA language models</a>.</p>
+  </info>
+  <mimeType>text/plain</mimeType>
+  <fileExt>.arpa</fileExt>
+</format>
