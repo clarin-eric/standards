@@ -18,7 +18,7 @@ declare option output:html-version "5";
 <html lang="en">
     <head>
         <title>CLARIN Standards Information System</title>
-        <link rel="icon" type="image/x-icon" href="resources/images/SIS-favicon.svg"/>        
+        <link rel="icon" type="image/x-icon" href="resources/images/medal-sis.png"/>        
         <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>    
         <link rel="stylesheet" type="text/css" href="resources/css/tagclouds.css"/>
         <script>

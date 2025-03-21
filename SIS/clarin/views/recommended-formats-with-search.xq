@@ -48,7 +48,7 @@ return
     <html lang="en">
         <head>
             <title>Format Recommendations</title>
-            <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+            <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("autocomplete.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
