@@ -138,7 +138,7 @@
             <domain>Text Annotation</domain>
             <level>acceptable</level>
         </format>
-        <format id="fTeiHeader">
+        <format id="fTEIHeader">
             <domain>Metadata</domain>
             <level>recommended</level>
         </format>
