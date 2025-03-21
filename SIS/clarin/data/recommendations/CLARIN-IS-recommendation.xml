@@ -7,10 +7,9 @@
             <centreID>CLARIN-IS</centreID>
         </filter>
         <respStmt>
-            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
-            <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-            <reviewDate>0001-01-01</reviewDate>
+            <name>Starkaður Barkarson</name>
+            <link>https://github.com/starkadur</link>
+            <reviewDate>2025-03-21</reviewDate>
         </respStmt>
         <centre id="CLARIN-IS" deposition="1">
         <centreName>CLARIN-IS (Árni Magnússon Institute for Icelandic Studies)</centreName>
