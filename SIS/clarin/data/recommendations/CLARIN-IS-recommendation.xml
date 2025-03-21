@@ -61,7 +61,7 @@
             <domain>Documentation</domain>
             <level>recommended</level>
         </format>
-        <format id="fPlainTExt">
+        <format id="fTextPlain">
             <domain>Documentation</domain>
             <level>discouraged</level>
         </format>
@@ -121,7 +121,7 @@
         </format>
       
         
-        <format id="fPlainText">
+        <format id="fTextPlain">
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
