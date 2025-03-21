@@ -22,16 +22,18 @@
     </header>
     <info><!--use p, ul, ol elements here--></info>
     <formats><!--
-            This template will assist in adjusting/creating a recommendations document if you don't
-            have access to a schema-aware XML editor. Copy the XML fragment, 
-            *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
-            *  adjust the domain (https://clarin.ids-mannheim.de/standards/views/list-domains.xq ),
-            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
-            *  repeat as necessary;
-            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
-
-       -->
-        
+        <p>This page lists the file formats which are recommended when depositing in CLARIN-IS repository.</p>
+		<h3>File Formats for Digital Preservation Policy</h3>
+		<p>To ensure access and usability of your data to the broadest audience into the long term,
+			the CLARIN-IS team has considered severl factors to to determine which file formats
+			are recommended in CLARIN-IS infrastructure: </p>
+			<ul>
+			<li>Suitability for the type of resource and/or type of processing.</li>
+			<li>Suitability for research by the designated communities.</li>
+			<li>How widespread the format is: broadly used formats, not deprecated, known to the
+				designated communities.</li>
+			<li>Use of open source rather than proprietary format.</li>			
+		</ul>        
         <format id="fMP3">
             <domain>Audiovisual Source Language Data</domain>
             <level>acceptable</level>
