@@ -239,7 +239,7 @@
 		<level>recommended</level>
 		<comment>model for linguistic annotation for RDF data</comment>
 	</format>
-	<format id="fNifTi">
+	<format id="fNifti">
 		<domain>Image Source Language Data</domain>
 		<level>acceptable</level>
 	</format>
