@@ -7,11 +7,11 @@
   <keyword>annotation</keyword>
   <keyword>NLP</keyword>
   <keyword>linked data</keyword>
+  <keyword>RDF</keyword>
    <info type="description">
-   <p>
-    The NLP Interchange Format (NIF) is a standardized RDF/OWL-based format designed to facilitate the interoperability of Natural Language Processing (NLP) tools and resources on the Semantic Web.</p>
+    <p>The NLP Interchange Format (NIF) is a standardized RDF/OWL-based format designed to facilitate the interoperability of Natural Language Processing (NLP) tools and resources on the Semantic Web.</p>
     <p>See:
-      <a href="https://persistence.uni-leipzig.org/nlp2rdf/"> for a detailed description</a>.</p>
+      <a href="https://persistence.uni-leipzig.org/nlp2rdf/">the spec</a> for a detailed description.</p>
   </info>
   <mimeType>application/ld+json</mimeType>
   <mimeType>application/rdf+xml</mimeType>

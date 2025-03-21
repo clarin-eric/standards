@@ -8,10 +8,13 @@
   <keyword>flash media</keyword>
   <keyword>flash video codec</keyword>
    <info type="description">
-   <p>
-    FLV4 refers to video content encoded using the On2 TrueMotion VP6 codec within the Flash Video (FLV) container format.</p>
-    <p>See:
-      <a href="https://www.adobe.com/devnet/f4v.html"> description at the Adobe</a>.</p>
+   <p>FLV4 refers to video content encoded using the On2 TrueMotion VP6 codec within the Flash Video (FLV) container format.</p>
+    <p>See:</p>
+<ul>
+  <li><a href="https://www.adobe.com/devnet/f4v.html"> description at Adobe</a></li>
+  <li><a href="../views/view-format.xq?id=fFLV">FLV</a></li>
+</ul>
+
   </info>
   <mimeType>video/x-flv</mimeType>
   <fileExt>.flv</fileExt>

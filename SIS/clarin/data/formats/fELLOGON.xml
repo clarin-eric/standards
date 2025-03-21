@@ -9,7 +9,7 @@
   <keyword>annotations</keyword>
    <info type="description">
     <p>See:
-      <a href="https://www.ellogon.org/index.php/what-is-ellogon?showall=&start=2"> description of ELLOGON architecture</a>.</p>
+      <a href="https://www.ellogon.org/index.php/what-is-ellogon?showall=&amp;start=2"> description of ELLOGON architecture</a>.</p>
   </info>
   <mimeType>application/xml</mimeType>
   <fileExt recommended="yes">.xml</fileExt>

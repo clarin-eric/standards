@@ -7,11 +7,12 @@
   <keyword>neuroimaging</keyword>
   <keyword>medical imaging</keyword>
   <keyword>efficient storage</keyword>
+  <extId type="Wikidata">Q29000675</extId>
    <info type="description">
    <p>
     The Neuroimaging Informatics Technology Initiative (NIfTI) file format is a widely adopted standard for storing medical imaging data, particularly in neuroimaging.</p>
     <p>See:
-      <a href="https://nifti.nimh.nih.gov/nifti-1"> for a detailed description</a>.</p>
+      <a href="https://nifti.nimh.nih.gov/nifti-1">the spec</a> for a detailed description.</p>
   </info>
   <mimeType>application/nifti</mimeType>
   <fileExt>.nii</fileExt>

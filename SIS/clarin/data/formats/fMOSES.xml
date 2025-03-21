@@ -11,8 +11,11 @@
    <info type="description">
    <p>
     Moses is an open-source statistical machine translation system that facilitates the training of translation models from parallel corpora, enabling automatic translation between languages.</p>
-    <p>See:
-      <a href="https://www2.statmt.org/moses/"> for a detailed description</a>.</p>
+     <p>See:</p>
+     <ul>
+       <li><a href="https://www2.statmt.org/moses/">Moses homepage</a></li>
+       <li><a href="https://en.wikipedia.org/wiki/Moses_(machine_translation)">Wikipedia page for the software package</a></li>
+     </ul>
   </info>
   <mimeType>text/plain</mimeType>
 </format>

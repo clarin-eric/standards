@@ -7,6 +7,7 @@
   <keyword>vector graphics</keyword>
   <keyword>image data</keyword>
   <keyword>interoperability</keyword>
+  <extId type="LOC">fdd000246</extId>
    <info type="description">
    <p>
    Encapsulated PostScript (EPS) file is a PostScript program, saved as a single file that includes a low-resolution preview "encapsulated" within it, allowing some programs to display a preview on the screen.</p>
