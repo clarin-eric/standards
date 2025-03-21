@@ -30,7 +30,7 @@
             *  repeat as necessary;
             *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
 
-       
+       -->
         
         <format id="fMP3">
             <domain>Audiovisual Source Language Data</domain>
@@ -59,7 +59,7 @@
 
         <format id="fPDF">
             <domain>Documentation</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
         <format id="fPlainTExt">
             <domain>Documentation</domain>
@@ -71,28 +71,28 @@
         </format>
         <format id="fXML">
             <domain>Documentation</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
 
         <format id="fGIF">
             <domain>Image Source Language Data</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
         <format id="fJPEG">
             <domain>Image Source Language Data</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
         <format id="fPNG">
             <domain>Image Source Language Data</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
         <format id="fSVG">
             <domain>Image Source Language Data</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
         <format id="fTIFF">
             <domain>Image Source Language Data</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
         <format id="fXML">
             <domain>Lexical Resource</domain>
@@ -100,7 +100,7 @@
         </format>
         <format id="fLMF">
             <domain>Lexical Resource</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
         <format id="fCSV">
             <domain>Lexical Resource</domain>
@@ -140,19 +140,19 @@
         </format>
         <format id="fTeiHeader">
             <domain>Metadata</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
         <format id="fCMDI">
             <domain>Metadata</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
         <format id="fZIP">
             <domain>Packaging</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
         <format id="fTAR">
             <domain>Packaging</domain>
-            <level>reccomended</level>
+            <level>recommended</level>
         </format>
     </formats>
 </recommendation>
