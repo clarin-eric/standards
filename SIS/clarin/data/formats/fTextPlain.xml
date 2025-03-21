@@ -2,7 +2,7 @@
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTextPlain" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
     <title>Plain text</title>
-    <abbr>plainText</abbr>
+    <abbr>PlainText</abbr>
   </titleStmt>
   <keyword>plain text format</keyword>
 <!-- what other keywords should we add here? -->
