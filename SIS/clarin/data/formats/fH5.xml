@@ -1,0 +1,19 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fH5" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Hierarchical Data Format version 5 (HDF5)</title>
+    <abbr>H5</abbr>
+  </titleStmt>
+  <keyword>scientific data</keyword>
+  <keyword>data storage</keyword>
+  <keyword>multidimensional data</keyword>
+   <info type="description">
+   <p>
+    The HDF5 format is designed to store large amounts of data efficiently and to enable fast access to that data.</p>
+    <p>See:
+      <a href="https://www.hdfgroup.org/solutions/hdf5/"> description provided by the HDF Group</a>.</p>
+  </info>
+  <mimeType>application/x-hdf5</mimeType>
+  <fileExt>.h5</fileExt>
+  <fileExt>.hdf5</fileExt>
+</format>
