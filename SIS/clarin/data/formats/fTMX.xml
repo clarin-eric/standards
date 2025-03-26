@@ -13,5 +13,5 @@
       <a href="https://en.wikipedia.org/wiki/Translation_Memory_eXchange">wikipedia entry</a> for an introduction and the <a href="https://www.google.com/search?q=https://www.gala-global.org/industry-standards/translation-memory-exchange-tmx">GALA Global</a> webpage.</p>
   </info>
   <mimeType>application/x-tmx+xml</mimeType>
-  <fileExt recommended="yes">.xml</fileExt>
+  <fileExt recommended="yes">.tmx</fileExt>
 </format>
