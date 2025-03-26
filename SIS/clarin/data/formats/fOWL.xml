@@ -1,0 +1,21 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fOWL" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>OWL Web Ontology Language</title>
+    <abbr>OWL</abbr>
+  </titleStmt>
+  <keyword>web ontology</keyword>
+  <keyword>reasoning</keyword>
+  <keyword>knowledge representation</keyword>
+  <keyword>RDF</keyword>
+  <info type="description">
+   <p>
+    OWL (Web Ontology Language) is a knowledge representation language designed for publishing and sharing ontologies on the World Wide Web.By providing a richer vocabulary and formal semantics compared to XML, RDF, and RDF Schema (RDF-S), OWL allows for more complex descriptions of concepts, relationships, and constraints within a domain.</p>
+    <p>See the :
+      <a href="https://www.w3.org/OWL/">W3C OWL Web Ontology Language definition</a> for an introduction and also <a href="https://www.w3.org/TR/owl-features/">OWL features</a> for a detailed overview.</p>
+  </info>
+  <mimeType>application/rdf+xml</mimeType>
+  <mimeType>application/owl+xml</mimeType>
+  <fileExt>.xml</fileExt>
+  <fileExt>.owx</fileExt>
+</format>

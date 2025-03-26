@@ -1,0 +1,20 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPMML" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Predictive Model Markup Language</title>
+    <abbr>PMML</abbr>
+  </titleStmt>
+  <keyword>interoperability</keyword>
+  <keyword>model deployment</keyword>
+  <keyword>model exchange</keyword>
+  <keyword>neural networks</keyword>
+  <keyword>machine learning</keyword>
+  <info type="description">
+   <p>
+    PMML (Predictive Model Markup Language) is an XML-based standard developed by the Data Mining Group (DMG). It's designed to represent predictive models, allowing for the easy exchange of models between different applications.</p>
+    <p>Visit:
+      <a href="https://dmg.org/pmml/pmml-v4-2-1.html">DMG PMML documentation</a> for more details.</p>
+  </info>
+  <mimeType>application/xml</mimeType>
+  <fileExt recommended="yes">.xml</fileExt>
+</format>

@@ -1,0 +1,17 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTMX" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Translation Memory eXchange</title>
+    <abbr>TMX</abbr>
+  </titleStmt>
+  <keyword>interoperability</keyword>
+  <keyword>translation</keyword>
+  <info type="description">
+   <p>
+    TMX (Translation Memory eXchange) is an XML-based standard for exchanging translation memory (TM) data between computer-aided translation (CAT) tools. The XML structure of TMX allows for the storage of rich translation data, including source and target segments, metadata, and formatting information.</p>
+    <p>Visit:
+      <a href="https://en.wikipedia.org/wiki/Translation_Memory_eXchange">wikipedia entry</a> for an introduction and the <a href="https://www.google.com/search?q=https://www.gala-global.org/industry-standards/translation-memory-exchange-tmx">GALA Global</a> webpage.</p>
+  </info>
+  <mimeType>application/x-tmx+xml</mimeType>
+  <fileExt recommended="yes">.xml</fileExt>
+</format>
