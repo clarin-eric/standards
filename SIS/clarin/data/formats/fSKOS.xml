@@ -1,0 +1,19 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSKOS" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Simple Knowledge Organization System (SKOS)</title>
+    <abbr>SKOS</abbr>
+  </titleStmt>
+  <keyword>thesaurus</keyword>
+  <keyword>taxonomy</keyword>
+  <keyword>ontology</keyword>
+  <keyword>controlled vocabulary</keyword>
+  <info type="description">
+   <p>
+    SKOS (Simple Knowledge Organization System) is a W3C standard for representing knowledge organization systems (KOS) such as thesauri, classification schemes, subject heading lists, taxonomies, and other similar types of controlled vocabularies. SKOS is built on RDF (Resource Description Framework), making it interoperable with other Semantic Web technologies.</p>
+    <p>Visit:
+      <a href="https://www.w3.org/2004/02/skos/">wikipedia link</a> for more details or the <a href="https://www.w3.org/TR/skos-reference/">SKOS Simple Knowledge Organization System Reference</a></p>
+  </info>
+  <mimeType>application/rdf+xml</mimeType>
+  <fileExt>.xml</fileExt>
+</format>

@@ -1,0 +1,18 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPICT" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Macintosh Pict (PCT) files</title>
+    <abbr>PICT</abbr>
+  </titleStmt>
+  <keyword>vector graphics</keyword>
+  <keyword>bitmap graphics</keyword>
+  <keyword>image format</keyword>
+  <keyword>metafile</keyword>
+   <info type="description">
+    <p>See:
+      <a href="https://en.wikipedia.org/wiki/PICT">Wikipedia</a> page and <a href="https://www.leadtools.com/help/sdk/vector/api/macintosh-pict-format-pct.html">Macintosh Pict Format description</a>.</p>
+  </info>
+  <mimeType>image/x-pict</mimeType>
+  <fileExt>.pict</fileExt>
+  <fileExt>.pct</fileExt>
+</format>

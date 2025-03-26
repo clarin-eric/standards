@@ -1,0 +1,19 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPkl" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Python object serialization (Pickle)</title>
+    <abbr>Pkl</abbr>
+  </titleStmt>
+  <keyword>serialization</keyword>
+  <keyword>deserialization</keyword>
+  <keyword>python objects</keyword>
+  <keyword>byte stream</keyword>
+  <info type="description">
+   <p>
+    Pickle is a Python-specific serialization format. It allows you to convert Python objects (like lists, dictionaries, classes, etc.) into a byte stream, which can then be stored in a file or transmitted over a network.In the context of Machine Learning (ML), Pickle files are commonly used for serializing and storing trained models and intermediate data.</p>
+    <p>Visit:
+      <a href="https://docs.python.org/3/library/pickle.html">python documentation</a> for an introduction and the <a href="https://scikit-learn.org/stable/model_persistence.html">summary of model persistence methods</a> on different ways to persist python models.</p>
+  </info>
+  <mimeType>application/octet-stream</mimeType>
+  <fileExt recommended="yes">.pkl</fileExt>
+</format>
