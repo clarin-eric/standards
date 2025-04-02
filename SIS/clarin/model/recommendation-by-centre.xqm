@@ -9,7 +9,8 @@ module namespace recommendation="http://clarin.ids-mannheim.de/standards/recomme
 declare variable $recommendation:centres := collection('/db/apps/clarin/data/recommendations')/recommendation;
 
 declare variable $recommendation:format-ids := data($recommendation:centres/formats/format/@id);
-declare variable $recommendation:format-abbrs := for $id in $recommendation:format-ids return fn:substring($id,2);
+declare variable $recommendation:format-abbrs := 
+    for $id in $recommendation:format-ids return fn:substring($id,2);
 
 
 (:
@@ -23,7 +24,7 @@ declare function recommendation:get-recommendations-for-centre($id){
     return doc($path)/recommendation
 };
 
-declare function recommendation:get-recommendations-for-format($format-id){
+declare function recommendation:get-centres-for-format($format-id){
     $recommendation:centres[formats/format/@id=$format-id]
 };
 

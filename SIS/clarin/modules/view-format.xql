@@ -127,8 +127,10 @@ declare function vfm:print-recommendation-in-clarin($format,$format-id){
        else ()
 };:)
 
-declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendationType,$sortBy,$language){
-    let $recommendations := recommendation:get-recommendations-for-format($id)
+declare function vfm:print-recommendation-table($id,$domain,$centre,$recommendationType,
+    $sortBy,$language){
+    
+    let $recommendations := recommendation:get-centres-for-format($id)
     return
     if ($recommendations)
     then(

@@ -69,16 +69,15 @@ declare function fm:list-formats($keyword,$searchItem) {
         (:let $format-snippet := $format/info[@type="description"]/p[1]/text():)
         let $mime-types := $format/mimeType
         let $file-exts := $format/fileExt
-      (:  let $link := app:link(concat("views/view-format.xq?id=", $format-id))
-            order by fn:lower-case($format-abbr)
-        let $link-title := concat($format-abbr, " (",$format-name,")"):)
+        let $recommendations := recommendation:get-centres-for-format($format-id)
+        let $numOfRecommendations := count($recommendations)
         order by fn:lower-case($format-abbr)
     return
         <tr>
             <td class="row" style="vertical-align:top">
-                <span class="list-text">{fm:create-format-link($format-id,$format-abbr,$format-name)}
-                <!--<a href="{$link}">{$link-title}</a>-->
+                <span class="list-text">{fm:create-format-link($format-id,$format-abbr,$format-name)}                
                 </span>
+                ({$numOfRecommendations})
                 {app:create-copy-button($format-id,$format-id,"Copy ID to clipboard","Format ID copied")}
             </td>
             <td class="row">
@@ -131,7 +130,7 @@ declare function fm:list-missing-format-ids($sortBy){
 
     let $results := 
     for $id in $missingFormatIds
-        let $recommendations := recommendation:get-recommendations-for-format($id)
+        let $recommendations := recommendation:get-centres-for-format($id)
         let $numOfRecommendations := count($recommendations)
         let $sortBy := if ($sortBy eq "id") then $id else $numOfRecommendations 
         order by $sortBy
