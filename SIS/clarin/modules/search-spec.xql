@@ -10,7 +10,7 @@ import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "..
 import module namespace tm ="http://clarin.ids-mannheim.de/standards/topic-module" at "../modules/topic.xql";
 import module namespace sbm="http://clarin.ids-mannheim.de/standards/sb-module" at "../modules/sb.xql";
 
-import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+import module namespace functx = "http://www.functx.com";
 
 (: Define functions for searching standards 
    @author margaretha

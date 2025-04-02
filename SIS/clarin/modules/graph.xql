@@ -4,7 +4,7 @@ module namespace graph="http://clarin.ids-mannheim.de/standards/graph";
 import module namespace data="http://clarin.ids-mannheim.de/standards/data" at "../model/data.xqm";
 import module namespace spec="http://clarin.ids-mannheim.de/standards/specification" at "../model/spec.xqm";
 import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "app.xql";
-import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+import module namespace functx = "http://www.functx.com" ;
 
 (: Functions for relation graphs
    @author margaretha

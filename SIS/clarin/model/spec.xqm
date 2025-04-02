@@ -3,7 +3,7 @@ xquery version "3.0";
 module namespace spec="http://clarin.ids-mannheim.de/standards/specification";
 
 import module namespace data = "http://clarin.ids-mannheim.de/standards/data" at "data.xqm";
-import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+import module namespace functx = "http://www.functx.com" ;
 
 (: Define methods to access the standard data or store new standard data
    @author margaretha
@@ -104,31 +104,35 @@ declare function spec:get-clarin-approval($spec){
     $spec/descendant-or-self::version[@CLARINapproved='yes']
 };
 
-(: Update a node in a standard :)
+(: DEPRECATED :)
+(: Update a node in a standard 
 declare function spec:update-spec($node,$val){
     let $login := data:open-access-to-database()   
     let $up := update replace $node with $val
     let $login := data:close-access-to-database()
     return $val
-};
+};:)
 
-(: Remove a node in a standard :)
+(: DEPRECATED :)
+(: Remove a node in a standard 
 declare function spec:remove-element($node){
     let $login := data:open-access-to-database()
     let $up := update delete $node
     let $login := data:close-access-to-database()
     return ''
-};
+};:)
 
-(: Add a node in a standard :)
+(: DEPRECATED :)
+(: Add a node in a standard 
 declare function spec:add-into-node($node,$val){
     let $login := data:open-access-to-database()
     let $store := update insert $val into $node            
     let $login := data:close-access-to-database()
     return $val    
-};
+};:)
 
-(: Add a version name to a version standard :)
+(: DEPRECATED :)
+(: Add a version name to a version standard 
 declare function spec:add-version-name($spec,$val,$parentid){
     let $node := $spec//*[@id=$parentid]/titleStmt
     let $login := data:open-access-to-database()    
@@ -138,9 +142,10 @@ declare function spec:add-version-name($spec,$val,$parentid){
         else update insert <title>{$val}</title> into $node
     let $login := data:close-access-to-database()
     return $val
-};
+};:)
 
-(: Add a version abbreviation to a version standard :)
+(: DEPRECATED :)
+(: Add a version abbreviation to a version standard 
 declare function spec:add-version-abbr($spec,$val,$parentid){    
     let $node := $spec//*[@id=$parentid]/titleStmt
     let $login := data:open-access-to-database()    
@@ -152,9 +157,10 @@ declare function spec:add-version-abbr($spec,$val,$parentid){
         else update insert <abbr>{$val}</abbr> into $node
     let $login := data:close-access-to-database()
     return $val
-};
+};:)
 
-(: Add a version date to a version standard :)
+(: DEPRECATED :)
+(: Add a version date to a version standard :
 declare function spec:add-version-date($spec,$val,$parentid){
     let $node := $spec//*[@id=$parentid]
     let $login := data:open-access-to-database()    
@@ -166,18 +172,20 @@ declare function spec:add-version-date($spec,$val,$parentid){
         else update insert <date>{$val}</date> into $node
     let $login := data:close-access-to-database()
     return $val
-};
+};:)
 
-(: Add an info node :)
+(: DEPRECATED :)
+(: Add an info node 
 declare function spec:add-version-info($node,$val){
     let $login := data:open-access-to-database()
     let $store := update insert $val following $node
     let $login := data:close-access-to-database()
     return $val    
 
-};
+};:)
 
-(: Store a standard part or version :)
+(: DEPRECATED :)
+(: Store a standard part or version 
 declare function spec:store($prefix,$node,$spec){
     let $login := data:open-access-to-database()
     let $c := count($spec/info)
@@ -194,17 +202,19 @@ declare function spec:store($prefix,$node,$spec){
         else()
     let $login := data:close-access-to-database()
     return ""
-};
+};:)
 
-(: Store a new standard :)
+(: DEPRECATED :)
+(: Store a new standard 
 declare function spec:store-new-spec($file,$spec,$path){
     let $login := data:open-access-to-database()
     let $store := xmldb:store($path,$file,$spec) 
     let $login := data:close-access-to-database()
     return ""
-};
+};) :)
 
-(: Store standard documents and create reference links to them :)
+(: DEPRECATED :)
+(: Store standard documents and create reference links to them 
 declare function spec:store-asset($refs){        
     let $login := data:open-access-to-doc()
     let $asset :=
@@ -219,9 +229,10 @@ declare function spec:store-asset($refs){
         
     let $login := data:close-access-to-doc()
     return $asset
-};
+}; :)
 
-(: Store standard keywords :)
+(: DEPRECATED :)
+(: Store standard keywords 
 declare function spec:store-keywords($spec,$keywords){
     let $kw := 
         for $k in $keywords
@@ -232,9 +243,10 @@ declare function spec:store-keywords($spec,$keywords){
     let $up := update insert $kw following $spec/scope
     let $login := data:close-access-to-database()  
     return ''
-};
+}; :)
 
-(: Store version features :)
+(: DEPRECATED :)
+(: Store version features 
 declare function spec:store-version-features($spec,$version-id,$node,$v){
     let $login := data:open-access-to-database()    
     let $n := 
@@ -246,8 +258,9 @@ declare function spec:store-version-features($spec,$version-id,$node,$v){
         
     let $login := data:close-access-to-database()
     return ""
-};
+}; :)
 
+(: DEPRECATED 
 declare function spec:store-version-number($version,$version-id,$type,$val){
     let $node := 
         if ($type="minor" and $version/versionNumber)
@@ -257,8 +270,9 @@ declare function spec:store-version-number($version,$version-id,$type,$val){
     let $up := update insert <versionNumber type="{$type}">{$val}</versionNumber> following $node
     let $login := data:close-access-to-database()
     return ""
-};
+}; :)
 
+(: DEPRECATED 
 declare function spec:store-version-relation($spec,$version-id,$target,$new-relation){
     let $login := data:open-access-to-database()
     let $node := $spec/descendant-or-self::*[@id=$version-id]/relation[@target=$target]
@@ -271,6 +285,7 @@ declare function spec:store-version-relation($spec,$version-id,$target,$new-rela
     let $login := data:close-access-to-database()
     return ""
 };
+
 
 declare function spec:store-version-status($spec,$val,$parentid){    
     let $node := $spec//*[@id=$parentid]/@status
@@ -299,6 +314,6 @@ declare function spec:store-version-url($spec,$version-id,$node,$urls,$val){
     return $val
 };
 
-
+:)
 
 

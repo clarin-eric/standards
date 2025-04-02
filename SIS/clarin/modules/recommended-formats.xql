@@ -13,7 +13,7 @@ import module namespace data = "http://clarin.ids-mannheim.de/standards/data" at
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
 
-import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+import module namespace functx = "http://www.functx.com";
 
 declare variable $rf:pageSize := 50;
 declare variable $rf:searchMap := rf:getSearchMap();
@@ -112,8 +112,10 @@ declare function rf:listSearchSuggestions() {
 };
 
 declare function rf:listSearchSuggestions($recommendations) {
+    (:let $recommendationTable :=
+    util:deep-copy(<table>{$recommendations}</table>):)
     let $recommendationTable :=
-    util:deep-copy(<table>{$recommendations}</table>)
+    <table>{$recommendations}</table>
     
     let $fids := data($recommendationTable/tr/td[1]/@id)
     let $fabbrs := $recommendationTable/tr/td[1]/a/text()

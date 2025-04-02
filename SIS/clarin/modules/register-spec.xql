@@ -5,7 +5,7 @@ import module namespace data = "http://clarin.ids-mannheim.de/standards/data" at
 import module namespace spec = "http://clarin.ids-mannheim.de/standards/specification" at "../model/spec.xqm";
 import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace asm ="http://clarin.ids-mannheim.de/standards/add-spec-module" at "add-spec.xql";
-import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+import module namespace functx = "http://www.functx.com";
 
 (: Declare functions for registering a standard 
    @author margaretha

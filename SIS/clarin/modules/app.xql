@@ -2,11 +2,12 @@ xquery version "3.1";
 
 module namespace app = "http://clarin.ids-mannheim.de/standards/app";
 import module namespace web = "https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
-import module namespace request = "http://exist-db.org/xquery/request";
+(:import module namespace request = "http://exist-db.org/xquery/request";
 
-(:declare namespace request="http://exist-db.org/xquery/request";
+declare namespace request="http://exist-db.org/xquery/request";:)
 declare namespace functx = "http://www.functx.com";
 
+(:
 declare variable $app:request-module := load-xquery-module("http://exist-db.org/xquery/request");
 declare variable $app:functx-module :=load-xquery-module("http://www.functx.com");
 :)
@@ -32,11 +33,12 @@ declare variable $app:base as xs:string := app:determine-base-uri();
 };:)
 
 declare function app:determine-base-uri() {
-    let $server-name := request:get-server-name()
+    (:let $server-name := request:get-server-name():)
+    let $server-name := request:hostname()
     return
         if ($server-name eq "localhost")
         then
-            concat("http://", $server-name, ":", request:get-server-port(), "/exist/apps/clarin/")
+            concat("http://", $server-name, ":", request:port(), "/exist/apps/clarin/")
         else
             if ($server-name eq "standards.clarin.eu")
             then

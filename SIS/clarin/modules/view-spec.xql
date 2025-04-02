@@ -13,8 +13,7 @@ import module namespace graph="http://clarin.ids-mannheim.de/standards/graph" at
 import module namespace bib="http://clarin.ids-mannheim.de/standards/bibliography" at "../modules/bib.xql";
 import module namespace vvm="http://clarin.ids-mannheim.de/standards/view-version" at "../modules/view-version.xql";
 
-import module namespace f = "http://clarin.ids-mannheim.de/standards/module/form" at "../edit/edit-form.xq";
-import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+import module namespace functx = "http://www.functx.com";
 
 (:  Define standard-relation functions
     @author margaretha

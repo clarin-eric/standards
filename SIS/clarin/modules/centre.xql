@@ -11,7 +11,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "domain.xql";
 import module namespace web = "https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
-import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+import module namespace functx = "http://www.functx.com";
 
 declare function cm:get-centre($id) {
     centre:get-centre($id)

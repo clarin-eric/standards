@@ -9,7 +9,7 @@ import module namespace spec="http://clarin.ids-mannheim.de/standards/specificat
 import module namespace sb="http://clarin.ids-mannheim.de/standards/standardbody" at "../model/sb.xqm";
 import module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema" at "../model/schema.xqm";
 
-import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+import module namespace functx = "http://www.functx.com" ;
 
 (:  Define standard-body-related functions
     @author margaretha
