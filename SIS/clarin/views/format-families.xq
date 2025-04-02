@@ -11,7 +11,7 @@ declare option output:media-type "text/html";
 declare option output:indent "yes";
 declare option output:html-version "5";
 
-let $sortBy := request:get-parameter('sortBy', '')
+let $sortBy := request:parameter('sortBy', '')
 let $code := "
 
 "

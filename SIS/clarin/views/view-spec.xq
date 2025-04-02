@@ -16,7 +16,7 @@ declare option output:html-version "5";
     @date Dec 2013
 :)
 
-let $id := request:get-parameter('id', '')
+let $id := request:parameter('id', '')
 let $spec := vsm:get-spec($id)
 let $spec-name := $spec/titleStmt/title/text()
 let $spec-abbr := $spec/titleStmt/abbr/text()
@@ -54,7 +54,7 @@ else
 <html lang="en">
     <head>
        <title>{$spec-name}</title>
-        <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
+        <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>       
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
         <link rel="stylesheet" type="text/css" href="{app:resource("tagclouds.css","css")}"/>
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dijit/themes/claro/claro.css" media="screen"/>

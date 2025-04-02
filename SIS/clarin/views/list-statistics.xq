@@ -16,7 +16,7 @@ declare option output:html-version "5";
     @author margaretha
 :)
 
-let $domainSortBy :=  request:get-parameter('domainSortBy', '')
+let $domainSortBy :=  request:parameter('domainSortBy', '')
 return
 
 <html lang="en">

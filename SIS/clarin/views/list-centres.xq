@@ -11,9 +11,9 @@ declare option output:media-type "text/html";
 declare option output:indent "yes";
 declare option output:html-version "5";
 
-let $reset := request:get-parameter('reset', '')
-let $status := if ($reset) then () else request:get-parameter('status', '')
-let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
+let $reset := request:parameter('reset', '')
+let $status := if ($reset) then () else request:parameter('status', '')
+let $sortBy := if ($reset) then () else request:parameter('sortBy', '')
 let $riCookie :=  request:get-cookie-value("ri")
 
 return

@@ -16,7 +16,7 @@ if ($exist:path eq '/') then
         <forward url="index.xq"/>                
     </dispatch>    
 
-else if (request:get-parameter('_query', '')) then
+else if (request:parameter('_query', '')) then
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <redirect url="{$app:base}"/>                
     </dispatch> 

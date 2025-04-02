@@ -14,11 +14,11 @@ declare option output:media-type "text/html";
 declare option output:indent "yes";
 declare option output:html-version "5";
 
-let $id := request:get-parameter('id', '')
-let $centre := request:get-parameter('centre', '')
-let $domain := request:get-parameter('domain', '')
-let $recommendationType := request:get-parameter('type', '')
-let $sortBy := request:get-parameter('sortBy', 'centre')
+let $id := request:parameter('id', '')
+let $centre := request:parameter('centre', '')
+let $domain := request:parameter('domain', '')
+let $recommendationType := request:parameter('type', '')
+let $sortBy := request:parameter('sortBy', 'centre')
 
 let $language := fn:substring(request:get-header("Accept-Language"),0,3)
 let $riCookie :=  request:get-cookie-value("ri")
@@ -36,7 +36,7 @@ return
         <html lang="en">
             <head>
                 <title>Not Found</title>
-                <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
+                <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
                 <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
             </head>
@@ -58,7 +58,7 @@ return
         <html lang="en">
             <head>
                 <title>{$format-name}</title>
-                <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
+                <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
                 <link rel="stylesheet" type="text/css" href="{app:resource("tagclouds.css", "css")}"/>
                 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dijit/themes/claro/claro.css" media="screen"/>

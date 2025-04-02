@@ -11,9 +11,9 @@ declare option output:media-type "text/html";
 declare option output:indent "yes";
 declare option output:html-version "5";
 
-let $reset := request:get-parameter('resetButton', '')
-let $keyword := if ($reset) then () else request:get-parameter('keyword', '')
-let $searchItem := if ($reset) then () else request:get-parameter('searchFormat', '')
+let $reset := request:parameter('resetButton', '')
+let $keyword := if ($reset) then () else request:parameter('keyword', '')
+let $searchItem := if ($reset) then () else request:parameter('searchFormat', '')
 
 return
 (: 

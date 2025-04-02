@@ -8,26 +8,26 @@ import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-mod
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 import module namespace em = "http://clarin.ids-mannheim.de/standards/export" at "../modules/export.xql";
 
-let $source := request:get-parameter('source', '')
-let $id := request:get-parameter('id', '')
-let $sortBy := request:get-parameter('sortBy', '')
-let $export := request:get-parameter('export', '')
-let $template := request:get-parameter('template', '')
+let $source := request:parameter('source', '')
+let $id := request:parameter('id', '')
+let $sortBy := request:parameter('sortBy', '')
+let $export := request:parameter('export', '')
+let $template := request:parameter('template', '')
 
 let $exportFilename := 
     if ($id) then concat($id,"-recommendation.xml") 
     else "format-recommendation.xml"
 
-let $searchItem := request:get-parameter('searchFormat', '')
-let $centre :=  request:get-parameter('centre', '')
+let $searchItem := request:parameter('searchFormat', '')
+let $centre :=  request:parameter('centre', '')
 let $id := if ($centre) then $centre else $id
 
-let $domainId := request:get-parameter('domain',())
-let $recommendationLevel := request:get-parameter('level', '')
+let $domainId := request:parameter('domain',())
+let $recommendationLevel := request:parameter('level', '')
 
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 
-let $request-ri := request:get-parameter('ri', '')
+let $request-ri := request:parameter('ri', '')
 let $ri :=  if ($request-ri) then $request-ri else request:get-cookie-value("ri")
 let $ri := if (empty($ri)) then "CLARIN" else $ri
 let $languageHeader := 

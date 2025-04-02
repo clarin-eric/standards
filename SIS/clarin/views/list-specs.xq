@@ -17,9 +17,9 @@ declare option output:html-version "5";
    @author margaretha
 :)
 
-let $sortBy := request:get-parameter('sortBy', '')
-let $page := request:get-parameter('page', '')
-let $letter := request:get-parameter('letter', '')
+let $sortBy := request:parameter('sortBy', '')
+let $page := request:parameter('page', '')
+let $letter := request:parameter('letter', '')
 let $spec-group := lsm:group-specs($page, $sortBy, $letter)
 let $spec-relations := $spec-group//relation
 

@@ -15,7 +15,7 @@ declare option output:html-version "5";
     @date Dec 2013
 :)
 
-let $id := request:get-parameter('id', '')
+let $id := request:parameter('id', '')
 let $topic := tm:get-topic($id)
 let $topic-name := $topic/titleStmt/title/text()
 

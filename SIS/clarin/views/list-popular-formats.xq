@@ -16,9 +16,9 @@ declare option output:html-version "5";
     @author margaretha
 :)
 
-let $reset := request:get-parameter('reset', '')
-let $threshold := if ($reset) then (1) else request:get-parameter('threshold', 1)
-let $top3 := if ($reset) then () else request:get-parameter('top3', '')
+let $reset := request:parameter('reset', '')
+let $threshold := if ($reset) then (1) else request:parameter('threshold', 1)
+let $top3 := if ($reset) then () else request:parameter('top3', '')
 return
 
 

@@ -12,17 +12,17 @@ declare option output:media-type "text/html";
 declare option output:indent "yes";
 declare option output:html-version "5";
 
-let $searchItem := request:get-parameter('searchFormat', '')
+let $searchItem := request:parameter('searchFormat', '')
 
-let $reset := request:get-parameter('resetButton', '')
-let $centre := if ($reset) then () else request:get-parameter('centre', '')
-let $domainId := if ($reset) then (()) else request:get-parameter('domain',())
-let $recommendationLevel := if ($reset) then () else request:get-parameter('level', '')
-let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
-let $page := request:get-parameter('page', 1) 
+let $reset := request:parameter('resetButton', '')
+let $centre := if ($reset) then () else request:parameter('centre', '')
+let $domainId := if ($reset) then (()) else request:parameter('domain',())
+let $recommendationLevel := if ($reset) then () else request:parameter('level', '')
+let $sortBy := if ($reset) then () else request:parameter('sortBy', '')
+let $page := request:parameter('page', 1) 
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 
-let $request-ri := request:get-parameter('ri', '')
+let $request-ri := request:parameter('ri', '')
 let $ri :=  if ($request-ri) then $request-ri else request:get-cookie-value("ri")
 let $ri := if (empty($ri)) then "CLARIN" else $ri
 let $languageHeader := 
@@ -48,7 +48,7 @@ return
     <html lang="en">
         <head>
             <title>Format Recommendations</title>
-            <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
+            <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("autocomplete.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>

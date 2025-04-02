@@ -15,7 +15,7 @@ declare option output:html-version "5";
    @date Dec 2013
 :)
 
-let $id := request:get-parameter('id', '')
+let $id := request:parameter('id', '')
 let $sb := sbm:get-sb($id)
 let $sb-title := $sb/titleStmt/title/text()
 let $specs-by-sb := sbm:get-specs-by-sb($id)

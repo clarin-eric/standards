@@ -19,9 +19,9 @@ declare option output:html-version "5";
 :)
 
 
-let $id := request:get-parameter('id', '')
-let $recommendationType := request:get-parameter('type', '')
-let $sortBy := request:get-parameter('sortBy', '')
+let $id := request:parameter('id', '')
+let $recommendationType := request:parameter('type', '')
+let $sortBy := request:parameter('sortBy', '')
 
 let $centre := cm:get-centre($id)
 let $centre-name := $centre/centreName/text()
@@ -43,7 +43,7 @@ return
     <html lang="en">
         <head>
             <title>Centre: {$id}</title>
-            <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
+            <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("d3.v2.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("forcegraph.js", "js")}"/>

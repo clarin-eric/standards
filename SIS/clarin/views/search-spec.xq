@@ -16,13 +16,13 @@ declare option output:html-version "5";
    @author margaretha
 :)
 
-let $query := request:get-parameter('query', "")
-let $topic := request:get-parameter('topic', "")
-let $sb := request:get-parameter('sb', "")
-let $status := request:get-parameter('status', "")
-let $submitted := request:get-parameter('submit', '')
-let $CLARINapproved := request:get-parameter('CLARINapproved', '')
-let $usedInCLARINCentre := request:get-parameter('usedInCLARINCentre', '')
+let $query := request:parameter('query', "")
+let $topic := request:parameter('topic', "")
+let $sb := request:parameter('sb', "")
+let $status := request:parameter('status', "")
+let $submitted := request:parameter('submit', '')
+let $CLARINapproved := request:parameter('CLARINapproved', '')
+let $usedInCLARINCentre := request:parameter('usedInCLARINCentre', '')
 let $results :=
 if ($submitted)
 then
