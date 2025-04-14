@@ -7,10 +7,10 @@
          <centreID>CLARIN.SI</centreID>
       </filter>
       <respStmt>
-         <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+         <name>Jakob Lenardič</name>
          <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-         <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-         <reviewDate>0001-01-01</reviewDate>
+         <link>https://github.com/jakoble</link>
+         <reviewDate>2025-04-14</reviewDate>
       </respStmt>
    <centre id="CLARIN.SI" deposition="1">
       <centreName>CLARIN.SI Language Technology Centre, Slovenia</centreName>
@@ -20,7 +20,12 @@
         </nodeInfo>
       </centre>
     </header>
-   <info><!--use p, ul, ol elements here--></info>
+   <info>
+		<p>This page lists the file formats which are recommended for depositing in CLARIN.SI. 
+		For additional information, see <a href="https://www.clarin.si/repository/xmlui/page/data">https://www.clarin.si/repository/xmlui/page/data</a>.</p>
+		<p>For details on the preservation policy of CLARIN.SI, 
+		see <a href="https://www.clarin.si/repository/xmlui/page/about#preservation-policy">https://www.clarin.si/repository/xmlui/page/about#preservation-policy</a>.</p>
+   </info>
    <formats>
       <format id="fEXB">
          <domain>Audiovisual Annotation</domain>
