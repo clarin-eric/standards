@@ -2,7 +2,7 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
    <header>
-      <lastUpdateCommitID>00fb8bd39cea8db57619a65f8f738364ce84dfef</lastUpdateCommitID>
+      <lastUpdateCommitID>d4ad73e931b56f907716917299724fce4466f996</lastUpdateCommitID>
       <filter>
          <centreID>CLARIN.SI</centreID>
       </filter>
