@@ -2,7 +2,7 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
    <header>
-      <lastUpdateCommitID>147cb5ea659a5752efd819898b43da23e00c6a77</lastUpdateCommitID>
+      <lastUpdateCommitID>0550124ccfb434170317de12b167bd1147ce9090</lastUpdateCommitID>
       <filter>
          <centreID>MPI-PL</centreID>
       </filter>
@@ -20,7 +20,7 @@
       </centre>
    </header>
    <info><p>The Language Archive at the Max Planck Institute for Psycholinguistics requires files to be deposited in one of the formats listed below. In addition, a number of formats for non-language-data are accepted as
-   "medium-term bit-stream preservation" formats, for which future migrations cannot be guaranteed. See <a href="https://archive.mpi.nl/tla/accepted-file-formats">https://archive.mpi.nl/tla/accepted-file-formats</a> for a complete list.</p>
+      "medium-term bit-stream preservation" formats, for which future migrations cannot be guaranteed. See <a href="https://archive.mpi.nl/tla/accepted-file-formats">https://archive.mpi.nl/tla/accepted-file-formats</a> for a complete list.</p>
    </info>
    <formats>
       <format id="fCHAT">
@@ -169,7 +169,7 @@
       </format>
       <format id="fPFSX">
          <domain>Tool Support</domain>
-         <level>Acceptable</level>
+         <level>acceptable</level>
          <comment>ELAN settings file for a specific annotation file. Not strictly necessary to
             preserve, but can be archived along with EAF for convenience.</comment>
       </format>
@@ -234,17 +234,17 @@
          <domain>Image Source Language Data</domain>
          <level>recommended</level>
       </format>
-      <format id="fToolbox Language">
+      <format id="fToolbox_Language">
          <domain>Tool Support</domain>
          <level>recommended</level>
          <comment>Toolbox language file</comment>
       </format>
-      <format id="fToolbox Lexicon">
+      <format id="fToolbox_Lexicon">
          <domain>Lexical Resource</domain>
          <level>recommended</level>
          <comment>Use UTF-8 character encoding whenever possible.</comment>
       </format>
-      <format id="fToolbox Sort order">
+      <format id="fToolbox_Sort_Order">
          <domain>Tool Support</domain>
          <level>recommended</level>
          <comment>Toolbox sort order file</comment>
@@ -254,7 +254,7 @@
          <level>recommended</level>
          <comment>Use UTF-8 character encoding whenever possible.</comment>
       </format>
-      <format id="fToolbox Type">
+      <format id="fToolbox_Type">
          <domain>Tool Support</domain>
          <level>recommended</level>
          <comment>Toolbox type file</comment>
