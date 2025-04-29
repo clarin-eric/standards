@@ -3,9 +3,6 @@ xquery version "3.0";
 module namespace search ="http://clarin.ids-mannheim.de/standards/search-spec";
 import module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema" at "../model/schema.xqm";
 import module namespace spec="http://clarin.ids-mannheim.de/standards/specification" at "../model/spec.xqm";
-
-import module namespace f = "http://clarin.ids-mannheim.de/standards/module/form" at "../edit/edit-form.xq";
-
 import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace tm ="http://clarin.ids-mannheim.de/standards/topic-module" at "../modules/topic.xql";
 import module namespace sbm="http://clarin.ids-mannheim.de/standards/sb-module" at "../modules/sb.xql";
@@ -64,7 +61,7 @@ declare function search:spec-by-query-and-filter($query-tokens, $topic, $sb, $st
 
 (: List status types :)
 declare function search:list-status($selectedStatus){
-    f:list-options(xsd:get-statuses(),$selectedStatus)
+    app:list-options(xsd:get-statuses(),$selectedStatus)
 };
 
 (: Search standards by topic:)

@@ -106,10 +106,7 @@ else
                      {vsm:print-topic-specs($id,$spec-topic)}
                      {vsm:print-spec-bibliography($spec/info[@type="recReading"]/biblStruct)}
                      <br/>
-                     
-                     <!-- Webadmin add part/version -->
-                     {vsm:print-add-button($id)}
-                     
+                                          
                      <!-- Standard parts and versions -->                                          
                      {vsm:print-spec-version($spec)}
                      {vsm:print-spec-part($spec)}

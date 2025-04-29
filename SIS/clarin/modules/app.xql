@@ -123,3 +123,13 @@ declare function app:footer() {
         </div>
 
 };
+
+(: Generate a list of options from the given list :)
+declare function app:list-options($list,$selected){
+    for $item in $list        
+        order by $item
+        return 
+            if ($selected=$item)
+            then <option selected= "true" value="{$selected}">{$selected}</option>
+            else <option value="{$item}"> {$item} </option>
+};
