@@ -1,0 +1,17 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fGATE" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>General Architecture for Text Engineering (GATE) File Format</title>
+    <abbr>GATE</abbr>
+  </titleStmt>
+  <keyword>annotation</keyword>
+  <keyword>text processing</keyword>
+  <keyword>NLP</keyword>
+   <info type="description">
+   <p>The General Architecture for Text Engineering (GATE) is a comprehensive framework for developing and deploying Natural Language Processing (NLP) and text mining applications.</p>
+    <p>See:
+      <a href="https://gate.ac.uk/releases/gate-6.0-beta1-build3686-ALL/doc/tao/splitch7.html">description at the official website</a>.</p>
+  </info>
+  <mimeType>text/xml</mimeType>
+  <fileExt>.xml</fileExt>
+</format>

@@ -7,17 +7,24 @@
   <keyword>storage format</keyword>
   <keyword>hierarchical format</keyword>
   <keyword>dataset format</keyword>
+  <keyword>scientific data</keyword>
+  <keyword>data storage</keyword>
+  <keyword>multidimensional data</keyword>
+
   <extId type="LOC">fdd000229</extId>
   <extId type="PRONOM">fmt/807</extId>
   <extId type="PRONOM">fmt/286</extId>
   <extId type="Wikidata">Q1069215</extId>
   <info type="description">
+    <p>The HDF5 (also: H5) format is designed to store large amounts of data efficiently and to enable fast access to that data.</p>
     <p>See the following:</p>
     <ul>
       <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000229.shtml">LoC info</a></li>
       <li><a href="https://www.hdfgroup.org/2018/06/citations-for-hdf-data-and-software/">Citations for HDF Data and Software</a></li>
+      <li><a href="https://www.hdfgroup.org/solutions/hdf5/"> description provided by the HDF Group</a></li>
     </ul>
   </info>
   <mimeType>application/x-hdf5</mimeType>
   <fileExt>.h5</fileExt>
+  <fileExt>.hdf5</fileExt>
 </format>

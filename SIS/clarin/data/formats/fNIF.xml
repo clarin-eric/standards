@@ -1,0 +1,22 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fNIF" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>NLP Interchange Format (NIF) for Linguistic Annotation of RDF Data</title>
+    <abbr>NIF</abbr>
+  </titleStmt>
+  <keyword>annotation</keyword>
+  <keyword>NLP</keyword>
+  <keyword>linked data</keyword>
+  <keyword>RDF</keyword>
+   <info type="description">
+    <p>The NLP Interchange Format (NIF) is a standardized RDF/OWL-based format designed to facilitate the interoperability of Natural Language Processing (NLP) tools and resources on the Semantic Web.</p>
+    <p>See:
+      <a href="https://persistence.uni-leipzig.org/nlp2rdf/">the spec</a> for a detailed description.</p>
+  </info>
+  <mimeType>application/ld+json</mimeType>
+  <mimeType>application/rdf+xml</mimeType>
+  <fileExt>.ttl</fileExt>
+  <fileExt>.jsonld</fileExt>
+  <fileExt>.rdf</fileExt>
+  <fileExt>.xml</fileExt>
+</format>

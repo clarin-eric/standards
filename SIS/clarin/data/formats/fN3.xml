@@ -1,0 +1,22 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fN3" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Notation3 (N3) RDF Serialization Format</title>
+    <abbr>N3</abbr>
+  </titleStmt>
+  <keyword>RDF</keyword>
+  <keyword>semantic web</keyword>
+  <keyword>data serialization</keyword>
+  <extId type="Wikidata">Q1424987</extId>
+  <info type="description">
+    <p>Notation3 (N3) is a non-XML serialization format for Resource Description Framework (RDF) data, developed by Tim Berners-Lee and the Semantic Web community. Beyond basic RDF serialization, N3 supports advanced features such as expressing logical rules and formulas, enabling more sophisticated data representations.</p>
+    <p>See:</p>
+      <ul>
+        <li><a href="https://www.w3.org/TeamSubmission/n3/">the W3C doc</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Notation3">Wikipedia</a></li>
+      </ul>
+      
+  </info>
+  <mimeType>text/n3;charset=utf-8</mimeType>
+  <fileExt>.n3</fileExt>
+</format>

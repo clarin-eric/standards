@@ -1,0 +1,19 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fHDT" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Header, Dictionary, Triples (HDT) File Format</title>
+    <abbr>HDT</abbr>
+  </titleStmt>
+  <keyword>semantic web</keyword>
+  <keyword>data compression</keyword>
+  <keyword>knowledge graphs</keyword>
+  <keyword>linked data</keyword>
+  <keyword>RDF</keyword>
+   <info type="description">
+   <p>HDT (Header, Dictionary, Triples) is a compact data structure and binary serialization format for RDF (Resource Description Framework) data.</p>
+    <p>See:
+      <a href="https://www.rdfhdt.org/hdt-binary-format/">the spec</a> for a detailed description.</p>
+  </info>
+  <mimeType>application/vnd.hdt</mimeType>
+  <fileExt>.hdt</fileExt>
+</format>

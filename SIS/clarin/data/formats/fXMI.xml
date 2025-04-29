@@ -1,0 +1,18 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fXMI" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>XML Metadata Interchange</title>
+    <abbr>XMI</abbr>
+  </titleStmt>
+  <keyword>UML</keyword>
+  <keyword>metadata</keyword>
+  <keyword>interoperability</keyword>
+  <info type="description">
+   <p>
+    XMI (XML Metadata Interchange) is an OMG (Object Management Group) standard for exchanging metadata via XML, primarily used for exchanging models described using the Unified Modeling Language (UML) and other metamodels.</p>
+    <p>Visit:
+      <a href="https://www.omg.org/spec/XMI/">XMI - ORG</a> for an introduction and the <a href="https://en.wikipedia.org/wiki/XML_Metadata_Interchange">wikipedia</a> entry for additional information.</p>
+  </info>
+  <mimeType>application/xmi+xml</mimeType>
+  <fileExt recommended="yes">.xmi</fileExt>
+</format>

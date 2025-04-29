@@ -1,0 +1,21 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fFLV4" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>On2 TrueMotion VP6 (FLV4) Video Codec</title>
+    <abbr>FLV4</abbr>
+  </titleStmt>
+  <keyword>video format</keyword>
+  <keyword>flash media</keyword>
+  <keyword>flash video codec</keyword>
+   <info type="description">
+   <p>FLV4 refers to video content encoded using the On2 TrueMotion VP6 codec within the Flash Video (FLV) container format.</p>
+    <p>See:</p>
+<ul>
+  <li><a href="https://www.adobe.com/devnet/f4v.html"> description at Adobe</a></li>
+  <li><a href="../views/view-format.xq?id=fFLV">FLV</a></li>
+</ul>
+
+  </info>
+  <mimeType>video/x-flv</mimeType>
+  <fileExt>.flv</fileExt>
+</format>

@@ -1,0 +1,22 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fYAML" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>YAML Ain't Markup Language</title>
+    <abbr>YAML</abbr>
+  </titleStmt>
+  <keyword>ML/LLM configuration</keyword>
+  <keyword>serialization</keyword>
+  <keyword>training pipelines</keyword>
+  <keyword>ML/LLM workflows</keyword>
+  <info type="description">
+   <p>
+    YAML is a human-readable data serialization language. It's designed to be easy to read and write, using indentation to define structure and is commonly used for configuration files, data exchange, and storing structured data. It supports various data types, including scalars (strings, numbers, booleans), lists, and dictionaries (mappings).</p>
+    <p>YAML is extensively used for storing configuration settings for ML/LLM models and training pipelines. This includes: model architectures, hyperparameters, preprocessing settings, hardware configurations. </p>
+    <p>Tools like TensorFlow, PyTorch, and Hugging Face Transformers often rely on YAML for configuration.</p>
+    <p>Visit:
+      <a href="https://yaml.org/">official website</a> for more details or the <a href="https://en.wikipedia.org/wiki/YAML">wikipedia entry</a>.</p>
+  </info>
+  <mimeType>application/x-yaml</mimeType>
+  <fileExt>.yaml</fileExt>
+  <fileExt recommended="yes">.yml</fileExt>
+</format>

@@ -1,0 +1,16 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fNQuads" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>N-Quads RDF Serialization Format</title>
+    <abbr>NQuads</abbr>
+  </titleStmt>
+  <keyword>RDF</keyword>
+  <keyword>semantic web</keyword>
+  <keyword>data serialization</keyword>
+  <info type="description">
+    <p>N-Quads is a plain text serialization format for Resource Description Framework (RDF) datasets, extending the N-Triples format to support multiple RDF graphs. N-Quads is particularly useful for applications that require handling multiple RDF graphs, such as data integration tasks, provenance tracking, and managing complex datasets within the Semantic Web framework.</p>
+    <p>See: <a href="https://www.w3.org/TR/n-quads/">the W3C documentation</a> for a detailed description.</p>
+  </info>
+  <mimeType>application/n-quads</mimeType>
+  <fileExt>.nq</fileExt>
+</format>
