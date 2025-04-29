@@ -84,30 +84,13 @@ declare function vsm:get-spec-json($spec){
     
 };
 
-(: Define the edit button for web-admin :)
-declare function vsm:print-edit-button($arg){
-    if (session:get-attribute("user") = 'webadmin')
-    then <button class="edit" type="button" onclick="openEditor('{$arg}');">Edit</button>    
-    else ()
-};
-
 (: Define the standard name view and its edit form :)
 declare function vsm:print-spec-name($spec){
     let $spec-name := $spec/titleStmt/title/text()
     return (
         <div class="title">
-            <span id="nametext">{$spec-name}</span>
-            {vsm:print-edit-button("editname")}         
-       </div>,
-       if (session:get-attribute("user") = 'webadmin')
-       then 
-            <div id="editname" style="display:none">                   
-                <input id="name" value="{$spec-name}" type="text" class="inputText" placeholder="Insert a standard name" style="width:450px;"/>                
-                <button type="button" class="button" 
-                  onclick="update('{$spec/@id}','name','name','editname');">Submit</button>
-                <span  id="errorname" style="display:none; color:red; font-size:13px; margin=0;">* Please insert a name.</span>
-            </div>
-       else()
+            <span id="nametext">{$spec-name}</span>     
+       </div>
    )
 };
 
@@ -123,31 +106,7 @@ declare function vsm:print-spec-abbr($spec){
             <!-- Comments for non-official abbreviations -->
             <span id="abbrinternalText" style="font-size:10px;margin-left:5px;display:{$display}">
                 [not official, only for reference in this website]</span>
-                
-            {vsm:print-edit-button("editabbr")}
-        </div>,
-        if (session:get-attribute("user") = 'webadmin')
-        then
-            <div id="editabbr" style="display:none">
-            <input id="abbr" value="{$spec-abbr}" type="text" placeholder="Insert an abbreviation" 
-                class="inputText" style="width:345px; margin-left:2px;"/>
-            <select id="abbrinternal" name="internal" class="inputSelect" style="margin-left:3px; width:100px;">
-                {if (data($spec-abbr/@internal) = 'yes')
-                 then (
-                    <option selected='selected' value="internal">internal</option>,
-                    <option value="official">official</option>
-                    )
-                 else (
-                    <option value="internal">internal</option>,
-                    <option selected='selected' value="official">official</option>
-                    ) 
-                }
-            </select>
-            <button type="button" class="button" 
-              onclick="update('{$spec/@id}','abbr','abbr','editabbr');">Submit</button>
-            <span  id="errorabbr" style="display:none; color:red; font-size:13px; margin=0;">* Please insert an abbr.</span>
-            </div>
-       else()
+        </div>
      )
 };
 
@@ -176,17 +135,8 @@ declare function vsm:print-recommendation($spec,$spec-id){
 declare function vsm:print-spec-scope($spec){
    (
    <div><span class="heading">Scope: </span><span id="scopetext">{$spec/scope/text()}</span>
-    {vsm:print-edit-button("editscope")}    
-   </div> ,
-   if (session:get-attribute("user") = 'webadmin')
-   then 
-    <div id="editscope" style="display:none">
-      <input id="scope" value="{$spec/scope/text()}" placeholder="Describe the standard purpose, e.g. Corpus annotation." type="text" 
-        class="inputText" style="width:450px;"/>
-      <button type="button" class="button" onclick="update('{$spec/@id}','scope','scope','editscope')">Submit</button>
-    </div>
-    else()
-   )      
+   </div>
+ )
 };
 
 (: Define the standard topic view and its edit form :)
@@ -198,28 +148,7 @@ declare function vsm:print-spec-topic($spec,$spec-topic){
     
         <div><span class="heading">Topic: </span>
            <span id="topictext">{tm:print-topic($spec,$spec-topic,"")}</span>   
-           {vsm:print-edit-button("edittopic")}           
-         </div>,
-         if (session:get-attribute("user") = 'webadmin')
-         then 
-              <div id="edittopic" style="display:none">           
-                  { for $i in (1 to $numtopics)
-                      return (
-                          <select id="topic{$i}" name="topic{$i}" class="inputSelect" style="margin-bottom:3px; display:inline">
-                            <option value=""/>
-                            {tm:list-topic-options($spec-topic[$i])}                            
-                        </select>,
-                        if ($i=1)
-                        then (<button type="button" id="addtopic" class="button" style="margin-bottom:3px;" 
-                                onclick="addTopic('topic',{$numtopics},{$topic-options})">Add</button>,                                    
-                              <button type="button" class="button" style="margin-bottom:3px;" 
-                                onclick="update('{$spec/@id}','topic',{$numtopics},'edittopic')">Submit</button>)
-                        else ()                                                
-                    )
-                  }
-                  <span  id="errortopic" style="display:none; color:red; font-size:13px; margin=0;">* Please select a topic.</span>
-                </div>
-           else()
+         </div>
     )
 };
 
@@ -232,19 +161,7 @@ declare function vsm:print-spec-sb($spec-sb, $spec-id){
         <div>            
              <span class="heading">Standard body: </span>
              <span id="sbtext">{sbm:print-sb-link($spec-sb)}</span>
-             {vsm:print-edit-button("editsb")}            
-         </div>,
-         if (session:get-attribute("user") = 'webadmin')
-         then 
-            <div id="editsb" style="display:none">
-                   <select id="sb" name="sb" class="inputSelect">
-                  <option value=""/>
-                    {sbm:list-sbs-options($spec-sb)}
-                  </select>
-                  <button type="button" class="button" onclick="update('{$spec-id}','sb','sb','editsb')">Submit</button>
-                  <span  id="errorsb" style="display:none; color:red; font-size:13px; margin=0;">* Please select a standard body.</span>
-            </div>
-         else()
+         </div>
 };
 
 (: Print the standard keywords and the edit form :)
@@ -253,7 +170,7 @@ declare function vsm:print-spec-keywords($keywords, $spec-id){
     let $numkeys := count($keywords)
     let $max := fn:max(($numkeys,1))
     return (
-        if (session:get-attribute("user") = 'webadmin' or $numkeys > 0)
+        if ($numkeys > 0)
          then 
          <div><span class="heading">Keywords: </span>
              <span id="keytext">
@@ -265,25 +182,8 @@ declare function vsm:print-spec-keywords($keywords, $spec-id){
                   )
                  }
              </span>
-              {vsm:print-edit-button("editkey")}              
          </div>
-         else (),
-         if (session:get-attribute("user") = 'webadmin')
-         then 
-                <div id="editkey" style="display:none">
-                    { for $i in (1 to $max)
-                          return (
-                              <input id="key{$i}" name="key{$i}" type="text" value="{$keywords[$i]}" 
-                                   class="inputText" style="width:450px; margin-bottom:3px; display:inline"/>,        	             
-                            if ($i=1)
-                            then (<button type="button" id="addkey" class="button" style="margin-bottom:3px;" 
-                                    onclick=" addElement('key','input','text',{$max})">Add</button>,
-                                  <button type="button" class="button" style="margin-bottom:3px;" 
-                                    onclick="update('{$spec-id}','key',{fn:max($max)},'editkey')">Submit</button>)
-                            else ()) 
-                    }
-                </div>
-         else()
+         else ()
      )
 };
 
@@ -339,59 +239,23 @@ declare function vsm:print-desc($id,$desc,$uri,$error){
     let $display := if ($error) then "block" else "none"
     return 
     (
-    <span id="desctext{$id}" class="desctext">{$desc}</span>,
-         if (session:get-attribute("user") = 'webadmin')
-         then <button class="edit" type="button" onclick="openEditor('editdesc{$id}');">Edit description</button>    
-         else (),
-         if (session:get-attribute("user") = 'webadmin')
-         then
-            <form method="post" action="{app:link($uri)}">
-                <table id="editdesc{$id}" style="display:{$display};">
-                    <tr>
-                        <td>
-                            <textarea name="value" class="desctext" style="width:550px; height:150px; resize: none; font-size:11px;">
-                            { for $d in $desc/* return 
-                                <p> {
-                                    for $p in $d/node() return
-                                        if (functx:node-kind($p) = "text") 
-                                        then replace($p,"&lt;","&amp;lt;")
-                                        else $p
-                                     }
-                                </p>
-                            } </textarea> 
-                        </td>
-                        <td valign="top">
-                            <button type="submit" name="submitButton" class="button">Submit</button>
-                        </td>           
-                    </tr>
-                    <tr>
-                         <td colspan="2" style="color:red">
-                            { if ($error ='')
-                              then ()                  
-                              else if ($error = 'empty')
-                              then ("Please write some description.")
-                              else $error}
-                        </td>
-                    </tr>
-                </table>
-            </form>           
-        else()
+    <span id="desctext{$id}" class="desctext">{$desc}</span>
     )
 };
 
 (: Print standard description :)
 declare function vsm:print-spec-description($desc, $spec-id){
     let $uri := concat("edit/edit-process.xq?id=", $spec-id,"&amp;vid=&amp;path=desc")
-    let $error := request:get-parameter(concat("errorDesc",$spec-id),"")        
+    let $error := request:parameter(concat("errorDesc",$spec-id),"")        
     return (<span class="heading">Description: </span>,vsm:print-desc($spec-id,$desc,$uri,$error))
 };
 
 (: Print the links to standard documents such as examples, and the upload form :)
 declare function vsm:print-spec-assets($spec-id,$ref){    
     let $numrefs := count($ref)    
-    let $d := request:get-parameter(concat("display",$spec-id),"none")
+    let $d := request:parameter(concat("display",$spec-id),"none")
     return
-        if (session:get-attribute("user") or (session:get-attribute("user") = 'webadmin' or count($ref)>0))
+        if ($numrefs>0)
         then (
             <div>
                 <span class="heading">Reference(s): </span>
@@ -401,34 +265,11 @@ declare function vsm:print-spec-assets($spec-id,$ref){
                         let $link := app:link(concat("data/doc/",$ref[$k]/@href))
                         
                      return (
-                        <span id="ref{$spec-id}text{$k}">{$comma} <a href="{$link}">{$ref[$k]/text()}</a></span>,
-                        if (session:get-attribute("user") = 'webadmin')
-                        then <button id="ref{$spec-id}text{$k}button" class="edit" style="margin:0 3px 0 3px;" type="button"  
-                             onclick="removeElement('{$spec-id}','ref{$spec-id}text{$k}','{$ref[$k]/text()}');">Remove</button>                            
-                        else ()
-                     )
+                        <span id="ref{$spec-id}text{$k}">{$comma} <a href="{$link}">{$ref[$k]/text()}</a></span>
+                      )
                     }
-                </span>
-                { if (session:get-attribute("user") = 'webadmin')
-                  then <button class="edit" style="margin-left:3px" type="button" onclick="openEditor('editref');">Upload</button>
-                  else ()
-                }
-            </div>
-            ,
-            if (session:get-attribute("user") = 'webadmin')
-            then 
-             <div id="editref" style="display:{$d}">
-                 <form enctype="multipart/form-data" method="post" 
-                     action="{xs:anyURI(concat("../edit/edit-process.xq?id=", $spec-id,"&amp;task=upload&amp;pid=",$spec-id ))}">
-                     <input id="ref{$spec-id}1" name="ref{$spec-id}1" type="file" class="inputFile" style="display:inline"/>
-                     <button type="button" id="addref" class="button" style="margin-bottom:3px;" 
-                          onclick="addElement('ref{$spec-id}','input','file',1)">Add</button>                      
-                    <button type="submit" name="submitButton" class="button" style="margin-bottom:3px;">Upload</button>
-                 </form>
-                 <span id="errorRev{$spec-id}" style="display:{$d}; 
-                    color:red; font-size:13px; margin=0;">* The upload was unsucccesful.</span>
-             </div>
-            else()
+                </span>                
+            </div>           
         )
         else()
 };
@@ -478,20 +319,6 @@ declare function vsm:print-spec-part($spec){
         </div>    
 };
 
-(: Print the add part and add version buttons for web-admin :)
-declare function vsm:print-add-button($spec-id){
-    let $part-uri := concat("views/add-spec-part.xq?id=",$spec-id)
-    let $version-uri := concat("views/add-spec-version.xq?id=",$spec-id)
-    return
-
-    if (session:get-attribute("user") = 'webadmin')
-    then <div style="margin-bottom:20px">
-            <button type="button" class="button" style="width:110px;" onclick="location.href='{app:link($part-uri)}'">Add Part</button>
-            <span style="display:inline-block; width:2px"/>
-            <button type="button" class="button" style="width:110px;" onclick="location.href='{app:link($version-uri)}'">Add Version</button>           
-         </div> 
-    else ()
-};
 
 (: Print standard versions :)
 declare function vsm:print-spec-version($spec){
