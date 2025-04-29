@@ -55,9 +55,16 @@ declare function em:export-table($ri, $centre, $domainId, $requestedLevel,
             </format>
         
     let $quote := "&#34;"
+    (:
     let $header1 := response:set-header("Content-Disposition", concat("attachment; filename=",
     $quote, $filename, $quote))
     let $header2 := response:set-header("Content-Type", "text/xml;charset=utf-8")
+    :)
+    let $header := web:response-header(
+      { 'Content-Disposition': concat("attachment; filename=",
+        $quote, $filename, $quote) },
+      { 'Content-Type': 'text/xml;charset=utf-8' }
+    )
     
     return
         <recommendation xsi:noNamespaceSchemaLocation="https://clarin.ids-mannheim.de/standards/schemas/recommendation.xsd">
@@ -80,9 +87,15 @@ declare function em:export-table($ri, $centre, $domainId, $requestedLevel,
 declare function em:download-template($centre-id,$filename){
     let $filename := fn:replace($filename,":","-")
     let $quote := "&#34;"
-    let $header1 := response:set-header("Content-Disposition", concat("attachment; filename=",
+    (:let $header1 := response:set-header("Content-Disposition", concat("attachment; filename=",
     $quote, $filename, $quote))
-    let $header2 := response:set-header("Content-Type", "text/xml;charset=utf-8")
+    let $header2 := response:set-header("Content-Type", "text/xml;charset=utf-8"):)
+    let $header := web:response-header(
+      { 'Content-Disposition': concat("attachment; filename=",
+        $quote, $filename, $quote) },
+      { 'Content-Type': 'text/xml;charset=utf-8' }
+    )
+    
     let $recommendation := recommendation:get-recommendations-for-centre($centre-id)
 
     return
