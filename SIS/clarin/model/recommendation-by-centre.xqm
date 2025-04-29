@@ -6,7 +6,7 @@ module namespace recommendation="http://clarin.ids-mannheim.de/standards/recomme
    @author margaretha
 :)
 
-declare variable $recommendation:centres := collection('/db/apps/clarin/data/recommendations')/recommendation;
+declare variable $recommendation:centres := collection('/data/recommendations')/recommendation;
 
 declare variable $recommendation:format-ids := data($recommendation:centres/formats/format/@id);
 declare variable $recommendation:format-abbrs := 
