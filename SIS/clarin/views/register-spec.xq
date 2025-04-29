@@ -16,20 +16,20 @@ declare option output:html-version "5";
    @author margaretha
 :)
 
-let $submitted := request:get-parameter('submitSpec',"")
-let $id := request:get-parameter('id', '')
-let $name := request:get-parameter('name', '')
-let $scope := request:get-parameter('scope', '')
-let $description := request:get-parameter('description', '')
-let $standard-setting-body := request:get-parameter('ssb', '')
-let $topicRef :=  request:get-parameter('topic', '')
+let $submitted := request:parameter('submitSpec',"")
+let $id := request:parameter('id', '')
+let $name := request:parameter('name', '')
+let $scope := request:parameter('scope', '')
+let $description := request:parameter('description', '')
+let $standard-setting-body := request:parameter('ssb', '')
+let $topicRef :=  request:parameter('topic', '')
 
 let $validate-id := rsm:validate-id($id)
 let $validation := rsm:validate-spec($submitted,$validate-id,$id,$name,$scope,$topicRef,
     $description,$standard-setting-body)
 
-let $abbr := request:get-parameter('abbr', '')
-let $keyword := request:get-parameter('keyword', '')
+let $abbr := request:parameter('abbr', '')
+let $keyword := request:parameter('keyword', '')
 
 return
     

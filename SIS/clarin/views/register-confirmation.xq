@@ -10,7 +10,7 @@ declare option output:media-type "text/html";
 declare option output:indent "yes";
 declare option output:html-version "5";
 
-let $id := request:get-parameter('id', '')
+let $id := request:parameter('id', '')
 let $spec := asm:get-spec($id)
 let $spec-name := $spec/titleStmt/title/text()
 

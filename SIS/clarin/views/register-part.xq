@@ -20,19 +20,19 @@ let $id := request:get-parameter('id', '')
 let $spec:= asm:get-spec($id)
 let $spec-name := asm:get-spec-name($spec)
 
-let $submitted := request:get-parameter("submitPart","")
-let $part-id := request:get-parameter("pid","")
-let $part-name := request:get-parameter("pname","")
-let $part-abbr := request:get-parameter("pabbr","")
-let $part-scope := request:get-parameter("pscope","")
-let $part-keyword := request:get-parameter("pkeyword","")
-let $part-description := request:get-parameter("pdescription","")
+let $submitted := request:parameter("submitPart","")
+let $part-id := request:parameter("pid","")
+let $part-name := request:parameter("pname","")
+let $part-abbr := request:parameter("pabbr","")
+let $part-scope := request:parameter("pscope","")
+let $part-keyword := request:parameter("pkeyword","")
+let $part-description := request:parameter("pdescription","")
 
 let $validate-id := rsm:validate-id($part-id)
 let $validation := asm:validate-part($submitted,$spec,$validate-id,$part-id,
     $part-name,$part-abbr,$part-scope,$part-keyword,$part-description)  
 
-let $submitted-part := request:get-parameter("part-title","")
+let $submitted-part := request:parameter("part-title","")
 
 return 
 

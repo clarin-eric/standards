@@ -25,10 +25,10 @@ let $id := if ($centre) then $centre else $id
 let $domainId := request:parameter('domain',())
 let $recommendationLevel := request:parameter('level', '')
 
-let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
+let $languageHeader := fn:substring(request:header("Accept-Language"),0,3)
 
 let $request-ri := request:parameter('ri', '')
-let $ri :=  if ($request-ri) then $request-ri else request:get-cookie-value("ri")
+let $ri :=  if ($request-ri) then $request-ri else request:cookie("ri")
 let $ri := if (empty($ri)) then "CLARIN" else $ri
 let $languageHeader := 
     if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader

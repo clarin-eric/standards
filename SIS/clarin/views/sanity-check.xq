@@ -15,7 +15,7 @@ declare option output:html-version "5";
     @author margaretha
 :)
 
-let $sortBy := request:get-parameter('sortBy', '')
+let $sortBy := request:parameter('sortBy', '')
 
 let $recommendations-strange-domains := sc:get-recommendations-with-missing-or-unknown-domains()
 let $recommendations-strange-levels := sc:get-recommendations-with-missing-or-unknown-levels()

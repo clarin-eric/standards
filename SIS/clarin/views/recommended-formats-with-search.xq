@@ -20,10 +20,10 @@ let $domainId := if ($reset) then (()) else request:parameter('domain',())
 let $recommendationLevel := if ($reset) then () else request:parameter('level', '')
 let $sortBy := if ($reset) then () else request:parameter('sortBy', '')
 let $page := request:parameter('page', 1) 
-let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
+let $languageHeader := fn:substring(request:header("Accept-Language"),0,3)
 
 let $request-ri := request:parameter('ri', '')
-let $ri :=  if ($request-ri) then $request-ri else request:get-cookie-value("ri")
+let $ri :=  if ($request-ri) then $request-ri else request:cookie("ri")
 let $ri := if (empty($ri)) then "CLARIN" else $ri
 let $languageHeader := 
     if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader

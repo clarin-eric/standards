@@ -31,8 +31,8 @@ let $centre-ri := $centre/nodeInfo/ri
 
 let $recommendation := cm:get-recommendations($id)
 
-let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
-let $ri :=  request:get-cookie-value("ri")
+let $languageHeader := fn:substring(request:header("Accept-Language"),0,3)
+let $ri :=  request:cookie("ri")
 let $languageHeader := if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader
 let $centre-info := cm:parseFormatRef(cm:get-centre-info($id,$languageHeader), $id)
 
