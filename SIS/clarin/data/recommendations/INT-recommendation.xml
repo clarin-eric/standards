@@ -2,7 +2,7 @@
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>bec52cd36a2996677ce07153a19ce774097f9130</lastUpdateCommitID>
+        <lastUpdateCommitID>0378aa7b9c8cd3f73e822dccf09dccf0b3a3ff01</lastUpdateCommitID>
         <filter>
             <centreID>INT</centreID>
         </filter>
@@ -284,11 +284,11 @@
             <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
-        <format id="fJSON-LD">
+        <format id="fJSONLD">
             <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
-        <format id="fJSON-LD">
+        <format id="fJSONLD">
             <domain>Text Annotation</domain>
             <level>recommended</level>
         </format>
