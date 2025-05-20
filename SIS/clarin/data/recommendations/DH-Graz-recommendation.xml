@@ -2,7 +2,7 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
    <header>
-      <lastUpdateCommitID>eab1e63c8668e2a7efca2d2ebbb9d2ba10b1d253</lastUpdateCommitID>
+      <lastUpdateCommitID>769a30e1aa1d88ca6ff632af0047b829055fbe76</lastUpdateCommitID>
       <filter>
          <centreID>DH-Graz</centreID>
       </filter>
