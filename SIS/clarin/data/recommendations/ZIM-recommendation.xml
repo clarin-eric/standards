@@ -4,7 +4,7 @@
    <header>
       <lastUpdateCommitID>769a30e1aa1d88ca6ff632af0047b829055fbe76</lastUpdateCommitID>
       <filter>
-         <centreID>ZIM</centreID>
+         <centreID>DH-Graz</centreID>
       </filter>
       <respStmt>
          <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
@@ -12,11 +12,13 @@
          <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
-      <centre id="ZIM" deposition="1">
-         <centreName>ZIM Centre for Information Modelling</centreName>
+      <centre id="DH-Graz" deposition="1">
+         <centreName>Department of Digital Humanities, Uni Graz</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/65"/>
+         <registryLink registry="DARIAH" uri="https://www.dariah.eu/tools-services/tools-services-detail-view/?id=5EIbGd"/>
          <nodeInfo>
             <ri status="B-centre">CLARIN</ri>
+            <ri status="Repository">DARIAH</ri>
          </nodeInfo>
       </centre>
     </header>
