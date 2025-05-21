@@ -349,7 +349,7 @@
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="ResearchInfrastructures">
-                    <xs:attribute name="status" use="optional" type="xs:token">
+                    <xs:attribute name="status" use="optional" type="CentreStatus">
                         <xs:annotation>
                             <xs:documentation>Status of the centre (node) in the given research
                                 infrastructure. (In CLARIN, it's e.g. "B-centre", in Text+, e.g.
@@ -367,7 +367,20 @@
             <xs:enumeration value="Text+"/>
         </xs:restriction>
     </xs:simpleType>
-    
+    <xs:simpleType name="CentreStatus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="C-centre"/>
+            <xs:enumeration value="C-centre aiming-for-B"/>
+            <xs:enumeration value="B-centre"/>
+            <xs:enumeration value="E-centre"/>
+            <xs:enumeration value="K-centre"/>
+            <xs:enumeration value="Repository"/>  <!--DARIAH-->
+            <xs:enumeration value="Collections"/>
+            <xs:enumeration value="Editions"/>
+            <xs:enumeration value="Lexical Resources"/>
+            <xs:enumeration value="Operations"/>
+        </xs:restriction>
+    </xs:simpleType>
     <xs:element name="formats">
         <xs:complexType>
             <xs:sequence>
