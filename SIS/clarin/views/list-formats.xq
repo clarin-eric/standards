@@ -88,7 +88,7 @@ return
                         <a href="{app:getGithubIssueLink()}">submitting an issue at GitHub</a>
                         containing suggested text or corrections, or by editing or adding the relevant
                         <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">format file</a> and submitting a pull request).</p>
-                    
+                    <p>The number in the brackets following the format name indicates how many recommendations target the given format. (Low numbers may be worth investigating.)</p>
                     <p>By clicking on the icon next to the format name, you can copy the format ID, which may be useful for editing or adding 
                        centre recommendations.</p>
                     
