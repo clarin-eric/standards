@@ -12,7 +12,7 @@
             <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
-        <centre id="CLARIN-LV">
+        <centre id="CLARIN-LV" deposition="1">
         <centreName>CLARIN Centre of Latvian language resources and tools</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/68"/>
         <nodeInfo>
