@@ -16,7 +16,7 @@
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/9"/>
          <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/a5f3e2cc-c2c6-4e26-bdad-63136b626b3a/"/>
          <nodeInfo>
-            <ri status="K-Centre">CLARIN</ri>
+            <ri status="K-centre">CLARIN</ri>
             <ri status="Collections">Text+</ri>
          </nodeInfo>
       </centre>
