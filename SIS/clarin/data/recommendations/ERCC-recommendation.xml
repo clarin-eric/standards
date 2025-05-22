@@ -16,7 +16,7 @@
         <centreName>Eurac Research CLARIN Centre</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/49"/>
         <nodeInfo>
-          <ri status="C-centre aiming-for-B">CLARIN</ri>
+          <ri status="C-centre_aiming-for-B">CLARIN</ri>
         </nodeInfo>
       </centre>
     </header>

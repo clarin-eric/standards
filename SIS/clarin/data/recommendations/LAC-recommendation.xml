@@ -19,7 +19,7 @@
          <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/aa27e760-680e-44a6-8753-90414da0eefe/"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
-            <ri status="Collections, Lexical Resources">Text+</ri>
+            <ri status="Collections Lexical_Resources">Text+</ri>
          </nodeInfo>
       </centre>
     </header>
@@ -113,7 +113,7 @@
       <format id="fCMDI">
          <domain>Metadata</domain>
          <level>recommended</level>
-         <comment>Profile <a href="http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_147513601619/xsd">BLAM-bundle-repository-v0.14</a>
+         <comment>Profile <a href="https://catalog.clarin.eu/ds/ComponentRegistry#/?itemId=clarin.eu%3Acr1%3Ap_1721373444016&amp;registrySpace=public">BLAM-bundle-repository_v1.0</a>
          </comment>
       </format>
       <format id="fCMDI">

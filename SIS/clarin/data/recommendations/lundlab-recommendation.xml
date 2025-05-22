@@ -16,7 +16,7 @@
             <centreName>Lund University Humanities Lab</centreName>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/42"/>
             <nodeInfo>
-                <ri status="C-centre, K-centre">CLARIN</ri>
+                <ri status="C-centre K-centre">CLARIN</ri>
             </nodeInfo>
         </centre>
     </header>

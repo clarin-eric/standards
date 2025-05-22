@@ -16,7 +16,7 @@
         <centreName>CLARIN-PL Language Technology Centre</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/25"/>
         <nodeInfo>
-          <ri status="B-centre,K-centre">CLARIN</ri>
+          <ri status="B-centre K-centre">CLARIN</ri>
         </nodeInfo>
       </centre>
     </header>

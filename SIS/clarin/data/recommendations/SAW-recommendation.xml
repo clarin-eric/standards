@@ -15,7 +15,7 @@
             <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/c7758bba-fac4-42ea-92ea-c78a35273ff9/"/>
             <nodeInfo>
                 <ri status="B-centre">CLARIN</ri>
-                <ri status="Lexical Resources, Operations">Text+</ri>
+                <ri status="Lexical_Resources Operations">Text+</ri>
             </nodeInfo>
         </centre>
     </header>
