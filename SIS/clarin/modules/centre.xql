@@ -94,7 +94,7 @@ declare function cm:print-ri($centre-ri) {
         <li>{$ri/text(), $status}</li>
 };
 
-declare function cm:get-ris($c) as xs:string {
+declare function cm:get-ris($c) {
     for $ri in $c/nodeInfo/ri
             let $status := data($ri/@status)
             return
