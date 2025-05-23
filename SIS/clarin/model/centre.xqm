@@ -17,19 +17,14 @@ declare function centre:get-centre($id as xs:string){
     $centre:centres[@id=$id]
 };
 
-declare function centre:get-statutes(){
-let $statuses := fn:distinct-values($centre:centres/nodeInfo/ri/@status)
-let $flat :=
+declare function centre:get-statutes() as xs:string+ {
+let $statuses := fn:distinct-values($centre:centres/nodeInfo/ri/@status/fn:tokenize(fn:normalize-space(.),' '))
+let $tokens :=
     for $status in $statuses
     return
-        if (fn:contains($status,","))
-        then (
-            for $s in fn:tokenize($status,",")
-            return fn:normalize-space($s)
-         )
-        else fn:normalize-space($status)
-
-return fn:distinct-values($flat)
+        fn:replace($status,'_',' ')
+    
+return $tokens
 };
 
 declare function centre:get-centre-ids-by-ri($ri as xs:string){

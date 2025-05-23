@@ -81,32 +81,34 @@ declare function cm:print-statuses($status) {
                 value="{$s}">{$s}</option>)
 };
 
+(: used by view-centre.xq :)
 declare function cm:print-ri($centre-ri) {
     for $ri in $centre-ri
     let $status :=
     if ($ri/@status ne "")
     then
-        concat(" (", data($ri/@status), ")")
+        concat(" (", fn:replace(fn:replace(fn:normalize-space(data($ri/@status)),' ',', '),'_',' '), ")")
     else
         ()
     return
         <li>{$ri/text(), $status}</li>
 };
 
-declare function cm:get-ris($c){
+declare function cm:get-ris($c) as xs:string {
     for $ri in $c/nodeInfo/ri
             let $status := data($ri/@status)
             return
                 if ($status ne "") then
-                    ($ri, concat(" (", $status, ")"), <br/>)
+                    ($ri, concat(" (", fn:replace(fn:replace(fn:normalize-space($status),' ',', '),'_',' '), ")"), <br/>)
                 else
                     ($ri, <br/>)
 };
 
-declare function cm:get-statuses($c){
-    let $combinedStatuses := fn:string-join($c/nodeInfo/ri/@status, ",")
-    let $statuses := fn:tokenize($combinedStatuses, ",")
-    return $statuses
+declare function cm:get-statuses($c) as xs:string+ {
+    let $combinedStatuses := fn:string-join($c/nodeInfo/ri/@status, " ")
+    let $statuses := fn:tokenize($combinedStatuses, " ")
+    for $st in $statuses
+        return fn:replace($st,'_',' ')
 };
 
 declare function cm:list-centre-descending($sortBy, $statusFilter, $riFilter) {
@@ -168,6 +170,7 @@ declare function cm:filter-by-status($c, $ris, $statusFilter, $riFilter){
         else
             (cm:filter-by-ri($c, $ris, $riFilter))
 };
+
 
 declare function cm:filter-by-ri($c, $ris, $riFilter) {
     if ($riFilter and not($riFilter eq 'all'))
