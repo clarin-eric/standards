@@ -13,7 +13,7 @@ declare variable $xsd:recommendation := doc('../schemas/recommendation.xsd');
 
 (:get research infrastructures:)
 declare function xsd:get-ris(){
-    $xsd:recommendation/xs:schema/xs:simpleType/xs:restriction/xs:enumeration/data(@value)
+    $xsd:recommendation/xs:schema/xs:simpleType[@name eq 'ResearchInfrastructures']/xs:restriction/xs:enumeration/data(@value)
 };
 
 (: Select relation types :)
