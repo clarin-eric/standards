@@ -15,11 +15,11 @@
         <centre id="DH-REP" deposition="1">
             <centreName>DARIAH-DE Repository</centreName>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/62"/>
-            <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/892e7ca0-cb78-41ba-aef6-d705bf499d33/"/>
+            <registryLink registry="TextPlus" uri="https://registry.text-plus.org/entity/892e7ca0-cb78-41ba-aef6-d705bf499d33/"/>
             <registryLink registry="DARIAH" uri="https://www.dariah.eu/tools-services/tools-services-detail-view/?id=hqXyOo"/>
             <nodeInfo>
                 <ri status="C-centre">CLARIN</ri>
-                <ri status="Collections">Text+</ri>
+                <ri status="Collections">TextPlus</ri>
                 <ri status="Repository">DARIAH</ri>
             </nodeInfo>
         </centre>

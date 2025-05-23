@@ -16,10 +16,10 @@
       <centre id="BBAW" deposition="1">
         <centreName>Berlin-Brandenburg Academy of Sciences and Humanities</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/6"/>
-        <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/90c00f37-a101-44b5-a29a-aa91ba1e3bb2/"/>
+        <registryLink registry="TextPlus" uri="https://registry.text-plus.org/entity/90c00f37-a101-44b5-a29a-aa91ba1e3bb2/"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>
-          <ri status="Collections Lexical_Resources Editions">Text+</ri>
+          <ri status="Collections Lexical_Resources Editions">TextPlus</ri>
         </nodeInfo>
       </centre>
    </header>

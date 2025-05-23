@@ -15,10 +15,10 @@
       <centre id="BAS" deposition="1">
         <centreName>Bayerisches Archiv für Sprachsignale</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/5"/>
-        <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/508c77d0-7856-4659-9ede-c2c7cd3fc339/"/>
+        <registryLink registry="TextPlus" uri="https://registry.text-plus.org/entity/508c77d0-7856-4659-9ede-c2c7cd3fc339/"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>
-          <ri status="Collections">Text+</ri>
+          <ri status="Collections">TextPlus</ri>
         </nodeInfo>
       </centre>
    </header>

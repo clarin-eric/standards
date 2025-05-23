@@ -20,10 +20,10 @@
       <centre id="IDS" deposition="1">
          <centreName>Leibniz-Institut für Deutsche Sprache</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/11"/>
-         <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/fbb09340-0dd4-473d-bd54-13a0518d1e47/"/>
+         <registryLink registry="TextPlus" uri="https://registry.text-plus.org/entity/fbb09340-0dd4-473d-bd54-13a0518d1e47/"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
-            <ri status="Collections Lexical_Resources Operations">Text+</ri>
+            <ri status="Collections Lexical_Resources Operations">TextPlus</ri>
          </nodeInfo>
       </centre>
    </header>

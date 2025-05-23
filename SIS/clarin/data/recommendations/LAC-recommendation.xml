@@ -16,10 +16,10 @@
          <centreName>Language Archive Cologne</centreName>
          <!-- Data Centrer for the Humanities (DCH) -->
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/47"/>
-         <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/aa27e760-680e-44a6-8753-90414da0eefe/"/>
+         <registryLink registry="TextPlus" uri="https://registry.text-plus.org/entity/aa27e760-680e-44a6-8753-90414da0eefe/"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
-            <ri status="Collections Lexical_Resources">Text+</ri>
+            <ri status="Collections Lexical_Resources">TextPlus</ri>
          </nodeInfo>
       </centre>
     </header>

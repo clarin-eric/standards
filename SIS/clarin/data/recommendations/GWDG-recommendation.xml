@@ -11,7 +11,7 @@
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/8"/>
         <nodeInfo>
           <ri status="E-centre">CLARIN</ri>
-          <ri status="Operations">Text+</ri>
+          <ri status="Operations">TextPlus</ri>
         </nodeInfo>
       </centre>
     </header>
