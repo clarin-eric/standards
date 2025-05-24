@@ -96,7 +96,7 @@ return
                                            else () 
                                      
                                      return
-                                    <span id="reg-link">{$registry}: <a href="{$uri}">{$uri}</a>{$label}</span>
+                                    <span id="reg-link">{$registry ! cm:visualise-ri-name(.)}: <a href="{$uri}">{$uri}</a>{$label}</span>
                                  }
 
                              </div>                            
@@ -114,7 +114,7 @@ return
                                              concat('   (',data($registry-link/@label), ')')
                                            else () 
                                     return 
-                                      <li><span id="{concat('reg-link_',$pos)}">{$registry}: <a href="{$uri}">{$uri}</a></span><span id="{concat('reg-label_',$pos)}">{$label}</span></li>
+                                      <li><span id="{concat('reg-link_',$pos)}">{$registry ! cm:visualise-ri-name(.)}: <a href="{$uri}">{$uri}</a></span><span id="{concat('reg-label_',$pos)}">{$label}</span></li>
                                  }
                                  </ul>
 

@@ -3,6 +3,7 @@ xquery version "1.0";
 module namespace menu = "http://clarin.ids-mannheim.de/standards/menu";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace centre = "http://clarin.ids-mannheim.de/standards/centre" at "../model/centre.xqm";
+import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 
 
 (:  Define the menu
@@ -19,14 +20,15 @@ declare function menu:setResearchInfrastructure() {
         </span>
     </span>,
     for $ri in centre:get-distinct-research-infrastructures()
+    let $visualised-ri := cm:visualise-ri-name($ri)
     return
             (<span class="tooltip">
-                <input id="{$ri}-RI-ID" class="ri" type="button" value="{$ri}"
+                <input id="{$ri}-RI-ID" class="ri" type="button" value="{$visualised-ri}"
                 onclick="setSessionCookie('ri','{$ri}')"/>
                     <span
                         class="tooltiptext" style="width:300px; left: 10%; top: 180%; 
-                        background-color: #9f9f9f;text-align:left;opacity:1;">Switch to {$ri} environment and show only 
-                        relevant info to {$ri}, e.g. format recommendations by {$ri} centres.
+                        background-color: #9f9f9f;text-align:left;opacity:1;">Switch to {$visualised-ri} environment and show only the
+                        info relevant to {$visualised-ri}, e.g. format recommendations by {$visualised-ri} centres.
                     </span>
                 </span>
     )

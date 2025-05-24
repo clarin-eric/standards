@@ -82,7 +82,7 @@ declare function cm:print-statuses($status) {
 };
 
 (: used by view-centre.xq :)
-declare function cm:print-ri($centre-ri) {
+declare function cm:print-ri($centre-ri) as element(li)+ {
     for $ri in $centre-ri
     let $status :=
     if ($ri/@status ne "")
@@ -91,10 +91,10 @@ declare function cm:print-ri($centre-ri) {
     else
         ()
     return
-        <li>{$ri/text(), $status}</li>
+        <li>{$ri ! cm:visualise-ri-name(.), $status}</li>
 };
 
-declare function cm:get-ris($c) {
+declare function cm:get-ris($c) as item()+ {
     for $ri in $c/nodeInfo/ri
             let $status := data($ri/@status)
             return
@@ -114,7 +114,7 @@ declare function cm:get-statuses($c) as xs:string+ {
 declare function cm:list-centre-descending($sortBy, $statusFilter, $riFilter) {
     for $c in $centre:centres
     let $id := data($c/@id)
-    let $ris :=cm:get-ris($c)
+    let $ris := cm:get-ris($c)
     order by 
         if ($sortBy eq 'curated')
             then rf:isCurated(cm:get-recommendations($id))
@@ -133,7 +133,7 @@ declare function cm:list-centre($sortBy, $statusFilter, $riFilter) {
         for $c in $centre:centres
             let $name := $c/centreName/text()
             let $id := data($c/@id)
-            let $ris :=cm:get-ris($c)
+            let $ris := cm:get-ris($c)
     
             order by 
             if ($sortBy eq 'curated')
@@ -184,7 +184,7 @@ declare function cm:filter-by-ri($c, $ris, $riFilter) {
         (cm:print-centre-row($c, $ris))
 };
 
-declare function cm:print-centre-row($c, $ri) {
+declare function cm:print-centre-row($c, $ris) {
     let $name := $c/centreName/text()
     let $id := data($c/@id)
     let $isDepositing := 
@@ -195,7 +195,7 @@ declare function cm:print-centre-row($c, $ri) {
     <tr>
         <td class="recommendation-row"><a href="{app:link(concat("views/view-centre.xq?id=", $id))}">{$id}</a></td>
         <td class="recommendation-row">{$name}</td>
-        <td class="recommendation-row">{$ri}</td>
+        <td class="recommendation-row">{$ris ! cm:visualise-ri-name(.)}</td>
         <td class="recommendation-row" style="text-align:center">{$isDepositing}</td>
         <td class="recommendation-row" style="text-align:center">{$isCurated}</td>
     </tr>
@@ -295,4 +295,12 @@ $language) {
                         fn:lower-case(fn:substring($format-id, 2)))
     return
         rf:print-recommendation-row($format, $centre-id, $domain, $language, fn:true(), fn:false())
+};
+
+declare function cm:visualise-ri-name($arg as item()) as item() {
+    if (string($arg) eq 'TextPlus') 
+    then
+      'Text+'
+    else
+      $arg
 };
