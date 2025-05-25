@@ -126,7 +126,7 @@ declare function cm:list-centre-descending($sortBy, $statusFilter, $riFilter) {
         cm:filter-by-status($c, $ris, $statusFilter, $riFilter)
 };
 
-declare function cm:list-centre($sortBy, $statusFilter, $riFilter) {
+declare function cm:list-centre($sortBy, $statusFilter, $riFilter) as element(tr)+ {
     if ($sortBy eq 'curated' or $sortBy eq 'depositing')
     then cm:list-centre-descending($sortBy, $statusFilter, $riFilter)
     else
@@ -196,8 +196,8 @@ declare function cm:print-centre-row($c, $ris) {
         <td class="recommendation-row"><a href="{app:link(concat("views/view-centre.xq?id=", $id))}">{$id}</a></td>
         <td class="recommendation-row">{$name}</td>
         <td class="recommendation-row">{$ris ! cm:visualise-ri-name(.)}</td>
-        <td class="recommendation-row" style="text-align:center">{$isDepositing}</td>
-        <td class="recommendation-row" style="text-align:center">{$isCurated}</td>
+        <td class="recommendation-row" style="text-align:center" data-is="depo">{$isDepositing}</td>
+        <td class="recommendation-row" style="text-align:center" data-is="cura">{$isCurated}</td>
     </tr>
 };
 

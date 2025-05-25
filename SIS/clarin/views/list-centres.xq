@@ -15,6 +15,10 @@ let $reset := request:get-parameter('reset', '')
 let $status := if ($reset) then () else request:get-parameter('status', '')
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
 let $riCookie :=  request:get-cookie-value("ri")
+let $rows as element(tr)+ := cm:list-centre($sortBy, $status, $riCookie)
+let $numrows := count($rows)
+let $numdepo := count($rows//td[@data-is eq 'depo' and string-length(.)])
+let $numcura := count($rows//td[@data-is eq 'cura' and string-length(.)])
 
 return
     
@@ -73,15 +77,15 @@ return
                     </div>
                     <table id ="centre-table">
                         <tr>
-                            <th class="header" style="width:20%;"><a href="?sortBy=id#centre-table">ID</a></th>
+                            <th class="header" style="width:20%;"><a href="?sortBy=id#centre-table">Centre by ID ({$numrows})</a></th>
                             <th class="header" style="width:30%;"><a href="?sortBy=name#centre-table">Name</a></th>
-                            <th class="header" style="width:30%;">Research Infrastructure
+                            <th class="header" style="width:25%;">Research Infrastructure
                                 <!--<a href="?sortBy=ri">Research Infrastructure</a>-->
                             </th>
-                            <th class="header" style="width:10%;"><a href="?sortBy=depositing#centre-table">Depositing</a></th>
-                            <th class="header" style="width:10%;"><a href="?sortBy=curated#centre-table">Curated</a></th>
+                            <th class="header" style="width:13%;"><a href="?sortBy=depositing#centre-table">Depositing ({$numdepo})</a></th>
+                            <th class="header" style="width:12%;"><a href="?sortBy=curated#centre-table">Curated ({$numcura})</a></th>
                         </tr>
-                        {cm:list-centre($sortBy, $status, $riCookie)}
+                        {$rows}
                     </table>
                 </div>
                 <div class="footer">{app:footer()}</div>
