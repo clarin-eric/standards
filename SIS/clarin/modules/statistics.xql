@@ -39,7 +39,7 @@ declare function stm:list-centre-statistics(){
         
     return
         <tr>
-            <td class="row">{$ri}</td>
+            <td class="row">{$ri ! cm:visualise-ri-name(.)}</td>
             <td class="row" style="text-align:center;">{$numOfCentres }</td>
             <td class="row" style="text-align:center;">{$numOfDepositingCentres}</td>
             <td class="row" style="text-align:center;">{$numOfCentresWithRecommendations}</td>
