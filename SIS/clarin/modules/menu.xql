@@ -62,22 +62,24 @@ declare function menu:view() {
             <tr>
                 <td width="10px"></td>
                 <td colspan="2" class="tdmenu">
-                    <a style="display:block" href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
-                </td>
-            </tr>
-            <tr>
-                <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
                     <a style="display:block" href="{app:link("views/list-domains.xq")}">Functional Domains</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
                 <td colspan="2" class="tdmenu">
+                    <a style="display:block" href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
+                </td>
+            </tr>
+            <tr>
+                <td width="10px"></td>
+                <td width="10px"></td>
+                <td colspan="2" class="tdmenu">
                     <a style="display:block" href="{app:link("views/list-extensions.xq")}">File Extensions</a>
                 </td>
             </tr>
             <tr>
+                <td width="10px"></td>
                 <td width="10px"></td>
                 <td colspan="2" class="tdmenu">
                     <a style="display:block" href="{app:link("views/list-mimetypes.xq")}">Media Types</a>
