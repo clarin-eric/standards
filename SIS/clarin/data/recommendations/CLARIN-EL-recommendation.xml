@@ -455,7 +455,7 @@
 		<level>recommended</level>
 		<comment>model for web crawled data</comment>
 	</format>
-	<format id="fWave">
+	<format id="fWAVE">
 		<domain>Audiovisual Source Language Data</domain>
 		<level>recommended</level>
 	</format>

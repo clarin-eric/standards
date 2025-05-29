@@ -126,12 +126,12 @@
          <domain>Audiovisual Source Language Data</domain>
          <level>acceptable</level>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
          <comment>PCM-WAV, 48 kHz, 16 bit</comment>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>acceptable</level>
          <comment>PCM-WAV with non-recommended parameters (not 48 kHz, 16 bit)</comment>

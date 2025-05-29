@@ -259,7 +259,7 @@
          <level>recommended</level>
          <comment>Toolbox type file</comment>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
          <comment>16/24 bit, 44.1/48 kHz, uncompressed PCM, 1 or 2 tracks.</comment>
