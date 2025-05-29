@@ -30,6 +30,7 @@ declare option output:html-version "5";
             <div class="content">
                 <div class="navigation">
                     &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
+                    &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
                     &gt; <a href="{app:link("views/list-extensions.xq")}">File Extensions</a>
                 </div>
                 <div class="title">File Extensions</div>
