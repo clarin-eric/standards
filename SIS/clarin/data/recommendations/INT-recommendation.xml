@@ -188,19 +188,19 @@
             <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
-        <format id="NTriples">
+        <format id="fNTriples">
             <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
-        <format id="NTriples">
+        <format id="fNTriples">
             <domain>Text Annotation</domain>
             <level>recommended</level>
         </format>
-        <format id="TriG">
+        <format id="fTriG">
             <domain>Lexical Resource</domain>
             <level>recommended</level>
         </format>
-        <format id="TriG">
+        <format id="fTriG">
             <domain>Text Annotation</domain>
             <level>recommended</level>
         </format>
