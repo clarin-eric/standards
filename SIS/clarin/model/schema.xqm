@@ -7,13 +7,30 @@ module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema";
    @date Dec 2013
 :)
 
+declare namespace map = "http://www.w3.org/2005/xpath-functions/map";
+
 declare variable $xsd:doc := doc('../schemas/spec.xsd');
 declare variable $xsd:format := doc('../schemas/format.xsd');
 declare variable $xsd:recommendation := doc('../schemas/recommendation.xsd');
 
 (:get research infrastructures:)
-declare function xsd:get-ris(){
+declare function xsd:get-ris() as xs:string+ {
     $xsd:recommendation/xs:schema/xs:simpleType[@name eq 'ResearchInfrastructures']/xs:restriction/xs:enumeration/data(@value)
+};
+
+declare function xsd:get-statuses-in-ri($ri as xs:string) as xs:string+ {
+    let $stats as xs:string+ :=  $xsd:recommendation/xs:schema/xs:simpleType[@name eq concat('CentreStatus-',$ri)]/xs:list/xs:simpleType/xs:restriction/xs:enumeration/@value ! string(.)
+    return if (count($stats))
+           then $stats
+           else concat($ri,'-inapplicable')
+};
+
+(:not yet used anywhere:)
+declare function xsd:list-ri-node-statuses() as map(xs:string, xs:string+) {
+    let $ris as xs:string+ := xsd:get-ris()
+    let $ri-map as map(xs:string, xs:string+) := map:merge( for $ri in $ris return map:entry( $ri , xsd:get-statuses-in-ri($ri) ) )
+    
+    return $ri-map
 };
 
 (: Select relation types :)
@@ -28,6 +45,7 @@ declare function xsd:get-relations(){
 };
 
 (: Select status types :)
+(:this is for statuses of a standards document:)
 declare function xsd:get-statuses(){
     $xsd:doc/xs:schema/xs:element[@name="version"]/xs:complexType/xs:attribute[@name="status"]/
     xs:simpleType/xs:restriction/xs:enumeration/data(@value)

@@ -45,6 +45,6 @@ declare function centre:get-distinct-research-infrastructures() as xs:string+ {
     fn:distinct-values($centre:centres/nodeInfo/ri)
 };
 
-declare function centre:get-deposition-centres($ri){
+declare function centre:get-deposition-centres($ri) as element(centre)+ {
     $centre:centres[nodeInfo/ri=$ri and xs:boolean(@deposition)]
 };
