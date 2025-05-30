@@ -349,7 +349,7 @@
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="ResearchInfrastructures">
-                    <xs:attribute name="status" use="optional" type="CentreStatus">
+                    <xs:attribute name="status" use="required" type="CentreStatus">
                         <xs:annotation>
                             <xs:documentation>Status of the centre (node) in the given research
                                 infrastructure. (In CLARIN, it's e.g. "B-centre", in Text+, e.g.
