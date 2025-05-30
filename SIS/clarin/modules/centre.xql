@@ -29,6 +29,10 @@ declare function cm:get-deposition-centres($ri as xs:string){
     centre:get-deposition-centres($ri)
 };
 
+declare function cm:get-current-research-infrastructures() as xs:string+ {
+    centre:get-distinct-research-infrastructures()
+};
+
 declare function cm:get-curated-centres($ri as xs:string){
     $recommendation:centres/header[centre/nodeInfo/ri=$ri and respStmt/name[normalize-space() != '']]
 };

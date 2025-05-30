@@ -2,7 +2,6 @@ xquery version "1.0";
 
 module namespace menu = "http://clarin.ids-mannheim.de/standards/menu";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
-import module namespace centre = "http://clarin.ids-mannheim.de/standards/centre" at "../model/centre.xqm";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 
 
@@ -19,7 +18,7 @@ declare function menu:setResearchInfrastructure() {
             background-color: #9f9f9f; opacity:1;text-align:left;">Show all info regardless research infrastructures.
         </span>
     </span>,
-    for $ri in centre:get-distinct-research-infrastructures()
+    for $ri in cm:get-current-research-infrastructures()
     let $visualised-ri := cm:visualise-ri-name($ri)
     return
             (<span class="tooltip">

@@ -41,7 +41,7 @@ declare function centre:get-centre-by-research-infrastructure($ri as xs:string,
         else ()
 };
 
-declare function centre:get-distinct-research-infrastructures(){
+declare function centre:get-distinct-research-infrastructures() as xs:string+ {
     fn:distinct-values($centre:centres/nodeInfo/ri)
 };
 
