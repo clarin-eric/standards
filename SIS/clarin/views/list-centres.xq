@@ -40,8 +40,8 @@ return
                     </div>
                     <div class="title">Centres</div>
                     <div>
-                    <p>This page lists centres encoded in the SIS, together with their status. Among the 
-                    <a href="https://centres.clarin.eu/">CLARIN centres</a>, B-centres and 
+                    <p>This page lists centres encoded in the SIS, together with their status.</p>
+                    <p>Among the <a href="https://centres.clarin.eu/">CLARIN centres</a>, B-centres and 
                     numerous C-centres provide data deposition services. It is a safe assumption that centres belonging to other 
                     research infrastructures that are listed here also provide depositing services, but that feature may change in time 
                     and this is why there is a separate column indicating the 'depositing' status.</p>
@@ -52,6 +52,7 @@ return
                     only holds a snapshot of the state of the network at a certain (usually fairly random) date. We are not able to monitor
                     that in real time. If you see omissions or errors in the list below, please kindly 
                     <a title="open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic%2C+UserInput&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">let us know</a>.</p>
+                    <p><a href="{app:link("views/list-statistics-centre.xq")}">Centre-related statistics</a> are available on a separate page.</p>
                     </div>
                     <div>
                         <form id="filterCentre" method="get" action="">
