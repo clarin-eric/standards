@@ -38,7 +38,7 @@ declare option output:html-version "5";
                        the name used in recommendations does not match the format description (or the format 
                        description is not present). Do feel welcome to help us extend the list and/or the descriptions, 
                        either by 
-                    <a href="{app:getGithubIssueLink()}">submitting an issue at GitHub</a> 
+                    <a href="{app:getGithubFormatIssueLink()}">submitting an issue at GitHub</a> 
                     containing suggested text or corrections, or by editing or adding the relevant 
                     <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">format file</a> 
                     and submitting a pull request)</p>
