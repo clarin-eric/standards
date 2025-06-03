@@ -11,7 +11,7 @@
   
   <!--<extId type=""></extId>-->
   
-  <info type="description" family="yes">
+  <info type="description" hub="yes">
     <p>CoNLL expands into "Computational Natural Language Learning", which is the name of a
       conference chain where the format(s) originated. Unqalified "CoNLL" should be considered a
       meta-format (plain text, column-based) that should <i>not</i> be referenced by SIS

@@ -26,8 +26,7 @@
       <li>XCES for corpus annotation</li>
       <li><a href="../views/view-format.xq?id=fTiger">TigerXML</a></li>
       <li>TCF, the Weblicht-internal format</li>
-      <li><a href="../views/view-format.xq?id=fEXB">EXMARaLDA</a></li>
-      <li><a href="../views/view-format.xq?id=fTEISpoken">ISO/TEI Spoken</a>, <a href="../views/view-format.xq?id=fCHAT-XML">CHAT-XML</a>, <a href="../views/view-format.xq?id=fTransana">Transana</a> for speech transcription</li>
+      <li><a href="../views/view-format.xq?id=fEXB">EXMARaLDA</a>, <a href="../views/view-format.xq?id=fTEISpoken">ISO/TEI Spoken</a>, <a href="../views/view-format.xq?id=fCHAT-XML">CHAT-XML</a>, <a href="../views/view-format.xq?id=fTransana">Transana</a> for speech transcription</li>
       <li><a href="../views/view-format.xq?id=fALTO">ALTO</a></li>
       <li><a href="../views/view-format.xq?id=fFoLiA">FoLiA</a></li>
       <li><a href="../views/view-format.xq?id=fSVG">SVG</a> (for graphics)</li>
