@@ -647,6 +647,9 @@
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:attribute>
+                    <xs:attribute name="label" type="xs:string" use="optional">
+                        <xs:annotation><xs:documentation>Label to distinguish references that point to the same registry (e.g. to indicate records for different versions of a format)</xs:documentation></xs:annotation>
+                    </xs:attribute>
                 </xs:extension>
             </xs:simpleContent>
         </xs:complexType>
