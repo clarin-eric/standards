@@ -1,0 +1,27 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fODF" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Open Document Format for Office Applications</title>
+    <abbr>ODF</abbr>
+  </titleStmt>
+  <keyword>office applications</keyword>
+  <keyword>format family</keyword>
+  <extId type="LOC">fdd000247</extId>
+  <info type="description" hub="yes">
+    <p>"The Open Document Format for Office Applications (ODF), also known as OpenDocument, standardized as ISO 26300, is an open 
+      file format for word processing documents, spreadsheets, presentations and graphics and using ZIP-compressed XML files. 
+      It was developed with the aim of providing an open, XML-based file format specification for office applications." (<a href="https://en.wikipedia.org/wiki/OpenDocument">Wikipedia</a>)</p>
+    <p>"The ODF family of formats includes subtypes for documents in different content categories, such as <a href="../views/view-format.xq?id=fODT">word-processing</a>, spreadsheet, and presentation file formats. Documents comprise related component files bundled in a container/wrapper format called a "package."" (after LoC)</p>
+    <p>The primary locus of maintenance and development of the standard is the <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office">OASIS Open ODF Technical Committee</a>. The ISO variant of the standard is dated for 2015 and corresponds to version 
+      1.2 of the format (while the <a href="https://github.com/oasis-tcs/odf-tc">current development version</a> in 2025 is version 1.4).</p> 
+    <p>The media type pattern for ODF is <code>application/vnd.oasis.opendocument.xxxxx</code></p>
+    
+    <p>See also:</p> 
+      <ul>
+        <li>Wikipedia article on <a href="https://en.wikipedia.org/wiki/OpenDocument_standardization">OpenDocument standardization</a></li>
+        <li>Wikipedia article on <a href="https://en.wikipedia.org/wiki/Comparison_of_Office_Open_XML_and_OpenDocument">Comparison of Office Open XML and OpenDocument</a></li>
+      </ul>
+  </info>
+   <relation target="SpecODF" type="isDefinedBy"/>  <!--add a way to signal non-existent descriptions of standards!--> 
+  <formatFamily>XML</formatFamily>
+</format>
