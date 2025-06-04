@@ -1,0 +1,39 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fODT" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>OpenDocument Text Document Format</title>
+    <abbr>ODT</abbr>
+  </titleStmt>
+  <keyword>office applications</keyword>
+  <keyword>format family</keyword>
+  <keyword>text format</keyword>
+  <extId type="LOC" label="v. 1.2">fdd000247</extId>
+  <extId type="PRONOM" label="v. 1.2">fmt/291</extId>
+  <extId type="PRONOM" label="v. 1.3">fmt/1756</extId>
+  <extId type="Wikidata" label="v. 1.2">Q27203601</extId>
+  <extId type="Wikidata" label="v. 1.3">Q114074169</extId>
+  <info type="description" hub="yes">
+    <p>"The OpenDocument Text Document Format (ODT) (...) is a format for editable textual documents. It is one of several subtypes in the 
+      <a href="../views/view-format.xq?id=fODF">ODF family</a> 
+      for particular content categories. Designed to be a native format for word-processing applications, the format is sometimes called ODT after 
+      its usual file extension." (after LoC)</p>
+    <p>The primary locus of maintenance and development of the standard behind the ODF family is the <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office">OASIS Open ODF Technical Committee</a>. The ISO variant of the standard is dated for 2015 and corresponds to version 
+      1.2 of the format (while the <a href="https://github.com/oasis-tcs/odf-tc">current development version</a> in 2025 is version 1.4).</p> 
+    <p>Since version 1.4 is not yet attested in format registries, and version 1.2 is the one standardised with ISO, we provide external IDs for versions 1.2 and 1.3 
+      (the latter approved as an OASIS Standard in April 2021.</p>
+    <p>The SIS does not offer ODT descriptions of higher granularity, i.e. no separate descriptions for ODT v. 1.3, etc. If a centre needs to make a distinction between development versions, the <code>&lt;comment&gt;</code> field has to be used for that purpose.</p>
+    
+    <p>See also:</p> 
+      <ul>
+        <li>Wikipedia article on <a href="https://en.wikipedia.org/wiki/OpenDocument_standardization">OpenDocument standardization</a></li>
+      </ul>
+  </info>
+ <!-- <relation target="SpecODF" type="isDefinedBy"/>  add a way to signal non-existent descriptions of standards! -->
+  <mimeType>application/vnd.oasis.opendocument.text</mimeType>
+  <mimeType>application/vnd.oasis.opendocument.text-template</mimeType>
+  <mimeType>application/vnd.oasis.opendocument.text-master</mimeType>
+  <fileExt>.odt</fileExt>
+  <fileExt>.ott</fileExt>
+  <fileExt>.odm</fileExt>
+  <formatFamily>ODF</formatFamily>
+</format>
