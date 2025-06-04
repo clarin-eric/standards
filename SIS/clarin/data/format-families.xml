@@ -10,7 +10,7 @@
     <node name="AudioVisualData" rel=""/>
     <node name="ImageData" rel=""/>
     <node name="TextualData" rel=""/> 
-    <node name="NumericData" rel=""/> <!-- this is somewhat mysterious; meant for statistical formats, probably; probably should change -->
+    <node name="NumericalData" rel=""/> <!-- this is somewhat mysterious; meant for statistical formats, probably; probably should change -->
     <node name="Other" rel=""/>
     <!--<node name="Mixed" rel=""/>-->
   </node>
@@ -29,7 +29,7 @@
 
   <node name="Other" rel="">
     <node name="Container" rel=""/> 
-    <node name="Container.Compressed" rel=""/> <!-- compressed should be solo, for PNG etc -->
+    <node name="Container.Compressed" rel=""/> <!-- compressed should be separate, for PNG etc -->
   </node>
 
   <node name="Audio" rel="">
@@ -55,9 +55,9 @@
     <node name="Markup.Partial" rel=""/>
   </node>
   <node name="Plain" rel="">
-    <node name="Plain.Tabular" rel=""/>
-    <node name="Plain.Running" rel=""/> <!-- may imply high-level structuring: chapters, etc. down to paragraphs and s -->
-    <node name="Plain.Statements" rel=""/>  <!-- computer code, EBNF, etc. -->
+    <node name="Plain.Delimited" rel=""/> <!--"columnar" is a DB-related structuring, "tabular" is too similar to "tab-delimited"-->
+    <node name="Plain.Running" rel=""/> <!-- may involve high-level structuring: chapters, etc. down to paragraphs and s -->
+    <node name="Plain.Statements" rel=""/>  <!-- computer code, EBNF, etc., up to code blocks or larger divisions; there is an overlap with Running -->
   </node>
   
 </family-ties>

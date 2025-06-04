@@ -27,5 +27,5 @@
    -->
 <!--  <mimeType>text/plain</mimeType>
   <fileExt>.conll</fileExt>-->
-  <formatFamily>Plain.</formatFamily>
+  <formatFamily>Plain.Delimited</formatFamily>
 </format>
