@@ -293,7 +293,7 @@
     </xs:element>
     <xs:element name="centreName">
         <xs:annotation>
-            <xs:documentation>the full name of the centre</xs:documentation>
+            <xs:documentation>the full name of the centre; more than one can be provided, and it can be tagged with a language tag in the xml:lang attribute</xs:documentation>
         </xs:annotation>
         <xs:complexType>
             <xs:simpleContent>
@@ -304,6 +304,7 @@
                                 centre name depends on the research infrastructure.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
+                    <xs:attribute ref="xml:lang" use="optional"/>
                 </xs:extension>
             </xs:simpleContent>
         </xs:complexType>
