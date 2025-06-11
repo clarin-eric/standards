@@ -1,39 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
-<recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
+<?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
         <lastUpdateCommitID>56edd195d9ed1d5bc7c2d984fac74a0c14801520</lastUpdateCommitID>
         <filter>
             <centreID>CLARIN-PL1</centreID>
         </filter>
         <respStmt>
-            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
-            <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-            <reviewDate>0001-01-01</reviewDate>
+            <name>Tomasz Naskręt</name>
+            <resp>Technical Support</resp>
+            <link>tomasz.naskret@pwr.edu.pl</link>
+            <reviewDate>2025-06-11</reviewDate>
+        </respStmt>
+        <respStmt>
+            <name>Marcin Oleksy</name>
+            <resp>Metadata, Corpora and Annotation Support</resp>
+            <link>marcin.oleksy@pwr.edu.pl</link>
+            <reviewDate>2025-06-11</reviewDate>
         </respStmt>
         <centre id="CLARIN-PL1" deposition="1">
-        <centreName>CLARIN-PL Language Technology Centre</centreName>
-        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/25"/>
-        <nodeInfo>
-          <ri status="B-centre K-centre">CLARIN</ri>
-        </nodeInfo>
-      </centre>
+            <centreName>CLARIN-PL Language Technology Centre</centreName>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/25"/>
+            <nodeInfo>
+                <ri status="B-centre K-centre">CLARIN</ri>
+            </nodeInfo>
+        </centre>
     </header>
-    <info><!--use p, ul, ol elements here--></info>
-    <formats><!--
-            This template will assist in adjusting/creating a recommendations document if you don't
-            have access to a schema-aware XML editor. Copy the XML fragment, 
-            *  adjust the format ID (see https://standards.clarin.eu/sis/views/list-formats.xq ),
-            *  adjust the domain (https://standards.clarin.eu/sis/views/list-domains.xq ),
-            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
-            *  repeat as necessary;
-            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
-            
-            <format id="null">
-                <domain>Audiovisual Annotation</domain>
-                <level>recommended</level>
-            </format> 
-        -->
+    <info>
+        <p>This page lists the file formats which are recommended for depositing in CLARIN-PL.
+            For additional information, see pages <a href="https://clarin-pl.eu/dspace/page/deposit">
+                https://clarin-pl.eu/dspace/page/deposit
+            </a> or
+            <a href="https://clarin-pl.eu/dspace/page/item-lifecycle">https://clarin-pl.eu/dspace/page/item-lifecycle
+            </a>
+        </p>
+        <p>For details on our policies visit <a href="https://clarin-pl.eu/dspace/page/about">
+            https://clarin-pl.eu/dspace/page/about</a>.
+        </p>
+    </info>
+    <formats>
+        <format id="fCSV">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format>
+        <format id="fCSV">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format>
+        <format id="fPlainText">
+            <domain>Audiovisual Annotation</domain>
+            <level>discouraged</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format>
+        <format id="fPlainText">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format>
+        <format id="fPlainText">
+            <domain>Lexical Resource</domain>
+            <level>acceptable</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format>
+        <format id="fPlainText">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format>
+        <format id="fDOCX">
+            <domain>Audiovisual Annotation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fDOCX">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fHTML">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fJSON">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fMarkdown">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTEI">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCoNLL-U">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCMDI">
+            <domain>Catalogue Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fHTML">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+            <comment>ASCII or UTF-8 character encoding required</comment>
+        </format>
+        <format id="fHTML">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+            <comment>ASCII or UTF-8 character encoding required</comment>
+        </format>
+        <format id="fHTML">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>ASCII or UTF-8 character encoding required</comment>
+        </format>
+        <format id="fJPEG">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fJPEG">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPNG">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPNG">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fGZIP">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fJS">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTAR">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXSD">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXSLT">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fZIP">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fJSON">
+            <domain>Text Annotation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fJSONLD">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCMDI">
+            <domain>Catalogue Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Catalogue Metadata</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fCMDI">
+            <domain>Contextual Information</domain>
+            <level>recommended</level>
+        </format>
     </formats>
 </recommendation>
