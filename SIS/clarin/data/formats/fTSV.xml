@@ -12,5 +12,5 @@
     </info>
     <mimeType>text/tab-separated-values</mimeType>
     <fileExt>.tsv</fileExt>
-    <formatFamily>Plain.</formatFamily>
+    <formatFamily>Plain.Delimited</formatFamily>
 </format>

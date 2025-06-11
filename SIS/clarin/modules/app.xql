@@ -98,16 +98,16 @@ declare function app:create-copy-button($id, $copy-text, $tooltiptext, $hint) {
     )
 };
 
-declare function app:getGithubIssueLink() {
-    let $ghLink := 'https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title='
-    let $ghLink := concat($ghLink, 'commitId=', web:get-short-commitId())
+declare function app:getGithubFormatIssueLink() {
+    let $ghLink := 'https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=Incorrect or missing format '
+    let $ghLink := concat($ghLink, '[commitId=', web:get-short-commitId(),']')
     return
         $ghLink
 };
 
-declare function app:getGithubIssueLink($format-id) {
+declare function app:getGithubFormatIssueLink($format-id) {
     let $ghLink := 'https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=Suggestion regarding the description of format ID="'
-    let $ghLink := concat($ghLink, $format-id, '", commitId=', web:get-short-commitId())
+    let $ghLink := concat($ghLink, $format-id, '", [commitId=', web:get-short-commitId(),']')
     return
         $ghLink
 };

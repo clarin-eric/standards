@@ -11,7 +11,7 @@
   
   <!--<extId type=""></extId>-->
   
-  <info type="description">
+  <info type="description" hub="yes">
     <p>CoNLL expands into "Computational Natural Language Learning", which is the name of a
       conference chain where the format(s) originated. Unqalified "CoNLL" should be considered a
       meta-format (plain text, column-based) that should <i>not</i> be referenced by SIS
@@ -27,5 +27,5 @@
    -->
 <!--  <mimeType>text/plain</mimeType>
   <fileExt>.conll</fileExt>-->
-  <formatFamily>Plain.</formatFamily>
+  <formatFamily>Plain.Delimited</formatFamily>
 </format>

@@ -2,7 +2,6 @@ xquery version "1.0";
 
 module namespace menu = "http://clarin.ids-mannheim.de/standards/menu";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
-import module namespace centre = "http://clarin.ids-mannheim.de/standards/centre" at "../model/centre.xqm";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 
 
@@ -19,7 +18,7 @@ declare function menu:setResearchInfrastructure() {
             background-color: #9f9f9f; opacity:1;text-align:left;">Show all info regardless research infrastructures.
         </span>
     </span>,
-    for $ri in centre:get-distinct-research-infrastructures()
+    for $ri in cm:get-current-research-infrastructures()
     let $visualised-ri := cm:visualise-ri-name($ri)
     return
             (<span class="tooltip">
@@ -62,22 +61,24 @@ declare function menu:view() {
             <tr>
                 <td width="10px"></td>
                 <td colspan="2" class="tdmenu">
-                    <a style="display:block" href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
-                </td>
-            </tr>
-            <tr>
-                <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
                     <a style="display:block" href="{app:link("views/list-domains.xq")}">Functional Domains</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
                 <td colspan="2" class="tdmenu">
+                    <a style="display:block" href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
+                </td>
+            </tr>
+            <tr>
+                <td width="10px"></td>
+                <td width="10px"></td>
+                <td colspan="2" class="tdmenu">
                     <a style="display:block" href="{app:link("views/list-extensions.xq")}">File Extensions</a>
                 </td>
             </tr>
             <tr>
+                <td width="10px"></td>
                 <td width="10px"></td>
                 <td colspan="2" class="tdmenu">
                     <a style="display:block" href="{app:link("views/list-mimetypes.xq")}">Media Types</a>

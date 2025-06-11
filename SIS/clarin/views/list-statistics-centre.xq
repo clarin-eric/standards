@@ -5,6 +5,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 import module namespace stm = "http://clarin.ids-mannheim.de/standards/statistics-module" at "../modules/statistics.xql";
 import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
+import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 declare option output:method "html";
@@ -16,6 +17,9 @@ declare option output:html-version "5";
     @author margaretha
 :)
 
+let $ris as xs:string+ := cm:get-current-research-infrastructures() (: use the live list rather than the schema :)
+
+return 
 <html lang="en">
     <head>
         <title>Centre Statistics</title>
@@ -56,6 +60,29 @@ declare option output:html-version "5";
                        <!-- {stm:list-all-centre-statistics()} without ri-->
                         {stm:list-centre-statistics()}
                     </table>
+                    <div>
+                    <h2 id="statsByStatus">Statistics by centre status</h2>
+                    <p>The tables below look at the individual research infrastructures one by one and split the statistics according to the status of the centre.</p>
+                    
+                    {
+                    for $ri in $ris 
+                        return 
+                     <div style="margin-top:30px;">
+                            <h3 id="{concat('stats',$ri)}">{$ri ! cm:visualise-ri-name(.)}</h3>
+                     <table style="width:600px">
+                        <tr>
+                            <th style="width:100px">Status</th>
+                            <th style="text-align:center;">Number of centres</th>
+                            <th style="text-align:center;">Depositing centres</th>
+                            <th style="text-align:center;">Centres with recommendations</th>
+                            <th style="text-align:center;">Centres with curated recommendations</th>
+                        </tr>
+                        {stm:list-status-statistics($ri)}
+                    </table>
+                    </div>
+                    }
+                    
+                    </div>
             </div>
             <div class="footer">{app:footer()}</div>
         </div>

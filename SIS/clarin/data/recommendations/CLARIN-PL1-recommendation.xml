@@ -3,7 +3,7 @@
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>bec52cd36a2996677ce07153a19ce774097f9130</lastUpdateCommitID>
+        <lastUpdateCommitID>56edd195d9ed1d5bc7c2d984fac74a0c14801520</lastUpdateCommitID>
         <filter>
             <centreID>CLARIN-PL1</centreID>
         </filter>

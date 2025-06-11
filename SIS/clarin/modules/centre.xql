@@ -25,14 +25,25 @@ declare function cm:get-centre-by-research-infrastructure($ri as xs:string, $sta
     centre:get-centre-by-research-infrastructure($ri, $status)
 };
 
-declare function cm:get-deposition-centres($ri as xs:string){
+declare function cm:get-deposition-centres($ri as xs:string) as element(centre)* {
     centre:get-deposition-centres($ri)
 };
 
-declare function cm:get-curated-centres($ri as xs:string){
-    $recommendation:centres/header[centre/nodeInfo/ri=$ri and respStmt/name[normalize-space() != '']]
+declare function cm:get-current-research-infrastructures() as xs:string+ {
+    centre:get-distinct-research-infrastructures()
 };
 
+declare function cm:get-curated-centres($ri as xs:string) as element(header)* {
+    let $headers as element(header)+ := recommendation:get-recommendation-headers()
+
+    return $headers[centre/nodeInfo/ri=$ri and respStmt/name[normalize-space() != '']]
+};
+
+(:used by kpi and statistics modules; takes depositing centres as its argument :)
+(:what i find surprising here is that we have the objects (centres) and rather than check their state directly, 
+we convert them to IDs and process those IDs to get to check their state, via doc(). 
+This is because we are not easily able to aggregate all relevant info, but we should...
+:) 
 declare function cm:count-number-of-centres-with-recommendations($centres) {
     let $centre-with-recommendations :=
     for $c in $centres

@@ -33,7 +33,7 @@ let $recommendation := cm:get-recommendations($id)
 
 let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
 let $ri :=  request:get-cookie-value("ri")
-let $languageHeader := if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader
+let $languageHeader := if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader   (:(I think TextPlus should be singled out for "de" in a positive statement):)
 let $centre-info := cm:parseFormatRef(cm:get-centre-info($id,$languageHeader), $id)
 
 let $domains := fn:distinct-values($recommendation/formats/format/domain/text())
