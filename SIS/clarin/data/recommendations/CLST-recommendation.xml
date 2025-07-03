@@ -22,7 +22,7 @@
     </header>
    <info><p>See the <a href="https://www.ru.nl/en/cls/clst/about-clst">CLST home page</a> for some info.</p></info>
    <formats>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
       </format>

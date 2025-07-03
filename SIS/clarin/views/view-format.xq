@@ -104,7 +104,7 @@ return
                         </div>
                         
                         <div style="float:right; text-align:right">
-                                <a href="{app:getGithubIssueLink($id)}" class="button" 
+                                <a href="{app:getGithubFormatIssueLink($id)}" class="button" 
                                     style="padding: 5px 5px 2px 5px; color:darkred; border-color:darkred">
                                     suggest a fix or extension</a>
                         </div>
@@ -172,7 +172,7 @@ return
                             <span id="desctext{$id}" class="desctext">{$format/info[@type = "description"]}</span>
                         </div>
 <!--
-                        <div align="right"><p><a href="{app:getGithubIssueLink($id)}">[suggest a fix or extension]</a></p></div>
+                        <div align="right"><p><a href="{app:getGithubFormatIssueLink($id)}">[suggest a fix or extension]</a></p></div>
       -->                  
                         {vfm:print-multiple-values($format/keyword, $id, "Keywords:")}
                         <!--The tag cloud of the standard related keywords -->

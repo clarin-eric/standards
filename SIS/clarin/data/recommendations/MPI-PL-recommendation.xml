@@ -173,22 +173,22 @@
          <comment>ELAN settings file for a specific annotation file. Not strictly necessary to
             preserve, but can be archived along with EAF for convenience.</comment>
       </format>
-      <format id="fPlainText">
+      <format id="fTextPlain">
          <domain>Audiovisual Annotation</domain>
          <level>discouraged</level>
          <comment>ASCII or UTF-8 character encoding required</comment>
       </format>
-      <format id="fPlainText">
+      <format id="fTextPlain">
          <domain>Documentation</domain>
          <level>recommended</level>
          <comment>ASCII or UTF-8 character encoding required</comment>
       </format>
-      <format id="fPlainText">
+      <format id="fTextPlain">
          <domain>Lexical Resource</domain>
          <level>acceptable</level>
          <comment>ASCII or UTF-8 character encoding required</comment>
       </format>
-      <format id="fPlainText">
+      <format id="fTextPlain">
          <domain>Textual Source Language Data</domain>
          <level>recommended</level>
          <comment>ASCII or UTF-8 character encoding required</comment>
@@ -259,7 +259,7 @@
          <level>recommended</level>
          <comment>Toolbox type file</comment>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
          <comment>16/24 bit, 44.1/48 kHz, uncompressed PCM, 1 or 2 tracks.</comment>

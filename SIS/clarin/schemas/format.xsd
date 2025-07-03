@@ -332,8 +332,21 @@
                 </xs:simpleType>
             </xs:attribute>
             <xs:attribute ref="internal"/>
+            <xs:attribute ref="hub"/>
         </xs:complexType>
     </xs:element>
+    <xs:attribute name="hub" default="no">
+        <xs:annotation>
+            <xs:documentation>Is this a hub format, such as XML, TEI, CoNLL? A warning will be displayed if a centre uses that as a target of a 
+                recommendation and does not qualify it with a comment. It will not be counted among the most popular formats, either.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="yes"/>
+                <xs:enumeration value="no"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
     <xs:element name="biblStruct">
         <xs:annotation>
             <xs:documentation>Bibliography elements for info type: recReading</xs:documentation>
@@ -633,6 +646,9 @@
                                 <xs:enumeration value="Wikidata"/>
                             </xs:restriction>
                         </xs:simpleType>
+                    </xs:attribute>
+                    <xs:attribute name="label" type="xs:string" use="optional">
+                        <xs:annotation><xs:documentation>Label to distinguish references that point to the same registry (e.g. to indicate records for different versions of a format)</xs:documentation></xs:annotation>
                     </xs:attribute>
                 </xs:extension>
             </xs:simpleContent>

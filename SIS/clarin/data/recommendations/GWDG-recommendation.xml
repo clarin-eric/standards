@@ -2,7 +2,7 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>bec52cd36a2996677ce07153a19ce774097f9130</lastUpdateCommitID>
+        <lastUpdateCommitID>56edd195d9ed1d5bc7c2d984fac74a0c14801520</lastUpdateCommitID>
         <filter>
             <centreID>GWDG</centreID>
         </filter>
@@ -11,7 +11,7 @@
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/8"/>
         <nodeInfo>
           <ri status="E-centre">CLARIN</ri>
-          <ri status="Operations">Text+</ri>
+          <ri status="Operations">TextPlus</ri>
         </nodeInfo>
       </centre>
     </header>
@@ -21,8 +21,8 @@
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 
-            *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
-            *  adjust the domain (https://clarin.ids-mannheim.de/standards/views/list-domains.xq ),
+            *  adjust the format ID (see https://standards.clarin.eu/sis/views/list-formats.xq ),
+            *  adjust the domain (https://standards.clarin.eu/sis/views/list-domains.xq ),
             *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
             *  repeat as necessary;
             *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .

@@ -11,10 +11,14 @@ declare option output:media-type "text/html";
 declare option output:indent "yes";
 declare option output:html-version "5";
 
-let $reset := request:parameter('reset', '')
-let $status := if ($reset) then () else request:parameter('status', '')
-let $sortBy := if ($reset) then () else request:parameter('sortBy', '')
-let $riCookie :=  request:cookie("ri")
+let $reset := request:get-parameter('reset', '')
+let $status := if ($reset) then () else request:get-parameter('status', '')
+let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
+let $riCookie :=  request:get-cookie-value("ri")
+let $rows as element(tr)+ := cm:list-centre($sortBy, $status, $riCookie)
+let $numrows := count($rows)
+let $numdepo := count($rows//td[@data-is eq 'depo' and string-length(.)])
+let $numcura := count($rows//td[@data-is eq 'cura' and string-length(.)])
 
 return
     
@@ -36,8 +40,8 @@ return
                     </div>
                     <div class="title">Centres</div>
                     <div>
-                    <p>This page lists centres encoded in the SIS, together with their status. Among the 
-                    <a href="https://centres.clarin.eu/">CLARIN centres</a>, B-centres and 
+                    <p>This page lists centres encoded in the SIS, together with their status.</p>
+                    <p>Among the <a href="https://centres.clarin.eu/">CLARIN centres</a>, B-centres and 
                     numerous C-centres provide data deposition services. It is a safe assumption that centres belonging to other 
                     research infrastructures that are listed here also provide depositing services, but that feature may change in time 
                     and this is why there is a separate column indicating the 'depositing' status.</p>
@@ -48,6 +52,7 @@ return
                     only holds a snapshot of the state of the network at a certain (usually fairly random) date. We are not able to monitor
                     that in real time. If you see omissions or errors in the list below, please kindly 
                     <a title="open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic%2C+UserInput&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">let us know</a>.</p>
+                    <p><a href="{app:link("views/list-statistics-centre.xq")}">Centre-related statistics</a> are available on a separate page.</p>
                     </div>
                     <div>
                         <form id="filterCentre" method="get" action="">
@@ -73,15 +78,15 @@ return
                     </div>
                     <table id ="centre-table">
                         <tr>
-                            <th class="header" style="width:20%;"><a href="?sortBy=id#centre-table">ID</a></th>
+                            <th class="header" style="width:20%;"><a href="?sortBy=id#centre-table">Centre by ID ({$numrows})</a></th>
                             <th class="header" style="width:30%;"><a href="?sortBy=name#centre-table">Name</a></th>
-                            <th class="header" style="width:30%;">Research Infrastructure
+                            <th class="header" style="width:25%;">Research Infrastructure
                                 <!--<a href="?sortBy=ri">Research Infrastructure</a>-->
                             </th>
-                            <th class="header" style="width:10%;"><a href="?sortBy=depositing#centre-table">Depositing</a></th>
-                            <th class="header" style="width:10%;"><a href="?sortBy=curated#centre-table">Curated</a></th>
+                            <th class="header" style="width:13%;"><a href="?sortBy=depositing#centre-table">Depositing ({$numdepo})</a></th>
+                            <th class="header" style="width:12%;"><a href="?sortBy=curated#centre-table">Curated ({$numcura})</a></th>
                         </tr>
-                        {cm:list-centre($sortBy, $status, $riCookie)}
+                        {$rows}
                     </table>
                 </div>
                 <div class="footer">{app:footer()}</div>

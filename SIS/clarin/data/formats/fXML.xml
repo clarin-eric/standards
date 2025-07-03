@@ -10,7 +10,7 @@
   <extId type="LOC">fdd000075</extId>
   <extId type="PRONOM">fmt/101</extId>
   <extId type="Wikidata">Q2115</extId>
-  <info type="description">
+  <info type="description" hub="yes">
     <p>In the context of format recommendations, "XML" is too general a pointer to provide a
       meaningful recommendation. In fringe cases, it might happen that a centre receives deposition
       of a prose text, encoded with a series of &lt;paragraph&gt; elements within a &lt;text&gt;
@@ -20,21 +20,24 @@
       of CLARIN centres.</p>
     <p>The following is an emphatically non-exhaustive list of XML-based formats recognized by CLARIN:</p>
     <ul>
-      <li>TEI-based formats</li>
-      <li>XHTML</li>
-      <li>PAULA</li>
-      <li>XCES</li>
-      <li>TigerXML</li>
-      <li>TCF</li>
-      <li>EXMARaLDA</li>
-      <li>FOLKER/OrthoNormal</li>
-      <li>ALTO</li>
-      <li>FoLiA</li>
-      <li>SVG (for graphics)</li>
-      <li>XSD, RNG, Schematron (for document grammars)</li>
+      <li><a href="../views/view-format.xq?id=fTEI">TEI</a>-based formats</li>
+      <li><a href="../views/view-format.xq?id=fXHTML">XHTML</a></li>
+      <li><a href="../views/view-format.xq?id=fPAULA">PAULA</a></li>
+      <li>XCES for corpus annotation</li>
+      <li><a href="../views/view-format.xq?id=fTiger">TigerXML</a></li>
+      <li>TCF, the Weblicht-internal format</li>
+      <li><a href="../views/view-format.xq?id=fEXB">EXMARaLDA</a>, <a href="../views/view-format.xq?id=fTEISpoken">ISO/TEI Spoken</a>, <a href="../views/view-format.xq?id=fCHAT-XML">CHAT-XML</a>, <a href="../views/view-format.xq?id=fTransana">Transana</a> for speech transcription</li>
+      <li><a href="../views/view-format.xq?id=fALTO">ALTO</a></li>
+      <li><a href="../views/view-format.xq?id=fFoLiA">FoLiA</a></li>
+      <li><a href="../views/view-format.xq?id=fSVG">SVG</a> (for graphics)</li>
+      <li><a href="../views/view-format.xq?id=fXSD">XSD</a>, RNG, Schematron (for document grammars)</li>
+      <li><a href="../views/view-format.xq?id=fXMI">XMI</a> for exchanging model diagrams</li>
       <li>...</li>
-      <li>many others: the SIS is going to feature a format-family browsing facility in the "near future".</li>
     </ul>
+    <p>To repeat: the above list is not exhaustive even in the context of the SIS. This should be enough of a hint that saying 
+      "Our centre, in domain such-and-such, recommends XML" is absoformalutely <i>not enough</i>! :-) Please <i>always</i> try to be more 
+      granular in such cases. Similar remarks concern e.g. TEI (which can be a multitude of formats, not all of them suitable in some particular case) or 
+      CoNLL (which is a name for a bunch of annotation formats, only some of which you probably want to accept). Etc., etc.</p>
   </info>
   <relation target="SpecXML" type="isDefinedBy"/>
   <mimeType>application/xml</mimeType>

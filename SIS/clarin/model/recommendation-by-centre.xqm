@@ -44,3 +44,7 @@ declare function recommendation:get-formats-by-recommendation-level($level){
 declare function recommendation:get-all-recommendations(){
     $recommendation:centres/formats/format
 };
+
+declare function recommendation:get-recommendation-headers() as element(header)+ {
+    $recommendation:centres/header
+};

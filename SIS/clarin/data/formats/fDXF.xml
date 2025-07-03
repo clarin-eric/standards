@@ -21,5 +21,5 @@
   </info>
   <mimeType>image/vnd.dxf</mimeType>
   <fileExt>.dxf</fileExt>
-
+  <formatFamily>Plain.Statements</formatFamily>
 </format>

@@ -91,7 +91,7 @@ declare option output:html-version "5";
                             <td class="row">ri</td>
                             <td class="row">no</td>
                             <td class="row">filter the recommendations by research infrastructure. The value must be URL-encoded. 
-                            Possible values: Text+, CLARIN (default)</td>
+                            Possible values: TextPlus, CLARIN (default)</td>
                             <td class="row">Text%2B</td>
                         </tr>
                     </table>

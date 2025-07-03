@@ -1,5 +1,5 @@
 <?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fWave" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fWAVE" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
     <title>Waveform Audio File Format</title>
     <abbr>WAVE</abbr>

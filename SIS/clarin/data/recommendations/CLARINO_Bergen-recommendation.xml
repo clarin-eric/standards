@@ -15,7 +15,7 @@
         <centreName>CLARINO Bergen Center</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/29"/>
         <nodeInfo>
-          <ri status="B-centre,K-centre">CLARIN</ri>
+          <ri status="B-centre K-centre">CLARIN</ri>
         </nodeInfo>
       </centre>
     </header>
@@ -59,12 +59,12 @@
          <domain>Lexical Resource</domain>
          <level>recommended</level>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
          <comment>PCM-WAV, 48 kHz, 16 bit</comment>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>acceptable</level>
          <comment>PCM-WAV above 22 kHz/16 bit</comment>

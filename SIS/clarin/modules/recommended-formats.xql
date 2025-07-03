@@ -536,7 +536,7 @@ declare function rf:print-format-comments($format, $language) {
 
 declare function rf:print-missing-format-link($format-id) {
     <span class="tooltip">
-        <a style="margin-left:5px;" href="{app:getGithubIssueLink($format-id)}">
+        <a style="margin-left:5px;" href="{app:getGithubFormatIssueLink($format-id)}">
             <img src="{app:resource("plus.png", "img")}" height="15"/>
         </a>
         <span

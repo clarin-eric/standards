@@ -17,5 +17,5 @@
     </info>
     <fileExt>.vrt</fileExt>
     <formatFamily>Markup.Partial</formatFamily>
-    <formatFamily>Plain.</formatFamily> <!-- this is an experiment -->
+    <formatFamily>Plain.Delimited</formatFamily> <!-- this is an experiment in double relations -->
 </format>

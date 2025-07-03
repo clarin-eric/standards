@@ -112,12 +112,12 @@
          <level>recommended</level>
          <comment>See <a href="https://dans.knaw.nl/en/file-formats/">more info from DANS</a></comment>
       </format>
-      <format id="fQT">
+      <format id="fMOV">
          <domain>Audiovisual Source Language Data</domain>
          <level>acceptable</level>
          <comment>See <a href="https://dans.knaw.nl/en/file-formats/">more info from DANS</a></comment>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>acceptable</level>
          <comment>See <a href="https://dans.knaw.nl/en/file-formats/">more info from DANS</a></comment>

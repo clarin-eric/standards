@@ -31,9 +31,9 @@ let $centre-ri := $centre/nodeInfo/ri
 
 let $recommendation := cm:get-recommendations($id)
 
-let $languageHeader := fn:substring(request:header("Accept-Language"),0,3)
-let $ri :=  request:cookie("ri")
-let $languageHeader := if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader
+let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
+let $ri :=  request:get-cookie-value("ri")
+let $languageHeader := if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader   (:(I think TextPlus should be singled out for "de" in a positive statement):)
 let $centre-info := cm:parseFormatRef(cm:get-centre-info($id,$languageHeader), $id)
 
 let $domains := fn:distinct-values($recommendation/formats/format/domain/text())
@@ -96,7 +96,7 @@ return
                                            else () 
                                      
                                      return
-                                    <span id="reg-link">{$registry}: <a href="{$uri}">{$uri}</a>{$label}</span>
+                                    <span id="reg-link">{$registry ! cm:visualise-ri-name(.)}: <a href="{$uri}">{$uri}</a>{$label}</span>
                                  }
 
                              </div>                            
@@ -114,7 +114,7 @@ return
                                              concat('   (',data($registry-link/@label), ')')
                                            else () 
                                     return 
-                                      <li><span id="{concat('reg-link_',$pos)}">{$registry}: <a href="{$uri}">{$uri}</a></span><span id="{concat('reg-label_',$pos)}">{$label}</span></li>
+                                      <li><span id="{concat('reg-link_',$pos)}">{$registry ! cm:visualise-ri-name(.)}: <a href="{$uri}">{$uri}</a></span><span id="{concat('reg-label_',$pos)}">{$label}</span></li>
                                  }
                                  </ul>
 

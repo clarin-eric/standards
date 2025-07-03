@@ -20,10 +20,10 @@
       <centre id="IDS" deposition="1">
          <centreName>Leibniz-Institut für Deutsche Sprache</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/11"/>
-         <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/fbb09340-0dd4-473d-bd54-13a0518d1e47/"/>
+         <registryLink registry="TextPlus" uri="https://registry.text-plus.org/entity/fbb09340-0dd4-473d-bd54-13a0518d1e47/"/>
          <nodeInfo>
             <ri status="C-centre">CLARIN</ri>
-            <ri status="Collections, Lexical Resources, Operations">Text+</ri>
+            <ri status="Collections Lexical_Resources Operations">TextPlus</ri>
          </nodeInfo>
       </centre>
    </header>
@@ -178,12 +178,12 @@
          <domain>Audiovisual Source Language Data</domain>
          <level>acceptable</level>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
          <comment>PCM-WAV, 48 kHz, 16 bit</comment>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>acceptable</level>
          <comment>PCM-WAV with non-recommended parameters (not 48 kHz, 16 bit)</comment>
