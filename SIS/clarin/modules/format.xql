@@ -226,7 +226,7 @@ declare function fm:list-mime-types() {
     for $type in $mime-types
        let $list := $format:formats[mimeType = $type]
        let $numOfItems := count($list)
-       let $links : = 
+       let $links := 
            for $k in (1 to $numOfItems)
                let $format := $list[$k]
                let $abbr := $format/titleStmt/abbr
@@ -251,7 +251,7 @@ declare function fm:list-extensions() {
     for $e in $extensions
        let $list := $format:formats[fileExt = $e]
        let $numOfItems := count($list)
-       let $links : = 
+       let $links := 
            for $k in (1 to $numOfItems)
                let $format := $list[$k]
                let $abbr := $format/titleStmt/abbr

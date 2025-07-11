@@ -11,10 +11,10 @@ declare option output:media-type "text/html";
 declare option output:indent "yes";
 declare option output:html-version "5";
 
-let $reset := request:get-parameter('reset', '')
-let $status := if ($reset) then () else request:get-parameter('status', '')
-let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
-let $riCookie :=  request:get-cookie-value("ri")
+let $reset := request:parameter('reset', '')
+let $status := if ($reset) then () else request:parameter('status', '')
+let $sortBy := if ($reset) then () else request:parameter('sortBy', '')
+let $riCookie :=  request:cookie("ri")
 let $rows as element(tr)+ := cm:list-centre($sortBy, $status, $riCookie)
 let $numrows := count($rows)
 let $numdepo := count($rows//td[@data-is eq 'depo' and string-length(.)])

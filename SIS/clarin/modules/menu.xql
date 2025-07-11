@@ -138,18 +138,7 @@ declare function menu:view() {
                     <a style="display:block" href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards Watchtower</a>
                 </td>
             </tr>
-            {
-                if (session:get-attribute("user") = 'webadmin' or session:get-attribute("user") = 'user')
-                then
-                    <tr>
-                        <td width="10px"></td>
-                        <td colspan="2" class="tdmenu">
-                            <a style="display:block" href="{app:link("views/register-spec.xq")}">Register</a>
-                        </td>
-                    </tr>
-                else
-                    ()
-            }
+                       
             
             <!--               <tr>
                     <td colspan="2" class="tdmenu">
