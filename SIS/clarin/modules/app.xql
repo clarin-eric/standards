@@ -38,7 +38,7 @@ declare function app:determine-base-uri() {
     return
         if ($server-name eq "localhost")
         then
-            concat("http://", $server-name, ":", request:port(), "/exist/apps/clarin/")
+            concat("http://", $server-name, ":", request:port(), "/clarin/")
         else
             if ($server-name eq "standards.clarin.eu")
             then
