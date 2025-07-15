@@ -20,7 +20,7 @@ this is why functions that are actually counting recommendations below have "for
 
 declare function recommendation:get-recommendations-for-centre($id){
     let $convertedId := translate($id,':è','-e')
-    let $path := concat('/db/apps/clarin/data/recommendations/',$convertedId,"-recommendation.xml")
+    let $path := concat('/data/recommendations/',$convertedId,"-recommendation.xml")
     return doc($path)/recommendation
 };
 
