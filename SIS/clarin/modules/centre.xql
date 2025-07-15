@@ -186,7 +186,7 @@ declare function cm:filter-by-status($c, $ris, $statusFilter, $riFilter){
 declare function cm:filter-by-ri($c, $ris, $riFilter) {
     if ($riFilter and not($riFilter eq 'all'))
     then
-        if (fn:contains($ris, $riFilter))
+        if (fn:contains(fn:string-join($ris), $riFilter))
         then
             cm:print-centre-row($c, $ris)
         else
