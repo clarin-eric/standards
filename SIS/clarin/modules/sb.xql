@@ -79,8 +79,10 @@ declare function sbm:get-sb-respStmt($sb){
 declare function sbm:get-specs-by-sb($sb-id as xs:string){    
     let $standards:= 
         for $spec in $spec:specs
+        let $specIds := fn:string-join($spec/descendant-or-self::version/
+        titleStmt/respStmt/name/@id)
         where data($spec/@standardSettingBody) = $sb-id or fn:contains(
-            $spec/descendant-or-self::version/titleStmt/respStmt/name/@id, $sb-id)
+            $specIds, $sb-id)
         return
             <li><a href="{app:link(concat("views/view-spec.xq?id=",$spec/@id))}"
                 >{$spec/titleStmt/title/text()}</a></li>
