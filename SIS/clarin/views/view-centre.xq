@@ -31,10 +31,10 @@ let $centre-ri := $centre/nodeInfo/ri
 
 let $recommendation := cm:get-recommendations($id)
 
-let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
-let $ri :=  request:get-cookie-value("ri")
-let $languageHeader := if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader   (:(I think TextPlus should be singled out for "de" in a positive statement):)
-let $centre-info := cm:parseFormatRef(cm:get-centre-info($id,$languageHeader), $id)
+let $ri := app:get-ri()
+let $language := app:determine-language($ri)
+
+let $centre-info := cm:parseFormatRef(cm:get-centre-info($id,$language), $id)
 
 let $domains := fn:distinct-values($recommendation/formats/format/domain/text())
 
@@ -129,7 +129,7 @@ return
                             {
                                 if ($isDepositing)
                                 then 
-                                    rf:print-curation($recommendation,$languageHeader)
+                                    rf:print-curation($recommendation,$language)
                                 else ()
                             }
                             {
@@ -207,7 +207,7 @@ return
                                              Comments
                                          </th>
                                      </tr>
-                                     {cm:print-recommendation-rows($recommendation, $id, $sortBy, $languageHeader)}
+                                     {cm:print-recommendation-rows($recommendation, $id, $sortBy, $language)}
                                     </table>
                                     ,
                                     <div style="text-align:right;">
