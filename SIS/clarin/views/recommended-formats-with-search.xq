@@ -18,22 +18,19 @@ let $searchItem := request:parameter('searchFormat', '')
 let $reset := request:parameter('resetButton', '')
 let $centre := if ($reset) then () else request:parameter('centre', '')
 let $domainId := if ($reset) then (()) else request:parameter('domain',())
+let $domainParams := fn:string-join(for $d in $domainId return ("&amp;domain=",$d))
+
 let $recommendationLevel := if ($reset) then () else request:parameter('level', '')
 let $sortBy := if ($reset) then () else request:parameter('sortBy', '')
 let $page := request:parameter('page', 1) 
-let $languageHeader := fn:substring(request:header("Accept-Language"),0,3)
+(: let $language := fn:substring(request:header("Accept-Language"),0,3) :)
 
-let $request-ri := request:parameter('ri', '')
-let $ri :=  if ($request-ri) then $request-ri else request:cookie("ri")
-let $ri := if (empty($ri)) then "CLARIN" else $ri
-let $languageHeader := 
-    if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader
-
-let $domainParams := fn:string-join(for $d in $domainId return ("&amp;domain=",$d))
+let $ri := app:get-ri()
+let $language := app:determine-language($ri)
 
 let $rows :=
      rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, 
-     $sortBy, $languageHeader, $ri)
+     $sortBy, $language, $ri)
 
 let $rows := 
     if ($searchItem)

@@ -20,9 +20,8 @@ let $domain := request:parameter('domain', '')
 let $recommendationType := request:parameter('type', '')
 let $sortBy := request:parameter('sortBy', 'centre')
 
-let $language := fn:substring(request:header("Accept-Language"),0,3)
-let $riCookie :=  request:cookie("ri")
-let $language := if (not($riCookie eq "CLARIN")) then "de" else $language
+let $ri := app:get-ri()
+let $language := app:determine-language($ri)
 
 let $format := vfm:get-format($id)
 let $format-name := $format/titleStmt/title/text()

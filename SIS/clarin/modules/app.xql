@@ -32,6 +32,19 @@ declare variable $app:base as xs:string := app:determine-base-uri();
        
 };:)
 
+declare function app:get-ri(){
+    let $request-ri := request:parameter('ri', '')
+    let $cookie-ri := request:cookie("ri")
+    let $ri :=  if ($request-ri) then $request-ri else $cookie-ri
+    return 
+        if (empty($ri)) then "CLARIN" else $ri
+};
+
+declare function app:determine-language($ri){
+        if ($ri eq "text+") then "de"
+        else "en"
+};
+
 declare function app:determine-base-uri() {
     (:let $server-name := request:get-server-name():)
     let $server-name := request:hostname()
