@@ -27,8 +27,8 @@ declare function xsd:get-statuses-in-ri($ri as xs:string) as xs:string* {
 
 (:not yet used anywhere:)
 declare function xsd:list-ri-node-statuses() as map(xs:string, xs:string*) {
-    let $ris as xs:string+ := xsd:get-ris()
-    let $ri-map as map(xs:string, xs:string+) := map:merge( for $ri in $ris return map:entry( $ri , xsd:get-statuses-in-ri($ri) ) )
+    let $ris as xs:string* := xsd:get-ris()
+    let $ri-map as map(xs:string, xs:string*) := map:merge( for $ri in $ris return map:entry( $ri , xsd:get-statuses-in-ri($ri) ) )
     
     return $ri-map
 };
