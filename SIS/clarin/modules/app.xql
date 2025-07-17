@@ -41,7 +41,7 @@ declare function app:get-ri(){
 };
 
 declare function app:determine-language($ri){
-        if ($ri eq "text+") then "de"
+        if ($ri eq "TextPlus") then "de"
         else "en"
 };
 
