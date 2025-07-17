@@ -14,21 +14,21 @@ declare variable $xsd:format := doc('../schemas/format.xsd');
 declare variable $xsd:recommendation := doc('../schemas/recommendation.xsd');
 
 (:get research infrastructures:)
-declare function xsd:get-ris() as xs:string+ {
+declare function xsd:get-ris() as xs:string* {
     $xsd:recommendation/xs:schema/xs:simpleType[@name eq 'ResearchInfrastructures']/xs:restriction/xs:enumeration/data(@value)
 };
 
-declare function xsd:get-statuses-in-ri($ri as xs:string) as xs:string+ {
-    let $stats as xs:string+ :=  $xsd:recommendation/xs:schema/xs:simpleType[@name eq concat('CentreStatus-',$ri)]/xs:list/xs:simpleType/xs:restriction/xs:enumeration/@value ! string(.)
+declare function xsd:get-statuses-in-ri($ri as xs:string) as xs:string* {
+    let $stats as xs:string* :=  $xsd:recommendation/xs:schema/xs:simpleType[@name eq concat('CentreStatus-',$ri)]/xs:list/xs:simpleType/xs:restriction/xs:enumeration/@value ! string(.)
     return if (count($stats))
            then $stats
            else concat($ri,'-inapplicable')
 };
 
 (:not yet used anywhere:)
-declare function xsd:list-ri-node-statuses() as map(xs:string, xs:string+) {
-    let $ris as xs:string+ := xsd:get-ris()
-    let $ri-map as map(xs:string, xs:string+) := map:merge( for $ri in $ris return map:entry( $ri , xsd:get-statuses-in-ri($ri) ) )
+declare function xsd:list-ri-node-statuses() as map(xs:string, xs:string*) {
+    let $ris as xs:string* := xsd:get-ris()
+    let $ri-map as map(xs:string, xs:string*) := map:merge( for $ri in $ris return map:entry( $ri , xsd:get-statuses-in-ri($ri) ) )
     
     return $ri-map
 };

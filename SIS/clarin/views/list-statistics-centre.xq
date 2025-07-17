@@ -17,7 +17,7 @@ declare option output:html-version "5";
     @author margaretha
 :)
 
-let $ris as xs:string+ := cm:get-current-research-infrastructures() (: use the live list rather than the schema :)
+let $ris as xs:string* := cm:get-current-research-infrastructures() (: use the live list rather than the schema :)
 
 return 
 <html lang="en">
