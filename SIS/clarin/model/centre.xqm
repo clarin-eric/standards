@@ -34,7 +34,7 @@ declare function centre:get-centre-ids-by-ri($ri as xs:string){
 declare function centre:get-centre-by-research-infrastructure($ri as xs:string,
     $status as xs:string){
     for $c in $centre:centres[nodeInfo/ri=$ri]
-        let $c-status :=  $c/nodeInfo/ri/@status
+        let $c-status :=  string-join($c/nodeInfo/ri/@status)
     return
         if (contains($c-status,$status))
         then $c
@@ -45,6 +45,6 @@ declare function centre:get-distinct-research-infrastructures() as xs:string+ {
     fn:distinct-values($centre:centres/nodeInfo/ri)
 };
 
-declare function centre:get-deposition-centres($ri) as element(centre)+ {
+declare function centre:get-deposition-centres($ri) as element(centre)* {
     $centre:centres[nodeInfo/ri=$ri and xs:boolean(@deposition)]
 };
