@@ -46,7 +46,7 @@ function sis:print() as element(html) {
       <html lang="en">
           <head>
               <title>Centre: {$id}</title>
-              <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+              <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
               <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
               <script type="text/javascript" src="{app:resource("d3.v2.js", "js")}"/>
               <script type="text/javascript" src="{app:resource("forcegraph.js", "js")}"/>

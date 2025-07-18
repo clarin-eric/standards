@@ -57,7 +57,7 @@ function sis:print() as element(html) {
   <html lang="en">
       <head>
          <title>{$spec-name}</title>
-          <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>       
+          <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>       
           <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
           <link rel="stylesheet" type="text/css" href="{app:resource("tagclouds.css","css")}"/>
           <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dijit/themes/claro/claro.css" media="screen"/>
