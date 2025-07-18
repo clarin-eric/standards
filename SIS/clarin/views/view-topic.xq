@@ -1,19 +1,21 @@
 xquery version "3.1";
+module namespace sis = 'sis';
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace tm = "http://clarin.ids-mannheim.de/standards/topic-module" at "../modules/topic.xql";
 
-declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
-declare option output:method "html";
-declare option output:media-type "text/html";
-declare option output:indent "yes";
-declare option output:html-version "5";
-
 (:  Define the topic page
     @author margaretha
     @date Dec 2013
 :)
+declare
+  %rest:path('/clarin/views/view-topic.xq')
+  %output:method('html')
+  %output:media-type("text/html")
+  %output:indent("yes")
+  %output:html-version("5")
+function sis:print() as element(html) {
 
 let $id := request:parameter('id', '')
 let $topic := tm:get-topic($id)
@@ -55,3 +57,4 @@ return
             </div>
         </body>
     </html>
+};
