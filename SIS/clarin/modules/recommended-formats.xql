@@ -285,7 +285,7 @@ declare function rf:print-centre-recommendation($requestedCentre,
           
     let $ri-recommendations := 
         if ($ri eq "all") then ($recommendation:centres)
-        else $recommendation:centres[contains($ri-centres, 
+        else $recommendation:centres[contains(string-join($ri-centres),  
         header/filter/centreID/text())]
     
     for $r in $ri-recommendations
