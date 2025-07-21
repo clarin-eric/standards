@@ -57,9 +57,9 @@ declare option output:html-version "5";
                     <p>The keyword cloud below provides an alternative way to access the format and recommendation 
                     information.</p> 
                 </div>
-                <div style="margin-left:10%; margin-bottom:15px;">
+                <div style="margin-left:10%">
                     <div id="myCanvasContainer">
-                        <canvas width="600" height="500" id="myCanvas"/>
+                        <canvas width="600" height="600" id="myCanvas"/>
                     </div>
                     <div id="tags" style="border:1px solid #DDDDDD; padding:8px;" >
                       <!--{index:print-spec-links()}

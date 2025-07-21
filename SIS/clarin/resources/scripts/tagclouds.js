@@ -7,7 +7,7 @@ try {
     depth: 0.5,
     minBrightness:0.2,
     wheelZoom: false,
-    maxSpeed: 0.03,
+    maxSpeed: 0.01,
     freezeActive:false,
     weight:true,
     weightSize:1.0            
