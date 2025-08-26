@@ -54,19 +54,19 @@ declare function em:export-table($ri, $centre, $domainId, $requestedLevel,
             
             </format>
         
-    let $quote := "&#34;"
-    (:
-    let $header1 := response:set-header("Content-Disposition", concat("attachment; filename=",
-    $quote, $filename, $quote))
-    let $header2 := response:set-header("Content-Type", "text/xml;charset=utf-8")
-    :)
-    let $header := web:response-header(
-      { 'Content-Disposition': concat("attachment; filename=",
-        $quote, $filename, $quote) },
-      { 'Content-Type': 'text/xml;charset=utf-8' }
-    )
+    let $quote := "&#34;"    
+    let $content-disposition := concat("attachment; filename=",
+          $quote, $filename, $quote)
     
     return
+       (         
+          <rest:response>
+            <http:response status="200">
+              <http:header name="Content-Disposition" value='{$content-disposition}'/>
+              <http:header name="Content-Type" value="application/xml;charset=utf-8"/>
+            </http:response>
+          </rest:response>
+        ,
         <recommendation xsi:noNamespaceSchemaLocation="https://clarin.ids-mannheim.de/standards/schemas/recommendation.xsd">
             <header>
                 <title>CLARIN Standards Information System (SIS) export</title>
@@ -80,25 +80,26 @@ declare function em:export-table($ri, $centre, $domainId, $requestedLevel,
             {$centreInfo}
             <formats>{$rows}</formats>
         </recommendation>
-
+      )
 };
 
 
 declare function em:download-template($centre-id,$filename){
     let $filename := fn:replace($filename,":","-")
-    let $quote := "&#34;"
-    (:let $header1 := response:set-header("Content-Disposition", concat("attachment; filename=",
-    $quote, $filename, $quote))
-    let $header2 := response:set-header("Content-Type", "text/xml;charset=utf-8"):)
-    let $header := web:response-header(
-      { 'Content-Disposition': concat("attachment; filename=",
-        $quote, $filename, $quote) },
-      { 'Content-Type': 'text/xml;charset=utf-8' }
-    )
-    
+    let $quote := "&#34;"    
+    let $content-disposition := concat("attachment; filename=",
+          $quote, $filename, $quote)
     let $recommendation := recommendation:get-recommendations-for-centre($centre-id)
 
     return
+      (         
+          <rest:response>
+            <http:response status="200">
+              <http:header name="Content-Disposition" value='{$content-disposition}'/>
+              <http:header name="Content-Type" value="application/xml;charset=utf-8"/>
+            </http:response>
+          </rest:response>
+        ,
         <recommendation xsi:noNamespaceSchemaLocation="https://clarin.ids-mannheim.de/standards/schemas/recommendation.xsd">
             <header>
                 <title>CLARIN Standards Information System (SIS) export</title>
@@ -110,4 +111,5 @@ declare function em:download-template($centre-id,$filename){
             </header>
             {$recommendation/formats}    
         </recommendation>
+      )
 };

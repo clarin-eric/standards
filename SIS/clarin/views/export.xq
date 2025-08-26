@@ -1,6 +1,6 @@
 xquery version "3.1";
 
-declare namespace exist = "http://exist.sourceforge.net/NS/exist";
+module namespace sis = 'sis';
 
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
@@ -8,58 +8,69 @@ import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-mod
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 import module namespace em = "http://clarin.ids-mannheim.de/standards/export" at "../modules/export.xql";
 
-let $source := request:parameter('source', '')
-let $id := request:parameter('id', '')
-let $sortBy := request:parameter('sortBy', '')
-let $export := request:parameter('export', '')
-let $template := request:parameter('template', '')
-
-let $exportFilename := 
-    if ($id) then concat($id,"-recommendation.xml") 
-    else "format-recommendation.xml"
-
-let $searchItem := request:parameter('searchFormat', '')
-let $centre :=  request:parameter('centre', '')
-let $id := if ($centre) then $centre else $id
-
-let $domainId := request:parameter('domain',())
-let $recommendationLevel := request:parameter('level', '')
-
-let $languageHeader := fn:substring(request:header("Accept-Language"),0,3)
-
-let $request-ri := request:parameter('ri', '')
-let $ri :=  if ($request-ri) then $request-ri else request:cookie("ri")
-let $ri := if (empty($ri)) then "CLARIN" else $ri
-let $languageHeader := 
-    if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader
-let $ri-filter := if ($source eq "views/view-centre.xq") then "" else $ri
-
-let $centreInfo := cm:get-centre-info($id,$languageHeader)
-
-let $rows :=
-     rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, 
-     $sortBy, $languageHeader, $ri)
-
-let $rows := 
-    if ($searchItem)
-    then rf:searchFormat($searchItem,$rows)
-    else $rows
-
-
-return
-
-if ($export)
-then (em:export-table($ri-filter,$id, $domainId, $recommendationLevel, $rows,
-    $exportFilename,$source,$centreInfo))
-else if ($template)
-then (em:download-template($id,$exportFilename))
-else()
-
-
-(:
-then (em:export-table("", $id, (), "", 
-            rf:print-centre-recommendation($id,(), "", $sortBy,$languageHeader,$ri),
-            $exportFilename, "views/view-centre.xq", cm:get-centre-info($id,$languageHeader)))
-
-then (em:export-table($ri,$centre, $domainId, $recommendationLevel, $rows,
-    "format-recommendation.xml","views/recommended-formats-with-search.xq",$centreInfo)):)
+declare
+  %rest:path('/clarin/views/export.xq')
+  %output:method('xml')
+  %output:media-type("text/xml")
+  %output:indent("yes")
+  %output:omit-xml-declaration("yes")
+function sis:print() as element()* {
+  
+  let $source := request:parameter('source', '')
+  let $id := request:parameter('id', '')
+  let $sortBy := request:parameter('sortBy', '')
+  let $export := request:parameter('export', '')
+  let $template := request:parameter('template', '')
+  
+  let $exportFilename := 
+      if ($id) then concat($id,"-recommendation.xml") 
+      else "format-recommendation.xml"
+  
+  let $searchItem := request:parameter('searchFormat', '')
+  let $centre :=  request:parameter('centre', '')
+  let $id := if ($centre) then $centre else $id
+  
+  let $domainId := request:parameter('domain',())
+  let $recommendationLevel := request:parameter('level', '')
+  
+  let $languageHeader := fn:substring(request:header("Accept-Language"),0,3)
+  
+  let $request-ri := request:parameter('ri', '')
+  let $ri :=  if ($request-ri) then $request-ri else request:cookie("ri")
+  let $ri := if (empty($ri)) then "CLARIN" else $ri
+  let $languageHeader := 
+      if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader
+  let $ri-filter := if ($source eq "views/view-centre.xq") then "" else $ri
+  
+  let $centreInfo := 
+    if ($id) then cm:get-centre-info($id,$languageHeader) else ()
+  
+  let $rows :=
+       rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, 
+       $sortBy, $languageHeader, $ri)
+  
+  let $rows := 
+      if ($searchItem)
+      then rf:searchFormat($searchItem,$rows)
+      else $rows
+  
+  
+  return
+  
+  if ($export)
+  then (em:export-table($ri-filter,$id, $domainId, $recommendationLevel, $rows,
+      $exportFilename,$source,$centreInfo))
+  else if ($template)
+  then (em:download-template($id,$exportFilename))
+  else()
+  
+  
+  (:
+  then (em:export-table("", $id, (), "", 
+              rf:print-centre-recommendation($id,(), "", $sortBy,$languageHeader,$ri),
+              $exportFilename, "views/view-centre.xq", cm:get-centre-info($id,$languageHeader)))
+  
+  then (em:export-table($ri,$centre, $domainId, $recommendationLevel, $rows,
+      "format-recommendation.xml","views/recommended-formats-with-search.xq",$centreInfo)):)
+      
+};
