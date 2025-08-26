@@ -173,7 +173,7 @@ declare function cm:list-centre($sortBy, $statusFilter, $riFilter) as element(tr
 declare function cm:filter-by-status($c, $ris, $statusFilter, $riFilter){
     if ($statusFilter)
         then
-            if (fn:contains(cm:get-statuses($c), $statusFilter))
+            if (fn:contains(string-join(cm:get-statuses($c)), $statusFilter))
             then
                 cm:filter-by-ri($c, $ris, $riFilter)
             else
