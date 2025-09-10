@@ -7,10 +7,9 @@
             <centreID>CLARIN-LV</centreID>
         </filter>
         <respStmt>
-            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
-            <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-            <reviewDate>0001-01-01</reviewDate>
+            <name>Roberts Darģis</name>
+            <link>https://github.com/Skriptotajs</link>
+            <reviewDate>2025-09-10</reviewDate>
         </respStmt>
         <centre id="CLARIN-LV" deposition="1">
         <centreName>CLARIN Centre of Latvian language resources and tools</centreName>
@@ -20,20 +19,239 @@
         </nodeInfo>
       </centre>
     </header>
-    <info><!--use p, ul, ol elements here--></info>
-    <formats><!--
-            This template will assist in adjusting/creating a recommendations document if you don't
-            have access to a schema-aware XML editor. Copy the XML fragment, 
-            *  adjust the format ID (see https://standards.clarin.eu/sis/views/list-formats.xq ),
-            *  adjust the domain (https://standards.clarin.eu/sis/views/list-domains.xq ),
-            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
-            *  repeat as necessary;
-            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
-            
-            <format id="null">
-                <domain>Audiovisual Annotation</domain>
-                <level>recommended</level>
-            </format> 
-        -->
+    <info>
+        <p>
+            This page lists the recommended file formats for depositing materials in CLARIN-LV.  
+            For more information, see the pages on  
+            <a href="https://repository.clarin.lv/repository/xmlui/page/deposit" target="_blank">how to deposit</a> or  
+            the <a href="https://repository.clarin.lv/repository/xmlui/page/item-lifecycle" target="_blank">lifecycle of deposited items</a>.
+        </p>
+        <p>
+            For further details, please visit our <a href="https://repository.clarin.lv/repository/xmlui/page/about" target="_blank">About section and policies</a>.
+        </p>
+    </info>
+    <formats>
+        <format id="fAAC">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fAVI">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fBMP">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fCMDI">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCoNLL-U">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCSV">
+            <domain>Text Annotation</domain>
+            <level>acceptable</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format>
+        <format id="fCSV">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format>
+        <format id="fDOC">
+            <domain>Documentation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fDOC">
+            <domain>Textual Source Language Data</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fDOC">
+            <domain>Metadata</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fDOCX">
+            <domain>Textual Source Language Data</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fDOCX">
+            <domain>Audiovisual Annotation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fDOCX">
+            <domain>Metadata</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fDOCX">
+            <domain>Documentation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fEAF">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fFLAC">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fGIF">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fGZIP">
+            <domain>Packaging</domain>
+            <level>acceptable</level>
+            <comment>The archive should contain files in recommended formats.</comment>
+        </format>
+        <format id="fHTML">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fHTML">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fJPEG">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fJSON">
+            <domain>Text Annotation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fJSON">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fJSON">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fLaTeX">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fMarkdown">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fMarkdown">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fMKV">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fMP3">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fMP4">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fOGG">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fPDF">
+            <domain>Textual Source Language Data</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fPDF">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>UTF-8 encoding</comment>
+        </format>
+        <format id="fTextPlain">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Audiovisual Annotation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fPNG">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fMOV">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fRAR">
+            <domain>Packaging</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fRTF">
+            <domain>Textual Source Language Data</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fRTF">
+            <domain>Documentation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fSVG">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTAR">
+            <domain>Packaging</domain>
+            <level>acceptable</level>
+            <comment>The archive should contain files in recommended formats.</comment>
+        </format>
+        <format id="fTEI">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTEI">
+            <domain>Text Annotation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTEI">
+            <domain>Audiovisual Annotation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTIFF">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTRS">
+            <domain>Audiovisual Annotation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTSV">
+            <domain>Text Annotation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTSV">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fWAVE">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fXML">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fZIP">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+            <comment>The archive should contain files in recommended formats.</comment>
+        </format>
     </formats>
 </recommendation>
