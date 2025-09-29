@@ -1,0 +1,21 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSIARD" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Software-Independent Archiving of Relational Databases</title>
+    <abbr>SIARD</abbr>
+  </titleStmt>
+  <keyword>database</keyword>
+  <keyword>packaging</keyword>
+  <extId type="LOC">fdd000426</extId>
+  <extId type="PRONOM">fmt/161</extId>
+  <extId type="Wikidata">Q27861463</extId>
+  <info type="description">
+    <p>SIARD stands for Software Independent Archiving of Relational Databases. Originally the Swiss Federal Archives (SFA) have developed the SIARD format as a sustainable solution for the archiving of relations databases. It is based on converting the contents of databases into XML.</p>
+    <p>See also:
+      <ul>
+        <li>File Formats Wiki: <a href="http://fileformats.archiveteam.org/wiki/SIARD">SIARD</a></li>
+      </ul>
+    </p>
+  </info>
+  <fileExt>.siard</fileExt>
+</format>

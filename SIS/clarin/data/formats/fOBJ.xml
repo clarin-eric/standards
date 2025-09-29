@@ -1,0 +1,17 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fOBJ" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Wavefront OBJ File Format</title>
+    <abbr>OBJ</abbr>
+  </titleStmt>
+  <keyword>3D format</keyword>
+  <extId type="LOC">fdd000507</extId>
+  <extId type="PRONOM">fmt/1210</extId>
+  <extId type="Wikidata">Q2119595</extId>
+  <info type="description">
+    <p>See: <a href="http://fileformats.archiveteam.org/wiki/Wavefront_OBJ">File Formats Wiki: Wavefront OBJ.</a>.</p>
+  </info>
+  <mimeType>model/obj</mimeType>
+  <fileExt>.obj</fileExt>
+  <!--<formatFamily>Plain.Statements</formatFamily>-->
+</format>
