@@ -7,20 +7,28 @@
          <centreID>ACDH-ARCHE</centreID>
       </filter>
       <respStmt>
-         <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
-         <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-         <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-         <reviewDate>0001-01-01</reviewDate>
+         <name>Martina Trognitz</name>
+         <resp>Repository Manager of ARCHE</resp>
+         <link>https://github.com/bellerophons-pegasus</link>
+         <reviewDate>2025-09-29</reviewDate>
       </respStmt>
       <centre id="ACDH-ARCHE" deposition="1">
-        <centreName>Austrian Centre for Digital Humanities and Cultural Heritage - A Resource Centre for the Humanities</centreName>
+        <centreName>Austrian Centre for Digital Humanities - A Resource Centre for the HumanitiEs</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/45"/>
         <nodeInfo>
           <ri status="B-centre">CLARIN</ri>
         </nodeInfo>
       </centre>
    </header>
-   <info><!--use p, ul, ol elements here--></info>
+   <info>
+   
+   https://arche.acdh.oeaw.ac.at/browser/filenames-formats-metadata
+   
+   <p>More information on formats for long-term preservation at ARCHE is available at the information page <a href="https://arche.acdh.oeaw.ac.at/browser/filenames-formats-metadata">"Filenames, Formats, and Metadata"</a>. ARCHE uses the term "recommended" for any formats suitable for long-term preservation, which equals the level "recommended" from CLARIN. The term "accepted" refers to formats that can be acceptable for long-term preservation in specific cases ("acceptable" in CLARIN terms) or are accepted by ARCHE, but will be converted into a more suitable format; in CLARIN terms this equals "discouraged".</p>
+      <p>Depositors are strongly encouraged to provide the resources in standard formats adopted by the respective research communities. ARCHE curators will support depositors in converting the data if this is necessary and feasible.</p>
+      <p>Suitable formats should be widely in use and, if possible, be in compliance with open and non-proprietary standards. Files should not be password protected, encrypted or compressed in a lossy way. If files depend on references to other files, fonts, or other external data, these objects should be deposited as well, or at least described in e.g. a plain text README file. Whenever a choice for encoding is possible choose UTF-8 without the byte order mark (BOM).</p>
+      <p>A more technical view on the list of accepted and recommended formats can be found in <h href="https://github.com/acdh-oeaw/arche-assets/blob/master/AcdhArcheAssets/formats.json">JSON format on GitHub</a>.</p>
+   </info>
    <formats>
       <format id="fFLAC">
          <domain>Audiovisual Source Language Data</domain>
@@ -29,14 +37,22 @@
       <format id="fMKV">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
+         <comment>For videos, with FFV1 for Video and linear PCM or FLAC for audio. H.264/MPEG-4 AVC and MPEG-2 are also suitable codecs.</comment>
       </format>
       <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
+         <comment>For audio. With linear PCM.</comment>
+      </format>
+      <format id="fBWF">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>For audio. With linear PCM.</comment>
       </format>
       <format id="fDOCX">
          <domain>Documentation</domain>
-         <level>recommended</level>
+         <level>discouraged</level>
+         <comment>Consider using <formatRef ref="fPDFA-1"/> or <formatRef ref="fPDFA-2"/> instead.</comment>
       </format>
       <format id="fHTML">
          <domain>Documentation</domain>
@@ -44,11 +60,13 @@
       </format>
       <format id="fODT">
          <domain>Documentation</domain>
-         <level>recommended</level>
+         <level>discouraged</level>
+         <comment>Consider using <formatRef ref="fPDFA-1"/> or <formatRef ref="fPDFA-2"/> instead.</comment>
       </format>
       <format id="fPDF">
          <domain>Documentation</domain>
-         <level>acceptable</level>
+         <level>discouraged</level>
+         <comment>PDF formats for archiving, such as <formatRef ref="fPDFA-1"/> or <formatRef ref="fPDFA-2"/> should be used instead.</comment>
       </format>
       <format id="fPDFA-1">
          <domain>Documentation</domain>
@@ -61,10 +79,7 @@
       <format id="fPDFA-3">
          <domain>Documentation</domain>
          <level>acceptable</level>
-      </format>
-      <format id="fTEI">
-         <domain>Documentation</domain>
-         <level>recommended</level>
+         <comment>Requires embedded media to be stored in recommended formats to be suitable for long-term preservation. Otherwise use <formatRef ref="fPDFA-1"/> or <formatRef ref="fPDFA-2"/>.</comment>
       </format>
       <format id="fTextPlain">
          <domain>Documentation</domain>
@@ -74,17 +89,46 @@
          <domain>Documentation</domain>
          <level>recommended</level>
       </format>
+      <format id="fSGML">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+      </format>
       <format id="fSVG">
          <domain>Image Source Language Data</domain>
          <level>recommended</level>
+         <comment>Uncompressed, version 1.1.</comment>
       </format>
       <format id="fTIFF">
          <domain>Image Source Language Data</domain>
          <level>recommended</level>
+         <comment>Baseline tiff v. 6, uncompressed or lossless compression with LZW.</comment>
+      </format>
+      <format id="fDNG">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+         <comment>Recommended for RAW born-digital photographs.</comment>
       </format>
       <format id="fCSV">
          <domain>Lexical Resource</domain>
          <level>recommended</level>
+      </format>
+      <format id="fCSV">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTSV">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fODS">
+         <domain>Metadata</domain>
+         <level>discouraged</level>
+         <comment>Use <formatRef ref="fCSV"/> instead.</comment>
+      </format>
+      <format id="fXLSX">
+         <domain>Metadata</domain>
+         <level>discouraged</level>
+         <comment>Use <formatRef ref="fCSV"/> instead.</comment>
       </format>
       <format id="fTEI">
          <domain>Text Annotation</domain>
@@ -92,6 +136,22 @@
       </format>
       <format id="fXML">
          <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fXML">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCMDI">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fXML">
+         <domain>Contextual Information</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCMDI">
+         <domain>Contextual Information</domain>
          <level>recommended</level>
       </format>
       <format id="fTextPlain">
@@ -100,6 +160,50 @@
       </format>
       <format id="fXSD">
          <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fDTD">
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fSIARD">
+         <domain>Other</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fSQL">
+         <domain>Other</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fSQL">
+         <domain>Language Description</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fCSV">
+         <domain>Language Description</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fJSON">
+         <domain>Language Description</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fJSON">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fX3D">
+         <domain>Other</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fDAE">
+         <domain>Other</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fOBJ">
+         <domain>Other</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPLY">
+         <domain>Other</domain>
          <level>recommended</level>
       </format>
    </formats>
