@@ -1,0 +1,23 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fSQL" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Structured Query Language</title>
+    <abbr>SQL</abbr>
+  </titleStmt>
+  <keyword>database</keyword>
+  <!--<extId type="LOC">fdd000465</extId>-->
+  <extId type="PRONOM">fmt/206</extId>
+  <extId type="Wikidata">Q47607</extId>
+  <info type="description">
+    <p>SQL (Structured Query Language) is a database query language initially developed at IBM in the 1970s.</p>
+    <p>See also:
+      <ul>
+        <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/SQL">SQL</a></li>
+        <li>File Formats Wiki: <a href="http://fileformats.archiveteam.org/wiki/SQL">SQL</a></li>
+      </ul>
+    </p>
+  </info>
+  <mimeType>application/x-sql</mimeType>
+  <mimeType>application/sql</mimeType>
+  <fileExt>.sql</fileExt>
+</format>

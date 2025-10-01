@@ -1,0 +1,24 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fX3D" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Extensible 3D Format</title>
+    <abbr>X3D</abbr>
+  </titleStmt>
+  <keyword>3D format</keyword>
+  <extId type="LOC">fdd000490</extId>
+  <extId type="PRONOM" label="v. 3.3">fmt/582</extId>
+  <extId type="Wikidata">Q930428</extId>
+  <info type="description">
+    <p>X3D (Extensible 3D) is an interactive 3D vector graphics format. It is the successor to VRML.</p>
+    <p>X3D is standardized in ISO/IEC 19775 (X3D), ISO/IEC 19776 (X3D encodings), and ISO/IEC 19777 (X3D language bindings).</p>
+    <p>See: <a href="http://fileformats.archiveteam.org/wiki/X3D">File Formats Wiki: X3D.</a>.</p>
+  </info>
+  <mimeType>model/x3d+xml</mimeType>
+  <fileExt>.x3d</fileExt>
+  <fileExt>.x3db</fileExt>
+  <fileExt>.x3dv</fileExt>
+  <fileExt>.x3dz</fileExt>
+  <fileExt>.x3dbz</fileExt>
+  <fileExt>.x3dvz</fileExt>
+  <!--<formatFamily>Plain.Statements</formatFamily>-->
+</format>

@@ -1,0 +1,23 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fDNG" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Digital Negative Format</title>
+    <abbr>DNG</abbr>
+  </titleStmt>
+  <keyword>image format</keyword>
+  <extId type="LOC">fdd000628</extId>
+  <extId type="PRONOM">fmt/1842</extId>
+  <extId type="Wikidata">Q117600268</extId>
+  <info type="description">
+    <p>The Digital Negative (DNG) specification describes a non-proprietary file format for storing camera raw files that can be used by a wide range of hardware and software vendors. DNG is an extension of the TIFF format, and is compatible with the TIFF-EP standard. This version was published in December 2021 and includes support for large files (64-bit BigTIFF extension), semantic masks and triple-illuminant calibration profies.</p>
+    <p>See:
+      <ul>
+        <li>https://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&id=2694</li>
+        <li>http://fileformats.archiveteam.org/wiki/DNG</li>
+      </ul>
+    </p>
+  </info>
+  <mimeType>image/x-adobe-dng</mimeType>
+  <fileExt>.dng</fileExt>
+  <!--<formatFamily>Plain.Statements</formatFamily>-->
+</format>
