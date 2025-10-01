@@ -11,12 +11,11 @@
   <extId type="Wikidata">Q223535</extId>
   <info type="description">
     <p>The Matroska Multimedia Container is an open standard free container format, based on the Extensible Binary Meta Language (EBML).</p>
-    <p>See:
+    <p>See:</p>
       <ul>
-        <li><a href="http://justsolve.archiveteam.org/wiki/Matroska">File Formats Wiki: Matroska.</a><li>
+        <li><a href="http://justsolve.archiveteam.org/wiki/Matroska">File Formats Wiki: Matroska.</a></li>
         <li><a href="https://en.wikipedia.org/wiki/Matroska">Wikipedia: Matroska</a>.</li>
       </ul>
-    </p>
   </info>
   <mimeType>video/matroska</mimeType>
   <fileExt>.mkv</fileExt>

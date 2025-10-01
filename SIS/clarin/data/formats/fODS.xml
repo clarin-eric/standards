@@ -13,10 +13,10 @@
   <info type="description" hub="yes">
     <p>The OpenDocument Spreadsheet format is one of a number of types of the Open Document Format for Office Applications (commonly referred to as OpenDocument), an XML-based file format defined by the Organization for the Advancement of Structured Information Standards (OASIS) in 2005.</p>
     <p>OpenDocument Spreadsheets can, like all OpenDocument files, be represented in one of two fashions - as a single XML document or as a collection of several sub-documents within a single package (commonly a ZIP archive). Generally, the extension .fods is used for the uncommonly-used single XML documents and .ods for packaged sub-documents.</p>
-    </p>As of v1.2 of the OpenDocument specification, the format contains information regarding spreadsheet formulae, pivot tables, etc. in the OpenFormula format. </p>   
+    <p>As of v1.2 of the OpenDocument specification, the format contains information regarding spreadsheet formulae, pivot tables, etc. in the OpenFormula format. </p>   
     <p>See also:</p> 
       <ul>
-        <li><a href="http://fileformats.archiveteam.org/wiki/ODS">File Formats Wiki: OpenDocument Spreadsheet.</a>.
+        <li><a href="http://fileformats.archiveteam.org/wiki/ODS">File Formats Wiki: OpenDocument Spreadsheet.</a>.</li>
         <li>Wikipedia article on <a href="https://en.wikipedia.org/wiki/OpenDocument_standardization">OpenDocument standardization</a></li>
       </ul>
   </info>

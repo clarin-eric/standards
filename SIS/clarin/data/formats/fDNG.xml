@@ -10,12 +10,11 @@
   <extId type="Wikidata">Q117600268</extId>
   <info type="description">
     <p>The Digital Negative (DNG) specification describes a non-proprietary file format for storing camera raw files that can be used by a wide range of hardware and software vendors. DNG is an extension of the TIFF format, and is compatible with the TIFF-EP standard. This version was published in December 2021 and includes support for large files (64-bit BigTIFF extension), semantic masks and triple-illuminant calibration profies.</p>
-    <p>See:
+    <p>See:</p>
       <ul>
-        <li>https://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&id=2694</li>
-        <li>http://fileformats.archiveteam.org/wiki/DNG</li>
+        <li><a href="https://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&amp;id=2694">https://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&amp;id=2694</a></li>
+        <li><a href="http://fileformats.archiveteam.org/wiki/DNG">http://fileformats.archiveteam.org/wiki/DNG</a></li>
       </ul>
-    </p>
   </info>
   <mimeType>image/x-adobe-dng</mimeType>
   <fileExt>.dng</fileExt>

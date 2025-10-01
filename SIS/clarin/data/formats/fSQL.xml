@@ -10,12 +10,12 @@
   <extId type="Wikidata">Q47607</extId>
   <info type="description">
     <p>SQL (Structured Query Language) is a database query language initially developed at IBM in the 1970s.</p>
-    <p>See also:
+    <p>See also:</p>
       <ul>
         <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/SQL">SQL</a></li>
         <li>File Formats Wiki: <a href="http://fileformats.archiveteam.org/wiki/SQL">SQL</a></li>
       </ul>
-    </p>
+    
   </info>
   <mimeType>application/x-sql</mimeType>
   <mimeType>application/sql</mimeType>

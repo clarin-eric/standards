@@ -8,7 +8,7 @@
   <extId type="LOC">fdd000359</extId>
   <extId type="PRONOM">fmt/705</extId>
   <info type="description">
-    The European Broadcast Union (EBU) has developed the BWF format based on WAVE, which additionally supports the embedding of metadata. For long-term archiving, this format should be used with linear PCM.
+    <p>The European Broadcast Union (EBU) has developed the BWF format based on WAVE, which additionally supports the embedding of metadata. For long-term archiving, this format should be used with linear PCM.</p>
   </info>
   <mimeType>audio/x-wav</mimeType>
   <fileExt recommended="yes">.bwf</fileExt>
