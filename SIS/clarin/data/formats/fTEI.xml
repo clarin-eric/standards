@@ -14,7 +14,7 @@
     <p>The 
       <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a>, together with the surrounding
       <a href="https://tei-c.org/tools/">infrastructure</a> (Stylesheets and dedicated utilities) is a toolkit for creating formats (also formats that serialize a standard).</p>
-    <p>By rule of thumb, centres should expect that each TEI document submitted to them is either
+    <p>By rule of thumb, centres should expect that each TEI document submitted to them <formatRef ref="fPDFA-1"/> is either
       accompanied by the ODD file, or conforms to one of the publicly available ODD specifications
       (either a named TEI out-of-the-box customization or a publicly documented extension),
       preferably bearing the stamp of a standards body, or encoding established best practices.</p>

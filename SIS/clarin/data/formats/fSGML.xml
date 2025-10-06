@@ -9,7 +9,8 @@
   <extId type="PRONOM">x-fmt/195</extId>
   <extId type="Wikidata">Q207819</extId>
   <info type="description">
-    <p>SGML (Standard Generalized Markup Language) is an openly documented and freely implementable international standard for semantic markup of textual documents in a manner that permits the separation of the underlying content from the formatting instructions for display or printing.</p>
+    <p>SGML (Standard Generalized Markup Language) is an openly documented and freely implementable international standard for semantic markup of textual documents in a manner that permits the separation of the 
+      underlying content from the formatting instructions for display or printing. The <a href="../views/view-format.xq?id=fXML">XML</a> format was defined as a leaner and more processing-friendly replacement for SGML.</p>
   </info>
   <mimeType>text/sgml</mimeType>
   <fileExt>.sgml</fileExt>
