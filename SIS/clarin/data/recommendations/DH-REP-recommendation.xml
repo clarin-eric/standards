@@ -61,20 +61,8 @@
                 <level>recommended</level>
             </format> 
         -->
-        <format id="fBMP">
-            <domain>Image Source Language Data</domain>
-            <level>recommended</level>
-        </format> 
-        <format id="fBMP">
-            <domain>Other</domain>
-            <level>recommended</level>
-        </format> 
         <format id="fCSV">
             <domain>Contextual Data</domain>
-            <level>recommended</level>
-        </format> 
-        <format id="fGZIP">
-            <domain>Packaging</domain>
             <level>recommended</level>
         </format> 
         <format id="fHTML">
@@ -93,18 +81,6 @@
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format>
-        <format id="fODF">
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fODF">
-            <domain>Other</domain>
-            <level>recommended</level>
-        </format> 
-        <format id="fODT">
-            <domain>Contextual Data</domain>
-            <level>recommended</level>
-        </format> 
         <format id="fPDFA">
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
@@ -119,19 +95,15 @@
         </format> 
         <format id="fTextPlain">
             <domain>Other</domain>
-            <level>recommended</level>
-        </format> 
-        <format id="fSVG">
-            <domain>Other</domain>
-            <level>recommended</level>
-        </format> 
-        <format id="fTAR">
-            <domain>Packaging</domain>
             <level>recommended</level>
         </format> 
         <format id="fTEI">
             <domain>Textual Source Language Data</domain>
-            <level>accepted</level>
+            <level>recommended</level>
+        </format> 
+        <format id="fXML">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
         </format> 
         <format id="TeX">
             <domain>Textual Source Language Data</domain>
@@ -149,9 +121,45 @@
             <domain>Tool Support</domain>
             <level>recommended</level>
         </format> 
+        <format id="fMP4">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fBMP">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fBMP">
+            <domain>Other</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fGZIP">
+            <domain>Packaging</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fODF">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fODF">
+            <domain>Other</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fODT">
+            <domain>Contextual Data</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fSVG">
+            <domain>Other</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fTAR">
+            <domain>Packaging</domain>
+            <level>acceptable</level>
+        </format> 
         <format id="fZIP">
             <domain>Packaging</domain>
-            <level>recommended</level>
+            <level>acceptable</level>
         </format> 
     </formats>
 </recommendation>

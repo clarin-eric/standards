@@ -69,12 +69,12 @@
         <format id="fXML">
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
-        </format> 
-        <format id="fMarkdown">
+        </format>
+        <format id="fTextPlain">
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format> 
-        <format id="fTextPlain">
+        <format id="fMarkdown">
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format> 
@@ -86,5 +86,9 @@
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
+        <format id="fMP4">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
     </formats>
 </recommendation>
