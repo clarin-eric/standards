@@ -105,7 +105,7 @@
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format> 
-        <format id="TeX">
+        <format id="fTeX">
             <domain>Textual Source Language Data</domain>
             <level>recommended</level>
         </format> 
