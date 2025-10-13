@@ -25,18 +25,28 @@
         </centre>
     </header>
     <info xml:lang="en">
-        <p>The DARIAH-DE Repository is a central component of the DARIAH-DE Research Data Federation
+        <p>
+            The DARIAH-DE Repository is a central component of the DARIAH-DE Research Data Federation
             Architecture and allows for storing research data sustainably and securely, and it is
-            CoreTrustSeal certified. The repository allows for finding research data through the
+            <a href="https://doi.org/10.34894/SGNHLL">CoreTrustSeal</a> certified. The repository
+            allows for finding research data through the
             Repository Search as well as through the DARIAH-DE Generic Search. Read more about
-            sustainability, FAIR and Open Access in the Mission Statement of the DARIAH-DE
-            Repository.</p></info>
+            sustainability, FAIR and Open Access in the
+            <a href="https://repository.de.dariah.eu/doc/services/organizational-infrastructure.html#mission-and-long-term-preservation">Mission
+            Statement of the DARIAH-DE Repository</a>.
+        </p>
+    </info>
     <info xml:lang="de">
-        <p>Das DARIAH-DE Repository ermöglicht als zentrale Komponente der DARIAH-DE
+        <p>
+            Das DARIAH-DE Repository ermöglicht als zentrale Komponente der DARIAH-DE
             Forschungsdaten-Föderationsarchitektur die nachhaltige und sichere Speicherung von
-            Forschungsdaten und ist mit dem CoreTrustSeal zertifiziert. Alle publizierten Daten sind
+            Forschungsdaten und ist mit dem <a href="https://doi.org/10.34894/SGNHLL">CoreTrustSeal</a>
+            zertifiziert. Alle publizierten Daten sind
             durch die Repository Suche und die DARIAH-DE Generische Suche auffindbar. Mehr zum Thema
-            Nachhaltigkeit, FAIR und Open Access im Mission Statement des DARIAH-DE Repository.</p></info>
+            Nachhaltigkeit, FAIR und Open Access im <a href="https://repository.de.dariah.eu/doc/services/organizational-infrastructure.html#mission-and-long-term-preservation">Mission
+            Statement des DARIAH-DE Repository</a>.
+        </p>
+    </info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 
@@ -51,5 +61,97 @@
                 <level>recommended</level>
             </format> 
         -->
+        <format id="fBMP">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fBMP">
+            <domain>Other</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fCSV">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fGZIP">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fHTML">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fLaTeX">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fKML">
+            <domain>Geodata</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fMarkdown">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fODF">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fODF">
+            <domain>Other</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fODT">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fPDFA">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fPDFA">
+            <domain>Other</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fTextPlain">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fTextPlain">
+            <domain>Other</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fSVG">
+            <domain>Other</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fTAR">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fTEI">
+            <domain>Textual Source Language Data</domain>
+            <level>accepted</level>
+        </format> 
+        <format id="TeX">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fWAVE">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fXHTML">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fXSD">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fZIP">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+        </format> 
     </formats>
 </recommendation>
