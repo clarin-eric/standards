@@ -2,7 +2,7 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>56edd195d9ed1d5bc7c2d984fac74a0c14801520</lastUpdateCommitID>
+        <lastUpdateCommitID>d93c54825dc433568d8336e2585156f4387b88c4</lastUpdateCommitID>
         <filter>
             <centreID>TGrep</centreID>
         </filter>
@@ -10,7 +10,7 @@
             <name>Stefan E. Funk</name>
             <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
             <link>mailto:textgrid-support@gwdg.de</link>
-            <reviewDate>0001-01-01</reviewDate>
+            <reviewDate>2025-10-13</reviewDate>
         </respStmt>
         <centre id="TGrep" deposition="1">
             <centreName>TextGrid Repository</centreName>
@@ -46,7 +46,7 @@
             Forschende bietet das TextGrid Repository eine nachhaltige, dauerhafte und sichere
             Möglichkeit, zur zitierfähigen Publikation ihrer Forschungsdaten und zur verständlichen
             Beschreibung derselben durch erforderliche Metadaten. Mehr zum Thema Nachhaltigkeit,
-            FAIR und Open Access im <a hregf="https://textgridrep.de/docs/mission-statement">Mission
+            FAIR und Open Access im <a href="https://textgridrep.de/docs/mission-statement">Mission
             Statement des TextGrid Repository</a>.</p></info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
