@@ -106,6 +106,10 @@
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
+        <format id="fMP3">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format> 
         <format id="fMP4">
             <domain>Audiovisual Source Language Data</domain>
             <level>acceptable</level>
