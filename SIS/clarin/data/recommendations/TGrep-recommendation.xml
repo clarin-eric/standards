@@ -94,13 +94,13 @@
             <domain>Image Source Language Data</domain>
             <level>acceptable</level>
         </format> 
+        <format id="fSVG">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
         <format id="fXHTML">
             <domain>Contextual Data</domain>
             <level>recommended</level>
-        </format> 
-        <format id="fSVG">
-            <domain>Image Source Language Data</domain>
-            <level>acceptable</level>
         </format> 
         <format id="fWAVE">
             <domain>Audiovisual Source Language Data</domain>
@@ -117,6 +117,14 @@
         <format id="fOGG">
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
+        </format>
+        <format id="fSKOS">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fOWL">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
         </format> 
     </formats>
 </recommendation>

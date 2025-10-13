@@ -160,6 +160,14 @@
         <format id="fZIP">
             <domain>Packaging</domain>
             <level>acceptable</level>
+        </format>
+        <format id="fJSONLD">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fN3">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
         </format> 
     </formats>
 </recommendation>
