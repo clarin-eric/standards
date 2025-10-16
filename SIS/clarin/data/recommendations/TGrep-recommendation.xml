@@ -4,7 +4,7 @@
     <header>
         <lastUpdateCommitID>d93c54825dc433568d8336e2585156f4387b88c4</lastUpdateCommitID>
         <filter>
-            <centreID>TG-rep</centreID>
+            <centreID>TGrep</centreID>
         </filter>
         <respStmt>
             <name>Stefan E. Funk</name>
@@ -12,7 +12,7 @@
             <link>mailto:textgrid-support@gwdg.de</link>
             <reviewDate>2025-10-13</reviewDate>
         </respStmt>
-        <centre id="TG-rep" deposition="1">
+        <centre id="TGrep" deposition="1">
             <centreName>TextGrid Repository</centreName>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/71"/>
             <registryLink registry="TextPlus" uri="https://registry.text-plus.org/entity/fb9ba505-dca8-41c1-aa19-b37090724816/"/>

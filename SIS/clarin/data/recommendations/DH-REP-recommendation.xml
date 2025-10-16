@@ -4,7 +4,7 @@
     <header>
         <lastUpdateCommitID>d93c54825dc433568d8336e2585156f4387b88c4</lastUpdateCommitID>
         <filter>
-            <centreID>DH-rep</centreID>
+            <centreID>DH-REP</centreID>
         </filter>
         <respStmt>
             <name>Stefan E. Funk</name>
@@ -12,7 +12,7 @@
             <link>mailto:support@de.dariah.eu</link>
             <reviewDate>2025-10-13</reviewDate>
         </respStmt>
-        <centre id="DH-rep" deposition="1">
+        <centre id="DH-REP" deposition="1">
             <centreName>DARIAH-DE Repository</centreName>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/62"/>
             <registryLink registry="TextPlus" uri="https://registry.text-plus.org/entity/892e7ca0-cb78-41ba-aef6-d705bf499d33/"/>
