@@ -19,7 +19,7 @@ declare option output:html-version "5";
 :)
 
 
-let $id := request:get-parameter('id', '')
+let $id as xs:string := request:get-parameter('id', '')
 let $recommendationType := request:get-parameter('type', '')
 let $sortBy := request:get-parameter('sortBy', '')
 
@@ -29,7 +29,7 @@ let $registry-links := $centre/registryLink
 let $isDepositing := cm:isDepositing($centre)
 let $centre-ri := $centre/nodeInfo/ri
 
-let $recommendation := cm:get-recommendations($id)
+let $recommendation as element(recommendation) := cm:get-recommendations($id)
 
 let $ri := app:get-ri()
 let $language := app:determine-language($ri)
