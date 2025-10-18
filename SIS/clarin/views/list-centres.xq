@@ -76,6 +76,11 @@ return
                             </table>
                         </form>
                     </div>
+                    <div>
+                    <p>Use the above buttons to switch views. Use the top-page buttons to switch research infrastructures.</p>
+                    <p>In the currently displayed view, the ratio of centres that curate their information in the SIS ({$numcura}) to centres that offer data 
+                    deposition services ({$numdepo}) is {format-number($numcura div $numdepo,'0%')}.</p>
+                    </div>
                     <table id ="centre-table">
                         <tr>
                             <th class="header" style="width:20%;"><a href="?sortBy=id#centre-table">Centre by ID ({$numrows})</a></th>
