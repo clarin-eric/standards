@@ -98,6 +98,10 @@ return
                             </tr>
                         </table>
                         
+                        <p>Are we saying that the value above constitutes the relevant CLARIN KPI? Not quite.</p>
+                        <p>The SIS only reports statistics for centres that curate their information here. There exist several centres that 
+                        publish their recommendations on their own -- an <i>uncurated</i> list of those can be found at the bottom of the 
+                        "<a href="https://www.clarin.eu/content/standards-and-formats">Standards and formats</a>" page of clarin.eu.</p>
                         <!--
                         <ul>
                             <li>CLARIN deposition centres recorded in the SIS: <b>count(cm:get_centres(RI=CLARIN, status=deposition centre))</b>
