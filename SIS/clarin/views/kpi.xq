@@ -52,10 +52,10 @@ return
                     </div>
                     <div class="title">Relevant CLARIN KPIs</div>
                     <div>
-                    <p>Note that, for the time being at last, this page focuses on CLARIN. The SIS is able to provide and calculate statistics for other RIs as well, 
+                    <p>Note that, for the time being at least, this page focuses on CLARIN. The SIS is able to provide and calculate statistics for other RIs as well, 
                     as long as there is a need and... sufficient data.</p>
-                        <p>Among the 12 Key Performance Indicators that have been adopted as measures of performance of
-                            CLARIN, at least three reference areas that the SIS either draws on or directly serves. The two crucial ones are the following:</p>
+                        <p>Among the 12 Key Performance Indicators that have been adopted as measures of CLARIN's performance, at least three 
+                        reference areas that the SIS either draws on or directly serves. The two crucial ones are the following:</p>
                     </div>
                     <div>
                         <table style="width:600px; border-collapse:collapse;">
@@ -77,9 +77,10 @@ return
                             </tr>
                         
                         </table>
+                        <p>(The third relevant KPI concerns cooperation with other reaserch infrastructures, to which the SIS in some limited measure testifies.)</p>
                     </div>
                     <div>
-                      <div><p>Below, we provide partial data on KPIs #1 and #2, on the basis of the <i>current content of the SIS</i>.</p></div>
+                      <p>Below, we provide partial data on KPIs #1 and #2, on the basis of the <i>current content of the SIS</i>.</p>
                     
                         <table style="width:600px; border-collapse:collapse;">
                             <tr>
@@ -99,7 +100,7 @@ return
                             </tr>
                         </table>
                         <div style="width:600px;">
-                        <p>Are we saying that the value above constitutes the relevant CLARIN KPI? Not quite.<br />
+                        <p>Are we saying that the value above constitutes the relevant CLARIN KPI? Not quite so.<br />
                         The SIS only reports statistics for centres that curate their information here. There exist several centres that 
                         publish their recommendations on their own -- an <i>uncurated</i> list of those can be found at the bottom of the 
                         "<a href="https://www.clarin.eu/content/standards-and-formats">Standards and formats</a>" page of clarin.eu.</p>
@@ -121,14 +122,14 @@ return
                     <p>We can also cite other numbers that can be helpful in finding your way through SIS statistics:</p>
                     <ul>
                     <li>Apart from information that is curated by the individual centres, the SIS also contains partial information on other centres. 
-                    That information comes from the time when the then CLARIN Standards Committee (CSC) used calc sheets to store deposition data format recommendations for selected centres. 
+                    That information comes from the time when the then CLARIN Standards Committee (CSC) used a spreadsheet to store deposition data format recommendations for selected centres. 
                     The overall number of centres that the SIS has <i>some</i> information on is {$numOfDepositionCentresWithRecommendations}. In 
                     other words, the SIS lists {$numOfDepositionCentresWithRecommendations - $numOfCuratedCentres} deposition centres which do not yet curate their information here
                     (feel very welcome to gently nudge those centres about that).<br />                      
-                    The status of each deposition centre with respect to, a.o., whether the info is curated, is indicated in the <a href="{app:link("views/list-centres.xq")}">list of all centres</a>.</li>
+                    The status of each deposition centre with respect to, a.o., whether the info is curated, is indicated in the <a href="{app:link("views/list-centres.xq")}">list of centres</a>.</li>
                     <li>B-centres have a special status in CLARIN. Among the {$numOfDepositionCentres} deposition centres listed by the SIS, {$numOfDepositionBCentres} 
                     are B-centres, and among these, {$numOfCuratedBCentres} centres curate their information. If we look at the percentage of <b>B-centres</b> that already 
-                    <b>curate</b> their information in the SIS, the result is much higher: <b>{$percentageB}</b>.</li>
+                    <b>curate</b> their information in the SIS, the result is much higher than that in (c) above: <b>{$percentageB}</b>.</li>
                     </ul>
                     </div>
                     <div>
