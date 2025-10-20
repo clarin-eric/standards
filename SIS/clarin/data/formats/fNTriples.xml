@@ -1,0 +1,20 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fNTriples" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>N-Triples</title>
+    <abbr>NTriples</abbr>
+  </titleStmt>
+  <keyword>serialization</keyword>
+  <keyword>annotation</keyword>
+  <keyword>RDF</keyword>
+  <info type="description">
+   <p>NTriples is a simple serialization format for the Resource Description Framework (RDF).
+    Using NTriples you can represent data as a Subject-Predicate-Object triple, which is the core structure for Linked Data and Semantic Web technologies. It can be
+    used either for lexical resources—dictionaries, thesauri, terminologies, and wordnets, or for text annotation tasks</p>
+
+   <p>Visit:
+      <a href="https://www.w3.org/TR/n-triples/">W3C Recommendation for the N-Triples format</a></p>
+  </info>
+  <mimeType>application/n-triples</mimeType>
+  <fileExt recommended="yes">.txt</fileExt>
+</format>

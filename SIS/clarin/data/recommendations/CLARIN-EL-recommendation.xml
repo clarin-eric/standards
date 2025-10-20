@@ -226,10 +226,6 @@
 		<domain>Audiovisual Source Language Data</domain>
 		<level>acceptable</level>
 	</format>
-	<format id="fMPEG">
-		<domain>Audiovisual Source Language Data</domain>
-		<level>acceptable</level>
-	</format>
 	<format id="fMPEG-4-AVC">
 		<domain>Audiovisual Source Language Data</domain>
 		<level>acceptable</level>
