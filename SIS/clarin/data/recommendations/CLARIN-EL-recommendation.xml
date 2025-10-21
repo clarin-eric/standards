@@ -10,7 +10,7 @@
             <name>Sasa Kolovou</name>
             <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
         	<link>https://github.com/raspberryjoy</link>
-            <reviewDate>2025-01-15</reviewDate>
+            <reviewDate>2025-10-21</reviewDate>
         </respStmt>
         <centre id="CLARIN:EL" deposition="1">
         <centreName>CLARIN:EL National Infrastructure for Language Resources and Technologies in Greece</centreName>
@@ -223,10 +223,6 @@
 		<comment>text-based format for parallel aligned data. </comment>
 	</format>
 	<format id="fMP3">
-		<domain>Audiovisual Source Language Data</domain>
-		<level>acceptable</level>
-	</format>
-	<format id="fMPEG">
 		<domain>Audiovisual Source Language Data</domain>
 		<level>acceptable</level>
 	</format>
