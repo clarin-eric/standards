@@ -1,0 +1,27 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fR" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>R Data Format Family</title>
+    <abbr>R</abbr>
+  </titleStmt>
+  <keyword>programming language</keyword>
+  <keyword>statistical data</keyword>
+  <extId type="LOC">fdd000470</extId>
+  <extId type="PRONOM">fmt/1199</extId>
+  <extId type="Wikidata">Q40672098</extId>
+  <info type="description">
+    <p>"The RData format (usually with extension .rdata or .rda) is a format designed for use with R, a system for statistical computation and 
+      related graphics, for storing a complete R workspace or selected "objects" from a workspace in a form that can be loaded back by R." (from the Library of Congress description)</p>
+    <p>See also the <a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html">R FAQ</a>, the <a href="https://dans.knaw.nl/en/file-formats/statistical-data/r/">DANS description of the format</a>, and the <a href="https://en.wikipedia.org/wiki/R_(programming_language)">Wikipedia article on R</a>.</p>
+  </info>
+<!--  <relation target="..." type="isDefinedBy"/>-->
+  <mimeType>application/x-r-data</mimeType>
+  <mimeType>text/plain</mimeType>
+  <mimeType>application/octet-stream</mimeType>
+  <fileExt>.r</fileExt>
+  <fileExt>.rdata</fileExt>
+  <fileExt>.rhistory</fileExt>
+  <fileExt>.rda</fileExt>
+  <fileExt>.rds</fileExt>
+  
+</format>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
+<recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
+    <header>
+        <lastUpdateCommitID>d93c54825dc433568d8336e2585156f4387b88c4</lastUpdateCommitID>
+        <filter>
+            <centreID>TG-rep</centreID>
+        </filter>
+        <respStmt>
+            <name>Stefan E. Funk</name>
+            <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
+            <link>mailto:textgrid-support@gwdg.de</link>
+            <reviewDate>2025-10-13</reviewDate>
+        </respStmt>
+        <centre id="TG-rep" deposition="1">
+            <centreName>TextGrid Repository</centreName>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/71"/>
+            <registryLink registry="TextPlus" uri="https://registry.text-plus.org/entity/fb9ba505-dca8-41c1-aa19-b37090724816/"/>
+            <registryLink registry="DARIAH" uri="https://www.dariah.eu/tools-services/tools-services-detail-view/?id=oKFMi6"/>
+            <nodeInfo>
+                <ri status="C-centre">CLARIN</ri>
+                <ri status="Collections">TextPlus</ri>
+                <ri status="Repository">DARIAH</ri>
+            </nodeInfo>
+        </centre>
+    </header>
+    <info xml:lang="en">
+        <p>
+            The TextGrid Repository is a long-term archive for humanities research data. It provides
+            an extensive, searchable, and reusable repository of texts and images. Aligned with the
+            principles of Open Access and FAIR, the TextGrid Repository was again awarded the
+            <a href="https://doi.org/10.34894/L1F7BS">CoreTrustSeal</a> in 2024. For researchers,
+            the TextGrid Repository offers a sustainable, durable, and
+            secure way to publish their research data in a citable manner and to describe it in an
+            understandable way through required metadata. Read more about sustainability, FAIR and
+            Open Access in the <a href="https://textgridrep.de/docs/mission-statement">Mission
+            Statement of the TextGrid Repository</a>.
+        </p>
+    </info>
+    <info xml:lang="de">
+        <p>Das TextGrid Repository ist ein Langzeitarchiv für geisteswissenschaftliche
+            Forschungsdaten. Es liefert einen umfangreichen, durchsuch- und nachnutzbaren Bestand an
+            Texten und Bildern. An den Grundsätzen von Open Access und den FAIR-Prinzipien
+            orientiert, wurde das TextGrid Repository 2024 erneut mit dem
+            <a href="https://doi.org/10.34894/L1F7BS">CoreTrustSeal</a> ausgezeichnet. Für
+            Forschende bietet das TextGrid Repository eine nachhaltige, dauerhafte und sichere
+            Möglichkeit, zur zitierfähigen Publikation ihrer Forschungsdaten und zur verständlichen
+            Beschreibung derselben durch erforderliche Metadaten. Mehr zum Thema Nachhaltigkeit,
+            FAIR und Open Access im <a href="https://textgridrep.de/docs/mission-statement">Mission
+            Statement des TextGrid Repository</a>.</p></info>
+    <formats><!--
+            This template will assist in adjusting/creating a recommendations document if you don't
+            have access to a schema-aware XML editor. Copy the XML fragment, 
+            *  adjust the format ID (see https://standards.clarin.eu/sis/views/list-formats.xq ),
+            *  adjust the domain (https://standards.clarin.eu/sis/views/list-domains.xq ),
+            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
+            *  repeat as necessary;
+            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
+            
+            <format id="null">
+                <domain>Audiovisual Annotation</domain>
+                <level>recommended</level>
+            </format> 
+        -->
+        <format id="fTEI">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fXML">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXSD">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fTextPlain">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fMarkdown">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fTIFF">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fJPEG">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fPNG">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fSVG">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fXHTML">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fWAVE">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fMP3">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fMP4">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fOGG">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fSKOS">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fOWL">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format> 
+    </formats>
+</recommendation>

@@ -9,7 +9,8 @@ module namespace recommendation="http://clarin.ids-mannheim.de/standards/recomme
 declare variable $recommendation:centres := collection('/db/apps/clarin/data/recommendations')/recommendation;
 
 declare variable $recommendation:format-ids := data($recommendation:centres/formats/format/@id);
-declare variable $recommendation:format-abbrs := for $id in $recommendation:format-ids return fn:substring($id,2);
+declare variable $recommendation:format-abbrs := 
+    for $id in $recommendation:format-ids return fn:substring($id,2);
 
 
 (:
@@ -17,13 +18,13 @@ It should be mentioned at this point that a recommendation is encoded in an elem
 this is why functions that are actually counting recommendations below have "format" in the name.
 :)
 
-declare function recommendation:get-recommendations-for-centre($id){
-    let $convertedId := translate($id,':','-')
+declare function recommendation:get-recommendations-for-centre($id as xs:string) as element(recommendation){
+    let $convertedId := translate($id,':è','-e')
     let $path := concat('/db/apps/clarin/data/recommendations/',$convertedId,"-recommendation.xml")
     return doc($path)/recommendation
 };
 
-declare function recommendation:get-recommendations-for-format($format-id){
+declare function recommendation:get-centres-for-format($format-id){
     $recommendation:centres[formats/format/@id=$format-id]
 };
 
@@ -42,4 +43,8 @@ declare function recommendation:get-formats-by-recommendation-level($level){
 
 declare function recommendation:get-all-recommendations(){
     $recommendation:centres/formats/format
+};
+
+declare function recommendation:get-recommendation-headers() as element(header)+ {
+    $recommendation:centres/header
 };

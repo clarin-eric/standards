@@ -11,8 +11,9 @@
    <p>
     XMI (XML Metadata Interchange) is an OMG (Object Management Group) standard for exchanging metadata via XML, primarily used for exchanging models described using the Unified Modeling Language (UML) and other metamodels.</p>
     <p>Visit:
-      <a href="https://www.omg.org/spec/XMI/">XMI - ORG</a> for an introduction and the <a href="https://en.wikipedia.org/wiki/XML_Metadata_Interchange">wikipedia</a> entry for additional information.</p>
+      <a href="https://www.omg.org/spec/XMI/">XMI -- OMG</a> for an introduction and the <a href="https://en.wikipedia.org/wiki/XML_Metadata_Interchange">wikipedia</a> entry for additional information.</p>
   </info>
   <mimeType>application/xmi+xml</mimeType>
   <fileExt recommended="yes">.xmi</fileExt>
+  <formatFamily>XML</formatFamily>
 </format>

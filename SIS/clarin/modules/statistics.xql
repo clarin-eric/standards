@@ -39,13 +39,38 @@ declare function stm:list-centre-statistics(){
         
     return
         <tr>
-            <td class="row">{$ri}</td>
+            <td class="row">{$ri ! cm:visualise-ri-name(.)}</td>
             <td class="row" style="text-align:center;">{$numOfCentres }</td>
             <td class="row" style="text-align:center;">{$numOfDepositingCentres}</td>
             <td class="row" style="text-align:center;">{$numOfCentresWithRecommendations}</td>
             <td class="row" style="text-align:center;">{$numOfCuratedCentres}</td>
         </tr>
 };
+
+declare function stm:list-status-statistics($ri as xs:string){
+    let $statuses := xsd:get-statuses-in-ri($ri)
+    let $depositionCentres as element(centre)* := cm:get-deposition-centres($ri)
+    let $curatedCentres as element(header)* := cm:get-curated-centres($ri)
+    
+    for $stat in $statuses
+        let $numOfCentres := count(cm:get-centre-by-research-infrastructure($ri,$stat))
+        let $depositionCentres4stat as element(centre)* := $depositionCentres[nodeInfo/ri/@status 
+            and contains(string-join(nodeInfo/ri/@status),$stat)]
+        let $numOfDepositionCentres4stat := count($depositionCentres4stat)
+        let $numOfCentresWithRecommendations := cm:count-number-of-centres-with-recommendations($depositionCentres4stat)
+        let $numOfCuratedCentres := count($curatedCentres[centre/nodeInfo/ri/@status 
+            and contains(string-join(centre/nodeInfo/ri/@status),$stat)])
+        order by $stat
+    return
+        <tr>
+            <td class="row">{$stat => replace('_',' ')}</td>
+            <td class="row" style="text-align:center;">{$numOfCentres }</td>
+            <td class="row" style="text-align:center;">{$numOfDepositionCentres4stat}</td>
+            <td class="row" style="text-align:center;">{$numOfCentresWithRecommendations}</td>
+            <td class="row" style="text-align:center;">{$numOfCuratedCentres}</td>
+        </tr>
+};
+
 
 declare function stm:list-formats-by-recommendation-level(){
     for $level in ("Recommended","Acceptable","Discouraged")

@@ -5,6 +5,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "../modules/recommended-formats.xql";
 import module namespace em = "http://clarin.ids-mannheim.de/standards/export" at "../modules/export.xql";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
+import module namespace web = "https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
 
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 declare option output:method "html";
@@ -17,22 +18,19 @@ let $searchItem := request:get-parameter('searchFormat', '')
 let $reset := request:get-parameter('resetButton', '')
 let $centre := if ($reset) then () else request:get-parameter('centre', '')
 let $domainId := if ($reset) then (()) else request:get-parameter('domain',())
+let $domainParams := fn:string-join(for $d in $domainId return ("&amp;domain=",$d))
+
 let $recommendationLevel := if ($reset) then () else request:get-parameter('level', '')
 let $sortBy := if ($reset) then () else request:get-parameter('sortBy', '')
 let $page := request:get-parameter('page', 1) 
-let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
+(: let $language := fn:substring(request:get-header("Accept-Language"),0,3) :)
 
-let $request-ri := request:get-parameter('ri', '')
-let $ri :=  if ($request-ri) then $request-ri else request:get-cookie-value("ri")
-let $ri := if (empty($ri)) then "CLARIN" else $ri
-let $languageHeader := 
-    if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader
-
-let $domainParams := fn:string-join(for $d in $domainId return ("&amp;domain=",$d))
+let $ri := app:get-ri()
+let $language := app:determine-language($ri)
 
 let $rows :=
      rf:print-centre-recommendation($centre,$domainId, $recommendationLevel, 
-     $sortBy, $languageHeader, $ri)
+     $sortBy, $language, $ri)
 
 let $rows := 
     if ($searchItem)
@@ -48,7 +46,7 @@ return
     <html lang="en">
         <head>
             <title>Format Recommendations</title>
-            <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+            <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("autocomplete.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("autocomplete.js", "js")}"/>
@@ -77,10 +75,16 @@ return
                         &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                     </div>
                     <div class="title" id="pagetitle">Format Recommendations</div>
-                    <div><p>This page presents formats of data depositions that various CLARIN centres are ready to accept. Each format,
+                    <div>
+                        <p>Each centre listed in the SIS as allowing/inviting data deposition has a certain set of preferences and expectations 
+                    concerning the data to be stored with it. This page provides a lengthy list of preferences that can be appropriately cut down 
+                    to a manageable size by means of filter criteria.</p> 
+                        <p>Use the dropboxes to select the particular domain, centre, and/or level of recommendation. Columns can be sorted, 
+                           and your results can be downloaded as XML. Search can be narrowed to a single research infrastructure through the top menu.</p>
+                        <p>Each format,
                             for each centre, can be "recommended", "acceptable" or "discouraged" in the context of several domains that represent the
-                            functions that the deposited data can play. The level of recommendation should always be viewed as relative to the profile 
-                            of the given centre.
+                            functions that the deposited data is meant to play. The level of recommendation should always be viewed as relative to the profile of 
+                            the given centre, along the following rules of thumb:
                             <ul>
                             <li><b>"recommended"</b> should be interpreted as meaning that the centre in question will in most cases be able 
                             to process the data without much manipulation and that it is likely that the data will be preserved long-term 
@@ -90,17 +94,14 @@ return
                             <li><b>"discouraged"</b> should be understood as indicating that the centre may find it problematic to up-convert the data.</li>
                             </ul>
                             </p> 
-                        <p>Use the dropboxes to select the particular domain, centre, and/or level of recommendation. Columns can be sorted, 
-                           and your results can be downloaded as XML.</p>
-                           <p>The exported XML files for a specified centre can be used to extend or modify the recommendations for that centre, 
-                           by an authorised person. In order to aid in the process, please consult the separate lists of all 
-                           <a href="{app:link("views/list-formats.xq")}">available file formats</a> and of the 
-                           functional groupings of formats (<a href="{app:link("views/list-domains.xq")}">functional domains</a>).</p>
+    
+                            <p>Many of the <a href="{app:link("views/list-formats.xq")}">data formats</a> mentioned below have dedicated description files. 
+                            Those that don't are marked with a circled plus. <a href="{app:link("views/list-domains.xq")}">Functional domains</a> specify the role
+                            that the deposited data can play. (Is it documentation, audio signal, or textual annotation? Etc.) Hover the mouse cursor over a domain name
+                            for a brief gloss. Hover over circled "i"s to read comments.</p>
                            
-                           <p>As of mid-2022, not every centre with depositing services has submitted the information to the SIS; in some cases, the information 
-                           had to be unreliably mapped from lists provided on centre homepages onto the feature matrix offered by the SIS (created on the basis 
-                           of the SIS functional domains and levels of recommendation). If you think you see an error, please kindly help us get it right, by 
-                           <a title="open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic%2C+UserInput&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">posting an issue</a> or 
+                           <p>If you think you see an error, please kindly help us get it right, by 
+                           <a title="open a new GitHub issue" href="{concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic%2C+UserInput&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of recommendations',', webCommitId=', web:get-short-commitId()) }">posting an issue</a> or 
                            <a title="consult the SIC wiki at GitHub" href="https://github.com/clarin-eric/standards/wiki/Updating-format-recommendations">editing the source</a>.</p></div>
                     <div style="margin-top:30px;">
                         <form id="filterRecommendation"  autocomplete="off" style="float:left;" method="get"

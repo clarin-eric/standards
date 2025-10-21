@@ -2,7 +2,7 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>bec52cd36a2996677ce07153a19ce774097f9130</lastUpdateCommitID>
+    	<lastUpdateCommitID>a72affd6de82b8645766c4e9255662e6bbdba385</lastUpdateCommitID>
         <filter>
             <centreID>CLARIN:EL</centreID>
         </filter>
@@ -68,8 +68,8 @@
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment,
-            *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
-            *  adjust the domain (https://clarin.ids-mannheim.de/standards/views/list-domains.xq ),
+            *  adjust the format ID (see https://standards.clarin.eu/sis/views/list-formats.xq ),
+            *  adjust the domain (https://standards.clarin.eu/sis/views/list-domains.xq ),
             *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
             *  repeat as necessary;
             *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
@@ -235,7 +235,7 @@
 		<level>recommended</level>
 		<comment>model for linguistic annotation for RDF data</comment>
 	</format>
-	<format id="fNifTi">
+	<format id="fNifti">
 		<domain>Image Source Language Data</domain>
 		<level>acceptable</level>
 	</format>
@@ -422,11 +422,11 @@
 		<level>recommended</level>
 		<comment>XML based format for aligned data</comment>
 	</format>
-	<format id="fTrig">
+	<format id="fTriG">
 		<domain>Lexical Resource</domain>
 		<level>recommended</level>
 	</format>
-	<format id="fTrig">
+	<format id="fTriG">
 		<domain>Text Annotation</domain>
 		<level>recommended</level>
 	</format>
@@ -451,7 +451,7 @@
 		<level>recommended</level>
 		<comment>model for web crawled data</comment>
 	</format>
-	<format id="fWave">
+	<format id="fWAVE">
 		<domain>Audiovisual Source Language Data</domain>
 		<level>recommended</level>
 	</format>

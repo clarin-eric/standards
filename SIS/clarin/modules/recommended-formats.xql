@@ -18,7 +18,7 @@ import module namespace functx = "http://www.functx.com" at "../resources/lib/fu
 declare variable $rf:pageSize := 50;
 declare variable $rf:searchMap := rf:getSearchMap();
 
-declare function rf:isCurated($recommendation){
+declare function rf:isCurated($recommendation as element(recommendation)){
     let $respStmt := $recommendation/header/respStmt
     let $respName := string($respStmt[1]/name)
     return 
@@ -283,7 +283,7 @@ declare function rf:print-centre-recommendation($requestedCentre,
           
     let $ri-recommendations := 
         if ($ri eq "all") then ($recommendation:centres)
-        else $recommendation:centres[contains($ri-centres, 
+        else $recommendation:centres[contains(string-join($ri-centres),  
         header/filter/centreID/text())]
     
     for $r in $ri-recommendations
@@ -534,7 +534,7 @@ declare function rf:print-format-comments($format, $language) {
 
 declare function rf:print-missing-format-link($format-id) {
     <span class="tooltip">
-        <a style="margin-left:5px;" href="{app:getGithubIssueLink($format-id)}">
+        <a style="margin-left:5px;" href="{app:getGithubFormatIssueLink($format-id)}">
             <img src="{app:resource("plus.png", "img")}" height="15"/>
         </a>
         <span

@@ -9,11 +9,12 @@
   <keyword>deep learning</keyword>
   <keyword>interoperability</keyword>
   <keyword>serialization</keyword>
+  <extId type="Wikidata">Q55080116</extId>
    <info type="description">
    <p>
     The Open Neural Network Exchange (ONNX) is an open-source format designed to represent machine learning models, with the edvantage of offering interoperability between various AI frameworks and tools.</p>
     <p>See:
-      <a href="https://github.com/onnx/onnx/blob/main/docs/IR.md"> for a detailed specification of the semantics of ONNX</a>.</p>
+      <a href="https://github.com/onnx/onnx/blob/main/docs/IR.md">GitHub spec</a> for a detailed specification of the semantics of ONNX.</p>
   </info>
   <mimeType>application/onnx</mimeType>
   <fileExt>.onnx</fileExt>

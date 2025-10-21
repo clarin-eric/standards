@@ -7,7 +7,10 @@
   <keyword>image format</keyword>
   <keyword>medicine</keyword>
 <!--  this is also video, and can be lossy... messy  -->
+  <extId type="Wikidata">Q28205908</extId>
+  <extId type="PRONOM">fmt/574</extId>
   <info type="description">
+    <p>See <a href="https://en.wikipedia.org/wiki/DICOM">https://en.wikipedia.org/wiki/DICOM</a>.</p>
     <p>Please feel welcome to supply the description of this format file via GitHub: either as an
       <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
       request after forking or browsing the

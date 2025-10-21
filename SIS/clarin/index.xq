@@ -18,7 +18,7 @@ declare option output:html-version "5";
 <html lang="en">
     <head>
         <title>CLARIN Standards Information System</title>
-        <link rel="icon" type="image/x-icon" href="resources/images/SIS-favicon.svg"/>        
+        <link rel="icon" type="image/x-icon" href="resources/images/medal-sis.png"/>        
         <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>    
         <link rel="stylesheet" type="text/css" href="resources/css/tagclouds.css"/>
         <script>
@@ -57,9 +57,9 @@ declare option output:html-version "5";
                     <p>The keyword cloud below provides an alternative way to access the format and recommendation 
                     information.</p> 
                 </div>
-                <div style="margin-left:10%; margin-bottom:15px;">
+                <div style="margin-left:10%">
                     <div id="myCanvasContainer">
-                        <canvas width="600" height="500" id="myCanvas"/>
+                        <canvas width="600" height="600" id="myCanvas"/>
                     </div>
                     <div id="tags" style="border:1px solid #DDDDDD; padding:8px;" >
                       <!--{index:print-spec-links()}

@@ -19,7 +19,7 @@ declare option output:html-version "5";
 :)
 
 
-let $id := request:get-parameter('id', '')
+let $id as xs:string := request:get-parameter('id', '')
 let $recommendationType := request:get-parameter('type', '')
 let $sortBy := request:get-parameter('sortBy', '')
 
@@ -29,12 +29,12 @@ let $registry-links := $centre/registryLink
 let $isDepositing := cm:isDepositing($centre)
 let $centre-ri := $centre/nodeInfo/ri
 
-let $recommendation := cm:get-recommendations($id)
+let $recommendation as element(recommendation) := cm:get-recommendations($id)
 
-let $languageHeader := fn:substring(request:get-header("Accept-Language"),0,3)
-let $ri :=  request:get-cookie-value("ri")
-let $languageHeader := if (not($ri eq "CLARIN") and not($ri eq "all")) then "de" else $languageHeader
-let $centre-info := cm:parseFormatRef(cm:get-centre-info($id,$languageHeader), $id)
+let $ri := app:get-ri()
+let $language := app:determine-language($ri)
+
+let $centre-info := cm:parseFormatRef(cm:get-centre-info($id,$language), $id)
 
 let $domains := fn:distinct-values($recommendation/formats/format/domain/text())
 
@@ -43,7 +43,7 @@ return
     <html lang="en">
         <head>
             <title>Centre: {$id}</title>
-            <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+            <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("d3.v2.js", "js")}"/>
             <script type="text/javascript" src="{app:resource("forcegraph.js", "js")}"/>
@@ -96,7 +96,7 @@ return
                                            else () 
                                      
                                      return
-                                    <span id="reg-link">{$registry}: <a href="{$uri}">{$uri}</a>{$label}</span>
+                                    <span id="reg-link">{$registry ! cm:visualise-ri-name(.)}: <a href="{$uri}">{$uri}</a>{$label}</span>
                                  }
 
                              </div>                            
@@ -114,7 +114,7 @@ return
                                              concat('   (',data($registry-link/@label), ')')
                                            else () 
                                     return 
-                                      <li><span id="{concat('reg-link_',$pos)}">{$registry}: <a href="{$uri}">{$uri}</a></span><span id="{concat('reg-label_',$pos)}">{$label}</span></li>
+                                      <li><span id="{concat('reg-link_',$pos)}">{$registry ! cm:visualise-ri-name(.)}: <a href="{$uri}">{$uri}</a></span><span id="{concat('reg-label_',$pos)}">{$label}</span></li>
                                  }
                                  </ul>
 
@@ -129,7 +129,7 @@ return
                             {
                                 if ($isDepositing)
                                 then 
-                                    rf:print-curation($recommendation,$languageHeader)
+                                    rf:print-curation($recommendation,$language)
                                 else ()
                             }
                             {
@@ -207,7 +207,7 @@ return
                                              Comments
                                          </th>
                                      </tr>
-                                     {cm:print-recommendation-rows($recommendation, $id, $sortBy, $languageHeader)}
+                                     {cm:print-recommendation-rows($recommendation, $id, $sortBy, $language)}
                                     </table>
                                     ,
                                     <div style="text-align:right;">

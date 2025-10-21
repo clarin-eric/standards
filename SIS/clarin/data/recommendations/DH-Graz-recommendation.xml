@@ -2,9 +2,9 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
    <header>
-      <lastUpdateCommitID>769a30e1aa1d88ca6ff632af0047b829055fbe76</lastUpdateCommitID>
+      <lastUpdateCommitID>eab1e63c8668e2a7efca2d2ebbb9d2ba10b1d253</lastUpdateCommitID>
       <filter>
-         <centreID>ZIM</centreID>
+         <centreID>DH-Graz</centreID>
       </filter>
       <respStmt>
          <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
@@ -12,11 +12,13 @@
          <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
-      <centre id="ZIM" deposition="1">
-         <centreName>ZIM Centre for Information Modelling</centreName>
+      <centre id="DH-Graz" deposition="1">
+         <centreName>Department of Digital Humanities, Uni Graz</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/65"/>
+         <registryLink registry="DARIAH" uri="https://www.dariah.eu/tools-services/tools-services-detail-view/?id=5EIbGd"/>
          <nodeInfo>
             <ri status="B-centre">CLARIN</ri>
+            <ri status="Repository">DARIAH</ri>
          </nodeInfo>
       </centre>
     </header>
@@ -42,7 +44,7 @@
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
       </format>

@@ -1,0 +1,28 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fODS" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>OpenDocument Spreadsheet</title>
+    <abbr>ODS</abbr>
+  </titleStmt>
+  <keyword>office applications</keyword>
+  <keyword>format family</keyword>
+  <keyword>tabular format</keyword>
+  <extId type="LOC" label="v. 1.2">fdd000439</extId>
+  <extId type="PRONOM" label="v. 1.2">fmt/295</extId>
+  <extId type="Wikidata" label="v. 1.2">Q27203789</extId>
+  <info type="description" hub="yes">
+    <p>The OpenDocument Spreadsheet format is one of a number of types of the Open Document Format for Office Applications (commonly referred to as OpenDocument), an XML-based file format defined by the Organization for the Advancement of Structured Information Standards (OASIS) in 2005.</p>
+    <p>OpenDocument Spreadsheets can, like all OpenDocument files, be represented in one of two fashions - as a single XML document or as a collection of several sub-documents within a single package (commonly a ZIP archive). Generally, the extension .fods is used for the uncommonly-used single XML documents and .ods for packaged sub-documents.</p>
+    <p>As of v1.2 of the OpenDocument specification, the format contains information regarding spreadsheet formulae, pivot tables, etc. in the OpenFormula format. </p>   
+    <p>See also:</p> 
+      <ul>
+        <li><a href="http://fileformats.archiveteam.org/wiki/ODS">File Formats Wiki: OpenDocument Spreadsheet.</a>.</li>
+        <li>Wikipedia article on <a href="https://en.wikipedia.org/wiki/OpenDocument_standardization">OpenDocument standardization</a></li>
+      </ul>
+  </info>
+ <!-- <relation target="SpecODF" type="isDefinedBy"/>  add a way to signal non-existent descriptions of standards! -->
+  <mimeType>application/vnd.oasis.opendocument.spreadsheet</mimeType>
+  <fileExt>.ods</fileExt>
+  <fileExt>.fods</fileExt>
+  <formatFamily>ODF</formatFamily>
+</format>

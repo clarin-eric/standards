@@ -17,7 +17,7 @@ declare option output:html-version "5";
 <html lang="en">
     <head>
         <title>File Extensions</title>
-        <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+        <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
         <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
@@ -30,6 +30,7 @@ declare option output:html-version "5";
             <div class="content">
                 <div class="navigation">
                     &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
+                    &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
                     &gt; <a href="{app:link("views/list-extensions.xq")}">File Extensions</a>
                 </div>
                 <div class="title">File Extensions</div>

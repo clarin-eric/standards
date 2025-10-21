@@ -1,0 +1,18 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fBWF" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Broadcast Wave Format</title>
+    <abbr>BWF</abbr>
+  </titleStmt>
+  <keyword>audio format</keyword>
+  <extId type="LOC">fdd000359</extId>
+  <extId type="PRONOM">fmt/705</extId>
+  <info type="description">
+    <p>The European Broadcast Union (EBU) has developed the BWF format based on 
+      <a href="../views/view-format.xq?id=fWAVE">WAVE</a>, which additionally supports the embedding of metadata. For long-term archiving, this format should be used with linear PCM.</p>
+  </info>
+  <mimeType>audio/x-wav</mimeType>
+  <fileExt recommended="yes">.bwf</fileExt>
+  <fileExt>.wav</fileExt>
+  <formatFamily>audio</formatFamily>
+</format>

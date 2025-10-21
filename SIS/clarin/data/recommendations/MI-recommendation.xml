@@ -16,7 +16,7 @@
          <centreName>Meertens Instituut/HuC</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/23"/>
          <nodeInfo>
-            <ri status="C-centre">CLARIN</ri>
+            <ri status="B-centre">CLARIN</ri>
          </nodeInfo>
       </centre>
     </header>
@@ -46,7 +46,7 @@
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
       </format>
@@ -174,7 +174,7 @@
          <domain>Text Annotation</domain>
          <level>recommended</level>
       </format>
-      <format id="fTrig">
+      <format id="fTriG">
          <domain>Text Annotation</domain>
          <level>recommended</level>
       </format>

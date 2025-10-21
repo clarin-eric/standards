@@ -293,7 +293,7 @@
     </xs:element>
     <xs:element name="centreName">
         <xs:annotation>
-            <xs:documentation>the full name of the centre</xs:documentation>
+            <xs:documentation>the full name of the centre; more than one can be provided, and it can be tagged with a language tag in the xml:lang attribute</xs:documentation>
         </xs:annotation>
         <xs:complexType>
             <xs:simpleContent>
@@ -304,6 +304,7 @@
                                 centre name depends on the research infrastructure.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
+                    <xs:attribute ref="xml:lang" use="optional"/>
                 </xs:extension>
             </xs:simpleContent>
         </xs:complexType>
@@ -349,7 +350,7 @@
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="ResearchInfrastructures">
-                    <xs:attribute name="status" use="optional" type="xs:token">
+                    <xs:attribute name="status" use="required" type="CentreStatus">
                         <xs:annotation>
                             <xs:documentation>Status of the centre (node) in the given research
                                 infrastructure. (In CLARIN, it's e.g. "B-centre", in Text+, e.g.
@@ -364,10 +365,47 @@
         <xs:restriction base="xs:string">
             <xs:enumeration value="CLARIN"/>
             <xs:enumeration value="DARIAH"/>
-            <xs:enumeration value="Text+"/>
+            <xs:enumeration value="TextPlus"/>
         </xs:restriction>
     </xs:simpleType>
-    
+    <xs:simpleType name="CentreStatus">
+        <xs:union memberTypes="CentreStatus-CLARIN CentreStatus-DARIAH CentreStatus-TextPlus"/>
+    </xs:simpleType>
+    <xs:simpleType name="CentreStatus-CLARIN">
+        <xs:list>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="C-centre"/>
+                    <xs:enumeration value="C-centre_aiming-for-B"/>
+                    <xs:enumeration value="B-centre"/>
+                    <xs:enumeration value="E-centre"/>
+                    <xs:enumeration value="K-centre"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:list>
+    </xs:simpleType>
+    <xs:simpleType name="CentreStatus-DARIAH">
+        <xs:list>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Repository"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:list>
+    </xs:simpleType>
+    <xs:simpleType name="CentreStatus-TextPlus">
+        <xs:list>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Collections"/>
+                    <xs:enumeration value="Editions"/>
+                    <xs:enumeration value="Lexical_Resources"/>
+                    <xs:enumeration value="Operations"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:list>
+    </xs:simpleType>
+
     <xs:element name="formats">
         <xs:complexType>
             <xs:sequence>

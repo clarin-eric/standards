@@ -7,12 +7,16 @@
   <keyword>raster image</keyword>
   <keyword>image data</keyword>
   <keyword>multi-resolution images</keyword>
+  <extId type="PRONOM">x-fmt/56</extId>
+  <extId type="Wikidata">Q371784</extId>
    <info type="description">
-   <p>
-    FlashPix is a bitmapped computer graphics file format where the image is saved in more than one resolution.</p>
-    <p>See:
-      <a href="https://www.imaging.org/common/uploaded%20files/pdfs/Papers/1998/RP-0-69/2235.pdf"> description provided by the Society for Imaging Science and Technology</a>.</p>
-  </info>
+   <p>FlashPix is a bitmapped computer graphics file format where the image is saved in more than one resolution.</p>
+    <p>See:</p>
+     <ul>
+       <li><a href="https://www.imaging.org/common/uploaded%20files/pdfs/Papers/1998/RP-0-69/2235.pdf">(PDF) description provided by the Society for Imaging Science and Technology</a></li>
+       <li><a href="https://www.loc.gov/preservation/digital/formats/content/still_quality.shtml">"Quality and Functionality Factors for still images"</a> from the LoC</li>
+     </ul>
+   </info>
   <mimeType>image/vnd.fpx</mimeType>
   <fileExt>.fpx</fileExt>
 </format>

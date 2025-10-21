@@ -17,7 +17,7 @@
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/80" label="LiRI"/>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/81" label="LaRS"/>
             <nodeInfo>
-                <ri status="C-centre aiming-for-B">CLARIN</ri>
+                <ri status="C-centre_aiming-for-B">CLARIN</ri>
             </nodeInfo>
         </centre>
     </header>
@@ -25,8 +25,8 @@
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 
-            *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
-            *  adjust the domain (https://clarin.ids-mannheim.de/standards/views/list-domains.xq ),
+            *  adjust the format ID (see https://standards.clarin.eu/sis/views/list-formats.xq ),
+            *  adjust the domain (https://standards.clarin.eu/sis/views/list-domains.xq ),
             *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
             *  repeat as necessary;
             *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
@@ -108,7 +108,7 @@
             <domain>Metadata</domain>
             <level>discouraged</level>
         </format>
-        <format id="fWave">
+        <format id="fWAVE">
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>

@@ -20,9 +20,8 @@ let $domain := request:get-parameter('domain', '')
 let $recommendationType := request:get-parameter('type', '')
 let $sortBy := request:get-parameter('sortBy', 'centre')
 
-let $language := fn:substring(request:get-header("Accept-Language"),0,3)
-let $riCookie :=  request:get-cookie-value("ri")
-let $language := if (not($riCookie eq "CLARIN")) then "de" else $language
+let $ri := app:get-ri()
+let $language := app:determine-language($ri)
 
 let $format := vfm:get-format($id)
 let $format-name := $format/titleStmt/title/text()
@@ -36,7 +35,7 @@ return
         <html lang="en">
             <head>
                 <title>Not Found</title>
-                <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+                <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
                 <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
             </head>
@@ -58,7 +57,7 @@ return
         <html lang="en">
             <head>
                 <title>{$format-name}</title>
-                <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+                <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
                 <link rel="stylesheet" type="text/css" href="{app:resource("tagclouds.css", "css")}"/>
                 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dijit/themes/claro/claro.css" media="screen"/>
@@ -104,7 +103,7 @@ return
                         </div>
                         
                         <div style="float:right; text-align:right">
-                                <a href="{app:getGithubIssueLink($id)}" class="button" 
+                                <a href="{app:getGithubFormatIssueLink($id)}" class="button" 
                                     style="padding: 5px 5px 2px 5px; color:darkred; border-color:darkred">
                                     suggest a fix or extension</a>
                         </div>
@@ -172,7 +171,7 @@ return
                             <span id="desctext{$id}" class="desctext">{$format/info[@type = "description"]}</span>
                         </div>
 <!--
-                        <div align="right"><p><a href="{app:getGithubIssueLink($id)}">[suggest a fix or extension]</a></p></div>
+                        <div align="right"><p><a href="{app:getGithubFormatIssueLink($id)}">[suggest a fix or extension]</a></p></div>
       -->                  
                         {vfm:print-multiple-values($format/keyword, $id, "Keywords:")}
                         <!--The tag cloud of the standard related keywords -->

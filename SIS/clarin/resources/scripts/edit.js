@@ -7,6 +7,15 @@ if (typeof String.prototype.startsWith != 'function') {
     };
 }
 
+function escapeHtml(unsafe) {
+    return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
 function showResp(resptype,resporg,respname){
 	e = document.getElementById(resptype);
 	if (e.options[e.selectedIndex].value == 'person'){
@@ -443,7 +452,7 @@ function addDesc(specid,parentid,pids){
         
         s = document.createElement("span")
         s.id="desc"+newpid+"text"
-        s.appendChild(document.createTextNode(text)) // New description text        
+        s.appendChild(document.createTextNode(escapeHtml(text))) // New description text        
         // Dummy strings to allocate different element variables
         b1 = createButton("b1","edit","Edit","edit",newpid,specid,pids) // New edit button    
         b2 = createButton("b2","edit","Add","add",newpid,specid,pids) // New add button
@@ -563,6 +572,7 @@ function createRelation(result,newpath,specid,addpath){
     ul = document.getElementById('vrel'+vid+'ul')    
     ul.appendChild(li)
     e = createEditRel(result,newpath,specid,addpath)
+    e.innerHTML = escapeHtml(e.innerHTML);
     ul.appendChild(e)
 }
 
@@ -653,8 +663,8 @@ function writeRelResponse(result,path,frame,errorpath){
         else if (r==3) {
             r = result[3].split("++")
             a = document.getElementById(path+'link')
-            a.href = r[0]
-            a.innerHTML=r[1]
+            a.href = escapeHtml(r[0])
+            a.innerHTML=escapeHtml(r[1])
             
             document.getElementById(path+'pid').innerHTML = result[1]
             document.getElementById(frame).style.display = 'none';

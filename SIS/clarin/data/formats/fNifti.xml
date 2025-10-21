@@ -1,17 +1,18 @@
 <?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fNifTi" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fNifti" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
     <title>Neuroimaging Informatics Technology Initiative (NIfTI) File Format</title>
-    <abbr>NifTi</abbr>
+    <abbr>NIfTI</abbr>
   </titleStmt>
   <keyword>neuroimaging</keyword>
   <keyword>medical imaging</keyword>
   <keyword>efficient storage</keyword>
+  <extId type="Wikidata">Q29000675</extId>
    <info type="description">
    <p>
     The Neuroimaging Informatics Technology Initiative (NIfTI) file format is a widely adopted standard for storing medical imaging data, particularly in neuroimaging.</p>
     <p>See:
-      <a href="https://nifti.nimh.nih.gov/nifti-1"> for a detailed description</a>.</p>
+      <a href="https://nifti.nimh.nih.gov/nifti-1">the spec</a> for a detailed description.</p>
   </info>
   <mimeType>application/nifti</mimeType>
   <fileExt>.nii</fileExt>

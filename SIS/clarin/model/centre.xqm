@@ -13,23 +13,18 @@ declare variable $centre:centres := $recommendation:centres/header/centre;
 declare variable $centre:ids := data($centre:centres/@id);
 declare variable $centre:names := $centre:centres/name/text();
     
-declare function centre:get-centre($id as xs:string){
+declare function centre:get-centre($id as xs:string) as element(centre){
     $centre:centres[@id=$id]
 };
 
-declare function centre:get-statutes(){
-let $statuses := fn:distinct-values($centre:centres/nodeInfo/ri/@status)
-let $flat :=
+declare function centre:get-statutes() as xs:string+ {
+let $statuses := fn:distinct-values($centre:centres/nodeInfo/ri/@status/fn:tokenize(fn:normalize-space(.),' '))
+let $tokens :=
     for $status in $statuses
     return
-        if (fn:contains($status,","))
-        then (
-            for $s in fn:tokenize($status,",")
-            return fn:normalize-space($s)
-         )
-        else fn:normalize-space($status)
-
-return fn:distinct-values($flat)
+        fn:replace($status,'_',' ')
+    
+return $tokens
 };
 
 declare function centre:get-centre-ids-by-ri($ri as xs:string){
@@ -39,17 +34,17 @@ declare function centre:get-centre-ids-by-ri($ri as xs:string){
 declare function centre:get-centre-by-research-infrastructure($ri as xs:string,
     $status as xs:string){
     for $c in $centre:centres[nodeInfo/ri=$ri]
-        let $c-status :=  $c/nodeInfo/ri/@status
+        let $c-status :=  string-join($c/nodeInfo/ri/@status)
     return
         if (contains($c-status,$status))
         then $c
         else ()
 };
 
-declare function centre:get-distinct-research-infrastructures(){
+declare function centre:get-distinct-research-infrastructures() as xs:string+ {
     fn:distinct-values($centre:centres/nodeInfo/ri)
 };
 
-declare function centre:get-deposition-centres($ri){
+declare function centre:get-deposition-centres($ri) as element(centre)* {
     $centre:centres[nodeInfo/ri=$ri and xs:boolean(@deposition)]
 };

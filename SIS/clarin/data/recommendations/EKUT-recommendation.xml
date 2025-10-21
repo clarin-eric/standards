@@ -16,10 +16,10 @@
          <centreName>Eberhard Karls Universität Tübingen</centreName>
          <!--Tübingen Archive of Language Resources - we need multiple <name> elements! -->
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/1"/>
-         <registryLink registry="Text+" uri="https://registry.text-plus.org/entity/48ad519f-5023-481a-82eb-8e701fda1dee/"/>
+         <registryLink registry="TextPlus" uri="https://registry.text-plus.org/entity/48ad519f-5023-481a-82eb-8e701fda1dee/"/>
          <nodeInfo>
             <ri status="B-centre">CLARIN</ri>
-            <ri status="Collections, Lexical Resources">Text+</ri>
+            <ri status="Collections Lexical_Resources">TextPlus</ri>
          </nodeInfo>
       </centre>
     </header>
@@ -114,7 +114,7 @@
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
       </format>
-      <format id="fWave">
+      <format id="fWAVE">
          <domain>Audiovisual Source Language Data</domain>
          <level>recommended</level>
       </format>

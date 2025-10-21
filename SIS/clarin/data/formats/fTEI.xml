@@ -8,13 +8,13 @@
   <keyword>annotation format</keyword>
   <keyword>format family</keyword>
   
-  <info type="description">
+  <info type="description" hub="yes">
     <p>In the context of format recommendations, the unqualified TEI has the same status as <a href="../views/view-format.xq?id=fXML">XML</a>: too general to be a 
       meaningful recommendation. Please refrain from using just "TEI" in format recommendations.</p>
     <p>The 
       <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a>, together with the surrounding
       <a href="https://tei-c.org/tools/">infrastructure</a> (Stylesheets and dedicated utilities) is a toolkit for creating formats (also formats that serialize a standard).</p>
-    <p>By rule of thumb, centres should expect that each TEI document submitted to them is either
+    <p>By rule of thumb, centres should expect that each TEI document submitted to them <formatRef ref="fPDFA-1"/> is either
       accompanied by the ODD file, or conforms to one of the publicly available ODD specifications
       (either a named TEI out-of-the-box customization or a publicly documented extension),
       preferably bearing the stamp of a standards body, or encoding established best practices.</p>
@@ -37,7 +37,8 @@
       defines a series of restrictions on the overall TEI schema, referred to as 'templates' and
       meant as bases for further customization, as well as three fully-defined and maintained
       customizations: TEI Lite, TEI simplePrint, TEI Tite.</p>
-    <p>For the purpose of metadata descriptions, free-standing <a href="../views/view-format.xq?id=fTEIHeader">TEI headers</a> can often be useful.</p>
+    <p>For the purpose of metadata descriptions, free-standing <a href="../views/view-format.xq?id=fTEIHeader">TEI headers</a> can often be useful, the more so that they allow "foreign markup" 
+      as content of the <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-xenoData.html">xenoData</a> element.</p>
   </info>
   <relation target="SpecTei" type="isDefinedBy"/>
   <mimeType>application/tei+xml</mimeType>

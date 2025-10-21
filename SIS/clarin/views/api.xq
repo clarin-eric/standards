@@ -13,7 +13,7 @@ declare option output:html-version "5";
 <html lang="en">
     <head>
         <title>API</title>
-        <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+        <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
     </head>
@@ -91,7 +91,7 @@ declare option output:html-version "5";
                             <td class="row">ri</td>
                             <td class="row">no</td>
                             <td class="row">filter the recommendations by research infrastructure. The value must be URL-encoded. 
-                            Possible values: Text+, CLARIN (default)</td>
+                            Possible values: TextPlus, CLARIN (default)</td>
                             <td class="row">Text%2B</td>
                         </tr>
                     </table>

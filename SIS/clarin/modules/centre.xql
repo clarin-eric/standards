@@ -13,11 +13,11 @@ import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-mod
 import module namespace web = "https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
 import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
 
-declare function cm:get-centre($id) {
+declare function cm:get-centre($id as xs:string) as element(centre){
     centre:get-centre($id)
 };
 
-declare function cm:isDepositing($centre){
+declare function cm:isDepositing($centre as element(centre)) as xs:boolean {
     if(xs:boolean($centre/@deposition)) then true() else false()
 };
 
@@ -25,14 +25,25 @@ declare function cm:get-centre-by-research-infrastructure($ri as xs:string, $sta
     centre:get-centre-by-research-infrastructure($ri, $status)
 };
 
-declare function cm:get-deposition-centres($ri as xs:string){
+declare function cm:get-deposition-centres($ri as xs:string) as element(centre)* {
     centre:get-deposition-centres($ri)
 };
 
-declare function cm:get-curated-centres($ri as xs:string){
-    $recommendation:centres/header[centre/nodeInfo/ri=$ri and respStmt/name[normalize-space() != '']]
+declare function cm:get-current-research-infrastructures() as xs:string+ {
+    centre:get-distinct-research-infrastructures()
 };
 
+declare function cm:get-curated-centres($ri as xs:string) as element(header)* {
+    let $headers as element(header)+ := recommendation:get-recommendation-headers()
+
+    return $headers[centre/nodeInfo/ri=$ri and respStmt/name[normalize-space() != '']]
+};
+
+(:used by kpi and statistics modules; takes depositing centres as its argument :)
+(:what i find surprising here is that we have the objects (centres) and rather than check their state directly, 
+we convert them to IDs and process those IDs to get to check their state, via doc(). 
+This is because we are not easily able to aggregate all relevant info, but we should...
+:) 
 declare function cm:count-number-of-centres-with-recommendations($centres) {
     let $centre-with-recommendations :=
     for $c in $centres
@@ -81,38 +92,40 @@ declare function cm:print-statuses($status) {
                 value="{$s}">{$s}</option>)
 };
 
-declare function cm:print-ri($centre-ri) {
+(: used by view-centre.xq :)
+declare function cm:print-ri($centre-ri) as element(li)+ {
     for $ri in $centre-ri
     let $status :=
     if ($ri/@status ne "")
     then
-        concat(" (", data($ri/@status), ")")
+        concat(" (", fn:replace(fn:replace(fn:normalize-space(data($ri/@status)),' ',', '),'_',' '), ")")
     else
         ()
     return
-        <li>{$ri/text(), $status}</li>
+        <li>{$ri ! cm:visualise-ri-name(.), $status}</li>
 };
 
-declare function cm:get-ris($c){
+declare function cm:get-ris($c) as item()+ {
     for $ri in $c/nodeInfo/ri
             let $status := data($ri/@status)
             return
                 if ($status ne "") then
-                    ($ri, concat(" (", $status, ")"), <br/>)
+                    ($ri, concat(" (", fn:replace(fn:replace(fn:normalize-space($status),' ',', '),'_',' '), ")"), <br/>)
                 else
                     ($ri, <br/>)
 };
 
-declare function cm:get-statuses($c){
-    let $combinedStatuses := fn:string-join($c/nodeInfo/ri/@status, ",")
-    let $statuses := fn:tokenize($combinedStatuses, ",")
-    return $statuses
+declare function cm:get-statuses($c) as xs:string+ {
+    let $combinedStatuses := fn:string-join($c/nodeInfo/ri/@status, " ")
+    let $statuses := fn:tokenize($combinedStatuses, " ")
+    for $st in $statuses
+        return fn:replace($st,'_',' ')
 };
 
 declare function cm:list-centre-descending($sortBy, $statusFilter, $riFilter) {
     for $c in $centre:centres
     let $id := data($c/@id)
-    let $ris :=cm:get-ris($c)
+    let $ris := cm:get-ris($c)
     order by 
         if ($sortBy eq 'curated')
             then rf:isCurated(cm:get-recommendations($id))
@@ -124,14 +137,14 @@ declare function cm:list-centre-descending($sortBy, $statusFilter, $riFilter) {
         cm:filter-by-status($c, $ris, $statusFilter, $riFilter)
 };
 
-declare function cm:list-centre($sortBy, $statusFilter, $riFilter) {
+declare function cm:list-centre($sortBy, $statusFilter, $riFilter) as element(tr)+ {
     if ($sortBy eq 'curated' or $sortBy eq 'depositing')
     then cm:list-centre-descending($sortBy, $statusFilter, $riFilter)
     else
         for $c in $centre:centres
             let $name := $c/centreName/text()
             let $id := data($c/@id)
-            let $ris :=cm:get-ris($c)
+            let $ris := cm:get-ris($c)
     
             order by 
             if ($sortBy eq 'curated')
@@ -169,10 +182,11 @@ declare function cm:filter-by-status($c, $ris, $statusFilter, $riFilter){
             (cm:filter-by-ri($c, $ris, $riFilter))
 };
 
+
 declare function cm:filter-by-ri($c, $ris, $riFilter) {
     if ($riFilter and not($riFilter eq 'all'))
     then
-        if (fn:contains($ris, $riFilter))
+        if (fn:contains(fn:string-join($ris), $riFilter))
         then
             cm:print-centre-row($c, $ris)
         else
@@ -181,7 +195,7 @@ declare function cm:filter-by-ri($c, $ris, $riFilter) {
         (cm:print-centre-row($c, $ris))
 };
 
-declare function cm:print-centre-row($c, $ri) {
+declare function cm:print-centre-row($c, $ris) {
     let $name := $c/centreName/text()
     let $id := data($c/@id)
     let $isDepositing := 
@@ -192,13 +206,13 @@ declare function cm:print-centre-row($c, $ri) {
     <tr>
         <td class="recommendation-row"><a href="{app:link(concat("views/view-centre.xq?id=", $id))}">{$id}</a></td>
         <td class="recommendation-row">{$name}</td>
-        <td class="recommendation-row">{$ri}</td>
-        <td class="recommendation-row" style="text-align:center">{$isDepositing}</td>
-        <td class="recommendation-row" style="text-align:center">{$isCurated}</td>
+        <td class="recommendation-row">{$ris ! cm:visualise-ri-name(.)}</td>
+        <td class="recommendation-row" style="text-align:center" data-is="depo">{$isDepositing}</td>
+        <td class="recommendation-row" style="text-align:center" data-is="cura">{$isCurated}</td>
     </tr>
 };
 
-declare function cm:get-recommendations($id) {
+declare function cm:get-recommendations($id as xs:string) as element(recommendation){
     recommendation:get-recommendations-for-centre($id)
 };
 
@@ -292,4 +306,12 @@ $language) {
                         fn:lower-case(fn:substring($format-id, 2)))
     return
         rf:print-recommendation-row($format, $centre-id, $domain, $language, fn:true(), fn:false())
+};
+
+declare function cm:visualise-ri-name($arg as item()) as item() {
+    if (string($arg) eq 'TextPlus') 
+    then
+      'Text+'
+    else
+      $arg
 };

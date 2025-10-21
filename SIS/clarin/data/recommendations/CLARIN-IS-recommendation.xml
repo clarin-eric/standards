@@ -2,15 +2,15 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>bec52cd36a2996677ce07153a19ce774097f9130</lastUpdateCommitID>
+        <lastUpdateCommitID>ef1cce2b66742e4b94c0c5198b10827647228f1c</lastUpdateCommitID>
         <filter>
             <centreID>CLARIN-IS</centreID>
         </filter>
         <respStmt>
-            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+            <name>Starkaður Barkarson</name>
             <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-            <reviewDate>0001-01-01</reviewDate>
+            <link>https://github.com/starkadur</link>
+            <reviewDate>2025-03-21</reviewDate>
         </respStmt>
         <centre id="CLARIN-IS" deposition="1">
         <centreName>CLARIN-IS (Árni Magnússon Institute for Icelandic Studies)</centreName>
@@ -20,20 +20,149 @@
         </nodeInfo>
       </centre>
     </header>
-    <info><!--use p, ul, ol elements here--></info>
+    <info>
+        <p>This page lists the file formats which are recommended when depositing in CLARIN-IS repository.</p>
+        <h3>File Formats for Digital Preservation Policy</h3>
+        <p>To ensure access and usability of your data to the broadest audience into the long term, the CLARIN-IS team has considered severl factors to to determine which file formats are recommended in CLARIN-IS infrastructure: </p>
+        <ul>
+            <li>Suitability for the type of resource and/or type of processing.</li>
+            <li>Suitability for research by the designated communities.</li>
+            <li>How widespread the format is: broadly used formats, not deprecated, known to the designated communities.</li>
+            <li>Use of open source rather than proprietary format.</li>
+        </ul>
+    </info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 
-            *  adjust the format ID (see https://clarin.ids-mannheim.de/standards/views/list-formats.xq ),
-            *  adjust the domain (https://clarin.ids-mannheim.de/standards/views/list-domains.xq ),
+            *  adjust the format ID (see https://standards.clarin.eu/sis/views/list-formats.xq ),
+            *  adjust the domain (https://standards.clarin.eu/sis/views/list-domains.xq ),
             *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
             *  repeat as necessary;
             *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
-            
-            <format id="null">
-                <domain>Audiovisual Annotation</domain>
-                <level>recommended</level>
-            </format> 
-        -->
+
+       -->
+        
+        <format id="fMP3">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fAVI">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fMP4">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>        
+        <format id="fOGG">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fMPEG">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fEAF">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fPDF">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTextPlain">
+            <domain>Documentation</domain>
+            <level>discouraged</level>
+        </format>
+        <format id="fTEI">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fGIF">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fJPEG">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPNG">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fSVG">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTIFF">
+            <domain>Image Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Lexical Resource</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fLMF">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCSV">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTSV">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fR">
+            <domain>Statistical Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fSPSS">
+            <domain>Statistical Data</domain>
+            <level>acceptable</level>
+        </format>
+      
+        
+        <format id="fTextPlain">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        
+        <format id="fCoNLL-U">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTEI">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXML">
+            <domain>Text Annotation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTEIHeader">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCMDI">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fZIP">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTAR">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+        </format>
     </formats>
 </recommendation>

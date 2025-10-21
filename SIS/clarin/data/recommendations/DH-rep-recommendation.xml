@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
+<recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
+    <header>
+        <lastUpdateCommitID>d93c54825dc433568d8336e2585156f4387b88c4</lastUpdateCommitID>
+        <filter>
+            <centreID>DH-rep</centreID>
+        </filter>
+        <respStmt>
+            <name>Stefan E. Funk</name>
+            <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
+            <link>mailto:support@de.dariah.eu</link>
+            <reviewDate>2025-10-13</reviewDate>
+        </respStmt>
+        <centre id="DH-rep" deposition="1">
+            <centreName>DARIAH-DE Repository</centreName>
+            <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/62"/>
+            <registryLink registry="TextPlus" uri="https://registry.text-plus.org/entity/892e7ca0-cb78-41ba-aef6-d705bf499d33/"/>
+            <registryLink registry="DARIAH" uri="https://www.dariah.eu/tools-services/tools-services-detail-view/?id=hqXyOo"/>
+            <nodeInfo>
+                <ri status="C-centre">CLARIN</ri>
+                <ri status="Collections">TextPlus</ri>
+                <ri status="Repository">DARIAH</ri>
+            </nodeInfo>
+        </centre>
+    </header>
+    <info xml:lang="en">
+        <p>
+            The DARIAH-DE Repository is a central component of the DARIAH-DE Research Data Federation
+            Architecture and allows for storing research data sustainably and securely, and it is
+            <a href="https://doi.org/10.34894/SGNHLL">CoreTrustSeal</a> certified. The repository
+            allows for finding research data through the
+            Repository Search as well as through the DARIAH-DE Generic Search. Read more about
+            sustainability, FAIR and Open Access in the
+            <a href="https://repository.de.dariah.eu/doc/services/organizational-infrastructure.html#mission-and-long-term-preservation">Mission
+            Statement of the DARIAH-DE Repository</a>.
+        </p>
+    </info>
+    <info xml:lang="de">
+        <p>
+            Das DARIAH-DE Repository ermöglicht als zentrale Komponente der DARIAH-DE
+            Forschungsdaten-Föderationsarchitektur die nachhaltige und sichere Speicherung von
+            Forschungsdaten und ist mit dem <a href="https://doi.org/10.34894/SGNHLL">CoreTrustSeal</a>
+            zertifiziert. Alle publizierten Daten sind
+            durch die Repository Suche und die DARIAH-DE Generische Suche auffindbar. Mehr zum Thema
+            Nachhaltigkeit, FAIR und Open Access im <a href="https://repository.de.dariah.eu/doc/services/organizational-infrastructure.html#mission-and-long-term-preservation">Mission
+            Statement des DARIAH-DE Repository</a>.
+        </p>
+    </info>
+    <formats><!--
+            This template will assist in adjusting/creating a recommendations document if you don't
+            have access to a schema-aware XML editor. Copy the XML fragment, 
+            *  adjust the format ID (see https://standards.clarin.eu/sis/views/list-formats.xq ),
+            *  adjust the domain (https://standards.clarin.eu/sis/views/list-domains.xq ),
+            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
+            *  repeat as necessary;
+            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
+            
+            <format id="null">
+                <domain>Audiovisual Annotation</domain>
+                <level>recommended</level>
+            </format> 
+        -->
+        <format id="fCSV">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fHTML">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fLaTeX">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fKML">
+            <domain>Geodata</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fMarkdown">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPDFA">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fPDFA">
+            <domain>Other</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fTextPlain">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fTextPlain">
+            <domain>Other</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fTEI">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fXML">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fTeX">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fWAVE">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fXHTML">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fXSD">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fMP4">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format> 
+        <format id="fBMP">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fBMP">
+            <domain>Other</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fGZIP">
+            <domain>Packaging</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fODF">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fODF">
+            <domain>Other</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fODT">
+            <domain>Contextual Data</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fSVG">
+            <domain>Other</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fTAR">
+            <domain>Packaging</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fZIP">
+            <domain>Packaging</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fJSONLD">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format> 
+        <format id="fN3">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format> 
+    </formats>
+</recommendation>

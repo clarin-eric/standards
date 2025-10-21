@@ -6,11 +6,16 @@
   </titleStmt>
   <keyword>video format</keyword>
   <keyword>flash media</keyword>
+  <extId type="LOC">fdd000131</extId>
+  <extId type="PRONOM">x-fmt/382</extId>
+  <extId type="Wikidata">Q27967488</extId>
    <info type="description">
-   <p>
-    FLV (Flash Video) is a container file format used to deliver digital video content over the internet using Adobe Flash Player.</p>
-    <p>See:
-      <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000131.shtml"> description at the Digital Formats web site by the Library of Congress</a>.</p>
+   <p>FLV (Flash Video) is a container file format used to deliver digital video content over the internet using Adobe Flash Player.</p>
+    <p>See:</p>
+     <ul>
+       <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000131.shtml">description at the Digital Formats web site by the Library of Congress</a></li>
+       <li><a href="../views/view-format.xq?id=fFLV4">FLV4</a></li>
+     </ul>
   </info>
   <mimeType>video/x-flv</mimeType>
   <fileExt>.flv</fileExt>

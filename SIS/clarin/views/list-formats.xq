@@ -23,7 +23,7 @@ return
 <html lang="en">
     <head>
         <title>Data Deposition Formats</title>
-        <link rel="icon" type="image/x-icon" href="../resources/images/SIS-favicon.svg"/>
+        <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
         <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
         <link rel="stylesheet" type="text/css" href="{app:resource("autocomplete.css", "css")}"/>
         <script type="text/javascript" src="{app:resource("edit.js", "js")}"/>
@@ -85,10 +85,10 @@ return
                     <h2>Formats described in the SIS ({fm:count-defined-formats()})</h2>
                     <p>The name of the format links to its description, sometimes rather stubby (you are welcome to help us extend the list
                         and/or the descriptions, either by
-                        <a href="{app:getGithubIssueLink()}">submitting an issue at GitHub</a>
+                        <a href="{app:getGithubFormatIssueLink()}">submitting an issue at GitHub</a>
                         containing suggested text or corrections, or by editing or adding the relevant
                         <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">format file</a> and submitting a pull request).</p>
-                    
+                    <p>The number in the brackets following the format name indicates how many recommendations target the given format. (Low numbers may be worth investigating.)</p>
                     <p>By clicking on the icon next to the format name, you can copy the format ID, which may be useful for editing or adding 
                        centre recommendations.</p>
                     

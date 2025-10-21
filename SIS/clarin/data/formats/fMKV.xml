@@ -1,0 +1,23 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fMKV" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Matroska Multimedia Container</title>
+    <abbr>MKV</abbr>
+  </titleStmt>
+  <keyword>video file format</keyword>
+  <keyword>container format</keyword>
+  <extId type="LOC">fdd000342</extId>
+  <extId type="PRONOM">fmt/569</extId>
+  <extId type="Wikidata">Q223535</extId>
+  <info type="description">
+    <p>The Matroska Multimedia Container is an open standard free container format, based on the Extensible Binary Meta Language (EBML).</p>
+    <p>See:</p>
+      <ul>
+        <li><a href="http://justsolve.archiveteam.org/wiki/Matroska">File Formats Wiki: Matroska.</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Matroska">Wikipedia: Matroska</a>.</li>
+      </ul>
+  </info>
+  <mimeType>video/matroska</mimeType>
+  <fileExt>.mkv</fileExt>
+  <formatFamily>Video</formatFamily>
+</format>

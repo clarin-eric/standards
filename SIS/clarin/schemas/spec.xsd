@@ -660,7 +660,7 @@
         <xs:restriction base="xs:string">
             <xs:enumeration value="CLARIN"/>
             <xs:enumeration value="DARIAH"/>
-            <xs:enumeration value="Text+"/>
+            <xs:enumeration value="TextPlus"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:group name="textblock">

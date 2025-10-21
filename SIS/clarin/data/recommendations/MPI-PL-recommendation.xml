@@ -1,65 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
+<?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
    <header>
-      <lastUpdateCommitID>147cb5ea659a5752efd819898b43da23e00c6a77</lastUpdateCommitID>
+      <lastUpdateCommitID>0550124ccfb434170317de12b167bd1147ce9090</lastUpdateCommitID>
       <filter>
          <centreID>MPI-PL</centreID>
       </filter>
       <respStmt>
-         <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
-         <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-         <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-         <reviewDate>0001-01-01</reviewDate>
+         <name>Paul Trilsbeek</name>
+         <link>https://github.com/pautri</link>
+         <reviewDate>2025-04-14</reviewDate>
       </respStmt>
       <centre id="MPI-PL" deposition="1">
          <centreName>MPI for Psycholinguistics</centreName>
-         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/24"/>
+         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/24" />
          <nodeInfo>
             <ri status="B-centre">CLARIN</ri>
          </nodeInfo>
       </centre>
-    </header>
-   <info><!--use p, ul, ol elements here--></info>
+   </header>
+   <info><p>The Language Archive at the Max Planck Institute for Psycholinguistics requires files to be deposited in one of the formats listed below. In addition, a number of formats for non-language-data are accepted as
+      "medium-term bit-stream preservation" formats, for which future migrations cannot be guaranteed. See <a href="https://archive.mpi.nl/tla/accepted-file-formats">https://archive.mpi.nl/tla/accepted-file-formats</a> for a complete list.</p>
+   </info>
    <formats>
       <format id="fCHAT">
          <domain>Audiovisual Annotation</domain>
          <level>recommended</level>
+         <comment>Use UTF-8 character encoding whenever possible</comment>
       </format>
-      <format id="fMP4">
-         <domain>Audiovisual Source Language Data</domain>
+      <format id="fCSV">
+         <domain>Contextual Data</domain>
          <level>recommended</level>
+         <comment>ASCII or UTF-8 character encoding required</comment>
       </format>
-      <format id="fMPEG1">
-         <domain>Audiovisual Source Language Data</domain>
+      <format id="fCSV">
+         <domain>Lexical Resource</domain>
          <level>recommended</level>
+         <comment>ASCII or UTF-8 character encoding required</comment>
       </format>
-      <format id="fMPEG2">
-         <domain>Audiovisual Source Language Data</domain>
+      <format id="fCut">
+         <domain>Lexical Resource</domain>
          <level>recommended</level>
+         <comment>Use UTF-8 character encoding whenever possible</comment>
       </format>
-      <format id="fWave">
-         <domain>Audiovisual Source Language Data</domain>
+      <format id="fEAF">
+         <domain>Audiovisual Annotation</domain>
          <level>recommended</level>
       </format>
       <format id="fHTML">
-         <domain>Documentation</domain>
+         <domain>Contextual Data</domain>
          <level>recommended</level>
+         <comment>ASCII or UTF-8 character encoding required</comment>
       </format>
-      <format id="fXML">
-         <domain>Documentation</domain>
+      <format id="fHTML">
+         <domain>Lexical Resource</domain>
          <level>recommended</level>
+         <comment>ASCII or UTF-8 character encoding required</comment>
       </format>
-      <format id="fKML">
-         <domain>Geodata</domain>
+      <format id="fHTML">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>ASCII or UTF-8 character encoding required</comment>
+      </format>
+      <format id="fJPEG">
+         <domain>Contextual Data</domain>
          <level>recommended</level>
       </format>
       <format id="fJPEG">
          <domain>Image Source Language Data</domain>
          <level>recommended</level>
       </format>
+      <format id="fKML">
+         <domain>Geodata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fMPEG1">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>Video stream bitrate min. 300 kbit/sec, resolution min. 352x240. Max 2 audio
+            tracks.</comment>
+      </format>
+      <format id="fMPEG2">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>MPEG2 Program Stream. Video stream bitrate min. 3 mbit/sec, resolution min.
+            640x480. Max. 2 audio tracks.</comment>
+      </format>
+      <format id="fMPEG-4-AVC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>Video codec: H.264, audio codec: AAC. Video stream bitrate min. 300 kbit/sec,
+            resolution min. 352x240. Max. 2 audio tracks.</comment>
+      </format>
+      <format id="fODP">
+         <domain>Contextual Information</domain>
+         <level>recommended</level>
+         <comment>Open Document Presentation format</comment>
+      </format>
+      <format id="fODP">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+         <comment>Open Document Presentation format</comment>
+      </format>
+      <format id="fODS">
+         <domain>Contextual Data</domain>
+         <level>recommended</level>
+         <comment>Open Document Spreadsheet format</comment>
+      </format>
+      <format id="fODS">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+         <comment>Open Document Spreadsheet format</comment>
+      </format>
+      <format id="fODT">
+         <domain>Contextual Data</domain>
+         <level>recommended</level>
+         <comment>Open Document Text format</comment>
+      </format>
+      <format id="fODT">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+         <comment>Open Document Text format</comment>
+      </format>
+      <format id="fODT">
+         <domain>Language Description</domain>
+         <level>recommended</level>
+         <comment>Open Document Text format</comment>
+      </format>
+      <format id="fODT">
+         <domain>Text Annotation</domain>
+         <level>discouraged</level>
+         <comment>Open Document Text format</comment>
+      </format>
+      <format id="fODT">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>Open Document Text format</comment>
+      </format>
+      <format id="fPDF">
+         <domain>Contextual Data</domain>
+         <level>recommended</level>
+         <comment>Embed non-standard fonts</comment>
+      </format>
+      <format id="fPDF">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+         <comment>Embed non-standard fonts</comment>
+      </format>
+      <format id="fPDF">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+         <comment>Embed non-standard fonts</comment>
+      </format>
+      <format id="fPDF">
+         <domain>Language Description</domain>
+         <level>recommended</level>
+         <comment>Embed non-standard fonts</comment>
+      </format>
+      <format id="fPDF">
+         <domain>Text Annotation</domain>
+         <level>discouraged</level>
+         <comment>Embed non-standard fonts</comment>
+      </format>
+      <format id="fPDF">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>Embed non-standard fonts</comment>
+      </format>
+      <format id="fPFSX">
+         <domain>Tool Support</domain>
+         <level>acceptable</level>
+         <comment>ELAN settings file for a specific annotation file. Not strictly necessary to
+            preserve, but can be archived along with EAF for convenience.</comment>
+      </format>
+      <format id="fTextPlain">
+         <domain>Audiovisual Annotation</domain>
+         <level>discouraged</level>
+         <comment>ASCII or UTF-8 character encoding required</comment>
+      </format>
+      <format id="fTextPlain">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+         <comment>ASCII or UTF-8 character encoding required</comment>
+      </format>
+      <format id="fTextPlain">
+         <domain>Lexical Resource</domain>
+         <level>acceptable</level>
+         <comment>ASCII or UTF-8 character encoding required</comment>
+      </format>
+      <format id="fTextPlain">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>ASCII or UTF-8 character encoding required</comment>
+      </format>
+      <format id="fPNG">
+         <domain>Contextual Data</domain>
+         <level>recommended</level>
+      </format>
       <format id="fPNG">
          <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fPraat">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+         <comment>Praat TextGrid annotation file (only plain text variant is accepted, not binary).
+            Use UTF-8 character encoding, not UTF-16.</comment>
+      </format>
+      <format id="fMarkdown">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+         <comment>ASCII or UTF-8 character encoding required.</comment>
+      </format>
+      <format id="fR">
+         <domain>Statistical Data</domain>
+         <level>acceptable</level>
+         <comment>R script. ASCII or UTF-8 character encoding required. Preserved as text,
+            compatibility with future R versions cannot be guaranteed.</comment>
+      </format>
+      <format id="fXSD">
+         <domain>Tool Support</domain>
          <level>recommended</level>
       </format>
       <format id="fSVG">
@@ -67,48 +227,67 @@
          <level>recommended</level>
       </format>
       <format id="fTIFF">
+         <domain>Contextual Data</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fTIFF">
          <domain>Image Source Language Data</domain>
          <level>recommended</level>
       </format>
-      <format id="fCut">
-         <domain>Lexical Resource</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fTBox">
-         <domain>Lexical Resource</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fTBT">
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fXML">
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fEAF">
-         <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fODT">
-         <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fPDF">
-         <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fPraat">
-         <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fTextPlain">
-         <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fXSD">
+      <format id="fToolbox_Language">
          <domain>Tool Support</domain>
          <level>recommended</level>
+         <comment>Toolbox language file</comment>
+      </format>
+      <format id="fToolbox_Lexicon">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+         <comment>Use UTF-8 character encoding whenever possible.</comment>
+      </format>
+      <format id="fToolbox_Sort_Order">
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+         <comment>Toolbox sort order file</comment>
+      </format>
+      <format id="fToolbox">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+         <comment>Use UTF-8 character encoding whenever possible.</comment>
+      </format>
+      <format id="fToolbox_Type">
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+         <comment>Toolbox type file</comment>
+      </format>
+      <format id="fWAVE">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>16/24 bit, 44.1/48 kHz, uncompressed PCM, 1 or 2 tracks.</comment>
+      </format>
+      <format id="fXML">
+         <domain>Audiovisual Annotation</domain>
+         <level>acceptable</level>
+         <comment>Generic XML file. Provide XML schema for non-standardised formats</comment>
+      </format>
+      <format id="fXML">
+         <domain>Contextual Information</domain>
+         <level>recommended</level>
+         <comment>Generic XML file. Provide XML schema for non-standardised formats</comment>
+      </format>
+      <format id="fXML">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+         <comment>Generic XML file. Provide XML schema for non-standardised formats</comment>
+      </format>
+      <format id="fXML">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+         <comment>Generic XML file. Provide XML schema for non-standardised formats</comment>
+      </format>
+      <format id="fXML">
+         <domain>Textual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>Generic XML file. Provide XML schema for non-standardised formats</comment>
       </format>
    </formats>
 </recommendation>

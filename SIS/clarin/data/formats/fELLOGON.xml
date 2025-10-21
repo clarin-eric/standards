@@ -10,10 +10,10 @@
    <info type="description">
     <p>The ELLOGON file format is not a single, universally recognized file extension but rather refers to the Data Model used
       by the Ellogon Language Engineering Platform (a multi-lingual, general-purpose text engineering and annotation environment).
-      Typically, the an ELLOGON file, describes the linguistic features, like part-of-speech tags or named entities, that have been marked up or extracted from a text within the Ellogon platform.
-    </p>
+      Typically, an ELLOGON file describes the linguistic features, like part-of-speech tags or named entities, that have been 
+      marked up or extracted from a text within the Ellogon platform.</p>
     <p>See here:
-      <a href="https://www.ellogon.org/index.php/what-is-ellogon?showall=&start=2"> the formal description of ELLOGON architecture</a>.</p>
+      <a href="https://www.ellogon.org/index.php/what-is-ellogon?showall=&amp;start=2"> the formal description of ELLOGON architecture</a>.</p>
   </info>
   <mimeType>application/xml</mimeType>
   <fileExt recommended="yes">.xml</fileExt>
