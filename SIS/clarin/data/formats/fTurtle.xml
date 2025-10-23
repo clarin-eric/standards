@@ -8,10 +8,10 @@
   <keyword>Semantic Web</keyword>
   <keyword>RDF</keyword>
   <info type="description">
-    <p>Turtle is designed to be a compact and easy-to-read textual format for serializing RDF graphs. RDF graphs represent information as a collection of subject-predicate-object triples.
-        It is a subset of the older Notation3 (N3) language, but unlike full N3, Turtle is restricted to only expressing valid RDF graphs.
-    </p>
-    <p>The main "official" location for the core specification is located at<a href="http://www.w3.org/TR/turtle/">W3C RDF 1.1 Turtle (Terse RDF Triple Language)</a>.</p>
+    <p>Turtle is designed to be a compact and easy-to-read textual format for serializing RDF graphs. RDF graphs represent information as 
+      a collection of subject-predicate-object triples. It is a subset of the older Notation3 (N3) language, but unlike full N3, 
+      Turtle is restricted to only expressing valid RDF graphs.</p>
+    <p>The main "official" location for the core specification is at <a href="http://www.w3.org/TR/turtle/">W3C RDF 1.1 Turtle (Terse RDF Triple Language)</a>.</p>
   </info>
   <mimeType>text/turtle</mimeType>
   <fileExt>.ttl</fileExt>

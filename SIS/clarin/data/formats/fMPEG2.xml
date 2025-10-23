@@ -8,11 +8,14 @@
   <keyword>container format</keyword>
   <extId type="LOC">fdd000028</extId>
   <info type="description">
-    <p>The Moving Picture Experts Group (MPEG) is the "umbrella"
-      organization and working group that creates and develops the standards for digital audio and video compression, packaging, and transmission.</p>
-    <p>MPEG-2, is a generic coding standard of Moving Pictures and Associated Audio Information (used for DVDs and digital television).</p>
-    <p>See:
-      <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000028.shtml">description at the Digital Formats web site by the Library of Congress</a>.</p>
+    <p>The Moving Picture Experts Group (MPEG) is the "umbrella" organization and working group that creates and develops 
+      standards for digital audio and video compression, packaging, and transmission.</p>
+    <p>MPEG-2 is a generic coding standard of Moving Pictures and Associated Audio Information (used for DVDs and digital television).</p>
+    <p>See:</p>
+    <ul>
+      <li><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000028.shtml">description at the Digital Formats web site by the Library of Congress</a>,</li>
+      <li><a href="https://en.wikipedia.org/wiki/MPEG-2">Wikipedia article</a>.</li>
+    </ul>
   </info>
   <mimeType>video/mpeg</mimeType>
   <fileExt>.mpg</fileExt>

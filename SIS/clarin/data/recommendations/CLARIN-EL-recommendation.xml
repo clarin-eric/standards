@@ -274,7 +274,7 @@
 		<domain>ML Model Exchange</domain>
 		<level>recommended</level>
 	</format>
-	<format id="fOntoLexLemon">
+	<format id="fLemon">
 		<domain>Lexical Resource</domain>
 		<level>recommended</level>
 		<comment>model for lexica</comment>
