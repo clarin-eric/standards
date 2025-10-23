@@ -52,6 +52,8 @@ return
                     only holds a snapshot of the state of the network at a certain (usually fairly random) date. We are not able to monitor
                     that in real time. If you see omissions or errors in the list below, please kindly 
                     <a title="open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic%2C+UserInput&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">let us know</a>.</p>
+                    <p>As far as RIs (research infrastructures) other than CLARIN are concerned, as of 2025, the list below only includes 
+                    those DARIAH and Text+ repositories which are also CLARIN centres. We are open to the idea of extending the current coverage.</p>
                     <p><a href="{app:link("views/list-statistics-centre.xq")}">Centre-related statistics</a> are available on a separate page.</p>
                     </div>
                     <div>

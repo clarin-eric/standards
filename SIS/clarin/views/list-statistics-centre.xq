@@ -48,6 +48,9 @@ return
                     centres that actively maintain the information stored in the SIS, and that have designated a curator
                     for that information. See the verbose <a href="{app:link("views/list-centres.xq")}">list of centres</a> 
                     for more information. </p>
+                    <p>As far as RIs (research infrastructures) other than CLARIN are concerned, as of 2025, the tables 
+                    below only list those DARIAH and Text+ repositories which are also CLARIN centres. We are open to the 
+                    idea of extending the current coverage.</p>
                     </div>
                     <table style="width:600px">
                         <tr>
