@@ -10,7 +10,7 @@
             <name>Sasa Kolovou</name>
             <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
         	<link>https://github.com/raspberryjoy</link>
-            <reviewDate>2025-01-15</reviewDate>
+            <reviewDate>2025-10-21</reviewDate>
         </respStmt>
         <centre id="CLARIN:EL" deposition="1">
         <centreName>CLARIN:EL National Infrastructure for Language Resources and Technologies in Greece</centreName>
@@ -226,10 +226,6 @@
 		<domain>Audiovisual Source Language Data</domain>
 		<level>acceptable</level>
 	</format>
-	<format id="fMPEG">
-		<domain>Audiovisual Source Language Data</domain>
-		<level>acceptable</level>
-	</format>
 	<format id="fMPEG-4-AVC">
 		<domain>Audiovisual Source Language Data</domain>
 		<level>acceptable</level>
@@ -278,7 +274,7 @@
 		<domain>ML Model Exchange</domain>
 		<level>recommended</level>
 	</format>
-	<format id="fOntoLexLemon">
+	<format id="fLemon">
 		<domain>Lexical Resource</domain>
 		<level>recommended</level>
 		<comment>model for lexica</comment>

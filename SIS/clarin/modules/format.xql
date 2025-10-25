@@ -163,11 +163,11 @@ declare function fm:list-centre-with-missing-formats(){
     
     let $centres := 
         for $r in $recommendation:centres
-        let $format-ids := $r/formats/format/@id
+        let $format-ids := distinct-values($r/formats/format/@id)
         let $actualMissingFormatIds :=
             for $id in $format-ids
             return
-                if (contains(string-join($missingFormatIds),$id)) then $id else ()
+                if ($id = $missingFormatIds) then $id else ()
         let $numOfMissingFormats := count($actualMissingFormatIds)
         let $centre-id := data($r/header/centre/@id)
         order by $numOfMissingFormats

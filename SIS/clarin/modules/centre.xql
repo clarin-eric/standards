@@ -13,11 +13,11 @@ import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-mod
 import module namespace web = "https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
 import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
 
-declare function cm:get-centre($id) {
+declare function cm:get-centre($id as xs:string) as element(centre){
     centre:get-centre($id)
 };
 
-declare function cm:isDepositing($centre){
+declare function cm:isDepositing($centre as element(centre)) as xs:boolean {
     if(xs:boolean($centre/@deposition)) then true() else false()
 };
 
@@ -212,7 +212,7 @@ declare function cm:print-centre-row($c, $ris) {
     </tr>
 };
 
-declare function cm:get-recommendations($id) {
+declare function cm:get-recommendations($id as xs:string) as element(recommendation){
     recommendation:get-recommendations-for-centre($id)
 };
 

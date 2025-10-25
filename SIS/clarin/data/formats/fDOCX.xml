@@ -7,10 +7,11 @@
   <keyword>document format</keyword>
   <extId type="LOC">fdd000400</extId>
   <info type="description">
-    <p>See: <a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-376/">ECMA-376</a> and <a href="https://www.iso.org/committee/45374/x/catalogue/">ISO/IEC 29500</a>.</p> 
-  </info> 
+    <p>XML-based Format (Office Open XML), generally smaller than its predecessor, the <a href="../views/view-format.xq?id=fDOC">.DOC file</a>, 
+      due to the built-in ZIP compression. It is compatible with all modern versions of Word (2007 and newer) and is well-supported by most non-Microsoft word processors.</p>
+    <p>See: <a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-376/">ECMA-376</a> and <a href="https://www.iso.org/committee/45374/x/catalogue/">ISO/IEC 29500</a>.</p>
+  </info>
   <mimeType>application/vnd.openxmlformats-officedocument.wordprocessingml.document</mimeType>
   <fileExt>.docx</fileExt>
-  <formatFamily>ZIP</formatFamily>
   <formatFamily>XML</formatFamily>
 </format>
