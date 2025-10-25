@@ -34,6 +34,10 @@ declare function rf:print-curation($recommendation, $language) {
             {
                 for $rs in $recommendation/header/respStmt
                 let $resp := functx:capitalize-first($rs/resp/text())
+                let $today := current-date()
+                let $review-date := xs:date($rs/reviewDate/text())
+                let $diff := ($today - $review-date) div xs:dayTimeDuration("P365D")
+                let $color := if ($diff >2) then "red" else if($diff >1) then "orange" else "black"   
                 return
                     (
                     <ul>
@@ -46,10 +50,9 @@ declare function rf:print-curation($recommendation, $language) {
                                     (
                                     <a href="{$rs/link/text()}">{$rs/name/text()}</a>)
                             }
-                            <span> ({
+                            <span style="color:{$color}"> ({
                                     format-date($rs/reviewDate/text(),
-                                    "[MNn] [D], [Y]", $language, (), ())
-                                })</span>
+                                    "[MNn] [D], [Y]", $language, (), ())}) </span>
                         </li>
                     </ul>
                     )
