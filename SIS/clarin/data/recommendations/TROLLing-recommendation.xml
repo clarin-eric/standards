@@ -2,7 +2,7 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>56edd195d9ed1d5bc7c2d984fac74a0c14801520</lastUpdateCommitID>
+        <lastUpdateCommitID>cf472288d749456c233974b5d2dde39f31f8600f</lastUpdateCommitID>
         <filter>
             <centreID>TROLLing</centreID>
         </filter>
@@ -89,7 +89,7 @@
             <domain>Metadata</domain>
             <level>recommended</level>
         </format>
-        <format id="fWave">
+        <format id="fWAVE">
             <domain>Audiovisual Source Language Data</domain>
             <level>recommended</level>
         </format>
