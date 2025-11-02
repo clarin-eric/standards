@@ -12,15 +12,20 @@
             <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
-        <centre id="CEDIFOR" deposition="1">
+        <centre id="CEDIFOR">
         <centreName>Centre for the Digital Foundation of Research in the Humanities, Social, and Educational Sciences</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/35"/>
         <nodeInfo>
-          <ri status="C-centre_aiming-for-B">CLARIN</ri>
+          <ri status="C-centre">CLARIN</ri>
         </nodeInfo>
       </centre>
     </header>
-    <info><p>See also the <a href="https://www.dipf.de/en/research/projects/centre-for-digital-research-in-the-humanities-social-sciences-and-educational-science-cedifor?set_language=en#0">DIPF page for the centre</a>.</p></info>
+    <info>
+        <p>The deposition flag was removed from this centre in November 2025. The entire description
+            will probably be removed as well. See <a href="https://github.com/clarin-eric/standards/issues/14">issue 14, section 3.3</a> for more details.</p>
+        <p>The only mention of the centre, as of November 2025, can be found at
+            <a href="https://www.dipf.de/en/research/projects/centre-for-digital-research-in-the-humanities-social-sciences-and-educational-science-cedifor?set_language=en#0">DIPF page for the centre</a>.</p>
+    </info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 
