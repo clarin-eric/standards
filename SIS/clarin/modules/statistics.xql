@@ -111,7 +111,7 @@ declare function stm:get-formats-per-domain($threshold as xs:int){
         let $isEven := $i mod 2  
         
         let $recommendations := recommendation:get-positive-formats-by-domain($domain)
-        let $format-ids := fn:distinct-values($recommendations/@id)
+        let $format-ids := fn:distinct-values($recommendations/@id)[not(fn:string(.) = format:get-hub-ids())]
         
         let $sorted :=
             for $id in $format-ids

@@ -29,3 +29,7 @@ declare function format:get-formats-with-keyword($key as xs:string){
     $format:formats[keyword=$key]
 };
 
+(: Get the sequence of IDs of formats marked as "hub" (= with unclear extension) :)
+declare function format:get-hub-ids() as xs:string* {
+    data($format:formats[info/@hub eq 'yes']/@id)
+};
