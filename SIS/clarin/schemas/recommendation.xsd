@@ -418,7 +418,7 @@
             <xs:documentation>The centreID element is only valid for exports from the
                 "recommended formats" list, provided for all centres. It should NOT be
                 used for importing centre recommendations into SIS.</xs:documentation>
-            <!--<xs:appinfo>
+            <xs:appinfo>
                 <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
                     <sch:rule context="formats/format">
                         <sch:assert
@@ -426,8 +426,7 @@
                             >Remove spurious whitespace from the @id string.</sch:assert>
                     </sch:rule>
                 </sch:pattern>
-                <!-\-  this schematron check needs an extra PI in each recommendation doc and I'd rather avoid adding that -\->
-            </xs:appinfo>-->
+            </xs:appinfo>
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
