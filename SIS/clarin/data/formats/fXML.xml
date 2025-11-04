@@ -10,6 +10,8 @@
   <extId type="LOC">fdd000075</extId>
   <extId type="PRONOM">fmt/101</extId>
   <extId type="Wikidata">Q2115</extId>
+  <extDoc type="enWiki">XML</extDoc>
+  <extDoc type="formatWiki">XML</extDoc>
   <info type="description" hub="yes">
     <p>In the context of format recommendations, "XML" is too general a pointer to provide a
       meaningful recommendation. In fringe cases, it might happen that a centre receives deposition

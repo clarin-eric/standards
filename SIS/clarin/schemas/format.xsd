@@ -56,6 +56,7 @@
                 </xs:element>
                 <xs:element ref="keyword" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element ref="extId" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="extDoc" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element ref="info" maxOccurs="unbounded"/>
                 <xs:element ref="features" minOccurs="0"/>
                 <xs:element ref="address" minOccurs="0" maxOccurs="unbounded"/>
@@ -633,6 +634,11 @@
                         <xs:simpleType>
                             <xs:restriction base="xs:NCName">
                                 <xs:enumeration value="BabelNet"/>
+                                <xs:enumeration value="FAIRsharing">
+                                    <xs:annotation>
+                                        <xs:documentation>FAIRsharing.org</xs:documentation>
+                                    </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="LOC">
                                     <xs:annotation>
                                         <xs:documentation>Library of Congress</xs:documentation>
@@ -644,6 +650,39 @@
                                     </xs:annotation>
                                 </xs:enumeration>
                                 <xs:enumeration value="Wikidata"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                    <xs:attribute name="label" type="xs:string" use="optional">
+                        <xs:annotation><xs:documentation>Label to distinguish references that point to the same registry (e.g. to indicate records for different versions of a format)</xs:documentation></xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="extDoc">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">External document. This is a way to provide a structured
+                reference to well-established sources of information, such as Wikipedia (the
+                English-language variant, "enWiki") or the "Just Solve the File Format Problem" wiki (referenced as "formatWiki"). 
+                The value list follows the file data/landing-pages.xml</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="type" use="required">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:NCName">
+                                <xs:enumeration value="enWiki">
+                                    <xs:annotation>
+                                        <xs:documentation>English-language Wikipedia</xs:documentation>
+                                    </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="formatWiki">
+                                    <xs:annotation>
+                                        <xs:documentation>"Just Solve the File Format Problem" wiki</xs:documentation>
+                                    </xs:annotation>
+                                </xs:enumeration>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:attribute>

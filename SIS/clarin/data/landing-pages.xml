@@ -1,8 +1,13 @@
 <landingPages>
+                          <!--  extID  -->
     <landingPage>
-        <type>PRONOM</type>
-        <prefix>https://www.nationalarchives.gov.uk/PRONOM/</prefix>
-        <tooltip>UK National Archives</tooltip>
+        <type>BabelNet</type>
+        <prefix>https://babelnet.org/synset?id=</prefix>
+        <suffix>&amp;lang=EN</suffix>
+    </landingPage>
+    <landingPage>
+        <type>FAIRsharing</type>
+        <prefix>https://fairsharing.org/</prefix>
     </landingPage>
     <landingPage>
         <type>LOC</type>
@@ -11,12 +16,23 @@
         <tooltip>Library of Congress</tooltip>
     </landingPage>
     <landingPage>
+        <type>PRONOM</type>
+        <prefix>https://www.nationalarchives.gov.uk/PRONOM/</prefix>
+        <tooltip>UK National Archives</tooltip>
+    </landingPage>
+    <landingPage>
         <type>Wikidata</type>
         <prefix>https://www.wikidata.org/wiki/</prefix>
     </landingPage>
+
+                    <!--  extDoc  -->
     <landingPage>
-        <type>BabelNet</type>
-        <prefix>https://babelnet.org/synset?id=</prefix>
-        <suffix>&amp;lang=EN</suffix>
+        <type>enWiki</type>
+        <prefix>https://en.wikipedia.org/wiki/</prefix>
+        <tooltip></tooltip>
+    </landingPage>
+    <landingPage>
+        <type>formatWiki</type>
+        <prefix>http://fileformats.archiveteam.org/wiki/</prefix>
     </landingPage>
 </landingPages>
