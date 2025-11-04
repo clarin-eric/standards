@@ -121,10 +121,10 @@ return
                         context of research data, it is actually shorthand for many, sometimes drastically differing formats. 
                         Centres are advised to discern between the various subformats that are grouped 
                         under the general umbrella of this one, for the purpose of creating 
-                        recommendations.</p>
+                        recommendations (see the description at the <a href="#desctext{$id}">bottom of this page</a>).</p>
                         <p>Hub formats do not appear in the list of 
                         <a href="{app:link("views/list-popular-formats.xq")}">popular formats</a> (unconditionally) 
-                        and are indicated as out-of-place in the recommendations – unless they 
+                        and are indicated as out-of-place (improperly used) in the recommendations – unless they 
                         are qualified by a comment.</p></div>
                                       else () }
                         </div>
@@ -148,19 +148,21 @@ return
                             </tr>    
                             {vfm:print-identifiers($format/extId)}
                         </table>
-
-                        <div>
+                        {
+                        if (count($format/extDoc)) then
+                        (<div>
                             <span class="heading">External documents: </span>
-                        </div>
-                        <table width= "400px">
+                        </div> ,
+                        <table width="400px">
                             <tr>
                                 <th width="100px">Source</th>
                                 <th width="100px">Title</th>
                                 <td></td>
                             </tr>
                             {vfm:print-identifiers($format/extDoc)}
-                         </table>
-
+                         </table>)
+                         else ()
+                         }
                         {vfm:print-multiple-values($format/titleStmt/versionNumber, $id, "Versions:")}
 
                         <div><span class="heading"><a href="{app:link("views/list-mimetypes.xq")}">Media type(s)</a>:</span></div>
@@ -194,8 +196,8 @@ return
                         {vfm:print-recommendation-table($id,$domain,$centre,$recommendationType,
                             $sortBy,$language)}
                         <div>
-                            <span class="heading">Description: </span>
-                            <span id="desctext{$id}" class="desctext">{$format/info[@type = "description"]}</span>
+                            <span id="desctext{$id}" class="heading">Description: </span>
+                            <span class="desctext">{$format/info[@type = "description"]}</span>
                         </div>
 <!--
                         <div align="right"><p><a href="{app:getGithubFormatIssueLink($id)}">[suggest a fix or extension]</a></p></div>
