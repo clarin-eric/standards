@@ -29,6 +29,8 @@ let $format-abbr := $format/titleStmt/abbr/text()
 
 let $format-domains := vfm:get-recommended-domains-by-format($id)
 
+let $is-hub as xs:boolean := fn:boolean($format/info/@hub)
+
 return
     
     if (not($id) or not($format)) then
@@ -112,6 +114,19 @@ return
                             <span class="heading">Abbreviation: </span>
                             <span id="abbrtext" class="heading">
                                 {$format-abbr}</span>
+                                
+                         { if($is-hub) then <div style="width:550px">
+                        <p>{$format-abbr} is considered a <b>hub format</b>, which means that it is 
+                        impossible to create a meaningful recommendation for or against using it, because in the 
+                        context of research data, it is actually shorthand for many, sometimes drastically differing formats. 
+                        Centres are advised to discern between the various subformats that are grouped 
+                        under the general umbrella of this one, for the purpose of creating 
+                        recommendations.</p>
+                        <p>Hub formats do not appear in the list of 
+                        <a href="{app:link("views/list-popular-formats.xq")}">popular formats</a> (unconditionally) 
+                        and are indicated as out-of-place in the recommendations – unless they 
+                        are qualified by a comment.</p></div>
+                                      else () }
                         </div>
                         
                         <div>
@@ -133,9 +148,7 @@ return
                             </tr>    
                             {vfm:print-identifiers($format/extId)}
                         </table>
-                        
-                        <div> <!-- intentionally slightly indented, to distinguish this fragment without consuming 
-                                   vertical space - as long as that makes sense to @margaretha's eye -->
+
                         <div>
                             <span class="heading">External documents: </span>
                         </div>
@@ -147,20 +160,19 @@ return
                             </tr>
                             {vfm:print-identifiers($format/extDoc)}
                          </table>
-                         </div>
-                         
+
                         {vfm:print-multiple-values($format/titleStmt/versionNumber, $id, "Versions:")}
-                        
-                        <div><span class="heading">Media type(s):</span></div>
+
+                        <div><span class="heading"><a href="{app:link("views/list-mimetypes.xq")}">Media type(s)</a>:</span></div>
                         {vfm:print-bullets($format/mimeType, $id)}
-                        {vfm:print-multiple-values($format/fileExt, $id, "File extension(s):")}
-                        {vfm:print-multiple-values($format/formatFamily, $id, "Format family:")}
+                        {vfm:print-multiple-values($format/fileExt, $id, ("File extension(s):","views/list-extensions.xq"))}
+                        {vfm:print-multiple-values($format/formatFamily, $id, ("Format family:","views/format-families.xq"))}
                         {vfm:print-multiple-values($format/schemaLoc, $id, "Schema location:", fn:true())}
                         
                         {if (count($format-domains)>0)
                                 then(
                                     <div>
-                                        <span class="heading">Functional domains extracted from the recommendations: </span>
+                                        <span class="heading"><a href="{app:link("views/list-domains.xq")}">Functional domains</a> extracted from the recommendations: </span>
                                         <div style="column-count:1">
                                             <ul style="margin: 0; padding-left:15px;">
                                                 {

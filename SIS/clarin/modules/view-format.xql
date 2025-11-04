@@ -70,7 +70,11 @@ declare function vfm:print-multiple-values($list, $id, $label, $isLink as xs:boo
         if ($list)
         then
             (
-            <div><span class="heading">{$label}&#160;</span>
+            <div><span class="heading">{
+                                        if (count($label) gt 1) 
+                                        then <a href="{app:link($label[2])}">{$label[1]}</a>
+                                        else $label
+                                        }&#160;</span>
                 <span id="keytext">
                     {
                         for $k in (1 to $numOfItems)
