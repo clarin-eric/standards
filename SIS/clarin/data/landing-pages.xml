@@ -7,7 +7,7 @@
     </landingPage>
     <landingPage>
         <type>FAIRsharing</type>
-        <prefix>https://fairsharing.org/</prefix>
+        <prefix>https://fairsharing.org/FAIRsharing.</prefix>
     </landingPage>
     <landingPage>
         <type>LOC</type>
