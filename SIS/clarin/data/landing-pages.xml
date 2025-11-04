@@ -29,10 +29,11 @@
     <landingPage>
         <type>enWiki</type>
         <prefix>https://en.wikipedia.org/wiki/</prefix>
-        <tooltip></tooltip>
+        <tooltip>English-language Wikipedia</tooltip>
     </landingPage>
     <landingPage>
         <type>formatWiki</type>
         <prefix>http://fileformats.archiveteam.org/wiki/</prefix>
+        <tooltip>"Just Solve the File Format Problem" wiki (might not load immediately)</tooltip>
     </landingPage>
 </landingPages>

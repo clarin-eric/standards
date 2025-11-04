@@ -134,6 +134,21 @@ return
                             {vfm:print-identifiers($format/extId)}
                         </table>
                         
+                        <div> <!-- intentionally slightly indented, to distinguish this fragment without consuming 
+                                   vertical space - as long as that makes sense to @margaretha's eye -->
+                        <div>
+                            <span class="heading">External documents: </span>
+                        </div>
+                        <table width= "400px">
+                            <tr>
+                                <th width="100px">Source</th>
+                                <th width="100px">Title</th>
+                                <td></td>
+                            </tr>
+                            {vfm:print-identifiers($format/extDoc)}
+                         </table>
+                         </div>
+                         
                         {vfm:print-multiple-values($format/titleStmt/versionNumber, $id, "Versions:")}
                         
                         <div><span class="heading">Media type(s):</span></div>
