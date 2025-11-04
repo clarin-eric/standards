@@ -16,9 +16,14 @@ declare option output:html-version "5";
     @author margaretha
 :)
 
+let $default := 2
 let $reset := request:get-parameter('reset', '')
-let $threshold := if ($reset) then (1) else request:get-parameter('threshold', 1)
+let $threshold := if ($reset) then ($default) else request:get-parameter('threshold', $default)
 let $top3 := if ($reset) then () else request:get-parameter('top3', '')
+let $hubIDs := format:get-hub-ids()
+let $seq := for $fID in $hubIDs 
+                order by $fID 
+                return (<a href="{app:link(concat("views/view-format.xq?id=",$fID))}">{substring-after($fID,'f')}</a>, ", ")
 return
 
 
@@ -43,13 +48,34 @@ return
                 </div>
                 <div class="title">Popular Formats</div>
                   <div>
-                    <p>This section presents statistics concerning "popular" data deposition 
-                    formats (however popularity can be defined) and should be considered work in progress. Feel welcome to add your suggestions to the 
+                    <p>This section presents statistics concerning "popular" data deposition formats across the 
+                    <a href="{app:link("views/list-domains.xq")}">functional domains</a>: for each domain, we count 
+                    the recommendations mentioning the given format, and order them from the highest to the lowest 
+                    count, which is expected to correlate with (some function of) their popularity across the centres. 
+                    That (somewhat indirectly) translates into which format has the greatest chance to be accepted for 
+                    storage and archival. The eloquently named "Other" domain is included for the sake of completeness.</p>
+                    <p>The user can adjust the minimal number or recommendations that has to be met 
+                    in order for the given format to count as "popular" (this lower threshold currently defaults to 
+                    {$default}, in order to eliminate one-off formats and errors in format IDs). Clicking on "the most 
+                    popular formats" will show only those formats that occupy the 3 highest tiers in terms of popularity 
+                    in the given domain (with no lower bound).</p>
+                    <p>This measurement excludes formats that are considered "hub formats", i.e. shorthand references for 
+                    an undeterminable number of formats that are very similar in some respect. The formats thus excluded are: 
+                    <span>{$seq[position() lt last()]}.</span></p>
+
+<!-- @Eliza; can you make my treatment of $seq less desperate, please...? :-) -->
+
+
+<!--      I suggest that we get rid of that permanent github issue referenced below. (see #455)
+
+                    <p>This section presents statistics concerning "popular" data deposition formats (however popularity can be 
+                    defined) and should be considered work in progress. Feel welcome to add your suggestions to the 
                     <a href="https://github.com/clarin-eric/standards/issues/201">discussion at GitHub</a>. For a bit of inspiration, you might want 
                     to consult the page that is for now only made available to you, our 1-millionth viewer, and which visualises (at the bottom) our 
                     still skeletal and imperfectly implemented idea of 
-                    <a href="{app:link("views/format-families.xq")}">format families</a>.</p>
-                  </div>
+                    <a href="{app:link("views/format-families.xq")}">format families</a>.</p> -->
+              
+                    </div>
                     <div>
                     
                     <form method="get" action="">
