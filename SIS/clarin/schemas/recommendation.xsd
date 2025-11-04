@@ -423,9 +423,22 @@
                     <sch:rule context="formats/format">
                         <sch:assert
                             test="string-length(@id) eq string-length(normalize-space(@id))"
-                            >Remove spurious whitespace from the @id string.</sch:assert>
+                            >Remove spurious whitespace from the @id string. (Correct <sch:value-of select="concat('>',@id,'&lt;')"/>)</sch:assert>
                     </sch:rule>
                 </sch:pattern>
+                <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                    <sch:rule context="formats/format/@id" role="warning">
+                        <sch:let name="me" value="."/>
+                        <sch:let name="frmt" value="collection('../data/formats')/format[@id eq $me]"/>
+                        <sch:let name="nama" value="substring-after(.,'f')"/>
+                        <sch:let name="is_hub" value="boolean($frmt/info/@hub)"/>
+                        <sch:report
+                            test="$is_hub and not(count(../comment))" 
+                            >Hub formats such as <sch:value-of select="$nama" /> should not be used in recommendations. Please increase the granularity: use a format based on 
+                            <sch:value-of select="$nama"/> or provide a comprehensive comment to state what (sub)kinds of <sch:value-of select="$nama"/> are meant.</sch:report>
+                    </sch:rule>
+                </sch:pattern>
+                
             </xs:appinfo>
         </xs:annotation>
         <xs:complexType>
@@ -440,7 +453,7 @@
                     <xs:documentation xml:lang="en">Existing or postulated ID of a format description.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:assert xerces:message="Remove spurious whitespace from the @id string." saxon:message="Remove spurious whitespace from the @id string." test="count(tokenize(@id, '\s+')) eq 1"/>
+<!--            <xs:assert xerces:message="Remove spurious whitespace from the @id string." saxon:message="Remove spurious whitespace from the @id string." test="count(tokenize(@id, '\s+')) eq 1"/>-->
         </xs:complexType>
     </xs:element>
     <xs:element name="comment" type="commentType"/>
