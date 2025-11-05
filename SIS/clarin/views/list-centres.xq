@@ -54,7 +54,8 @@ return
                     <a title="open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic%2C+UserInput&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">let us know</a>.</p>
                     <p>As far as RIs (research infrastructures) other than CLARIN are concerned, as of 2025, the list below only includes 
                     those DARIAH and Text+ repositories which are also CLARIN centres. We are open to the idea of extending the current coverage.</p>
-                    <p><a href="{app:link("views/list-statistics-centre.xq")}">Centre-related statistics</a> are available on a separate page.</p>
+                    <p><a href="{app:link("views/list-statistics-centre.xq")}">Centre-related statistics</a> are available on a separate page. 
+                    Another page aggregates the <a href="{app:link("views/list-curators.xq")}">curation data</a>.</p>
                     </div>
                     <div>
                         <form id="filterCentre" method="get" action="">

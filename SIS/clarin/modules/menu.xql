@@ -54,6 +54,12 @@ declare function menu:view() {
                 </td>
             </tr>
             <tr>
+                <td width="10px"></td>
+                <td colspan="2" class="tdmenu">
+                    <a style="display:block" href="{app:link("views/list-curators.xq")}">Centre Curation</a>
+                </td>
+            </tr>
+            <tr>
                 <td colspan="3" class="tdmenu">
                     <a style="display:block" href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                 </td>
