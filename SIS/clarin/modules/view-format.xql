@@ -21,6 +21,7 @@ declare function vfm:print-identifiers($extIdList){
     for $extId in $extIdList
         let $id := $extId/text()
         let $type := data($extId/@type)
+        let $label := data($extId/@label)
         let $landing-page := $lp:locations[type=$type]
         let $url-suffix := $landing-page/suffix/text()
         let $url := 
@@ -32,6 +33,7 @@ declare function vfm:print-identifiers($extIdList){
         <tr>
             <td class="recommendation-row">{vfm:create-tooltip($type,$tooltip)}</td>
             <td class="recommendation-row"><a href="{$url}">{$id}</a></td>
+            {if (string-length($label)) then <td>{fn:concat('[',$label,']')}</td> else ()}
         </tr>
 };
 
