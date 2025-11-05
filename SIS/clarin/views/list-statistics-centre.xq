@@ -60,7 +60,6 @@ return
                             <th style="text-align:center;">Centres with recommendations</th>
                             <th style="text-align:center;">Centres with curated recommendations</th>
                         </tr>
-                       <!-- {stm:list-all-centre-statistics()} without ri-->
                         {stm:list-centre-statistics()}
                     </table>
                     <div>
@@ -69,6 +68,7 @@ return
                     
                     {
                     for $ri in $ris 
+                    order by $ri
                         return 
                      <div style="margin-top:30px;">
                             <h3 id="{concat('stats',$ri)}">{$ri ! cm:visualise-ri-name(.)}</h3>
