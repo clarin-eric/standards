@@ -19,7 +19,7 @@ declare option output:html-version "5";
 :)
 
 declare
-  %rest:path('/clarin/index.xq')
+  %rest:path("/clarin")
   %output:method('html')
   %output:media-type("text/html")
   %output:indent("yes")

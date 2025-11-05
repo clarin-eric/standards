@@ -45,7 +45,7 @@ declare function menu:view() {
         <table style="font-size:13.5px; width:210px">
             <tr>
                 <td colspan="3" class="tdmenu">
-                    <a style="display:block" href="{app:link("index.xq")}">Home</a>
+                    <a style="display:block" href="{app:link("")}">Home</a>
                 </td>
             </tr>
             <tr>
