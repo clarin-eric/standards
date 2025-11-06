@@ -21,10 +21,10 @@
         </centre>
     </header>
     <info>
-        <p>The Tromsø Repository of Language and Linguistics (
-            <a href="https://info.trolling.uit.no/">TROLLing</a>) is a repository of data, code, and related materials used in 
-            linguistic research. This page lists the file formats which are recommended for depositing in TROLLing. For more 
-            information see our <a href="https://site.uit.no/dataverseno/deposit/prepare/#preferred-file-formats">Preferred file formats section</a>.</p>
+        <p>The Tromsø Repository of Language and Linguistics (<a href="https://info.trolling.uit.no/">TROLLing</a>) is a repository of 
+            data, code, and related materials used in linguistic research. This page lists the file formats which are recommended 
+            for depositing in TROLLing. For more information see our 
+            <a href="https://site.uit.no/dataverseno/deposit/prepare/#preferred-file-formats">Preferred file formats section</a>.</p>
     </info>
     <formats>
         <format id="fTextPlain">
