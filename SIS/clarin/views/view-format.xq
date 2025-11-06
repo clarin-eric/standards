@@ -164,8 +164,12 @@ return
                          else ()
                          }
                         {vfm:print-multiple-values($format/titleStmt/versionNumber, $id, "Versions:")}
-
-                        <div><span class="heading"><a href="{app:link("views/list-mimetypes.xq")}">Media type(s)</a>:</span></div>
+                        {
+                        if ($format/mimeType) 
+                            then
+                            <div><span class="heading"><a href="{app:link("views/list-mimetypes.xq")}">Media type(s)</a>:</span></div>
+                            else ()
+                         }
                         {vfm:print-bullets($format/mimeType, $id)}
                         {vfm:print-multiple-values($format/fileExt, $id, ("File extension(s):","views/list-extensions.xq"))}
                         {vfm:print-multiple-values($format/formatFamily, $id, ("Format family:","views/format-families.xq"))}
