@@ -1,0 +1,28 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fsrcCode" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Source code</title>
+    <abbr>srcCode</abbr>
+  </titleStmt>
+  <keyword>software</keyword>
+  <keyword>hub format</keyword>
+    
+  <info type="description" hub="yes">
+    <p>This is a stand-in for when a centre wishes to declare that it accepts certain kinds of
+      source code or discourages certain kinds of submissions of this nature. A recommendation using this "hub format" must
+      be accompanied by a comment.</p>
+    <p>As is usual with hub formats, centres are strongly encouraged to, firstly, check if the programming or query language code 
+      they wish to reference is among the <a href="../views/list-formats.xq">formats already described</a> in the SIS or formats 
+      that <a href="../views/sanity-check.xq#missing">await getting described</a>. At
+      the time when this description is updated, the following kinds of "source code" already have individual descriptions:</p>
+    <ul>
+      <li><a href="../views/view-format.xq?id=fEPS">Encapsulated Postscript</a></li>
+      <li><a href="../views/view-format.xq?id=fPS">Postscript</a></li>
+      <li><a href="../views/view-format.xq?id=fJS">Javascript</a></li>
+      <li><a href="../views/view-format.xq?id=fR">R</a></li>
+      <li><a href="../views/view-format.xq?id=fSQL">Structured Query Language</a></li>
+      <li><a href="../views/view-format.xq?id=fSVG">Scalable Vector Graphics</a></li>
+    </ul>
+  </info>
+<!--  <formatFamily>XML</formatFamily>-->
+</format>
