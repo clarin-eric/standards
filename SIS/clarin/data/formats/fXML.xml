@@ -13,7 +13,7 @@
   <extId type="FAIRsharing">b5cc91</extId>
   <extDoc type="enWiki">XML</extDoc>
   <extDoc type="formatWiki">XML</extDoc>
-  <info type="description" hub="yes">
+  <info type="description" umbrella="yes">
     <p>In the context of format recommendations, "XML" is too general a pointer to provide a
       meaningful recommendation. In fringe cases, it might happen that a centre receives deposition
       of a prose text, encoded with a series of &lt;paragraph&gt; elements within a &lt;text&gt;

@@ -8,7 +8,7 @@
   <keyword>annotation format</keyword>
   <keyword>format family</keyword>
   
-  <info type="description" hub="yes">
+  <info type="description" umbrella="yes">
     <p>In the context of format recommendations, the unqualified TEI has the same status as <a href="../views/view-format.xq?id=fXML">XML</a>: too general to be a 
       meaningful recommendation. Please refrain from using just "TEI" in format recommendations.</p>
     <p>The 

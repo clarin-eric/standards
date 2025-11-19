@@ -333,12 +333,12 @@
                 </xs:simpleType>
             </xs:attribute>
             <xs:attribute ref="internal"/>
-            <xs:attribute ref="hub"/>
+            <xs:attribute ref="umbrella"/>
         </xs:complexType>
     </xs:element>
-    <xs:attribute name="hub" default="no">
+    <xs:attribute name="umbrella" default="no">
         <xs:annotation>
-            <xs:documentation>Is this a hub format, such as XML, TEI, CoNLL? A warning will be displayed if a centre uses that as a target of a 
+            <xs:documentation>Is this an umbrella format, such as XML, TEI, CoNLL? A warning will be displayed if a centre uses that as a target of a 
                 recommendation and does not qualify it with a comment. It will not be counted among the most popular formats, either.</xs:documentation>
         </xs:annotation>
         <xs:simpleType>

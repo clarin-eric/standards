@@ -442,7 +442,7 @@ $includeFormat, $includeCentre) {
             )
     
     let $level := $format/level/text()
-    let $isUmbrella := if ($format-obj/info[@hub="yes"]) then  fn:true() else fn:false()
+    let $isUmbrella := if ($format-obj/info[@umbrella="yes"]) then  fn:true() else fn:false()
     let $format-comment := rf:print-format-comments($format, $language)
     let $modifiedComment := rf:parseFormatRef($format-comment)
     
@@ -574,7 +574,7 @@ declare function rf:print-umbrella() {
             class="tooltiptext"
             style="width:300px;">An umbrella format is too general a pointer to provide a 
             meaningful recommendation. The use of an umbrella format in recommendations 
-            is thus discouraged, particulary without any comment.
+            is thus discouraged, particularly without any comment.
         </span>
     </span>
 };

@@ -20,7 +20,7 @@ let $default := 2
 let $reset := request:get-parameter('reset', '')
 let $threshold := if ($reset) then ($default) else request:get-parameter('threshold', $default)
 let $top3 := if ($reset) then () else request:get-parameter('top3', '')
-let $hubIDs := format:get-hub-ids()
+let $hubIDs := format:get-umbrella-ids()
 let $seq := for $fID in $hubIDs 
                 order by $fID 
                 return (<a href="{app:link(concat("views/view-format.xq?id=",$fID))}">{substring-after($fID,'f')}</a>, ", ")
@@ -59,7 +59,7 @@ return
                     {$default}, in order to eliminate one-off formats and errors in format IDs). Clicking on "the most 
                     popular formats" will show only those formats that occupy the 3 highest tiers in terms of popularity 
                     in the given domain (with no lower bound).</p>
-                    <p>This measurement excludes formats that are considered "hub formats", i.e. shorthand references for 
+                    <p>This measurement excludes formats that are considered "umbrella formats", i.e. shorthand references for 
                     an undeterminable number of formats that are very similar in some respect. The formats thus excluded are: 
                     <span>{$seq[position() lt last()]}.</span></p>
 

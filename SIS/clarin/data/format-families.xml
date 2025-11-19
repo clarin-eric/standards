@@ -2,7 +2,7 @@
 <family-ties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="../schemas/format-families.xsd">
 <!-- these are almost all non-leaf nodes;
-     some non-leaf nodes are described as hub formats: XML, TEI, CoNNL - so for those three, the structure
+     some non-leaf nodes are described as umbrella formats: XML, TEI, CoNNL - so for those three, the structure
      can be recreated, to a point. But for the formats listed here, the structure is not derivable from format descriptions,
      so it has to be explicitly defined. -->
   <node name="DataFormats" rel="">

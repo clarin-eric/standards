@@ -68,7 +68,7 @@ return
                 <li>formats that are mentioned in recommendations and are at the same time described in the SIS ({fm:count-defined-formats()} 'described formats'); these are listed at the bottom of this page;</li>
                 <li>formats that are mentioned in recommendations and are not (yet) described in the SIS ({fm:count-missing-format-ids()} 'missing formats'); they are the ones that have a "+" symbol 
                 in recommendation lists and that link to predefined GitHub issues;</li>
-                <li>formats that are described in the SIS but are not mentioned by any recommendation ({fm:count-orphan-format-ids()} 'orphaned formats'); these are mostly either "hub" format categories, 
+                <li>formats that are described in the SIS but are not mentioned by any recommendation ({fm:count-orphan-format-ids()} 'orphaned formats'); these are mostly either "umbrella" format categories, 
                 or formats once supported by centres but at least temporarily not in the scope of interest.</li>
                 </ol>
                 <p>The present page lists the first category of formats, together with some of the properties that are identified in their descriptions. 

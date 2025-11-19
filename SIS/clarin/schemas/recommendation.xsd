@@ -431,10 +431,10 @@
                         <sch:let name="me" value="."/>
                         <sch:let name="frmt" value="collection('../data/formats')/format[@id eq $me]"/>
                         <sch:let name="nama" value="substring-after(.,'f')"/>
-                        <sch:let name="is_hub" value="boolean($frmt/info/@hub)"/>
+                        <sch:let name="is_hub" value="boolean($frmt/info/@umbrella)"/>
                         <sch:report
                             test="$is_hub and not(count(../comment))" 
-                            >Hub formats such as <sch:value-of select="$nama" /> should not be used in recommendations. Please increase the granularity: use a format based on 
+                            >Umbrella formats such as <sch:value-of select="$nama" /> should not be used in recommendations. Please increase the granularity: use a format based on 
                             <sch:value-of select="$nama"/> or provide a comprehensive comment to state what (sub)kinds of <sch:value-of select="$nama"/> are meant.</sch:report>
                     </sch:rule>
                 </sch:pattern>

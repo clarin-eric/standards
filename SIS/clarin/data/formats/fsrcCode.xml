@@ -5,13 +5,13 @@
     <abbr>srcCode</abbr>
   </titleStmt>
   <keyword>software</keyword>
-  <keyword>hub format</keyword>
+  <keyword>umbrella format</keyword>
     
-  <info type="description" hub="yes">
+  <info type="description" umbrella="yes">
     <p>This is a stand-in for when a centre wishes to declare that it accepts certain kinds of
-      source code or discourages certain kinds of submissions of this nature. A recommendation using this "hub format" must
+      source code or discourages certain kinds of submissions of this nature. A recommendation using this "umbrella format" must
       be accompanied by a comment.</p>
-    <p>As is usual with hub formats, centres are strongly encouraged to, firstly, check if the programming or query language code 
+    <p>As is usual with umbrella formats, centres are strongly encouraged to, firstly, check if the programming or query language code 
       they wish to reference is among the <a href="../views/list-formats.xq">formats already described</a> in the SIS or formats 
       that <a href="../views/sanity-check.xq#missing">await getting described</a>. At
       the time when this description is updated, the following kinds of "source code" already have individual descriptions:</p>

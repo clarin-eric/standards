@@ -5,15 +5,15 @@
     <abbr>MPEG</abbr>
   </titleStmt>
   <keyword>format family</keyword>
-  <keyword>hub format</keyword>
+  <keyword>umbrella format</keyword>
   <extDoc type="formatWiki">MPEG</extDoc>
   <extDoc type="enWiki">Moving_Picture_Experts_Group</extDoc>
-  <info type="description" hub="yes">
+  <info type="description" umbrella="yes">
     <p>MPEG is not a format. It is an "an alliance of working groups established jointly by ISO and IEC that sets standards 
       for media coding, including compression coding of audio, video, graphics, and genomic data; and transmission and 
       file formats for various applications" (Wikipedia). And, of course, it is a heavily underspecified way of talking about various
      audio and video formats, which are too many to group them together.</p>
-    <p>In the Standards Information System, MPEG is classified as a "hub format" -- as mentioned at the top of this document. 
+    <p>In the Standards Information System, MPEG is classified as a "umbrella format" -- as mentioned at the top of this document. 
         Centres are strongly encouraged to either pick one of the already described "MPEG" varieties (see below), or create a description
         of an MPEG-family format (or suggest that someone else create such a description, by introducing a new ID in the centre's 
         recommendations; first one may wish to check among our "<a href="../views/sanity-check.xq?sortBy=id#missing-form">missing formats</a>" 

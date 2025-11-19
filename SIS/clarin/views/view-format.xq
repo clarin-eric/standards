@@ -29,7 +29,7 @@ let $format-abbr := $format/titleStmt/abbr/text()
 
 let $format-domains := vfm:get-recommended-domains-by-format($id)
 
-let $is-hub as xs:boolean := fn:boolean($format/info/@hub)
+let $is-umbrella as xs:boolean := fn:boolean($format/info/@umbrella)
 
 return
     
@@ -115,14 +115,14 @@ return
                             <span id="abbrtext" class="heading">
                                 {$format-abbr}</span>
                                 
-                         { if($is-hub) then <div style="width:550px">
-                        <p>{$format-abbr} is considered a <b>hub format</b>, which means that it is 
+                         { if($is-umbrella) then <div style="width:550px">
+                        <p>{$format-abbr} is considered an <b>umbrella format</b>, which means that it is 
                         impossible to create a meaningful recommendation for or against using it, because in the 
                         context of research data, it is actually shorthand for many, sometimes drastically differing formats. 
                         Centres are advised to discern between the various subformats that are grouped 
                         under the general umbrella of this one, for the purpose of creating 
                         recommendations (see the description at the <a href="#desctext{$id}">bottom of this page</a>).</p>
-                        <p>Hub formats do not appear in the list of 
+                        <p>Umbrella formats do not appear in the list of 
                         <a href="{app:link("views/list-popular-formats.xq")}">popular formats</a> (unconditionally) 
                         and are indicated as out-of-place (improperly used) in the recommendations – unless they 
                         are qualified by a comment.</p></div>
