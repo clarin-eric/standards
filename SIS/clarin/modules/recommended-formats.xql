@@ -18,11 +18,25 @@ import module namespace functx = "http://www.functx.com" at "../resources/lib/fu
 declare variable $rf:pageSize := 50;
 declare variable $rf:searchMap := rf:getSearchMap();
 
-declare function rf:isCurated($recommendation){
+declare function rf:isCurated($recommendation as element(recommendation)){
     let $respStmt := $recommendation/header/respStmt
     let $respName := string($respStmt[1]/name)
     return 
         if ($respName) then true() else false()
+};
+
+declare function rf:paint-curation-date($date-str as xs:string, $language as xs:string) {
+   rf:paint-curation-date($date-str, $language, false())
+};
+
+declare function rf:paint-curation-date($date-str as xs:string, $language as xs:string, $add-suffix as xs:boolean) {
+    let $today := current-date()
+    let $review-date := xs:date($date-str)
+    let $diff := ($today - $review-date) div xs:dayTimeDuration("P365D")
+    let $color := if ($diff >2) then "red" else if($diff >1) then "orange" else "black"
+    let $suff := if ($add-suffix and ($color eq 'red')) then " !" else "" 
+      return
+            <span style="color:{$color}">{concat(format-date($date-str, "[Y].[M01].[D01]", $language, (), ()), $suff)}</span>
 };
 
 declare function rf:print-curation($recommendation, $language) {
