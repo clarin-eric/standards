@@ -8,12 +8,28 @@
   <keyword>annotation format</keyword>
   <keyword>format family</keyword>
   
-  <info type="description" umbrella="yes">
-    <p>In the context of format recommendations, the unqualified TEI has the same status as <a href="../views/view-format.xq?id=fXML">XML</a>: too general to be a 
-      meaningful recommendation. Please refrain from using just "TEI" in format recommendations.</p>
-    <p>The 
-      <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a>, together with the surrounding
-      <a href="https://tei-c.org/tools/">infrastructure</a> (Stylesheets and dedicated utilities) is a toolkit for creating formats (also formats that serialize a standard).</p>
+  <info type="description">
+    <p>In the context of format recommendations, the unqualified name "TEI" has nearly the same status as 
+      "<a href="../views/view-format.xq?id=fXML">XML</a>": too general to be a meaningful recommendation. 
+      The best way to view the TEI is not as a format, but rather as a toolkit (composed out of the 
+      modelling part: <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a> 
+      and its accompanying <a href="https://tei-c.org/tools/">infrastructure</a>) that makes it possible 
+      (and relatively easy) to create various kinds of XML-based formats. No centre wants to claim that they
+      recommend a toolkit as one of the ways to deposit, say, 
+      <a href="https://standards.clarin.eu/sis/views/list-domains.xq">Textual Source Language Data</a>, do they?</p>
+    <p>It is very practical to assume that anything that gets labeled "TEI" is formally a 
+      <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#MD">customisation</a> of the TEI toolkit. And, by 
+      the gentle and yet unyielding power of the 
+      <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a>, a TEI customisation has 
+      to meet several conditions. In particular, "a document is TEI-conformant if it:</p>
+    <ul>
+      <li>is a <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#CFWF">well-formed XML document</a>,</li>
+      <li>can be <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#CFVL">validated against a TEI Schema</a>, that is, a schema derived from the TEI Guidelines,</li>
+      <li>conforms to the <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#CFAM">TEI Abstract Model</a>,</li>
+      <li>uses the <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#CFNS">TEI namespace</a> (and other namespaces where relevant) correctly,</li>
+      <li>is documented by means of a <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#CFOD">TEI-conformant ODD file</a> which refers to the TEI Guidelines." 
+        (TEI Guidelines, ch. <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#CF">24.4</a>)</li>
+    </ul>
     <p>By rule of thumb, centres should expect that each TEI document submitted to them is either
       accompanied by the ODD file, or conforms to one of the publicly available ODD specifications
       (either a named TEI out-of-the-box customization or a publicly documented extension),
