@@ -8,6 +8,7 @@
   <keyword>binarized TextualData</keyword>
   <keyword>page layout</keyword>
   <extId type="LOC">fdd000318</extId>
+  <extId type="Wikidata">Q1547957</extId>
   <info type="description">
     <p>PDF/A differs from <a href="../views/view-format.xq?id=fPDF">PDF</a> by prohibiting features unsuitable for long-term archiving, such as
       font linking (as opposed to font embedding) and encryption. Note that "PDF/A" is actually a collection of formats:</p>
