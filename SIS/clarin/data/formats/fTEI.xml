@@ -7,21 +7,25 @@
   <keyword>data format</keyword>
   <keyword>annotation format</keyword>
   <keyword>format family</keyword>
-  
+  <extId type="Wikidata">Q124622467</extId> <!--they do talk about a format, as an extremely general concept-->
+  <extDoc type="enWiki">Text Encoding Initiative</extDoc> <!--not really proper for TEI-as-format, but demonstrates the messiness-->
   <info type="description">
     <p>In the context of format recommendations, the unqualified name "TEI" has nearly the same status as 
-      "<a href="../views/view-format.xq?id=fXML">XML</a>": too general to be a meaningful recommendation. 
-      The best way to view the TEI is not as a format, but rather as a toolkit (composed out of the 
+      "<a href="../views/view-format.xq?id=fXML">XML</a>": <i>too general to be meaningful in a recommendation</i>. 
+      The best way to view the TEI is not as a format, but rather as a <i>toolkit</i>, composed of (a) the 
       modelling part: <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a> 
-      and its accompanying <a href="https://tei-c.org/tools/">infrastructure</a>) that makes it possible 
+      and (b) its accompanying <a href="https://tei-c.org/tools/">infrastructure</a>. That toolkit makes it possible 
       (and relatively easy) to create various kinds of XML-based formats. No centre wants to claim that they
       recommend a toolkit as one of the ways to deposit, say, 
       <a href="https://standards.clarin.eu/sis/views/list-domains.xq">Textual Source Language Data</a>, do they?</p>
-    <p>It is very practical to assume that anything that gets labeled "TEI" is formally a 
-      <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#MD">customisation</a> of the TEI toolkit. And, by 
-      the gentle and yet unyielding power of the 
-      <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a>, a TEI customisation has 
-      to meet several conditions. In particular, "a document is TEI-conformant if it:</p>
+    <p>It is very practical to assume that, in the context of format recommendations, anything that
+      gets labeled "TEI" is formally a
+      <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#MD">TEI customisation</a>
+      created on the basis of the TEI toolkit -- because <i>there is no single TEI format</i>. And,
+      by the gentle and yet unyielding power of the
+      <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a>, a
+      TEI customisation has to meet several conditions. In particular, "a document is TEI-conformant
+      if it:</p>
     <ul>
       <li>is a <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#CFWF">well-formed XML document</a>,</li>
       <li>can be <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#CFVL">validated against a TEI Schema</a>, that is, a schema derived from the TEI Guidelines,</li>
@@ -55,6 +59,12 @@
       customizations: TEI Lite, TEI simplePrint, TEI Tite.</p>
     <p>For the purpose of metadata descriptions, free-standing <a href="../views/view-format.xq?id=fTEIHeader">TEI headers</a> can often be useful, the more so that they allow "foreign markup" 
       as content of the <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-xenoData.html">xenoData</a> element.</p>
+    <p>NOTE: Unqualified TEI used to be treated by the Standards Information System as an umbrella
+      format (see the note atop the description file for
+      <a href="../views/view-format.xq?id=fXML">XML</a> for a brief explanation of the concept of
+      umbrella formats). However, it has been decided that it may be more useful in the long run to
+      turn unqualified TEI into a pretend-regular format and to provide the extensive explanation of
+      its nature that you have just finished reading.</p>
   </info>
   <relation target="SpecTei" type="isDefinedBy"/>
   <mimeType>application/tei+xml</mimeType>
