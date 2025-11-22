@@ -4,7 +4,7 @@
     <title>Text Encoding Initiative</title>
     <abbr>TEI</abbr>
   </titleStmt>
-  <keyword>data format</keyword>
+  <keyword>umbrella format</keyword>
   <keyword>annotation format</keyword>
   <keyword>format family</keyword>
   <extId type="Wikidata">Q124622467</extId> <!--they do talk about a format, as an extremely general concept-->
@@ -15,8 +15,8 @@
       The best way to view the TEI is not as a format, but rather as a <i>toolkit</i>, composed of (a) the 
       modelling part: <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a> 
       and (b) its accompanying <a href="https://tei-c.org/tools/">infrastructure</a>. That toolkit makes it possible 
-      (and relatively easy) to create various kinds of XML-based formats. No centre wants to claim that they
-      recommend a toolkit as one of the ways to deposit, say, 
+      (and relatively easy) to create various kinds of XML-based formats with well-defined (human-readable) semantics. 
+      No centre wants to claim that they recommend a toolkit as one of the ways to deposit, say, 
       <a href="https://standards.clarin.eu/sis/views/list-domains.xq">Textual Source Language Data</a>, do they?</p>
     <p>It is very practical to assume that, in the context of format recommendations, anything that
       gets labeled "TEI" is formally a
@@ -34,10 +34,11 @@
       <li>is documented by means of a <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#CFOD">TEI-conformant ODD file</a> which refers to the TEI Guidelines." 
         (TEI Guidelines, ch. <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#CF">24.4</a>)</li>
     </ul>
-    <p>By rule of thumb, centres should expect that each TEI document submitted to them is either
-      accompanied by the ODD file, or conforms to one of the publicly available ODD specifications
-      (either a named TEI out-of-the-box customization or a publicly documented extension),
-      preferably bearing the stamp of a standards body, or encoding established best practices.</p>
+    <p>Centres should thus expect that each TEI document submitted to them is either accompanied by the ODD file, 
+      or conforms to one of the publicly available ODD specifications
+      (either a named TEI out-of-the-box <a href="https://tei-c.org/Guidelines/Customization/">customization</a> or a publicly 
+      documented extension), preferably bearing the stamp of a standards body, or encoding established best practices. 
+      (Expectations aside, it would seem rather appropriate for centres to supply a comment on what they mean precisely when they say "TEI".)</p>
     <p>An ODD file defines the semantics of a TEI format, by means of prose, datatype restrictions
       and Schematron constraints. It is the basis for creating document grammars (schemas) that the
       conforming TEI document can be validated against. Schemas can be derived e.g. with the help of
@@ -51,13 +52,9 @@
       <li><a href="../views/view-format.xq?id=fMenota">Menota</a> -- the Medieval Nordic Text Archive TEI extensions</li>
       <li><a href="../views/view-format.xq?id=fLex0">TEI Lex0</a> -- an OASIS standard for the encoding of (a.o.) retrodigitised dictionaries, maintained by DARIAH</li>
     </ul>
-    <p>The above list is not meant to be exhaustive. While the above items would generally qualify
-      as TEI extensions, the
-      <a href="https://tei-c.org/Guidelines/Customization/">environment of the TEI Guidelines</a>
-      defines a series of restrictions on the overall TEI schema, referred to as 'templates' and
-      meant as bases for further customization, as well as three fully-defined and maintained
-      customizations: TEI Lite, TEI simplePrint, TEI Tite.</p>
-    <p>For the purpose of metadata descriptions, free-standing <a href="../views/view-format.xq?id=fTEIHeader">TEI headers</a> can often be useful, the more so that they allow "foreign markup" 
+    <p>The above list is not meant to be exhaustive. Please kindly signal to us if you know of a TEI-based format that should be 
+      recognised by the SIS and listed above.</p>
+    <p>For the purpose of <i>metadata descriptions</i>, free-standing <a href="../views/view-format.xq?id=fTEIHeader">TEI headers</a> can often be useful, the more so that they allow "foreign markup" 
       as content of the <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-xenoData.html">xenoData</a> element.</p>
     <p>NOTE: Unqualified TEI used to be treated by the Standards Information System as an umbrella
       format (see the note atop the description file for

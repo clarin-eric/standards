@@ -12,11 +12,11 @@
     <p>MPEG is not a format. It is an "an alliance of working groups established jointly by ISO and IEC that sets standards 
       for media coding, including compression coding of audio, video, graphics, and genomic data; and transmission and 
       file formats for various applications" (Wikipedia). And, of course, it is a heavily underspecified way of talking about various
-     audio and video formats, which are too many to group them together.</p>
+     audio and video formats, which are too many and too diverse to group them together.</p>
     <p>In the Standards Information System, MPEG is classified as a "umbrella format" -- as mentioned at the top of this document. 
         Centres are strongly encouraged to either pick one of the already described "MPEG" varieties (see below), or create a description
         of an MPEG-family format (or suggest that someone else create such a description, by introducing a new ID in the centre's 
-        recommendations; first one may wish to check among our "<a href="../views/sanity-check.xq?sortBy=id#missing-form">missing formats</a>" 
+        recommendations; first, one may wish to check among our "<a href="../views/sanity-check.xq?sortBy=id#missing-form">missing formats</a>" 
       if an appropriate ID has already been suggested).</p> 
     <p>At the time when this description is updated, the following members of the "MPEG family" already have individual descriptions:</p>
     <ul>
