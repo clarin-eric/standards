@@ -28,5 +28,5 @@
     </ul>
     <p>Check out the <a href="https://mpeg.chiariglione.org/">former MPEG homepage</a>, which now hosts Skynet building bricks.</p>
   </info>
-<!--  <formatFamily>XML</formatFamily>-->
+  <formatFamily>AudioVisualData</formatFamily>
 </format>

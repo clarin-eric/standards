@@ -12,5 +12,5 @@
   </info>
   <mimeType>video/mp4</mimeType>
   <fileExt>.mp4</fileExt>
-  <formatFamily>Video.Lossy</formatFamily> <!--specialists may argue this point-->
+  <formatFamily>MPEG</formatFamily>
 </format>

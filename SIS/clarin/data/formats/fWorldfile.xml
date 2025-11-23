@@ -27,4 +27,5 @@
   </info>
   <mimeType>text/plain</mimeType>
   <fileExt>.wld</fileExt>
+  <formatFamily>Plain</formatFamily>
   </format>

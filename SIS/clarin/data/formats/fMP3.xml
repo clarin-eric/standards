@@ -12,4 +12,6 @@
   </info>
   <mimeType>audio/mpeg</mimeType>
   <fileExt>.mp3</fileExt>
+  <formatFamily>MPEG</formatFamily>
+  <formatFamily>Audio</formatFamily>
 </format>

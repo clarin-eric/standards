@@ -14,5 +14,5 @@
   <mimeType>audio/x-wav</mimeType>
   <fileExt recommended="yes">.bwf</fileExt>
   <fileExt>.wav</fileExt>
-  <formatFamily>audio</formatFamily>
+  <formatFamily>Audio</formatFamily>
 </format>

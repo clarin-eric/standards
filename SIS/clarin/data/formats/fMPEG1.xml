@@ -21,4 +21,5 @@
   <mimeType>video/mpeg</mimeType>
   <fileExt>.mpg</fileExt>
   <fileExt>.mpeg</fileExt>
+  <formatFamily>MPEG</formatFamily>
 </format>

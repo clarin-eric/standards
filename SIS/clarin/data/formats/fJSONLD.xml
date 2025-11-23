@@ -5,10 +5,10 @@
     <abbr>JSON-LD</abbr>
   </titleStmt>
   <keyword>data format</keyword>
-<!--  <extId type="LOC">fdd000381</extId>
-  <extId type="PRONOM">fmt/817</extId>
-  <extId type="Wikidata">Q2063</extId>
--->  <info type="description">
+  <extId type="LOC" label="JSON">fdd000381</extId>
+  <extId type="PRONOM">fmt/880</extId>
+  <extId type="Wikidata">Q6108942</extId>
+  <info type="description">
     <p>"JSON-LD (JavaScript Object Notation for Linked Data) is a method of encoding linked data using JSON." (Wikipedia)</p>
     <p>See the following for more information:</p>
     <ul>
@@ -18,5 +18,5 @@
   <!--<relation target="" type="isDefinedBy">https://www.rfc-editor.org/rfc/rfc8259.txt</relation>   -->
   <mimeType>application/ld+json</mimeType>
   <fileExt>.jsonld</fileExt>
-  <formatFamily>Markup.Full</formatFamily> <!--next to JSON?-->
+  <formatFamily>JSON</formatFamily>
 </format>

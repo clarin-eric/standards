@@ -8,12 +8,15 @@
   <keyword>STATA</keyword>
   <keyword>proprietary format</keyword>
   <keyword>binary format</keyword>
+  <keyword>format family</keyword>
   <extId type="LOC">fdd000471</extId>
   <extId type="PRONOM">fmt/1037</extId>
+  <extId type="Wikidata">Q32979267</extId>
   <info type="description">
     <p>See the <a
       href="https://dans.knaw.nl/en/file-formats/statistical-data/"
-        >DANS description</a>.</p>
+        >DANS description</a>. The external IDs listed above reveal several sub-versions of this format. Bear in mind that 
+      proprietary formats are not recommended for deposition at CLARIN centres.</p>
   </info>
   <!--<mimeType>no idea</mimeType>-->
   <fileExt>.dta</fileExt>

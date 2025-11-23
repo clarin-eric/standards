@@ -16,4 +16,5 @@
   <fileExt>.DO</fileExt>
   <fileExt>.dat</fileExt>
   <formatFamily>STATA</formatFamily>
+  <formatFamily>Plain</formatFamily>
 </format>

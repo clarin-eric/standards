@@ -21,4 +21,5 @@
   <fileExt>.mpg</fileExt>
   <fileExt>.vob</fileExt>
   <fileExt>.ts</fileExt>
+  <formatFamily>MPEG</formatFamily>
 </format>
