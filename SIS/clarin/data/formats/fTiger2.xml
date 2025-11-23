@@ -1,0 +1,26 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTiger2" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Tiger2</title>
+    <abbr>Tiger2</abbr>
+  </titleStmt>
+  <keyword>annotation format</keyword>
+  <keyword>corpus encoding</keyword>
+  <!-- <extId type=""></extId> -->
+  <info type="description">
+    <p>"&lt;tiger2/>" is a format derived from <a href="../views/view-format.xq?id=fTiger">Tiger XML</a> and standardised as the serialisation of
+      the SynAF data model, under the signature
+      <a href="https://www.iso.org/standard/62491.html">ISO 24615-2</a>. It is one of the corpus formats that can be ingested into the 
+      <a href="https://github.com/korpling/ANNIS">ANNIS query system</a>.</p>
+    <p>The format used to be called "ISOTiger" for a while, until ISO decided to disallow the use of its abbreviation in standard names.</p>
+    <p>See:</p>
+    <ul>
+      <li><a href="https://korpling.german.hu-berlin.de/tiger2/homepage/index.html">&lt;tiger2/> home page</a> at HU Berlin</li>
+      <li>Bosch,&#160;Sonja / Eckart,&#160;Kerstin / Faaß,&#160;Gertrud / Zipser,&#160;Florian / Pareja-Lora,&#160;Antonio / Heid,&#160;Ulrich / Romary,&#160;Laurent / Witt,&#160;Andreas / Zeldes,&#160;Amir / Lee,&#160;Kiyong / Pretorius,&#160;Laurette. (2014). 
+        <a href="https://www.researchgate.net/publication/278626907_From_tiger2_to_ISOTiger_-_Community_Driven_Developments_for_Syntax_Annotation_in_SynAF">From &lt;tiger2/> to ISOTiger</a> – Community Driven
+        Developments for Syntax Annotation in SynAF.  Proceedings of the Thirteenth International Workshop on Treebanks and Linguistic Theories (TLT13)</li>
+    </ul>
+  </info>
+  <fileExt>.xml</fileExt>
+  <formatFamily>TIGER</formatFamily>
+</format>

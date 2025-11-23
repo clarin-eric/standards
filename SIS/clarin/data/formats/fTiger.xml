@@ -10,7 +10,7 @@
   <info type="description">
     <p>XML format used by the TIGER project (Mengel and Lezius, 2000). A variant of that format,
       enriched for the purpose of semantic role annotation, is called Salsa/Tiger (Erk and Padó,
-      2004).</p>
+      2004). See also <a href="../views/view-format.xq?id=fTiger2">Tiger2</a>.</p>
     <p>See:</p>
     <ul>
       <li><a href="https://www.ims.uni-stuttgart.de/documents/ressourcen/korpora/tiger-corpus/download/start.html">TIGER corpus</a></li>
