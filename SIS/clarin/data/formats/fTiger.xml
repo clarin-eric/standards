@@ -8,12 +8,20 @@
   <keyword>corpus encoding</keyword>
   <!-- <extId type=""></extId> -->
   <info type="description">
-    <p>XML format used by the TIGER project.</p>
+    <p>XML format used by the TIGER project (Mengel and Lezius, 2000). A variant of that format,
+      enriched for the purpose of semantic role annotation, is called Salsa/Tiger (Erk and Padó,
+      2004).</p>
     <p>See:</p>
     <ul>
       <li><a href="https://www.ims.uni-stuttgart.de/documents/ressourcen/korpora/tiger-corpus/download/start.html">TIGER corpus</a></li>
       <li><a href="https://www.ims.uni-stuttgart.de/documents/ressourcen/werkzeuge/tigersearch/doc/html/TigerXML.html">TIGER XML</a></li>
-      <li><a href="https://aclanthology.org/L00-1042/">TIGER XML</a></li>
+      <li>Andreas Mengel and Wolfgang Lezius. 2000. <a href="https://aclanthology.org/L00-1042/">An XML-based Representation Format for
+        Syntactically Annotated Corpora</a>. In Proceedings of the Second International Conference on
+        Language Resources and Evaluation (LREC’00), Athens, Greece. European Language Resources Association (ELRA).</li>
+      <li>Katrin Erk and Sebastian Padó. 2004. <a href="https://aclanthology.org/L04-1101/">A Powerful and Versatile XML Format for Representing
+          Role-semantic Annotation</a>. In Proceedings of the Fourth International Conference on Language
+        Resources and Evaluation (LREC’04), Lisbon, Portugal. European Language Resources
+        Association (ELRA).</li>
     </ul>
   </info>
   <fileExt>.xml</fileExt>
