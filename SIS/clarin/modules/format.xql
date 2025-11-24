@@ -72,10 +72,12 @@ declare function fm:list-formats($keyword,$searchItem) {
         let $file-exts := $format/fileExt
         let $recommendations := recommendation:get-centres-for-format($format-id)
         let $numOfRecommendations := count($recommendations)
+        let $umbrella as xs:boolean := fn:boolean($format/info/@umbrella) 
         order by fn:lower-case($format-abbr)
     return
         <tr>
             <td class="row" style="vertical-align:top">
+                {if ($umbrella) then (rf:print-umbrella()," ") else () }
                 <span class="list-text">{fm:create-format-link($format-id,$format-abbr,$format-name)}                
                 </span>
                 ({$numOfRecommendations})
