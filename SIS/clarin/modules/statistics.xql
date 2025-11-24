@@ -105,13 +105,14 @@ declare function stm:get-formats-per-domain($threshold as xs:int){
     
     let $domain-names := fn:sort($domain:domains/name)
     let $domain-size := count($domain-names)
+    let $umbrella-ids as xs:string* := format:get-umbrella-ids()
     
     for $i in (1 to $domain-size)
         let $domain := $domain-names[$i]
         let $isEven := $i mod 2  
         
         let $recommendations := recommendation:get-positive-formats-by-domain($domain)
-        let $format-ids := fn:distinct-values($recommendations/@id)[not(fn:string(.) = format:get-umbrella-ids())]
+        let $format-ids := fn:distinct-values($recommendations/@id)[not(fn:string(.) = $umbrella-ids)]
         
         let $sorted :=
             for $id in $format-ids
