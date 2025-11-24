@@ -297,10 +297,10 @@ declare function fm:get-formats-without-mime-types() {
 
 declare function fm:get-format-families($sortBy){
     for $format in $format:formats
-    let $id := data($format/@id)
+    let $id := if($format/titleStmt/abbr) then data($format/titleStmt/abbr) else data($format/@id)
     let $ff := $format/formatFamily
-    let $order := if ($sortBy eq "ff") then $ff else $id
-    order by fn:lower-case($order)
+    let $order := if ($sortBy eq "ff") then $ff[1] else $id
+    order by fn:lower-case($order), fn:lower-case($id)
     return
         <tr>
             <td class="row">{$id}</td>
