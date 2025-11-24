@@ -10,6 +10,7 @@
   <extId type="Wikidata">Q5924007</extId>
   <extId type="LOC">fdd000443</extId>
   <extId type="PRONOM">x-fmt/423</extId>
+  <extDoc type="enWiki">JavaScript</extDoc>
   <info type="description">
     <p>"JavaScript is a programming language that is one of the core technologies of the World Wide
       Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side
@@ -22,10 +23,12 @@
       <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript specification</a></li>
     </ul>
   </info>
+  <!--<relation target="SpecECMAScript" type="isDefinedBy"/>-->
   <mimeType recommended="yes">application/javascript</mimeType>
   <mimeType>application/ecmascript</mimeType>
   <fileExt recommended="yes">.js</fileExt>
   <fileExt>.cjs</fileExt>
   <fileExt>.mjs</fileExt>
   <fileExt>.es</fileExt>
+  <formatFamily>srcCode</formatFamily>
 </format>

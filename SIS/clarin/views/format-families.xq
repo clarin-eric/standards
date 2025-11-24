@@ -45,13 +45,19 @@ return
             {menu:view()}
             <div class="content">
                 <div class="navigation">&gt; <a href="{app:link("views/format-families.xq")}">Format Families</a></div>
+                <div class="title">Format families</div>
                 <div>
-                <p>This page is made visible only to the most seasoned, relentless, and uncompromising discoverers 
-                of the murky internals of the SIS. It shows yet another idea for how information on formats may be traversed. 
-                It builds on the ideas sketched in the 
-                <a href="https://github.com/clarin-eric/standards/blob/master/MM/Formal%20Format%20Families.png">formal 
+                <p>This page is experimental in nature. It shows yet another idea for how information on formats may be traversed, 
+                attempting to trace formal relationships between formats, with some not-entirely-formal additions which invite 
+                discussion. It builds on the ideas sketched in the 
+                <a href="https://github.com/clarin-eric/standards/blob/master/docs/MM/Formal%20Format%20Families.png">formal 
                 families tree graphic</a>, available from this repository. Feel welcome to add your suggestions to the 
-                    <a href="https://github.com/clarin-eric/standards/issues/201">discussion at GitHub</a>.</p>
+                    <a href="https://github.com/clarin-eric/standards/issues/201">discussion at GitHub</a>. An observation that 
+                    is fairly obvious from the visualisation is that we need a way to handle secondary relationships (to say that, 
+                    e.g., EPS is primarily PS, but secondarily a container format, and perhaps even a third kind of arc, which would allow 
+                    to smuggle in the most obvious content-based relatedness (to say that STATA formats are all STATA, even though 
+                    formally very different). If we can't find a way to handle content-based relationships, they will probably have 
+                    to be dropped from the picture (and then the connection would need to be provided via keywords).</p>
                     <p>Below the SISghetti Monster is a table listing the current relationships across the families.</p>
                 
                 </div>

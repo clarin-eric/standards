@@ -5,19 +5,15 @@
     <abbr>SQL</abbr>
   </titleStmt>
   <keyword>database</keyword>
-  <!--<extId type="LOC">fdd000465</extId>-->
   <extId type="PRONOM">fmt/206</extId>
   <extId type="Wikidata">Q47607</extId>
+  <extDoc type="enWiki">SQL</extDoc>
+  <extDoc type="formatWiki">SQL</extDoc>
   <info type="description">
     <p>SQL (Structured Query Language) is a database query language initially developed at IBM in the 1970s.</p>
-    <p>See also:</p>
-      <ul>
-        <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/SQL">SQL</a></li>
-        <li>File Formats Wiki: <a href="http://fileformats.archiveteam.org/wiki/SQL">SQL</a></li>
-      </ul>
-    
   </info>
   <mimeType>application/x-sql</mimeType>
   <mimeType>application/sql</mimeType>
   <fileExt>.sql</fileExt>
+  <formatFamily>srcCode</formatFamily>
 </format>

@@ -18,5 +18,5 @@
    -->
 <!--  <mimeType>text/plain</mimeType>
   <fileExt>.conll</fileExt>-->
-  <formatFamily>CoNLL</formatFamily>
+  <formatFamily>CoNLL-U</formatFamily>
 </format>

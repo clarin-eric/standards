@@ -9,8 +9,9 @@
     
   <info type="description" umbrella="yes">
     <p>This is a stand-in for when a centre wishes to declare that it accepts certain kinds of
-      source code or discourages certain kinds of submissions of this nature. A recommendation using this "umbrella format" must
+      source code or discourages certain kinds of submissions of this nature. A recommendation using this "umbrella format" <i>must</i>
       be accompanied by a comment.</p>
+     
     <p>As is usual with umbrella formats, centres are strongly encouraged to, firstly, check if the programming or query language code 
       they wish to reference is among the <a href="../views/list-formats.xq">formats already described</a> in the SIS or formats 
       that <a href="../views/sanity-check.xq#missing">await getting described</a>. At
@@ -21,8 +22,21 @@
       <li><a href="../views/view-format.xq?id=fJS">Javascript</a></li>
       <li><a href="../views/view-format.xq?id=fR">R</a></li>
       <li><a href="../views/view-format.xq?id=fSQL">Structured Query Language</a></li>
-      <li><a href="../views/view-format.xq?id=fSVG">Scalable Vector Graphics</a></li>
     </ul>
+
+<!-- Note: XSLT is intentionally a dead link; need it for testing of our fallback mechanisms. -->
+
+    <p>A simplifying explicit assumption is that this umbrella (pseudo-)format belongs to the
+      "plain-text" family. The practical consequence of that is that formats that constitute source
+      code but are based on <a href="../views/view-format.xq?id=fXML">XML</a>, such as
+      <a href="../views/view-format.xq?id=fSVG">Scalable Vector Graphics</a> or
+      <a href="../views/view-format.xq?id=fXSLT">XSLT</a> need to be classified separately. While
+      that can be seen as a semantic impoverishment of the extension of the notion of "source code",
+      it is very likely that, on the intuitive plane, the restriction is quite fitting.</p>
+    <p>An additional assumption is that there is no clear boundary between programming languages and
+      query languages. That is pretty clear when looking from the programming language perspective,
+      so it is only a tiny step to add the view from the opposite side and classify SQL as a subtype
+      scrCode as well.</p>
   </info>
-<!--  <formatFamily>XML</formatFamily>-->
+  <formatFamily>Plain.Statements</formatFamily>
 </format>
