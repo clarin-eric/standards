@@ -59,27 +59,25 @@ return
                 any format that they are actually prepared to support, by creating and systematically using a format ID, which generally consists of the character 
                 "f" followed by a potentially mnemonic name. In this way, two major classes of broadly understood formats must be distinguished: </p>
                 <ul>
-                <li>formats that are part of the SIS inventory, equipped with descriptions, keywords, potentially references to standards that define or use them, etc.</li>
-                <li>formats that are referenced inside centre recommendations, by means of an ID.</li>
+                <li>{fm:count-defined-formats()} formats that are part of the SIS inventory, equipped with descriptions, keywords, potentially references 
+                to standards that define or use them, etc. Call these 'described formats'; they are listed at the bottom of this page;</li>
+                <li>{fm:count-defined-formats() - fm:count-orphan-format-ids() + fm:count-missing-format-ids()} formats that are referenced inside centre recommendations, by means of an ID (call these 'referenced formats').</li>
                 </ul>
+                <p>(One might think that the two sets should be identical, but the aim of the SIS is to reflect the <i>current</i> recommendations, and
+                        these are meant to be created in a dynamic fashion, as needed by centres and as dictated by the evolving technological context.)</p>
                 
                 <p>These two classes overlap, resulting in a tripartite division:</p>
                 <ol>
-                <li>formats that are mentioned in recommendations and are at the same time described in the SIS ({fm:count-defined-formats()} 'described formats'); these are listed at the bottom of this page;</li>
-                <li>formats that are mentioned in recommendations and are not (yet) described in the SIS ({fm:count-missing-format-ids()} 'missing formats'); they are the ones that have a "+" symbol 
-                in recommendation lists and that link to predefined GitHub issues;</li>
+                <li>the intersection of described formats and referenced formats: {fm:count-defined-formats() - fm:count-orphan-format-ids()} formats that are mentioned 
+                in recommendations and are at the same time described in the SIS;</li>
+                <li>referenced formats that are not (yet) described in the SIS ({fm:count-missing-format-ids()} 'missing formats'); they are the ones that have a "+" 
+                symbol in recommendation lists and that link to predefined GitHub issues;</li>
                 <li>formats that are described in the SIS but are not mentioned by any recommendation ({fm:count-orphan-format-ids()} 'orphaned formats'); these are mostly either "umbrella" format categories, 
                 or formats once supported by centres but at least temporarily not in the scope of interest.</li>
                 </ol>
-                <p>The present page lists the first category of formats, together with some of the properties that are identified in their descriptions. 
-                The other two categories have been delegated to the <a href="{app:link("views/sanity-check.xq")}">sanity checker</a> page.</p>
-                
-<!--                   <p>This page lists both the formats that are referenced in centre recommendations, and those that are defined in the SIS. Ideally,
-                        the latter set should properly contain the former, but the aim of the SIS is to reflect the <i>current</i> recommendations, and
-                        these are meant to be created in a dynamic fashion, as needed and as dictated by the evolving technological context. Therefore, this page
-                        is divided into three sections: (a) formats that are referenced in recommendations but are not yet defined in the SIS, (b) formats
-                        defined in the SIS but not referenced in recommendations, and (c) (properly containing (b)) formats defined in the SIS. The last list 
-                        provides some additional basic details.</p> -->
+                <p>The present page lists the described formats (categories 1 and 3 above), together with some of the properties that are identified in their descriptions. 
+                Formats from categories 2 and 3 are listed separately at the <a href="{app:link("views/sanity-check.xq")}">sanity checker</a> page. Among the 
+                described formats, umbrella formats are distinguished by a preceding icon depicting a tiny pink unicorn.</p>
                 </div>
                 <div id="defined">
                     <h2>Formats described in the SIS ({fm:count-defined-formats()})</h2>
