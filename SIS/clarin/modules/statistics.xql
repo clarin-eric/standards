@@ -97,35 +97,26 @@ declare function stm:list-format-by-domain($sortBy as xs:string){
     </tr>
 };
 
-(: note that this function is intended as always returning _positive_ recommendations, 
-to the exclusion of deprecations;
-   this is why it calls recommendation:get-positive-formats-by-domain()     :)
-declare function stm:get-formats-per-domain($threshold as xs:int){
-    let $min-recommendations := if ($threshold) then $threshold else 1
-    
-    let $domain-names := fn:sort($domain:domains/name)
-    let $domain-size := count($domain-names)
+(: utility function for stm:get-formats-per-domain() :)
+declare function stm:prune-formats-per-domain($threshold as xs:int) as element(domain)* {
+    let $domain-names := $domain:domains/name
     let $umbrella-ids as xs:string* := format:get-umbrella-ids()
     
-    for $i in (1 to $domain-size)
-        let $domain := $domain-names[$i]
-        let $isEven := $i mod 2  
-        
-        let $recommendations := recommendation:get-positive-formats-by-domain($domain)
+    for $dn in $domain-names
+        let $recommendations := recommendation:get-positive-formats-by-domain($dn)
         let $format-ids := fn:distinct-values($recommendations/@id)[not(fn:string(.) = $umbrella-ids)]
         
-        let $sorted :=
+        let $pruned :=
             for $id in $format-ids
              let $sum := count($recommendations[@id=$id])
              let $format-link := app:link(concat("views/view-format.xq?id=",$id))
              let $format-abbr := format:get-format($id)/titleStmt/abbr/text()
-             let $row-class := if ($isEven eq 0) then "row" else "row-odd"
              order by $sum descending
              return
-             if ($sum ge $min-recommendations)
-             then
-                <tr class="{$row-class}">
-                    <td>{$domain}</td>
+                if ($sum ge $threshold)
+                then
+                <tr>
+                    <td>{$dn}</td>
                     <td>{
                         if ($format-abbr) 
                         then <a href="{$format-link}">{$format-abbr }</a>
@@ -134,9 +125,30 @@ declare function stm:get-formats-per-domain($threshold as xs:int){
                     </td>
                     <td>{$sum}</td>
                 </tr>
-            else()
-            
-        order by fn:lower-case($domain)
+                else ()
+        order by fn:lower-case($dn)
+        return if ($pruned) 
+               then <domain name="{$dn}">{$pruned}</domain>
+               else ()
+(: it does look heavy, but since I can't use a debugger under eXist, I use the code itself to help me in debugging  -P  :)
+};
+
+(: note that this function is intended as always returning _positive_ recommendations, 
+to the exclusion of deprecations;
+   this is why it calls recommendation:get-positive-formats-by-domain()     :)
+declare function stm:get-formats-per-domain($threshold as xs:int) as element(tr)+ {
+    let $min-recommendations := if ($threshold) then $threshold else 1
+    let $pruned as element(domain)* := stm:prune-formats-per-domain($min-recommendations)
+
+        let $sorted:=
+            for $i in (1 to count($pruned))
+                let $isEven := $i mod 2
+                let $row-class := if ($isEven eq 0) then "row" else "row-odd"
+                let $content := $pruned[$i]/tr
+                return
+                  for $tr in $content
+                    return
+                        <tr class="{$row-class}">{$tr/*}</tr>
         return $sorted 
 };
 
