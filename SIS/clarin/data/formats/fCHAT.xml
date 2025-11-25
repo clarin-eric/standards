@@ -23,7 +23,7 @@
   </info>
   <relation target="SpecCHAT" type="isDefinedBy"/>
   <relation target="SpecCHAT" type="isUsedBy"/>
-  <mimeType recommended="yes">text/plain;format-variant=clan-cha</mimeType>
+  <mimeType recommended="yes">text/plain;format-variant=clan-chat</mimeType>
   <mimeType>text/x-chat</mimeType>
   <fileExt>.cha</fileExt>
   <formatFamily>Markup.Partial</formatFamily>
