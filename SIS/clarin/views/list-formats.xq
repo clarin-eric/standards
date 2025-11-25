@@ -131,9 +131,9 @@ return
                 </div>
                 <table>
                     <tr>
-                        <th style="width:30%;min-width:200px">Format</th>
-                        <th style="width:40%">MIME types</th>
-                        <th style="width:30%">File Extensions</th>
+                        <th style="width:30%;min-width:180px">Format</th>
+                        <th style="width:45%">MIME types</th>
+                        <th style="width:25%">File Extensions</th>
                     </tr>
                     {fm:list-formats($keyword,$searchItem)}
                 </table>
