@@ -24,6 +24,8 @@
         <li>Include column headers</li>
       <li>Watch out for (and preferably weed out) extra columns and extra lines (this is part of the
         general etiquette when submitting data to a centre; there's humans on the other side)</li>
+      <li>Contact your target centre to make sure if they have any particular requirements
+        concerning CSV, if it is not stated clearly in the SIS.</li>
      </ul>
     <p>See:</p>
     <ul>
