@@ -1,18 +1,37 @@
 <?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fCSV" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
   <titleStmt>
-    <title>Comma-separated values</title>
+    <title>Comma-Separated Values</title>
     <abbr>CSV</abbr>
   </titleStmt>
   <keyword>database format</keyword>
-  <keyword>column format</keyword>
+  <keyword>tabular format</keyword>
   <extId type="LOC">fdd000323</extId>
   <info type="description">
+    <p>"CSV is one of the most popular formats for publishing data on the web. It is concise, easy
+      to understand by both humans and computers, and aligns nicely to the tabular nature of most
+      data. But CSV is also a poor format for data. There is no mechanism within CSV to indicate the
+      type of data in a particular column, or whether values in a particular column must be unique.
+      It is therefore hard to validate and prone to errors such as missing values or differing data
+      types within a column." (from the "CSV on the Web: A Primer")</p>
+    <p>Issues to be aware of when submitting CSV-formatted data:</p>
+     <ul>
+      <li><a href="https://docs.github.com/en/get-started/git-basics/configuring-git-to-handle-line-endings">Line endings must be consistent</a>:
+        do not submit files with mixed Windows / Unix endings! (Quick hints: <code>dos2linux</code>,
+        <code>linux2dos</code>; adjust save options in your editor; use a HEX editor to spy on the
+        endings; see more e.g. at
+        <a href="https://blog.cybermindworks.com/post/line-endings-in-code-common-problems-and-how-to-fix-them">Cybermindworks</a>).</li>
+        <li>Include column headers</li>
+      <li>Watch out for (and preferably weed out) extra columns and extra lines (this is part of the
+        general etiquette when submitting data to a centre; there's humans on the other side)</li>
+     </ul>
     <p>See:</p>
     <ul>
+      <li><a href="https://www.w3.org/TR/tabular-data-primer/">CSV on the Web: A Primer</a></li>
+      <li><a href="https://www.w3.org/TR/tabular-data-model/">Model for Tabular Data and Metadata on the Web</a> (W3C Recommendation; note that this part belongs rather in the Watchtower part of the SIS, but is mentioned here for convenience)</li>
       <li>"<a href="https://www.bitsondisk.com/writing/2021/retire-the-csv/">It's Time to Retire the
           CSV</a>", by Alex Rasmussen (August 16, 2021)</li>
-      <li>https://www.ietf.org/rfc/rfc4180.txt</li>
+      <li>https://www.ietf.org/rfc/rfc4180.txt (informational RFC)</li>
       <li>https://specs.frictionlessdata.io/csv-dialect/</li>
     </ul>
   </info>
