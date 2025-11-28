@@ -1,0 +1,39 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fParlaMint"
+    xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>Comparable and Interoperable Parliamentary Corpora</title>
+        <abbr>ParlaMint</abbr>
+    </titleStmt>
+    <keyword>parliamentary proceedings</keyword>
+    <keyword>annotation format</keyword>
+    <info type="description">
+        <p>"The CLARIN ERIC flagship project ParlaMint enables transnational and multidisciplinary
+            analyses of parliamentary debates across 29 countries and autonomous regions in
+            Europe.</p>
+        <p>Overcoming the obstacles of multilinguality and diversity of data formats, the project
+            created interoperable and comparable corpora that facilitate transnational comparisons
+            and enhance the understanding of parliamentary discourse and its societal impact locally
+            and globally.</p>
+        <p>The corpora are available in open access and are a valuable source of information for
+            researchers in a broad range of SSH disciplines, such as political and social sciences,
+            media and communication studies, history and language studies, and are also relevant to
+            policy makers." (clarin.eu)</p>
+        <p>ParlaMint is a tighter, interoperable specialisation of the
+            <a href="../views/view-format.xq?id=fParla-CLARIN">Parla-CLARIN</a> format. It comes
+            with a suite of tools and a collection of parliamentary corpora.</p>
+        <p>See:</p>
+        <ul>
+            <li><a href="https://www.clarin.eu/parlamint">Homepage of ParlaMint I and ParlaMint II projects</a>
+                at clarin.eu</li>
+            <li><a href="https://github.com/clarin-eric/ParlaMint#parlamint-comparable-parliamentary-corpora">Technical description and repository</a>
+                at GitHub</li>
+        </ul>
+    </info>
+    <mimeType>application/tei+xml</mimeType>
+    <fileExt>.xml</fileExt>
+    <formatFamily>Parla-CLARIN</formatFamily>
+</format>
+
+
+

@@ -1,0 +1,34 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fAKN"
+    xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>Architecture for Knowledge-Oriented Management of African Normative Texts using Open Standards and Ontologies</title>
+        <abbr>Akoma Ntoso</abbr>
+    </titleStmt>
+    <keyword>parliamentary proceedings</keyword>
+    <keyword>annotation format</keyword>
+    <extId type="Wikidata">Q20313093</extId>
+    <extDoc type="enWiki">Akoma_Ntoso</extDoc>
+    <info type="description">
+        <p>Akoma Ntoso (AKN) "defines a set of simple, technology-neutral electronic representations
+            of parliamentary, legislative and judiciary documents for e-services in a worldwide
+            context and provides an enabling framework for the effective exchange of "machine
+            readable" parliamentary, legislative and judiciary documents such as legislation, debate
+            record, minutes, judgements, etc." (Wikipedia)</p>
+        <p>In the context of CLARIN, which puts focus on the linguistic features of annotated
+            resources, <a href="../views/view-format.xq?id=fParla-CLARIN">Parla-CLARIN</a> and
+            <a href="../views/view-format.xq?id=fParlaMint">ParlaMint</a> are the recommended
+            alternatives (at different levels of generality, coverage and interoperability).</p>
+        <p>See:</p>
+        <ul>
+            <li><a href="https://www.oasis-open.org/committees/tc_home.php">Homepage of the OASIS Technical Committee "LegalDocML"</a>,
+                of which the AKN is a deliverable.</li>
+        </ul>
+    </info>
+    <mimeType>application/akn+xml</mimeType>
+    <fileExt>.xml</fileExt>
+    <formatFamily>XML</formatFamily>
+</format>
+
+
+
