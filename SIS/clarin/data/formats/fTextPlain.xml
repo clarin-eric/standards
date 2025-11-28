@@ -29,6 +29,18 @@
       <li>Search the Net for more hints, here's a
         <a href="https://blog.cybermindworks.com/post/line-endings-in-code-common-problems-and-how-to-fix-them">Cybermindworks article</a>.</li>
     </ul>
+    <p>When a hex editor is not an option for diagnostics, a *nix user may try the following
+      <a href="https://www.bas.uni-muenchen.de/forschung/BITS/TP2/Cookbook/node23.html">piece of advice</a>
+      originating from the BAS centre (courtesy Angela Baumann, 2004):</p>
+    <p><code>cat $file | tr '\r' '&amp;' | grep -v '&amp;$' > /dev/null</code></p>
+    <p><code>if ( $status == 0 ) then</code></p>
+    <p>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<code>echo "WARNING: $file contains lines not DOS-compatible"</code></p>
+    <p><code>endif</code></p>
+    <p>The script above essentially tests for the presence of the `\r` (carriage return, not used by
+      *nix for line endings), by replacing it with another convenient character first (here, it's
+      the ampersand char) and then making sure that there is no such line (the <code>-v</code>
+      option) where that substituted character shows up just before the end of that line. To check
+      for *nix-incompatibility, remove the <code>-v</code>.</p>
   </info>
   <relation target="SpecUnicode" type="isUsedBy"/>
   <relation target="SpecUCS" type="isUsedBy"/>
