@@ -53,7 +53,7 @@
       <li><a href="../views/view-format.xq?id=fMenota">Menota</a> – the Medieval Nordic Text Archive TEI extensions</li>
       <li><a href="../views/view-format.xq?id=fParla-CLARIN">Parla-CLARIN</a> and <a href="../views/view-format.xq?id=fParlaMint">ParlaMint</a> – for the encoding of parliamentary proceedings</li>
       <li><a href="../views/view-format.xq?id=fPressMint">PressMint</a> – for the encoding of interoperable corpora of historical newspapers</li>
-      <li><a href="../views/view-format.xq?id=fLex0">TEI Lex0</a> – an OASIS standard for the encoding of (a.o.) retrodigitised dictionaries, maintained by DARIAH</li>
+      <li><a href="../views/view-format.xq?id=fLex0">TEI Lex0</a> – best practices for the encoding of (a.o.) retrodigitised dictionaries, maintained by DARIAH</li>
     </ul>
     <p>The above list is not meant to be exhaustive. Please kindly signal to us if you know of a
       TEI-based format that should be recognised by the SIS and listed above. TEI-based formats should use the keyword
