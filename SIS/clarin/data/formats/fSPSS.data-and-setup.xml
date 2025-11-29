@@ -13,4 +13,5 @@
   <mimeType>text/plain</mimeType>
   <fileExt>.sps</fileExt>
   <fileExt>.dat</fileExt>
+  <formatFamily>Plain.Statements</formatFamily>
 </format>
