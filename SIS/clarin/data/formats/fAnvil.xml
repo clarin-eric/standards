@@ -10,4 +10,5 @@
   </info>
   <mimeType>text/xml</mimeType>
   <fileExt>.anvil</fileExt>
+  <formatFamily>XML</formatFamily>
 </format>
