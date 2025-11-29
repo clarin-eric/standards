@@ -8,7 +8,7 @@
   <keyword>raster graphics</keyword>
   <keyword>lossless compression</keyword>
   <keyword>lossy compression</keyword>
-  <keyword>ISO</keyword>
+  <keyword type="SSO">ISO</keyword>
   <extId type="LOC">fdd000022</extId>
   <extId type="LOC">fdd000023</extId>
   <extId type="LOC">fdd000145</extId>

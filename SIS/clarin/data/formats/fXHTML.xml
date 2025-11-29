@@ -4,7 +4,7 @@
     <title>EXtensible HyperText Markup Language</title>
     <abbr>XHTML</abbr>
   </titleStmt>
-  <keyword>W3C</keyword>
+  <keyword type="SSO">W3C</keyword>
   <keyword>hypertext</keyword>
   <extId type="LOC">fdd000483</extId>
   <info type="description">

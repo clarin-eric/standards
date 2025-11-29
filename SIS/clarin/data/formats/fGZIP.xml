@@ -4,7 +4,7 @@
         <abbr>GZIP</abbr>
     </titleStmt>
     <keyword>compression</keyword>
-    <keyword>IETF</keyword>
+    <keyword type="SSO">IETF</keyword>
     <extId type="Wikidata">Q10287816</extId>
     <info type="description">
         <p>See the specification <a href="https://datatracker.ietf.org/doc/html/rfc1952">RFC 1952</a>.</p>

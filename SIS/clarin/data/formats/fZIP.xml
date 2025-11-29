@@ -4,7 +4,7 @@
         <abbr>ZIP</abbr>
     </titleStmt>
     <keyword>compression</keyword>
-    <keyword>ISO</keyword>
+    <keyword type="SSO">ISO</keyword>
     <extId type="LOC">fdd000354</extId>
     <extId type="Wikidata">Q136218</extId>
     <info type="description">

@@ -7,7 +7,7 @@
   <keyword>speech data</keyword>
   <keyword>audio file format</keyword>
   <keyword>container format</keyword>
-  <keyword>IEC</keyword>
+  <keyword type="SSO">IEC</keyword>
   <extId type="LOC">fdd000001</extId>
   <info type="description">
     <p>Waveform Audio File Format (WAVE, or WAV due to its filename extension; pronounced "wave") is

@@ -7,7 +7,7 @@
   <keyword>serialization</keyword>
   <keyword>Semantic Web</keyword>
   <keyword>RDF</keyword>
-  <keyword>W3C</keyword>
+  <keyword type="SSO">W3C</keyword>
   <info type="description">
     <p>Turtle is designed to be a compact and easy-to-read textual format for serializing RDF graphs. RDF graphs represent information as 
       a collection of subject-predicate-object triples. It is a subset of the older Notation3 (N3) language, but unlike full N3, 

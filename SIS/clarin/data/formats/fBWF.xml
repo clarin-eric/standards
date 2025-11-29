@@ -5,7 +5,7 @@
     <abbr>BWF</abbr>
   </titleStmt>
   <keyword>audio format</keyword>
-  <keyword>EBU</keyword>
+  <keyword type="SSO">EBU</keyword>
   <extId type="LOC">fdd000359</extId>
   <extId type="PRONOM">fmt/705</extId>
   <info type="description">

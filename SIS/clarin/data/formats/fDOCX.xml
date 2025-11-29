@@ -5,7 +5,7 @@
     <abbr>DOCX</abbr>
   </titleStmt>
   <keyword>document format</keyword>
-  <keyword>ISO</keyword>
+  <keyword type="SSO">ISO</keyword>
   <extId type="LOC">fdd000400</extId>
   <info type="description">
     <p>XML-based Format (Office Open XML), generally smaller than its predecessor, the <a href="../views/view-format.xq?id=fDOC">.DOC file</a>, 

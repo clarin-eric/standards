@@ -10,7 +10,7 @@
   <keyword>scientific data</keyword>
   <keyword>data storage</keyword>
   <keyword>multidimensional data</keyword>
-  <keyword>OGC</keyword>
+  <keyword type="SSO">OGC</keyword>
   <extId type="LOC">fdd000229</extId>
   <extId type="PRONOM">fmt/807</extId>
   <extId type="PRONOM">fmt/286</extId>

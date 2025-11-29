@@ -8,7 +8,7 @@
   <keyword>reasoning</keyword>
   <keyword>knowledge representation</keyword>
   <keyword>RDF</keyword>
-  <keyword>W3C</keyword>
+  <keyword type="SSO">W3C</keyword>
   <info type="description">
    <p>
     OWL (Web Ontology Language) is a knowledge representation language designed for publishing and sharing ontologies on the World Wide Web.By providing a richer vocabulary and formal semantics compared to XML, RDF, and RDF Schema (RDF-S), OWL allows for more complex descriptions of concepts, relationships, and constraints within a domain.</p>

@@ -5,7 +5,7 @@
     </titleStmt>
     <keyword>dictionary encoding</keyword>
     <keyword>TEI</keyword>
-    <keyword>ISO</keyword>
+    <keyword type="SSO">ISO</keyword>
     <info type="description">
         <p>See <a href="https://www.iso.org/standard/75411.html">ISO 24613-4:2021</a>. This is a <a href="../views/view-format.xq?id=fTEI">TEI-based</a> format for dictionary encoding. 
             It is not backwards-compatible with <a href="../views/view-format.xq?id=fLMF2008">LMF:2008</a>.</p>

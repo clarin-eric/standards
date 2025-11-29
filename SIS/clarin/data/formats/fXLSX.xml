@@ -5,7 +5,7 @@
     <abbr>XLSX</abbr>
   </titleStmt>
   <keyword>spreadsheet</keyword>
-  <keyword>ISO</keyword>
+  <keyword type="SSO">ISO</keyword>
   <extId type="LOC">fdd000401</extId>
   <info type="description">
     <p>See <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000401.shtml">LoC entry</a>. </p> 

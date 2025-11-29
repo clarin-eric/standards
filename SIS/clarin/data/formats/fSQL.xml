@@ -5,7 +5,7 @@
     <abbr>SQL</abbr>
   </titleStmt>
   <keyword>database</keyword>
-  <keyword>ISO</keyword>
+  <keyword type="SSO">ISO</keyword>
   <extId type="PRONOM">fmt/206</extId>
   <extId type="Wikidata">Q47607</extId>
   <extDoc type="enWiki">SQL</extDoc>

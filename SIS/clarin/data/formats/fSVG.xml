@@ -6,7 +6,7 @@
   </titleStmt>
   <keyword>image format</keyword>
   <keyword>vector graphics</keyword>
-  <keyword>W3C</keyword>
+  <keyword type="SSO">W3C</keyword>
   <extId type="LOC">fdd000515</extId>
   <info type="description">
     <p>Please feel welcome to supply the description of this format file via GitHub: either as an

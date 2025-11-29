@@ -9,7 +9,7 @@
   <keyword>model exchange</keyword>
   <keyword>neural networks</keyword>
   <keyword>machine learning</keyword>
-  <keyword>DMG</keyword>
+  <keyword type="SSO">DMG</keyword>
   <info type="description">
    <p>PMML (Predictive Model Markup Language) is an XML-based standard developed by the Data Mining Group (DMG). It's designed to represent predictive models, allowing for the easy exchange of models between different applications.</p>
     <p>Visit:

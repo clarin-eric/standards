@@ -5,7 +5,7 @@
     <abbr>GrAF</abbr>
   </titleStmt>
   <keyword>annotation format</keyword>  
-  <keyword>ISO</keyword>
+  <keyword type="SSO">ISO</keyword>
   <info type="description">
     <p>The 
       <a href="https://www.cs.vassar.edu/~ide/papers/LAW.pdf">GrAF</a> is  an  XML serialization  of  the  <a href="../views/view-spec.xq?id=SpecLaf">Linguistic  Annotation  Format (LAF)</a> developed within ISO TC37 SC4.</p>

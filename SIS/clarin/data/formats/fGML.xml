@@ -5,8 +5,8 @@
     <abbr>GML</abbr>
   </titleStmt>
   <keyword>GIS</keyword>
-  <keyword>ISO</keyword>
-  <keyword>OGC</keyword>
+  <keyword type="SSO">ISO</keyword>
+  <keyword type="SSO">OGC</keyword>
   <extId type="LOC">fdd000296</extId>
   <extId type="Wikidata">Q926165</extId>
   <extId type="PRONOM">x-fmt/227</extId>

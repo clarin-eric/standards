@@ -5,7 +5,7 @@
     <abbr>HTML</abbr>
   </titleStmt>
   <keyword>annotation format</keyword>  
-  <keyword>W3C</keyword>
+  <keyword type="SSO">W3C</keyword>
   <info type="description">
     <p>The HTML is described in the
       <a href="https://html.spec.whatwg.org/multipage/">Living Standard</a>.</p>

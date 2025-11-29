@@ -6,7 +6,7 @@
   </titleStmt>
   <keyword>schema format</keyword>
   <keyword>XML validation</keyword>
-  <keyword>W3C</keyword>
+  <keyword type="SSO">W3C</keyword>
   <extId type="LOC">fdd000077</extId>
   <extId type="PRONOM">x-fmt/280</extId>
   <extId type="Wikidata">Q16342</extId>

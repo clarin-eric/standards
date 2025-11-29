@@ -8,7 +8,7 @@
   <keyword>taxonomy</keyword>
   <keyword>ontology</keyword>
   <keyword>controlled vocabulary</keyword>
-  <keyword>W3C</keyword>
+  <keyword type="SSO">W3C</keyword>
   <info type="description">
    <p>
     SKOS (Simple Knowledge Organization System) is a W3C standard for representing knowledge organization systems (KOS) such as thesauri, classification schemes, subject heading lists, taxonomies, and other similar types of controlled vocabularies. SKOS is built on RDF (Resource Description Framework), making it interoperable with other Semantic Web technologies.</p>
