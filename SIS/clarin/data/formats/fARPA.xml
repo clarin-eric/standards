@@ -13,4 +13,5 @@
   </info>
   <mimeType>text/plain</mimeType>
   <fileExt>.arpa</fileExt>
+  <formatFamily>Plain.Statements</formatFamily>
 </format>
