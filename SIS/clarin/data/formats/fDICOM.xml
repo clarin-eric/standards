@@ -6,7 +6,8 @@
   </titleStmt>
   <keyword>image format</keyword>
   <keyword>medicine</keyword>
-<!--  this is also video, and can be lossy... messy  -->
+  <keyword>ISO</keyword>
+  <!--  this is also video, and can be lossy... messy  -->
   <extId type="Wikidata">Q28205908</extId>
   <extId type="PRONOM">fmt/574</extId>
   <info type="description">

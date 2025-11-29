@@ -7,6 +7,7 @@
   <keyword>serialization</keyword>
   <keyword>annotation</keyword>
   <keyword>RDF</keyword>
+  <keyword>W3C</keyword>
   <info type="description">
    <p>NTriples is a simple serialization format for the Resource Description Framework (RDF).
     Using NTriples you can represent data as a Subject-Predicate-Object triple, which is the core structure for Linked Data 

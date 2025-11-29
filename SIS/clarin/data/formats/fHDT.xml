@@ -9,7 +9,8 @@
   <keyword>knowledge graphs</keyword>
   <keyword>linked data</keyword>
   <keyword>RDF</keyword>
-   <info type="description">
+  <keyword>W3C</keyword>
+  <info type="description">
    <p>HDT (Header, Dictionary, Triples) is a compact data structure and binary serialization format for RDF (Resource Description Framework) data.</p>
     <p>See:
       <a href="https://www.rdfhdt.org/hdt-binary-format/">the spec</a> for a detailed description.</p>

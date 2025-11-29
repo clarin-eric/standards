@@ -18,5 +18,5 @@
   </info>
   <mimeType>image/x-adobe-dng</mimeType>
   <fileExt>.dng</fileExt>
-  <!--<formatFamily>Plain.Statements</formatFamily>-->
+  <formatFamily>TIFF</formatFamily>
 </format>

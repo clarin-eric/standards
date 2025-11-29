@@ -9,7 +9,10 @@
   <keyword>data serialization</keyword>
   <extId type="Wikidata">Q1424987</extId>
   <info type="description">
-    <p>Notation3 (N3) is a non-XML serialization format for Resource Description Framework (RDF) data, developed by Tim Berners-Lee and the Semantic Web community. Beyond basic RDF serialization, N3 supports advanced features such as expressing logical rules and formulas, enabling more sophisticated data representations.</p>
+    <p>Notation3 (N3) is a non-XML serialization format for Resource Description Framework (RDF)
+      data, developed by Tim Berners-Lee and the Semantic Web community. Beyond basic RDF
+      serialization, N3 supports advanced features such as expressing logical rules and formulas,
+      enabling more sophisticated data representations.</p>
     <p>See:</p>
       <ul>
         <li><a href="https://www.w3.org/TeamSubmission/n3/">the W3C doc</a></li>

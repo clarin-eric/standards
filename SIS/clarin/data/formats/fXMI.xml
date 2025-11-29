@@ -7,6 +7,9 @@
   <keyword>UML</keyword>
   <keyword>metadata</keyword>
   <keyword>interoperability</keyword>
+  <keyword>ISO</keyword>
+  <keyword>IEC</keyword>
+  <keyword>OMG</keyword>
   <info type="description">
    <p>
     XMI (XML Metadata Interchange) is an OMG (Object Management Group) standard for exchanging metadata via XML, primarily used for exchanging models described using the Unified Modeling Language (UML) and other metamodels.</p>

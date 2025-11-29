@@ -6,6 +6,7 @@
   </titleStmt>
   <keyword>speech data</keyword>
   <keyword>audio file format</keyword>
+  <keyword>NIST</keyword>
   <info type="description">
     <p>The NIST - SPHERE speech header format was defined by the 'National Institute of Standards and Technology, USA'. It is used in many speech corpora originated in the United States (cf. <a href="https://www.phonetik.uni-muenchen.de/Bas/BasFormatseng.html#NIST">BAS formats information for NIST SPHERE</a>.</p>
   </info>
