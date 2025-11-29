@@ -146,10 +146,19 @@
                 (For further explanation, refer to the docs/vault directory.)</xs:documentation>
         </xs:annotation>
         <xs:alternative test="@type eq 'gdfr'" type="keyword-gdfr"/>
-        <xs:alternative>
+<!--        <xs:alternative>
             <xs:simpleType>
                 <xs:restriction base="xs:string"/>
             </xs:simpleType>
+        </xs:alternative>-->
+        <xs:alternative>
+            <xs:complexType>
+                <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                        <xs:attribute name="type" use="optional"/>
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
         </xs:alternative>
     </xs:element>
 
