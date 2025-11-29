@@ -4,6 +4,8 @@
     <title>EXtensible HyperText Markup Language</title>
     <abbr>XHTML</abbr>
   </titleStmt>
+  <keyword>W3C</keyword>
+  <keyword>hypertext</keyword>
   <extId type="LOC">fdd000483</extId>
   <info type="description">
     <p>XHTML (EXtensible HyperText Markup Language), developed by World Wide Consortium (W3C) in 2000, is the more extended version of the popular HTML.</p>

@@ -5,6 +5,7 @@
     </titleStmt>
     <keyword>dictionary encoding</keyword>
     <keyword>obsolete</keyword>
+    <keyword>ISO</keyword>
     <info type="description">
         <p>This format corresponds to the withdrawn ISO 24613:2008 standard, devoted to the description of (mostly machine-readable) lexicons. 
             It is superseded by a TEI-based format, defined 

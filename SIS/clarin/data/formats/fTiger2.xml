@@ -6,6 +6,7 @@
   </titleStmt>
   <keyword>annotation format</keyword>
   <keyword>corpus encoding</keyword>
+  <keyword>ISO</keyword>
   <!-- <extId type=""></extId> -->
   <info type="description">
     <p>"&lt;tiger2/>" is a format derived from <a href="../views/view-format.xq?id=fTiger">Tiger XML</a> and standardised as the serialisation of

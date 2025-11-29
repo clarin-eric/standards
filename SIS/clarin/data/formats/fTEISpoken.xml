@@ -8,6 +8,7 @@
   <keyword>annotation format</keyword>
   <keyword>corpus encoding</keyword>
   <keyword>TEI</keyword>
+  <keyword>ISO</keyword>
   
   <info type="description">
     <p>This format is a serialization of the <a href="../views/view-spec.xq?id=SpecTranScript">ISO/TEI Transcriptions of Spoken Language</a>.</p>
