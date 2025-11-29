@@ -54,10 +54,8 @@ return
                 families tree graphic</a>, available from this repository. Feel welcome to add your suggestions to the 
                     <a href="https://github.com/clarin-eric/standards/issues/201">discussion at GitHub</a>. An observation that 
                     is fairly obvious from the visualisation is that we need a way to handle secondary relationships (to say that, 
-                    e.g., EPS is primarily PS, but secondarily a container format, and perhaps even a third kind of arc, which would allow 
-                    to smuggle in the most obvious content-based relatedness (to say that STATA formats are all STATA, even though 
-                    formally very different). If we can't find a way to handle content-based relationships, they will probably have 
-                    to be dropped from the picture (and then the connection would need to be provided via keywords).</p>
+                    e.g., EPS is primarily PS, but secondarily a container format). It would be best to have a different visual 
+                    type of arc for that (a dashed or dotted one, if feasible...).</p>
                     <p>Below the SISghetti Monster is a table listing the current relationships across the families.</p>
                 
                 </div>
