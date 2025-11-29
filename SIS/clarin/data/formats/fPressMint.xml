@@ -1,0 +1,42 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fPressMint"
+    xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>Interoperable Corpora of Historical Newspapers</title>
+        <abbr>PressMint</abbr>
+    </titleStmt>
+    <keyword>annotation format</keyword>
+    <keyword>TEI</keyword>
+    <info type="description">
+        <p>PressMint "aims to compile a multilingual, comparable, annotated, translated and
+            interoperable set of corpora of European historical newspapers from around the start of
+            the 20th century. The PressMint corpora will be openly available, both for download in a
+            variety of instances and formats, as well as via several online corpus analysis tools.
+            The project will proactively disseminate and foster the use of the corpus
+            collection.</p>
+        <p>While historical newspapers are of interest to a diverse group of researchers from the
+            social sciences and humanities – historians, historical linguists, social scientists,
+            ethnologists, anthropologists, media and communication scholars, and cultural studies
+            amongst others – contemporary digital resources, tools and methods are still
+            underutilised in these fields. Existing corpora are not interoperable, which precludes
+            methods for their comparison, as well as any translingual and transnational research, an
+            especially important consideration, as statehood and nationhood are highly dynamic in
+            Europe in the period to be covered by the project corpora. The PressMint project aims to
+            improve this situation by providing a valuable service to the academic community on a
+            truly pan-European, multilingual and multidisciplinary level.</p> 
+        <p>PressMint includes seventeen national consortia, illustrating the benefit of a
+            distributed infrastructure." (from the project homepage)</p>
+        <p>See:</p>
+        <ul>
+            <li><a href="https://www.clarin.eu/pressmint">Project homepage</a> at clarin.eu</li>
+            <li><a href="https://github.com/clarin-eric/PressMint">Technical description and repository</a> at GitHub</li>
+            <li><a href="https://clarin-eric.github.io/PressMint/">PressMint schema documentation</a></li>
+        </ul>
+    </info>
+    <mimeType>application/tei+xml</mimeType>
+    <fileExt>.xml</fileExt>
+    <formatFamily>TEI</formatFamily>
+</format>
+
+
+
