@@ -9,7 +9,8 @@
   <keyword>corpus encoding</keyword>
   <keyword>format family</keyword>
   <keyword>umbrella format</keyword>
-  
+  <keyword>CoNLL</keyword>
+
   <!--<extId type=""></extId>-->
   
   <info type="description" umbrella="yes">
@@ -17,7 +18,7 @@
       conference chain where the format(s) originated. Unqalified "CoNLL" should be considered a
       meta-format (plain text, column-based) that should <i>not</i> be referenced by SIS
       recommendations.</p>
-    <p>Formats that can be used across CLARIN:</p>
+    <p>CoNLL varieties that are used across CLARIN:</p>
     <ul>
       <li><a href="../views/view-format.xq?id=fCoNLL-X">CoNLL-X</a>, may be considered as superseded by CoNNL-U</li>
       <li><a href="../views/view-format.xq?id=fCoNLL-U">CoNLL-U</a>, the base format of <a href="https://universaldependencies.org/format.html">Universal Dependencies</a></li>
