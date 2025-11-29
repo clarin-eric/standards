@@ -7,6 +7,7 @@
     </titleStmt>
     <keyword>parliamentary proceedings</keyword>
     <keyword>annotation format</keyword>
+    <keyword>TEI</keyword>
     <info type="description">
         <p>"The CLARIN ERIC flagship project ParlaMint enables transnational and multidisciplinary
             analyses of parliamentary debates across 29 countries and autonomous regions in
@@ -20,14 +21,16 @@
             media and communication studies, history and language studies, and are also relevant to
             policy makers." (clarin.eu)</p>
         <p>ParlaMint is a tighter, interoperable specialisation of the
-            <a href="../views/view-format.xq?id=fParla-CLARIN">Parla-CLARIN</a> format. It comes
-            with a suite of tools and a collection of parliamentary corpora.</p>
+            <a href="../views/view-format.xq?id=fParla-CLARIN">Parla-CLARIN</a> format (and, as such,
+            a <a href="../views/view-format.xq?id=fTEI">TEI</a> extension). It comes with a suite of
+            tools and a collection of parliamentary corpora.</p>
         <p>See:</p>
         <ul>
             <li><a href="https://www.clarin.eu/parlamint">Homepage of ParlaMint I and ParlaMint II projects</a>
                 at clarin.eu</li>
             <li><a href="https://github.com/clarin-eric/ParlaMint#parlamint-comparable-parliamentary-corpora">Technical description and repository</a>
                 at GitHub</li>
+            <li><a href="https://clarin-eric.github.io/ParlaMint/">ParlaMint schema documentation</a></li>
         </ul>
     </info>
     <mimeType>application/tei+xml</mimeType>

@@ -5,6 +5,7 @@
     </titleStmt>
     <keyword>dictionary encoding</keyword>
     <keyword>retrodigitisation</keyword>
+    <keyword>TEI</keyword>
     <info type="description">
         <p>"TEI Lex-0 is both a technical specification and a set of community-based recommendations for 
             encoding machine-readable dictionaries. It is rooted in the Guidelines of the Text Encoding Initiative (<a href="../views/view-format.xq?id=fTEI">TEI</a>) 

@@ -7,8 +7,9 @@
   <keyword>umbrella format</keyword>
   <keyword>annotation format</keyword>
   <keyword>format family</keyword>
+  <keyword>TEI</keyword>
   <extId type="Wikidata">Q124622467</extId> <!--they do talk about a format, as an extremely general concept-->
-  <extDoc type="enWiki">Text Encoding Initiative</extDoc> <!--not really proper for TEI-as-format, but demonstrates the messiness-->
+  <extDoc type="enWiki">Text_Encoding_Initiative</extDoc> <!--not really proper for TEI-as-format, but demonstrates the messiness-->
   <info type="description">
     <p>In the context of format recommendations, the unqualified name "TEI" has nearly the same status as 
       "<a href="../views/view-format.xq?id=fXML">XML</a>": <i>too general to be meaningful in a recommendation</i>. 
@@ -21,7 +22,7 @@
     <p>It is very practical to assume that, in the context of format recommendations, anything that
       gets labeled "TEI" is formally a
       <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#MD">TEI customisation</a>
-      created on the basis of the TEI toolkit -- because <i>there is no single TEI format</i>. And,
+      created on the basis of the TEI toolkit – because <i>there is no single TEI format</i>. And,
       by the gentle and yet unyielding power of the
       <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a>, a
       TEI customisation has to meet several conditions. In particular, "a document is TEI-conformant
@@ -45,23 +46,26 @@
       TEI Stylesheets or Roma, XML editor add-ons, etc.</p>
     <p>In the context of CLARIN and LRT applications, the following TEI-based formats are recognizable:</p>
     <ul>
-      <li><a href="../views/view-format.xq?id=fDTABf">DTABf</a> -- Deutsches Textarchiv Basisformat, used at BBAW</li>
-      <li><a href="../views/view-format.xq?id=fI5">I5</a> -- tool format of DeReKo (Deutsches Referenzkorpus), used at IDS Mannheim</li>
-      <li><a href="../views/view-format.xq?id=fTEISpoken">ISO/TEI Transcriptions of Spoken Language</a> -- serializing the <a href="../views/view-spec.xq?id=SpecTranScript">corresponding ISO standard</a></li>
-      <li><a href="../views/view-format.xq?id=fLMF">ISO LMF</a> -- TEI serialization of the Lexical Markup Framework (part 4 of the 2020 <a href="../views/view-spec.xq?id=SpecLMF">LMF</a> standard)</li>
-      <li><a href="../views/view-format.xq?id=fMenota">Menota</a> -- the Medieval Nordic Text Archive TEI extensions</li>
-      <li><a href="../views/view-format.xq?id=fLex0">TEI Lex0</a> -- an OASIS standard for the encoding of (a.o.) retrodigitised dictionaries, maintained by DARIAH</li>
+      <li><a href="../views/view-format.xq?id=fDTABf">DTABf</a> – Deutsches Textarchiv Basisformat, used at BBAW</li>
+      <li><a href="../views/view-format.xq?id=fI5">I5</a> – tool format of DeReKo (Deutsches Referenzkorpus), used at IDS Mannheim</li>
+      <li><a href="../views/view-format.xq?id=fTEISpoken">ISO/TEI Transcriptions of Spoken Language</a> – serializing the <a href="../views/view-spec.xq?id=SpecTranScript">corresponding ISO standard</a></li>
+      <li><a href="../views/view-format.xq?id=fLMF">ISO LMF</a> – TEI serialization of the Lexical Markup Framework (part 4 of the 2020 <a href="../views/view-spec.xq?id=SpecLMF">LMF</a> standard)</li>
+      <li><a href="../views/view-format.xq?id=fMenota">Menota</a> – the Medieval Nordic Text Archive TEI extensions</li>
+      <li><a href="../views/view-format.xq?id=fParla-CLARIN">Parla-CLARIN</a> and <a href="../views/view-format.xq?id=fParlaMint">ParlaMint</a> – for the encoding of parliamentary proceedings</li>
+      <li><a href="../views/view-format.xq?id=fPressMint">PressMint</a> – for the encoding of interoperable corpora of historical newspapers</li>
+      <li><a href="../views/view-format.xq?id=fLex0">TEI Lex0</a> – an OASIS standard for the encoding of (a.o.) retrodigitised dictionaries, maintained by DARIAH</li>
     </ul>
-    <p>The above list is not meant to be exhaustive. Please kindly signal to us if you know of a TEI-based format that should be 
-      recognised by the SIS and listed above.</p>
+    <p>The above list is not meant to be exhaustive. Please kindly signal to us if you know of a
+      TEI-based format that should be recognised by the SIS and listed above. TEI-based formats should use the keyword
+      "<a href="https://standards.clarin.eu/sis/views/list-formats.xq?keyword=TEI">TEI</a>" in their SIS descriptions.</p>
     <p>For the purpose of <i>metadata descriptions</i>, free-standing <a href="../views/view-format.xq?id=fTEIHeader">TEI headers</a> can often be useful, the more so that they allow "foreign markup" 
       as content of the <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-xenoData.html">xenoData</a> element.</p>
     <p>NOTE: Unqualified TEI used to be treated by the Standards Information System as an umbrella
-      format (see the note atop the description file for
+      format (signalled with the cute &#9730;; see the note atop the description file for
       <a href="../views/view-format.xq?id=fXML">XML</a> for a brief explanation of the concept of
-      umbrella formats). However, it has been decided that it may be more useful in the long run to
-      turn unqualified TEI into a pretend-regular format and to provide the extensive explanation of
-      its nature that you have just finished reading.</p>
+      umbrella formats). It therefore still retains the relevant keyword. However, it has been decided that it
+      may be more useful in the long run to turn unqualified TEI into a pretend-regular format and
+      to provide the extensive explanation of its nature that you have just finished reading.</p>
   </info>
   <relation target="SpecTei" type="isDefinedBy"/>
   <mimeType>application/tei+xml</mimeType>
