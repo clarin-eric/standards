@@ -13,6 +13,9 @@
     SKOS (Simple Knowledge Organization System) is a W3C standard for representing knowledge organization systems (KOS) such as thesauri, classification schemes, subject heading lists, taxonomies, and other similar types of controlled vocabularies. SKOS is built on RDF (Resource Description Framework), making it interoperable with other Semantic Web technologies.</p>
     <p>Visit:
       <a href="https://www.w3.org/2004/02/skos/">wikipedia link</a> for more details or the <a href="https://www.w3.org/TR/skos-reference/">SKOS Simple Knowledge Organization System Reference</a></p>
+    <p>SKOS data are expressed as RDF triples and may be encoded using any concrete RDF syntax (such
+      as RDF/XML or Turtle). For more on the relationships between SKOS, RDF and OWL, see
+      <a href="https://www.w3.org/TR/skos-reference/#L1045">section 1.3. of the SKOS Reference</a>.</p>
   </info>
   <mimeType>application/rdf+xml</mimeType>
   <fileExt>.xml</fileExt>
