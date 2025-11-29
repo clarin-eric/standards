@@ -116,7 +116,7 @@ return
                                 {$format-abbr}</span>
                                 
                          { if($is-umbrella) then <div style="width:550px">
-                        <p>{$format-abbr} is considered an <b>umbrella format</b>, which means that it is 
+                        <p>&#9730;&#x00A0;&#x00A0;{$format-abbr} is considered an <b>umbrella format</b>, which means that it is 
                         impossible to create a meaningful recommendation for or against using it, because in the 
                         context of research data, it is actually shorthand for many, sometimes drastically differing formats. 
                         Centres are advised to discern between the various subformats that are grouped 
