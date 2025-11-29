@@ -109,9 +109,10 @@ declare function fm:list-orphan-format-ids(){
     let $recommended-ids := $recommendation:centres/formats/format/descendant-or-self::node()/@id
     let $orphan-ids := $format:formats/@id[not (. = $recommended-ids )]
         for $id in $orphan-ids
+        let $umbrella as xs:boolean := fn:boolean($id/ancestor::format[1]/info/@umbrella)
     order by lower-case($id)
     return
-        <li><a href="{app:link(concat("views/view-format.xq?id=",$id))}">{data($id)}</a></li> 
+        <li><a href="{app:link(concat("views/view-format.xq?id=",$id))}">{data($id)}</a>{if ($umbrella) then (" ",rf:print-umbrella()) else () }</li> 
 };
 
 declare function fm:get-missing-format-ids(){
