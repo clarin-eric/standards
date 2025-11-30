@@ -35,7 +35,7 @@
     </info>
     <mimeType>application/tei+xml</mimeType>
     <fileExt>.xml</fileExt>
-    <formatFamily>ParlaMint</formatFamily>
+    <formatFamily>TEI</formatFamily>
 </format>
 
 
