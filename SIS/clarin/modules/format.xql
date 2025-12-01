@@ -45,12 +45,7 @@ declare function fm:list-search-suggestion(){
 
 declare function fm:create-format-link($format-id, $format-abbr, $format-name){
         let $link := app:link(concat("views/view-format.xq?id=", $format-id))
-            
-        let $link-title := 
-            if (exists($format-name))
-                then $format-abbr
-                else concat($format-abbr, " (",$format-name,")")
-                
+        let $link-title := $format-abbr
         return <a href="{$link}">{$link-title}</a>
 };
 
@@ -197,20 +192,11 @@ declare function fm:list-missing-format-abbrs(){
 declare function fm:print-multiple-values($list) {
     let $numOfItems := count($list)
     let $list := fn:sort($list)
-    let $text-width := 25
     
     for $k in (1 to $numOfItems)
         let $text := $list[$k]/text()
-        return
-            (fm:substring-every-width($text,$text-width),
-            (:if ($list[$k][@recommended = "yes"] )
-            then
-                (<span
-                    id="abbrinternalText"
-                    style="font-size:10px;margin-left:5px;">[recommended]</span>)
-            else
-                (),:)
-            if ($k = $numOfItems) then () else ", "
+        return ($text,
+            if ($k = $numOfItems) then () else <br/> 
             )
 };
 
