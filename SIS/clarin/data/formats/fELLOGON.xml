@@ -5,15 +5,18 @@
     <abbr>ELLOGON</abbr>
   </titleStmt>
   <keyword>collection</keyword>
-  <keyword>documents</keyword>
-  <keyword>annotations</keyword>
+  <keyword>document format</keyword>
+  <keyword>annotation format</keyword>
    <info type="description">
     <p>The ELLOGON file format is not a single, universally recognized file extension but rather refers to the Data Model used
       by the Ellogon Language Engineering Platform (a multi-lingual, general-purpose text engineering and annotation environment).
       Typically, an ELLOGON file describes the linguistic features, like part-of-speech tags or named entities, that have been 
       marked up or extracted from a text within the Ellogon platform.</p>
-    <p>See here:
-      <a href="https://www.ellogon.org/index.php/what-is-ellogon?showall=&amp;start=2"> the formal description of ELLOGON architecture</a>.</p>
+    <p>See also:</p>
+     <ul>
+       <li><a href="https://www.ellogon.org/index.php/what-is-ellogon?showall=&amp;start=2"> the formal description of ELLOGON architecture</a></li>
+       <li>"<a href="https://arxiv.org/abs/cs/0205017">Ellogon: A New Text Engineering Platform</a>" by Georgios Petasis, Vangelis Karkaletsis, Georgios Paliouras, Ion Androutsopoulos, Constantine D. Spyropoulos</li>
+     </ul>
   </info>
   <mimeType>application/xml</mimeType>
   <fileExt recommended="yes">.xml</fileExt>

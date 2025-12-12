@@ -4,10 +4,13 @@
     <title>Broadcast Wave Format</title>
     <abbr>BWF</abbr>
   </titleStmt>
-  <keyword>audio format</keyword>
+  <keyword>audio file format</keyword>
+  <keyword>archival format</keyword>
   <keyword type="SSO">EBU</keyword>
   <extId type="LOC">fdd000359</extId>
   <extId type="PRONOM">fmt/705</extId>
+  <extDoc type="formatWiki">BWF</extDoc>
+  <extDoc type="enWiki">Broadcast_Wave_Format</extDoc>
   <info type="description">
     <p>The European Broadcast Union (EBU) has developed the BWF format based on 
       <a href="../views/view-format.xq?id=fWAVE">WAVE</a>, which additionally supports the embedding of metadata. For long-term archiving, this format should be used with linear PCM.</p>
