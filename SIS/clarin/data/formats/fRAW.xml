@@ -6,9 +6,18 @@
   </titleStmt>
   <keyword>speech data</keyword>
   <keyword>audio file format</keyword>
-  <info type="description">
-    <p>Raw Audio Format.</p>
+  <extDoc type="formatWiki">RAW (Audio)</extDoc>
+  <info type="description" umbrella="yes">
+    <p>A format that stores (mostly) uncompressed audio without header information. "Generally the discerning aspect of a real raw audio file 
+      is the lack of a <i>signature</i> and a <i>header</i>. This aspect makes determining a raw audio file's file format much more harder 
+      than interchange formats because of a lack of a signature. Also, the lack of a commonly understood header makes determining audio 
+      parameters difficult." (E. Blake) See also:</p>
+    <ul>
+      <li><a href="https://www.nist.gov/glossary-term/30451">NIST Glossary</a></li>
+      <li><a href="https://www.cyanwerks.com/formats/raw-audio-file-formats.html">Raw Audio File Formats Information</a> by Edward Blake (and its slightly <a href="https://web.archive.org/web/20160325174925/http://www.fmtz.com/misc/raw-audio-file-formats">more comprehensive version</a>, with the same metadata, so go figure.</li>
+    </ul>
   </info>
   <mimeType>audio/raw</mimeType>
   <fileExt>.raw</fileExt>
+  <fileExt>.pcm</fileExt>
 </format>
