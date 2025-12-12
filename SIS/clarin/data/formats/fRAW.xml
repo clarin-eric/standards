@@ -7,6 +7,7 @@
   <keyword>speech data</keyword>
   <keyword>audio file format</keyword>
   <extDoc type="formatWiki">RAW (Audio)</extDoc>
+  <extDoc type="enWiki">Raw_audio_format</extDoc>
   <info type="description" umbrella="yes">
     <p>A format that stores (mostly) uncompressed audio without header information. "Generally the discerning aspect of a real raw audio file 
       is the lack of a <i>signature</i> and a <i>header</i>. This aspect makes determining a raw audio file's file format much more harder 
