@@ -8,12 +8,14 @@
   <keyword>image data</keyword>
   <keyword>interoperability</keyword>
   <extId type="LOC">fdd000246</extId>
+  <extDoc type="enWiki">Encapsulated_PostScript</extDoc>
    <info type="description">
-   <p>
-   Encapsulated PostScript (EPS) file is a PostScript program, saved as a single file that includes a low-resolution preview "encapsulated" within it, allowing some programs to display a preview on the screen.</p>
-    <p>See:
-      <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000246.shtml"> description at the Digital Formats web site by the Library of Congress</a>.</p>
+     <p> Encapsulated PostScript (EPS) file is a <a href="../views/view-format.xq?id=fPS">PostScript</a> program, saved as a single file that
+      includes a low-resolution preview "encapsulated" within it, allowing some programs to display
+      a preview on the screen. As such, it is not a purely plain-text format.</p>
   </info>
   <mimeType>application/postscript</mimeType>
   <fileExt>.eps</fileExt>
+  <formatFamily>PS</formatFamily>
+  <formatFamily>Container</formatFamily>
 </format>

@@ -45,12 +45,7 @@ declare function fm:list-search-suggestion(){
 
 declare function fm:create-format-link($format-id, $format-abbr, $format-name){
         let $link := app:link(concat("views/view-format.xq?id=", $format-id))
-            
-        let $link-title := 
-            if (exists($format-name))
-                then $format-abbr
-                else concat($format-abbr, " (",$format-name,")")
-                
+        let $link-title := $format-abbr
         return <a href="{$link}">{$link-title}</a>
 };
 
@@ -72,10 +67,12 @@ declare function fm:list-formats($keyword,$searchItem) {
         let $file-exts := $format/fileExt
         let $recommendations := recommendation:get-centres-for-format($format-id)
         let $numOfRecommendations := count($recommendations)
+        let $umbrella as xs:boolean := fn:boolean($format/info/@umbrella) 
         order by fn:lower-case($format-abbr)
     return
         <tr>
             <td class="row" style="vertical-align:top">
+                {if ($umbrella) then (rf:print-umbrella()," ") else () }
                 <span class="list-text">{fm:create-format-link($format-id,$format-abbr,$format-name)}                
                 </span>
                 ({$numOfRecommendations})
@@ -107,9 +104,10 @@ declare function fm:list-orphan-format-ids(){
     let $recommended-ids := $recommendation:centres/formats/format/descendant-or-self::node()/@id
     let $orphan-ids := $format:formats/@id[not (. = $recommended-ids )]
         for $id in $orphan-ids
+        let $umbrella as xs:boolean := fn:boolean($id/ancestor::format[1]/info/@umbrella)
     order by lower-case($id)
     return
-        <li><a href="{app:link(concat("views/view-format.xq?id=",$id))}">{data($id)}</a></li> 
+        <li><a href="{app:link(concat("views/view-format.xq?id=",$id))}">{data($id)}</a>{if ($umbrella) then (" ",rf:print-umbrella()) else () }</li> 
 };
 
 declare function fm:get-missing-format-ids(){
@@ -163,11 +161,11 @@ declare function fm:list-centre-with-missing-formats(){
     
     let $centres := 
         for $r in $recommendation:centres
-        let $format-ids := $r/formats/format/@id
+        let $format-ids := distinct-values($r/formats/format/@id)
         let $actualMissingFormatIds :=
             for $id in $format-ids
             return
-                if (contains(string-join($missingFormatIds),$id)) then $id else ()
+                if ($id = $missingFormatIds) then $id else ()
         let $numOfMissingFormats := count($actualMissingFormatIds)
         let $centre-id := data($r/header/centre/@id)
         order by $numOfMissingFormats
@@ -194,20 +192,11 @@ declare function fm:list-missing-format-abbrs(){
 declare function fm:print-multiple-values($list) {
     let $numOfItems := count($list)
     let $list := fn:sort($list)
-    let $text-width := 25
     
     for $k in (1 to $numOfItems)
         let $text := $list[$k]/text()
-        return
-            (fm:substring-every-width($text,$text-width),
-            (:if ($list[$k][@recommended = "yes"] )
-            then
-                (<span
-                    id="abbrinternalText"
-                    style="font-size:10px;margin-left:5px;">[recommended]</span>)
-            else
-                (),:)
-            if ($k = $numOfItems) then () else ", "
+        return ($text,
+            if ($k = $numOfItems) then () else <br/> 
             )
 };
 
@@ -297,10 +286,10 @@ declare function fm:get-formats-without-mime-types() {
 
 declare function fm:get-format-families($sortBy){
     for $format in $format:formats
-    let $id := data($format/@id)
+    let $id := if($format/titleStmt/abbr) then data($format/titleStmt/abbr) else data($format/@id)
     let $ff := $format/formatFamily
-    let $order := if ($sortBy eq "ff") then $ff else $id
-    order by fn:lower-case($order)
+    let $order := if ($sortBy eq "ff") then $ff[1] else $id
+    order by fn:lower-case($order), fn:lower-case($id)
     return
         <tr>
             <td class="row">{$id}</td>

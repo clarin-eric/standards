@@ -1,0 +1,20 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fDOC" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Microsoft Word Document</title>
+    <abbr>DOC</abbr>
+  </titleStmt>
+  <keyword>document format</keyword>
+  <info type="description">
+    <p>The .DOC file format is the older, proprietary document format that was the default for Microsoft Word from version Word 97
+        through Word 2003.</p>
+    <p>It is not a format recommended by CLARIN, due to its lack of sustainability-oriented features and its proprietary nature. 
+      Within the Microsoft ecosystem, consider using <a href="../views/view-format.xq?id=fDOCX">.docx</a> files. Within the WYSIWYG
+      editing universe, consider also using <a href="../views/view-format.xq?id=fODT">.odt</a>, with free software that supports 
+      it (<a href="https://www.libreoffice.org/">Libre Office</a>).</p>
+    <p>See: <a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-376/">ECMA-376</a> and <a href="https://www.iso.org/committee/45374/x/catalogue/">ISO/IEC 29500</a>.</p>
+    <p>See also the <a href="http://fileformats.archiveteam.org/wiki/DOC">fileformats wiki information page</a>.</p>
+  </info>
+  <mimeType>application/document</mimeType>
+  <fileExt>.doc</fileExt>
+</format>

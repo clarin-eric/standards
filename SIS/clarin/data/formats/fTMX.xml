@@ -6,6 +6,8 @@
   </titleStmt>
   <keyword>interoperability</keyword>
   <keyword>translation</keyword>
+  <keyword>GALA</keyword>
+  <keyword>LISA</keyword>
   <info type="description">
    <p>
     TMX (Translation Memory eXchange) is an XML-based standard for exchanging translation memory (TM) data between computer-aided translation (CAT) tools. The XML structure of TMX allows for the storage of rich translation data, including source and target segments, metadata, and formatting information.</p>

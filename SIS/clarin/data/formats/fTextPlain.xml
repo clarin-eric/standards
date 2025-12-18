@@ -4,8 +4,9 @@
     <title>Plain text</title>
     <abbr>PlainText</abbr>
   </titleStmt>
-  <keyword>plain text format</keyword>
-<!-- what other keywords should we add here? -->
+  <keyword>text format</keyword>
+  <!-- what other keywords should we add here? -->
+  <extDoc type="enWiki">Plain_text</extDoc>
   <info type="description">
     <p>Plain text is a pure sequence of character codes. (...) Plain text represents character
       content only, not its appearance. (...) Plain text must contain enough information to permit
@@ -17,8 +18,29 @@
     <p>Whitespace characters in plain text are often used to provide rough structural markup (e.g.
       double whitespace after sentence-final punctuation; end-of-line and multiples thereof to
       signal division into paragraphs). When treated as a data format, plain text uses whitespace to
-      signal division into columns -- this is how it is related to formats such as TSV and
-      column-based formats in general (with CSV, where tabs are replaced by commas, being a close relative).</p>
+      signal division into columns -- this is how it is related to formats such as <a href="../views/view-format.xq?id=fTSV">TSV</a> and
+      column-based formats in general (with <a href="../views/view-format.xq?id=fCSV">CSV</a>, where tabs are replaced by commas, being a close relative).</p>
+    <p>Quick hints concerning the consistency of line endings:</p>
+    <ul>
+      <li><a href="https://docs.github.com/en/get-started/git-basics/configuring-git-to-handle-line-endings">Consult GitHub documentation</a></li>
+      <li>Under *nix, use <code>dos2linux</code> and <code>linux2dos</code> to fix the endings</li>
+      <li>Adjust save options in the text editors across the project</li>
+      <li>Use a HEX editor to confirm the inconsistencies, e.g. <code>xxd</code> under *nix</li>
+      <li>Search the Net for more hints, here's a
+        <a href="https://blog.cybermindworks.com/post/line-endings-in-code-common-problems-and-how-to-fix-them">Cybermindworks article</a>.</li>
+    </ul>
+    <p>When a hex editor is not an option for diagnostics, a *nix user may try the following
+      <a href="https://www.bas.uni-muenchen.de/forschung/BITS/TP2/Cookbook/node23.html">piece of advice</a>
+      originating from the BAS centre (courtesy Angela Baumann, 2004):</p>
+    <p><code>cat $file | tr '\r' '&amp;' | grep -v '&amp;$' > /dev/null</code></p>
+    <p><code>if ( $status == 0 ) then</code></p>
+    <p>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<code>echo "WARNING: $file contains lines not DOS-compatible"</code></p>
+    <p><code>endif</code></p>
+    <p>The script above essentially tests for the presence of the `\r` (carriage return, not used by
+      *nix for line endings), by replacing it with another convenient character first (here, it's
+      the ampersand char) and then making sure that there is no such line (the <code>-v</code>
+      option) where that substituted character shows up just before the end of that line. To check
+      for *nix-incompatibility, remove the <code>-v</code>.</p>
   </info>
   <relation target="SpecUnicode" type="isUsedBy"/>
   <relation target="SpecUCS" type="isUsedBy"/>

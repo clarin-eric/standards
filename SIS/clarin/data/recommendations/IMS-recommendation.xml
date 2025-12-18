@@ -12,7 +12,7 @@
             <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
-        <centre id="IMS" deposition="1">
+        <centre id="IMS">
             <centreName>Institut für Maschinelle Sprachverarbeitung</centreName>
             <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/10"/>
             <nodeInfo>
@@ -20,7 +20,13 @@
             </nodeInfo>
         </centre>
     </header>
-    <info><p>See <a href="http://clarin04.ims.uni-stuttgart.de/repo/">http://clarin04.ims.uni-stuttgart.de/repo/</a> for some hints.</p></info>
+    <info>
+        <p>The deposition flag was removed from this centre in November 2025. The centre does still
+            offer research data for download (at
+            <a href="https://www.ims.uni-stuttgart.de/forschung/ressourcen/">https://www.ims.uni-stuttgart.de/forschung/ressourcen/</a>)
+            and remains a valuable part of the CLARIN network. See
+            <a href="https://github.com/clarin-eric/standards/issues/14">issue 14, section 3.3</a>
+            for more details.</p></info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 

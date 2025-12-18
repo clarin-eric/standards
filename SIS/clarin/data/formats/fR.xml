@@ -23,5 +23,5 @@
   <fileExt>.rhistory</fileExt>
   <fileExt>.rda</fileExt>
   <fileExt>.rds</fileExt>
-  
+  <formatFamily>srcCode</formatFamily>
 </format>

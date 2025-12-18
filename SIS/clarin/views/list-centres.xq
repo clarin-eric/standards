@@ -23,7 +23,7 @@ function sis:print() as element(html) {
   let $numrows := count($rows)
   let $numdepo := count($rows//td[@data-is eq 'depo' and string-length(.)])
   let $numcura := count($rows//td[@data-is eq 'cura' and string-length(.)])
-  
+    
   return
       
       <html lang="en">
@@ -56,7 +56,10 @@ function sis:print() as element(html) {
                       only holds a snapshot of the state of the network at a certain (usually fairly random) date. We are not able to monitor
                       that in real time. If you see omissions or errors in the list below, please kindly 
                       <a title="open a new GitHub issue" href="https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=centre+data%2C+templatic%2C+UserInput&amp;template=incorrect-missing-centre-recommendations.md&amp;title=Fix needed in the list of centres">let us know</a>.</p>
-                      <p><a href="{app:link("views/list-statistics-centre.xq")}">Centre-related statistics</a> are available on a separate page.</p>
+                      <p>As far as RIs (research infrastructures) other than CLARIN are concerned, as of 2025, the list below only includes 
+                      those DARIAH and Text+ repositories which are also CLARIN centres. We are open to the idea of extending the current coverage.</p>
+                      <p><a href="{app:link("views/list-statistics-centre.xq")}">Centre-related statistics</a> are available on a separate page. 
+                      Another page aggregates the <a href="{app:link("views/list-curators.xq")}">curation data</a>.</p>
                       </div>
                       <div>
                           <form id="filterCentre" method="get" action="">
@@ -80,6 +83,11 @@ function sis:print() as element(html) {
                               </table>
                           </form>
                       </div>
+                      <div>
+                      <p>Use the above buttons to switch views. Use the top-page buttons to switch research infrastructures.</p>
+                      <p>In the currently displayed view, the ratio of centres that curate their information in the SIS ({$numcura}) to centres that offer data 
+                      deposition services ({$numdepo}) is {format-number($numcura div $numdepo,'0%')}.</p>
+                      </div>
                       <table id ="centre-table">
                           <tr>
                               <th class="header" style="width:20%;"><a href="?sortBy=id#centre-table">Centre by ID ({$numrows})</a></th>
@@ -97,4 +105,4 @@ function sis:print() as element(html) {
               </div>
           </body>
       </html>
-};
+    };

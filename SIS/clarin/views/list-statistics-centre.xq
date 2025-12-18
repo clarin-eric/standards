@@ -9,6 +9,10 @@ import module namespace format = "http://clarin.ids-mannheim.de/standards/format
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 
+(: 
+    @author margaretha
+:)
+
 declare
   %rest:path('/clarin/views/list-statistics-centre.xq')
   %output:method('html')
@@ -16,10 +20,6 @@ declare
   %output:indent("yes")
   %output:html-version("5")
 function sis:print() as element(html) {
-
-(: 
-    @author margaretha
-:)
 
   let $ris as xs:string* := cm:get-current-research-infrastructures() (: use the live list rather than the schema :)
   
@@ -52,6 +52,9 @@ function sis:print() as element(html) {
                       centres that actively maintain the information stored in the SIS, and that have designated a curator
                       for that information. See the verbose <a href="{app:link("views/list-centres.xq")}">list of centres</a> 
                       for more information. </p>
+                      <p>As far as RIs (research infrastructures) other than CLARIN are concerned, as of 2025, the tables 
+                      below only list those DARIAH and Text+ repositories which are also CLARIN centres. We are open to the 
+                      idea of extending the current coverage.</p>
                       </div>
                       <table style="width:600px">
                           <tr>
@@ -61,7 +64,6 @@ function sis:print() as element(html) {
                               <th style="text-align:center;">Centres with recommendations</th>
                               <th style="text-align:center;">Centres with curated recommendations</th>
                           </tr>
-                         <!-- {stm:list-all-centre-statistics()} without ri-->
                           {stm:list-centre-statistics()}
                       </table>
                       <div>
@@ -70,6 +72,7 @@ function sis:print() as element(html) {
                       
                       {
                       for $ri in $ris 
+                      order by $ri
                           return 
                        <div style="margin-top:30px;">
                               <h3 id="{concat('stats',$ri)}">{$ri ! cm:visualise-ri-name(.)}</h3>

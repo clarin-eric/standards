@@ -12,7 +12,7 @@
          <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
          <reviewDate>0001-01-01</reviewDate>
       </respStmt>
-      <centre id="CMU" deposition="1">
+      <centre id="CMU">
          <centreName>CMU-TalkBank</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/18"/>
          <nodeInfo>
@@ -20,9 +20,15 @@
          </nodeInfo>
       </centre>
     </header>
-   <info><!--use p, ul, ol elements here--></info>
+   <info>
+      <p>The deposition flag was removed from this centre in November 2025. The centre does still offer
+         research data for download (at 
+         <a href="https://talkbank.org/">https://talkbank.org/</a>) and remains a valuable part of the CLARIN network. See
+         <a href="https://github.com/clarin-eric/standards/issues/14">issue 14, section 3.3</a> for
+         more details.</p>
+   </info>
    <formats>
-      <format id="fCHAT">
+<!--      <format id="fCHAT">
          <domain>Audiovisual Annotation</domain>
          <level>recommended</level>
       </format>
@@ -41,6 +47,6 @@
       <format id="fHTML">
          <domain>Documentation</domain>
          <level>recommended</level>
-      </format>
+      </format>-->
    </formats>
 </recommendation>

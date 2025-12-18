@@ -22,17 +22,18 @@ declare
   %output:html-version("5")
 function sis:print() as element(html) {
 
+
   let $id := request:parameter('id', '')
   let $recommendationType := request:parameter('type', '')
-  let $sortBy := request:parameter('sortBy', '')
-  
+  let $sortBy := request:parameter('sortBy', '') 
+
   let $centre := cm:get-centre($id)
   let $centre-name := $centre/centreName/text()
   let $registry-links := $centre/registryLink
   let $isDepositing := cm:isDepositing($centre)
   let $centre-ri := $centre/nodeInfo/ri
   
-  let $recommendation := cm:get-recommendations($id)
+  let $recommendation as element(recommendation) := cm:get-recommendations($id)
   
   let $ri := app:get-ri()
   let $language := app:determine-language($ri)
@@ -55,7 +56,7 @@ function sis:print() as element(html) {
           </head>
           
           <!--<body onload="drawGraph('{sbm:get-sb-json($id)}','500','300','-100');">-->
-          <body>          
+          <body>
               <div id="all">
                   <div class="logoheader"/>
                   {menu:view()}

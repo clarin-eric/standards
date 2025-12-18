@@ -1,16 +1,28 @@
-<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTSV" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fTSV"
+    xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
     <titleStmt>
-        <title>Tab Separated Values</title>
+        <title>Tab-Separated Values</title>
         <abbr>TSV</abbr>
     </titleStmt>
-    <keyword>formatted text</keyword>
+    <keyword>database format</keyword>
+    <keyword>tabular format</keyword>
     <extId type="LOC">fdd000533</extId>
-    <extId type="Wikidata"> Q3513566</extId>
+    <extId type="Wikidata">Q3513566</extId>
     <info type="description">
-        <p>See: <a href="https://www.iana.org/assignments/media-types/text/tab-separated-values">https://www.iana.org/assignments/media-types/text/tab-separated-values</a>
-        </p>
+        <p>See:</p>
+        <ul>
+            <li><a href="https://www.iana.org/assignments/media-types/text/tab-separated-values">https://www.iana.org/assignments/media-types/text/tab-separated-values</a></li>
+            <li><a href="https://www.w3.org/TR/tabular-data-model/">Model for Tabular Data and Metadata on the Web</a>
+                (W3C Recommendation; note that this part belongs rather in the Watchtower part of
+                the SIS, but is mentioned here for convenience)</li>
+        </ul>
+        <p>See also the <a href="../views/view-format.xq?id=fCSV">CSV</a> description for general hints and tips.</p>
     </info>
     <mimeType>text/tab-separated-values</mimeType>
     <fileExt>.tsv</fileExt>
     <formatFamily>Plain.Delimited</formatFamily>
 </format>
+
+
+

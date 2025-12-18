@@ -5,7 +5,8 @@
     <abbr>TEIHeader</abbr>
   </titleStmt>
   
-  <keyword>metadata format</keyword>
+  <keyword>metadata</keyword>
+  <keyword>TEI</keyword>
   
   <info type="description">
     <p>TEI headers may be used as separate documents to provide structured metadata descriptions. See <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html">chapter 2 of the TEI Guidelines</a> for more information.</p>

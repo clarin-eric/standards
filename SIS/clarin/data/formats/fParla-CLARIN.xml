@@ -1,0 +1,44 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fParla-CLARIN"
+    xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>A TEI Schema for Corpora of Parliamentary Proceedings</title>
+        <abbr>Parla-CLARIN</abbr>
+    </titleStmt>
+    <keyword>parliamentary proceedings</keyword>
+    <keyword>annotation format</keyword>
+    <info type="description">
+        <p>"A schema that can be used for encoding of parliamentary proceedings corpora, primarily
+            for the purposes of scholarly investigations, and that could serve as a storage and
+            interchange format for such corpora. These recommendations attempt to take into account
+            the following aspects of PPC (parliamentary proceedings corpora):</p>
+        <ul>
+            <li>Structure: legislative periods, sessions, topics, speeches, transcription
+                variants</li>
+            <li>Metadata: mandates, titles, parliamentary bodies, locations, dates and times</li>
+            <li>Speakers: sex, date of birth, education, party membership, links to external
+                resources</li>
+            <li>Political parties: name(s), history, relations</li>
+            <li>Speeches: speaker, text, comments, verbal interruptions, (non-)verbal incidents</li>
+            <li>Linguistic annotation: PoS tagging, normalisation, syntax etc.</li>
+            <li>Multimedia: audio and video, facsimile of original</li>
+        </ul>
+        <p>The recommendations are implemented as a parameterisation of the
+            <a href="../views/view-format.xq?id=fParlaMint">TEI</a> Guidelines." (Parla-CLARIN
+            GitHub pages, see below)</p>
+        <p>See:</p>
+        <ul>
+            <li><a href="https://clarin-eric.github.io/parla-clarin/">Description of the format</a>
+                (at CLARIN-ERIC GitHub pages)</li>
+            <li><a href="../views/view-format.xq?id=fParlaMint">ParlaMint</a>, which is a
+                specialisation of PARLA-CLARIN, tightening the schema to increase interoperability
+                among the encoded corpora</li>
+        </ul>
+    </info>
+    <mimeType>application/tei+xml</mimeType>
+    <fileExt>.xml</fileExt>
+    <formatFamily>TEI</formatFamily>
+</format>
+
+
+

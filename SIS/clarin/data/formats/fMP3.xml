@@ -5,6 +5,7 @@
     <abbr>MP3</abbr>
   </titleStmt>
   <keyword>audio file format</keyword>
+  <keyword type="SSO">ISO</keyword>
   <extId type="LOC">fdd000105</extId>
   <info type="description">
     <p>See:
@@ -12,4 +13,6 @@
   </info>
   <mimeType>audio/mpeg</mimeType>
   <fileExt>.mp3</fileExt>
+  <formatFamily>MPEG</formatFamily>
+  <formatFamily>Audio</formatFamily>
 </format>

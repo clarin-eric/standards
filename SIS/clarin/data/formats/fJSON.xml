@@ -5,6 +5,9 @@
     <abbr>JSON</abbr>
   </titleStmt>
   <keyword>data format</keyword>
+  <keyword>JSON</keyword>
+  <keyword type="SSO">ISO</keyword>
+  <keyword type="SSO">IETF</keyword>
   <extId type="LOC">fdd000381</extId>
   <extId type="PRONOM">fmt/817</extId>
   <extId type="Wikidata">Q2063</extId>

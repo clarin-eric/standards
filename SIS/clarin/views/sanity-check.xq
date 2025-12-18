@@ -19,8 +19,8 @@ declare
   %output:html-version("5")
 function sis:print() as element(html) {
 
-  let $sortBy := request:parameter('sortBy', '')
-  
+  let $sortBy := request:parameter('sortBy', '')  
+
   let $recommendations-strange-domains := sc:get-recommendations-with-missing-or-unknown-domains()
   let $recommendations-strange-levels := sc:get-recommendations-with-missing-or-unknown-levels()
   let $similar-recommendations := sc:get-similar-recommendations()
@@ -86,8 +86,9 @@ function sis:print() as element(html) {
                       
                       <h2 id="missingByCentre">List of centres with missing format descriptions ({count($centresWithMissingFormats)}): </h2>
                       
-                      <p> Below is a list of centres with references to non-existent formats. The number of missing formats is shown in parantheses. 
-                          The list is sorted in descending order, starting with the centres having the greatest number of missing formats.</p>
+                      <p> Below is a list of centres with references to formats that are not yet described in the SIS ("missing formats" for short). 
+                          The number of missing formats is shown in parantheses. The list is sorted in descending order, starting with the centres 
+                          having the greatest number of missing formats.</p>
                       <div style="column-count: 3;">
                           <ul style="margin: 0; padding-left:15px;">{$centresWithMissingFormats}</ul>
                       </div>

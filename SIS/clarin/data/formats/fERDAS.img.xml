@@ -12,6 +12,7 @@
   <keyword>ERDAS</keyword>
   <extId type="Wikidata">Q28206049</extId>
   <extId type="LOC">fdd000420</extId>
+  <extDoc type="formatWiki">ERDAS_Imagine_IMG</extDoc>
   <info type="description">
     <p>"ERDAS Imagine is a software package designed for working with GIS raster data. It has its
       own binary "img" format for images. The content of this file can vary: it can be a
@@ -19,7 +20,6 @@
     <p>See the following for more information:</p>
     <ul>
       <li><a href="https://dans.knaw.nl/en/file-formats/images-georeference/">DANS info</a></li>
-      <li><a href="http://fileformats.archiveteam.org/wiki/ERDAS_Imagine_IMG">File Format Wiki info</a></li>
     </ul>
   </info>
   <mimeType>application/octet-stream</mimeType>

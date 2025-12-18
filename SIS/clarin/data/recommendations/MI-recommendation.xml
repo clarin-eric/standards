@@ -16,7 +16,7 @@
          <centreName>Meertens Instituut/HuC</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/23"/>
          <nodeInfo>
-            <ri status="C-centre">CLARIN</ri>
+            <ri status="B-centre">CLARIN</ri>
          </nodeInfo>
       </centre>
     </header>

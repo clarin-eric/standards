@@ -18,11 +18,25 @@ import module namespace functx = "http://www.functx.com";
 declare variable $rf:pageSize := 50;
 declare variable $rf:searchMap := rf:getSearchMap();
 
-declare function rf:isCurated($recommendation){
+declare function rf:isCurated($recommendation as element(recommendation)){
     let $respStmt := $recommendation/header/respStmt
     let $respName := string($respStmt[1]/name)
     return 
         if ($respName) then true() else false()
+};
+
+declare function rf:paint-curation-date($date-str as xs:string, $language as xs:string) {
+   rf:paint-curation-date($date-str, $language, false())
+};
+
+declare function rf:paint-curation-date($date-str as xs:string, $language as xs:string, $add-suffix as xs:boolean) {
+    let $today := current-date()
+    let $review-date := xs:date($date-str)
+    let $diff := ($today - $review-date) div xs:dayTimeDuration("P365D")
+    let $color := if ($diff >2) then "red" else if($diff >1) then "orange" else "black"
+    let $suff := if ($add-suffix and ($color eq 'red')) then " !" else "" 
+      return
+            <span style="color:{$color}">{concat(format-date($date-str, "[Y].[M01].[D01]", $language, (), ()), $suff)}</span>
 };
 
 declare function rf:print-curation($recommendation, $language) {
@@ -34,6 +48,10 @@ declare function rf:print-curation($recommendation, $language) {
             {
                 for $rs in $recommendation/header/respStmt
                 let $resp := functx:capitalize-first($rs/resp/text())
+                let $today := current-date()
+                let $review-date := xs:date($rs/reviewDate/text())
+                let $diff := ($today - $review-date) div xs:dayTimeDuration("P365D")
+                let $color := if ($diff >2) then "red" else if($diff >1) then "orange" else "black"   
                 return
                     (
                     <ul>
@@ -46,10 +64,9 @@ declare function rf:print-curation($recommendation, $language) {
                                     (
                                     <a href="{$rs/link/text()}">{$rs/name/text()}</a>)
                             }
-                            <span> ({
+                            <span style="color:{$color}"> ({
                                     format-date($rs/reviewDate/text(),
-                                    "[MNn] [D], [Y]", $language, (), ())
-                                })</span>
+                                    "[MNn] [D], [Y]", $language, (), ())}) </span>
                         </li>
                     </ul>
                     )
@@ -417,27 +434,18 @@ $includeFormat, $includeCentre) {
     
     let $format-id := data($format/@id)
     let $format-obj := format:get-format($format-id)
-    let $format-abbr := $format-obj/titleStmt/abbr/text()
     let $format-link :=
-    if ($format-obj) then
-        (
-        <a href="{app:link(concat("views/view-format.xq?id=", $format-id))}">
-            {
-                if ($format-abbr) then
-                    $format-abbr
-                else
-                    $format-id
-            }
-        </a>
-        )
-    else(
-        fn:substring($format-id, 2),
-        rf:print-missing-format-link($format-id)
-        )
+        if ($format-obj) then (
+            rf:print-format($format-id, $format-obj)
+            )
+        else(
+            fn:substring($format-id, 2),
+            rf:print-missing-format-link($format-id)
+            )
     
     let $level := $format/level/text()
+    let $isUmbrella := if ($format-obj/info[@umbrella="yes"]) then  fn:true() else fn:false()
     let $format-comment := rf:print-format-comments($format, $language)
-    
     let $modifiedComment := rf:parseFormatRef($format-comment)
     
     let $domainId := data($domain/@id)
@@ -483,17 +491,17 @@ $includeFormat, $includeCentre) {
                 then
                     (
                     <td class="tooltip">{
-                            if ($format-comment) then
-                                (
-                                <img
-                                    src="{app:resource("info.png", "img")}"
-                                    height="17"/>,
-                                <span
-                                    class="tooltiptext"
-                                    style="width:200px;">{$modifiedComment}
-                                </span>)
-                            else
-                                ()
+                            if ($isUmbrella) then
+                                if ($format-comment) then (
+                                    <img
+                                        src="{app:resource("info.png", "img")}"
+                                        height="17"/>,
+                                    <span
+                                        class="tooltiptext"
+                                        style="width:200px;">{$modifiedComment}
+                                    </span>)
+                                else rf:print-umbrella()
+                            else ()
                         }
                     </td> (:,
                     <td>
@@ -508,9 +516,10 @@ $includeFormat, $includeCentre) {
                     </td>:)
                     )
                 else (
-                    <td
-                        class="recommendation-row">
-                        {$modifiedComment}
+                    <td class="recommendation-row">
+                        {   if ($modifiedComment) then $modifiedComment
+                            else if ($isUmbrella) then rf:print-umbrella()
+                            else ()}
                     </td>
                 )
             }
@@ -520,18 +529,20 @@ $includeFormat, $includeCentre) {
 
 declare function rf:print-format-comments($format, $language) {
     let $format-comment :=
-    if ($language eq "*") then
-        $format/comment
-    else
-        $format/comment[@xml:lang = $language]
-    return
-        if ($format-comment) then
-            $format-comment
+        if ($language eq "*") then
+            $format/comment
+        else
+            $format/comment[@xml:lang = $language]
+        
+    let $comment:=
+        if ($format-comment) then $format-comment
         else
             if ($format/comment[@xml:lang = "en"]) then
                 $format/comment[@xml:lang = "en"]
             else
                 $format/comment[not(@xml:lang)]
+                
+    return $comment
 };
 
 declare function rf:print-missing-format-link($format-id) {
@@ -542,6 +553,30 @@ declare function rf:print-missing-format-link($format-id) {
         <span
             class="tooltiptext"
             style="width:300px;">Click to add or suggest missing format information
+        </span>
+    </span>
+};
+
+declare function rf:print-format($format-id, $format-obj) {
+    let $format-abbr := $format-obj/titleStmt/abbr/text()
+    let $link-text := 
+        if ($format-abbr) 
+        then $format-abbr
+        else $format-id
+    return (
+            <a href="{app:link(concat("views/view-format.xq?id=", $format-id))}">
+                {$link-text}
+            </a>
+    )
+};
+
+declare function rf:print-umbrella() {
+    <span class="tooltip"> &#9730;
+        <span
+            class="tooltiptext"
+            style="width:300px;">An umbrella format is too general a pointer to provide a 
+            meaningful recommendation. The use of an umbrella format in recommendations 
+            is thus discouraged, particularly without any comment.
         </span>
     </span>
 };

@@ -1,0 +1,18 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fDAE" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>COLLADA, collaborative design activity, Digital Asset Exchange</title>
+    <abbr>DAE</abbr>
+  </titleStmt>
+  <keyword>3D format</keyword>
+  <!--<extId type="LOC">fdd000076</extId>-->
+  <extId type="PRONOM">x-fmt/1209</extId>
+  <extId type="Wikidata">Q603967</extId>
+  <info type="description">
+    <p>COLLADA (DAE) is a format based on XML used for storing 3D data. </p>
+    <p>See: <a href="http://fileformats.archiveteam.org/wiki/COLLADA">File Formats Wiki: COLLADA</a>.</p>
+  </info>
+  <mimeType>model/vnd.collada+xml</mimeType>
+  <fileExt>.dae</fileExt>
+  <!--<formatFamily>Plain.Statements</formatFamily>-->
+</format>

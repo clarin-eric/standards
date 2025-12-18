@@ -8,6 +8,7 @@
   <keyword>XML</keyword>
   <keyword>OCR</keyword>
   <keyword>digitization</keyword>
+  <keyword type="SSO">LoC</keyword>
   <info type="description">
     <p>ALTO (Analyzed Layout and Text Object) is an open XML Schema developed by the EU-funded
       project called METAe.</p>
