@@ -1,0 +1,21 @@
+services:
+  sis-bx:
+    image: sis-bx:latest
+    ports:
+      - "8040:8040"
+      - "1984:1984"
+    user: "${UID}:${GID}"
+    volumes:
+      - "${WEBAPP}:/opt/basex/webapp"     
+      - "${DATA}:/opt/basex/data:rw"
+      - "${CONF}:/opt/basex/.basex:rw" 
+    restart: unless-stopped
+
+# Build and start the container in foreground:
+#   docker-compose up 
+# Run detached:
+#   docker-compose up -d
+# Stop and remove containers (volumes remain):
+#   docker-compose down
+# Remove containers and named volumes:
+#   docker-compose down -v

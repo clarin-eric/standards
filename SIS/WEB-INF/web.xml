@@ -48,7 +48,7 @@
       <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
 
-  <!-- WebDAV Service (can be disabled by removing this entry)
+  <!-- WebDAV Service is not supported in Basex 12	
   <servlet>
     <servlet-name>WebDAV</servlet-name>
     <servlet-class>org.basex.http.webdav.WebDAVServlet</servlet-class>

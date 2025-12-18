@@ -16,3 +16,7 @@
 /**/package.json
 /**/repo.xml
 .settings
+/**/data/*
+/**/webapp/*
+/**/.basex
+/**/.env
