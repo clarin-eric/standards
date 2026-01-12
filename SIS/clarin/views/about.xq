@@ -137,7 +137,7 @@ function sis:print() as element(html) {
                    <div id="tech">
                   <h2>Technicalities</h2>
                    <p>The SIS is an open-source project hosted at <a href="https://github.com/clarin-eric/standards">GitHub</a>, built using mainly XQuery (1-3.1) and XML. 
-                   It is running atop <a href="https://exist-db.org/exist/apps/homepage/index.html">eXist-db 6.3.x</a>.</p>
+                   It is running atop <a href="https://basex.org/">BaseX 12.1</a>.</p>
                    </div>
                    
                    </div>
