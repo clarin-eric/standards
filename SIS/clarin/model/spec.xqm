@@ -2,7 +2,6 @@ xquery version "3.0";
 
 module namespace spec="http://clarin.ids-mannheim.de/standards/specification";
 
-import module namespace data = "http://clarin.ids-mannheim.de/standards/data" at "data.xqm";
 import module namespace functx = "http://www.functx.com" ;
 
 (: Define methods to access the standard data or store new standard data
