@@ -25,7 +25,8 @@ function sis:print() as element(html) {
 
   let $ri := app:get-ri()
   let $language := app:determine-language($ri)
-  let $rows as element(tr)* := for $r in $recommendation:centres[header/respStmt/name ne '']
+  let $rows as element(tr)* := 
+    for $r in $recommendation:centres[concat(header/respStmt/name) ne '']
               let $brief := data($r/header/centre/@id)
               let $cur as element(name)+ := $r/header/respStmt/name
               let $date as element(reviewDate)+ := $r/header/respStmt/reviewDate
@@ -38,7 +39,7 @@ function sis:print() as element(html) {
                    return ($l, <br />)
               }</td>
               <td>{for $l in $date
-                   return (rf:paint-curation-date(string($l),$language,true()), <br />)
+                   return (rf:paint-curation-date($l,$language,true()), <br />)
               }</td>
               <td style="font-family:monospace; font-size: 0.9em"><a href="{concat('https://github.com/clarin-eric/standards/commit/',$comm)}">{substring($comm,1,8)}</a></td>
               </tr>
