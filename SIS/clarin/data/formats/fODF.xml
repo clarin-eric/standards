@@ -9,6 +9,7 @@
   <keyword>umbrella format</keyword>
   <keyword type="SSO">OASIS</keyword>
   <extId type="LOC">fdd000247</extId>
+  <extDoc type="enWiki">OpenDocument</extDoc>
   <info type="description" umbrella="yes">
     <p>"The Open Document Format for Office Applications (ODF), also known as OpenDocument, standardized as ISO 26300, is an open 
       file format for word processing documents, spreadsheets, presentations and graphics and using ZIP-compressed XML files. 
