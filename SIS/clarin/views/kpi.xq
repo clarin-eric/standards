@@ -1,50 +1,52 @@
 xquery version "3.1";
 
+module namespace sis = 'sis';
+
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace cm = "http://clarin.ids-mannheim.de/standards/centre-module" at "../modules/centre.xql";
 (:import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";:)
 
-declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
-declare option output:method "html";
-declare option output:media-type "text/html";
-declare option output:indent "yes";
-declare option output:html-version "5";
-
 (: 
     @author margaretha, banski
 :)
+declare
+  %rest:path('/clarin/views/kpi.xq')
+  %output:method('html')
+  %output:media-type("text/html")
+  %output:indent("yes")
+  %output:html-version("5")
+function sis:print() as element(html) {
 
-let $depositionCentres as element(centre)* := cm:get-deposition-centres("CLARIN")
-let $numOfDepositionCentres := fn:count($depositionCentres)
-let $curatedCentres as element(header)* := cm:get-curated-centres("CLARIN")
-let $numOfCuratedCentres := fn:count($curatedCentres)
-let $depositionBCentres as element(centre)* := $depositionCentres[nodeInfo/ri[. eq 'CLARIN'][contains(@status,'B-centre')]]
-let $numOfDepositionBCentres := fn:count($depositionBCentres)
-let $curatedBCentres as element(header)* := $curatedCentres[centre/nodeInfo/ri[. eq 'CLARIN'][contains(@status,'B-centre')]]
-let $numOfCuratedBCentres := fn:count($curatedBCentres)
-let $numOfDepositionCentresWithRecommendations := cm:count-number-of-centres-with-recommendations($depositionCentres)
-let $percentage := format-number($numOfCuratedCentres div $numOfDepositionCentres,'0%')
-let $percentageB := format-number($numOfCuratedBCentres div $numOfDepositionBCentres,'0%')
-
-let $date := fn:current-dateTime()
-let $timestamp :=  format-dateTime($date, "[MNn] [D1o], [Y]", "en", (), ())
-
-return
-    
-    
-    <html lang="en">
-        <head>
-            <title>Relevant CLARIN KPIs</title>
-            <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
-            <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
-            <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
-        </head>
-        <body>
-            <div id="all">
-                <div class="logoheader"/>
-                {menu:view()}
-                <div class="content">
+  let $depositionCentres as element(centre)* := cm:get-deposition-centres("CLARIN")
+  let $numOfDepositionCentres := fn:count($depositionCentres)
+  let $curatedCentres as element(header)* := cm:get-curated-centres("CLARIN")
+  let $numOfCuratedCentres := fn:count($curatedCentres)
+  let $depositionBCentres as element(centre)* := $depositionCentres[nodeInfo/ri[. eq 'CLARIN'][contains(@status,'B-centre')]]
+  let $numOfDepositionBCentres := fn:count($depositionBCentres)
+  let $curatedBCentres as element(header)* := $curatedCentres[centre/nodeInfo/ri[. eq 'CLARIN'][contains(@status,'B-centre')]]
+  let $numOfCuratedBCentres := fn:count($curatedBCentres)
+  let $numOfDepositionCentresWithRecommendations := cm:count-number-of-centres-with-recommendations($depositionCentres)
+  let $percentage := format-number($numOfCuratedCentres div $numOfDepositionCentres,'0%')
+  let $percentageB := format-number($numOfCuratedBCentres div $numOfDepositionBCentres,'0%')
+  
+  let $date := fn:current-dateTime()
+  let $timestamp :=  format-dateTime($date, "[MNn] [D1o], [Y]", "en", (), ())
+  
+  return     
+      
+      <html lang="en">
+          <head>
+              <title>Relevant CLARIN KPIs</title>
+              <link rel="icon" type="image/x-icon" href="{app:favicon()}"/>
+              <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
+              <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
+          </head>
+          <body>
+              <div id="all">
+                  <div class="logoheader"/>
+                  {menu:view()}
+                  <div class="content">
                     <div class="navigation">
                         &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                         &gt; <a href="{app:link("views/list-statistics.xq")}">Statistics</a>
@@ -149,7 +151,8 @@ return
                         </ul>
                     </div>
                 </div>
-                <div class="footer">{app:footer()}</div>
-            </div>
-        </body>
-    </html>
+                  <div class="footer">{app:footer()}</div>
+              </div>
+          </body>
+      </html>
+};

@@ -15,4 +15,8 @@
 /**/package-lock.json
 /**/package.json
 /**/repo.xml
-/**/docker
+.settings
+/**/data/*
+/**/webapp/*
+/**/.basex
+/**/.env

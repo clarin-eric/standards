@@ -2,7 +2,7 @@ xquery version "3.1";
 
 module namespace ff = "http://clarin.ids-mannheim.de/standards/format-family";
 import module namespace graph="http://clarin.ids-mannheim.de/standards/graph" at "../modules/graph.xql";
-import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+import module namespace functx = "http://www.functx.com";
 import module namespace format = "http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
 
 declare function ff:create-graph-json(){

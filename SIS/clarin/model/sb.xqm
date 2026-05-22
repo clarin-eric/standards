@@ -8,7 +8,7 @@ module namespace sb="http://clarin.ids-mannheim.de/standards/standardbody";
 :)
 
 (: Select all standard bodies :)
-declare variable $sb:sbs := doc('../data/sbs.xml')/sbs/sb;
+declare variable $sb:sbs := doc('/data/sbs.xml')/sbs/sb;
 
 (: Select all unhidden standard bodies which are organizations :)
 declare function sb:get-org(){

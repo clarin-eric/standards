@@ -2,11 +2,12 @@ xquery version "3.1";
 
 module namespace app = "http://clarin.ids-mannheim.de/standards/app";
 import module namespace web = "https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
-import module namespace request = "http://exist-db.org/xquery/request";
+(:import module namespace request = "http://exist-db.org/xquery/request";
 
-(:declare namespace request="http://exist-db.org/xquery/request";
+declare namespace request="http://exist-db.org/xquery/request";:)
 declare namespace functx = "http://www.functx.com";
 
+(:
 declare variable $app:request-module := load-xquery-module("http://exist-db.org/xquery/request");
 declare variable $app:functx-module :=load-xquery-module("http://www.functx.com");
 :)
@@ -32,9 +33,9 @@ declare variable $app:base as xs:string := app:determine-base-uri();
 };:)
 
 declare function app:get-ri(){
-    let $request-ri := request:get-parameter('ri', '')
-    let $cookie-ri := request:get-cookie-value("ri")
-    let $ri :=  if ($request-ri) then $request-ri else request:get-cookie-value("ri")
+    let $request-ri := request:parameter('ri', '')
+    let $cookie-ri := request:cookie("ri")
+    let $ri :=  if ($request-ri) then $request-ri else $cookie-ri
     return 
         if (empty($ri)) then "CLARIN" else $ri
 };
@@ -45,17 +46,18 @@ declare function app:determine-language($ri){
 };
 
 declare function app:determine-base-uri() {
-    let $server-name := request:get-server-name()
+    (:let $server-name := request:get-server-name():)
+    let $server-name := request:hostname()
     return
         if ($server-name eq "localhost")
         then
-            concat("http://", $server-name, ":", request:get-server-port(), "/exist/apps/clarin/")
+            concat("http://", $server-name, ":", request:port(), "/clarin/")
         else
             if ($server-name eq "standards.clarin.eu")
             then
                 concat("https://", $server-name, "/sis/")
             else
-                concat("https://", $server-name, "/standards/")
+                concat("https://", $server-name, "/standards-bx/")
 };
 
 (: Wrap a link with the current session :)
@@ -133,4 +135,14 @@ declare function app:footer() {
             <span><b>Version ID</b>: <a href="{$githubLink}">{web:get-short-commitId()}</a></span>
         </div>
 
+};
+
+(: Generate a list of options from the given list :)
+declare function app:list-options($list,$selected){
+    for $item in $list        
+        order by $item
+        return 
+            if ($selected=$item)
+            then <option selected= "true" value="{$selected}">{$selected}</option>
+            else <option value="{$item}"> {$item} </option>
 };

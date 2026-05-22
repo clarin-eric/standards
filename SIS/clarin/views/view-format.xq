@@ -1,5 +1,7 @@
 xquery version "3.1";
 
+module namespace sis = 'sis';
+
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 
@@ -8,29 +10,29 @@ import module namespace vsm = "http://clarin.ids-mannheim.de/standards/view-spec
 
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
 
-declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
-declare option output:method "html";
-declare option output:media-type "text/html";
-declare option output:indent "yes";
-declare option output:html-version "5";
+declare
+  %rest:path('/clarin/views/view-format.xq')
+  %output:method('html')
+  %output:media-type("text/html")
+  %output:indent("yes")
+  %output:html-version("5")
+function sis:print() as element(html) {
 
-let $id := request:get-parameter('id', '')
-let $centre := request:get-parameter('centre', '')
-let $domain := request:get-parameter('domain', '')
-let $recommendationType := request:get-parameter('type', '')
-let $sortBy := request:get-parameter('sortBy', 'centre')
-
-let $ri := app:get-ri()
-let $language := app:determine-language($ri)
-
-let $format := vfm:get-format($id)
-let $format-name := $format/titleStmt/title/text()
-let $format-abbr := $format/titleStmt/abbr/text()
-
-let $format-domains := vfm:get-recommended-domains-by-format($id)
-
-let $is-umbrella as xs:boolean := fn:boolean($format/info/@umbrella)
-
+  let $id := request:parameter('id', '')
+  let $centre := request:parameter('centre', '')
+  let $domain := request:parameter('domain', '')
+  let $recommendationType := request:parameter('type', '')
+  let $sortBy := request:parameter('sortBy', 'centre')
+  
+  let $ri := app:get-ri()
+  let $language := app:determine-language($ri)
+  
+  let $format := vfm:get-format($id)
+  let $format-name := $format/titleStmt/title/text()
+  let $format-abbr := $format/titleStmt/abbr/text()  
+  let $format-domains := vfm:get-recommended-domains-by-format($id)
+  
+  let $is-umbrella as xs:boolean := fn:boolean($format/info/@umbrella)
 return
     
     if (not($id) or not($format)) then
@@ -223,3 +225,4 @@ return
                 </div>
             </body>
         </html>
+};

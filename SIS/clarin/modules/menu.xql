@@ -45,7 +45,7 @@ declare function menu:view() {
         <table style="font-size:13.5px; width:210px">
             <tr>
                 <td colspan="3" class="tdmenu">
-                    <a style="display:block" href="{app:link("index.xq")}">Home</a>
+                    <a style="display:block" href="{app:link("")}">Home</a>
                 </td>
             </tr>
             <tr>
@@ -144,18 +144,7 @@ declare function menu:view() {
                     <a style="display:block" href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards Watchtower</a>
                 </td>
             </tr>
-            {
-                if (session:get-attribute("user") = 'webadmin' or session:get-attribute("user") = 'user')
-                then
-                    <tr>
-                        <td width="10px"></td>
-                        <td colspan="2" class="tdmenu">
-                            <a style="display:block" href="{app:link("views/register-spec.xq")}">Register</a>
-                        </td>
-                    </tr>
-                else
-                    ()
-            }
+                       
             
             <!--               <tr>
                     <td colspan="2" class="tdmenu">
