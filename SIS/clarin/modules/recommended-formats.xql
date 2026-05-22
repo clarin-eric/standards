@@ -35,7 +35,7 @@ declare function rf:paint-curation-date($date-str as xs:string, $language as xs:
     let $color := if ($diff >2) then "red" else if($diff >1) then "orange" else "black"
     let $suff := if ($add-suffix and ($color eq 'red')) then " !" else "" 
       return
-            <span style="color:{$color}">{concat(format-date($date-str, "[Y].[M01].[D01]", $language, (), ()), $suff)}</span>
+            <span style="color:{$color}">{concat(format-date(xs:date($date-str), "[Y].[M01].[D01]", $language, (), ()), $suff)}</span>
 };
 
 declare function rf:print-curation($recommendation, $language) {
