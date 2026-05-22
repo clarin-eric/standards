@@ -19,11 +19,11 @@ declare
   %output:html-version("5")
 function sis:print() as element(html) {
 
+  let $default := 2
   let $reset := request:parameter('reset', '')
-  let $threshold := if ($reset) then (1) else request:parameter('threshold', 1)
+  let $threshold := if ($reset) then (1) else request:parameter('threshold', $default)
   let $top3 := if ($reset) then () else request:parameter('top3', '')
   
-  let $default := 2
   let $hubIDs := format:get-umbrella-ids()
   let $seq := for $fID in $hubIDs 
                   order by $fID 
