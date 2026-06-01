@@ -20,81 +20,48 @@
          </nodeInfo>
       </centre>
    </header>
-   <info><!--use p, ul, ol elements here--></info>
+   <info><p>Formats extracted from the uploaded dataset and matched against
+         CLARIN Standards recommendations.</p>
+   <p>This list has been submitted by Riccardo Del Gratta in May 2026.</p>
+   <p>No active curator has yet been appointed for the recommendations.</p></info>
    <formats>
-      <format id="fMOV">
-         <domain>Audiovisual Source Language Data</domain>
+      <format id="fXML">
+         <domain>Metadata</domain>
          <level>recommended</level>
       </format>
-      <format id="fMPEG1">
-         <domain>Audiovisual Source Language Data</domain>
+      <format id="fTXT">
+         <domain>Textual Source Language Data</domain>
          <level>recommended</level>
       </format>
-      <format id="fWAVE">
-         <domain>Audiovisual Source Language Data</domain>
+      <format id="fCSV">
+         <domain>Text Annotation</domain>
          <level>recommended</level>
       </format>
-      <format id="fHTML">
+      <format id="fRTF">
          <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fLaTeX">
-         <domain>Documentation</domain>
-         <level>recommended</level>
+         <level>acceptable</level>
       </format>
       <format id="fPDF">
          <domain>Documentation</domain>
          <level>acceptable</level>
       </format>
-      <format id="fTeX">
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fXML">
-         <domain>Documentation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fGIF">
-         <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fJPEG">
-         <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fTIFF">
-         <domain>Image Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fRDFXML">
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fXML">
-         <domain>Text Annotation</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fODT">
-         <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fPDF">
+      <format id="fDOCX">
          <domain>Textual Source Language Data</domain>
          <level>acceptable</level>
       </format>
-      <format id="fTextPlain">
-         <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
+      <format id="fXLSX">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
       </format>
-      <format id="fCSS">
-         <domain>Tool Support</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fGZIP">
-         <domain>Packaging</domain>
-         <level>recommended</level>
+      <format id="fPPTX">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
       </format>
       <format id="fZIP">
+         <domain>Packaging</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fGZIP">
          <domain>Packaging</domain>
          <level>recommended</level>
       </format>
