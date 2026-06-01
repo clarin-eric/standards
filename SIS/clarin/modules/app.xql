@@ -127,14 +127,20 @@ declare function app:getGithubFormatIssueLink($format-id) {
         $ghLink
 };
 
-declare function app:footer() {
-    let $githubLink := concat("https://github.com/clarin-eric/standards/commit/", $web:commitId)
+declare function app:footer() as element(div) {
+    let $commitId as xs:string := web:get-short-commitId()
+    let $linkTarget as xs:string :=
+      if ($commitId = "unavailable") then
+        "https://github.com/clarin-eric/standards/wiki/FAQ"
+      else
+        concat("https://github.com/clarin-eric/standards/commit/", $web:commitId)
     return
-        
         <div style="text-align: right">
-            <span><b>Version ID</b>: <a href="{$githubLink}">{web:get-short-commitId()}</a></span>
+            <span>
+                <b>Version ID</b>: 
+                <a href="{$linkTarget}">{$commitId}</a>
+            </span>
         </div>
-
 };
 
 (: Generate a list of options from the given list :)
