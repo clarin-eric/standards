@@ -8,6 +8,8 @@
   <keyword>tabular format</keyword>
   <keyword type="SSO">W3C</keyword>
   <extId type="LOC">fdd000323</extId>
+  <extDoc type="enWiki">Comma-separated_values</extDoc>
+  <extDoc type="formatWiki">CSV</extDoc>
   <info type="description">
     <p>"CSV is one of the most popular formats for publishing data on the web. It is concise, easy
       to understand by both humans and computers, and aligns nicely to the tabular nature of most
@@ -38,6 +40,7 @@
       <li><a href="https://specs.frictionlessdata.io/csv-dialect/">CSV Dialect</a> -- a set of modelling parameters for describing various dialects of CSV</li>
     </ul>
   </info>
+  <relation target="tabularDataSpec" type="isDefinedBy"/>
   <mimeType>text/csv</mimeType>
   <fileExt>.csv</fileExt>
   <formatFamily>Plain.Delimited</formatFamily>
