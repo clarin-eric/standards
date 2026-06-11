@@ -2,7 +2,7 @@
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>0378aa7b9c8cd3f73e822dccf09dccf0b3a3ff01</lastUpdateCommitID>
+        <lastUpdateCommitID>7b0200bfcbc0b0dda978e5eab59859cd913b7658</lastUpdateCommitID>
         <filter>
             <centreID>INT</centreID>
         </filter>
