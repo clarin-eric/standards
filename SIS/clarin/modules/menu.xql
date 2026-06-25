@@ -44,12 +44,12 @@ declare function menu:view() {
     <div class="menu" style="margin-left:20px;">
         <table style="font-size:13.5px; width:210px">
             <tr>
-                <td colspan="3" class="tdmenu">
+                <td colspan="3" class="tdmenu-highlight">
                     <a style="display:block" href="{app:link("")}">Home</a>
                 </td>
             </tr>
             <tr>
-                <td colspan="3" class="tdmenu">
+                <td colspan="3" class="tdmenu-highlight">
                     <a style="display:block" href="{app:link("views/list-centres.xq")}">Centres</a>
                 </td>
             </tr>
@@ -60,7 +60,7 @@ declare function menu:view() {
                 </td>
             </tr>
             <tr>
-                <td colspan="3" class="tdmenu">
+                <td colspan="3" class="tdmenu-highlight" style="font-weight:bold;">
                     <a style="display:block" href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                 </td>
             </tr>
@@ -140,7 +140,7 @@ declare function menu:view() {
             </tr>
             -->
             <tr>
-                <td colspan="3" class="tdmenu">
+                <td colspan="3" class="tdmenu-highlight" style="font-weight:bold;">
                     <a style="display:block" href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards Watchtower</a>
                 </td>
             </tr>
@@ -171,12 +171,12 @@ declare function menu:view() {
                 </td>
             </tr>
             <tr>
-                <td colspan="3" class="tdmenu">
+                <td colspan="3" class="tdmenu-highlight">
                     <a style="display:block" href="{app:link("views/api.xq")}">API</a>
                 </td>
             </tr>
             <tr>
-                <td colspan="3" class="tdmenu">
+                <td colspan="3" class="tdmenu-highlight">
                     <a style="display:block" href="{app:link("views/about.xq")}">About / F.A.Q.</a>
                 </td>
             </tr>

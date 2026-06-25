@@ -345,6 +345,21 @@ th {
     background-color:#EEE;
 }
 
+.tdmenu-selected{
+    background-color:#EEE;
+}
+
+.tdmenu-highlight{
+    padding-left:5px; 
+    border-bottom:1px solid #DDDDDD; 
+    background-color:#e7f0f9;
+    
+}
+
+.tdmenu-highlight:hover{
+    background-color:#c3d3e3;
+}
+
 .header{    
     border-bottom:1px solid #BBBBBB;
 }
