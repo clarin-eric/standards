@@ -33,7 +33,7 @@ function sis:print() as element(html) {
   let $isDepositing := cm:isDepositing($centre)
   let $centre-ri := $centre/nodeInfo/ri
   
-  let $recommendation as element(recommendation) := cm:get-recommendations($id)
+  let $recommendation as element(recommendation)? := cm:get-recommendations($id)
   
   let $ri := app:get-ri()
   let $language := app:determine-language($ri)
