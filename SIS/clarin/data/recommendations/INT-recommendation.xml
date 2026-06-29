@@ -2,7 +2,7 @@
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>0378aa7b9c8cd3f73e822dccf09dccf0b3a3ff01</lastUpdateCommitID>
+        <lastUpdateCommitID>7b0200bfcbc0b0dda978e5eab59859cd913b7658</lastUpdateCommitID>
         <filter>
             <centreID>INT</centreID>
         </filter>
@@ -10,7 +10,7 @@
             <name>Griet Depoorter</name>
             <resp/>
             <link>mailto:griet.depoorter@ivdnt.org</link>
-            <reviewDate>2025-04-15</reviewDate>
+            <reviewDate>2026-05-26</reviewDate>
         </respStmt>
         <centre id="INT" deposition="1">
             <centreName>Instituut voor de Nederlandse Taal (Dutch Language Institute) </centreName>
@@ -35,14 +35,14 @@
                 href="https://portal.clarin.ivdnt.org/information-about-deposition.html">here </a>
         </p>
     </info>
-    <formats>
+<formats>
         <format id="fDOCX">
             <domain>Textual Source Language Data</domain>
-            <level>acceptable</level>
+            <level>discouraged</level>
         </format>
         <format id="fDOCX">
             <domain>Documentation</domain>
-            <level>recommended</level>
+            <level>acceptable</level>
         </format>
         <format id="fXLSX">
             <domain>Lexical Resource</domain>
@@ -301,17 +301,32 @@
             <level>recommended</level>
         </format>
         <format id="fXHTML">
-            <domain>Textual Source Language Data</domain>
-            <level>recommended</level>
-        </format>
-        <format id="fXHTML">
-            <domain>Documentation</domain>
+            <domain>Contextual Data</domain>
             <level>recommended</level>
         </format>
         <format id="fNIF">
             <domain>Text Annotation</domain>
             <level>acceptable</level>
         </format>
-
+		<format id="fCoNLL-U">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+		<format id="fCoNLL-U">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fFoLiA">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+		<format id="fTeX">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+		<format id="fTEISpoken">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
     </formats>
 </recommendation>

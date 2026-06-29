@@ -2,7 +2,7 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
    <header>
-      <lastUpdateCommitID>d4ad73e931b56f907716917299724fce4466f996</lastUpdateCommitID>
+      <lastUpdateCommitID>7ba3aad1a1f81b45e0ed3c53191b741701b48a42</lastUpdateCommitID>
       <filter>
          <centreID>CLARIN.SI</centreID>
       </filter>
@@ -10,21 +10,21 @@
          <name>Jakob Lenardič</name>
          <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
          <link>https://github.com/jakoble</link>
-         <reviewDate>2025-04-14</reviewDate>
+         <reviewDate>2026-06-19</reviewDate>
       </respStmt>
-   <centre id="CLARIN.SI" deposition="1">
-      <centreName>CLARIN.SI Language Technology Centre, Slovenia</centreName>
-        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/30"/>
-        <nodeInfo>
-          <ri status="B-centre">CLARIN</ri>
-        </nodeInfo>
+      <centre id="CLARIN.SI" deposition="1">
+         <centreName>CLARIN.SI Language Technology Centre, Slovenia</centreName>
+         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/30"/>
+         <nodeInfo>
+            <ri status="B-centre">CLARIN</ri>
+         </nodeInfo>
       </centre>
-    </header>
+   </header>
    <info>
-		<p>This page lists the file formats which are recommended for depositing in CLARIN.SI. 
-		For additional information, see <a href="https://www.clarin.si/repository/xmlui/page/data">https://www.clarin.si/repository/xmlui/page/data</a>.</p>
-		<p>For details on the preservation policy of CLARIN.SI, 
-		see <a href="https://www.clarin.si/repository/xmlui/page/about#preservation-policy">https://www.clarin.si/repository/xmlui/page/about#preservation-policy</a>.</p>
+      <p>This page lists the file formats which are recommended for depositing in CLARIN.SI. For additional information, see 
+         <a href="https://www.clarin.si/repository/xmlui/page/data">https://www.clarin.si/repository/xmlui/page/data</a>.</p>
+      <p>For details on the preservation policy of CLARIN.SI, see 
+         <a href="https://www.clarin.si/repository/xmlui/page/about#preservation-policy">https://www.clarin.si/repository/xmlui/page/about#preservation-policy</a>.</p>
    </info>
    <formats>
       <format id="fEXB">
@@ -177,6 +177,10 @@
       </format>
       <format id="fXML">
          <domain>Text Annotation</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fePub">
+         <domain>Textual Source Language Data</domain>
          <level>recommended</level>
       </format>
       <format id="fEAF">
