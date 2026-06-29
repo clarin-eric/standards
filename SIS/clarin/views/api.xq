@@ -22,9 +22,9 @@ function sis:print() as element(html) {
       <body>
           <div id="all">
               <div class="logoheader"/>
-              {menu:view()}
-              <div class="content">
-                  <div class="navigation">&gt; <a href="{app:link("views/api.xq")}">API</a></div>
+               {menu:view("API")}
+               <div class="content">
+                   <div class="navigation">&gt; <a href="{app:link("views/api.xq")}">API</a></div>
                   <div><span class="title">REST API</span></div>
                   
                   <div>

@@ -56,10 +56,10 @@ function sis:print() as element(html) {
           </head>
           
           <!--<body onload="drawGraph('{sbm:get-sb-json($id)}','500','300','-100');">-->
-          <body>
-              <div id="all">
-                  <div class="logoheader"/>
-                  {menu:view()}
+           <body>
+               <div id="all">
+                   <div class="logoheader"/>
+                   {menu:view("Centres")}
                   {
                       if ($centre) then
                           <div class="content">

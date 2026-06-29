@@ -46,10 +46,11 @@ return
             <body>
                 <div id="all">
                     <div class="logoheader"/>
-                    {menu:view()}
+                    {menu:view("Data Deposition Formats")}
                     <div class="content">
-                        <div class="navigation"> &gt;
-                            <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
+                        <div class="navigation"> 
+                          &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
+                          &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
                         </div>
                         <div><span class="heading">The requested format information is not found.</span></div>
                     </div>
@@ -96,11 +97,12 @@ return
             <!-- <body onload="createTags();drawGraph('{vsm:get-spec-json($format)}','500','300','-200')">-->
                 <div id="all">
                     <div class="logoheader"/>
-                    {menu:view()}
+                    {menu:view("Data Deposition Formats")}
                     <div class="content">
-                        <div class="navigation"> &gt;
-                            <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a> &gt;
-                            <a href="{app:link(concat("views/view-format.xq?id=", $id))}">{$format-name}</a>
+                        <div class="navigation"> 
+                            &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a> 
+                            &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a> 
+                            &gt; <a href="{app:link(concat("views/view-format.xq?id=", $id))}">{$format-name}</a>
                         </div>
                         <div class="title">
                             <span id="nametext">{$format-name}</span>

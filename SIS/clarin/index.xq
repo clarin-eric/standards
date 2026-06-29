@@ -49,7 +49,7 @@ function sis:index() as element(html) {
           <div id="all">
               <div class="logoheader"/>
               <!-- Menu -->
-              {menu:view()}
+              {menu:view("Home")}
               <div class="content">
                   <div class="navigation">&gt; <a href="{app:link("index.xq")}">Home</a></div>
                   <div class="title">CLARIN Standards Information System</div>

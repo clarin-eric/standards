@@ -345,8 +345,15 @@ th {
     background-color:#EEE;
 }
 
-.tdmenu-selected{
-    background-color:#EEE;
+.tdmenu-active{
+    padding-left:5px; 
+    border-bottom:1px solid #DDDDDD;
+    background-color:#c3d3e3;
+    
+}
+
+.tdmenu-active:hover{
+    background-color:#a8c0d5;
 }
 
 .tdmenu-highlight{
@@ -357,7 +364,18 @@ th {
 }
 
 .tdmenu-highlight:hover{
-    background-color:#c3d3e3;
+    background-color:#EEE;
+}
+
+.tdmenu-highlight-active{
+    padding-left:5px; 
+    border-bottom:1px solid #DDDDDD; 
+    background-color:#a8c0d5;
+    
+}
+
+.tdmenu-highlight-active:hover{
+    background-color:#8fb8d8;
 }
 
 .header{    

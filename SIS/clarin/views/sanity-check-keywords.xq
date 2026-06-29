@@ -27,10 +27,10 @@ function sis:print() as element(html) {
           <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
       </head>
       <body>
-          <div id="all">
-              <div class="logoheader"/>
-              {menu:view()}
-              <div class="content">
+           <div id="all">
+               <div class="logoheader"/>
+               {menu:view("Keywords")}
+               <div class="content">
                   <div class="navigation">
                       &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                       &gt; <a href="{app:link("views/sanity-check.xq")}">Sanity Check</a>

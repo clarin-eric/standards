@@ -34,7 +34,7 @@ declare function menu:setResearchInfrastructure() {
 };
 
 
-declare function menu:view() {
+declare function menu:view($pagename as xs:string) {
     <div class="ri-tab-line">
     <!--<table>
             <tr><td style="white-space: pre-wrap;"></td></tr>
@@ -44,89 +44,92 @@ declare function menu:view() {
     <div class="menu" style="margin-left:20px;">
         <table style="font-size:13.5px; width:210px">
             <tr>
-                <td colspan="3" class="tdmenu-highlight">
+                <td colspan="3" class="{if ($pagename='Home') then 'tdmenu-highlight-active' else 'tdmenu-highlight'}">
                     <a style="display:block" href="{app:link("")}">Home</a>
                 </td>
-            </tr>
+            </tr>            
+            
             <tr>
-                <td colspan="3" class="tdmenu-highlight">
-                    <a style="display:block" href="{app:link("views/list-centres.xq")}">Centres</a>
-                </td>
-            </tr>
-            <tr>
-                <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
-                    <a style="display:block" href="{app:link("views/list-curators.xq")}">Centre Curation</a>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" class="tdmenu-highlight" style="font-weight:bold;">
+                <td colspan="3" class="{if ($pagename='Format Recommendations') then 'tdmenu-highlight-active' else 'tdmenu-highlight'}" style="font-weight:bold;">
                     <a style="display:block" href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
+                <td colspan="2" class="{if ($pagename='Centres') then 'tdmenu-active' else 'tdmenu'}">
+                    <a style="display:block" href="{app:link("views/list-centres.xq")}">Centres</a>
+                </td>
+            </tr>
+            <tr>
+                <td width="10px"></td>
+                <td width="10px"></td>
+                <td class="{if ($pagename='Centre Curation') then 'tdmenu-active' else 'tdmenu'}">
+                    <a style="display:block" href="{app:link("views/list-curators.xq")}">Centre Curation</a>
+                </td>
+            </tr>
+            <tr>
+                <td width="10px"></td>
+                <td colspan="2" class="{if ($pagename='Functional Domains') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/list-domains.xq")}">Functional Domains</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
+                <td colspan="2" class="{if ($pagename='Data Deposition Formats') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
                 <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
+                <td colspan="2" class="{if ($pagename='File Extensions') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/list-extensions.xq")}">File Extensions</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
                 <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
+                <td colspan="2" class="{if ($pagename='Media Types') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/list-mimetypes.xq")}">Media Types</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
+                <td colspan="2" class="{if ($pagename='Statistics') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/list-statistics.xq")}">Statistics</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
                 <td width="10px"></td>
-                <td class="tdmenu">
+                <td class="{if ($pagename='Popular Formats') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/list-popular-formats.xq")}">Popular Formats</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
                 <td width="10px"></td>
-                <td class="tdmenu">
+                <td class="{if ($pagename='Centre Statistics') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/list-statistics-centre.xq")}">Centre Statistics</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
                 <td width="10px"></td>
-                <td class="tdmenu">
+                <td class="{if ($pagename='Relevant KPIs') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/kpi.xq")}">Relevant KPIs</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
+                <td colspan="2" class="{if ($pagename='Sanity Check') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/sanity-check.xq")}">Sanity Check</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
                 <td width="10px"></td>
-                <td class="tdmenu">
+                <td class="{if ($pagename='Keywords') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/sanity-check-keywords.xq")}">Keywords</a>
                 </td>
             </tr>
@@ -140,7 +143,7 @@ declare function menu:view() {
             </tr>
             -->
             <tr>
-                <td colspan="3" class="tdmenu-highlight" style="font-weight:bold;">
+                <td colspan="3" class="{if ($pagename='Standards Watchtower') then 'tdmenu-highlight-active' else 'tdmenu-highlight'}" style="font-weight:bold;">
                     <a style="display:block" href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards Watchtower</a>
                 </td>
             </tr>
@@ -154,29 +157,29 @@ declare function menu:view() {
 -->
             <tr>
                 <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
+                <td colspan="2" class="{if ($pagename='Standard Bodies') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/list-sbs.xq")}">Standard Bodies</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
+                <td colspan="2" class="{if ($pagename='Topics') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/list-topics.xq")}">Topics</a>
                 </td>
             </tr>
             <tr>
                 <td width="10px"></td>
-                <td colspan="2" class="tdmenu">
+                <td colspan="2" class="{if ($pagename='Search') then 'tdmenu-active' else 'tdmenu'}">
                     <a style="display:block" href="{app:link("views/search-spec.xq")}">Search</a>
                 </td>
             </tr>
             <tr>
-                <td colspan="3" class="tdmenu-highlight">
+                <td colspan="3" class="{if ($pagename='API') then 'tdmenu-highlight-active' else 'tdmenu-highlight'}">
                     <a style="display:block" href="{app:link("views/api.xq")}">API</a>
                 </td>
             </tr>
             <tr>
-                <td colspan="3" class="tdmenu-highlight">
+                <td colspan="3" class="{if ($pagename='About / F.A.Q.') then 'tdmenu-highlight-active' else 'tdmenu-highlight'}">
                     <a style="display:block" href="{app:link("views/about.xq")}">About / F.A.Q.</a>
                 </td>
             </tr>

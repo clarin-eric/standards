@@ -37,12 +37,12 @@ function sis:print() as element(html) {
           </head>
           
           <body onload="drawGraph('{sbm:get-sb-json($id)}','500','300','-100');">
-              <div id="all">
-                  <div class="logoheader"/>
-                  {menu:view()}
-                  {
-                      
-                      if ($id and $sb) then
+               <div id="all">
+                   <div class="logoheader"/>
+                   {menu:view("Standard Bodies")}
+                   {
+                       
+                       if ($id and $sb) then
                           <div class="content">
                               <div class="navigation">
                                   &gt; <a href="{app:link("views/list-sbs.xq")}">Standard Bodies</a>

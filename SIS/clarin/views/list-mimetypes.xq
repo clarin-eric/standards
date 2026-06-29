@@ -26,11 +26,11 @@ function sis:print() as element(html) {
           <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
           <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
       </head>
-      <body>
-          <div id="all">
-              <div class="logoheader"/>
-              {menu:view()}
-              <div class="content">
+       <body>
+           <div id="all">
+               <div class="logoheader"/>
+               {menu:view("Media Types")}
+               <div class="content">
                   <div class="navigation">
                       &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                       &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
