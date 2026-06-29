@@ -13,8 +13,8 @@ declare variable $centre:centres := $recommendation:centres/header/centre;
 declare variable $centre:ids := data($centre:centres/@id);
 declare variable $centre:names := $centre:centres/name/text();
     
-declare function centre:get-centre($id as xs:string) as element(centre){
-    $centre:centres[@id=$id]
+declare function centre:get-centre($id as xs:string) as element(centre)? {
+    if($id) then $centre:centres[@id=$id] else ()
 };
 
 declare function centre:get-statutes() as xs:string+ {

@@ -35,9 +35,9 @@ function sis:print() as element(html) {
               <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
           </head>
           <body>
-              <div id="all">
-                  <div class="logoheader"/>
-                  {menu:view()}
+               <div id="all">
+                   <div class="logoheader"/>
+                   {menu:view("Centres")}
                   <div class="content">
                       <div class="navigation">
                           &gt; <a href="{app:link("views/list-centres.xq")}">Centres</a>

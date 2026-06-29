@@ -17,7 +17,7 @@ import module namespace functx = "http://www.functx.com";
 declare variable $rf:pageSize := 50;
 declare variable $rf:searchMap := rf:getSearchMap();
 
-declare function rf:isCurated($recommendation as element(recommendation)){
+declare function rf:isCurated($recommendation as element(recommendation)?){
     let $respStmt := $recommendation/header/respStmt
     let $respName := string($respStmt[1]/name)
     return 

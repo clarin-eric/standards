@@ -27,10 +27,10 @@ function sis:print() as element(html) {
         <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
       </head>
       <body>
-        <div id="all">
-          <div class="logoheader"/>
-            {menu:view()}
-              <div class="content">
+         <div id="all">
+           <div class="logoheader"/>
+             {menu:view("Topics")}
+               <div class="content">
                   <div class="navigation">
                       &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards Watchtower</a>
                       &gt; <a href="{app:link("views/list-topics.xq")}">Topics</a>

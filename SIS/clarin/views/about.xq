@@ -34,9 +34,9 @@ function sis:print() as element(html) {
       <body>
           <div id="all">
               <div class="logoheader"/>
-              {menu:view()}
-              <div class="content">                
-                  <div class="navigation">&gt; <a href="{app:link("views/about.xq")}">About / F.A.Q.</a></div>                
+               {menu:view("About / F.A.Q.")}
+               <div class="content">                
+                   <div class="navigation">&gt; <a href="{app:link("views/about.xq")}">About / F.A.Q.</a></div>
                   <div><span class="title">About SIS</span>
                   
                   

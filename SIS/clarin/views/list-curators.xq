@@ -54,11 +54,11 @@ function sis:print() as element(html) {
           <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
           <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
       </head>
-      <body>
-          <div id="all">
-              <div class="logoheader"/>
-              {menu:view()}
-              <div class="content">
+       <body>
+           <div id="all">
+               <div class="logoheader"/>
+               {menu:view("Centre Curation")}
+               <div class="content">
                   <div class="navigation">
                       &gt; <a href="{app:link("views/list-centres.xq")}">Centres</a>
                       &gt; <a href="{app:link("views/list-curators.xq")}">Centre Curation</a>

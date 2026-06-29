@@ -33,7 +33,7 @@ function sis:print() as element(html) {
   let $isDepositing := cm:isDepositing($centre)
   let $centre-ri := $centre/nodeInfo/ri
   
-  let $recommendation as element(recommendation) := cm:get-recommendations($id)
+  let $recommendation as element(recommendation)? := cm:get-recommendations($id)
   
   let $ri := app:get-ri()
   let $language := app:determine-language($ri)
@@ -56,10 +56,10 @@ function sis:print() as element(html) {
           </head>
           
           <!--<body onload="drawGraph('{sbm:get-sb-json($id)}','500','300','-100');">-->
-          <body>
-              <div id="all">
-                  <div class="logoheader"/>
-                  {menu:view()}
+           <body>
+               <div id="all">
+                   <div class="logoheader"/>
+                   {menu:view("Centres")}
                   {
                       if ($centre) then
                           <div class="content">

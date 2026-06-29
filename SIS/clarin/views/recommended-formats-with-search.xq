@@ -70,11 +70,11 @@ function sis:print() as element(html) {
              
           </script>
           </head>
-          <body>
-              <div id="all">
-                  <div class="logoheader"/>
-                  {menu:view()}
-                  <div class="content">
+           <body>
+               <div id="all">
+                   <div class="logoheader"/>
+                   {menu:view("Format Recommendations")}
+                   <div class="content">
                       <div class="navigation">
                           &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
                       </div>

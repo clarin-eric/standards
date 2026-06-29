@@ -338,11 +338,45 @@ th {
 }
 
 .tdmenu{
-    padding-left:5px; border-bottom:1px solid #DDDDDD;
+    padding-left:4px; 
+    border-bottom:1px solid #DDDDDD;
 }
 
 .tdmenu:hover{
     background-color:#EEE;
+}
+
+.tdmenu-active{
+    padding-left:4px; 
+    border-bottom:1px solid #DDDDDD;
+    background-color:#c3d3e3;
+    
+}
+
+.tdmenu-active:hover{
+    background-color:#a8c0d5;
+}
+
+.tdmenu-highlight{
+    padding-left:4px; 
+    border-bottom:1px solid #DDDDDD; 
+    background-color:#e7f0f9;
+    
+}
+
+.tdmenu-highlight:hover{
+    background-color:#EEE;
+}
+
+.tdmenu-highlight-active{
+    padding-left:4px; 
+    border-bottom:1px solid #DDDDDD; 
+    background-color:#a8c0d5;
+    
+}
+
+.tdmenu-highlight-active:hover{
+    background-color:#8fb8d8;
 }
 
 .header{    
