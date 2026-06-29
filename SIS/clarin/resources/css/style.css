@@ -338,7 +338,8 @@ th {
 }
 
 .tdmenu{
-    padding-left:5px; border-bottom:1px solid #DDDDDD;
+    padding-left:4px; 
+    border-bottom:1px solid #DDDDDD;
 }
 
 .tdmenu:hover{
@@ -346,7 +347,7 @@ th {
 }
 
 .tdmenu-active{
-    padding-left:5px; 
+    padding-left:4px; 
     border-bottom:1px solid #DDDDDD;
     background-color:#c3d3e3;
     
@@ -357,7 +358,7 @@ th {
 }
 
 .tdmenu-highlight{
-    padding-left:5px; 
+    padding-left:4px; 
     border-bottom:1px solid #DDDDDD; 
     background-color:#e7f0f9;
     
@@ -368,7 +369,7 @@ th {
 }
 
 .tdmenu-highlight-active{
-    padding-left:5px; 
+    padding-left:4px; 
     border-bottom:1px solid #DDDDDD; 
     background-color:#a8c0d5;
     

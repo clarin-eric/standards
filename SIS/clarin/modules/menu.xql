@@ -42,7 +42,7 @@ declare function menu:view($pagename as xs:string) {
         {menu:setResearchInfrastructure()}
     </div>,
     <div class="menu" style="margin-left:20px;">
-        <table style="font-size:13.5px; width:210px">
+        <table style="font-size:13.5px; width:220px">
             <tr>
                 <td colspan="3" class="{if ($pagename='Home') then 'tdmenu-highlight-active' else 'tdmenu-highlight'}">
                     <a style="display:block" href="{app:link("")}">Home</a>
@@ -144,17 +144,23 @@ declare function menu:view($pagename as xs:string) {
             -->
             <tr>
                 <td colspan="3" class="{if ($pagename='Standards Watchtower') then 'tdmenu-highlight-active' else 'tdmenu-highlight'}" style="font-weight:bold;">
-                    <a style="display:block" href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards Watchtower</a>
+                    <a style="display:block" href="{app:link("views/watchtower.xq")}">Standards Watchtower</a>
                 </td>
             </tr>
                        
-            
-            <!--               <tr>
-                    <td colspan="2" class="tdmenu">
-                        <a style="display:block"  href="{app:link("views/recommendation.xq")}">Recommended Standards</a>
+            <tr>
+                 <td width="10px"></td>
+                    <td colspan="2" class="{if ($pagename='Introduction') then 'tdmenu-active' else 'tdmenu'}">
+                        <a style="display:block"  href="{app:link("views/intro-specs.xq")}">Introduction</a>
                     </td>
-               </tr>
--->
+            </tr>
+            <tr>
+                 <td width="10px"></td>
+                    <td colspan="2" class="{if ($pagename='Standards and Specifications') then 'tdmenu-active' else 'tdmenu'}">
+                        <a style="display:block"  href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>
+                    </td>
+            </tr>
+
             <tr>
                 <td width="10px"></td>
                 <td colspan="2" class="{if ($pagename='Standard Bodies') then 'tdmenu-active' else 'tdmenu'}">
