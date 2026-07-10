@@ -51,7 +51,7 @@ function sis:index() as element(html) {
               <!-- Menu -->
               {menu:view("Home")}
               <div class="content">
-                  <div class="navigation">&gt; <a href="{app:link("index.xq")}">Home</a></div>
+                  <div class="navigation">&gt; <a href="#" onclick="return false;">Home</a></div>
                   <div class="title">CLARIN Standards Information System</div>
                   <div>
                       
