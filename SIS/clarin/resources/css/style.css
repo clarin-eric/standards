@@ -340,6 +340,20 @@ th {
     background-color:#eaeaea;
 }
 
+table.striped tr:nth-child(even) {
+    background-color:#f0f0f0;
+}
+
+table.striped th,
+table.striped td {
+    /* border-right: 1px solid black; */    
+}
+
+table.striped th:last-child,
+table.striped td:last-child {
+    border-right: none;
+}
+
 .tdmenu{
     padding-left:4px; 
     border-bottom:1px solid #DDDDDD;

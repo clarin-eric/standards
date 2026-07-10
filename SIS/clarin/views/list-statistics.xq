@@ -48,7 +48,7 @@ function sis:print() as element(html) {
                     </div>
                       <div>
                       
-                      <table style="width:500px">
+                      <table class="striped"  style="width:500px;">
                           <tr>
                               <th>Item</th>
                               <th style="width:150px">Total number</th>
@@ -71,7 +71,7 @@ function sis:print() as element(html) {
                           </tr>
                       </table>
                       
-                      <div style="width:500px;margin-bottom:40px">
+                      
                           <p>Above, the first row counts all the formats that have a corresponding information file in the SIS. 
                           More information about them is provided in the <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a> section.</p>
                           <p>The second row counts all formats mentioned by the recommendations, and that includes 
@@ -80,9 +80,9 @@ function sis:print() as element(html) {
                           defined in the SIS. See below for various partitions of that set.</p>
                           <p><a href="{app:link("views/list-domains.xq")}">Functional domains</a> (see also immediately below) have a dedicated section in the SIS.</p>
                           
-                      </div>
                       
-                      <table id = "domainTable" style="width:500px;margin-bottom:40px">
+                      
+                      <table id = "domainTable" class="striped" style="width:500px;">
                           <tr>
                               <th><a href="{app:link("views/list-statistics.xq?domainSortBy=alphabet#domainTable")}">
                                   Functional domain</a>
@@ -95,7 +95,7 @@ function sis:print() as element(html) {
                           {stm:list-format-by-domain($domainSortBy)}
                       </table>
                       
-                      <table style="width:500px;margin-bottom:40px">
+                      <table class="striped" style="width:500px;">
                           <tr>
                               <th>Level of recommendation</th>
                               <th style="width:150px">Number of recommendations</th>
