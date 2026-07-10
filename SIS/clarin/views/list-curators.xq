@@ -36,14 +36,15 @@ function sis:print() as element(html) {
               order by if ($sortBy = 'date') then ($sort-date) else ($brief) 
               return 
               <tr style="vertical-align:top">
-              <td><a href="{app:link(concat("views/view-centre.xq?id=", $brief))}">{$brief}</a></td>
-              <td style="padding-bottom:0.5em">{for $l in $cur
-                   return ($l, <br />)
-              }</td>
-              <td>{for $l in $date
-                   return (rf:paint-curation-date($l,$language,true()), <br />)
-              }</td>
-              <td style="font-family:monospace; font-size: 0.9em"><a href="{concat('https://github.com/clarin-eric/standards/commit/',$comm)}">{substring($comm,1,8)}</a></td>
+                  <td class="row"><a href="{app:link(concat("views/view-centre.xq?id=", $brief))}">{$brief}</a></td>
+                  <td class="row" style="padding-bottom:0.5em">
+                  {for $l in $cur
+                     return ($l, <br />)
+                  }</td>
+                  <td class="row">{for $l in $date
+                     return (rf:paint-curation-date($l,$language,true()), <br />)
+                  }</td>
+                  <td class="row" style="font-family:monospace; font-size: 0.9em"><a href="{concat('https://github.com/clarin-eric/standards/commit/',$comm)}">{substring($comm,1,8)}</a></td>
               </tr>
   
   return 
