@@ -22,6 +22,7 @@ div#all {
 }
 
 .logoheader {
+	display: block;
 	background:white URL(../images/bannerNeu.png) no-repeat bottom center;
 	color:#111;
 	min-height:185px;
@@ -29,7 +30,9 @@ div#all {
 	padding-top:20px;
 	text-align:left;
 	font-weight:normal;
-	line-height:1.5em;	
+	line-height:1.5em;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 div.menu{

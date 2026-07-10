@@ -37,10 +37,10 @@ function sis:print() as element(html) {
           <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
           <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
       </head>    
-      <body>
-          <div id="all">
-             <div class="logoheader"/>		
-                  {menu:view("Standards")}
+       <body>
+           <div id="all">
+              <a class="logoheader" href="https://www.clarin.eu/"/>		
+                   {menu:view("Standards")}
              <div class="content">
                  <div class="navigation">
                          &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards</a>                    
@@ -72,10 +72,10 @@ function sis:print() as element(html) {
           <script type="text/javascript" src="{app:resource("tinymce/tinymce.min.js","js")}"/>
           <script type="text/javascript" src="{app:resource("xmleditor.js","js")}"/>
       </head>       
-          <body onload="createTags();drawGraph('{vsm:get-spec-json($spec)}','500','300','-200')">
-               <div id="all">
-                   <div class="logoheader"/>		
-                        {menu:view("Standards")}
+           <body onload="createTags();drawGraph('{vsm:get-spec-json($spec)}','500','300','-200')">
+                <div id="all">
+                    <a class="logoheader" href="https://www.clarin.eu/"/>		
+                         {menu:view("Standards")}
                    <div class="content">
                       <div class="navigation">
                           &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>

@@ -42,11 +42,11 @@ function sis:print() as element(html) {
               <script type="text/javascript" src="{app:resource("tagclouds.js","js")}"/>
               <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
           </head>
-          <body>
-               <!--body-->
-               <div id="all">
-                   <div class="logoheader"/>
-                   {menu:view("Introduction")}
+           <body>
+                <!--body-->
+                <div id="all">
+                    <a class="logoheader" href="https://www.clarin.eu/"/>
+                    {menu:view("Introduction")}
                   <div class="content">
                       <div class="navigation">
                       &gt; <a href="{app:link("views/watchtower.xq")}">Standards Watchtower</a>                      

@@ -43,10 +43,10 @@ return
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
                 <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
             </head>
-            <body>
-                <div id="all">
-                    <div class="logoheader"/>
-                    {menu:view("Data Deposition Formats")}
+             <body>
+                 <div id="all">
+                     <a class="logoheader" href="https://www.clarin.eu/"/>
+                     {menu:view("Data Deposition Formats")}
                     <div class="content">
                         <div class="navigation"> 
                           &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
@@ -93,11 +93,11 @@ return
                 <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
                 <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
             </head>
-            <body>
-            <!-- <body onload="createTags();drawGraph('{vsm:get-spec-json($format)}','500','300','-200')">-->
-                <div id="all">
-                    <div class="logoheader"/>
-                    {menu:view("Data Deposition Formats")}
+             <body>
+             <!-- <body onload="createTags();drawGraph('{vsm:get-spec-json($format)}','500','300','-200')">-->
+                 <div id="all">
+                     <a class="logoheader" href="https://www.clarin.eu/"/>
+                     {menu:view("Data Deposition Formats")}
                     <div class="content">
                         <div class="navigation"> 
                             &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a> 

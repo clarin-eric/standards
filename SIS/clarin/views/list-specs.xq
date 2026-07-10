@@ -55,8 +55,8 @@ function sis:print() as element(html) {
           </head>
           <body>
                <!--body-->
-               <div id="all">
-                   <div class="logoheader"/>
+           <div id="all">
+               <a class="logoheader" href="https://www.clarin.eu/"/>
                    {menu:view("Standards and Specifications")}
                   <div class="content">
                       <div class="navigation">

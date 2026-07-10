@@ -19,10 +19,10 @@ function sis:print() as element(html) {
           <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
           <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
       </head>
-      <body>
-          <div id="all">
-              <div class="logoheader"/>
-               {menu:view("API")}
+       <body>
+           <div id="all">
+               <a class="logoheader" href="https://www.clarin.eu/"/>
+                {menu:view("API")}
                <div class="content">
                    <div class="navigation">&gt; <a href="{app:link("views/api.xq")}">API</a></div>
                   <div><span class="title">REST API</span></div>

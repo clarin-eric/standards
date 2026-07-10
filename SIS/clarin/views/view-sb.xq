@@ -37,8 +37,8 @@ function sis:print() as element(html) {
           </head>
           
           <body onload="drawGraph('{sbm:get-sb-json($id)}','500','300','-100');">
-               <div id="all">
-                   <div class="logoheader"/>
+           <div id="all">
+               <a class="logoheader" href="https://www.clarin.eu/"/>
                    {menu:view("Standard Bodies")}
                    {
                        

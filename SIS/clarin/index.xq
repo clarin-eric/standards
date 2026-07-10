@@ -47,7 +47,7 @@ function sis:index() as element(html) {
       </head>
       <body>
           <div id="all">
-              <div class="logoheader"/>
+              <a class="logoheader" href="https://www.clarin.eu/"/>
               <!-- Menu -->
               {menu:view("Home")}
               <div class="content">

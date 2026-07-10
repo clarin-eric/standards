@@ -31,8 +31,8 @@ return
             <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
         </head>
          <body>
-             <div id="all">
-                 <div class="logoheader"/>
+           <div id="all">
+               <a class="logoheader" href="https://www.clarin.eu/"/>
                  {menu:view("Topics")}
                  {
                      
