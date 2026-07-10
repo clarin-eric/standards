@@ -30,7 +30,7 @@ function sis:print() as element(html) {
       <body>
           <div id="all">
               <div class="logoheader"/>
-              {menu:view()}
+              {menu:view("Sanity check")}
               <div class="content">
                   <div class="navigation">
                       &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
