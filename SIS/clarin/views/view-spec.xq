@@ -39,7 +39,7 @@ function sis:print() as element(html) {
       </head>    
        <body>
            <div id="all">
-              <a class="logoheader" href="https://www.clarin.eu/"/>		
+              <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>		
                    {menu:view("Standards")}
              <div class="content">
                  <div class="navigation">
@@ -74,7 +74,7 @@ function sis:print() as element(html) {
       </head>       
            <body onload="createTags();drawGraph('{vsm:get-spec-json($spec)}','500','300','-200')">
                 <div id="all">
-                    <a class="logoheader" href="https://www.clarin.eu/"/>		
+                    <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>		
                          {menu:view("Standards")}
                    <div class="content">
                       <div class="navigation">

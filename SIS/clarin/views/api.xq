@@ -21,7 +21,7 @@ function sis:print() as element(html) {
       </head>
        <body>
            <div id="all">
-               <a class="logoheader" href="https://www.clarin.eu/"/>
+               <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
                 {menu:view("API")}
                <div class="content">
                    <div class="navigation">&gt; <a href="{app:link("views/api.xq")}">API</a></div>

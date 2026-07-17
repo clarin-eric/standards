@@ -58,7 +58,7 @@ function sis:print() as element(html) {
           <!--<body onload="drawGraph('{sbm:get-sb-json($id)}','500','300','-100');">-->
            <body>
            <div id="all">
-               <a class="logoheader" href="https://www.clarin.eu/"/>
+               <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
                    {menu:view("Centres")}
                   {
                       if ($centre) then

@@ -45,9 +45,9 @@ function sis:index() as element(html) {
           <script type="text/javascript" src="resources/scripts/tagclouds.js"/>
           <script type="text/javascript" src="resources/scripts/session.js"/>
       </head>
-      <body>
-          <div id="all">
-              <a class="logoheader" href="https://www.clarin.eu/"/>
+       <body>
+           <div id="all">
+               <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
               <!-- Menu -->
               {menu:view("Home")}
               <div class="content">

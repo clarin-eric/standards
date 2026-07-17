@@ -45,7 +45,7 @@ return
             </head>
              <body>
                  <div id="all">
-                     <a class="logoheader" href="https://www.clarin.eu/"/>
+                     <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
                      {menu:view("Data Deposition Formats")}
                     <div class="content">
                         <div class="navigation"> 
@@ -96,7 +96,7 @@ return
              <body>
              <!-- <body onload="createTags();drawGraph('{vsm:get-spec-json($format)}','500','300','-200')">-->
                  <div id="all">
-                     <a class="logoheader" href="https://www.clarin.eu/"/>
+                     <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
                      {menu:view("Data Deposition Formats")}
                     <div class="content">
                         <div class="navigation"> 

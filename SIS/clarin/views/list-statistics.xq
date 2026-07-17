@@ -33,7 +33,7 @@ function sis:print() as element(html) {
       </head>
        <body>
            <div id="all">
-               <a class="logoheader" href="https://www.clarin.eu/"/>
+               <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
                {menu:view("Statistics")}
                <div class="content">
                   <div class="navigation">
