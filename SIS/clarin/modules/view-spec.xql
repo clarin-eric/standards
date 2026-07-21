@@ -3,6 +3,7 @@ xquery version "3.0";
 module namespace vsm="http://clarin.ids-mannheim.de/standards/view-spec";
 
 import module namespace spec="http://clarin.ids-mannheim.de/standards/specification" at "../model/spec.xqm";
+import module namespace format="http://clarin.ids-mannheim.de/standards/format" at "../model/format.xqm";
 import module namespace sb="http://clarin.ids-mannheim.de/standards/standardbody" at "../model/sb.xqm";
 import module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema" at "../model/schema.xqm";
 
@@ -49,6 +50,7 @@ declare function vsm:get-spec-json($spec){
         
     (: Create links between the spec and the spec parts :)    
     let $spec-index := fn:index-of($ids,data($spec/@id))-1
+    
     let $isPartOf := graph:get-color($relations,"isPartOf")
     let $isPartOf-links :=
         for $part in $spec/descendant-or-self::part            
@@ -65,7 +67,12 @@ declare function vsm:get-spec-json($spec){
     
     let $json-nodes := string-join(
         for $id in $ids 
-        return graph:create-spec-node(vsm:get-spec($id))
+        let $spec-node := vsm:get-spec($id)
+        let $isFormat := if (fn:starts-with($id, "f")) then fn:true() else fn:false()
+        return 
+          if ($spec-node) then graph:create-spec-node($spec-node)
+          else if ($isFormat) then graph:create-format-node(format:get-format($id), $isFormat)
+          else graph:create-node($id, "", 4) (:spec size 4 :) 
     , ",")
         
     let $json-links := string-join(
@@ -334,7 +341,7 @@ declare function vsm:print-graph($spec){
     then 
         <div id="chart" class="version">
             <div><span class="heading3">Relations</span></div>
-            <div class="version" style="width:140px; float:right; padding:0px">
+            <div class="version" style="width:150px; float:right; padding:0px">
              <table>
                  <tr>
                      <td colspan="2"><b>Legend:</b></td>                    
@@ -343,14 +350,14 @@ declare function vsm:print-graph($spec){
                      let $color := graph:get-color($relations,$r)
                      return
                          <tr>
-                             <td><hr style="border:0; color:{$color}; background-color:{$color}; height:2px; width:20px" /></td>
+                             <td><hr style="border:0; color:{$color}; background-color:{$color}; height:2px; width:15px" /></td>
                              <td>{data($r)}</td>
                          </tr>
                  }
                 {if($spec/descendant-or-self::version)
                 then
                 <tr>
-                     <td><hr style="border:0; color:{$graph:colors[$idx]}; background-color:{$graph:colors[$idx]}; height:2px; width:20px" /></td>
+                     <td><hr style="border:0; color:{$graph:colors[$idx]}; background-color:{$graph:colors[$idx]}; height:2px; width:15px" /></td>
                      <td>isVersionOf</td>
                 </tr>
                 else ()
@@ -358,7 +365,7 @@ declare function vsm:print-graph($spec){
                 {if ($spec/descendant-or-self::part)
                 then 
                 <tr>
-                     <td><hr style="border:0; color:{$graph:colors[$ispartOf-idx]}; background-color:{$graph:colors[$ispartOf-idx]}; height:2px; width:20px" /></td>
+                     <td><hr style="border:0; color:{$graph:colors[$ispartOf-idx]}; background-color:{$graph:colors[$ispartOf-idx]}; height:2px; width:15px" /></td>
                      <td>isPartOf</td>
                 </tr>
                 else ()
