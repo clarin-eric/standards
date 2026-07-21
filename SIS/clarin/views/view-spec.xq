@@ -5,6 +5,7 @@ module namespace sis = 'sis';
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace vsm ="http://clarin.ids-mannheim.de/standards/view-spec" at "../modules/view-spec.xql";
+import module namespace vvm="http://clarin.ids-mannheim.de/standards/view-version" at "../modules/view-version.xql";
 import module namespace tm ="http://clarin.ids-mannheim.de/standards/topic-module" at "../modules/topic.xql";
 
 (:  Define the standard page
@@ -105,7 +106,7 @@ function sis:print() as element(html) {
                        <div>{vsm:print-spec-description($spec/info[@type="description"], $id)}</div>                     
                        {vsm:print-url($spec)}
                        {vsm:print-spec-assets($id,$spec/asset/a)}
-                       {vsm:print-spec-relation($spec,$id,fn:false())}
+                       {vvm:print-version-relation($id,$spec,$id,fn:false())}
                        {vsm:print-topic-specs($id,$spec-topic)}
                        {vsm:print-spec-bibliography($spec/info[@type="recReading"]/biblStruct)}
                        <br/>

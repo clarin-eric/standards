@@ -7,7 +7,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 
 import module namespace vfm = "http://clarin.ids-mannheim.de/standards/view-format" at "../modules/view-format.xql";
 import module namespace vsm = "http://clarin.ids-mannheim.de/standards/view-spec" at "../modules/view-spec.xql";
-
+import module namespace vvm="http://clarin.ids-mannheim.de/standards/view-version" at "../modules/view-version.xql";
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
 
 declare
@@ -218,9 +218,9 @@ return
                         <div id="tags" style="display:none">
                             <a style="font-size:22px" onclick="return false">{$format-abbr}</a>
                             {vfm:print-keyword-links($format)}
-                        </div>
+                        </div>                        
                         
-                        {vsm:print-spec-relation($format,$id, fn:true())}
+                        {vvm:print-version-relation($id,$format,$id,fn:true())}
                         {vsm:print-graph($format)}
                     </div>
                     <div class="footer">{app:footer()}</div>

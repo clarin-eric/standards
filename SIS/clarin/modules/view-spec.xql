@@ -152,10 +152,6 @@ declare function vsm:print-spec-topic($spec,$spec-topic){
     )
 };
 
-declare function vsm:print-spec-relation($spec,$spec-id,$isFormat as xs:boolean){
-    vvm:print-version-relation($spec-id,$spec,$spec-id,$isFormat)
-};
-
 (: Define the standard body view and its edit form :)
 declare function vsm:print-spec-sb($spec-sb, $spec-id){
         <div>            
