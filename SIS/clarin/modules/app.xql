@@ -113,6 +113,19 @@ declare function app:create-copy-button($id, $copy-text, $tooltiptext, $hint) {
     )
 };
 
+
+declare function app:print-missing-link($id, $type as xs:string) {   
+    <span class="tooltip">
+        <a style="margin-left:5px;" href="{app:getGithubIssueLink($id, $type)}">
+            <img src="{app:resource("plus.png", "img")}" height="15"/>
+        </a>
+        <span
+            class="tooltiptext"
+            style="width:300px;">Click to add or suggest missing {$type} information
+        </span>
+    </span>
+};
+
 declare function app:getGithubFormatIssueLink() {
     let $ghLink := 'https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=Incorrect or missing format '
     let $ghLink := concat($ghLink, '[commitId=', web:get-short-commitId(),']')
@@ -120,12 +133,25 @@ declare function app:getGithubFormatIssueLink() {
         $ghLink
 };
 
+(: Deprecated :)
 declare function app:getGithubFormatIssueLink($format-id) {
     let $ghLink := 'https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=Suggestion regarding the description of format ID="'
     let $ghLink := concat($ghLink, $format-id, '", [commitId=', web:get-short-commitId(),']')
     return
         $ghLink
 };
+
+(: EM: Generalize the function above :)
+declare function app:getGithubIssueLink($id, $type) {
+    let $ghLink := concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3A',
+    $type,'%2C+templatic&amp;template=incorrect-missing-',
+    $type,'-description.md&amp;title=Suggestion regarding the description of ',
+    $type,' ID="')
+    let $ghLink := concat($ghLink, $id, '", [commitId=', web:get-short-commitId(),']')
+    return
+        $ghLink
+};
+
 
 declare function app:footer() as element(div) {
     let $commitId as xs:string := web:get-short-commitId()

@@ -120,7 +120,7 @@ declare function stm:prune-formats-per-domain($threshold as xs:int) as element(d
                     <td>{
                         if ($format-abbr) 
                         then <a href="{$format-link}">{$format-abbr }</a>
-                        else (fn:substring($id, 2), rf:print-missing-format-link($id))
+                        else (fn:substring($id, 2), app:print-missing-link($id,"format"))
                     }
                     </td>
                     <td>{$sum}</td>
