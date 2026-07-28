@@ -9,8 +9,14 @@
       <respStmt>
          <name>Valeria Quochi</name>
          <resp>Initial revised selection of recommended formats<!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-         <link>https://orcid.org/0000-0002-1321-5444</link>
+         <link>https://orcid.org/0000-0003-3828-0135</link>
          <reviewDate>2025-10-24</reviewDate>
+      </respStmt>
+       <respStmt>
+         <name>Giulia Pedonese</name>
+         <resp>Revision</resp>
+         <link>https://orcid.org/0000-0002-1321-5444</link>
+         <reviewDate>2026-07-28</reviewDate>
       </respStmt>
       <respStmt>
          <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
