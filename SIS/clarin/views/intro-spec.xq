@@ -54,7 +54,7 @@ function sis:print() as element(html) {
                           
                       </div>
                       
-                      <div class="title">Introduction: standards and specifications</div>
+                      <div class="title">Introduction: Standards and Specifications</div>
                       
                       <div>                    
                                             
@@ -69,18 +69,12 @@ function sis:print() as element(html) {
                         it ensures a transparent and fair development of standards with respect to considerations of multiple perspectives 
                         and needs of all members of a standardization organization. The official standards that are developed within one 
                         accredited body, such as ISO, DIN, IEEE, CEN/ISSS or NISO, are generally defined as <i>de jure</i> standards.</p>
-                        <p>On the other hand, a (technical) specification is “document that prescribes technical requirements to
-                        be fulfilled by a product, process or service” (see <a href="https://www.iso.org/iso-guides.html">ISO/IEC Guide 2</a>). 
-                        Any private individual, company or organization may develop a specification, which is typically limited to a specific 
-                        application and defines the tasks and objectives of that application. When a specification is often used and acknowledged by 
-                        the users more than any other existing specification, it is referred to as a <i>de facto</i> standard.
-                        Many specifications, such as PDF, CMDI, HTML, were developed outside a standardization body, but by the virtue of acceptance 
-                        and broad dissemination, they got later adopted by a recognized standardization body, such as ISO.</p>
+                        
                         </div>
                         <!-- The tag cloud of standards and standard bodies -->
-                        <div style="margin-left:10%; margin-bottom:20px;">
+                        <div style="text-align: center">
                             <div id="myCanvasContainer">
-                                <canvas width="600" height="500" id="myCanvas"/>
+                                <canvas width="500" height="500" id="myCanvas"/>
                             </div>
                             <div id="tags" style="border:1px solid #DDDDDD; padding:8px;" >
                               {index:print-spec-links()}
@@ -88,6 +82,13 @@ function sis:print() as element(html) {
                             </div>
                         </div>                       
                       
+                        <p>On the other hand, a (technical) specification is “document that prescribes technical requirements to
+                        be fulfilled by a product, process or service” (see <a href="https://www.iso.org/iso-guides.html">ISO/IEC Guide 2</a>). 
+                        Any private individual, company or organization may develop a specification, which is typically limited to a specific 
+                        application and defines the tasks and objectives of that application. When a specification is often used and acknowledged by 
+                        the users more than any other existing specification, it is referred to as a <i>de facto</i> standard.
+                        Many specifications, such as PDF, CMDI, HTML, were developed outside a standardization body, but by the virtue of acceptance 
+                        and broad dissemination, they got later adopted by a recognized standardization body, such as ISO.</p>
                   </div>
                   <div class="footer">{app:footer()}</div>
               </div>

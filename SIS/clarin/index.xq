@@ -63,13 +63,13 @@ function sis:index() as element(html) {
                       "<a href="{app:link("views/recommended-formats-with-search.xq")}"><b>Format Recommendations</b></a>" 
                       section, and its various logical subcomponents can be accessed from the menu on the left.</p>
                       <p>Note also the tabs along the upper edge of the page -- the SIS (partially) serves the needs of 
-                      two sister research infrastructures, aggregating and visualising the relevant information.</p>
-                      <p>The keyword cloud below provides an alternative way to access the format and recommendation 
+                      two sister research infrastructures, aggregating and visualising the relevant information.
+                      The keyword cloud below provides an alternative way to access the format and recommendation 
                       information.</p> 
                   </div>
-                  <div style="margin-left:10%; margin-bottom:15px;">
+                  <div style="text-align: center">
                       <div id="myCanvasContainer">
-                          <canvas width="600" height="500" id="myCanvas"/>
+                          <canvas width="550" height="550" id="myCanvas"/>
                       </div>
                       <div id="tags" style="border:1px solid #DDDDDD; padding:8px;" >
                         <!--{index:print-spec-links()}
@@ -83,7 +83,7 @@ function sis:index() as element(html) {
                   <p>The original and, at this time, not actively developed function of the SIS is to collect information on the 
                   human language technology standards in use by the CLARIN community. Visit the 
                   "<a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}"><b>Standards Watchtower</b></a>" section in order to access 
-                  that functionality. That section is going to expand in the course of the year 2025, so visit us often...</p>
+                  that functionality. That section is going to expand in the course of the year 2026, so visit us often...</p>
                   <p style="text-align:center">* * * * *</p>
                   </div>
   
