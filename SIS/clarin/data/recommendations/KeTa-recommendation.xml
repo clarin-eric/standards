@@ -4,7 +4,7 @@
     <header>
         <lastUpdateCommitID>56edd195d9ed1d5bc7c2d984fac74a0c14801520</lastUpdateCommitID>
         <filter>
-            <centreID>CELR-EKK</centreID>
+            <centreID>KeTa</centreID>
         </filter>
         <respStmt>
             <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
@@ -12,8 +12,8 @@
             <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
             <reviewDate>0001-01-01</reviewDate>
         </respStmt>
-        <centre id="CELR-EKK" deposition="1">
-        <centreName>Center of Estonian Language Resources</centreName>
+        <centre id="KeTa" deposition="1">
+        <centreName>Estonian Language Data Infrastructure</centreName>
         <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/15"/>
         <nodeInfo>
           <ri status="C-centre">CLARIN</ri>
