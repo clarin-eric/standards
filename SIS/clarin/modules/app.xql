@@ -178,3 +178,39 @@ declare function app:list-options($list,$selected){
             then <option selected= "true" value="{$selected}">{$selected}</option>
             else <option value="{$item}"> {$item} </option>
 };
+
+declare function app:prepareInfo($info,$id) {
+    if ($info)
+    then 
+       <span id="desctext-{$id}" class="desctext">
+       {$info/@*,
+        for $node in $info/node()
+        return
+            if ($node/self::p)
+            then app:parseFormatRef($node,"p")
+            else ($node)
+       }
+       </span>        
+    else
+        ()
+};
+
+declare function app:parseFormatRef($text, $elementName) {
+    if ($text)
+    then
+        (
+        element {$elementName} {
+            $text/@*,
+            for $node in $text/node()
+            return
+                if ($node/self::formatRef)
+                then
+                    <a href="{app:link(concat("views/view-format.xq?id=", $node/@ref))}">
+                        {substring($node/@ref, 2)}</a>
+                else
+                    $node
+        }
+        )
+    else
+        ()
+};

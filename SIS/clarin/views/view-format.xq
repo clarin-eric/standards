@@ -205,7 +205,9 @@ return
                             $sortBy,$language)}
                         <div>
                             <span id="desctext{$id}" class="heading">Description: </span>
-                            <span class="desctext">{$format/info[@type = "description"]}</span>
+                            <span class="desctext">{
+                              app:prepareInfo($format/info[@type = "description"],$id)
+                          }</span>
                         </div>
 <!--
                         <div align="right"><p><a href="{app:getGithubFormatIssueLink($id)}">[suggest a fix or extension]</a></p></div>

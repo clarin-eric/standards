@@ -38,7 +38,7 @@ function sis:print() as element(html) {
   let $ri := app:get-ri()
   let $language := app:determine-language($ri)
   
-  let $centre-info := cm:parseFormatRef(cm:get-centre-info($id,$language), $id)
+  let $centre-info := app:prepareInfo(cm:get-centre-info($id,$language), $id)
   
   let $domains := fn:distinct-values($recommendation/formats/format/domain/text())
   
