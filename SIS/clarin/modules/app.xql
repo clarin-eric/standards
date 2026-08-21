@@ -57,7 +57,7 @@ declare function app:determine-base-uri() {
             then
                 concat("https://", $server-name, "/sis/")
             else
-                concat("https://", $server-name, "/standards-bx/")
+                concat("https://", $server-name, "/standards/")
 };
 
 (: Wrap a link with the current session :)
