@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
+<recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
+    <header>
+        <lastUpdateCommitID>d092a1c820cc78c8719443a01f4517ee5d0068c2</lastUpdateCommitID>
+        <filter>
+            <centreID>KeTa</centreID>
+        </filter>
+        <respStmt>
+            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+            <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
+            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
+            <reviewDate>0001-01-01</reviewDate>
+        </respStmt>
+        <centre id="KeTa" deposition="1">
+        <centreName>Estonian Language Data Infrastructure</centreName>
+        <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/15"/>
+        <nodeInfo>
+          <ri status="C-centre">CLARIN</ri>
+        </nodeInfo>
+      </centre>
+    </header>
+    <info>
+        <p>Estonian Language Data Infrastructure (Keeleandmete Teadustaristu – KeTa) is a research infrastructure that supports R&amp;D activities that use language data. 
+            It provides services for collecting, preserving, making accessible, and reusing Estonian language data both as datasets and through various digital tools. 
+            KeTa’s mission is to offer a comprehensive infrastructure and services that meet the demands and challenges of the fields of linguistics and language technology. 
+            KeTa brings together the resources of Estonian universities, research and development institutions, and other organizations related to linguistics to support and 
+            promote the use and development of language technology. KeTa plays a crucial role in aggregating high-quality language datasets for the development and evaluation 
+            of large language models.</p>
+        <p>See also: <a href="https://eki.ee/teadus-ja-arendustegevus/teadustaristu">Keeleandmete Teadustaristu (KeTa)</a></p>
+        <p>Recommendation list will be published when the new centre repository stabilises. The assigned curator is <a href="mailto:evelin.arust@eki.ee">Evelin Arust</a>.</p>
+    </info>
+    <formats><!--
+            This template will assist in adjusting/creating a recommendations document if you don't
+            have access to a schema-aware XML editor. Copy the XML fragment, 
+            *  adjust the format ID (see https://standards.clarin.eu/sis/views/list-formats.xq ),
+            *  adjust the domain (https://standards.clarin.eu/sis/views/list-domains.xq ),
+            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
+            *  repeat as necessary;
+            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
+            
+            <format id="null">
+                <domain>Audiovisual Annotation</domain>
+                <level>recommended</level>
+            </format> 
+        -->
+    </formats>
+</recommendation>
