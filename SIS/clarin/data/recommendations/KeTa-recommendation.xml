@@ -2,7 +2,7 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>56edd195d9ed1d5bc7c2d984fac74a0c14801520</lastUpdateCommitID>
+        <lastUpdateCommitID>d092a1c820cc78c8719443a01f4517ee5d0068c2</lastUpdateCommitID>
         <filter>
             <centreID>KeTa</centreID>
         </filter>
@@ -20,7 +20,16 @@
         </nodeInfo>
       </centre>
     </header>
-    <info><p>See also <a href="https://www.keeleressursid.ee/en/services">https://www.keeleressursid.ee/en/services</a></p></info>
+    <info>
+        <p>Estonian Language Data Infrastructure (Keeleandmete Teadustaristu – KeTa) is a research infrastructure that supports R&amp;D activities that use language data. 
+            It provides services for collecting, preserving, making accessible, and reusing Estonian language data both as datasets and through various digital tools. 
+            KeTa’s mission is to offer a comprehensive infrastructure and services that meet the demands and challenges of the fields of linguistics and language technology. 
+            KeTa brings together the resources of Estonian universities, research and development institutions, and other organizations related to linguistics to support and 
+            promote the use and development of language technology. KeTa plays a crucial role in aggregating high-quality language datasets for the development and evaluation 
+            of large language models.</p>
+        <p>See also <a href="https://eki.ee/teadus-ja-arendustegevus/teadustaristu">Keeleandmete Teadustaristu (KeTa)</a></p>
+        <p>Recommendation list will be published when the new centre repository stabilises. The assigned curator is <a href="mailto:evelin.arust@eki.ee">Evelin Arust</a>.</p>
+    </info>
     <formats><!--
             This template will assist in adjusting/creating a recommendations document if you don't
             have access to a schema-aware XML editor. Copy the XML fragment, 
