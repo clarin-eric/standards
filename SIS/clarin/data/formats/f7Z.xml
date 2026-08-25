@@ -1,0 +1,22 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="f7Z" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>7-Zip File Format</title>
+        <abbr>7-Zip</abbr>
+    </titleStmt>
+    <keyword>compression</keyword>
+    <extId type="LOC">fdd000539</extId>
+    <extId type="PRONOM">fmt/484</extId>
+    <extId type="Wikidata">Q270131</extId>
+    <info type="description">
+        <p>"7-Zip is a free and open-source file archiver, a utility used to place groups of files 
+            within compressed containers known as “archives”." (Wikipedia)</p>
+        <p>See the following for more information:</p>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/7-Zip">Wikipedia entry</a></li>
+        </ul>
+    </info>
+    <mimeType>application/x-7z-compressed</mimeType>
+    <fileExt>.zip</fileExt>
+    <formatFamily>Container.Compressed</formatFamily>
+</format>
