@@ -7,7 +7,7 @@ import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "
 
 import module namespace vfm = "http://clarin.ids-mannheim.de/standards/view-format" at "../modules/view-format.xql";
 import module namespace vsm = "http://clarin.ids-mannheim.de/standards/view-spec" at "../modules/view-spec.xql";
-
+import module namespace vvm="http://clarin.ids-mannheim.de/standards/view-version" at "../modules/view-version.xql";
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
 
 declare
@@ -43,13 +43,14 @@ return
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
                 <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
             </head>
-            <body>
-                <div id="all">
-                    <div class="logoheader"/>
-                    {menu:view()}
+             <body>
+                 <div id="all">
+                     <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
+                     {menu:view("Data Deposition Formats")}
                     <div class="content">
-                        <div class="navigation"> &gt;
-                            <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
+                        <div class="navigation"> 
+                          &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
+                          &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
                         </div>
                         <div><span class="heading">The requested format information is not found.</span></div>
                     </div>
@@ -92,15 +93,16 @@ return
                 <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
                 <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
             </head>
-            <body>
-            <!-- <body onload="createTags();drawGraph('{vsm:get-spec-json($format)}','500','300','-200')">-->
-                <div id="all">
-                    <div class="logoheader"/>
-                    {menu:view()}
+             <body>
+             <!-- <body onload="createTags();drawGraph('{vsm:get-spec-json($format)}','500','300','-200')">-->
+                 <div id="all">
+                     <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
+                     {menu:view("Data Deposition Formats")}
                     <div class="content">
-                        <div class="navigation"> &gt;
-                            <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a> &gt;
-                            <a href="{app:link(concat("views/view-format.xq?id=", $id))}">{$format-name}</a>
+                        <div class="navigation"> 
+                            &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a> 
+                            &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a> 
+                            &gt; <a href="{app:link(concat("views/view-format.xq?id=", $id))}">{$format-name}</a>
                         </div>
                         <div class="title">
                             <span id="nametext">{$format-name}</span>
@@ -203,7 +205,9 @@ return
                             $sortBy,$language)}
                         <div>
                             <span id="desctext{$id}" class="heading">Description: </span>
-                            <span class="desctext">{$format/info[@type = "description"]}</span>
+                            <span class="desctext">{
+                              app:prepareInfo($format/info[@type = "description"],$id)
+                          }</span>
                         </div>
 <!--
                         <div align="right"><p><a href="{app:getGithubFormatIssueLink($id)}">[suggest a fix or extension]</a></p></div>
@@ -216,9 +220,9 @@ return
                         <div id="tags" style="display:none">
                             <a style="font-size:22px" onclick="return false">{$format-abbr}</a>
                             {vfm:print-keyword-links($format)}
-                        </div>
+                        </div>                        
                         
-                        {vsm:print-spec-relation($format,$id, fn:true())}
+                        {vvm:print-version-relation($id,$format,$id,fn:true())}
                         {vsm:print-graph($format)}
                     </div>
                     <div class="footer">{app:footer()}</div>

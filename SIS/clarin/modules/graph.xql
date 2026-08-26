@@ -58,7 +58,8 @@ declare function graph:create-link($source, $target, $label){
 (: Create a graph node for the given spec or spec version :)
 declare function graph:create-spec-node($node){    
     let $node-title := $node/titleStmt/title/text()
-    let $node-name := $node/titleStmt/abbr/text() 
+    let $node-name := $node/@id
+    (:let $node-name := $node/titleStmt/abbr/text() :)
         (:if ($node/titleStmt/abbr/text())
         then $node/titleStmt/abbr/text()
         else concat($node/ancestor::spec/titleStmt/abbr/text(),
@@ -78,7 +79,7 @@ declare function graph:create-spec-node($node){
 declare function graph:create-format-node($node, $isFormat as xs:boolean){
     let $node-name := 
         if ($isFormat)
-        then $node/titleStmt/abbr/text()
+        then data($node/@id)
         else $node
     let $node-link := 
         if ($isFormat)

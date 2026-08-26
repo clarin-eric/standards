@@ -363,19 +363,26 @@ declare function vvm:print-version-relation($spec-id,$version,$version-id,$isFor
                         let  $target-link := 
                             if ($target-node/@standardSettingBody)
                             then app:link(concat('views/view-spec.xq?id=',$target-node/data(@id)))
-                            else app:link(concat('views/view-spec.xq?id=',$target-node/../data(@id),'#',data($target-node/@id)))                        
-                         let $target-name := 
-                            if ($target-node/titleStmt/abbr/text())
-                            then $target-node/titleStmt/abbr/text()
-                            else concat($target-node/ancestor::spec/titleStmt/abbr/text(),
-                                    "-",substring($target-node/date,1,4))
+                            else app:link(concat('views/view-spec.xq?id=',$target-node/../data(@id),'#',data($target-node/@id)))    
+                                        
+                        let $target-abbr := $target-node/titleStmt/abbr/text()
+                        let $target-name := 
+                            if ($target-abbr)
+                            then $target-abbr
+                            else vvm:check-ancestor-abbr($target-node)
+                        
+                        let $a :=
+                          if ($target-name)
+                          then (<a id="vrel{$version-id}--{$r}link" href="{$target-link}">
+                      		            {$target-name}
+                      			   </a>)
+                          else ($target, app:print-missing-link($target, "specification"))
+                                        
                         order by $target
                         return (
                       		   <li id="vrel{$version-id}--{$r}li">
                       		       <span id="vrel{$version-id}--{$r}pid" style="display:none">{$target}</span>
-                      		       <a id="vrel{$version-id}--{$r}link" href="{$target-link}">
-                      		            {$target-name}
-                      			   </a> 
+                      		        {$a}
                         		                                         
                       		 	   <span id="vrel{$version-id}--{$r}text"> { $version-relations[$r]/info/* } </span>                      			 	   
                       		 	</li>
@@ -432,6 +439,14 @@ declare function vvm:print-version-relation($spec-id,$version,$version-id,$isFor
            :)
        )
                
+};
+
+declare function vvm:check-ancestor-abbr($target-node){
+  let $ancestor-abbr := $target-node/ancestor::spec/titleStmt/abbr/text()
+  return
+  if ($ancestor-abbr)
+  then concat($ancestor-abbr,"-",substring($target-node/date,1,4))
+  else ()
 };
 
 (: Print the version documents and its uplaod form :)

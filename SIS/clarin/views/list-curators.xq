@@ -22,26 +22,29 @@ declare
   %output:html-version("5")
 function sis:print() as element(html) {
   
-
+  let $sortBy := request:parameter('sortBy', '')  
+  
   let $ri := app:get-ri()
-  let $language := app:determine-language($ri)
+  let $language := app:determine-language($ri)  
   let $rows as element(tr)* := 
     for $r in $recommendation:centres[concat(header/respStmt/name) ne '']
               let $brief := data($r/header/centre/@id)
               let $cur as element(name)+ := $r/header/respStmt/name
               let $date as element(reviewDate)+ := $r/header/respStmt/reviewDate
+              let $sort-date as xs:date? := xs:date($date[1])
               let $comm := $r/header/lastUpdateCommitID
-              order by $brief
+              order by if ($sortBy = 'date') then ($sort-date) else ($brief) 
               return 
               <tr style="vertical-align:top">
-              <td><a href="{app:link(concat("views/view-centre.xq?id=", $brief))}">{$brief}</a></td>
-              <td style="padding-bottom:0.5em">{for $l in $cur
-                   return ($l, <br />)
-              }</td>
-              <td>{for $l in $date
-                   return (rf:paint-curation-date($l,$language,true()), <br />)
-              }</td>
-              <td style="font-family:monospace; font-size: 0.9em"><a href="{concat('https://github.com/clarin-eric/standards/commit/',$comm)}">{substring($comm,1,8)}</a></td>
+                  <td class="row"><a href="{app:link(concat("views/view-centre.xq?id=", $brief))}">{$brief}</a></td>
+                  <td class="row" style="padding-bottom:0.5em">
+                  {for $l in $cur
+                     return ($l, <br />)
+                  }</td>
+                  <td class="row">{for $l in $date
+                     return (rf:paint-curation-date($l,$language,true()), <br />)
+                  }</td>
+                  <td class="row" style="font-family:monospace; font-size: 0.9em"><a href="{concat('https://github.com/clarin-eric/standards/commit/',$comm)}">{substring($comm,1,8)}</a></td>
               </tr>
   
   return 
@@ -54,11 +57,11 @@ function sis:print() as element(html) {
           <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
           <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
       </head>
-      <body>
-          <div id="all">
-              <div class="logoheader"/>
-              {menu:view()}
-              <div class="content">
+       <body>
+           <div id="all">
+               <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
+               {menu:view("Centre Curation")}
+               <div class="content">
                   <div class="navigation">
                       &gt; <a href="{app:link("views/list-centres.xq")}">Centres</a>
                       &gt; <a href="{app:link("views/list-curators.xq")}">Centre Curation</a>
@@ -83,9 +86,9 @@ function sis:print() as element(html) {
   
                       <table id ="curation-table" style="width:600px">
                           <tr>
-                              <th class="header" style="width:30%;">Centre by ID</th>
+                              <th class="header" style="width:30%;"><a href="{app:link("views/list-curators.xq?sortBy=id")}">Centre by ID</a></th>
                               <th class="header" style="width:30%;">Curator(s)</th>
-                              <th class="header" style="width:20%;">Date stamp</th>
+                              <th class="header" style="width:20%;"><a href="{app:link("views/list-curators.xq?sortBy=date")}">Date stamp</a></th>
                               <th class="header" style="width:20%;">Last commit</th>
                           </tr>
                           {$rows}

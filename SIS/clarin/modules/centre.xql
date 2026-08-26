@@ -9,14 +9,15 @@ at "../model/recommendation-by-centre.xqm";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rf = "http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "domain.xql";
+import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-module" at "format.xql";
 import module namespace web = "https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
 import module namespace functx = "http://www.functx.com";
 
-declare function cm:get-centre($id as xs:string) as element(centre){
+declare function cm:get-centre($id as xs:string) as element(centre)? {
     centre:get-centre($id)
 };
 
-declare function cm:isDepositing($centre as element(centre)) as xs:boolean {
+declare function cm:isDepositing($centre as element(centre)?) as xs:boolean {
     if(xs:boolean($centre/@deposition)) then true() else false()
 };
 
@@ -211,7 +212,7 @@ declare function cm:print-centre-row($c, $ris) {
     </tr>
 };
 
-declare function cm:get-recommendations($id as xs:string) as element(recommendation){
+declare function cm:get-recommendations($id as xs:string) as element(recommendation)? {
     recommendation:get-recommendations-for-centre($id)
 };
 
@@ -229,37 +230,6 @@ declare function cm:get-centre-info($id, $lang) {
             $centre-info
         else
             cm:get-default-info($id)
-};
-
-declare function cm:parseFormatRef($info,$id) {
-    if ($info)
-    then
-        (
-        element span {
-            $info/@*,
-            attribute {"id"} {concat("desctext",$id)},
-            attribute {"class"} {"desctext"},
-            for $node in $info/node()
-            return
-                if ($node/self::p)
-                then
-                    element p {
-                        $node/@*,
-                        for $pNode in $node/node()
-                        return
-                            if ($pNode/self::formatRef)
-                            then
-                                <a href="{app:link(concat("views/view-format.xq?id=", $pNode/@ref))}">
-                                    {substring($pNode/@ref, 2)}</a>
-                            else
-                                $pNode
-                    }
-                else
-                    ($node)
-        }
-        )
-    else
-        ()
 };
 
 declare function cm:get-default-info($id) {

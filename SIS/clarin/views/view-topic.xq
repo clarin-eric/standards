@@ -30,13 +30,13 @@ return
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
         </head>
-        <body>
-            <div id="all">
-                <div class="logoheader"/>
-                {menu:view()}
-                {
-                    
-                    if ($id and $topic) then
+         <body>
+           <div id="all">
+               <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
+                 {menu:view("Topics")}
+                 {
+                     
+                     if ($id and $topic) then
                         <div class="content">
                             <div class="navigation">&gt; <a href="list-topics.xq">Topics</a>
                                 &gt; <a href="{app:link(concat("views/view-topic.xq?id=", $topic/@id))}">{$topic-name}</a>

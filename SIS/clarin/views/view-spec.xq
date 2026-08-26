@@ -5,6 +5,7 @@ module namespace sis = 'sis';
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace vsm ="http://clarin.ids-mannheim.de/standards/view-spec" at "../modules/view-spec.xql";
+import module namespace vvm="http://clarin.ids-mannheim.de/standards/view-version" at "../modules/view-version.xql";
 import module namespace tm ="http://clarin.ids-mannheim.de/standards/topic-module" at "../modules/topic.xql";
 
 (:  Define the standard page
@@ -37,10 +38,10 @@ function sis:print() as element(html) {
           <link rel="stylesheet" type="text/css" href="{app:resource("style.css","css")}"/>
           <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
       </head>    
-      <body>
-          <div id="all">
-             <div class="logoheader"/>		
-                  {menu:view()}
+       <body>
+           <div id="all">
+              <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>		
+                   {menu:view("Standards")}
              <div class="content">
                  <div class="navigation">
                          &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards</a>                    
@@ -72,13 +73,13 @@ function sis:print() as element(html) {
           <script type="text/javascript" src="{app:resource("tinymce/tinymce.min.js","js")}"/>
           <script type="text/javascript" src="{app:resource("xmleditor.js","js")}"/>
       </head>       
-         <body onload="createTags();drawGraph('{vsm:get-spec-json($spec)}','500','300','-200')">
-              <div id="all">
-                  <div class="logoheader"/>		
-                       {menu:view()}
-                  <div class="content">
+           <body onload="createTags();drawGraph('{vsm:get-spec-json($spec)}','500','300','-200')">
+                <div id="all">
+                    <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>		
+                         {menu:view("Standards")}
+                   <div class="content">
                       <div class="navigation">
-                          &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specification</a>
+                          &gt; <a href="{app:link("views/list-specs.xq?sortBy=name&amp;page=1")}">Standards and Specifications</a>
                           &gt; <a href="{app:link(concat("views/view-spec.xq?id=", $id))}">{$spec-name}</a>
                       </div>                
                          
@@ -105,7 +106,7 @@ function sis:print() as element(html) {
                        <div>{vsm:print-spec-description($spec/info[@type="description"], $id)}</div>                     
                        {vsm:print-url($spec)}
                        {vsm:print-spec-assets($id,$spec/asset/a)}
-                       {vsm:print-spec-relation($spec,$id,fn:false())}
+                       {vvm:print-version-relation($id,$spec,$id,fn:false())}
                        {vsm:print-topic-specs($id,$spec-topic)}
                        {vsm:print-spec-bibliography($spec/info[@type="recReading"]/biblStruct)}
                        <br/>

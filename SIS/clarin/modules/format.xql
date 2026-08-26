@@ -138,7 +138,7 @@ declare function fm:list-missing-format-ids($sortBy){
             <li>
                 <span class="pointer" onclick="showHide('{$id}','block')"> 
                     {fn:substring($id, 2)} ({$numOfRecommendations}) </span>
-                {rf:print-missing-format-link($id)}
+                {app:print-missing-link($id,"format")}
                 {app:create-copy-button($id,$id,"Copy ID to clipboard","Format ID copied")}
                 <ul id="{$id}" style="display:none; padding-left:15px;">
                     {for $r in $recommendations

@@ -11,13 +11,14 @@ at "../model/recommendation-by-centre.xqm";
 
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
+import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-module" at "../modules/format.xql";
 
 import module namespace functx = "http://www.functx.com";
 
 declare variable $rf:pageSize := 50;
 declare variable $rf:searchMap := rf:getSearchMap();
 
-declare function rf:isCurated($recommendation as element(recommendation)){
+declare function rf:isCurated($recommendation as element(recommendation)?){
     let $respStmt := $recommendation/header/respStmt
     let $respName := string($respStmt[1]/name)
     return 
@@ -408,25 +409,6 @@ declare function rf:print-recommendation-row($format, $centre, $domain, $languag
 
 };
 
-declare function rf:parseFormatRef($format-comment) {
-    if ($format-comment)
-    then
-        (
-        element comment {
-            $format-comment/@*,
-            for $node in $format-comment/node()
-            return
-                if ($node/self::formatRef)
-                then
-                    <a href="{app:link(concat("views/view-format.xq?id=", $node/@ref))}">
-                        {substring($node/@ref, 2)}</a>
-                else
-                    $node
-        }
-        )
-    else
-        ()
-};
 
 declare function rf:print-recommendation-row($format, $centre, $domain, $language,
 $includeFormat, $includeCentre) {
@@ -439,13 +421,13 @@ $includeFormat, $includeCentre) {
             )
         else(
             fn:substring($format-id, 2),
-            rf:print-missing-format-link($format-id)
+            app:print-missing-link($format-id,"format")
             )
     
     let $level := $format/level/text()
     let $isUmbrella := if ($format-obj/info[@umbrella="yes"]) then  fn:true() else fn:false()
     let $format-comment := rf:print-format-comments($format, $language)
-    let $modifiedComment := rf:parseFormatRef($format-comment)
+    let $modifiedComment := app:parseFormatRef($format-comment, "comment")
     
     let $domainId := data($domain/@id)
     let $domainName := $domain/name/text()
@@ -542,18 +524,6 @@ declare function rf:print-format-comments($format, $language) {
                 $format/comment[not(@xml:lang)]
                 
     return $comment
-};
-
-declare function rf:print-missing-format-link($format-id) {
-    <span class="tooltip">
-        <a style="margin-left:5px;" href="{app:getGithubFormatIssueLink($format-id)}">
-            <img src="{app:resource("plus.png", "img")}" height="15"/>
-        </a>
-        <span
-            class="tooltiptext"
-            style="width:300px;">Click to add or suggest missing format information
-        </span>
-    </span>
 };
 
 declare function rf:print-format($format-id, $format-obj) {
