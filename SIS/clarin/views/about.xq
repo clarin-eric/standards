@@ -24,7 +24,7 @@ declare
   %output:indent("yes")
   %output:html-version("5")
 function sis:print() as element(html) {
-  let $version := fn:doc("../data/dbVersion.xml")
+  let $version as xs:string := fn:doc("../data/dbVersion.xml")/dbVersion/text()
   return
   <html lang="en">
       <head>
