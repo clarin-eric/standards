@@ -81,7 +81,7 @@ function sis:print() as element(html) {
                       as a character-based cue if, for any reason, colour-coding won't work. The "Last commit" 
                       column can be treated as mostly internal information: we try to make it reflect the last commit that 
                       significantly changed the information content of a centre's recommendation list.</p>
-                      <p>The list below only shows the {count($rows)} <i>curated</i> centres. To get a broader view, please
+                      <p>The list below only shows the {count($rows)} <i> curated</i> centres. To get a broader view, please
                       turn to the full <a href="{app:link("views/list-centres.xq")}">list of centres</a>.</p>
                       </div>
   
