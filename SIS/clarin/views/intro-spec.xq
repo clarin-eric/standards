@@ -54,12 +54,13 @@ function sis:print() as element(html) {
                           
                       </div>
                       
-                      <div class="title">Introduction: Standards and Specifications</div>
+                      <div class="title">Introduction: what this Watchtower is made of</div>
                       
                       <div>                    
-                                            
-                        <!-- <h2 id="introduction">Introduction: standards and specifications</h2>
-                         -->
+                        <p>As of 2026, this part of the SIS is undergoing restructuring. Expect new items and updates; community additions are welcome!</p>
+                        <p>The Watchtower aims to provide an overview of the network of dependencies between various standards, technical specification and best practices used in CLARIN and related research infrastructures.</p>
+                        <p>One way for community participation is via pull requests at GitHub, another through adding info on (emerging) standards, via Google Forms (to come) to the Waiting Room, from which it is going to be added as separate (mostly stub) documents.</p>
+                        <h2 id="introduction">Standards and specifications</h2>
                         <p>ISO defines a <a href="https://www.iso.org/obp/ui#home">standard</a> as “a document that provides requirements, 
                         specifications, guidelines or characteristics that can be used consistently to ensure that materials, products, 
                         processes and services are fit for their purpose.” Commonly, a standard developed within a standardization body
