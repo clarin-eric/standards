@@ -29,22 +29,22 @@ function sis:print() as element(html) {
                   
                   <div>
                       <p>The CLARIN Standards Information System provides REST API that can be accessed at
-                          <a href="https://clarin.ids-mannheim.de/standards/rest/">
-                              https://clarin.ids-mannheim.de/standards/rest/</a>.</p>
+                          <a href="https://standards.clarin.eu/sis/rest/">
+                              https://standards.clarin.eu/sis/rest/</a>.</p>
                   </div>
                   
                   <div style="margin-top:30px;"><span class="subtitle">Retrieving centre recommendations</span>
                       <hr/>
                       <p><span class="heading">Method: </span> GET</p>
                       <p><span class="heading">Service URL: </span>
-                          <code>https://clarin.ids-mannheim.de/standards/rest/data/recommendations/[centre-id]-recommendation.xml</code></p>
+                          <code>https://standards.clarin.eu/sis/rest/data/recommendations/[centre-id]-recommendation.xml</code></p>
                       <p>Recommendations of a centre can be simply retrieved by replacing <code>[centre-id]</code> with a centre identifier listed at
-                          <a href="{app:link("views/list-centre.xq")}">the centre page</a>.
+                          <a href="{app:link("views/list-centres.xq")}">the centre page</a>.
                       </p>
                       <p><span class="heading">Example using curl:</span></p>
                       <p>
                           <code>
-                              curl 'https://clarin.ids-mannheim.de/standards/rest/data/recommendations/IDS-recommendation.xml'
+                              curl 'https://standards.clarin.eu/sis/rest/data/recommendations/IDS-recommendation.xml'
                           </code>
                       </p>
                   </div>
@@ -53,7 +53,7 @@ function sis:print() as element(html) {
                       <hr/>
                       <p><span class="heading">Method: </span> GET</p>
                       <p><span class="heading">Service URL: </span>
-                          <code>https://clarin.ids-mannheim.de/standards/rest/views/recommended-formats-with-search.xq</code>
+                          <code>https://standards.clarin.eu/sis/rest/views/recommended-formats-with-search.xq</code>
                       </p>
                       <p><span class="heading">Query parameters:</span>
                       </p>
@@ -101,7 +101,7 @@ function sis:print() as element(html) {
                       <p><span class="heading">Example using curl:</span></p>
                       <p>
                           <code>
-                              curl 'https://clarin.ids-mannheim.de/standards/rest/views/recommended-formats-with-search.xq?
+                              curl 'https://standards.clarin.eu/sis/rest/views/recommended-formats-with-search.xq?
                               centre=IDS&amp;domain=1&amp;level=recommended&amp;ri=Text%2B&amp;export=yes'
                           </code>
                       </p>
@@ -111,7 +111,7 @@ function sis:print() as element(html) {
                       <hr/>
                       <p><span class="heading">Method: </span> GET</p>
                       <p><span class="heading">Service URL: </span>
-                          <code>https://clarin.ids-mannheim.de/standards/rest/data/formats/[formatId].xml</code>
+                          <code>https://standards.clarin.eu/sis/rest/data/formats/[formatId].xml</code>
                       </p>
                       <p>A format descriptions can be retrieved by replacing <code>[format-id]</code> with a format identifier
                           that can be copied at the <a href="{app:link("views/list-formats.xq")}">data deposition formats</a> page.
@@ -119,7 +119,7 @@ function sis:print() as element(html) {
                       <p><span class="heading">Example using curl:</span></p>
                       <p>
                           <code>
-                              curl 'https://clarin.ids-mannheim.de/standards/rest/data/formats/fCHAT.xml'
+                              curl 'https://standards.clarin.eu/sis/rest/data/formats/fCHAT.xml'
                           </code>
                       </p>
                   </div>
@@ -128,13 +128,13 @@ function sis:print() as element(html) {
                       <hr/>
                       <p><span class="heading">Method: </span> GET</p>
                       <p><span class="heading">Service URL: </span>
-                          <code><a href="https://clarin.ids-mannheim.de/standards/rest/data/domains.xml">
-                                  https://clarin.ids-mannheim.de/standards/rest/data/domains.xml</a></code>
+                          <code><a href="https://standards.clarin.eu/sis/rest/data/domains.xml">
+                                  https://standards.clarin.eu/sis/rest/data/domains.xml</a></code>
                       </p>
                       <p><span class="heading">Example using curl:</span></p>
                       <p>
                           <code>
-                              curl 'https://clarin.ids-mannheim.de/standards/rest/data/domains.xml'
+                              curl 'https://standards.clarin.eu/sis/rest/data/domains.xml'
                           </code>
                       </p>
                   </div>
@@ -144,13 +144,13 @@ function sis:print() as element(html) {
                       <hr/>
                       <p><span class="heading">Method: </span> GET</p>
                       <p><span class="heading">Service URL: </span>
-                          <code><a href="https://clarin.ids-mannheim.de/standards/rest/data/centres.xml">
-                                  https://clarin.ids-mannheim.de/standards/rest/data/centres.xml</a></code>
+                          <code><a href="https://standards.clarin.eu/sis/rest/data/centres.xml">
+                                  https://standards.clarin.eu/sis/rest/data/centres.xml</a></code>
                       </p>
                       <p><span class="heading">Example using curl:</span></p>
                       <p>
                           <code>
-                              curl 'https://clarin.ids-mannheim.de/standards/rest/data/centres.xml'
+                              curl 'https://standards.clarin.eu/sis/rest/data/centres.xml'
                           </code>
                       </p>
                   </div>
