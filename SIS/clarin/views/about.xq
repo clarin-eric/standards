@@ -24,6 +24,8 @@ declare
   %output:indent("yes")
   %output:html-version("5")
 function sis:print() as element(html) {
+  let $version as xs:string := fn:doc("../data/dbVersion.xml")/dbVersion/text()
+  return
   <html lang="en">
       <head>
           <title>About / F.A.Q.</title>
@@ -71,9 +73,8 @@ function sis:print() as element(html) {
                   the <a href="https://www.coretrustseal.org/">CTS</a> requirements in a relatively painless manner, but also to visualize the 
                   aggregated data, and also to return the centre's 
                   data back to it, thanks to the <a href="{app:link("views/api.xq")}">API point</a> that we make available.</p>
-                  <p>For example, for the IDS, you would use, e.g., 
-                  <tt>curl 'https://clarin.ids-mannheim.de/standards/rest/views/recommended-formats-with-search.xq?centre=IDS&amp;export=yes'</tt> -- 
-                  have a look at the API documentation to see what parameters are possible, etc.</p>
+                  <p>For example, for the IDS, you would use the string below (have a look at the API documentation to see what parameters are possible, etc.):</p>
+                  <p><tt>curl 'https://standards.clarin.eu/sis/rest/views/recommended-formats-with-search.xq?centre=IDS&amp;export=yes'</tt></p>
   
                  <p>You can see an example way of querying the data with jQuery at 
                  <a href="https://github.com/IDS-Mannheim/IDS-Mannheim.github.io">https://github.com/IDS-Mannheim/IDS-Mannheim.github.io</a>, and 
@@ -137,7 +138,7 @@ function sis:print() as element(html) {
                    <div id="tech">
                   <h2>Technicalities</h2>
                    <p>The SIS is an open-source project hosted at <a href="https://github.com/clarin-eric/standards">GitHub</a>, built using mainly XQuery (1-3.1) and XML. 
-                   It is running atop <a href="https://basex.org/">BaseX 12.1</a>.</p>
+                   It is running atop {$version}.</p>
                    </div>
                    
                    </div>

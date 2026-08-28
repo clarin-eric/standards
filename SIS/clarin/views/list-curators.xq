@@ -70,14 +70,15 @@ function sis:print() as element(html) {
   
                       <div><p>Curation of data implies cyclic review and potential modification. Given the pace at which our 
                       field progresses and the changing standards landscape, we suggest that, after a year, "it wouldn't be bad"
-                      to review a centre's recommendations, although, in many cases, nothing needs to change after that time. 
-                      The orange colouring of dates older than a year is basically a signal that, after a few more blinks of 
+                      to review a centre's recommendations, even though, in many cases, nothing needs to change after that time. 
+                      The <span style="color:orange">orange</span> colouring of dates older than a year is basically a signal that, 
+                      after a few more blinks of 
                       an eye, it may be worth to ask the colleagues responsible for the local data management and archiving 
                       if anything has changed (perhaps a new format has appeared and/or an older format is not as much 
                       recommended as it used to be, etc.).</p>
-                      <p>The red colour is a signal that two years have passed and perhaps those DM colleagues should be 
-                      contacted just in case. The exclamation mark is not so much to add a sense of urgency as rather to serve 
-                      as a way to mark those longer periods when, for any reason, colour-coding won't work. The "Last commit" 
+                      <p>The <span style="color:red">red</span> colour is a signal that two years have passed and perhaps those DM colleagues should be 
+                      contacted just in case. The function of the exclamation mark is not so much to add a sense of urgency as rather to serve 
+                      as a character-based cue if, for any reason, colour-coding won't work. The "Last commit" 
                       column can be treated as mostly internal information: we try to make it reflect the last commit that 
                       significantly changed the information content of a centre's recommendation list.</p>
                       <p>The list below only shows the {count($rows)} <i> curated</i> centres. To get a broader view, please

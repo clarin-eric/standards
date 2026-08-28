@@ -1,0 +1,27 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="f7Z" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+    <titleStmt>
+        <title>7-Zip File Format</title>
+        <abbr>7-Zip</abbr>
+    </titleStmt>
+    <keyword>compression</keyword>
+    <extId type="LOC">fdd000539</extId>
+    <extId type="PRONOM">fmt/484</extId>
+    <extId type="Wikidata">Q270131</extId>
+    <extDoc type="enWiki">7z</extDoc>
+    <info type="description">
+        <p>"7z is a compressed archive file format that supports several different data compression, encryption and pre-processing algorithms. 
+            The 7z format initially appeared as implemented by the 7-Zip archiver." (Wikipedia)</p>
+        <p>Note: "The 7z format does not allow extraction of some "broken files"—that is (for example) if one has the first segment of a series of 
+            7z files, 7z cannot give the start of the files within the archive—it must wait until all segments are downloaded. The 7z format also 
+            lacks recovery records, making it vulnerable to data degradation unless used in conjunction with external solutions, like parchives, 
+            or within filesystems with robust error-correction. By way of comparison, zip files also lack a recovery feature while the rar format has one." (Wikipedia)</p>
+        <p>See the following for more information:</p>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/7-Zip">Wikipedia entry for the associated archiving utility, 7-Zip</a></li>
+        </ul>
+    </info>
+    <mimeType>application/x-7z-compressed</mimeType>
+    <fileExt>.zip</fileExt>
+    <formatFamily>Container.Compressed</formatFamily>
+</format>
