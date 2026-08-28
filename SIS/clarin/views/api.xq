@@ -48,7 +48,7 @@ function sis:print() as element(html) {
                           </code>
                       </p>
                   </div>
-                  
+                  <!--
                   <div style="margin-top:30px;"><span class="subtitle">Exporting recommendations</span>
                       <hr/>
                       <p><span class="heading">Method: </span> GET</p>
@@ -106,7 +106,7 @@ function sis:print() as element(html) {
                           </code>
                       </p>
                   </div>
-                  
+                  -->
                   <div style="margin-top:30px;"><span class="subtitle">Retrieving format descriptions</span>
                       <hr/>
                       <p><span class="heading">Method: </span> GET</p>
