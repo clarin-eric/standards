@@ -16,7 +16,8 @@
 /**/package.json
 /**/repo.xml
 .settings
-/**/data/*
+/**/data/.logs
+/**/compose/
 /**/webapp/*
 /**/.basex
 /**/.env
