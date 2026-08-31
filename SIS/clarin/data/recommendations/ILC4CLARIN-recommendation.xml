@@ -2,7 +2,7 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
    <header>
-      <lastUpdateCommitID>88fa1a1f69809fa389ab2c59a19bdf0a5ecc3f25</lastUpdateCommitID>
+       <lastUpdateCommitID>773f2e205d792ca9ec3c8b135398e1a349eb1e7a</lastUpdateCommitID>
       <filter>
          <centreID>ILC4CLARIN</centreID>
       </filter>
@@ -10,7 +10,7 @@
          <name>Valeria Quochi</name>
          <resp>Revised full list of recommended formats</resp>
          <link>https://orcid.org/0000-0003-3828-0135</link>
-         <reviewDate>2025-10-24</reviewDate>
+         <reviewDate>2026-08-31</reviewDate>
       </respStmt>
        <respStmt>
          <name>Giulia Pedonese</name>
@@ -28,8 +28,13 @@
    </header>
    <info xml:lang="en">
       <p>This page lists the file formats recommended for depositing data in ILC4CLARIN. </p> 
-      <p>The set of recommended file formats should be taken as an advice concerning the best-practices in use for sharing digital linguistic resources to foster adoption of open and well-documented standards that will enhance the chance of future interpretability of the deposited data. The proposed formats are part of the CLARIN <a href="https://standards.clarin.eu/sis/">Standards Information System</a> recommentations.</p>
-      <p>ILC4CLARIN however adopts an inclusive policy and does not strictly restricts on the recommended formats. It accepts and will preserve resources in the format that it was submitted. In case of doubts, contact the ILC4CLARIN Helpdesk at dspace-clarin-it-ilc-help@ilc.cnr.it before starting submission</p>
+      <p>The set of recommended file formats should be taken as an advice concerning the best-practices in use for sharing digital 
+          linguistic resources to foster adoption of open and well-documented standards that will enhance the chance of future 
+          interpretability of the deposited data. The proposed formats are part of the CLARIN 
+          <a href="https://standards.clarin.eu/sis/">Standards Information System</a> recommentations.</p>
+      <p>ILC4CLARIN however adopts an inclusive policy and does not strictly restrict the recommended formats. It accepts and 
+          will preserve resources in the format that it was submitted. In case of doubts, contact the ILC4CLARIN Helpdesk at 
+          dspace-clarin-it-ilc-help@ilc.cnr.it before starting submission.</p>
    </info>
    <info xml:lang="it">
       <p>Questa pagina elenca i formati di file accettati dal repository ILC4CLARIN</p>
@@ -306,7 +311,7 @@
          <domain>Lexical Resource</domain>
          <level>recommended</level>
       </format>
-      <format id="fSkos">
+      <format id="fSKOS">
          <domain>Lexical Resource</domain>
          <level>recommended</level>
       </format>
