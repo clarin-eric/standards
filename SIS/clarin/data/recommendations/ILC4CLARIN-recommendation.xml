@@ -18,12 +18,6 @@
          <link>https://orcid.org/0000-0002-1321-5444</link>
          <reviewDate>2026-07-28</reviewDate>
       </respStmt>
-      <respStmt>
-         <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
-         <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-         <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-         <reviewDate>0001-01-01</reviewDate>
-      </respStmt>
       <centre id="ILC4CLARIN" deposition="1">
          <centreName>The ILC4CLARIN Centre at the Institute for Computational Linguistics</centreName>
          <registryLink registry="CLARIN" uri="https://centres.clarin.eu/centre/34"/>
