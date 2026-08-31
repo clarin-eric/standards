@@ -11,7 +11,7 @@ import module namespace sb="http://clarin.ids-mannheim.de/standards/standardbody
 import module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema" at "../model/schema.xqm";
 import module namespace centre="http://clarin.ids-mannheim.de/standards/centre" at "../model/centre.xqm";
 
-import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+import module namespace functx = "http://www.functx.com" ;
 
 (: Define functions for the list of standard page
    @author margaretha   

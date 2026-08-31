@@ -11,16 +11,20 @@
   <!--  this is also video, and can be lossy... messy  -->
   <extId type="Wikidata">Q28205908</extId>
   <extId type="PRONOM">fmt/574</extId>
+  <extDoc type="enWiki">DICOM</extDoc>
+  <extDoc type="formatWiki">DICOM</extDoc>
   <info type="description">
-    <p>See <a href="https://en.wikipedia.org/wiki/DICOM">https://en.wikipedia.org/wiki/DICOM</a>.</p>
     <p>Please feel welcome to supply the description of this format file via GitHub: either as an
       <a href="https://github.com/clarin-eric/standards/issues">issue report</a>, or as a pull
       request after forking or browsing the
       <a href="https://github.com/clarin-eric/standards/tree/formats/SIS/clarin/data/formats">code under the 'formats' branch</a>.</p>
     <!--  Many image compression formats possible, https://en.wikipedia.org/wiki/DICOM -->
+    <p>Standardised both by ISO (ISO 12052) and NEMA (National Electrical Manufacturers
+      Association). (The standards relation link looks weird pending work on the proper visualisation.
+      Feel welcome to join us.)</p>
   </info>
-  <!--<relation target="SpecDICOM" type="isDefinedBy"/>
-    ISO 12052, also own committe, and the primary standards body seems to be the NEMA: National Electrical Manufacturers Association
+  <relation target="SpecDICOM" type="isDefinedBy"/>
+    <!-- ISO 12052, also own committee, and the primary standards body seems to be the NEMA: National Electrical Manufacturers Association
    -->
   <mimeType>application/dicom</mimeType>
   <fileExt recommended="yes">.dcm</fileExt>

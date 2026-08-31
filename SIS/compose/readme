@@ -1,0 +1,31 @@
+Running Basex with docker compose
+
+1. Some folders and files from the basex root folder, are required to run the docker-compose file:
+
+	1. data containing database files 
+	2. webapp containing clarin and WEB-INF
+	3. .basex configuration file
+	4. .env file containing environment variables	
+
+2. Set enviroment variables in the .env file
+
+	Set the paths to data, webapp and basex conf files. 
+	Set up gid and uid by checking id
+	
+	$id
+
+3. running basex
+
+	$docker compose up
+
+	-d detached
+
+
+4. Update/replace database
+
+	$ docker compose exec sis-bx sh
+
+	~/basex $ ./bin/basex
+	
+	> create backup data
+	> create db data /opt/basex/webapp/clarin/data

@@ -2,15 +2,14 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
     <header>
-        <lastUpdateCommitID>d9219bdbfef100c44018be8319caab14d037b9fd</lastUpdateCommitID>
+        <lastUpdateCommitID>8a744ac200487cc1dfacc87c64752ff96dd833a4</lastUpdateCommitID>
         <filter>
             <centreID>HR-CLARIN</centreID>
         </filter>
         <respStmt>
-            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
-            <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-            <reviewDate>0001-01-01</reviewDate>
+            <name>Vanja Štefanec</name>
+            <link>https://github.com/vstefanec</link>
+            <reviewDate>2026-08-25</reviewDate>
         </respStmt>
         <centre id="HR-CLARIN" deposition="1">
             <centreName>HR-CLARIN</centreName>
@@ -20,20 +19,296 @@
         </nodeInfo>
       </centre>
     </header>
-    <info><p>For starters, see <a href="https://repository.clarin.hr/home">https://repository.clarin.hr/home</a></p></info>
-    <formats><!--
-            This template will assist in adjusting/creating a recommendations document if you don't
-            have access to a schema-aware XML editor. Copy the XML fragment, 
-            *  adjust the format ID (see https://standards.clarin.eu/sis/views/list-formats.xq ),
-            *  adjust the domain (https://standards.clarin.eu/sis/views/list-domains.xq ),
-            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
-            *  repeat as necessary;
-            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats  **NOTE:** the "formats" branch!
-            
-            <format id="null">
-                <domain>Audiovisual Annotation</domain>
-                <level>recommended</level>
-            </format> 
-        -->
+    <info>
+        <p>This page contains guidelines for depositors regarding file formats suitable for long-term preservation in the <a href="https://repository.clarin.hr/">HR-CLARIN repository</a>.</p>
+        <p>
+            File formats are classified into three acceptance levels across multiple domains. These levels are defined as follows: 
+            “recommended” means that the file format is suitable for long-term data preservation within a given domain; 
+            “acceptable” means that there are formats more suitable for long-term preservation that depositors might consider; 
+            and “discouraged” means that the format, although sometimes used within a certain domain, is not suitable for depositing.
+        </p>
+        <p>This list is not exhaustive and is subject to revision. Depositors are welcome to contact <a href="mailto:clarin@clarin.hr">HR-CLARIN</a> with any questions.</p>
+    </info>
+    <formats>
+        <format id="fCHAT">
+            <domain>Audiovisual Annotation</domain>
+            <level>acceptable</level>
+            <comment>consider using <formatRef ref="fTEISpoken"/> instead</comment>
+        </format>
+        <format id="fCHAT-XML">
+            <domain>Audiovisual Annotation</domain>
+            <level>acceptable</level>
+            <comment>consider using <formatRef ref="fTEISpoken"/> instead</comment>
+        </format>
+        <format id="fTEISpoken">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPraat">
+            <domain>Audiovisual Annotation</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fAIFF">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fAVI">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fFLAC">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fMP3">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fMP4">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fMPEG1">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fMPEG2">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fRAW">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fWAVE">
+            <domain>Audiovisual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fCHAT">
+            <domain>Contextual Information</domain>
+            <level>acceptable</level>
+            <comment>format is acceptable for providing context for data encoded in the <formatRef ref="fCHAT"/> format</comment>
+        </format>
+        <format id="fCHAT-XML">
+            <domain>Contextual Information</domain>
+            <level>acceptable</level>
+            <comment>format is acceptable for providing context for data encoded in the <formatRef ref="fCHAT-XML"/> format</comment>
+        </format>
+        <format id="fTEIHeader">
+            <domain>Contextual Information</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fYAML">
+            <domain>Contextual Information</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fJSON">
+            <domain>Contextual Information</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fCMDI">
+            <domain>Catalogue Metadata</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fCMDI">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fYAML">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fJSON">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fJSONLD">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTEIHeader">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fTextPlain">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>consider using <formatRef ref="fMarkdown"/> instead</comment>
+        </format>
+        <format id="fMarkdown">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fDOC">
+            <domain>Documentation</domain>
+            <level>discouraged</level>
+            <comment>should be replaced with <formatRef ref="fDOCX"/></comment>
+        </format>
+        <format id="fDOCX">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>consider using <formatRef ref="fMarkdown"/> or <formatRef ref="fHTML"/> instead</comment>
+        </format>
+        <format id="fHTML">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fPDF">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+            <comment>consider using some text-based format, e.g. <formatRef ref="fMarkdown"/> or <formatRef ref="fHTML"/></comment>
+        </format>
+
+        <format id="fCSV">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+            <comment>only with a properly structured table header or accompanying documentation</comment>
+        </format>
+        <format id="fTSV">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+            <comment>only with a properly structured table header or accompanying documentation</comment>
+        </format>
+        <format id="fXLSX">
+            <domain>Lexical Resource</domain>
+            <level>acceptable</level>
+            <comment>only with a properly structured table header or accompanying documentation</comment>
+            <comment>consider using <formatRef ref="fCSV"/> or <formatRef ref="fTSV"/> instead</comment>
+        </format>
+        <format id="fXML">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+            <comment>only with a valid <formatRef ref="fDTD"/> or <formatRef ref="fXSD"/> schema definition</comment>
+        </format>
+        <format id="fLex0">
+            <domain>Lexical Resource</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fDTD">
+            <domain>Tool Support</domain>
+            <level>acceptable</level>
+            <comment>consider using <formatRef ref="fXSD"/> instead</comment>
+        </format>
+        <format id="fXSD">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fShapefile">
+            <domain>Geodata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fGeoJSON">
+            <domain>Geodata</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fR">
+            <domain>Statistical Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fHDF5">
+            <domain>Statistical Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCSV">
+            <domain>Statistical Data</domain>
+            <level>recommended</level>
+            <comment>only with a properly structured table header or accompanying documentation</comment>
+        </format>
+        <format id="fTSV">
+            <domain>Statistical Data</domain>
+            <level>recommended</level>
+            <comment>only with a properly structured table header or accompanying documentation</comment>
+        </format>
+        <format id="fXLSX">
+            <domain>Statistical Data</domain>
+            <level>acceptable</level>
+            <comment>only with a properly structured table header or accompanying documentation</comment>
+            <comment>consider using <formatRef ref="fR"/>, <formatRef ref="fCSV"/> or <formatRef ref="fTSV"/> instead</comment>
+        </format>
+
+        <format id="fTextPlain">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fMarkdown">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fJSONL">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTMX">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTEI">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fDOC">
+            <domain>Textual Source Language Data</domain>
+            <level>discouraged</level>
+            <comment>should be replaced with <formatRef ref="fTextPlain"/> or <formatRef ref="fMarkdown"/></comment>
+        </format>
+        <format id="fDOCX">
+            <domain>Textual Source Language Data</domain>
+            <level>discouraged</level>
+            <comment>should be replaced with <formatRef ref="fTextPlain"/> or <formatRef ref="fMarkdown"/></comment>
+        </format>
+
+        <format id="fCoNLL">
+            <domain>Text Annotation</domain>
+            <level>discouraged</level>
+            <comment>should be replaced with either <formatRef ref="fCoNLL-U"/> or <formatRef ref="fCoNLL-U-Plus"/></comment>
+        </format>
+        <format id="fCoNLL-U">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCoNLL-U-Plus">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+            <comment>only with a properly structured header</comment>
+        </format>
+        <format id="fTEI">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fJSONL">
+           <domain>ML Data Preparation</domain>
+           <level>recommended</level>
+        </format>
+
+        <format id="fJSONL">
+           <domain>ML Model Training</domain>
+           <level>recommended</level>
+        </format>
+
+        <format id="f7Z">
+           <domain>Packaging</domain>
+           <level>recommended</level>
+        </format>
+        <format id="fGZIP">
+           <domain>Packaging</domain>
+           <level>recommended</level>
+        </format>
+        <format id="fTAR">
+           <domain>Packaging</domain>
+           <level>recommended</level>
+        </format>
+        <format id="fZIP">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+        </format>
     </formats>
 </recommendation>

@@ -7,8 +7,8 @@ module namespace domain="http://clarin.ids-mannheim.de/standards/domain";
     @author margaretha
 :)
 
-declare variable $domain:domains as element(domain)+ := doc('/db/apps/clarin/data/domains.xml')/domains/domain;
-declare variable $domain:metadomains as element(metadomain)+ := doc('/db/apps/clarin/data/domains.xml')/domains/metadomain;
+declare variable $domain:domains as element(domain)+ := doc('/data/domains.xml')/domains/domain;
+declare variable $domain:metadomains as element(metadomain)+ := doc('/data/domains.xml')/domains/metadomain;
 declare variable $domain:names  as text()+ := $domain:domains/name/text();
 (:declare variable $domain:metadomain-names  as text()+ := $domain:metadomains/name/text();:)
 

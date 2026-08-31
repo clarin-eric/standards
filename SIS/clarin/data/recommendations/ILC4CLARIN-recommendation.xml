@@ -2,13 +2,13 @@
 <?xml-model href="../../schemas/recommendation.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> 
 <recommendation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schemas/recommendation.xsd">
    <header>
-      <lastUpdateCommitID>147cb5ea659a5752efd819898b43da23e00c6a77</lastUpdateCommitID>
+      <lastUpdateCommitID>88fa1a1f69809fa389ab2c59a19bdf0a5ecc3f25</lastUpdateCommitID>
       <filter>
          <centreID>ILC4CLARIN</centreID>
       </filter>
       <respStmt>
          <name>Valeria Quochi</name>
-         <resp>Initial revised selection of recommended formats<!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
+         <resp>Revised full list of recommended formats</resp>
          <link>https://orcid.org/0000-0003-3828-0135</link>
          <reviewDate>2025-10-24</reviewDate>
       </respStmt>
@@ -122,12 +122,11 @@
          <domain>Metadata</domain>
          <level>recommended</level>
       </format>      
-
-        <format id="fHTML">
+      <format id="fHTML">
             <domain>Lexical Resource</domain>
             <level>discouraged</level>
             <comment>ASCII or UTF-8 character encoding required</comment>
-        </format>
+      </format>
        <format id="fHTML">
             <domain>Contextual Data</domain>
             <level>discouraged</level>

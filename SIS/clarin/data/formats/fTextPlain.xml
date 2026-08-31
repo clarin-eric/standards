@@ -7,6 +7,7 @@
   <keyword>text format</keyword>
   <!-- what other keywords should we add here? -->
   <extDoc type="enWiki">Plain_text</extDoc>
+  <extDoc type="formatWiki">Plain_text</extDoc>
   <info type="description">
     <p>Plain text is a pure sequence of character codes. (...) Plain text represents character
       content only, not its appearance. (...) Plain text must contain enough information to permit

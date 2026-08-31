@@ -1,21 +1,23 @@
 xquery version "3.1";
+module namespace sis = 'sis';
 
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace tm = "http://clarin.ids-mannheim.de/standards/topic-module" at "../modules/topic.xql";
 
-declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
-declare option output:method "html";
-declare option output:media-type "text/html";
-declare option output:indent "yes";
-declare option output:html-version "5";
-
 (:  Define the topic page
     @author margaretha
     @date Dec 2013
 :)
+declare
+  %rest:path('/clarin/views/view-topic.xq')
+  %output:method('html')
+  %output:media-type("text/html")
+  %output:indent("yes")
+  %output:html-version("5")
+function sis:print() as element(html) {
 
-let $id := request:get-parameter('id', '')
+let $id := request:parameter('id', '')
 let $topic := tm:get-topic($id)
 let $topic-name := $topic/titleStmt/title/text()
 
@@ -28,13 +30,13 @@ return
             <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
             <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
         </head>
-        <body>
-            <div id="all">
-                <div class="logoheader"/>
-                {menu:view()}
-                {
-                    
-                    if ($id and $topic) then
+         <body>
+           <div id="all">
+               <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
+                 {menu:view("Topics")}
+                 {
+                     
+                     if ($id and $topic) then
                         <div class="content">
                             <div class="navigation">&gt; <a href="list-topics.xq">Topics</a>
                                 &gt; <a href="{app:link(concat("views/view-topic.xq?id=", $topic/@id))}">{$topic-name}</a>
@@ -55,3 +57,4 @@ return
             </div>
         </body>
     </html>
+};

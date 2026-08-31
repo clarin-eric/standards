@@ -43,9 +43,9 @@ declare function index:print-spec-links() {
    order by $spec-id
    return 
         if ( $frequency > 5 or $status = 'International Standard')
-            then (<a href="{$link}" class="tag" style="font-size:25px;">{$spec-abbr} </a> , "  ")
+            then (<a href="{$link}" class="tag" style="font-size:20px;">{$spec-abbr} </a> , "  ")
         else if ($frequency > 0 or contains($status,"Recommendation"))
-            then (<a href="{$link}" class="tag" style="font-size:20px;">{$spec-abbr} </a> , "  ")        
+            then (<a href="{$link}" class="tag" style="font-size:16px;">{$spec-abbr} </a> , "  ")        
         else (<a href="{$link}" class="tag" style="font-size:12px;">{$spec-abbr} </a> , "  ")
         
 };
@@ -68,9 +68,9 @@ declare function index:print-sb-links(){
         return            
             if ($ssb-id != "SBother") then 
                 if ( $frequency > 5)
-                then (<a href="{$link}" class="tag" style="font-size:25px;">{$ssb-name} </a>, "  ")
-                else if ($frequency > 1)
                 then (<a href="{$link}" class="tag" style="font-size:20px;">{$ssb-name} </a>, "  ")
+                else if ($frequency > 1)
+                then (<a href="{$link}" class="tag" style="font-size:16px;">{$ssb-name} </a>, "  ")
                 else (<a href="{$link}" class="tag" style="font-size:12px;">{$ssb-name} </a>, "  ")
             else ()
             
@@ -84,10 +84,11 @@ declare function index:print-format-keywords(){
         let $frequency := fn:count($format:formats[keyword/text() = $k])
         return
             if ($frequency > 5)
-            then <a  href="{$link}" class="tag" style="font-size:25px;" >{$k}</a>
+            then <a  href="{$link}" class="tag" style="font-size:19px;" >{$k}</a>
             else if ($frequency > 1)
-            then <a  href="{$link}" class="tag" style="font-size:20px;" >{$k}</a>
-            else <a  href="{$link}" class="tag" style="font-size:15px;" >{$k}</a>
+            then <a  href="{$link}" class="tag" style="font-size:15px;" >{$k}</a>
+            (:else ():)
+            else <a  href="{$link}" class="tag" style="font-size:12px;" >{$k}</a>
 };
 
 

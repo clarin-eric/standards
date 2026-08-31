@@ -3,14 +3,11 @@ xquery version "3.0";
 module namespace search ="http://clarin.ids-mannheim.de/standards/search-spec";
 import module namespace xsd = "http://clarin.ids-mannheim.de/standards/schema" at "../model/schema.xqm";
 import module namespace spec="http://clarin.ids-mannheim.de/standards/specification" at "../model/spec.xqm";
-
-import module namespace f = "http://clarin.ids-mannheim.de/standards/module/form" at "../edit/edit-form.xq";
-
 import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 import module namespace tm ="http://clarin.ids-mannheim.de/standards/topic-module" at "../modules/topic.xql";
 import module namespace sbm="http://clarin.ids-mannheim.de/standards/sb-module" at "../modules/sb.xql";
 
-import module namespace functx = "http://www.functx.com" at "../resources/lib/functx-1.0-doc-2007-01.xq";
+import module namespace functx = "http://www.functx.com";
 
 (: Define functions for searching standards 
    @author margaretha
@@ -37,13 +34,13 @@ declare function search:spec-by-query-and-filter($query-tokens, $topic, $sb, $st
               
     let $spec-by-query :=
         for $token in $query-tokens
-            let $specs-by-title := $spec:specs[contains(lower-case(titleStmt/title/text()),lower-case($token))]/@id
-            let $specs-by-abbr := $spec:specs[contains(lower-case(titleStmt/abbr/text()),lower-case($token))]/@id
-            let $specs-by-versionnummer := $spec:specs/descendant-or-self::version[contains(versionNumber,$token)]/@id
-            let $specs-by-scope := $spec:specs[contains(lower-case(scope),lower-case($token))]/@id
+            let $specs-by-title := $spec:specs[contains(string-join(lower-case(titleStmt/title/text())),lower-case($token))]/@id
+            let $specs-by-abbr := $spec:specs[contains(string-join(lower-case(titleStmt/abbr/text())),lower-case($token))]/@id
+            let $specs-by-versionnummer := $spec:specs/descendant-or-self::version[contains(string-join(versionNumber),$token)]/@id
+            let $specs-by-scope := $spec:specs[contains(string-join(lower-case(scope)),lower-case($token))]/@id
             let $specs-by-keyword := $spec:specs[contains(lower-case(fn:string-join(keyword/text()," ")),lower-case($token))]/@id 
-            let $specs-by-topic := $spec:specs[contains(lower-case(@topic),lower-case($token))]/@id
-            let $specs-by-sb := $spec:specs[contains(lower-case(@standardSettingBody),lower-case($token))]/@id     
+            let $specs-by-topic := $spec:specs[contains(string-join(lower-case(@topic)),lower-case($token))]/@id
+            let $specs-by-sb := $spec:specs[contains(string-join(lower-case(@standardSettingBody)),lower-case($token))]/@id     
         return ($specs-by-versionnummer,$specs-by-title,$specs-by-abbr,$specs-by-keyword,$specs-by-scope,$specs-by-topic,$specs-by-sb)
              
     let $spec-group := 
@@ -64,7 +61,7 @@ declare function search:spec-by-query-and-filter($query-tokens, $topic, $sb, $st
 
 (: List status types :)
 declare function search:list-status($selectedStatus){
-    f:list-options(xsd:get-statuses(),$selectedStatus)
+    app:list-options(xsd:get-statuses(),$selectedStatus)
 };
 
 (: Search standards by topic:)

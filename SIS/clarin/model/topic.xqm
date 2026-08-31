@@ -8,7 +8,7 @@ module namespace topic="http://clarin.ids-mannheim.de/standards/topic";
 
 (: Select all unhidden topics and sort it by title :)
 declare variable $topic:topics := 
-    for $topic in doc('/db/apps/clarin/data/topics.xml')/topics/topic[not(data(@display)='hide')]    
+    for $topic in doc('/data/topics.xml')/topics/topic[not(data(@display)='hide')]    
     order by $topic/titleStmt/title/text()
     return $topic;
 

@@ -1,36 +1,38 @@
 xquery version "3.1";
 
+module namespace sis = 'sis';
+
 import module namespace menu = "http://clarin.ids-mannheim.de/standards/menu" at "../modules/menu.xql";
 import module namespace app = "http://clarin.ids-mannheim.de/standards/app" at "../modules/app.xql";
 
 import module namespace vfm = "http://clarin.ids-mannheim.de/standards/view-format" at "../modules/view-format.xql";
 import module namespace vsm = "http://clarin.ids-mannheim.de/standards/view-spec" at "../modules/view-spec.xql";
-
+import module namespace vvm="http://clarin.ids-mannheim.de/standards/view-version" at "../modules/view-version.xql";
 import module namespace domain = "http://clarin.ids-mannheim.de/standards/domain" at "../model/domain.xqm";
 
-declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
-declare option output:method "html";
-declare option output:media-type "text/html";
-declare option output:indent "yes";
-declare option output:html-version "5";
+declare
+  %rest:path('/clarin/views/view-format.xq')
+  %output:method('html')
+  %output:media-type("text/html")
+  %output:indent("yes")
+  %output:html-version("5")
+function sis:print() as element(html) {
 
-let $id := request:get-parameter('id', '')
-let $centre := request:get-parameter('centre', '')
-let $domain := request:get-parameter('domain', '')
-let $recommendationType := request:get-parameter('type', '')
-let $sortBy := request:get-parameter('sortBy', 'centre')
-
-let $ri := app:get-ri()
-let $language := app:determine-language($ri)
-
-let $format := vfm:get-format($id)
-let $format-name := $format/titleStmt/title/text()
-let $format-abbr := $format/titleStmt/abbr/text()
-
-let $format-domains := vfm:get-recommended-domains-by-format($id)
-
-let $is-umbrella as xs:boolean := fn:boolean($format/info/@umbrella)
-
+  let $id := request:parameter('id', '')
+  let $centre := request:parameter('centre', '')
+  let $domain := request:parameter('domain', '')
+  let $recommendationType := request:parameter('type', '')
+  let $sortBy := request:parameter('sortBy', 'centre')
+  
+  let $ri := app:get-ri()
+  let $language := app:determine-language($ri)
+  
+  let $format := vfm:get-format($id)
+  let $format-name := $format/titleStmt/title/text()
+  let $format-abbr := $format/titleStmt/abbr/text()  
+  let $format-domains := vfm:get-recommended-domains-by-format($id)
+  
+  let $is-umbrella as xs:boolean := fn:boolean($format/info/@umbrella)
 return
     
     if (not($id) or not($format)) then
@@ -41,13 +43,14 @@ return
                 <link rel="stylesheet" type="text/css" href="{app:resource("style.css", "css")}"/>
                 <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
             </head>
-            <body>
-                <div id="all">
-                    <div class="logoheader"/>
-                    {menu:view()}
+             <body>
+                 <div id="all">
+                     <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
+                     {menu:view("Data Deposition Formats")}
                     <div class="content">
-                        <div class="navigation"> &gt;
-                            <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
+                        <div class="navigation"> 
+                          &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a>
+                          &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a>
                         </div>
                         <div><span class="heading">The requested format information is not found.</span></div>
                     </div>
@@ -90,15 +93,16 @@ return
                 <script type="text/javascript" src="{app:resource("utils.js", "js")}"/>
                 <script type="text/javascript" src="{app:resource("session.js", "js")}"/>
             </head>
-            <body>
-            <!-- <body onload="createTags();drawGraph('{vsm:get-spec-json($format)}','500','300','-200')">-->
-                <div id="all">
-                    <div class="logoheader"/>
-                    {menu:view()}
+             <body>
+             <!-- <body onload="createTags();drawGraph('{vsm:get-spec-json($format)}','500','300','-200')">-->
+                 <div id="all">
+                     <a class="logoheader" href="https://www.clarin.eu/" target="_blank"/>
+                     {menu:view("Data Deposition Formats")}
                     <div class="content">
-                        <div class="navigation"> &gt;
-                            <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a> &gt;
-                            <a href="{app:link(concat("views/view-format.xq?id=", $id))}">{$format-name}</a>
+                        <div class="navigation"> 
+                            &gt; <a href="{app:link("views/recommended-formats-with-search.xq")}">Format Recommendations</a> 
+                            &gt; <a href="{app:link("views/list-formats.xq")}">Data Deposition Formats</a> 
+                            &gt; <a href="{app:link(concat("views/view-format.xq?id=", $id))}">{$format-name}</a>
                         </div>
                         <div class="title">
                             <span id="nametext">{$format-name}</span>
@@ -201,7 +205,9 @@ return
                             $sortBy,$language)}
                         <div>
                             <span id="desctext{$id}" class="heading">Description: </span>
-                            <span class="desctext">{$format/info[@type = "description"]}</span>
+                            <span class="desctext">{
+                              app:prepareInfo($format/info[@type = "description"],$id)
+                          }</span>
                         </div>
 <!--
                         <div align="right"><p><a href="{app:getGithubFormatIssueLink($id)}">[suggest a fix or extension]</a></p></div>
@@ -214,12 +220,13 @@ return
                         <div id="tags" style="display:none">
                             <a style="font-size:22px" onclick="return false">{$format-abbr}</a>
                             {vfm:print-keyword-links($format)}
-                        </div>
+                        </div>                        
                         
-                        {vsm:print-spec-relation($format,$id, fn:true())}
+                        {vvm:print-version-relation($id,$format,$id,fn:true())}
                         {vsm:print-graph($format)}
                     </div>
                     <div class="footer">{app:footer()}</div>
                 </div>
             </body>
         </html>
+};

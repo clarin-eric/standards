@@ -15,4 +15,10 @@
 /**/package-lock.json
 /**/package.json
 /**/repo.xml
-/**/docker
+.settings
+/**/data/.logs
+/**/compose/
+/**/webapp/*
+/**/.basex
+/**/.env
+*.tar.gz

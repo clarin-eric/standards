@@ -45,12 +45,7 @@ declare function fm:list-search-suggestion(){
 
 declare function fm:create-format-link($format-id, $format-abbr, $format-name){
         let $link := app:link(concat("views/view-format.xq?id=", $format-id))
-            
-        let $link-title := 
-            if (exists($format-name))
-                then $format-abbr
-                else concat($format-abbr, " (",$format-name,")")
-                
+        let $link-title := $format-abbr
         return <a href="{$link}">{$link-title}</a>
 };
 
@@ -143,7 +138,7 @@ declare function fm:list-missing-format-ids($sortBy){
             <li>
                 <span class="pointer" onclick="showHide('{$id}','block')"> 
                     {fn:substring($id, 2)} ({$numOfRecommendations}) </span>
-                {rf:print-missing-format-link($id)}
+                {app:print-missing-link($id,"format")}
                 {app:create-copy-button($id,$id,"Copy ID to clipboard","Format ID copied")}
                 <ul id="{$id}" style="display:none; padding-left:15px;">
                     {for $r in $recommendations
@@ -197,20 +192,11 @@ declare function fm:list-missing-format-abbrs(){
 declare function fm:print-multiple-values($list) {
     let $numOfItems := count($list)
     let $list := fn:sort($list)
-    let $text-width := 25
     
     for $k in (1 to $numOfItems)
         let $text := $list[$k]/text()
-        return
-            (fm:substring-every-width($text,$text-width),
-            (:if ($list[$k][@recommended = "yes"] )
-            then
-                (<span
-                    id="abbrinternalText"
-                    style="font-size:10px;margin-left:5px;">[recommended]</span>)
-            else
-                (),:)
-            if ($k = $numOfItems) then () else ", "
+        return ($text,
+            if ($k = $numOfItems) then () else <br/> 
             )
 };
 
@@ -229,7 +215,7 @@ declare function fm:list-mime-types() {
     for $type in $mime-types
        let $list := $format:formats[mimeType = $type]
        let $numOfItems := count($list)
-       let $links : = 
+       let $links := 
            for $k in (1 to $numOfItems)
                let $format := $list[$k]
                let $abbr := $format/titleStmt/abbr
@@ -254,7 +240,7 @@ declare function fm:list-extensions() {
     for $e in $extensions
        let $list := $format:formats[fileExt = $e]
        let $numOfItems := count($list)
-       let $links : = 
+       let $links := 
            for $k in (1 to $numOfItems)
                let $format := $list[$k]
                let $abbr := $format/titleStmt/abbr

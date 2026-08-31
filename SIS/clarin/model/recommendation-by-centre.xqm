@@ -6,7 +6,7 @@ module namespace recommendation="http://clarin.ids-mannheim.de/standards/recomme
    @author margaretha
 :)
 
-declare variable $recommendation:centres := collection('/db/apps/clarin/data/recommendations')/recommendation;
+declare variable $recommendation:centres := collection('/data/recommendations')/recommendation;
 
 declare variable $recommendation:format-ids := data($recommendation:centres/formats/format/@id);
 declare variable $recommendation:format-abbrs := 
@@ -18,10 +18,15 @@ It should be mentioned at this point that a recommendation is encoded in an elem
 this is why functions that are actually counting recommendations below have "format" in the name.
 :)
 
-declare function recommendation:get-recommendations-for-centre($id as xs:string) as element(recommendation){
+declare function recommendation:get-recommendations-for-centre($id as xs:string) as element(recommendation)? {
     let $convertedId := translate($id,':è','-e')
-    let $path := concat('/db/apps/clarin/data/recommendations/',$convertedId,"-recommendation.xml")
-    return doc($path)/recommendation
+    let $path := concat('/data/recommendations/',$convertedId,"-recommendation.xml")
+    return 
+        try {
+            doc($path)/recommendation
+        } catch * {
+            ()
+        }
 };
 
 declare function recommendation:get-centres-for-format($format-id){

@@ -1,0 +1,27 @@
+<?xml-model href="../../schemas/format.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<format xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fJSONL" xsi:noNamespaceSchemaLocation="../../schemas/format.xsd" display="show">
+  <titleStmt>
+    <title>Newline-delimited JSON</title>
+    <abbr>JSONL</abbr>
+  </titleStmt>
+  <keyword>data format</keyword>
+  <keyword>JSONL</keyword>
+  <extId type="PRONOM">fmt/2054</extId>
+  <extId type="Wikidata">Q111841144</extId>
+  <info type="description">
+    <p>"JSON Lines is a convenient format for storing structured data that may be 
+      processed one record at a time. It works well with unix-style text processing 
+      tools and shell pipelines. It's a great format for log files. It's also a flexible 
+      format for passing messages between cooperating processes." (https://jsonlines.org/)</p>
+    <p>See the following for more information:</p>
+    <ul>
+      <li><a href="https://jsonlines.org/">Documentation for the JSON Lines text file format</a></li>
+    </ul>
+  </info>
+  <mimeType>application/x-ndjson</mimeType>
+  <mimeType>application/jsonl</mimeType>
+  <mimeType>application/jsonlines</mimeType>
+  <mimeType>application/json</mimeType>
+  <fileExt>.jsonl</fileExt>
+  <formatFamily>JSON</formatFamily>
+</format>

@@ -2,11 +2,12 @@ xquery version "3.1";
 
 module namespace app = "http://clarin.ids-mannheim.de/standards/app";
 import module namespace web = "https://clarin.ids-mannheim.de/standards/web" at "../model/web.xqm";
-import module namespace request = "http://exist-db.org/xquery/request";
+(:import module namespace request = "http://exist-db.org/xquery/request";
 
-(:declare namespace request="http://exist-db.org/xquery/request";
+declare namespace request="http://exist-db.org/xquery/request";:)
 declare namespace functx = "http://www.functx.com";
 
+(:
 declare variable $app:request-module := load-xquery-module("http://exist-db.org/xquery/request");
 declare variable $app:functx-module :=load-xquery-module("http://www.functx.com");
 :)
@@ -32,9 +33,9 @@ declare variable $app:base as xs:string := app:determine-base-uri();
 };:)
 
 declare function app:get-ri(){
-    let $request-ri := request:get-parameter('ri', '')
-    let $cookie-ri := request:get-cookie-value("ri")
-    let $ri :=  if ($request-ri) then $request-ri else request:get-cookie-value("ri")
+    let $request-ri := request:parameter('ri', '')
+    let $cookie-ri := request:cookie("ri")
+    let $ri :=  if ($request-ri) then $request-ri else $cookie-ri
     return 
         if (empty($ri)) then "CLARIN" else $ri
 };
@@ -45,11 +46,12 @@ declare function app:determine-language($ri){
 };
 
 declare function app:determine-base-uri() {
-    let $server-name := request:get-server-name()
+    (:let $server-name := request:get-server-name():)
+    let $server-name := request:hostname()
     return
         if ($server-name eq "localhost")
         then
-            concat("http://", $server-name, ":", request:get-server-port(), "/exist/apps/clarin/")
+            concat("http://", $server-name, ":", request:port(), "/clarin/")
         else
             if ($server-name eq "standards.clarin.eu")
             then
@@ -111,6 +113,19 @@ declare function app:create-copy-button($id, $copy-text, $tooltiptext, $hint) {
     )
 };
 
+
+declare function app:print-missing-link($id, $type as xs:string) {   
+    <span class="tooltip">
+        <a style="margin-left:5px;" href="{app:getGithubIssueLink($id, $type)}">
+            <img src="{app:resource("plus.png", "img")}" height="15"/>
+        </a>
+        <span
+            class="tooltiptext"
+            style="width:300px;">Click to add or suggest missing {$type} information
+        </span>
+    </span>
+};
+
 declare function app:getGithubFormatIssueLink() {
     let $ghLink := 'https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=Incorrect or missing format '
     let $ghLink := concat($ghLink, '[commitId=', web:get-short-commitId(),']')
@@ -118,6 +133,7 @@ declare function app:getGithubFormatIssueLink() {
         $ghLink
 };
 
+(: Deprecated :)
 declare function app:getGithubFormatIssueLink($format-id) {
     let $ghLink := 'https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3Aformats%2C+templatic&amp;template=incorrect-missing-format-description.md&amp;title=Suggestion regarding the description of format ID="'
     let $ghLink := concat($ghLink, $format-id, '", [commitId=', web:get-short-commitId(),']')
@@ -125,12 +141,76 @@ declare function app:getGithubFormatIssueLink($format-id) {
         $ghLink
 };
 
-declare function app:footer() {
-    let $githubLink := concat("https://github.com/clarin-eric/standards/commit/", $web:commitId)
+(: EM: Generalize the function above :)
+declare function app:getGithubIssueLink($id, $type) {
+    let $ghLink := concat('https://github.com/clarin-eric/standards/issues/new?assignees=&amp;labels=SIS%3A',
+    $type,'%2C+templatic&amp;template=incorrect-missing-',
+    $type,'-description.md&amp;title=Suggestion regarding the description of ',
+    $type,' ID="')
+    let $ghLink := concat($ghLink, $id, '", [commitId=', web:get-short-commitId(),']')
     return
-        
-        <div style="text-align: right">
-            <span><b>Version ID</b>: <a href="{$githubLink}">{web:get-short-commitId()}</a></span>
-        </div>
+        $ghLink
+};
 
+
+declare function app:footer() as element(div) {
+    let $commitId as xs:string := web:get-short-commitId()
+    let $linkTarget as xs:string :=
+      if ($commitId = "unavailable") then
+        "https://github.com/clarin-eric/standards/wiki/FAQ"
+      else
+        concat("https://github.com/clarin-eric/standards/commit/", $web:commitId)
+    return
+        <div style="text-align: right">
+            <span>
+                <b>Version ID</b>: 
+                <a href="{$linkTarget}">{$commitId}</a>
+            </span>
+        </div>
+};
+
+(: Generate a list of options from the given list :)
+declare function app:list-options($list,$selected){
+    for $item in $list        
+        order by $item
+        return 
+            if ($selected=$item)
+            then <option selected= "true" value="{$selected}">{$selected}</option>
+            else <option value="{$item}"> {$item} </option>
+};
+
+declare function app:prepareInfo($info,$id) {
+    if ($info)
+    then 
+       <span id="desctext-{$id}" class="desctext">
+       {$info/@*,
+        for $node in $info/node()
+        return
+            if ($node/self::p)
+            then app:parseFormatRef($node,"p")
+            else ($node)
+       }
+       </span>        
+    else
+        ()
+};
+
+declare function app:parseFormatRef($text, $elementName) {
+    if ($text)
+    then
+        (
+        element {$elementName} {
+            $text/@*,
+            for $node in $text/node()
+            return
+                if ($node/self::formatRef)
+                then
+                    <a href="{app:link(concat("views/view-format.xq?id=", $node/@ref))}">
+                        {substring($node/@ref, 2)}</a>
+                else
+                    $node
+        }
+        )
+    else
+        ()
 };

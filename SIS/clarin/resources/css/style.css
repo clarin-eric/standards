@@ -22,6 +22,7 @@ div#all {
 }
 
 .logoheader {
+	display: block;
 	background:white URL(../images/bannerNeu.png) no-repeat bottom center;
 	color:#111;
 	min-height:185px;
@@ -29,7 +30,9 @@ div#all {
 	padding-top:20px;
 	text-align:left;
 	font-weight:normal;
-	line-height:1.5em;	
+	line-height:1.5em;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 div.menu{
@@ -337,12 +340,60 @@ th {
     background-color:#eaeaea;
 }
 
+table.striped tr:nth-child(even) {
+    background-color:#f0f0f0;
+}
+
+table.striped th,
+table.striped td {
+    /* border-right: 1px solid black; */    
+}
+
+table.striped th:last-child,
+table.striped td:last-child {
+    border-right: none;
+}
+
 .tdmenu{
-    padding-left:5px; border-bottom:1px solid #DDDDDD;
+    padding-left:4px; 
+    border-bottom:1px solid #DDDDDD;
 }
 
 .tdmenu:hover{
     background-color:#EEE;
+}
+
+.tdmenu-active{
+    padding-left:4px; 
+    border-bottom:1px solid #DDDDDD;
+    background-color:#c3d3e3;
+    
+}
+
+.tdmenu-active:hover{
+    background-color:#a8c0d5;
+}
+
+.tdmenu-highlight{
+    padding-left:4px; 
+    border-bottom:1px solid #DDDDDD; 
+    background-color:#e7f0f9;
+    
+}
+
+.tdmenu-highlight:hover{
+    background-color:#EEE;
+}
+
+.tdmenu-highlight-active{
+    padding-left:4px; 
+    border-bottom:1px solid #DDDDDD; 
+    background-color:#a8c0d5;
+    
+}
+
+.tdmenu-highlight-active:hover{
+    background-color:#8fb8d8;
 }
 
 .header{    
