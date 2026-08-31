@@ -7,10 +7,16 @@
          <centreID>ILC4CLARIN</centreID>
       </filter>
       <respStmt>
-         <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
-         <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-         <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-         <reviewDate>0001-01-01</reviewDate>
+         <name>Valeria Quochi</name>
+         <resp>Revised full list of recommended formats</resp>
+         <link>https://orcid.org/0000-0003-3828-0135</link>
+         <reviewDate>2025-10-24</reviewDate>
+      </respStmt>
+       <respStmt>
+         <name>Giulia Pedonese</name>
+         <resp>Revision</resp>
+         <link>https://orcid.org/0000-0002-1321-5444</link>
+         <reviewDate>2026-07-28</reviewDate>
       </respStmt>
       <centre id="ILC4CLARIN" deposition="1">
          <centreName>The ILC4CLARIN Centre at the Institute for Computational Linguistics</centreName>
@@ -20,50 +26,318 @@
          </nodeInfo>
       </centre>
    </header>
-   <info><p>Formats extracted from the uploaded dataset and matched against
-         CLARIN Standards recommendations.</p>
-   <p>This list has been submitted by Riccardo Del Gratta in May 2026.</p>
-   <p>No active curator has yet been appointed for the recommendations.</p></info>
+   <info xml:lang="en">
+      <p>This page lists the file formats recommended for depositing data in ILC4CLARIN. </p> 
+      <p>The set of recommended file formats should be taken as an advice concerning the best-practices in use for sharing digital linguistic resources to foster adoption of open and well-documented standards that will enhance the chance of future interpretability of the deposited data. The proposed formats are part of the CLARIN <a href="https://standards.clarin.eu/sis/">Standards Information System</a> recommentations.</p>
+      <p>ILC4CLARIN however adopts an inclusive policy and does not strictly restricts on the recommended formats. It accepts and will preserve resources in the format that it was submitted. In case of doubts, contact the ILC4CLARIN Helpdesk at dspace-clarin-it-ilc-help@ilc.cnr.it before starting submission</p>
+   </info>
+   <info xml:lang="it">
+      <p>Questa pagina elenca i formati di file accettati dal repository ILC4CLARIN</p>
+      <p>L'insieme dei formati di file raccomandati deve essere inteso come un suggerimento relativo alle buone pratiche per la condivisione delle risorse linguistiche digitali, volto a favorire l'adozione di standard aperti e ben documentati che aumenteranno le possibilità di interpretabilità futura dei dati. </p>
+      <p>I formati proposti fanno parte delle raccomandazioni dello <a href="https://standards.clarin.eu/sis/">Standards Information System</a> di CLARIN. Tuttavia, ILC4CLARIN adotta una politica inclusiva e accetta e conserverà le risorse nel formato in cui sono state depositate. </p> 
+      <p>In caso di dubbi, contattare l'Helpdesk a dspace-clarin-it-ilc-help@ilc.cnr.it prima di iniziare il deposito.</p></info>
    <formats>
-      <format id="fXML">
+       <format id="fTextPlain">
+            <domain>Lexical Resource</domain>
+            <level>acceptable</level>
+            <comment>For simple word lists. UTF-8 character encoding required</comment>
+        </format>
+        <format id="fTextPlain">
+            <domain>Textual Source Language Data</domain>
+            <level>recommended</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format> 
+        <format id="fTextPlain">
+            <domain>Documentation</domain>
+            <level>recommended</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format>
+      <format id="fTextPlain">
+         <domain>Text Annotation</domain>
+         <level>discouraged</level>
+      </format>                    
+ <format id="fCSV">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format>
+        <format id="fCSV">
+            <domain>Lexical Resource</domain>
+            <level>acceptable</level>
+            <comment>UTF-8 character encoding required</comment>
+        </format>
+        <format id="fCSV">
          <domain>Metadata</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fTXT">
-         <domain>Textual Source Language Data</domain>
-         <level>recommended</level>
-      </format>
-      <format id="fCSV">
+         <level>acceptable</level>
+        </format>
+               <format id="fTSV">
+            <domain>Lexical Resource</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTSV">
+            <domain>Metadata</domain>
+            <level>acceptable</level>
+        </format>
+          <format id="fCoNLL-U">
          <domain>Text Annotation</domain>
          <level>recommended</level>
       </format>
-      <format id="fRTF">
-         <domain>Documentation</domain>
+          <format id="fCoNLL-U-Plus">
+         <domain>Text Annotation</domain>
          <level>acceptable</level>
-      </format>
-      <format id="fPDF">
-         <domain>Documentation</domain>
+      </format>      
+        <format id="fCoNLL-X">
+            <domain>Text Annotation</domain>
+            <level>acceptable</level>
+        </format> 
+          <format id="fCoNLL">
+            <domain>Text Annotation</domain>
+            <level>discouraged</level>
+            <comment>should use CoNLL-X or CoNLL-U</comment>
+          </format>
+       <format id="fJSON">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+            <comment>consider using <formatRef ref="fJSONLD"/> with a schema</comment>
+        </format>  
+      <format id="fJSON">
+         <domain>Text Annotation</domain>
          <level>acceptable</level>
+         <comment>consider using <formatRef ref="fJSONLD"/> with a schema</comment>
       </format>
-      <format id="fDOCX">
+      <format id="fJSON">
+         <domain>Metadata</domain>
+         <level>acceptable</level>
+         <comment>consider using <formatRef ref="fJSONLD"/> with a schema</comment>
+      </format>
+      <format id="fJSONLD">
          <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+      </format>  
+      <format id="fJSONLD">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+        </format>     
+      <format id="fJSONLD">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>      
+      <format id="fHTML">
+            <domain>Lexical Resource</domain>
+            <level>discouraged</level>
+            <comment>ASCII or UTF-8 character encoding required</comment>
+      </format>
+       <format id="fHTML">
+            <domain>Contextual Data</domain>
+            <level>discouraged</level>
+            <comment>ASCII or UTF-8 character encoding required</comment>
+        </format>
+         <format id="fHTML">
+            <domain>Textual Source Language Data</domain>
+            <level>discouraged</level>
+            <comment>ASCII or UTF-8 character encoding required. Acceptable if html is original format. Acceptable if with minimal markup and no Javascript</comment>
+        </format>      
+        <format id="fHTML">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>
+      <format id="fDC-XML">
+         <domain>Metadata</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fComa">
+         <domain>Metadata</domain>
          <level>acceptable</level>
+         <comment>For transcriptions of speech. Coma is the <a href="https://exmaralda.org/en/corpus-manager-en/">EXMARaLDA Corpus-Manager</a>.</comment>
+      </format>
+        <format id="fCMDI">
+            <domain>Metadata</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fCMDI">
+            <domain>Contextual Information</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fDOCX">
+            <domain>Textual Source Language Data</domain>
+            <level>discouraged</level>
+        </format> 
+      <format id="fDOCX">
+         <domain>Metadata</domain>
+         <level>discouraged</level>
+      </format>
+        <format id="fMarkdown">
+            <domain>Textual Source Language Data</domain>
+            <level>acceptable</level>
+        </format>    
+        <format id="fMarkdown">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTEI">
+            <domain>Text Annotation</domain>
+            <level>recommended</level>
+            <comment>with schema</comment>
+        </format>
+        <format id="fTEIHeader">
+            <domain>Contextual Data</domain>
+            <level>recommended</level>
+        </format>
+      <format id="fPAULA">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+      </format>
+      <format id="fPOWLA">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+      </format>
+       <format id="fJPEG">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fPNG">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fTIFF">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fGZIP">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fTAR">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+            <comment>what is relevant are the contents of the archive</comment>
+        </format>
+        <format id="fJS">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
+
+        <format id="fXSD">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fXSLT">
+            <domain>Tool Support</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fZIP">
+            <domain>Packaging</domain>
+            <level>recommended</level>
+        </format>
+        <format id="fGIF">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format>
+         <format id="fBMP">
+            <domain>Image Source Language Data</domain>
+            <level>acceptable</level>
+        </format> 
+       <format id="fPDF">
+            <domain>Textual Source Language Data</domain>
+            <level>discouraged</level>
+        </format>
+      <format id="fPDF">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>
+        <format id="fPDF">
+            <domain>Text Annotation</domain>
+            <level>discouraged</level>
+        </format>
+      <format id="fPDFA">
+         <domain>Image Source Language Data</domain>
+         <level>acceptable</level>
+      </format>
+        <format id="fPDFA">
+            <domain>Documentation</domain>
+            <level>acceptable</level>
+        </format>   
+      <format id="fPDFA">
+          <domain>Textual Source Language Data</domain>
+          <level>discouraged</level>
+      </format>  
+      <format id="fXLSX">
+         <domain>Text Annotation</domain>
+         <level>discouraged</level>
       </format>
       <format id="fXLSX">
          <domain>Metadata</domain>
+         <level>discouraged</level>
+      </format>
+      <format id="fNTriples">
+         <domain>Lexical Resource</domain>
          <level>acceptable</level>
       </format>
-      <format id="fPPTX">
-         <domain>Documentation</domain>
+      <format id="fNQuads">
+         <domain>Lexical Resource</domain>
+         <level>acceptable</level>
+      </format>  
+      <format id="fN3">
+         <domain>Lexical Resource</domain>
          <level>acceptable</level>
       </format>
-      <format id="fZIP">
-         <domain>Packaging</domain>
-         <level>acceptable</level>
-      </format>
-      <format id="fGZIP">
-         <domain>Packaging</domain>
+      <format id="fRDF">
+         <domain>Lexical Resource</domain>
          <level>recommended</level>
+      </format>
+      <format id="fLex0">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>      
+            <format id="fLemon">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fLMF">
+         <domain>Lexical Resource</domain>
+         <level>acceptable</level>
+         <comment>Consider using <formatRef ref="fLemon"/> or <formatRef ref="fLex0"/> instead. </comment>
+      </format>
+      <format id="fRDFS">
+         <domain>Lexical Resource</domain>
+         <level>acceptable</level>
+      </format>  
+      <format id="fTurtle">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fSkos">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>
+      <format id="fOWL">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+      </format>      
+      <format id="fParlaMint">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment> For Parliamentary sessions transcriptions       
+         </comment>
+      </format>
+      <format id="fParlaMint">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment> For linguistically annotated Parliamentary sessions transcriptions           
+         </comment>
+      </format>
+     <format id="fNIF">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+      </format>
+     <format id="fGrAF">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
+         <comment>Consider using more recent formats instead.</comment>
+      </format>
+      <format id="fFoLiA">
+         <domain>Text Annotation</domain>
+         <level>acceptable</level>
       </format>
    </formats>
 </recommendation>
