@@ -20,20 +20,427 @@
             </nodeInfo>
         </centre>
     </header>
-    <info><!--use p, ul, ol elements here--></info>
-    <formats><!--
-            This template will assist in adjusting/creating a recommendations document if you don't
-            have access to a schema-aware XML editor. Copy the XML fragment, 
-            *  adjust the format ID (see https://standards.clarin.eu/sis/views/list-formats.xq ),
-            *  adjust the domain (https://standards.clarin.eu/sis/views/list-domains.xq ),
-            *  adjust the recommendation level ({ recommended, acceptable, discouraged }),
-            *  repeat as necessary;
-            *  submit the result as a PR against https://github.com/clarin-eric/standards/tree/formats .
-            
-            <format id="null">
-                <domain>Audiovisual Annotation</domain>
-                <level>recommended</level>
-            </format> 
-        -->
+    <info xml:lang="en">
+      <p>To support the long-term preservation, accessibility, and reuse of
+      deposited resources, LINDAT/CLARIAH-CZ recommends using open,
+      well-documented, and widely supported file formats.</p>
+
+      <p>The recommended formats are not mandatory. Depositors may submit data
+      in other formats when they are appropriate for the research, but should
+      provide sufficient documentation and, where possible, include an export
+      or version in one of the preferred formats.</p>
+
+      <p>The following principles guide our format recommendations:</p>
+
+      <ul>
+        <li>Open standards are preferred to proprietary formats.</li>
+        <li> Formats should be well documented and openly specified.</li>
+        <li> Formats should be widely used, supported, and demonstrably
+        stable.</li>
+        <li> Text-based formats are preferred to binary formats where
+        practical.</li>
+        <li> Structured and machine-readable formats are preferred to
+        application-specific formats.</li>
+        <li> Data should use explicit character encoding, preferably
+        UTF-8.</li>
+        <li> Lossless compression is preferred for preservation copies of
+        audio, images, and video.</li>
+        <li> Files should be accompanied by documentation describing their
+        structure, encoding, software dependencies, and any specialised
+        terminology.</li>
+        <li> Original files should be preserved when they are necessary for
+        reproducibility, even if a preservation or dissemination copy is also
+        provided.</li>
+        <li> Files should not be encrypted or password-protected unless access
+        restrictions require it.</li>
+        <li> Archives should use formats that permit the inspection and
+        extraction of their contents, such as ZIP or TAR/GZIP.</li>
+      </ul>
+
+      <p>LINDAT/CLARIAH-CZ encourages depositors to follow CLARIN
+      recommendations and relevant community standards for language resources
+      and digital humanities data. The repository’s preservation policy states
+      that open, documented, verifiable, proven, and preferably text-based
+      formats should be used; for digitised analogue material, lossless or
+      uncompressed formats are recommended. </p>
+    </info>
+    <formats>
+      <format id="fTextPlain">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>UTF-8 encoded. See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fTextPlain">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+         <comment>UTF-8 encoded. See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fXML">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>Link or provide a schema. See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fXML">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>Link or provide a schema. See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fXML">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+         <comment>Link or provide a schema. See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fXML">
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+         <comment>Link or provide a schema. See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fXML">
+         <domain>Documantation</domain>
+         <level>recommended</level>
+         <comment>Link or provide a schema. See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fTEI">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fTEI">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fJSON">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fJSON">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fJSON">
+         <domain>Statistical Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fJSONLD">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fJSONLD">
+         <domain>Textual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fRDFXML">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fCoNLL">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fCoNLL-U">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fCSV">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fCSV">
+         <domain>Statistical Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fTSV">
+         <domain>Lexical Resource</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fTSV">
+         <domain>Statistical Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fODS">
+         <domain>Statistical Data</domain>
+         <level>recommended</level>
+         <comment>Also provide CSV. See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fXLSX">
+         <domain>Statistical Data</domain>
+         <level>acceptable</level>
+         <comment>Also provide CSV. See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fPDFA">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fPDF">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fDOCX">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fODT">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fPPTX">
+         <domain>Documentation</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fODP">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fTIFF">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fJPEG">
+         <domain>Image Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>Prefer JPEG 2000. See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fPNG">
+         <domain>Image Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fSVG">
+         <domain>Image Source Language Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fEPS">
+         <domain>Image Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fBWF">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fFLAC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fMXF">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fMKA">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fOGG">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fMP3">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fAAC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fMKV">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fMPEG-4-AVC">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fAVI">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fMOV">
+         <domain>Audiovisual Source Language Data</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fEAF">
+         <domain>Audiovisual Annotation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fGeoTIFF">
+         <domain>Geodata</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fGeoJSON">
+         <domain>Geodata</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fGML">
+         <domain>Geodata</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fMIF">
+         <domain>Geodata</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fOBJ">
+         <domain>Other</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fPLY">
+         <domain>Other</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fX3D">
+         <domain>Other</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fZIP">
+         <domain>Packaging</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fTAR">
+         <domain>Packaging</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fGZIP">
+         <domain>Packaging</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fSQL">
+         <domain>Other</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fSQLite">
+         <domain>Other</domain>
+         <level>acceptable</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fWARC">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fHTML">
+         <domain>Documentation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fHTML">
+         <domain>Text Annotation</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fCSS">
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
+
+      <format id="fJS">
+         <domain>Tool Support</domain>
+         <level>recommended</level>
+         <comment>See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
+      </format>
     </formats>
 </recommendation>
