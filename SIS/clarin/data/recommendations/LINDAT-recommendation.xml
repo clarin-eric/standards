@@ -7,10 +7,10 @@
             <centreID>LINDAT</centreID>
         </filter>
         <respStmt>
-            <name><!--for multiple curators, use multiple respStmt elements, each with a resp--></name>
+           <name>Jan Štěpánek</name>
             <resp><!--optionally specify the range of responsibility; useful if multiple respStmt are used--></resp>
-            <link><!--URI; GitHub page or any other way to id/contact the curator--></link>
-            <reviewDate>0001-01-01</reviewDate>
+           <link>https://github.com/choroba</link>
+            <reviewDate>2026-09-08</reviewDate>
         </respStmt>
         <centre id="LINDAT" deposition="1">
             <centreName>LINDAT/CLARIN</centreName>
@@ -102,7 +102,7 @@
       </format>
 
       <format id="fXML">
-         <domain>Documantation</domain>
+         <domain>Documentation</domain>
          <level>recommended</level>
          <comment>Link or provide a schema. See <a href="https://lindat.mff.cuni.cz/recommended-file-formats">more info from LINDAT</a></comment>
       </format>
