@@ -29,8 +29,9 @@ function sis:print() as element(html) {
                   
                   <div>
                       <p>The CLARIN Standards Information System provides REST API that can be accessed at
-                          <a href="https://standards.clarin.eu/sis/rest/">
-                              https://standards.clarin.eu/sis/rest/</a>.</p>
+                          <a href="https://standards.clarin.eu/sis/rest/data/">
+                              https://standards.clarin.eu/sis/rest/data/</a>.</p>
+                              <p>Let us know if there is anything specific that you would like us to serve above the current repertoire.</p>
                   </div>
                   
                   <div style="margin-top:30px;"><span class="subtitle">Retrieving centre recommendations</span>
@@ -138,23 +139,6 @@ function sis:print() as element(html) {
                           </code>
                       </p>
                   </div>
-                  
-                  <!--
-                  <div id="retrieving-centres" style="margin-top:30px;"><span class="subtitle">Retrieving centres</span>
-                      <hr/>
-                      <p><span class="heading">Method: </span> GET</p>
-                      <p><span class="heading">Service URL: </span>
-                          <code><a href="https://standards.clarin.eu/sis/rest/data/centres.xml">
-                                  https://standards.clarin.eu/sis/rest/data/centres.xml</a></code>
-                      </p>
-                      <p><span class="heading">Example using curl:</span></p>
-                      <p>
-                          <code>
-                              curl 'https://standards.clarin.eu/sis/rest/data/centres.xml'
-                          </code>
-                      </p>
-                  </div>
-                  -->
               </div>
               <div class="footer">{app:footer()}</div>
           </div>
