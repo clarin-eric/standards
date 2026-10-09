@@ -291,6 +291,7 @@ declare function fm:get-format-families($sortBy){
     let $ff :=       
       for $i in (1 to $numOfFormatFamily)
       let $f :=  $format/formatFamily[$i]
+      let $f := fm:get-format-by-abbr($f)  
       return 
         if ($i < $numOfFormatFamily)
         then ($f, ", ")
@@ -303,5 +304,13 @@ declare function fm:get-format-families($sortBy){
             <td class="row">{$id}</td>
             <td class="row">{$ff}</td>
         </tr>
-        
 };
+
+declare function fm:get-format-by-abbr($abbr){
+    let $format := format:get-format-by-abbr($abbr)
+    return
+    if ($format) then
+        <a href="{app:link(concat("views/view-format.xq?id=",$format/@id))}">{$abbr}</a>
+        else $abbr
+};
+
