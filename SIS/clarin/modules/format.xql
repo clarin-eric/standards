@@ -287,7 +287,15 @@ declare function fm:get-formats-without-mime-types() {
 declare function fm:get-format-families($sortBy){
     for $format in $format:formats
     let $id := if($format/titleStmt/abbr) then data($format/titleStmt/abbr) else data($format/@id)
-    let $ff := $format/formatFamily
+    let $numOfFormatFamily := count($format/formatFamily)    
+    let $ff :=       
+      for $i in (1 to $numOfFormatFamily)
+      let $f :=  $format/formatFamily[$i]
+      return 
+        if ($i < $numOfFormatFamily)
+        then ($f, ", ")
+        else $f
+      
     let $order := if ($sortBy eq "ff") then $ff[1] else $id
     order by fn:lower-case($order), fn:lower-case($id)
     return
