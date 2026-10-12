@@ -12,6 +12,7 @@ import module namespace lp = "http://clarin.ids-mannheim.de/standards/landing-pa
 import module namespace app="http://clarin.ids-mannheim.de/standards/app" at "app.xql";
 import module namespace rf="http://clarin.ids-mannheim.de/standards/recommended-formats" at "recommended-formats.xql";
 import module namespace dm = "http://clarin.ids-mannheim.de/standards/domain-module" at "../modules/domain.xql";
+import module namespace fm = "http://clarin.ids-mannheim.de/standards/format-module" at "../modules/format.xql";
 
 declare function vfm:get-format($id as xs:string) {
     format:get-format($id)
@@ -46,7 +47,7 @@ declare function vfm:create-tooltip($label, $tooltip){
     else $label
 };
 
-declare function vfm:print-bullets($list,$id){
+declare function vfm:print-bullets($list){
     let $items := for $item in $list 
     return <li>{$item}</li>
     
@@ -61,11 +62,16 @@ declare function vfm:print-keyword-links($format){
             <a style="font-size:15px;" href="{$link}">{$k}</a>            
 };
 
-declare function vfm:print-multiple-values($list, $id, $label) {
-    vfm:print-multiple-values($list, $id, $label, fn:false())
+declare function vfm:print-multiple-values($list, $label) {
+    vfm:print-multiple-values($list, $label, "", fn:false())
 };
 
-declare function vfm:print-multiple-values($list, $id, $label, $isLink as xs:boolean) {
+declare function vfm:print-multiple-values($list, $label, $label-link) {
+    vfm:print-multiple-values($list, $label, $label-link, fn:false())
+};
+
+
+declare function vfm:print-multiple-values($list, $label, $label-link, $isListItemLink as xs:boolean) {
     let $numOfItems := count($list)
     let $max := fn:max(($numOfItems, 1))
     return
@@ -73,8 +79,8 @@ declare function vfm:print-multiple-values($list, $id, $label, $isLink as xs:boo
         then
             (
             <div><span class="heading">{
-                                        if (count($label) gt 1) 
-                                        then <a href="{app:link($label[2])}">{$label[1]}</a>
+                                        if ($label-link) 
+                                        then <a href="{app:link($label-link)}">{$label}</a>
                                         else $label
                                         }&#160;</span>
                 <span id="keytext">
@@ -82,8 +88,8 @@ declare function vfm:print-multiple-values($list, $id, $label, $isLink as xs:boo
                         for $k in (1 to $numOfItems)
                         return
                             (
-                            if ($isLink) then
-                                (<a href="{$list[$k]}">{$list[$k]}</a>)
+                            if ($isListItemLink) then
+                                vfm:print-link-list-item($list[$k], $label)
                             else
                                 $list[$k]/text(),
                             (:if ($list[$k]/@type)
@@ -107,6 +113,11 @@ declare function vfm:print-multiple-values($list, $id, $label, $isLink as xs:boo
             )
         else
             ()
+};
+
+declare function vfm:print-link-list-item($listItem, $label){
+    if ($label eq "Schema location:") then  (<a href="{$listItem}">{$listItem}</a>)
+    else fm:get-format-by-abbr($listItem)
 };
 
 (: DEPRECATED

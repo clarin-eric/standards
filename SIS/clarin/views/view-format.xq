@@ -167,17 +167,17 @@ return
                          </table>)
                          else ()
                          }
-                        {vfm:print-multiple-values($format/titleStmt/versionNumber, $id, "Versions:")}
+                        {vfm:print-multiple-values($format/titleStmt/versionNumber, "Versions:")}
                         {
                         if ($format/mimeType) 
                             then
                             <div><span class="heading"><a href="{app:link("views/list-mimetypes.xq")}">Media type(s)</a>:</span></div>
                             else ()
                          }
-                        {vfm:print-bullets($format/mimeType, $id)}
-                        {vfm:print-multiple-values($format/fileExt, $id, ("File extension(s):","views/list-extensions.xq"))}
-                        {vfm:print-multiple-values($format/formatFamily, $id, ("Format family:","views/format-families.xq"))}
-                        {vfm:print-multiple-values($format/schemaLoc, $id, "Schema location:", fn:true())}
+                        {vfm:print-bullets($format/mimeType)}
+                        {vfm:print-multiple-values($format/fileExt, "File extension(s):","views/list-extensions.xq")}
+                        {vfm:print-multiple-values($format/formatFamily, "Format family:","views/format-families.xq", fn:true())}
+                        {vfm:print-multiple-values($format/schemaLoc, "Schema location:", "", fn:true())}
                         
                         {if (count($format-domains)>0)
                                 then(
@@ -212,7 +212,7 @@ return
 <!--
                         <div align="right"><p><a href="{app:getGithubFormatIssueLink($id)}">[suggest a fix or extension]</a></p></div>
       -->                  
-                        {vfm:print-multiple-values($format/keyword, $id, "Keywords:")}
+                        {vfm:print-multiple-values($format/keyword, "Keywords:", "", fn:true())}
                         <!--The tag cloud of the standard related keywords -->
                         <div id="myCanvasContainer" style="border: 1px solid #DDDDDD; border-radius:3px; align:centre">
                             <canvas width="650" height="250" id="myCanvas"/>
