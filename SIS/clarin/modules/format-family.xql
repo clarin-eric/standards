@@ -8,10 +8,17 @@ import module namespace format = "http://clarin.ids-mannheim.de/standards/format
 declare function ff:create-graph-json(){
     let $formats-with-family := $format:formats[./formatFamily]
     let $format-families := fn:distinct-values($formats-with-family/formatFamily/text())
-    let $all-formats := ff:gather-formats($formats-with-family,$format-families)
-    let $all-ids := $all-formats/@id
+    let $all-formats := ff:gather-formats($formats-with-family,$format-families)  
     (: collects all values of formatFamily element that are not format abbrs   :)
     let $ff-values := functx:value-except($format-families,$all-formats/titleStmt/abbr/text())
+
+    (:sort all-ids to ensure order:)
+    let $all-ids := 
+        for $format in $all-formats
+            let $fid := data($format/@id) 
+            order by $fid
+            return $fid
+
     let $nodes := string-join( ff:create-format-nodes($all-formats,$ff-values) , ",")
     let $graph-relations := ff:create-graph-relations($formats-with-family, $all-ids, $ff-values)
     let $links := string-join($graph-relations,",")
@@ -30,7 +37,10 @@ declare function ff:create-graph-json(){
         graph:write-json-array("nodes", $nodes) ,",",
         graph:write-json-array("links", $links),
     "}")  
-    
+   
+    (:let $ids := for $i in (1 to count($all-ids))
+        return ($i -1, data($all-ids[$i]), <br></br>):)
+        
     return $json
 };
 
@@ -77,11 +87,12 @@ declare function ff:gather-formats($formats-with-family,$targets){
 declare function ff:create-format-nodes($all-formats,$ff-values){
     let $format-nodes := 
         for $format in $all-formats
+        order by data($format/@id)
         return graph:create-format-node($format, fn:true())
 
     let $target-text-nodes := 
         for $ff in $ff-values
-        return graph:create-format-node($ff,fn:false())
+        return graph:create-format-node($ff,fn:false())        
         
     return ($format-nodes,$target-text-nodes)
 };
